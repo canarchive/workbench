@@ -85,17 +85,7 @@ class Menu extends PassportModel
     public function getFormatedInfos()
     {
         $infos = $this->find()->indexBy('code')->asArray()->all();
-        foreach ($infos as $code => $info) {
-            $parentId = isset($infos[$info['parent_code']]['id']) ? $infos[$info['parent_code']]['id'] : 0;
-            $parentNode = $parentId ? 'child-of-node-' . $parentId : '';
-            $info['parentNode'] = $parentNode;
-            $level = $this->getLevel($code, $infos, 'parent_code');
-            $info['level'] = $level;
-            $infos[$code] = $info;
-        }
-
-        $menuTree = new Tree($infos, 'code', 'parent_code', 'name');
-        $formatedInfos = $menuTree->getTree('');
+        $formatedInfos = $this->getTreeInfos($infos, 'code', 'parent_code', 'name', '');
 
         return $formatedInfos;
     }

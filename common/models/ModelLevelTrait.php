@@ -4,12 +4,12 @@ namespace common\models;
 
 use common\helpers\Tree;
 
-trait ModelAttachmentTrait
+trait ModelLevelTrait
 {
     protected function getTreeInfos($infos, $key, $parentKey, $name, $parentValue = 0)
     {
         foreach ($infos as $id => $info) {
-            $parentId = isset($infos[$info[$parentKey]][$key]) ? $infos[$info[$parentKey]][$key] : '';
+            $parentId = isset($infos[$info[$parentKey]]['id']) ? $infos[$info[$parentKey]]['id'] : 0;
             $parentNode = $parentId ? 'child-of-node-' . $parentId : '';
             $info['parentNode'] = $parentNode;
             $level = $this->getLevel($id, $infos, $parentKey);

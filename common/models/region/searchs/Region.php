@@ -1,12 +1,12 @@
 <?php
 
-namespace common\models\searchs;
+namespace common\models\region\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
-use common\models\Region as RegionModel;
+use common\models\region\Region as RegionModel;
 
 class Region extends RegionModel
 {

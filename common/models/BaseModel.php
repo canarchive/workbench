@@ -8,6 +8,9 @@ use yii\behaviors\TimestampBehavior;
 
 class BaseModel extends ActiveRecord
 {
+    use ModelAttachmentTrait;
+    use ModelLevelTrait;
+
     protected function getTimestampBehaviorComponent($createField = 'created_at', $updateField = 'updated_at')
     {
         return [

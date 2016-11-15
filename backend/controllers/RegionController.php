@@ -8,7 +8,7 @@ use yii\web\Response;
 use yii\helpers\ArrayHelper;
 use backend\components\AdminController;
 use common\models\region\Region;
-use common\models\searchs\region\Region as RegionSearch;
+use common\models\region\searchs\Region as RegionSearch;
 
 class RegionController extends AdminController
 {
