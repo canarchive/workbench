@@ -62,6 +62,7 @@ return [
             'site/login',
             'site/logout',
             'site/error',
+            'backend-upload/*',
             'debug/*',
         ]
     ],

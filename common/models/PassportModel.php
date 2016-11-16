@@ -10,4 +10,9 @@ class PassportModel extends BaseModel
     {
         return Yii::$app->db;
     }
+
+    protected function getAttachmentModel()
+    {
+        return new AttachmentCommon();
+    }
 }

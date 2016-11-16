@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
@@ -40,7 +41,7 @@ class BaseModel extends ActiveRecord
 
     protected function writeManagerLog()
     {
-        if (\Yii::$app->id != 'app-backend' || \Yii::$app->controller->id == 'site') {
+        if (Yii::$app->id != 'app-backend' || Yii::$app->controller->id == 'site' || Yii::$app->controller->id == 'backend-upload') {
             return true;
         }
 
@@ -56,8 +57,8 @@ class BaseModel extends ActiveRecord
 
             $data[$key] = $value;
         }
-        $managerInfo = \Yii::$app->params['managerInfo'];
-        $menuInfo = \Yii::$app->params['currentMenu'];
+        $managerInfo = Yii::$app->params['managerInfo'];
+        $menuInfo = Yii::$app->params['currentMenu'];
 
         $infos = [
             'manager_id' => $managerInfo['id'],
@@ -66,12 +67,12 @@ class BaseModel extends ActiveRecord
             'menu_code' => $menuInfo['code'],
             'menu_name' => $menuInfo['name'],
             'data' => serialize($data),
-            'ip' => \Yii::$app->request->userIP,
+            'ip' => Yii::$app->request->userIP,
             'created_at' => time(),
         ];
 
         $managerlogModel = new \backend\models\Managerlog($infos);
-        \Yii::$app->params['managerlogModel'] = $managerlogModel;
+        Yii::$app->params['managerlogModel'] = $managerlogModel;
         $managerlogModel->insert();
 
         return true;
