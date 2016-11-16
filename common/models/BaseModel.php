@@ -105,4 +105,20 @@ class BaseModel extends ActiveRecord
 
         return true;
     }
+
+    public function searchTimeElem(& $query, $field = 'created_at')
+    {   
+        $startAttr = $field . '_start';
+        $endAttr = $field . '_end';
+        $startTime = strtotime($this->$startAttr);
+        $endTime = $this->$endAttr > 0 ? strtotime($this->$endAttr) : time();
+        $query->andFilterWhere(['>=', $field, $startTime]);
+        $query->andFilterWhere(['<', $field, $endTime]);
+    }   
+
+    protected function getCompanyInfos()
+    {
+        $infos = ArrayHelper::map(Company::find()->select('code, name')->where(['status' => [1, 2]])->all(), 'code', 'name');
+        return $infos;
+    }
 }
