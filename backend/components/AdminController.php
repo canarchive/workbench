@@ -12,9 +12,6 @@ use common\components\Controller;
 class AdminController extends Controller
 {
     public $menuInfos = [];
-    public $actionId = '';
-    public $actionIdBase = '';
-    public $moduleId = '';
     public $showSubnav = true;
     protected $modelClass = '';
 

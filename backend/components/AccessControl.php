@@ -76,17 +76,18 @@ class AccessControl extends \yii\base\ActionFilter
 
         // Get the current route infos, get the current menu
         $routeData = explode('/', $actionId);
-        $controller->moduleId = count($routeData) == 3 && $routeData[1] == $controller->id ? $routeData[0] : '';
-        $controller->actionId = $actionId;
-        $controller->actionIdBase = array_pop($routeData);
+        $currentMethod = array_pop($routeData);
+        $currentController = array_pop($routeData);
+        $currentModule = implode('/', $routeData);
         $where = [
-            'module' => $controller->moduleId,
-            'controller' => $controller->id,
-            'method' => $controller->actionIdBase,
+            'module' => $currentModule,
+            'controller' => $currentController,
+            'method' => $currentMethod,
         ];
 
         $currentMenu = Menu::findOne($where);
         if (empty($currentMenu) || !$user->can($currentMenu['code'])) {
+            echo 'sss';exit();
             throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
         }
         if ($identity->status == Manager::STATUS_NOACTIVE && $currentMenu['controller'] != 'document' && $currentMenu['method'] != 'edit-password') {

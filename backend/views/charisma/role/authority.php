@@ -30,7 +30,7 @@ $(document).ready(function() {
             <?= $treeContent; ?>
         </table>
     </div>
-    <?php if ($controller->actionIdBase == 'authority') { ?>
+    <?php if (basename($controller->action->getUniqueId()) == 'authority') { ?>
     <div class="form-group">
         <?= Html::submitButton(Yii::t('admin-common', 'Update'), ['class' => 'btn btn-primary']) ?>
     </div>
