@@ -38,7 +38,7 @@ $formName = $model->formName();
                         });
                     </script>
                 </div>
-                <?php if (!isset($currentManager)) { ?>
+                <?php if (!isset(Yii::$app->params['currentManager'])) { ?>
                 <label class="control-label col-md-1">管理员</label>
                 <div class="col-md-2">
                     <?= Html::dropDownList(

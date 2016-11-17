@@ -87,7 +87,6 @@ class AccessControl extends \yii\base\ActionFilter
 
         $currentMenu = Menu::findOne($where);
         if (empty($currentMenu) || !$user->can($currentMenu['code'])) {
-            echo 'sss';exit();
             throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
         }
         if ($identity->status == Manager::STATUS_NOACTIVE && $currentMenu['controller'] != 'document' && $currentMenu['method'] != 'edit-password') {

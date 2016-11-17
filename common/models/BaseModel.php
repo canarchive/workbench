@@ -155,4 +155,9 @@ return ;
             $dispatch->recordData($data, $type);
         }   
     }   
+
+    public function getSearchDatas()
+    {
+        return [];
+    }
 }

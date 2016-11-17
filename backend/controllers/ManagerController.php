@@ -3,46 +3,19 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\web\NotFoundHttpException;
 use backend\models\Manager;
-use backend\models\searchs\Manager as ManagerSearch;
 use backend\components\AdminController;
+use backend\components\ControllerFullTrait;
 
-/**
- * ManagerController implements the CRUD actions for Manager model.
- */
 class ManagerController extends AdminController
 {
     protected $modelClass = 'backend\models\Manager';
+    protected $modelSearchClass = 'backend\models\Searchs\Manager';
+    use ControllerFullTrait;
 
-    public function actionListinfo()
+    public function _addData()
     {
-        $searchModel = new ManagerSearch();
-        return $this->_listinfoInfo($searchModel);
-    }
-
-    public function actionView($id)
-    {
-        return $this->_viewInfo($id);
-    }
-
-    public function actionAdd()
-    {
-        return $this->_addInfo(new Manager(['scenario' => 'create']));
-    }
-
-    public function actionUpdate($id = 0)
-    {
-        if (Yii::$app->request->isAjax) {
-            return $this->_updateByAjax();
-        }
-
-        return $this->_updateInfo($id, 'update');
-    }
-
-    public function actionDelete($id)
-    {
-        return $this->_deleteInfo($id);
+        return ['scenario' => 'create'];
     }
 
     public function actionEditInfo()

@@ -4,6 +4,7 @@ namespace backend\models\searchs;
 
 use Yii;
 use yii\base\Model;
+use yii\helpers\ArrayHelper;
 use yii\data\ActiveDataProvider;
 use backend\models\Managerlog as ManagerlogModel;
 
@@ -38,5 +39,15 @@ class Managerlog extends ManagerlogModel
         $query->andFilterWhere(['<', 'created_at', $endTime]);
 
         return $dataProvider;
+    }
+
+    public function getSearchDatas()
+    {
+        $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'username');
+        $datas = [
+            'managerInfos' => $managerInfos,
+        ];
+
+        return $datas;
     }
 }

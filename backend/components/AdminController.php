@@ -14,6 +14,7 @@ class AdminController extends Controller
     public $menuInfos = [];
     public $showSubnav = true;
     protected $modelClass = '';
+    protected $viewPrefix = '';
 
     /**
      * @inheritdoc
@@ -34,10 +35,13 @@ class AdminController extends Controller
      * Lists infos.
      * @return mixed
      */
-    protected function _listinfoInfo($searchModel, $searchDatas = [])
+    protected function _listinfoInfo()
     {
+        $searchClass = $this->modelSearchClass;
+        $searchModel = new $searchClass();
+		$searchDatas = $searchModel->getSearchDatas();
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
-        return $this->render('listinfo', [
+        return $this->render($this->viewPrefix . 'listinfo', [
             'dataProvider' => $dataProvider,
             'searchModel' => $searchModel,
             'searchDatas' => $searchDatas,
@@ -52,7 +56,7 @@ class AdminController extends Controller
     {
         $infos = $model->getFormatedInfos();
 
-        return $this->render('listinfo', [
+        return $this->render($this->viewPrefix . 'listinfo', [
             'model' => $model,
             'infos' => $infos,
         ]);
@@ -66,7 +70,7 @@ class AdminController extends Controller
     protected function _viewInfo($id)
     {
         $model = $this->findModel($id);
-        return $this->render('view', ['model' => $model]);
+        return $this->render($this->viewPrefix . 'view', ['model' => $model]);
     }
 
     /**
@@ -74,18 +78,30 @@ class AdminController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    protected function _addInfo($model, $returnView = true)
+    protected function _addInfo($data = [], $returnView = true)
     {
+        $modelClass = $this->modelClass;
+        $model = new $modelClass($this->_addData());
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            if ($returnView) {
+            if ($this->_returnView()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
             return $this->redirect(['listinfo']);
         }
 
-        return $this->render('add', [
+        return $this->render($this->viewPrefix . 'add', [
             'model' => $model,
         ]);
+    }
+
+    protected function _addData()
+    {
+        return [];
+    }
+
+    protected function _returnView()
+    {
+        return true;
     }
 
     protected function _importInfo($model)
@@ -112,7 +128,7 @@ class AdminController extends Controller
             return $this->redirect(['listinfo']);
         }
 
-        return $this->render('add', [
+        return $this->render($this->viewPrefix . 'add', [
             'addMul' => true,
             'model' => $model,
         ]);
@@ -134,7 +150,7 @@ class AdminController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
-        return $this->render('update', ['model' => $model]);
+        return $this->render($this->viewPrefix . 'update', ['model' => $model]);
     }
 
     /**

@@ -9,10 +9,6 @@ use backend\components\AdminController;
 class DocumentController extends AdminController
 {
 
-    /**
-     * Lists all Document models.
-     * @return mixed
-     */
     public function actionListinfo()
     {
         return $this->render('listinfo');

@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use yii\helpers\ArrayHelper;
 use backend\components\AdminController;
-use common\models\region\Region;
-use common\models\region\searchs\Region as RegionSearch;
+use backend\components\ControllerFullTrait;
 
 class RegionController extends AdminController
 {
     public $modelClass = 'common\models\region\Region';
+    public $modelSearchClass = 'common\models\region\searchs\Region';
+    use ControllerFullTrait;
 
     public function actionListinfo()
     {
@@ -22,7 +22,8 @@ class RegionController extends AdminController
             return $data;
         }
 
-        $searchModel = new RegionSearch();
+        $searchClass = $this->modelSearchClass;
+        $searchModel = new $searchClass();
         $searchDatas = $searchModel->getSearchDatas();
         return $this->_listinfoInfo($searchModel, $searchDatas);
     }
@@ -32,7 +33,8 @@ class RegionController extends AdminController
         Yii::$app->response->format = Response::FORMAT_JSON;
 
         $parentCode = Yii::$app->request->get('parent_code');
-        $model = new Region();
+        $modelClass = $this->modelClass;
+        $model = new $modelClass();
         $infos = $model->getSubInfos($parentCode);
         $isDirect = $model->isDirect($parentCode);
         $datas = [];
@@ -50,30 +52,10 @@ class RegionController extends AdminController
         return $datas;
     }
 
-    public function actionView($id)
+    public function _addData()
     {
-        return $this->_viewInfo($id);
-    }
-
-    public function actionAdd()
-    {
-        $data = [
+        return [
             'parent_code' => Yii::$app->request->get('parent_code'),
         ];
-        return $this->_addInfo(new Region($data));
-    }
-
-    public function actionUpdate($id = 0)
-    {
-        if (Yii::$app->request->isAjax) {
-            return $this->_updateByAjax();
-        }
-
-        return $this->_updateInfo($id);
-    }
-
-    public function actionDelete($id)
-    {
-        return $this->_deleteInfo($id);
     }
 }
