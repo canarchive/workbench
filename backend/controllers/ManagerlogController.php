@@ -12,8 +12,8 @@ use backend\components\ControllerViewTrait;
 
 class ManagerlogController extends AdminController
 {
-	protected $modelClass = 'backend\models\Managerlog';
-	protected $modelSearchClass = 'backend\models\searchs\Managerlog';
+    protected $modelClass = 'backend\models\Managerlog';
+    protected $modelSearchClass = 'backend\models\searchs\Managerlog';
     use ControllerViewTrait;
 
     public function actionListinfom()

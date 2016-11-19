@@ -7,10 +7,10 @@ use common\models\AttachmentCommon;
 
 class BackendUploadController extends UploadController
 {
-	public $enableCsrfValidation = false;
+    public $enableCsrfValidation = false;
 
-	protected function getAttachment($params = [])
-	{
-		return new AttachmentCommon($params);
-	}
+    protected function getAttachment($params = [])
+    {
+        return new AttachmentCommon($params);
+    }
 }

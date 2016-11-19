@@ -14,10 +14,10 @@ return [
     'seoDescription' => 'seoDescription',
     'siteCopyRightInfo' => '© copyright',
     'siteIcpInfo' => 'icp',
-    'siteHotline' => '400-0000-000',    
+    'siteHotline' => '400-0000-000',
     'siteAddressInfo' => 'addrees',
-    'siteJoinusTel' => '18888888888',    
-    'siteCustomServiceQQ' => '1313113',    
+    'siteJoinusTel' => '18888888888',
+    'siteCustomServiceQQ' => '1313113',
     'siteName' => 'siteName',
     'siteNameBase' => 'site',
 ];
