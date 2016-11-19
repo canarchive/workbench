@@ -107,14 +107,14 @@ class BaseModel extends ActiveRecord
     }
 
     public function searchTimeElem(& $query, $field = 'created_at')
-    {   
+    {
         $startAttr = $field . '_start';
         $endAttr = $field . '_end';
         $startTime = strtotime($this->$startAttr);
         $endTime = $this->$endAttr > 0 ? strtotime($this->$endAttr) : time();
         $query->andFilterWhere(['>=', $field, $startTime]);
         $query->andFilterWhere(['<', $field, $endTime]);
-    }   
+    }
 
     protected function getCompanyInfos()
     {
@@ -123,38 +123,38 @@ class BaseModel extends ActiveRecord
     }
 
     public function updateNum($field, $type)
-    {   
-        $num = $type == 'add' ? 1 : -1; 
+    {
+        $num = $type == 'add' ? 1 : -1;
         $this->updateCounters(['num_' . $field => $num]);
-    }   
+    }
 
     public function statisticRecord($data, $type)
-    {   
+    {
 return ;
         $keywordTypes = ['visit', 'signup'];
         if (in_array($type, $keywordTypes)) {
             $keyword = new \spread\models\statistic\Keyword();
             $keyword->recordData($data, $type);
-        }   
+        }
 
         $reportTypes = ['visit', 'signup'];
         if (in_array($type, $reportTypes)) {
             $report = new \spread\models\statistic\Report();
             $report->recordData($data, $type);
-        }   
+        }
 
         $reportServiceTypes = ['signup'];
         if (in_array($type, $reportServiceTypes)) {
             $reportServiceService = new \spread\models\statistic\ReportService();
             $reportServiceService->recordData($data, $type);
-        }   
+        }
 
         $dispatchTypes = ['dispatch'];
         if (in_array($type, $dispatchTypes)) {
             $dispatch = new \spread\models\statistic\Dispatch();
             $dispatch->recordData($data, $type);
-        }   
-    }   
+        }
+    }
 
     public function getSearchDatas()
     {

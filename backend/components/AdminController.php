@@ -39,7 +39,7 @@ class AdminController extends Controller
     {
         $searchClass = $this->modelSearchClass;
         $searchModel = new $searchClass();
-		$searchDatas = $searchModel->getSearchDatas();
+        $searchDatas = $searchModel->getSearchDatas();
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
         return $this->render($this->viewPrefix . 'listinfo', [
             'dataProvider' => $dataProvider,
