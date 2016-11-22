@@ -23,11 +23,14 @@ class Controller extends CommonController
 
         $url = Yii::$app->request->url;
         $cityCode = isset($this->module->currentCityCode) ? $this->module->currentCityCode : null;
+        //echo $cityCode;
         $redirect = strpos($url, 'index.php') !== false ? true : false;
+
         $redirect = empty($redirect) ? $this->isMobile && $this->host != $hostMobile : $redirect;
         $redirect = empty($redirect) ? !$this->isMobile && $this->host == $hostMobile : $redirect;
         $redirect = empty($redirect) ? $this->host == $hostMobile && is_null($cityCode) && $url == '/' : $redirect;
-        $redirect = empty($redirect) ? !is_null($cityCode) && $cityCode != Yii::$app->params['currentCompany']['code_short'] : $redirect;
+        //$redirect = empty($redirect) ? !is_null($cityCode) && $cityCode != Yii::$app->params['currentCompany']['code_short'] : $redirect;
+        //var_dump($redirect);exit();
         if ($redirect) {
             $rule = $this->_redirectRule();
             $url = Url::to([$rule, 'city_code' => Yii::$app->params['currentCompany']['code_short']]);

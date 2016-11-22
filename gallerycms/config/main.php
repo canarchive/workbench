@@ -31,23 +31,13 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'rules' => [
-                //Yii::getAlias('@house.gallerycmsurl') => require(__DIR__ . '/rules-house.php'),
-                '/ts-<view:\w+>' => '/house/feature/index',
-                Yii::getAlias('@house.gallerycmsurl') . '/' => '/house/site/index',
-                Yii::getAlias('@house.gallerycmsurl') . '/<_q:.*>' => '/house/<_q>',
-                //'http://yii2.seoh.alyee.biz/<controller:\w+>/<action:\w+>' => '/house/<controller>/<action>',
-                'list-<id:\d+>' => 'site/list',
-                'show-<id:\d+>' => 'site/show',
-            ],
-        ],
+            'enableStrictParsing' => true,
+			'rules' => require(__DIR__ . '/rules-cmsad.php'),
+		],
     ],
     'modules' => [
-        'house' => [
-            'class' => 'gallerycms\house\Module',
-        ],
-        'shoot' => [
-            'class' => 'gallerycms\shoot\Module',
+        'cmsad' => [
+            'class' => 'gallerycms\cmsad\Module',
         ],
     ],
     'params' => $params,
