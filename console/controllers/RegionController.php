@@ -13,16 +13,16 @@ use common\models\RegionAll;
 class RegionController extends Controller
 {
     public function actionUpdateSpell()
-    {   
-		$model = new RegionAll();
-		$infos = $model->updateSpell();
-		exit();
-    }   
+    {
+        $model = new RegionAll();
+        $infos = $model->updateSpell();
+        exit();
+    }
 
-	public function actionDeal()
-	{
-		$model = new RegionAll();
-		$infos = $model->spellDeal();
-		exit();
-	}
+    public function actionDeal()
+    {
+        $model = new RegionAll();
+        $infos = $model->spellDeal();
+        exit();
+    }
 }
