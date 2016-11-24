@@ -10,6 +10,6 @@ class ConsoleController extends Controller
 {
     public function actionTest()
     {
-		echo 'Test the console controller';
+        echo 'Test the console controller';
     }
 }
