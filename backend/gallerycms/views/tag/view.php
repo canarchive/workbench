@@ -7,9 +7,9 @@ $detailViewParams = [
         'name',
         'spell',
         'orderlist',
-        'meta_title',
-        'meta_keyword',
-        'meta_description',
+        'seo_title',
+        'seo_keyword',
+        'seo_description',
     ],
 ];
 

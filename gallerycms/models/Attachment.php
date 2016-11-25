@@ -18,6 +18,14 @@ class Attachment extends AttachmentBase
     protected function _fieldInfos()
     {
         return [
+            'category' => [
+                'thumb' => [
+                    'isSingle' => true,
+                    'minSize' => 1, // unit: kb
+                    'maxSize' => 80,
+                    'type' => 'image/*',
+                ],
+            ],
             'friendlink' => [
                 'logo' => [
                     'isSingle' => true,
