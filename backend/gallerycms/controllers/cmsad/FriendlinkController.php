@@ -1,45 +1,12 @@
 <?php
 
-namespace backend\gallerycms\controllers;
+namespace backend\gallerycms\controllers\cmsad;
 
-use Yii;
-use gallerycms\models\HouseFriendlink;
-use gallerycms\models\searchs\HouseFriendlink as HouseFriendlinkSearch;
-use yii\web\NotFoundHttpException;
-use backend\components\AdminController;
+use backend\gallerycms\controllers\Friendlink;
 
-class HouseFriendlinkController extends AdminController
+class FriendlinkController extends Friendlink
 {
-	protected $modelClass = 'gallerycms\models\HouseFriendlink';
-
-    public function actionListinfo()
-    {
-        $searchModel = new HouseFriendlinkSearch();
-		return $this->_listinfoInfo($searchModel);
-    }
-
-    public function actionView($id)
-    {
-		return $this->_viewInfo($id);
-    }
-
-    public function actionAdd()
-    {
-		return $this->_addInfo(new HouseFriendlink());
-    }
-
-    public function actionUpdate($id = 0)
-    {
-		if (Yii::$app->request->isAjax) {
-		    return $this->_updateByAjax();
-		}
-
-		return $this->_updateInfo($id);
-    }
-
-    public function actionDelete($id)
-    {
-		return $this->_deleteInfo($id);
-    }
+    protected $modelClass = 'gallerycms\cmsad\models\Friendlink';
+    protected $modelSearchClass = 'gallerycms\cmsad\models\searchs\Friendlink';
 
 }
