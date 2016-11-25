@@ -2,10 +2,10 @@
 
 namespace gallerycms\cmsad\models\searchs;
 
-use gallerycms\models\searchs\InteralChainTrait;
-use gallerycms\cmsad\models\InteralChain AS InteralChainModel;
+use gallerycms\models\searchs\InternalChainTrait;
+use gallerycms\cmsad\models\InternalChain AS InternalChainModel;
 
-class InteralChain extends InteralChainModel
+class InternalChain extends InternalChainModel
 {
-    use InteralChainTrait;
+    use InternalChainTrait;
 }
