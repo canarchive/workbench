@@ -6,7 +6,7 @@ use common\widgets\FileUploadUI;
 use gallerycms\models\Attachment;
 
 $attachmentModel = new Attachment();
-$thumb = $attachmentModel->getFieldInfos($tableName, 'thumb');
+$thumb = $attachmentModel->getFieldInfos('category', 'thumb');
 
 ?>
 
@@ -21,7 +21,7 @@ $thumb = $attachmentModel->getFieldInfos($tableName, 'thumb');
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[thumb]',
-        'url' => ['/gallerycms-upload/index', 'table' => $tableName, 'field' => 'thumb', 'id' => $model->id],
+        'url' => ['/gallerycms-upload/index', 'table' => 'category', 'field' => 'thumb', 'id' => $model->id],
         'gallery' => true,
         'fieldOptions' => [
             'isSingle' => $thumb['isSingle'],
