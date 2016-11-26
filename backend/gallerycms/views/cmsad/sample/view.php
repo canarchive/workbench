@@ -12,14 +12,9 @@ $detailViewParams = [
         'name',
 		'orderlist',
 		[
-			'attribute' => 'house_type',
-			'value' => $model->houseTypeInfos[$model->house_type],
+			'attribute' => 'sort',
+			'value' => isset($model->sortInfos[$model->sort]) ? $model->sortInfos[$model->sort] : '',
 		],
-		[
-			'attribute' => 'style',
-			'value' => $model->styleInfos[$model->style],
-		],
-		'area',
 		[
 			'attribute' => 'status',
 			'value' => $model->statusInfos[$model->status],
