@@ -6,9 +6,9 @@ use backend\components\AdminController;
 use backend\components\ControllerFullTrait;
 use backend\components\ControllerAddMulTrait;
 
-class Friendlink extends AdminController
+class Keyword extends AdminController
 {
-    public $viewPrefix = '/friendlink/';
+    public $viewPrefix = '/keyword/';
     use ControllerFullTrait;
     use ControllerAddMulTrait;
 }

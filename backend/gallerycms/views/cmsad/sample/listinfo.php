@@ -14,15 +14,9 @@ $gridViewParams = [
 			}
 		],
 		[
-            'attribute' => 'house_type',
+            'attribute' => 'sort',
 			'value' => function($model) {
-				return $model->houseTypeInfos[$model->house_type];
-			},
-		],
-		[
-            'attribute' => 'style',
-			'value' => function($model) {
-				return $model->styleInfos[$model->style];
+				return isset($model->sortInfos[$model->sort]) ? $model->sortInfos[$model->sort] : '';
 			},
 		],
 		[
