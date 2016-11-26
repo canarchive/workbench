@@ -5,10 +5,9 @@ $detailViewParams = [
     'attributes' => [
         'id',
         'name',
-        'name_ext',
         [
-            'attribute' => 'type',
-            'value' => $model->typeInfos[$model->type],
+            'attribute' => 'sort',
+            'value' => isset($model->sortInfos[$model->sort]) ? $model->sortInfos[$model->sort] : '',
         ],
         [
             'format' => 'raw',
@@ -16,6 +15,12 @@ $detailViewParams = [
             'value' => "<a href='{$model->url}' target='_blank'>{$model->url}</a>",
         ],
         'orderlist',
+        'contact',
+        'mobile',
+        'qq',
+        'email',
+        'wechat',
+        'pagerank',
         [
             'attribute' => 'status',
             'value' => $model->statusInfos[$model->status],
@@ -30,18 +35,8 @@ $detailViewParams = [
         ],
         [
             'format' => 'raw',
-            'attribute' => 'picture',
-            'value' => $model->getAttachmentImg($model->picture, false),
-        ],
-        [
-            'format' => 'raw',
-            'attribute' => 'picture_mobile',
-            'value' => $model->getAttachmentImg($model->picture_mobile, false),
-        ],
-        [
-            'format' => 'raw',
-            'attribute' => 'picture_ext',
-            'value' => $model->getAttachmentImg($model->picture_ext, false),
+            'attribute' => 'logo',
+            'value' => $model->getAttachmentImg($model->logo, false),
         ],
         'description',
     ],

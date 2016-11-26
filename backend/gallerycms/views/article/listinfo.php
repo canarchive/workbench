@@ -22,8 +22,9 @@ $gridViewParams = [
 			}
 		],
 		[
-			'attribute' => 'category_id',
+			'attribute' => 'category_code',
 			'value' => function($model) {
+                return $model->category_code;
 				return $model->categoryInfos[$model->category_id];
 			}
 		],		
