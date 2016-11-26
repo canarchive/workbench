@@ -7,13 +7,20 @@ $gridViewParams = [
         'id',
         'name',
         [
-            'attribute' => 'type',
+            'attribute' => 'sort',
             'value' => function($model) {
-                if (!empty($model->type)) {
-                    return $model->typeInfos[$model->type];
+                if (!empty($model->sort)) {
+                    return $model->sortInfos[$model->sort];
                 }
                 return '';
             },
+        ],
+        [
+            'format' => 'raw',
+            'attribute' => 'logo',
+            'value' => function($model) {
+                return $model->getAttachmentImg($model->logo);
+            }
         ],
         [
             'format' => 'raw',
@@ -24,13 +31,6 @@ $gridViewParams = [
         ],
         [
             'format' => 'raw',
-            'attribute' => 'picture',
-            'value' => function($model) {
-                return $model->getAttachmentImg($model->picture);
-            }
-        ],
-        [
-            'format' => 'raw',
             'attribute' => 'orderlist',
             'value' => function($model) {
                 $appMenus = $this->context->menuInfos['appMenus'];
@@ -38,6 +38,9 @@ $gridViewParams = [
                 return '<input name="orderlist" type="text" style="width:30px;" value="' . $model->orderlist . '" class="input-text-c" onchange="updateElemByAjax(\'' . $updateUrl . '\', ' . $model->id . ', \'orderlist\', this.value);">';
             },
         ],
+        'pagerank',
+        'contact',
+        'mobile',
         [
             'attribute' => 'created_at',
             'value'=> function($model){
