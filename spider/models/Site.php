@@ -41,9 +41,14 @@ class Site extends SpiderModel
         $pathBase = '/data/htmlwww/filesys/';
         $localBase = 'http://60.205.145.0/filesys/';
         foreach ($infos as $info) {
-            $pathInfo = pathinfo($info['source_url']);
+            $url = trim($info['source_url']);
+            echo $url;
+            $pos = strpos($url, '?');
+            $url = $pos !== false ? substr($url, 0, strpos($url, '?')) : $url;
+            $pathInfo = pathinfo($url);
             $extName = isset($pathInfo['extension']) ? $pathInfo['extension'] : '';
             $extName = $pos = strpos($extName, '?') ? substr($extName, 0, strpos($extName, '?')) : $extName;
+            //echo $url . '--' . $extName . '<br />';continue;
 
             $key = md5($info['info_table'] . $info['info_field'] . $info['source_id'] . $info['source_url']);
             $code = $this->type . '/' . substr($info['source_site_code'], 0, 1);
@@ -58,11 +63,11 @@ class Site extends SpiderModel
             $info->source_status = 1;
             if (!file_exists($file)) {
             FileHelper::createDirectory(dirname($file));
-            $content =  @ file_get_contents(trim($info['source_url']));
+            $content =  @ file_get_contents($url);
             if ($content) {
                 file_put_contents($file, $content);
             } else {
-                echo "<a href='{$info['source_url']}' target='_blank'>{$info['source_url']}</a><br />";
+                echo "<a href='{$url}' target='_blank'>{$url}</a><br />";
                 $info->source_status = -1;
             }
             }
@@ -75,7 +80,7 @@ class Site extends SpiderModel
             $info->update(false);
             $filepath = $info['filepath'];
             $file = $pathBase . $filepath;
-            //echo "<a href='{$localBase}{$filepath}' target='_blank'>{$file}</a>--<a href='{$info['source_url']}' target='_blank'>源文件</a><br />";
+            //echo "<a href='{$localBase}{$filepath}' target='_blank'>{$file}</a>--<a href='{$url}' target='_blank'>源文件</a><br />";
             //print_r($info);exit();
         }
     }
