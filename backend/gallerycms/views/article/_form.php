@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use common\ueditor\Ueditor;
+use common\ueditor\UEditor;
 use common\widgets\FileUploadUI;
 use gallerycms\models\Attachment;
 
@@ -15,6 +15,7 @@ $thumb = $attachmentModel->getFieldInfos('article', 'thumb');
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'category_id')->dropDownList($model->categoryLevelInfos, ['prompt' => Yii::t('admin-common', 'Select Category')]); ?>
+    <?= $form->field($model, 'orderlist')->textInput(['maxlength' => 128]) ?>
 
     <?= $form->field($model, 'thumb')->hiddenInput(); ?>
     <?= FileUploadUI::widget([
@@ -34,9 +35,11 @@ $thumb = $attachmentModel->getFieldInfos('article', 'thumb');
     ]);
     ?>
 
-    <?= $form->field($model, 'keywords')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'description')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'source_from')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'author')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'editor')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'tags')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'description')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
 	<?= $form->field($model, 'content')->widget(Ueditor::className(),[]) ?>
 		
