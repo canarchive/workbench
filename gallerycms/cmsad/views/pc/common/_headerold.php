@@ -2,34 +2,48 @@
 use yii\helpers\Url;
 
 $firstLevels = [
-    ['view' => 'sem', 'name' => 'SEM托管'],
-    ['view' => 'seo', 'name' => 'SEO顾问'],
-    ['view' => 'customizing', 'name' => '企业定制'],
-    ['controller' => 'sample', 'name' => '成功案例'],
-    ['controller' => 'info', 'name' => '营销学院'],
-    ['controller' => 'aboutus', 'view' => 'index', 'name' => '关于我们'],
+    ['view' => 'qiyedianshang', 'name' => '网站建设'],
+    ['view' => 'yingxiaotuiguang', 'name' => '营销推广'],
+    ['view' => 'qiyeyingyong', 'name' => '企业应用'],
+    ['view' => 'free', 'name' => '网站攻略'],
+    ['controller' => 'case', 'name' => '案例中心'],
+    ['controller' => 'aboutus', 'view' => 'company', 'name' => '关于我们'],
 ];
 $secondLevels = [
-    [],
-    [],
     [
-        ['view' => 'customizing', 'name' => '网站建设'],
-        ['view' => 'customizing', 'name' => '服务器托管'],
-        ['view' => 'customizing', 'name' => '舆情监控'],
-        ['view' => 'customizing', 'name' => 'SEM培训'],
-        ['view' => 'customizing', 'name' => 'SEO指导'],
-        ['view' => 'customizing', 'name' => 'SMO'],
-        ['view' => 'customizing', 'name' => '新闻营销'],
-    ],
-    [],
-    [
-        ['controller' => 'info', 'view' => 'index', 'name' => '营销推广'],
-        ['controller' => 'info', 'view' => 'infotouch', 'name' => '网站权重'],
-        ['controller' => 'info', 'view' => 'anligushi', 'name' => 'SEM竞价'],
-        ['controller' => 'info', 'view' => 'canyinhangye', 'name' => 'SEO网站'],
+        ['view' => 'guanwang', 'name' => '企业官网'],
+        ['view' => 'quanwangyingxiao', 'name' => '全网营销'],
+        ['view' => 'shoujijianzhan', 'name' => '手机建站'],
+        ['view' => 'shangcheng', 'name' => '网上商城'],
+        ['view' => 'yidongyingxiao', 'name' => '移动营销'],
     ],
     [
-        ['controller' => 'contact', 'name' => '联系我们'],
+        ['view' => 'guoneituiguang', 'name' => '国内营销'],
+        ['view' => 'haiwaituiguang', 'name' => '海外推广'],
+    ],
+    [
+        ['view' => 'youju', 'name' => '企业邮箱'],
+        ['view' => 'yuming', 'name' => '企业域名'],
+        ['view' => 'sheji', 'name' => '高端设计'],
+        ['view' => 'kexinwangzhan', 'name' => '可信网站'],
+    ],
+    [
+        ['view' => 'free', 'name' => '免费报价'],
+        ['view' => 'zero', 'name' => '0元体验'],
+        ['view' => 'wangzhantijian', 'name' => '网站体检'],
+    ],
+    [
+        ['controller' => 'case', 'view' => 'index', 'name' => '行业案例'],
+        ['controller' => 'case', 'view' => 'casetouch', 'name' => '服装行业'],
+        ['controller' => 'case', 'view' => 'anligushi', 'name' => '包装行业'],
+        ['controller' => 'case', 'view' => 'canyinhangye', 'name' => '餐饮行业'],
+    ],
+    [
+        ['controller' => 'aboutus', 'view' => 'company', 'name' => '企业介绍'],
+        ['controller' => 'info', 'name' => '资讯中心'],
+        ['controller' => 'message', 'name' => '信息讲堂'],
+        ['controller' => 'service', 'name' => '售后服务'],
+        ['controller' => 'joinus', 'name' => '加入我们'],
     ],
 ];
 
@@ -63,7 +77,7 @@ $secondLevels = [
                 <a href="/" title='<?= Yii::$app->params['siteName']; ?>'><?= Yii::$app->params['siteName']; ?></a>
             </h1>
             <ul class="nav">
-                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; } ?>
+                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } ?>
                 <li class="d_2">
                     <a href="<?= Url::to($urlData); ?>"><?= $urlInfo['name']; ?></a>
                 </li>
