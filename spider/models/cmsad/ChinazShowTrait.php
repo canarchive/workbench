@@ -68,6 +68,9 @@ Trait ChinazShowTrait
             $editor = str_replace('编辑：', '', $editor);
             //echo $created_at . '==' . $from_source . '==' . $editor;
             $content = trim($crawler->filter('#ctrlfscont')->html());
+            $content = preg_replace("'<script(.*?)<\/script>'is", '', $content);
+            $content = strip_tags($content, '<p>');
+            echo $content;exit();
 
             $info->created_at = $created_at;
             $info->author = $author;
