@@ -52,11 +52,11 @@ window.signupUrl = '<?= Yii::getAlias('@spreadurl') . '/jz-signup-cms.html'; ?>'
 <?php echo $this->render('../common/_header', []); // 顶部 ?>
 <?= $content; ?>
 <?php echo $this->render('../common/_footer', []); ?>
-<?php echo $this->render('../common/_pop', []); ?>
 <?php 
 $jsFooterFiles = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count']; foreach ($jsFooterFiles as $jsFile) { ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl') . '/cmsad/pc/js/' . $jsFile . '.js'; ?>"></script>
 <?php } ?>
+<?php echo $this->render('../common/_pop', []); ?>
 <input type="hidden" name="admin_add" id="admin_add" value="88" />
 <input name="areacode" id="area_code" type="hidden" value="" />
 

@@ -17,7 +17,7 @@ class GallerycmsModel extends BaseModel
 	public function getCategoryInfos()
 	{
         $model = $this->_newModel('category', true);
-		$infos = $model->find()->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
+		$infos = $model->find()->indexBy('d')->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
 		return $infos;
 	}
 
@@ -31,8 +31,8 @@ class GallerycmsModel extends BaseModel
 	public function getCategoryLevelInfos()
 	{
         $model = $this->_newModel('category', true);
-    	$infos = $model->find()->select(['id', 'name', 'parent_code'])->indexBy('id')->asArray()->all();
-		$datas = $this->getLevelInfos($infos, 'id', 'parent_code', 'name', 0);
+    	$infos = $model->find()->select(['id', 'name', 'parent_id'])->indexBy('id')->asArray()->all();
+		$datas = $this->getLevelInfos($infos, 'id', 'parent_id', 'name', 0);
 		return $datas;
 	}	
 }

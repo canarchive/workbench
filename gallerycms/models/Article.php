@@ -60,4 +60,15 @@ class Article extends GallerycmsModel
 
 		return true;
 	}	
+
+	public function getInfos($where, $limit = 100)
+	{
+		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
+		foreach ($infos as $key => & $info) {
+			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+		}
+
+        //$cache->set($keyCache, $infos);
+		return $infos;
+	}		
 }
