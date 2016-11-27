@@ -2,9 +2,9 @@
 
 namespace gallerycms\models;
 
-use common\models\gallerycmsModel;
+use common\models\GallerycmsModel;
 
-class PositionAbstract extends GallerycmsModel
+class Friendlink extends GallerycmsModel
 {
     public function behaviors()
     {
@@ -17,9 +17,9 @@ class PositionAbstract extends GallerycmsModel
     public function rules()
     {
         return [
-            [['name', 'type'], 'required'],
-            [['orderlist', 'status', 'picture', 'picture_mobile', 'picture_ext'], 'default', 'value' => 0],
-            [['description', 'url', 'name_ext'], 'safe'],
+            [['name', 'url'], 'required'],
+            [['orderlist', 'status', 'logo'], 'default', 'value' => 0],
+            [['sort', 'pagerank', 'contact', 'mobile', 'qq', 'email', 'wechat', 'description'], 'safe'],
         ];
     }
 
@@ -28,13 +28,16 @@ class PositionAbstract extends GallerycmsModel
         return [
             'id' => 'ID',
             'name' => '名称',
-            'name_ext' => '名称-预留',
-            'type' => '类型',
+            'sort' => '类型',
             'url' => 'URL',
             'orderlist' => '排序',
-            'picture' => '图片',
-            'picture_mobile' => '图片-H5',
-            'picture_ext' => '图片-预留',
+            'logo' => 'LOGO',
+            'pagerank' => '权重',
+            'contact' => '联系人',
+            'mobile' => '手机号',
+            'qq' => 'QQ',
+            'email' => 'EMAIL',
+            'wechat' => '微信',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
             'description' => '描述',
@@ -51,15 +54,11 @@ class PositionAbstract extends GallerycmsModel
         return $datas;
     }
 
-    public function getTypeInfos()
+    public function getSortInfos()
     {
         $datas = [
-            'index_slice' => '首页-幻灯',
-            'index_goods' => '首页-商品',
-            'index_goods_text' => '首页-图文商品',
-            'index_sample' => '首页-样片',
-            'list_left' => '列表页-左侧',
-            'list_right' => '列表页-右侧',
+            'index' => '首页',
+            'index-merchant' => '商家官网',
         ];
         return $datas;
     }
@@ -68,8 +67,8 @@ class PositionAbstract extends GallerycmsModel
     {
         parent::afterSave($insert, $changedAttributes);
 
-        $fields = ['picture', 'picture_mobile', 'picture_ext'];
-        $this->_updateSingleAttachment('position', $fields);
+        $fields = ['logo'];
+        $this->_updateSingleAttachment('friendlink', $fields);
 
         return true;
     }

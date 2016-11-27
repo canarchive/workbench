@@ -5,7 +5,7 @@ namespace gallerycms\models;
 use common\models\GallerycmsModel;
 use common\helpers\Tree;
 
-class CategoryAbstract extends GallerycmsModel
+class Category extends GallerycmsModel
 {
     public function rules()
     {

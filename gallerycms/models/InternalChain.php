@@ -5,7 +5,7 @@ namespace gallerycms\models;
 use common\models\GallerycmsModel;
 use Overtrue\Pinyin\Pinyin;
 
-class InternalChainAbstract extends GallerycmsModel
+class InternalChain extends GallerycmsModel
 {
     public $add_mul;
 

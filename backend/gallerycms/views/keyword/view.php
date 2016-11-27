@@ -4,12 +4,12 @@ $detailViewParams = [
     'model' => $model,
     'attributes' => [
         'id',
-        'name',
-        'spell',
-        'orderlist',
-        'seo_title',
-        'seo_keyword',
-        'seo_description',
+        'keyword',
+        'num_used',
+        [
+            'attribute' => 'created_at',
+            'value'=> date('Y-m-d H:i:s',$model->created_at),
+        ],
     ],
 ];
 

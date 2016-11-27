@@ -2,9 +2,9 @@
 
 namespace gallerycms\models;
 
-use common\models\gallerycmsModel;
+use common\models\GallerycmsModel;
 
-class FriendlinkAbstract extends GallerycmsModel
+class Position extends GallerycmsModel
 {
     public function behaviors()
     {
@@ -17,9 +17,9 @@ class FriendlinkAbstract extends GallerycmsModel
     public function rules()
     {
         return [
-            [['name', 'url'], 'required'],
-            [['orderlist', 'status', 'logo'], 'default', 'value' => 0],
-            [['sort', 'pagerank', 'contact', 'mobile', 'qq', 'email', 'wechat', 'description'], 'safe'],
+            [['name', 'type'], 'required'],
+            [['orderlist', 'status', 'picture', 'picture_mobile', 'picture_ext'], 'default', 'value' => 0],
+            [['description', 'url', 'name_ext'], 'safe'],
         ];
     }
 
@@ -28,16 +28,13 @@ class FriendlinkAbstract extends GallerycmsModel
         return [
             'id' => 'ID',
             'name' => '名称',
-            'sort' => '类型',
+            'name_ext' => '名称-预留',
+            'type' => '类型',
             'url' => 'URL',
             'orderlist' => '排序',
-            'logo' => 'LOGO',
-            'pagerank' => '权重',
-            'contact' => '联系人',
-            'mobile' => '手机号',
-            'qq' => 'QQ',
-            'email' => 'EMAIL',
-            'wechat' => '微信',
+            'picture' => '图片',
+            'picture_mobile' => '图片-H5',
+            'picture_ext' => '图片-预留',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
             'description' => '描述',
@@ -54,11 +51,15 @@ class FriendlinkAbstract extends GallerycmsModel
         return $datas;
     }
 
-    public function getSortInfos()
+    public function getTypeInfos()
     {
         $datas = [
-            'index' => '首页',
-            'index-merchant' => '商家官网',
+            'index_slice' => '首页-幻灯',
+            'index_goods' => '首页-商品',
+            'index_goods_text' => '首页-图文商品',
+            'index_sample' => '首页-样片',
+            'list_left' => '列表页-左侧',
+            'list_right' => '列表页-右侧',
         ];
         return $datas;
     }
@@ -67,8 +68,8 @@ class FriendlinkAbstract extends GallerycmsModel
     {
         parent::afterSave($insert, $changedAttributes);
 
-        $fields = ['logo'];
-        $this->_updateSingleAttachment('friendlink', $fields);
+        $fields = ['picture', 'picture_mobile', 'picture_ext'];
+        $this->_updateSingleAttachment('position', $fields);
 
         return true;
     }

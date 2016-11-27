@@ -5,9 +5,14 @@ namespace gallerycms\models;
 use common\models\GallerycmsModel;
 use Overtrue\Pinyin\Pinyin;
 
-class TagAbstract extends GallerycmsModel
+class Tag extends GallerycmsModel
 {
     public $add_mul;
+
+    public static function tableName()
+    {
+        return '{{%tag}}';
+    }
 
     /**
      * @inheritdoc
@@ -36,9 +41,9 @@ class TagAbstract extends GallerycmsModel
             'name' => '名称',
             'parent_id' => '父栏目ID',
             'orderlist' => '排序',
-            'meta_title' => 'SEO名称',
-            'meta_keywords' => 'SEO关键字',
-            'meta_description' => 'SEO描述',
+            'seo_title' => 'SEO名称',
+            'seo_keywords' => 'SEO关键字',
+            'seo_description' => 'SEO描述',
             'add_mul' => '批量添加(格式：标签 排序\n)',
         ];
     }
