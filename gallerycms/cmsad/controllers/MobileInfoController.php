@@ -2,6 +2,6 @@
 
 namespace gallerycms\cmsad\controllers;
 
-class MobileSiteController extends SiteController
+class MobileInfoController extends InfoController
 {
 }

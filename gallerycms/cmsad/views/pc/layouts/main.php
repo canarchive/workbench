@@ -57,6 +57,17 @@ window.signupUrl = '<?= Yii::getAlias('@spreadurl') . '/jz-signup-cms.html'; ?>'
 $jsFooterFiles = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count']; foreach ($jsFooterFiles as $jsFile) { ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl') . '/cmsad/pc/js/' . $jsFile . '.js'; ?>"></script>
 <?php } ?>
+<script type="text/javascript">
+    $(function(){
+         //页签切换
+        $(".gwtg-wrap").TabSwitch({     
+            classname: 'current',    
+            type: 'click',
+            menu: '.gwtg-btn li',
+            content: '.gwtg-content .gwtg-c-main'
+        });
+    })
+</script>
 <input type="hidden" name="admin_add" id="admin_add" value="88" />
 <input name="areacode" id="area_code" type="hidden" value="" />
 
