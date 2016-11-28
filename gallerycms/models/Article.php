@@ -71,4 +71,24 @@ class Article extends GallerycmsModel
         //$cache->set($keyCache, $infos);
 		return $infos;
 	}		
+
+	public function getInfo($id)
+	{
+		$info = static::find()->where(['id' => $id])->one();//->toArray();
+		if (empty($info)) {
+			return $info;
+		}
+
+		$info = $this->_formatInfo($info);
+
+        //\Yii::$app->cacheRedis->set($key, $info);
+		return $info;
+	}
+
+	protected function _formatInfo($info)
+	{
+		$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+
+		return $info;
+	}
 }
