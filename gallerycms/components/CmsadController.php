@@ -22,13 +22,37 @@ class CmsadController extends Controller
         exit();
 	}
 
-	protected function _getOwnerInfos()
-	{
-		$cityCode = Yii::$app->params['currentCompany']['code_short'];
-		$where = ['city_code' => $cityCode];
-		$owner = new \merchant\cmsad\models\Owner();
-		$infos = $owner->getInfos($where, 20);
+    public function getTdkInfos($index, $datas = [])
+    {
+        $default = [
+            'title' => Yii::$app->params['seoTitle'],
+            'keyword' => Yii::$app->params['seoKeyword'],
+            'description' => Yii::$app->params['seoDescription'],
+        ];
+        $infos = require(Yii::getAlias('@gallerycms') . '/config/tdk-cmsad.php');
+        $info = isset($infos[$index]) ? $infos[$index] : $default;
 
-		return $infos;
-	}
+        $placeholder = array_merge(
+            [
+                '{{SITENAME}}',
+                '{{BASETITLE}}',
+                '{{BASEKEYWORD}}',
+                '{{BASEDESCRIPTION}}',
+            ], array_keys($datas)
+        );
+        $replace = array_merge(
+            [
+                Yii::$app->params['siteName'],
+                $default['title'],
+                $default['keyword'],
+                $default['description'],
+            ], array_values($datas)
+        );
+        foreach ($info as $key => $value) {
+            $info[$key] = str_replace($placeholder, $replace, $value);
+        }
+
+        Yii::$app->params['tdkInfos'] = $info;
+        return ;
+    }
 }
