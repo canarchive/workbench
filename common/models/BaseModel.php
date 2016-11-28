@@ -156,6 +156,18 @@ return ;
         }
     }
 
+    public function _newModel($code, $returnNew = false, $data = [])
+    {
+        static $models = [];
+        $code = ucfirst($code);
+        if (!isset($models[$code]) || $returnNew) {
+            $classPrefix = $this->_getClassPrefix();
+            $class = "{$classPrefix}\{$code}";
+            $models[$code] = new $class($data);
+        }
+        return $models[$code];
+    }
+
     public function getSearchDatas()
     {
         return [];
