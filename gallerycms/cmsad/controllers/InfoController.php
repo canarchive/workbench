@@ -36,7 +36,7 @@ class InfoController extends CmsadController
             return $this->redirect('/')->send();
 		}
 
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
+		$dataTdk = ['{{INFONAME}}' => $info['name']];
 		$this->getTdkInfos('sample-show', $dataTdk);
 		$datas = [
 			'info' => $info,

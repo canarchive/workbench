@@ -48,9 +48,9 @@ $secondLevels = [
                 <!--<a href="#" target="_blank">注册</a> -->
             </div>
             <div class="loginr floatR">
-                <!--<span class="s-icon-shop"></span><a href="#"  target="_blank">购物车（0） |</a>-->
-                <a href="/service/" target="_blank">服务与支持 |</a>
-                <a href="/aboutus/org/">全国服务网络 |</a>
+                <!--<span class="s-icon-shop"></span><a href="#"  target="_blank">购物车（0） |</a>
+                <a href="/" target="_blank">服务与支持 |</a>
+                <a href="/">全国服务网络 |</a>-->
                 <span class="tel400">全国电话咨询热线 <?= Yii::$app->params['siteHotline']; ?></span>
             </div>
             <div class="clear"></div>

@@ -29,14 +29,14 @@ class SampleController extends CmsadController
 
 	public function actionShow()
 	{
-        $id = \Yii::$app->getRequest()->get('id');
+        $id = Yii::$app->getRequest()->get('id');
         $model = new Sample();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
             return $this->redirect('/')->send();
 		}
 
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
+		$dataTdk = ['{{INFONAME}}' => $info['name']];
 		$this->getTdkInfos('sample-show', $dataTdk);
 		$datas = [
 			'info' => $info,

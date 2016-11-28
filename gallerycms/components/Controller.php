@@ -26,9 +26,9 @@ class Controller extends CommonController
         //echo $cityCode;
         $redirect = strpos($url, 'index.php') !== false ? true : false;
 
-        $redirect = empty($redirect) ? $this->isMobile && $this->host != $hostMobile : $redirect;
-        $redirect = empty($redirect) ? !$this->isMobile && $this->host == $hostMobile : $redirect;
-        $redirect = empty($redirect) ? $this->host == $hostMobile && is_null($cityCode) && $url == '/' : $redirect;
+        //$redirect = empty($redirect) ? $this->isMobile && $this->host != $hostMobile : $redirect;
+        //$redirect = empty($redirect) ? !$this->isMobile && $this->host == $hostMobile : $redirect;
+        //$redirect = empty($redirect) ? $this->host == $hostMobile && is_null($cityCode) && $url == '/' : $redirect;
         //$redirect = empty($redirect) ? !is_null($cityCode) && $cityCode != Yii::$app->params['currentCompany']['code_short'] : $redirect;
         //var_dump($redirect);exit();
         if ($redirect) {
