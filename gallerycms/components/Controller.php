@@ -8,28 +8,26 @@ use merchant\models\Company;
 
 class Controller extends CommonController
 {
+    public $moduleId;
     public $isMobile;
     public $host;
+    public $hostPc;
+    public $hostMobile;
 
     public function init()
     {
         parent::init();
 
-        $this->host = \Yii::$app->request->hostInfo;
-        $hostPc = Yii::getAlias('@gallerycmsurl');
-        $hostMobile = Yii::getAlias('@m.gallerycmsurl');
+        $this->host = Yii::$app->request->hostInfo;
+        $this->hostPc = $this->_getHost('pc');
+        $this->hostMobile = $this->_getHost('mobile');
+
         //$this->isMobile = $this->clientIsMobile();
-        $this->isMobile = $this->host == $hostMobile ? true : false;
+        $this->isMobile = $this->host == $this->hostMobile ? true : false;
 
         $url = Yii::$app->request->url;
-        $cityCode = isset($this->module->currentCityCode) ? $this->module->currentCityCode : null;
         $redirect = strpos($url, 'index.php') !== false ? true : false;
-
-        //$redirect = empty($redirect) ? $this->isMobile && $this->host != $hostMobile : $redirect;
-        //$redirect = empty($redirect) ? !$this->isMobile && $this->host == $hostMobile : $redirect;
-        //$redirect = empty($redirect) ? $this->host == $hostMobile && is_null($cityCode) && $url == '/' : $redirect;
-        //$redirect = empty($redirect) ? !is_null($cityCode) && $cityCode != Yii::$app->params['currentCompany']['code_short'] : $redirect;
-        //var_dump($redirect);exit();
+        $redirect = $redirect ? $redirect : $this->_checkRedirect();
         if ($redirect) {
             $rule = $this->_redirectRule();
             $url = Url::to([$rule, 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
@@ -41,6 +39,8 @@ class Controller extends CommonController
         if (isset($this->module->viewPath)) {
             $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
         }
+
+        $this->_initAsset();
     }
 
     public function getTdkInfos($index, $datas = [])
@@ -50,7 +50,7 @@ class Controller extends CommonController
             'keyword' => Yii::$app->params['seoKeyword'],
             'description' => Yii::$app->params['seoDescription'],
         ];
-        $infos = require(Yii::getAlias('@gallerycms') . '/config/params-tdk.php');
+        $infos = $this->_getTdkInfos();
         $info = isset($infos[$index]) ? $infos[$index] : $default;
 
         $placeholder = array_merge(
@@ -77,5 +77,26 @@ class Controller extends CommonController
 
         Yii::$app->params['tdkInfos'] = $info;
         return ;
+    }
+
+    protected function _getTdkInfos()
+    {
+        return [];
+    }
+
+    protected function _getHost($type)
+    {
+        $host = $type == 'mobile' ? Yii::getAlias('@m.gallerycmsurl') : Yii::getAlias('@gallerycmsurl');
+        return $host;
+    }
+
+    public function _checkRedirect()
+    {
+        return false;
+    }
+
+    public function _initAsset()
+    {
+        return [];
     }
 }
