@@ -21,6 +21,7 @@ $jsAllFiles = isset(Yii::$app->params['jsFiles']) ? Yii::$app->params['jsFiles']
 <meta charset="utf-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="with=device-width, initial-scale=1.0,minimum-scalable=1.0,user-scalable=no" />
 <title><?= $seoTitle; ?></title>
 <meta name="description" content="<?= $seoDescription; ?>" />
 <meta name="keywords" content="<?= $seoKeyword; ?>" />

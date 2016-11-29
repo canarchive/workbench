@@ -162,7 +162,8 @@ return ;
         $code = ucfirst($code);
         if (!isset($models[$code]) || $returnNew) {
             $classPrefix = $this->_getClassPrefix();
-            $class = "{$classPrefix}\{$code}";
+            $class = "{$classPrefix}{$code}";
+            //echo $class;exit();
             $models[$code] = new $class($data);
         }
         return $models[$code];
