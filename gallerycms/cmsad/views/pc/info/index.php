@@ -80,7 +80,7 @@ $this->params['formPositionName'] = '首页量房';
                     <a href="/case" target="_blank">
                         <h2>经典案例</h2>
                         <div class="ad-img">
-                            <img src="http://s.300.cn/current/home/images/about-ad-img1.jpg" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img1.jpg" alt=""></div>
                         <p>看经典案例，放心建网站</p>
                     </a>
                 </div>
@@ -92,14 +92,14 @@ $this->params['formPositionName'] = '首页量房';
                             </i>
                         </h2>
                         <div class="ad-img">
-                            <img src="http://s.300.cn/current/home/images/about-ad-img2.jpg" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt=""></div>
                         <p>中企动力服务过120万客户</p>
                     </a>
                 </div>
                 <!-- <div class="ad-con ad-con3">
                 <a href="/guoneituiguang.html" target="_blank">
                 <h2>帮您网站宣传网站</h2>
-                <div class="ad-img"><img src="http://s.300.cn/current/home/images/about-ad-img3.jpg" alt=""></div>
+                <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img3.jpg" alt=""></div>
                 <p>中企动力，只拿网站宣传效果说话</p>
                 </a>
                 </div> -->

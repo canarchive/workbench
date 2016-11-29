@@ -13,7 +13,7 @@ $this->params['formPositionName'] = '首页量房';
 ?>
 <div class="section">
     <div class="vone_main">
-        <div class="topimg-360" style="background:url(http://s.300.cn/current/home/images/guowaituiguang.jpg) no-repeat top center">
+        <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
                 <a value="1" href="javascript:void(0);">立即拥有</a></div>
         </div>
@@ -22,17 +22,17 @@ $this->params['formPositionName'] = '首页量房';
                 <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
-                        <img src="http://s.300.cn/current/home/images/guowaituiguang-01.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Google</span>人所共知的搜索引擎</div>
-                            <div class="con">Google搜索占全球搜索市场份额的68%，外贸企业实现全球网站宣传的首选</div></div>
+                                <span>Baidu</span>最大的中文检索引擎</div>
+                            <div class="con">移动搜索绝对的霸主，全球最大的中文搜索引擎</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Yandex</span>俄罗斯搜索龙头</div>
-                            <div class="con">俄罗斯最大的线上广告平台全球第五大搜索引擎，企业通往俄罗斯的门户</div></div>
+                                <span>sogou</span>借助于输入法成为发展最快的搜索引擎</div>
+                            <div class="con">借助于搜狗输入法，抢占用户市场</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -40,21 +40,21 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">移动广告</h1>
+                <h1 class="gwtg-title gwtg-title01">SEO顾问优势</h1>
                 <div class="zmail-p-con">
                     <div class="img floatL">
-                        <img src="http://s.300.cn/current/home/images/guowaituiguang-02.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>Admob</span>覆盖30亿手机用户</div>
-                            <div class="con">Google搜索占全球搜索市场份额的68%，外贸企业实现全球网站宣传的首选</div></div>
+                                关键词排名无明显提升，官网保证全额退款</div>
+                            <div class="con">苦于没有顶级SEO，兔班长SEO总监亲自操刀，8年经验，值得信赖！</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>Inmobi</span>全球最大移动广告网络</div>
-                            <div class="con">印度屈指可数的移动广告公司。它的移动广告已覆盖到了3.32亿个独立手机用户</div></div>
+                                <span></span>只为优质企业提供定制服务，每年只选择10家企业，保证每一个客户都是成功案例。</div>
+                            <div class="con">完全按照搜索引擎官方手册操作，拒绝黑帽，网站优化一步解决！</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -62,10 +62,10 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">社交及其他媒体</h1>
+                <h1 class="gwtg-title gwtg-title03">SEO顾问流程</h1>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
-                        <img src="http://s.300.cn/current/home/images/guowaituiguang-03.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
                     <div class="word word-01 floatL">
                         <!--<div class="gwtg-left">
                         <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
@@ -76,8 +76,8 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t03">
-                                <span>Youtube</span>全球闻名的视频网站</div>
-                            <div class="con">Youtube视频广告投放， 720°全景制作，展示公司环境和规模，彰显公司实力</div></div>
+                                <span></span>SEO具体服务流程</div>
+                            <div class="con">双方沟通---》确认受理---》报价确认---》签订合同---》收款确认---》顾问开始</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -110,7 +110,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main" style="display:block">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-04.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -124,7 +124,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-05.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -139,7 +139,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-06.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -154,7 +154,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-07.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -180,18 +180,18 @@ $this->params['formPositionName'] = '首页量房';
         <a class="slid_next" href="###"></a>
         <div class="slid">
         <ul>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
+        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
         <div class="clear"></div></ul>
         </div>
         </div>

@@ -13,7 +13,7 @@ $this->params['formPositionName'] = '首页量房';
 ?>
 <div class="alzx-section">
     <div class="zshops_main">
-        <!-- <div class="topimg-384" style="background:#fcfcfc url(http://s.300.cn/current/home/images/alzx-banner.png) no-repeat top center">
+        <!-- <div class="topimg-384" style="background:#fcfcfc url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/alzx-banner.png) no-repeat top center">
         <div class="topimg-con alzx-img pop_zixun"><a href="javascript:">免费咨询</a></div></div> -->
         <div class="alzx-crumbs alzx-crumbs-f1">
             <div class="alzx-con">
@@ -424,7 +424,7 @@ $this->params['formPositionName'] = '首页量房';
     }</script>
 <div class="ztc-quick clearfix">
     <span class='ztc-quick-close'>
-        <img src="http://s.300.cn/current/home/images/ztc/ztc-icon-close1.png" alt=""></span>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc/ztc-icon-close1.png" alt=""></span>
     <div class='ztc-quick-txt'>
         <div class="quick-txt-hd">企业建站“直通车”</div>
         <div class="quick-txt-sub">中企动力为您打造VIP式建站服务</div></div>
@@ -433,12 +433,12 @@ $this->params['formPositionName'] = '首页量房';
         <ul class="clearfix">
             <li class='active'>
                 <a href="/zhitongche?id=1" target="_blank">
-                    <img src="http://s.300.cn/current/home/images/ztc/ztc-iden-img1.png" alt="" align='left'>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc/ztc-iden-img1.png" alt="" align='left'>
                     <span>老板</span></a>
             </li>
             <li class='last'>
                 <a href="/zhitongche?id=2" target="_blank">
-                    <img src="http://s.300.cn/current/home/images/ztc/ztc-iden-img2.png" alt="" align='left'>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc/ztc-iden-img2.png" alt="" align='left'>
                     <span>职员</span></a>
             </li>
         </ul>

@@ -13,7 +13,7 @@ $this->params['formPositionName'] = '首页量房';
 ?>
 <div class="section">
     <div class="vone_main">
-        <div class="topimg-360" style="background:url(http://s.300.cn/current/home/images/guowaituiguang.jpg) no-repeat top center">
+        <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
                 <a value="1" href="javascript:void(0);">立即拥有</a></div>
         </div>
@@ -22,17 +22,17 @@ $this->params['formPositionName'] = '首页量房';
                 <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
-                        <img src="http://s.300.cn/current/home/images/guowaituiguang-01.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Google</span>人所共知的搜索引擎</div>
-                            <div class="con">Google搜索占全球搜索市场份额的68%，外贸企业实现全球网站宣传的首选</div></div>
+                                <span>Baidu</span>最大的中文检索引擎</div>
+                            <div class="con">移动搜索绝对的霸主，全球最大的中文搜索引擎</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Yandex</span>俄罗斯搜索龙头</div>
-                            <div class="con">俄罗斯最大的线上广告平台全球第五大搜索引擎，企业通往俄罗斯的门户</div></div>
+                                <span>sogou</span>借助于输入法成为发展最快的搜索引擎</div>
+                            <div class="con">借助于搜狗输入法，抢占用户市场</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -40,20 +40,20 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">移动广告</h1>
+                <h1 class="gwtg-title gwtg-title01">信息流广告</h1>
                 <div class="zmail-p-con">
                     <div class="img floatL">
-                        <img src="http://s.300.cn/current/home/images/guowaituiguang-02.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>Admob</span>覆盖30亿手机用户</div>
-                            <div class="con">Google搜索占全球搜索市场份额的68%，外贸企业实现全球网站宣传的首选</div></div>
+                                <span>近日头条</span>中国最大的资讯平台</div>
+                            <div class="con">移动端5.5亿人群每天在今日头条看新闻，信息流是趋势</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>Inmobi</span>全球最大移动广告网络</div>
+                                <span>智慧推</span>全球最大移动广告网络</div>
                             <div class="con">印度屈指可数的移动广告公司。它的移动广告已覆盖到了3.32亿个独立手机用户</div></div>
                     </div>
                     <div class="clear"></div>
@@ -62,10 +62,10 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">社交及其他媒体</h1>
+                <h1 class="gwtg-title gwtg-title03">SEM托管的优势</h1>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
-                        <img src="http://s.300.cn/current/home/images/guowaituiguang-03.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
                     <div class="word word-01 floatL">
                         <!--<div class="gwtg-left">
                         <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
@@ -76,8 +76,8 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t03">
-                                <span>Youtube</span>全球闻名的视频网站</div>
-                            <div class="con">Youtube视频广告投放， 720°全景制作，展示公司环境和规模，彰显公司实力</div></div>
+                                <span>SEM</span>根据托词系统快速找到转化率最高的钱300个关键词，优化价格，做到高效投放；</div>
+                            <div class="con">独立开发全流程的SEM托管系统，数据分析一目了然；公司SEM总监亲自操刀诊断，企业内训分享实操经验；专业营销策划，制作高转化着陆页；</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -85,7 +85,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part gwtg-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title04">Seo搜索引擎优化</h1>
+                <h1 class="gwtg-title gwtg-title04">SEM搜索引擎营销</h1>
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
@@ -93,11 +93,11 @@ $this->params['formPositionName'] = '首页量房';
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">提高用户体验</a>
+                            <a href="javascript:;">提高体验</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">优化流量</a>
+                            <a href="javascript:;">拓展关键词</a>
                             <em></em>
                         </li>
                         <li>
@@ -110,7 +110,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main" style="display:block">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-04.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -124,7 +124,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-05.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -139,13 +139,13 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-06.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>优化流量</span></div>
-                                        <div class="con">内容与搜索词相关，有效传递信息
-                                            <br/>提高关键词排名和网站流量；覆盖长尾词</div></div>
+                                            <span>拓展搜索词</span></div>
+                                        <div class="con">关键词不一定有转化，
+                                            <br/>但是搜索词的转化让企业报名倍增</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -154,7 +154,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="http://s.300.cn/current/home/images/gwtg-07.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -172,32 +172,6 @@ $this->params['formPositionName'] = '首页量房';
                 <br />
                 <br /></div>
         </div>
-        <!--<div class="newz-customer dxal-01">
-        <div class="newz-con">
-        <h1 class="gwtg-title gwtg-title05">产品案例</h1>
-        <div class="con customer-slides">
-        <a class="slid_prev" href="###"></a>
-        <a class="slid_next" href="###"></a>
-        <div class="slid">
-        <ul>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic7.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic8.jpg"></li>
-        <li><img src="http://s.300.cn/current/home/images/dzsw-pic9.jpg"></li>
-        <div class="clear"></div></ul>
-        </div>
-        </div>
-        </div>
-        </div>-->
-        <!-- 免费咨询 begin-->
         <?= $this->render('../common/_ask'); ?>
     </div>
 </div>
