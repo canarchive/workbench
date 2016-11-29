@@ -21,6 +21,7 @@ $jsAllFiles = isset(Yii::$app->params['jsFiles']) ? Yii::$app->params['jsFiles']
 <meta charset="utf-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="with=device-width, initial-scale=1.0,minimum-scalable=1.0,user-scalable=no" />
 <title><?= $seoTitle; ?></title>
 <meta name="description" content="<?= $seoDescription; ?>" />
 <meta name="keywords" content="<?= $seoKeyword; ?>" />
@@ -50,7 +51,7 @@ window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
 <body>
 <?= $content; ?>
 <?php 
-$jsFooterFiles = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count']; foreach ($jsFooterFiles as $jsFile) { ?>
+$jsFooterFiles = isset($this->params['jsFooterFiles']) ? $this->params['jsFooterFiles'] : []; foreach ($jsFooterFiles as $jsFile) { ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl') . '/cmsad/pc/js/' . $jsFile . '.js'; ?>"></script>
 <?php } ?>
 <?=  isset($this->params['footerJsStr']) ? $this->params['footerJsStr'] : ''; ?>

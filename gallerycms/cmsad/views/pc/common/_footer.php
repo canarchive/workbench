@@ -28,7 +28,7 @@
             <div class="attention">关注我们：
                 <a href="http://weibo.com/zqdl300" class="gz-wb" target="_blank">新浪微博</a>
                 <div class="ewm">
-                    <img src="http://s.300.cn/current/home/images/zqdl-wx.png"></div>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zqdl-wx.png"></div>
             </div>
             <div class="kxwz">
                 <script src="http://kxlogo.knet.cn/seallogo.dll?sn=2009111300100000738&size=0"></script>

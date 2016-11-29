@@ -208,21 +208,21 @@ $this->params['formPositionName'] = $view;
             </ul>
             <ul class="case_list2 clearfix">
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case05.png" alt="企业级门户网站建设案例-清华大学" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case05.png" alt="企业级门户网站建设案例-清华大学" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case06.png" alt="企业级门户网站建设案例-中粮" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case06.png" alt="企业级门户网站建设案例-中粮" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case07.png" alt="企业级门户网站建设案例-金丝猴" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case07.png" alt="企业级门户网站建设案例-金丝猴" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case08.png" alt="企业级门户网站建设案例-稻香村" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case08.png" alt="企业级门户网站建设案例-稻香村" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case09.png" alt="企业级门户网站建设案例-中国人民保险" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case09.png" alt="企业级门户网站建设案例-中国人民保险" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case10.png" alt="企业级门户网站建设案例-用友" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case10.png" alt="企业级门户网站建设案例-用友" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case11.png" alt="企业级门户网站建设案例-中国工商银行" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case11.png" alt="企业级门户网站建设案例-中国工商银行" /></li>
                 <li>
-                    <img src="http://s.300.cn/current/home/images/newZ_case12.png" alt="企业级门户网站建设案例-欧美龙集团" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_case12.png" alt="企业级门户网站建设案例-欧美龙集团" /></li>
             </ul>
         </div>
     </div>
@@ -236,7 +236,7 @@ $this->params['formPositionName'] = $view;
             <ul class="clients_list clearfix">
                 <li>
                     <div class="client_img">
-                        <img src="http://s.300.cn/current/home/images/newZ_feel01.jpg" alt="企业级门户网站建设案例-贵州中越商贸有限公司" /></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel01.jpg" alt="企业级门户网站建设案例-贵州中越商贸有限公司" /></div>
                     <div class="client_det">
                         <h3>贵州中越商贸有限公司 总经理赵奇</h3>
                         <p>中企动力帮助我们建成了一个行业网站的同时，还为中越商贸网选择了全球知名的Google网站进...
@@ -244,7 +244,7 @@ $this->params['formPositionName'] = $view;
                 </li>
                 <li class="last">
                     <div class="client_img">
-                        <img src="http://s.300.cn/current/home/images/newZ_feel02.jpg" alt="企业级门户网站建设案例-昆明“李烧鸭”食品公司" /></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel02.jpg" alt="企业级门户网站建设案例-昆明“李烧鸭”食品公司" /></div>
                     <div class="client_det">
                         <h3>昆明“李烧鸭”食品公司 总经理李明</h3>
                         <p>和中企动力合作三年来，从网站建设到网络网站宣传中企动力从技术和服务上，为我们提供了很多支...
@@ -252,7 +252,7 @@ $this->params['formPositionName'] = $view;
                 </li>
                 <li>
                     <div class="client_img">
-                        <img src="http://s.300.cn/current/home/images/newZ_feel03.jpg" alt="企业级门户网站建设案例-“兴通工艺”" /></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel03.jpg" alt="企业级门户网站建设案例-“兴通工艺”" /></div>
                     <div class="client_det">
                         <h3>“兴通工艺” 董事长张淑娟</h3>
                         <p>公司以前一直没有在互联网上得到过实惠，现在是信心百倍，希望把自己的企业做好,一直以为自...
@@ -260,7 +260,7 @@ $this->params['formPositionName'] = $view;
                 </li>
                 <li class="last">
                     <div class="client_img">
-                        <img src="http://s.300.cn/current/home/images/newZ_feel04.jpg" alt="企业级门户网站建设案例-南京俊景金属材料有限公司" /></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel04.jpg" alt="企业级门户网站建设案例-南京俊景金属材料有限公司" /></div>
                     <div class="client_det">
                         <h3>南京俊景金属材料有限公司 总经理隆楠</h3>
                         <p>南京俊景金属材料有限公司总经理隆楠女士对中企动力有着非常的印象。她说，中企动力是一家...
@@ -324,7 +324,7 @@ $this->params['formPositionName'] = $view;
 <div class="newZ_main_inner clearfix">
 <div class="inner_left floatL">
 <div>
-<img src="http://s.300.cn/current/home/images/newZ_value.png" alt="企业级门户网站建设案例-" />
+<img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_value.png" alt="企业级门户网站建设案例-" />
 <span class="hand"></span></div>
 <div class="test_txt">
 <span class="test_txt_det">测测您的网站值多少？</span>
@@ -360,7 +360,7 @@ $this->params['formPositionName'] = $view;
                     <div class="steps_name">第一步</div>
                     <div class="step_text">
                         <div class="step_img">
-                            <img src="http://s.300.cn/current/home/images/newZ_order01.png" alt="通过邮件、短信、免费搜索引擎优化网 站地图提交等多种途径进行全方面网站宣传" /></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_order01.png" alt="通过邮件、短信、免费搜索引擎优化网 站地图提交等多种途径进行全方面网站宣传" /></div>
                         <h3>主动营销 请来客户</h3>
                         <p>邮件、短信、免费搜索引擎优化网 站地图提交等多种网络网站宣传方式， 让您的企业网站在茫茫网海中脱颖 而出，让客户主动找上门</p>
                     </div>
@@ -369,7 +369,7 @@ $this->params['formPositionName'] = $view;
                     <div class="steps_name">第二步</div>
                     <div class="step_text">
                         <div class="step_img">
-                            <img src="http://s.300.cn/current/home/images/newZ_order02.png" alt="通过在线客服、售前咨询、在线留言、 4006号码服务等多种在线沟通工 具跟您的客户" /></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_order02.png" alt="通过在线客服、售前咨询、在线留言、 4006号码服务等多种在线沟通工 具跟您的客户" /></div>
                         <h3>客户上门 热情接待</h3>
                         <p>在线客服、售前咨询、在线留言、 4006号码服务等多种在线沟通工 具，让您的订单客户在第一次咨询 时，都能感受到您热情周到的服务</p>
                     </div>
@@ -378,7 +378,7 @@ $this->params['formPositionName'] = $view;
                     <div class="steps_name">第三步</div>
                     <div class="step_text">
                         <div class="step_img">
-                            <img src="http://s.300.cn/current/home/images/newZ_order03.png" alt="多样式展示形式、站内产品多件对比、放大镜细节观察、商品多角度多图展示等功能留住每一位客户" /></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_order03.png" alt="多样式展示形式、站内产品多件对比、放大镜细节观察、商品多角度多图展示等功能留住每一位客户" /></div>
                         <h3>产品展厅 留住客户</h3>
                         <p>多样式展示形式、站内产品多件对比、放大镜细节观察、商品多角度多图展示等功能，为您的订单客户节省大量选货时间、成本、精力，商品询价、在线客服等多渠道收集客户信息，让您的产品展厅留住每一位客户。</p>
                     </div>
@@ -387,7 +387,7 @@ $this->params['formPositionName'] = $view;
                     <div class="steps_name">第四步</div>
                     <div class="step_text">
                         <div class="step_img">
-                            <img src="http://s.300.cn/current/home/images/newZ_order04.png" alt="客户管理系统帮企业开展“数据库营销”，短信、邮件等强大而智能的客户关怀功能，随时随地给不同类型客户送去节日问候，建立稳固合作关系。" /></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_order04.png" alt="客户管理系统帮企业开展“数据库营销”，短信、邮件等强大而智能的客户关怀功能，随时随地给不同类型客户送去节日问候，建立稳固合作关系。" /></div>
                         <h3>销售管理 订单不丢</h3>
                         <p>客户管理系统帮企业开展“数据库营销”，短信、邮件等强大而智能的客户关怀功能，随时随地给不同类型客户送去节日问候，建立稳固合作关系。</p>
                     </div>
@@ -396,7 +396,7 @@ $this->params['formPositionName'] = $view;
                     <div class="steps_name">第五步</div>
                     <div class="step_text">
                         <div class="step_img">
-                            <img src="http://s.300.cn/current/home/images/newZ_order05.png" alt="网站流量统计分析和客户统计分析" /></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_order05.png" alt="网站流量统计分析和客户统计分析" /></div>
                         <h3>流量分析 赢在决策</h3>
                         <p>网站流量统计分析和客户统计分析系统，帮助企业发现目标市场及生意机会，有的放矢的指定市场营销策略，创造最大生意价值。</p>
                     </div>
@@ -413,7 +413,7 @@ $this->params['formPositionName'] = $view;
         <div class="newZ_service_inner clearfix">
             <div class="business floatL">
                 <div class="newZ_logo">
-                    <img src="http://s.300.cn/current/home/images/newZ_logo.png" alt="8大运营实力，成就您的企业网站" /></div>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_logo.png" alt="8大运营实力，成就您的企业网站" /></div>
                 <p class="busTitle_sub">8大运营实力，成就您的企业网站</p>
                 <div class="free_btn pop_zixun">
                     <a href="javascript:" value="3">预约专家免费咨询</a></div>
