@@ -50,7 +50,7 @@ window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
 <body>
 <?= $content; ?>
 <?php 
-$jsFooterFiles = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count']; foreach ($jsFooterFiles as $jsFile) { ?>
+$jsFooterFiles = isset($this->params['jsFooterFiles']) ? $this->params['jsFooterFiles'] : []; foreach ($jsFooterFiles as $jsFile) { ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl') . '/cmsad/pc/js/' . $jsFile . '.js'; ?>"></script>
 <?php } ?>
 <?=  isset($this->params['footerJsStr']) ? $this->params['footerJsStr'] : ''; ?>
