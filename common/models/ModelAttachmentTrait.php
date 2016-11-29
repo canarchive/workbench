@@ -11,7 +11,7 @@ trait ModelAttachmentTrait
 
     public function getAttachmentImg($id, $pointSize = true, $options = [])
     {
-        $model = $this->getAttachmentModel();
+        $model = $this->_newModel('attachment');
         $info = $model->findOne($id);
         if ($info) {
             $info->getUrl();
@@ -27,7 +27,8 @@ trait ModelAttachmentTrait
 
     public function getAttachmentUrl($id)
     {
-        $model = $this->getAttachmentModel();
+        $model = $this->_newModel('attachment');
+        //$model = $this->getAttachmentModel();
         $info = $model->findOne($id);
         return empty($info) ? '' : $info->getUrl();
     }
@@ -37,7 +38,7 @@ trait ModelAttachmentTrait
 
     protected function _updateSingleAttachment($table, $fields, $extData = [])
     {
-        $attachment = $this->getAttachmentModel();
+        $attachment = $this->_newModel('attachment');
         foreach ($fields as $field) {
             $attachment->updateInfo($this->$field, $this->id, $extData);
 
@@ -50,7 +51,7 @@ trait ModelAttachmentTrait
 
     protected function _updateMulAttachment($table, $field, $extData = [])
     {
-        $attachment = $this->getAttachmentModel();
+        $attachment = $this->_newModel('attachment');
         $ids = array_filter(explode(',', $this->$field));
         foreach ($ids as $id) {
             $attachment->updateInfo($id, $this->id, $extData);
