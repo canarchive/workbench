@@ -18,7 +18,20 @@ class AboutusController extends CmsadController
 			'view' => $view,
 		];
 		
-		$this->getTdkInfos('feature-' . $view);
+		$this->getTdkInfos('aboutus-' . $view);
 		return $this->render($view, $datas);
 	}
+
+    public function actionStatement()
+    {
+		$view = Yii::$app->request->get('view');
+
+		$datas = [
+            'controllerId' => $this->id,
+			'view' => $view,
+		];
+		
+		$this->getTdkInfos('aboutus-' . $view);
+		return $this->render('statement', $datas);
+    }
 }

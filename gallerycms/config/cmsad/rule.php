@@ -3,7 +3,10 @@ return [
     Yii::getAlias('@gallerycmsurl') . '/test' => '/cmsad/site/test', 
     Yii::getAlias('@ad.cmsurl') . '/' => '/cmsad/site/index', 
     Yii::getAlias('@ad.cmsurl') . '/sp-<view:\w+>' => '/cmsad/single-page/index', 
+    Yii::getAlias('@ad.cmsurl') . '/friendlink' => '/cmsad/aboutus/friendlink', 
+    Yii::getAlias('@ad.cmsurl') . '/guestbook' => '/cmsad/aboutus/guestbook', 
     Yii::getAlias('@ad.cmsurl') . '/aboutus/<view:\w+>' => '/cmsad/aboutus/index', 
+    Yii::getAlias('@ad.cmsurl') . '/<view:(attention|privacy|statement)>' => '/cmsad/aboutus/statement', 
 	[
         'suffix' => '/',
 		'pattern' => Yii::getAlias('@ad.cmsurl') . '/sample/<page:\d+>',
@@ -13,9 +16,9 @@ return [
     Yii::getAlias('@ad.cmsurl') . '/sample/<id:\d+>' => '/cmsad/sample/show', 
 	[
         'suffix' => '/',
-		'pattern' => Yii::getAlias('@ad.cmsurl') . '/info/<page:\d+>',
+		'pattern' => Yii::getAlias('@ad.cmsurl') . '/info/<tag:\w+>/<page:\d+>',
 		'route'	=> '/cmsad/info/index',
-		'defaults' => ['page' => 1],
+		'defaults' => ['tag' => '', 'page' => 1],
 	],
     Yii::getAlias('@ad.cmsurl') . '/info/<id:\d+>' => '/cmsad/info/show', 
 
@@ -31,9 +34,9 @@ return [
     Yii::getAlias('@m.ad.cmsurl') . '/sample/<id:\d+>' => '/cmsad/mobile-sample/show', 
 	[
         'suffix' => '/',
-		'pattern' => Yii::getAlias('@m.ad.cmsurl') . '/info/<page:\d+>',
+		'pattern' => Yii::getAlias('@m.ad.cmsurl') . '/info/<tag:\w+>/<page:\d+>',
 		'route'	=> '/cmsad/mobile-info/index',
-		'defaults' => ['page' => 1],
+		'defaults' => ['tag' => '', 'page' => 1],
 	],
     Yii::getAlias('@m.ad.cmsurl') . '/info/<id:\d+>' => '/cmsad/mobile-info/show', 
     //'/<_q:.*>' => '/cmsad/mobile-<_q>', 

@@ -13,6 +13,7 @@ return [
     'seoKeyword' => 'seoKeyword',
     'seoDescription' => 'seoDescription',
     'siteCopyRightInfo' => '© copyright',
+    'siteCompanyName' => '北京维纳亚科技有限公司',
     'siteIcpInfo' => 'icp',
     'siteHotline' => '400-0000-000',
     'siteAddressInfo' => 'addrees',

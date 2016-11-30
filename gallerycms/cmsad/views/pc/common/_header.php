@@ -29,7 +29,7 @@ $secondLevels = [
         ['controller' => 'info', 'view' => 'canyinhangye', 'name' => 'SEO网站'],
     ],
     [
-        ['controller' => 'contact', 'name' => '联系我们'],
+        ['controller' => 'aboutus', 'view' => 'contact', 'name' => '联系我们'],
     ],
 ];
 
@@ -63,7 +63,7 @@ $secondLevels = [
                 <a href="/" title='<?= Yii::$app->params['siteName']; ?>'><?= Yii::$app->params['siteName']; ?></a>
             </h1>
             <ul class="nav">
-                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; } ?>
+                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; if ($controllerUrl == 'info') { $urlData['tag'] = ''; } } ?>
                 <li class="d_2">
                     <a href="<?= Url::to($urlData); ?>"><?= $urlInfo['name']; ?></a>
                 </li>
