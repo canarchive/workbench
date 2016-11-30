@@ -2,10 +2,10 @@
 use yii\helpers\Url;
 
 $this->params['cssFiles'] = [
-	'swiper.min', 'common-mobile', 'style', 'submit',
+	'swiper.min', 'common-mobile', 'style-m', 'submit',
 ];
 $this->params['jsFiles'] = [
-	'jquery-1.8.3.min', 'swiper.min', 'public', 'common', 'createCity', 'position', 'city-select', 'count', 'common'
+	'jquery-1.8.3.min', 'swiper.min', 'public-m', 'common-m', 'createCity', 'position-m', 'city-select', 'count',
 ];
 //$this->context->pcMappingUrl = '';
 ?>

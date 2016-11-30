@@ -29,7 +29,7 @@ class CmsadController extends Controller
             'keyword' => Yii::$app->params['seoKeyword'],
             'description' => Yii::$app->params['seoDescription'],
         ];
-        $infos = require(Yii::getAlias('@gallerycms') . '/config/tdk-cmsad.php');
+        $infos = require(Yii::getAlias('@gallerycms') . '/config/cmsad/tdk.php');
         $info = isset($infos[$index]) ? $infos[$index] : $default;
 
         $placeholder = array_merge(
@@ -53,6 +53,14 @@ class CmsadController extends Controller
         }
 
         Yii::$app->params['tdkInfos'] = $info;
+        return ;
+    }
+
+    public function _initAsset()
+    {
+        $infos = require Yii::getAlias('@app') . '/config/cmsad/asset.php';
+        Yii::$app->params['cssFiles'] = $infos['cssFiles'];
+        Yii::$app->params['jsFiles'] = $infos['jsFiles'];
         return ;
     }
 }
