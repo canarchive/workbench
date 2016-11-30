@@ -17,7 +17,7 @@ class GallerycmsModel extends BaseModel
 	public function getCategoryInfos()
 	{
         $model = $this->_newModel('category', true);
-		$infos = $model->find()->indexBy('d')->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
+		$infos = $model->find()->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
 		return $infos;
 	}
 
