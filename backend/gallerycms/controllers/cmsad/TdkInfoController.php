@@ -19,8 +19,8 @@ class TdkInfoController extends TdkInfo
 
     public function getUrlTdkInfos()
     {
-        $tdkInfos = require(Yii::getAlias('@gallerycms') . '/config/tdk-cmsad.php');
-        $urlInfos = require(Yii::getAlias('@gallerycms') . '/config/url-cmsad.php');
+        $tdkInfos = require(Yii::getAlias('@gallerycms') . '/config/cmsad/tdk.php');
+        $urlInfos = require(Yii::getAlias('@gallerycms') . '/config/cmsad/url.php');
 
         return ['tdkInfos' => $tdkInfos, 'urlInfos' => $urlInfos];
     }

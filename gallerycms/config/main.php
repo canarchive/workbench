@@ -5,7 +5,9 @@ $params = array_merge(
     require(__DIR__ . '/params.php'),
     require(__DIR__ . '/params-local.php')
 );
-
+$routeRules = array_merge(
+    require(__DIR__ . '/cmsad/rule.php')
+);
 return [
     'id' => 'app-gallerycms',
     'basePath' => dirname(__DIR__),
@@ -32,7 +34,7 @@ return [
         ],
         'urlManager' => [
             'enableStrictParsing' => true,
-			'rules' => require(__DIR__ . '/rules-cmsad.php'),
+			'rules' => $routeRules,
 		],
     ],
     'modules' => [

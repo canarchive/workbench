@@ -1,48 +1,10 @@
 <?php
 use yii\helpers\Url;
 
-$cssFiles = isset($this->params['cssFiles']) ? $this->params['cssFiles'] : [];
-$jsFiles = isset($this->params['jsFiles']) ? $this->params['jsFiles'] : [];
-
-$tdkInfos = isset(Yii::$app->params['tdkInfos']) ? Yii::$app->params['tdkInfos'] : [];
-$seoTitle = isset($tdkInfos['title']) ? $tdkInfos['title'] : Yii::$app->params['seoTitle'];
-$seoKeyword = isset($tdkInfos['keyword']) ? $tdkInfos['keyword'] : Yii::$app->params['seoKeyword'];
-$seoDescription = isset($tdkInfos['description']) ? $tdkInfos['description'] : Yii::$app->params['seoDescription'];
-$formPosition = isset($this->params['formPosition']) ? $this->params['formPosition'] : '';
-$formPositionName = isset($this->params['formPositionName']) ? $this->params['formPositionName'] : '';
+$this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count'];
+//$this->params['footerJsStr'] = $this->render('_after_js');
 ?>
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="applicable-device" content="mobile" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-<meta name="format-detection" content="address=no">
-<meta name="format-detection" content="telephone=no">
-<meta content="false" name="twcClient" id="twcClient" />
-<title><?= $seoTitle; ?></title>
-<meta name="keywords" content="<?= $seoKeyword; ?>" />
-<meta name="description" content="<?= $seoDescription; ?>" />
-<link rel="canonical" href="<?= isset($this->context->pcMappingUrl) ? '' : ''; ?>" />
-<link rel="shortcut icon" href="<?= Yii::getAlias('@asseturl'); ?>/gallerycms/home/images/favicon.ico" />
-<?php if (isset($cssFiles)) { foreach ($cssFiles as $cssFile) { ?>
-<link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl') . '/cmsad/mobile/css/' . $cssFile . '.css'; ?>" />
-<?php } } ?>
-<?php if (isset($jsFiles)) { foreach ($jsFiles as $jsFile) { ?>
-<script type="text/javascript" src="<?= Yii::getAlias('@asseturl') . '/cmsad/mobile/js/' . $jsFile . '.js'; ?>"></script>
-<?php } } ?>
-<script type="text/javascript">
-var isMobile = '<?= intval($this->context->isMobile); ?>';
-if (isMobile == 0) {
-    //window.location.href = "<?= isset($this->context->pcMappingUrl) ? '' : ''; ?>";
-}
-window.BASE_URL = "<?= Yii::getAlias('@m.gallerycmsurl'); ?>";
-</script>
-<?= $this->render('@gallerycms/cmsad/views/_stat', []); // 顶部 ?>
+<?php $this->beginContent('@common/views/main-base.php'); ?>
 <script>//微信tel失效问题,去除sukey
     if (navigator.userAgent.indexOf('MicroMessenger') != -1) {
         var shref = window.location.href;
@@ -118,8 +80,6 @@ window.BASE_URL = "<?= Yii::getAlias('@m.gallerycmsurl'); ?>";
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);</script>
-</head>
-<body>
 <?= $this->render('../common/_header'); ?>
 <?= $content; ?>
 <input name="areacode" id="area_code" type="hidden" value="" />
@@ -183,4 +143,4 @@ window.BASE_URL = "<?= Yii::getAlias('@m.gallerycmsurl'); ?>";
         }
 
     });</script>
-</body>
+<?php $this->endContent(); ?>
