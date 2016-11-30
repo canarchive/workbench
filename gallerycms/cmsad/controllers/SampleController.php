@@ -15,6 +15,7 @@ class SampleController extends CmsadController
 
 		$page = Yii::$app->request->get('page');
 		$infos = $model->getInfos([]);
+        //print_r($infos);exit();
 		$datas = [
 			'page' => $page,
 			'infos' => $infos,

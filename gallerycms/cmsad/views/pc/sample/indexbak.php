@@ -20,24 +20,69 @@ $this->params['formPositionName'] = '首页量房';
                 <a class="crumbs-01" href="/">首页</a>
                 <em>></em>
                 <span class="crumbs-02">案例中心</span>
+                <!--<div class="alzx-search">
+                    <a href="javascript:;">搜索</a>
+                    <input type="text" placeholder="请输入公司名称">
+                </div>-->
             </div>
         </div>
+        <!--筛选开始-->
+        <!--<div class="alzx-fff alzx-fff-f1">
+            <div class="alzx-con">
+                <div class="alzx-item">
+                    <dl class="alzx-dl">
+                        <dt>行业分类</dt>
+                        <dd class="case_type active" id="" slug='indu'>全部</dd>
+                        <dd slug='indu' class="case_type" id="26">工业品/制造业/包装</dd>
+                    </dl>
+                    <dl class="alzx-dl">
+                        <dt>视觉分类</dt>
+                        <dd class="case_type active" id="" slug='view'>全部</dd>
+                        <dd slug='view' class="case_type" id="19">蓝色系</dd>
+                    </dl>
+                    <dl class="alzx-dl">
+                        <dt>套餐分类</dt>
+                        <dd class="case_type active" id="" slug='type'>全部</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>-->
+        <!--筛选结束-->
+        <!--筛选结果开始-->
         <div class="alzx-result">
             <div class="alzx-con">
+                <!--<div class="result-list">
+                    <m id="where" style="display:none;">已选条件：</m>
+                    <span id='selected_product' class="alzx-none">中企产品分类：
+                        <em></em></span>
+                    <span id="selected_year" class="alzx-none">年份分类：
+                        <em></em></span>
+                    <span id="selected_view" class="alzx-none">视觉分类：
+                        <em></em></span>
+                    <span id="selected_indu" class="alzx-none">行业分类：
+                        <em></em></span>
+                    <span id="selected_type" class="alzx-none">套餐分类：
+                        <em></em></span>
+                </div>-->
+                <!--瀑布流开始-->
                 <div id="main">
                     <ul id="waterfall" class="clearfix">
                         <?php foreach ($infos as $info) { ?>
                         <li class="li_block">
                             <div class="img_block">
-                                <a href="<?= Url::to(['/cmsad/sample/show', 'id' => $info['id']]); ?>" >
-                                    <img src="<?= $info['thumb']; ?>" alt='<?= $info['name']; ?>' />
-                                </a>
+                                <a href="/case/104145.html" target="_blank">
+                                    <img src="http://www.300.cn/attach/case/20151217/5672234bb77a9.png" alt='沈阳故宫博物院 门户网站建设' /></a>
+                                <div class="water-name">
+                                    <span class="name-l"></span>
+                                    <span class="name-m">NEW Z+</span>
+                                    <span class="name-r"></span>
+                                </div>
                             </div>
                             <div class="result-txt">
                                 <p class="txt-p1">
-                                    <a href="<?= Url::to(['/cmsad/sample/show', 'id' => $info['id']]); ?>" ><?= $info['name']; ?></a></p>
-                                <!--<p class="txt-p2">所属行业:
-                                    <a href="/case?indu=57">公共事业/教育</a></p>-->
+                                    <a href="/case/104145.html" target="_blank">沈阳故宫博物院 门户网站建设...</a></p>
+                                <p class="txt-p2">所属行业:
+                                    <a href="/case?indu=57">公共事业/教育</a></p>
                             </div>
                             <div class="result-btn">
                                 <a class="r-z good_num" href="javascript:;" id="good_104145" goodid="104145"></a>

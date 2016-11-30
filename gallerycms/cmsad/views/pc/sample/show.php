@@ -22,60 +22,12 @@ $this->params['formPositionName'] = '首页量房';
             <div class="alzx-con">
                 <a class="crumbs-01" href="/">首页</a><em>></em>
                 <span class="crumbs-02"><a href="<?= Url::to(['/cmsad/sample/index', 'page' => 1]); ?>">案例中心</a></span><em>></em>
-                <span class="crumbs-02"><?= "info['name']"; ?></span>
+                <span class="crumbs-02"><?= $info['name']; ?></span>
             </div>
         </div>
-        <!--面包屑结束-->
-        <!--详情开始-->
-        <!--<div class="det-top">
-            <div class="alzx-con">
-                <div class="det-l">
-                    <div class="result-list result-list1">
-                        <span>全部案例</span></div>
-                    <div class="al-title">
-                        <div class="det-dl">
-                            <dl class="alzx-dl">
-                                <dt>行业分类</dt></dl>
-                            <dl class="alzx-dl">
-                                <dt>颜色分类</dt></dl>
-                        </div>
-                        <div class="det-gray">
-                            <div class="det-gray-list">
-                                <a href="/case?indu=26">工业品/制造业/包装</a>
-                                <a href="/case?indu=33">其他</a></div>
-                            <div class="det-gray-list">
-                                <a href="/case?view=19">蓝色系</a>
-                                <a href="/case?view=25">其他色系</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="det-r">
-                    <ul class="pakage-cat alzx-pakage-cat1">
-                        <li class="economic01 pop_zixun">
-                            <a class="" value="2">
-                                <i>
-                                </i>
-                                <div class="cat-name ">预约专家</div></a>
-                            <div class="cat-des">为您提供一对一解决方案</div></li>
-                        <li class="standard01">
-                            <a id="TQzx0" class="zaixianzixun" clickCount="true" clickAdd="zaixianzixun">
-                                <i>
-                                </i>
-                                <div class="cat-name ">售前咨询</div></a>
-                            <div class="cat-des">周一至周五9：00-17：30</div></li>
-                        <li class="marketing01">
-                            <i>
-                            </i>
-                            <div class="cat-name">联系方式</div>
-                            <div class="cat-des">服务热线400-660-5555</div></li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>-->
         <div class="alzx-con ckxz-main margin25">
             <div class="det-con-top">
-                <h4 class="floatL det-h4">可可食品 网站建设</h4>
+                <h4 class="floatL det-h4"><?= $info['name']; ?></h4>
                 <div class="floatR result-btn result-btn1">
                     <a href="javascript:;" class="r-z good_num" id="good_104148"></a>
                     <a href="javascript:;" class="r-sc r-sc1" id="scan_104148"></a>
@@ -106,14 +58,9 @@ $this->params['formPositionName'] = '首页量房';
                     <span class="r-fx-tips">分享至</span></div>
                 <div class="clear"></div>
             </div>
-            <div class="det-tag">
-                <span>所属行业：餐饮/食品</span>
-                <a href="/guanwang.html" target='_blank' class="pro-link">了解产品</a>
-                <a href="javascript:void(0);" class="zero-zixun" value="3">0元体验咨询</a></div>
             <div class="det-content">
-                <div style="text-align: left;">公司名称：江苏无锡太湖可可食品有限公司
-                    <br /></div>
-                <div style="text-align: left;">公司简介：江苏无锡太湖可可食品有限公司成立于2004年11月，由上海金丝猴集团有限公司出资，经无锡市华东产权交易中心交易，有偿受让无锡华新可可食品有限公司全部产权而成立。</div>
+            <div style="text-align: left;">公司名称：<?= $info['name']; ?><br /></div>
+            <div style="text-align: left;"><?= $info['description']; ?></div>
                 <div style="text-align: left;">
                     <br /></div>
                 <div style="text-align: center;">一、首页一览</div>
@@ -260,12 +207,12 @@ $this->params['formPositionName'] = '首页量房';
         <ul class="clearfix">
             <li class='active'>
                 <a href="/zhitongche?id=1" target="_blank">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc/ztc-iden-img1.png" alt="" align='left'>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc-iden-img1.png" alt="" align='left'>
                     <span>老板</span></a>
             </li>
             <li class='last'>
                 <a href="/zhitongche?id=2" target="_blank">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc/ztc-iden-img2.png" alt="" align='left'>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc-iden-img2.png" alt="" align='left'>
                     <span>职员</span></a>
             </li>
         </ul>
