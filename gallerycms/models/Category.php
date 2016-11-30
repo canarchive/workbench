@@ -66,26 +66,39 @@ class Category extends GallerycmsModel
         return $datas;
     }
 
-    public function getDatas()
+    public function getInfo($id)
     {
-        $infos = self::find()->where(['status' => 1])->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
+        return $this->findOne($id);
+    }
 
-        foreach ($infos as $catId => & $info) {
-            $info['url'] = url::to(['/site/list', 'code' => $info['catdir']]);
+    public function getDatas($orderBy = 'id')
+    {
+        static $infos = null;
+        if ($infos === null) {
+            $infos = $this->find()->where(['status' => 1])->indexBy($orderBy)->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
         }
 
         return $infos;
     }
 
-    public function getLevelDatas()
+    public function getLevelDatas($parentField = 'parent_id')
     {
-        $infos = $this->getDatas();
-        $datas = [];
-        foreach ($infos as $catId => & $info) {
-            if (!isset($datas[$info['parent_id']])) {
-                $datas[$info['parent_id']] = [];
+        static $datas = null;
+        if ($datas === null) {
+            $datas = [];
+            $infos = $this->getDatas('catdir');
+            foreach ($infos as $key => $info) {
+                if ($info['parent_id'] == 0) {
+                    $datas[$info['id']] = $info;
+                }
             }
-            $datas[$info['parent_id']][$catId] = $info;
+            foreach ($infos as $key => $info) {
+                $parentId = $info['parent_id'];
+                if ($parentId == 0) {
+                    continue;
+                }
+                $datas[$parentId]['subInfos'][$info['id']] = $info;
+            }
         }
 
         return $datas;

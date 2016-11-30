@@ -3,7 +3,7 @@
 $controller = $this->context;
 $menuInfos = $controller->menuInfos;
 
-$templateInfos = $model->getTemplateInfos();
+//$templateInfos = $model->getTemplateInfos();
 ?>
 <thead>
     <tr>
@@ -22,7 +22,6 @@ $templateInfos = $model->getTemplateInfos();
         <td><input type='checkbox' name='mulIds[]' class="checkbox_ids" value='<?= $info['id']; ?>' /></td>
         <td align='center'><input name='listorders[<?= $info['id']; ?>]' type='text' style='width:30px;' value='<?= $info['orderlist']; ?>' class='input-text-c'></td>
         <td align='center'><?= $info['catdir']; ?></td>
-        <td align='center'><?= $templateInfos[$info['template']]; ?></td>
         <td>
         <?php
         foreach ($menuInfos['appMenus'] as $method => $appMenu) {
