@@ -6,6 +6,10 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'assetManager' => [
+            'basePath' => '@assetcustom/assets',
+            'baseUrl' => '@asseturl/assets',
+        ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
