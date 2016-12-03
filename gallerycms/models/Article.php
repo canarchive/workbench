@@ -63,6 +63,7 @@ class Article extends GallerycmsModel
 
 	public function getInfos($where, $limit = 100)
 	{
+        $where = array_merge($where, ['status' => 1]);
 		$infos = $this->find()->select('id, name, description, created_at')->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
 			//$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
