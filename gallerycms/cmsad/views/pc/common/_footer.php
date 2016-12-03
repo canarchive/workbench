@@ -11,8 +11,8 @@ use yii\helpers\Url;
                 <!--<a target="_blank" href="/job/">工作机会</a><span>|</span>-->
                 <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>">联系我们</a><span>|</span>
                 <!--<a target="_blank" href="/map.html">网站地图</a><span>|</span>-->
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/friendlink']); ?>">友情链接</a><span>|</span>
-                <a href="<?= Url::to(['/cmsad/aboutus/guestbook']); ?>" target="_blank">意见反馈</a></p>
+                <!--<a target="_blank" href="<?= Url::to(['/cmsad/aboutus/friendlink']); ?>">友情链接</a><span>|</span>-->
+                <a href="<?= Url::to(['/cmsad/aboutus/guestbook']); ?>" target="_blank">意见反馈</a>
             </p>
         </div>
         <div class="copyright">

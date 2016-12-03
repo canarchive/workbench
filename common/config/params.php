@@ -19,6 +19,6 @@ return [
     'siteAddressInfo' => 'addrees',
     'siteJoinusTel' => '18888888888',
     'siteCustomServiceQQ' => '1313113',
-    'siteName' => 'siteName',
-    'siteNameBase' => 'site',
+    'siteName' => '维纳亚',
+    'siteNameBase' => '维纳亚',
 ];

@@ -9,6 +9,8 @@ return [
         'haiwaituiguang' => $baseAsseturl . 'pc/css/haiwaituiguang.css',
         'style' => $baseAsseturl . 'pc/css/style.css',
         'alzx' => $baseAsseturl . 'pc/css/alzx.css',
+        'free-ask' => $baseAsseturl . 'pc/css/free-ask.css',
+        'style_z_email' => $baseAsseturl . 'pc/css/style_z_email.css',
 
         'swiper.min' => $baseAsseturl . 'mobile/css/swiper.min.css',
         'common-mobile' => $baseAsseturl . 'mobile/css/common-mobile.css',

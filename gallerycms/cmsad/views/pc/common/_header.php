@@ -6,7 +6,7 @@ $firstLevels = [
     ['view' => 'seo', 'name' => 'SEO顾问'],
     ['view' => 'customizing', 'name' => '企业定制'],
     ['controller' => 'sample', 'name' => '成功案例'],
-    ['controller' => 'info', 'name' => '营销学院'],
+    ['controller' => 'info', 'tag' => '', 'name' => '营销学院'],
     ['controller' => 'aboutus', 'view' => 'index', 'name' => '关于我们'],
 ];
 $secondLevels = [
@@ -23,10 +23,10 @@ $secondLevels = [
     ],
     [],
     [
-        ['controller' => 'info', 'view' => 'index', 'name' => '营销推广'],
-        ['controller' => 'info', 'view' => 'infotouch', 'name' => '网站权重'],
-        ['controller' => 'info', 'view' => 'anligushi', 'name' => 'SEM竞价'],
-        ['controller' => 'info', 'view' => 'canyinhangye', 'name' => 'SEO网站'],
+        ['controller' => 'info', 'tag' => 'yxtg', 'name' => '营销推广'],
+        ['controller' => 'info', 'tag' => 'wzqz', 'name' => '网站权重'],
+        ['controller' => 'info', 'tag' => 'jingjia', 'name' => 'SEM竞价'],
+        ['controller' => 'info', 'tag' => 'seo', 'name' => 'SEO网站'],
     ],
     [
         ['controller' => 'aboutus', 'view' => 'contact', 'name' => '联系我们'],
@@ -63,7 +63,7 @@ $secondLevels = [
                 <a href="/" title='<?= Yii::$app->params['siteName']; ?>'><?= Yii::$app->params['siteName']; ?></a>
             </h1>
             <ul class="nav">
-                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; if ($controllerUrl == 'info') { $urlData['tag'] = ''; } } ?>
+                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; if ($controllerUrl == 'info') { $urlData['tag'] = $urlInfo['tag']; } } ?>
                 <li class="d_2">
                     <a href="<?= Url::to($urlData); ?>"><?= $urlInfo['name']; ?></a>
                 </li>
@@ -76,7 +76,7 @@ $secondLevels = [
             <div class="subnav_con">
                 <?php foreach ($secondLevels as $subInfos) { ?>
                 <ul style="display:none">
-                    <?php foreach ($subInfos as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } ?>
+                    <?php foreach ($subInfos as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if ($controllerUrl == 'info') {$urlData['page'] = 1; $urlData['tag'] = $urlInfo['tag']; } ?>
                 <li class="d_2">
                     <a href="<?= Url::to($urlData); ?>"><?= $urlInfo['name']; ?></a>
                 </li>

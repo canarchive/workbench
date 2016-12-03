@@ -10,19 +10,19 @@
         <div class="bd">
             <ul class='bd clearfix'>
                 <li class="active">
-                    <h3>为什么选择中企动力？</h3>
+                    <h3>为什么选择<?= Yii::$app->params['siteNameBase']; ?>？</h3>
                     <div class="txt-con">
                         <div class='txt-con-item1'>
-                            <h4>16年行业经验</h4>
-                            <p>16年行业经验积累，服务超过120万客户</p>
+                            <h4>9年SEM行业经验</h4>
+                            <p>9年SEM实战经验，服务过亿级账户</p>
                         </div>
                         <div class='txt-con-item2'>
-                            <h4>80家分公司</h4>
-                            <p>全国70多个城市，近80家分公司</p>
+                            <h4>360套</h4>
+                            <p>针对360行专属落地营销解决方案</p>
                         </div>
                         <div class='txt-con-item3'>
-                            <h4>资深设计师，一对一服务</h4>
-                            <p>全国500名设计师，200名资深高级设计师</p>
+                            <h4>品牌合作案例</h4>
+                            <p>全国1000家品牌合作案例，因为专业所以专注</p>
                         </div>
                     </div>
                 </li>
