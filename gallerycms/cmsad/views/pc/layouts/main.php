@@ -2,7 +2,7 @@
 use yii\helpers\Url;
 
 $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count'];
-//$this->params['footerJsStr'] = $this->render('_after_js');
+$this->params['footerJsStr'] = $this->render('_after_js');
 ?>
 <?php $this->beginContent('@common/views/main-base.php'); ?>
 

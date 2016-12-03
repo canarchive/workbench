@@ -1,8 +1,9 @@
 <?php
 use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 
 $this->params['cssFiles'] = [
-    'common', 'public', 'style'
+    'common', 'public', 'style_z_email',
 ];
 $this->params['jsFiles'] = [
     'jquery-1.8.3.min',
@@ -11,140 +12,147 @@ $this->params['formPosition'] = $controllerId;
 $this->params['formPositionName'] = $view;
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
-<div class="lxwm_main">
-    <div class="topimg-240">
-        <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gsjj.jpg" />-->
-        <style type="text/css">*{margin:0; padding:0;} ul,li{list-style: none;} .flexslider{width:100%; height:240px; margin:0 auto; position: relative; overflow: hidden;} .flex-viewport{height:100%;} .flexslider .slides{width:800%; height:100%; position:absolute; top:0; left: 0;} .slides li{float: left; height:240px; text-align: center;} .flex-control-nav{position: absolute; bottom: 20px; z-index: 2; text-align: center; z-index: 9999;} .flex-control-nav li{display: inline-block; width: 68px; height: 8px; margin: 0 5px; *display: inline; zoom: 1;} .slides li a{width: 100%; height: 240px; display: inline-block;} .flex-control-nav a {display: inline-block; width: 68px; height: 8px; line-height: 40px; overflow: hidden; background-color:#FFF; cursor: pointer; opacity:0.3; filter:alpha(opacity=30);} .flex-control-nav .flex-active{opacity:1; filter:alpha(opacity=100);}</style>
-        <div class="flexslider">
-            <ul class="slides">
-                <li style="display: none; background: url(http://www.300.cn/attach/banner/20160126/56a725e723c20.jpg) 50% 0% no-repeat;">
-                    <a href="http://www.300.cn/free.html" class="qplj" target="_blank"></a>
-                </li>
-                <li style="display: none; background: url(http://a.300.cn/banner/20151202/565eeebc9b20d.jpg) 50% 0% no-repeat;">
-                    <a href="http://www.300.cn/guanwang.html" class="qplj" target="_blank"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="container">
-        <div class="top_links">
-            <a href="/" class="index_link">首页</a>>
-            <a href="/aboutus/index.html">关于中企</a>> 企业概况</div>
-        <div class="aboutzq">
-            <div class="zq-left floatL">
-                <div class="zq-menu floatL">
-                    <ul>
-                        <li class="t">关于中企</li>
-                        <script>$(document).ready(function() {
-                                var str = window.location.pathname;
-                                var str_sp = str.split("/");
-                                if (str_sp[2] == '' || str_sp[2] == 'company') {
-                                    $('#left_id_91').addClass("active");
-                                } else if (str_sp[2] == 'culture') {
-                                    $('#left_id_92').addClass("active");
-                                } else if (str_sp[2] == 'events') {
-                                    $('#left_id_99').addClass("active");
-                                } else if (str_sp[2] == 'gethonor') {
-                                    $('#left_id_133').addClass("active");
-                                } else if (str_sp[2] == 'qualification') {
-                                    $('#left_id_95').addClass("active");
-                                } else if (str_sp[2] == 'partner') {
-                                    $('#left_id_96').addClass("active");
-                                } else if (str_sp[2] == 'news') {
-                                    $('#left_id_97').addClass("active");
-                                } else if (str_sp[2] == 'report') {
-                                    $('#left_id_98').addClass("active");
-                                } else if (str_sp[2] == 'projectevents') {
-                                    $('#left_id_201').addClass("active");
-                                } else if (str_sp[2] == 'advert') {
-                                    $('#left_id_204').addClass("active");
-                                } else if (str_sp[2] == 'dlnews') {
-                                    $("#left_id_198").addClass("active");
-                                } else if (str_sp[2] == 'smzy') {
-                                    $('#left_id_200').addClass("active");
-                                }
-                                $('#left_id_124').hide();
-                            });</script>
-                        <li>
-                            <a href="/aboutus/company/" id="left_id_91">企业概况</a></li>
-                        <li>
-                            <a href="/aboutus/culture/" id="left_id_92">企业文化</a></li>
-                        <li>
-                            <a href="/aboutus/events/" id="left_id_99">发展历程</a></li>
-                        <li>
-                            <a href="/aboutus/qualification/" id="left_id_95">企业资质</a></li>
-                        <li>
-                            <a href="/aboutus/gethonor/" id="left_id_133">所获荣誉</a></li>
-                        <li>
-                            <a href="/aboutus/org/" id="left_id_124">服务网络</a></li>
-                        <li>
-                            <a href="/aboutus/smzy/" id="left_id_200">数码庄园</a></li>
-                    </ul>
-                </div>
-                <div class="ad-con ad-con1 about-ad-con">
-                    <a href="/shangcheng.html" target="_blank">
-                        <div class="about-ad-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img4.jpg" alt="企业网上商城建设" /></div>
-                    </a>
-                </div>
-                <div class="ad-con ad-con2 about-ad-con">
-                    <a href="/appzhuanti.html" target="_blank">
-                        <div class="about-ad-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img5.jpg" alt="企业APP" /></div>
-                    </a>
-                </div>
-                <div class="ad-con ad-con3 about-ad-con">
-                    <a href="/shoujijianzhan.html" target="_blank">
-                        <div class="about-ad-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img6.jpg" alt="手机网站建设方案" /></div>
-                    </a>
-                </div>
-            </div>
-            <div class="about-content floatR">
-                <div class="zq-profile">
-                    <div class="img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gsjj-pic1.jpg" alt="中企动力科技股份有限公司" /></div>
-                    <div class="profile">
-                        <div class="t">中企动力科技股份有限公司</div>
-                        <div class="con">
-                            <p>中企动力科技股份有限公司成立于1999年9月16日，是中国领先的企业电子商务服务运营商，是南海控股集团旗下中国数码集团的全资子公司，与新网、大地文化等互为兄弟公司。公司成立17年来，已在全国开设近80家分公司，现有员工8000多人，为120多万家中小企业提供过互联网电子商务服务。</p>
-                            <p>中企动力科技股份有限公司为中小企业提供网站建设、全网营销、域名注册和电子邮箱等服务。“New Z+ 企业网站云平台”是为中小企业提供一对一定制企业官网建设解决方案的平台；“Ztouch S 全网营销型网站”是为企业提供可自动适配各终端的网站建设的服务；“VONE企业移动营销平台”是帮助企业实现“互联网+传统企业”的企业移动营销平台；“Zshop S 企业级全网零售平台”，可以帮企业实现多平台多渠道营销；“大把推企业互联网整合营销平台” 是2014年年底发布的针对中小企业的全网络整合营销服务。中企动力在服装、汽车、化工等行业的官网建设、全网营销领域快速发展，服务已经覆盖40大行业1000多个细分行业。</p>
-                            <p>中企动力科技股份有限公司是首批CNNIC认证域名注册服务机构，也是google在华首家合作伙伴，是百度云加速战略合作伙伴。中企动力科技股份有限公司的产品连续多年被评为“中小企业网站建设推荐示范平台”；在服务中小企业的十六年间，多次获评“企业信用评价AAA级信用企业”、“诚信经营企业”；2015年，被评为“中国年度最佳雇主“。</p>
-                            <p>中企动力科技股份有限公司的使命是通过信息化运营，打造智慧型的中国企业，成就智慧企业家。公司将本着责任、勤奋、专业、创新精神，实现任何企业无论大小，无论何时、何地，都能轻易地开展电子商务、实现信息化管理的企业愿景。</p>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <?= $this->render('../common/_ask'); ?>
+<style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
+<div class="topimg-360" style="background:url(http://s.300.cn/current/home/images/zmaile--banner.jpg) no-repeat top center">
+    <div class="topimg-con zmail-img pop_zixun">
+        <a href="javascript:void(0);" value="1">立即咨询</a></div>
 </div>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.flexslider-min.js"></script>
-<!-- 轮播图 -->
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.sly.js"></script>
-<!-- 美化滚动条 -->
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.easing-1.3.min.js"></script>
-<!-- 美化滚动条 -->
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery-scrollbar.js"></script>
-<!-- 美化滚动条 -->
-<script>$(document).ready(function() {
-        var str = window.location.pathname;
-        var str_sp = str.split("/");
-        if (str_sp[2] == 'about') {
-            $('#home_ab').addClass("active");
-        }
-    });
-    $(function() {
-        $('.flexslider').flexslider({
-            directionNav: false,
-            pauseOnAction: true,
-            animation: "slide"
-        });
-    });
-    $(function() {
-        var butwidth = parseInt($('.flex-control-nav').css('width'));
-        var bannerwidth = parseInt($('.flexslider').css('width'));
-        $('.flex-control-nav').css('margin-right', (bannerwidth - butwidth) / 2);
-    });</script>
+<!-- Z云邮部分二 -->
+<div class="zyy_item2">
+    <div class="zyy_warp">
+        <div class="zyy_title">
+            <h2>选Z云邮 . 全球云游</h2>
+            <p>全球云游 畅通无忧的企业邮局</p>
+        </div>
+        <div class="zyy_it2_left">
+            <div class="zyy_text">
+                <span class="zyy_text_title">五大洲34个地区部署服务器</span>
+                <h3>确保企业邮箱海外畅通</h3>
+                <div class="txt">
+                    <p>多点海外双向转发，安全送达全球各地，外贸跟单一触即发</p>
+                    <p>亚洲、欧洲、美洲、大洋州等五大洲，34个地区部署收发节点</p>
+                </div>
+            </div>
+            <div class="zyy_text">
+                <span class="zyy_text_title">国内28个地区部署服务器</span>
+                <h3>确保国内邮件畅通无阻</h3>
+                <div class="txt">
+                    <p>与中国电信、新联通、教育网三线互通，确保国内邮件畅通无阻</p>
+                    <p>北京、广州、深圳、上海等28个地区部署收发节点</p>
+                </div>
+            </div>
+        </div>
+        <div class="zyy_it2_right">
+            <img src="http://s.300.cn/current/home/images/zmail-pic1.png" alt="全球云游 畅通无忧的企业邮局" /></div>
+    </div>
+</div>
+<!-- Z云邮部分二 end-->
+<!-- Z云邮部分三 -->
+<div class="zyy_item3">
+    <div class="zyy_warp">
+        <p class="bg">
+            <img src="http://s.300.cn/current/home/images/zmail-pic2_bg.png" alt="云邮 . 多终端使用" /></p>
+        <div class="zyy_title">
+            <h2>选Z云邮 . 多终端使用</h2>
+            <p>使用自由 多终端同步的企业邮局</p>
+        </div>
+        <div class="zyy_it3_left">
+            <img src="http://s.300.cn/current/home/images/zmail-pic2.png" alt="Z云邮 . 多终端使用" /></div>
+        <div class="zyy_it3_right">
+            <div class="zyy_text">
+                <span class="zyy_text_title">收发邮件同步</span>
+                <div class="txt">
+                    <p>支持IMAP协议，PC客户端、移动客户端中的邮件、文件夹和web端的收发邮件完全同步</p>
+                </div>
+            </div>
+            <div class="zyy_text">
+                <span class="zyy_text_title">通讯录同步</span>
+                <div class="txt">
+                    <p>PC安装登陆客户端助手；手机安装Z云邮客户端即可实现通讯录的同步</p>
+                    <p>无需登录Webmail，在Foxmail客户端、APP手机客户端可直接使用企业通讯录，并上传超大附件</p>
+                </div>
+            </div>
+            <div class="zyy_text">
+                <span class="zyy_text_title">网盘数据同步</span>
+                <div class="txt">
+                    <p>个人云盘空间数据自动上传下载，时刻保持同步，移动客户端随时获取</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Z云邮部分三 end-->
+<!-- Z云邮部分四 -->
+<div class="zyy_item4">
+    <div class="zyy_warp zyy_warp1">
+        <div class="zyy_title">
+            <h2>选Z云邮 . 高效省心</h2>
+            <p>应用丰富 高效省心的企业邮局</p>
+        </div>
+        <div class="zyy_it4_left zyy_text_box2">
+            <div class="zyy_text">
+                <span class="zyy_text_title">优势一</span>
+                <h3>监控企业邮件，维护企业业务安全</h3>
+                <div class="txt">
+                    <p>域内监控规则随便设置，你想监控谁都可以</p>
+                    <p>监控邮件全部集中存放在邮件监控文件夹中，方便查看</p>
+                    <p>可以通过被监控者、邮件主题、类型和时间范围快速定位目标邮件</p>
+                </div>
+            </div>
+        </div>
+        <div class="zyy_it4_right">
+            <img src="http://s.300.cn/current/home/images/zmail-pic3.png" alt="Z云邮 . 高效省心 " /></div>
+    </div>
+    <div class="zyy_warp zyy_warp2">
+        <div class="zyy_it4_left">
+            <img src="http://s.300.cn/current/home/images/zmail-pic4.png" alt="Z云邮 . 高效省心 " /></div>
+        <div class="zyy_it4_right zyy_text_box2">
+            <div class="zyy_text">
+                <span class="zyy_text_title">优势二</span>
+                <h3>企业云盘 企业内部的信息仓库 方便企业快速分发共享内部资料</h3>
+                <div class="txt">
+                    <p>云盘空间，自由分配，支持无限扩容</p>
+                    <p>分权管理，不同用户设置不同的权限</p>
+                    <p>云盘监控，实时监控用户云盘使用情况</p>
+                    <p>支持多个文件同时上传，支持断点续传</p>
+                    <p>企业内部文件共享，无需发送，对方即可查看</p>
+                    <p>云盘回收站，误删文件随时找回</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zyy_warp zyy_warp3">
+        <div class="zyy_it4_left zyy_text_box2">
+            <div class="zyy_text">
+                <span class="zyy_text_title">优势三</span>
+                <h3>邮件归档往来邮件 历史信息有据可查</h3>
+                <div class="txt">
+                    <p>作为企业邮件数据备份：不受账号删除、个人操作的影响</p>
+                    <p>作为法律依据：归档邮件单独存放，原始信息记录完整保存，具备法律效力</p>
+                </div>
+            </div>
+        </div>
+        <div class="zyy_it4_right ">
+            <img src="http://s.300.cn/current/home/images/zmail-pic5.png" alt="归档邮件" /></div>
+    </div>
+    <div class="zyy_warp zyy_warp2 zyy_warp4">
+        <div class="zyy_it4_left">
+            <img src="http://s.300.cn/current/home/images/zmail-pic6.png" alt="集成即时通讯" /></div>
+        <div class="zyy_it4_right zyy_text_box2">
+            <div class="zyy_text">
+                <span class="zyy_text_title">优势四</span>
+                <h3>集成即时通讯，企业专属的即时通讯工具</h3>
+                <div class="txt">
+                    <p>企业专属的即时通讯平台</p>
+                    <p>统一的企业部门组织架构、实时同步更新</p>
+                    <p>文本会话、音视频交流、文件传送使沟通更方便</p>
+                    <p>群组、讨论组让协作更顺畅</p>
+                    <p>新邮件到达、文档更新、通知公告即时通知提醒</p>
+                    <p>空间企业资料文件“随身携带”，资料分享一触即达</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Z云邮部分四 end-->
+<?= $this->render('../common/_ask'); ?>
