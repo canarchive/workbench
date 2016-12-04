@@ -115,8 +115,10 @@ class AdminController extends Controller
         ]);
     }
 
-    protected function _addMulInfo($model)
+    protected function _addMulInfo()
     {
+        $modelClass = $this->modelClass;
+        $model = new $modelClass();
         $return = false;
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
