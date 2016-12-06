@@ -78,7 +78,7 @@ class AdminController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    protected function _addInfo($data = [], $returnView = true)
+    protected function _addInfo($returnView = true)
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass($this->_addData());
