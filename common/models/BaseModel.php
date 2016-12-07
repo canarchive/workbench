@@ -6,6 +6,7 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
+use yii\data\Pagination;
 
 class BaseModel extends ActiveRecord
 {
@@ -173,4 +174,27 @@ class BaseModel extends ActiveRecord
     {
         return [];
     }
+
+	public function getInfosByPage($params = [])
+	{
+		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
+		$where = isset($params['where']) ? $params['where'] : [];
+		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
+		$groupBy = isset($params['groupBy']) ? $params['groupBy'] : [];
+
+        $data = $this->find()->where($where);
+		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
+		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
+		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize]);
+		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
+		$infos = $this->_formatInfos($infos);
+
+		$return = ['infos' => $infos, 'pages' => $pages];
+		return $return;
+	}
+
+	protected function _formatInfos($infos)
+	{
+		return $infos;
+	}
 }
