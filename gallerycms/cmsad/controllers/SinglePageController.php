@@ -18,7 +18,7 @@ class SinglePageController extends CmsadController
 			'view' => $view,
 		];
 		
-		$this->getTdkInfos('feature-' . $view);
+		$this->getTdkInfos('single-page-' . $view);
 		return $this->render($view, $datas);
 	}
 }

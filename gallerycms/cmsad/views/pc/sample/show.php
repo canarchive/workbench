@@ -67,7 +67,7 @@ $this->params['formPositionName'] = '首页量房';
                 <div style="text-align: left;">
                     <br /></div>
                 <div style="text-align: center;">
-                    <img src="http://a.300.cn/images/20160512/573449971de75.png" width="1000" alt="" />
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/573449971de75.png" width="1000" alt="" />
                     <br /></div>
                 <div style="text-align: center;">
                     <br /></div>
@@ -75,7 +75,7 @@ $this->params['formPositionName'] = '首页量房';
                 <div style="text-align: left;">
                     <br /></div>
                 <div style="text-align: center;">
-                    <img src="http://a.300.cn/images/20160512/573449c1630a7.png" width="1000" alt="" />
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/573449c1630a7.png" width="1000" alt="" />
                     <br /></div>
                 <div style="text-align: center;">
                     <br /></div>
@@ -83,7 +83,7 @@ $this->params['formPositionName'] = '首页量房';
                 <div style="text-align: center;">
                     <br /></div>
                 <div style="text-align: center;">
-                    <img src="http://a.300.cn/images/20160512/57344b1ceb00a.png" width="1000" alt="" />
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/57344b1ceb00a.png" width="1000" alt="" />
                     <br /></div>
                 <div style="text-align: center;">
                     <br /></div>
@@ -103,7 +103,7 @@ $this->params['formPositionName'] = '首页量房';
     <?= $this->render('../common/_askzero'); ?>
     <?= $this->render('../common/_ask'); ?>
 </div>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.flexslider-min.js"></script>
 <script type="text/javascript">var xgal = function() {
         var id = '104148';
         $.post('/case/xg', {

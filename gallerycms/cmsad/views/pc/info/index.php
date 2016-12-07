@@ -126,5 +126,5 @@ $this->params['formPositionName'] = '首页量房';
         var bannerwidth = parseInt($('.flexslider').css('width'));
         $('.flex-control-nav').css('margin-right', (bannerwidth - butwidth) / 2);
     });</script>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.flexslider-min.js"></script>
 <!-- 轮播图 -->

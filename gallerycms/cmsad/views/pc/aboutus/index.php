@@ -13,7 +13,7 @@ $this->params['formPositionName'] = $view;
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
 <style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
-<div class="topimg-360" style="background:url(http://s.300.cn/current/home/images/zmaile--banner.jpg) no-repeat top center">
+<div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmaile--banner.jpg) no-repeat top center">
     <div class="topimg-con zmail-img pop_zixun">
         <a href="javascript:void(0);" value="1">立即咨询</a></div>
 </div>
@@ -21,29 +21,27 @@ $this->params['formPositionName'] = $view;
 <div class="zyy_item2">
     <div class="zyy_warp">
         <div class="zyy_title">
-            <h2>选Z云邮 . 全球云游</h2>
-            <p>全球云游 畅通无忧的企业邮局</p>
+            <h2>我们是谁？</h2>
+            <p>北京维来亚科技有限公司</p>
         </div>
         <div class="zyy_it2_left">
             <div class="zyy_text">
-                <span class="zyy_text_title">五大洲34个地区部署服务器</span>
-                <h3>确保企业邮箱海外畅通</h3>
+                <!--<span class="zyy_text_title">京维来亚科技有限公司</span>-->
+                <h3>京维来亚科技有限公司</h3>
                 <div class="txt">
-                    <p>多点海外双向转发，安全送达全球各地，外贸跟单一触即发</p>
-                    <p>亚洲、欧洲、美洲、大洋州等五大洲，34个地区部署收发节点</p>
+                    <p>北京维来亚科技有限公司是一家旨在通过整合各类网络营销资源，帮助中小企业全面提高营销水平和网络营销效果的高科技创业型企业。</p>
                 </div>
             </div>
             <div class="zyy_text">
-                <span class="zyy_text_title">国内28个地区部署服务器</span>
-                <h3>确保国内邮件畅通无阻</h3>
+                <!--<span class="zyy_text_title">国内28个地区部署服务器</span>-->
+                <h3>我们的团队</h3>
                 <div class="txt">
-                    <p>与中国电信、新联通、教育网三线互通，确保国内邮件畅通无阻</p>
-                    <p>北京、广州、深圳、上海等28个地区部署收发节点</p>
+                    <p>公司创始团队由来自百度、及从事互联网行业推广运营的各界精英等高管组成，在互联网推广、企业精准效果营销与软件开发方面有丰富的经验和雄厚的实力。</p>
                 </div>
             </div>
         </div>
         <div class="zyy_it2_right">
-            <img src="http://s.300.cn/current/home/images/zmail-pic1.png" alt="全球云游 畅通无忧的企业邮局" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic1.png" alt="全球云游 畅通无忧的企业邮局" /></div>
     </div>
 </div>
 <!-- Z云邮部分二 end-->
@@ -51,13 +49,13 @@ $this->params['formPositionName'] = $view;
 <div class="zyy_item3">
     <div class="zyy_warp">
         <p class="bg">
-            <img src="http://s.300.cn/current/home/images/zmail-pic2_bg.png" alt="云邮 . 多终端使用" /></p>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2_bg.png" alt="云邮 . 多终端使用" /></p>
         <div class="zyy_title">
-            <h2>选Z云邮 . 多终端使用</h2>
-            <p>使用自由 多终端同步的企业邮局</p>
+            <h2></h2>
+            <p></p>
         </div>
         <div class="zyy_it3_left">
-            <img src="http://s.300.cn/current/home/images/zmail-pic2.png" alt="Z云邮 . 多终端使用" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2.png" alt="Z云邮 . 多终端使用" /></div>
         <div class="zyy_it3_right">
             <div class="zyy_text">
                 <span class="zyy_text_title">收发邮件同步</span>
@@ -101,11 +99,11 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it4_right">
-            <img src="http://s.300.cn/current/home/images/zmail-pic3.png" alt="Z云邮 . 高效省心 " /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic3.png" alt="Z云邮 . 高效省心 " /></div>
     </div>
     <div class="zyy_warp zyy_warp2">
         <div class="zyy_it4_left">
-            <img src="http://s.300.cn/current/home/images/zmail-pic4.png" alt="Z云邮 . 高效省心 " /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic4.png" alt="Z云邮 . 高效省心 " /></div>
         <div class="zyy_it4_right zyy_text_box2">
             <div class="zyy_text">
                 <span class="zyy_text_title">优势二</span>
@@ -133,11 +131,11 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it4_right ">
-            <img src="http://s.300.cn/current/home/images/zmail-pic5.png" alt="归档邮件" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic5.png" alt="归档邮件" /></div>
     </div>
     <div class="zyy_warp zyy_warp2 zyy_warp4">
         <div class="zyy_it4_left">
-            <img src="http://s.300.cn/current/home/images/zmail-pic6.png" alt="集成即时通讯" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic6.png" alt="集成即时通讯" /></div>
         <div class="zyy_it4_right zyy_text_box2">
             <div class="zyy_text">
                 <span class="zyy_text_title">优势四</span>

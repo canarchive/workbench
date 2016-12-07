@@ -105,35 +105,35 @@ use yii\helpers\Url;
                             <div class="item-inner website clearfix">
                                 <div class="main w-fl">
                                     <a href="youju.html" >
-                                        <h3>企业定制</h3>
-                                        <span class="descrip">从网站到流量，一站式解决</span>
-                                        <span class="btm">企业定制 = 网站建设+服务器托管+舆情监控+SEM培训+SEO指导+SMO+新闻营销</span></a>
+                                        <h3>企业内训</h3>
+                                        <span class="descrip">实战培训，让企业业绩倍增</span>
+                                        <span class="btm">SEO指导+SEM实战培训，<br />大大降低企业获客成本</span></a>
                                 </div>
                                 <div class="detail w-fl three-item">
                                     <div class="sort">
                                         <a href="<?= Url::to(['/single-page/customizing']); ?>" >
-                                            <span class="tag">网站建设</span>
+                                            <span class="tag">SEO指导</span>
                                             <span class="price"></span>
-                                            <span class="descrip">营销型网站定制化开发</span></a>
+                                            <span class="descrip">专业实战，落地执行</span></a>
                                     </div>
                                     <div class="sort">
                                         <a href="<?= Url::to(['/single-page/customizing']); ?>" >
-                                            <span class="tag">SMO</span>
+                                            <span class="tag">SEM培训</span>
                                             <span class="price"></span>
-                                            <span class="descrip">社会化媒体营销矩阵</span></a>
+                                            <span class="descrip">降低成本70%，只需一礼拜</span></a>
                                     </div>
                                     <div class="sort">
                                         <a href="<?= Url::to(['/single-page/customizing']); ?>" >
-                                            <span class="tag">新闻营销</span>
+                                            <span class="tag">自媒体营销</span>
                                             <span class="price"></span>
-                                            <span class="descrip">新闻源打造公司品牌</span></a>
+                                            <span class="descrip">矩阵模式，引领品牌新玩法</span></a>
                                     </div>
-                                    <div class="sort">
+                                    <!--<div class="sort">
                                         <a href="<?= Url::to(['/single-page/customizing']); ?>" >
                                             <span class="tag">负面删除</span>
                                             <span class="price"></span>
                                             <span class="descrip">提升企业口碑</span></a>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </li>

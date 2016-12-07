@@ -48,13 +48,13 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>近日头条</span>中国最大的资讯平台</div>
+                                <span>今日头条</span>中国最大的资讯平台</div>
                             <div class="con">移动端5.5亿人群每天在今日头条看新闻，信息流是趋势</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
                                 <span>智慧推</span>全球最大移动广告网络</div>
-                            <div class="con">印度屈指可数的移动广告公司。它的移动广告已覆盖到了3.32亿个独立手机用户</div></div>
+                            <div class="con">整合腾讯资讯、娱乐等网络媒体的PC和移动端资源，面向区域企业提供的“品效合一”的营销推广服务</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -76,7 +76,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t03">
-                                <span>SEM</span>根据托词系统快速找到转化率最高的钱300个关键词，优化价格，做到高效投放；</div>
+                                <span>SEM</span>根据拓词系统快速找到转化率最高的前300个关键词，优化价格，做到高效投放；</div>
                             <div class="con">独立开发全流程的SEM托管系统，数据分析一目了然；公司SEM总监亲自操刀诊断，企业内训分享实操经验；专业营销策划，制作高转化着陆页；</div></div>
                     </div>
                     <div class="clear"></div>

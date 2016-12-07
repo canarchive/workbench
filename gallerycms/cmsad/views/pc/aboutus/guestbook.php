@@ -17,7 +17,7 @@ $this->params['formPositionName'] = $view;
     <div class="free-ask-main">
         <div class="free-ask">
             <div class="icon">
-                <img src="http://s.300.cn/current/home/images/review-icon.jpg" alt=""></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/review-icon.jpg" alt=""></div>
             <div class="title">
                 <span>意见反馈</span></div>
             <p class="sug-tips">留下您的宝贵意见，我们会在第一时间回复您</p>
@@ -101,7 +101,7 @@ $this->params['formPositionName'] = $view;
             districtNode: $('#gd_bottom')
         });
     });</script>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.form.main.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.form.main.js"></script>
 <script>$(function() {
         var feedbackTime = true;
         $('#email_bottom3').mailAutoComplete({

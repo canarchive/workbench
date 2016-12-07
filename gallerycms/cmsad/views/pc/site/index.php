@@ -15,14 +15,14 @@ $this->params['formPositionName'] = '首页量房';
     <?= $this->render('_banner'); ?>
     <?= $this->render('_myservice'); ?>
     <?php //echo $this->render('_service_more'); ?>
-    <?= $this->render('_sample'); ?>
+    <?= $this->render('_sample', ['infos' => $sampleInfos]); ?>
     <?= $this->render('_why'); ?>
     <?php //$this->render('_buildweb'); ?>
-    <?= $this->render('_info'); ?>
+    <?= $this->render('_info', ['infos' => $articleInfos]); ?>
     <?= $this->render('_advantage'); ?>
 </div>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.SuperSlide.2.1.1.js"></script>
 <script>$(function() {
         var count = $("#slideBox .bd li").length;
         var html = '';
@@ -37,6 +37,7 @@ $this->params['formPositionName'] = '首页量房';
             effect: "leftLoop",
             autoPlay: true,
             mouseOverStop: true,
+            height: 500,
             interTime: 5000
         });
 

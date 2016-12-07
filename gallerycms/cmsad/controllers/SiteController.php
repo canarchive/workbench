@@ -4,11 +4,8 @@ namespace gallerycms\cmsad\controllers;
 
 use Yii;
 use gallerycms\components\CmsadController;
-use merchant\cmsad\models\Merchant;
-use merchant\cmsad\models\Realcase;
-use merchant\cmsad\models\Working;
-use gallerycms\cmsad\models\CmsadSample;
-use common\models\RegionCounty;
+use gallerycms\cmsad\models\Sample;
+use gallerycms\cmsad\models\Article;
 
 class SiteController extends CmsadController
 {
@@ -16,15 +13,27 @@ class SiteController extends CmsadController
 	{
 		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];
 		$datas = [
-			'merchantInfos' => [],//$this->getMerchantInfos($where),
-			'realcaseInfos' => [],//$this->getRealcaseInfos($where),
-			'workingInfos' => [],//$this->getWorkingInfos($where),
-			'sampleInfos' => [],//$this->getSampleInfos(),
+			'articleInfos' => $this->getArticleInfos($where),
+			'sampleInfos' => $this->getSampleInfos(),
 		];
 		$this->getTdkInfos('site-index');
 
 		return $this->render('index', $datas);
 	}
+
+    protected function getSampleInfos()
+    {
+		$model = new Sample();
+		$infos = $model->getInfos([], 10);
+		return $infos;
+    }
+
+    protected function getArticleInfos()
+    {
+		$model = new Article();
+		$infos = $model->getInfosForIndex();
+		return $infos;
+    }
 
 	public function actionMap()
 	{

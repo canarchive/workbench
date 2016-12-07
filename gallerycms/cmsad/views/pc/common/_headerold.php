@@ -56,7 +56,7 @@ $secondLevels = [
             <div class="login floatL" style="width:auto;">
                 <span class="s-homeico"></span>
                 <a href="/" style="margin-right:25px;">官网首页</a>
-                <!--<a id="home_login" href="http://ucenter.300.cn" target="_blank" style="margin-right: 4px;">登录</a>-->
+                <!--<a id="home_login" href="" target="_blank" style="margin-right: 4px;">登录</a>-->
                 <a id="home_out_line" style="display:none;">|</a>
                 <a id="home_out" style="display:none" onclick="ZQDL.apps.login.logout()">退出</a>
                 <!--<a href="#" target="_blank">注册</a> -->

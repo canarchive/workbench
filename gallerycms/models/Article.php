@@ -92,4 +92,27 @@ class Article extends GallerycmsModel
 
 		return $info;
 	}
+
+    public function getInfosForIndex()
+    {
+        $cModel = new Category();
+        $cInfos = $cModel->getDatas('catdir');
+        //print_r($cInfos);exit();
+        $levelInfos = $cModel->getlevelDatas();
+        $catdirs = ['yxtg', 'wzqz', 'jingjia', 'SEO'];
+        $cDatas = [];
+        foreach ($catdirs as $catdir) {
+            $id = $cInfos[$catdir]['id'];
+            
+            $cDatas[$catdir]['name'] = $cInfos[$catdir]['name'];
+            $ids = isset($levelInfos[$id]) ? array_keys($levelInfos[$id]['subInfos']) : [$id];
+            $cDatas[$catdir]['id'] = $ids;
+        }
+
+        foreach ($cDatas as $catdir => $info) {
+            $cDatas[$catdir]['subInfos'] = $this->getInfos(['category_id' => $info['id']], 7);
+        }
+
+        return $cDatas;
+    }
 }

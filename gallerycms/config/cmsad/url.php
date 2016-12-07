@@ -48,6 +48,26 @@ return [
 	'aboutus-contact' => [
 		'name' => '联系我们',
 		'pc-url' => '/aboutus/contact.html',
-		'mobile-url' => '/aboutus/contact.html',
+		//'mobile-url' => '/aboutus/contact.html',
+	],
+	'aboutus-guestbook' => [
+		'name' => '意见反馈',
+		'pc-url' => '/aboutus/guestbook.html',
+		//'mobile-url' => '/aboutus/guestbook.html',
+	],
+	'aboutus-privacy' => [
+		'name' => '隐私保护',
+		'pc-url' => '/privacy.html',
+		//'mobile-url' => '/privacy.html',
+	],
+	'aboutus-attention' => [
+		'name' => '公告',
+		'pc-url' => '/attention.html',
+		//'mobile-url' => '/attention.html',
+	],
+	'aboutus-statement' => [
+		'name' => '声明',
+		'pc-url' => '/statement.html',
+		//'mobile-url' => '/statement.html',
 	],
 ];
