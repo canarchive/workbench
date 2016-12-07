@@ -34,10 +34,6 @@ return [
             'identityClass' => 'backend\models\Manager',
             'enableAutoLogin' => true,
         ],
-        'assetManager' => [
-            'basePath' => '@assetcustom/assets',
-            'baseUrl' => '@asseturl/assets',
-        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
