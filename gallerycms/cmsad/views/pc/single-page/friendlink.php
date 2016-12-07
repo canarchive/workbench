@@ -14,10 +14,10 @@
         <link rel="stylesheet" type="text/css" href="http://s.300.cn/current/home/css/public.css?20160707" />
         <link href="http://s.300.cn/current/home/css/style.css" rel="stylesheet" type="text/css">
         <style type="text/css">.yingxiao-classify p{line-height:26px;} .yingxiao-classify-title{font-size:16px; font-weight:bold; line-height:36px;} .fengongsi-list{width:960px; margin:0 auto;} .fengongsi-list .list-inner{float:left; width:120px;} .city-name{font-weight:bold; padding:6px 0 0 10px; height:24px; line-height:24px; color:#0d4168;} .city-branch{width:70px; color:#4d4d4d; padding-left:15px; background: url(images/ear_ico.gif) center left no-repeat; } .yingxiao-classify-con{padding-top:10px;} .yingxiao-classify-con a{display:inline-block; padding:5px 20px; border:1px solid #ddd; margin-right:10px; margin-bottom:15px;} .yingxiao-classify-con a:hover{border-color:#f90;}</style>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery-1.8.3.min.js"></script>
         <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
         <!--[if lte IE 6]>
-            <script src="http://s.300.cn/current/home/js/png_0.0.8a-min.js" type="text/javascript"></script>
+            <script src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/png_0.0.8a-min.js" type="text/javascript"></script>
             <script type="text/javascript">DD_belatedPNG.fix('*');</script>
         <![endif]-->
         <script type="text/javascript" src="//s.union.360.cn/9092.js"></script>
@@ -341,7 +341,7 @@
                     <div class="attention">关注我们：
                         <a href="http://weibo.com/zqdl300" class="gz-wb" target="_blank">新浪微博</a>
                         <div class="ewm">
-                            <img src="http://s.300.cn/current/home/images/zqdl-wx.png"></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zqdl-wx.png"></div>
                     </div>
                     <div class="kxwz">
                         <script src="http://kxlogo.knet.cn/seallogo.dll?sn=2009111300100000738&size=0"></script>
@@ -480,13 +480,13 @@
         <script language="JavaScript" src="http://a.youdao.com/conv/conversion.js"></script>
         <noscript>
             <img height=0 width=0 border=0 src="http://a.youdao.com/conv/284700/imp.gif?value=1&label=landing"></noscript>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/common.js"></script>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/position.js"></script>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/public.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/common.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/position.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/public.js"></script>
         <script type="text/javascript" src="/city/createCityJs"></script>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/submit.js?20160707"></script>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.cityselect.js?20160707"></script>
-        <script type="text/javascript" src="http://s.300.cn/current/home/js/jquery.mailAutoComplete.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/submit.js?20160707"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.cityselect.js?20160707"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.mailAutoComplete.js"></script>
         <script type="text/javascript" src="/common"></script>
         <script type="text/javascript" src="/common/count"></script>
         <script>$(function() {

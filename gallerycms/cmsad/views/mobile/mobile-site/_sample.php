@@ -6,14 +6,14 @@
             <li>
                 <a href="/case/104145.html">
                     <div class="img">
-                        <img src="http://www.300.cn/attach/case/20151217/5672234bb77a9.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/5672234bb77a9.png" alt=""></div>
                     <p class='case-name'>沈阳故宫博物院 ...</p>
                     <p class='case-trade'>行业：公共事业/教育</p></a>
             </li>
             <li>
                 <a href="/case/308.html">
                     <div class="img">
-                        <img src="http://a.300.cn/case/buy2buyupfile/20157141133634052s.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/20157141133634052s.jpg" alt=""></div>
                     <p class='case-name'>民族歌舞团 网站...</p>
                     <p class='case-trade'>行业：公共事业/教育</p></a>
             </li>

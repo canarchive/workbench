@@ -5,8 +5,8 @@
                     <!--<a href="javascript:;" >-->
                     <div>
                         <div class="fuwu-main-benefit-pic">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwukuaijie.png" alt="80家分公司快速的为您提供网站建设相关服务" /></div>
-                        <h3>便捷</h3>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwukuaijie.png" alt="9年实战经验，1600+成功案例" /></div>
+                        <h3>实战</h3>
                         <p>全国近80家分公司便捷服务</p>
                     </div>
                     <!--</a>--></div>
@@ -14,9 +14,9 @@
                     <!--<a href="javascript:;" >-->
                     <div>
                         <div class="fuwu-main-benefit-pic">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwuzhoudao.png" alt='覆盖70多个城市的服务网络提供周到的服务' /></div>
-                        <h3>周到</h3>
-                        <p>覆盖70多个城市的服务网络</p>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwuzhoudao.png" alt='用实际效果说话，降低企业获客成本' /></div>
+                        <h3>落地</h3>
+                        <p>用实际效果说话，降低企业获客成本</p>
                     </div>
                     <!--</a>--></div>
                 <div class="fuwu-main-benefit-pannel">
@@ -33,8 +33,8 @@
                     <div>
                         <div class="fuwu-main-benefit-pic">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwuanquan.png" alt="病毒杀除率高于99%" /></div>
-                        <h3>安全</h3>
-                        <p>病毒杀除率高于99%</p>
+                        <h3>数据</h3>
+                        <p>精细化分析做到事半功倍</p>
                     </div>
                     <!--</a>--></div>
                 <div class="fuwu-main-benefit-pannel">

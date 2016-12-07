@@ -7,7 +7,7 @@ $this->params['footerJsStr'] = $this->render('_after_js');
 <?php $this->beginContent('@common/views/main-base.php'); ?>
 
 <!--[if lte IE 6]>
-    <script src="http://s.300.cn/current/home/js/png_0.0.8a-min.js" type="text/javascript"></script>
+    <script src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/png_0.0.8a-min.js" type="text/javascript"></script>
     <script type="text/javascript">DD_belatedPNG.fix('*');</script>
 <![endif]-->
 <?php echo $this->render('../common/_header', []); // 顶部 ?>

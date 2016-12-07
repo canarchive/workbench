@@ -25,7 +25,7 @@ use yii\helpers\Url;
                 <a><?= Yii::$app->params['siteHotline']; ?></a>
             </div>
             <div class="attention">
-                <!--关注我们：<a href="http://weibo.com/zqdl300" class="gz-wb" target="_blank">新浪微博</a>-->
+                <!--关注我们：<a href="http://weibo.com/weinaya" class="gz-wb" target="_blank">新浪微博</a>-->
                 <div class="ewm">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zqdl-wx.png"></div>
             </div>

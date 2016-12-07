@@ -42,6 +42,6 @@
             </form>
         </div>
         <div class="free-tips">我们会尽快联系您，等待期间需要获取更多信息，请
-            <a href="http://www.300.cn">继续访问</a>或
+            <a href="<?= Yii::getAlias('@ad.cmsurl'); ?>">继续访问</a>或
             <a id="TQzx3" clickCount="true" clickAdd="zaixianzixun">联系我们</a>。感谢您对中企产品及服务的支持。</div></div>
 </div>

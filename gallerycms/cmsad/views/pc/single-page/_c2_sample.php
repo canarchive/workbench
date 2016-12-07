@@ -6,7 +6,7 @@
             <ul class="case_list clearfix">
                 <li>
                     <a href="/case/857" target="_blank">
-                        <img src="http://a.300.cn/case/mxm/datu/49.jpg" alt="企业级门户网站建设案例-并行科技 网站建设" width="240px" height="170px"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/49.jpg" alt="企业级门户网站建设案例-并行科技 网站建设" width="240px" height="170px"></a>
                     <div class="case_txt">
                         <h3>
                             <a href="/case/857" target="_blank">并行科技 网站建设</a></h3>
@@ -49,7 +49,7 @@
                 </li>
                 <li>
                     <a href="/case/941" target="_blank">
-                        <img src="http://a.300.cn/case/mxm/datu/164.jpg" alt="企业级门户网站建设案例-南通吉安时装有限公司" width="240px" height="170px"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/164.jpg" alt="企业级门户网站建设案例-南通吉安时装有限公司" width="240px" height="170px"></a>
                     <div class="case_txt">
                         <h3>
                             <a href="/case/941" target="_blank">南通吉安时装有限公司</a></h3>
@@ -92,7 +92,7 @@
                 </li>
                 <li>
                     <a href="/case/899" target="_blank">
-                        <img src="http://a.300.cn/case/mxm/datu/113.jpg" alt="企业级门户网站建设案例-广东连坚集团有限公司" width="240px" height="170px"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/113.jpg" alt="企业级门户网站建设案例-广东连坚集团有限公司" width="240px" height="170px"></a>
                     <div class="case_txt">
                         <h3>
                             <a href="/case/899" target="_blank">广东连坚集团有限公司</a></h3>

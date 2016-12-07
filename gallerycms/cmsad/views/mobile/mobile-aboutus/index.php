@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<?php
+use yii\helpers\Url;
 
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" name="viewport">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta content="telephone=no" name="format-detection">
-<title>关于我们-中企动力科技股份有限公司</title>
-<meta name="description" content="中企动力科技股份有限公司成立于1999年9月16日，是中国领先的企业电子商务服务运营商，是南海控股集团旗下中国数码集团的全资子公司，与新网、大地文化等互为兄弟公司。" />
-<meta name="keywords" content="南海控股、中国数码、大地传媒、新网、网站建设、企业网站建设、企业邮箱、企业域名服务、域名注册、网上商城" />
-<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
-<link rel="stylesheet" type="text/css" href="http://s.300.cn/current/mobile/css/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="http://s.300.cn/current/mobile/css/common-mobile.css">
-<link rel="stylesheet" type="text/css" href="http://s.300.cn/current/mobile/css/style.css?20160707">
-<link rel="stylesheet" type="text/css" href="http://s.300.cn/current/mobile/css/submit.css">
-<script type="text/javascript" src="http://s.300.cn/current/mobile/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="http://s.300.cn/current/mobile/js/swiper.min.js"></script>
-<script type="text/javascript" src="http://s.300.cn/current/mobile/js/public.js"></script>
-<script type="text/javascript" src="http://s.300.cn/current/mobile/js/common.js?20160707"></script>
-<script type="text/javascript" src="/city/createCityJs"></script>
-<script type="text/javascript" src="http://s.300.cn/current/mobile/js/position.js"></script>
-<script type="text/javascript" src="http://s.300.cn/current/mobile/js/city-select.js?20160707"></script>
-<script type="text/javascript" src="/common/count"></script>
-<script type="text/javascript" src="/common"></script>
+$this->params['cssFiles'] = [
+	'swiper.min', 'common-mobile', 'style-m', 'submit',
+];
+$this->params['jsFiles'] = [
+	'jquery-1.8.3.min', 'swiper.min', 'public-m', 'common-m', 'createCity', 'position-m', 'city-select', 'count',
+];
+//$this->context->pcMappingUrl = '';
+?>
 <script>//微信tel失效问题,去除sukey
     if (navigator.userAgent.indexOf('MicroMessenger') != -1) {
         var shref = window.location.href;
@@ -331,73 +315,13 @@
                                 <dt>邮箱：</dt>
                                 <dd>
                                     <p>客户服务 -
-                                        <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="780b1d0a0e111b1d4c48484e384b4848561b16">[email&#160;protected]</a>
-                                        <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */
-                                            !
-                                            function(t, e, r, n, c, a, p) {
-                                                try {
-                                                    t = document.currentScript ||
-                                                    function() {
-                                                        for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e]
-                                                    } ();
-                                                    if (t && (c = t.previousSibling)) {
-                                                        p = t.parentNode;
-                                                        if (a = c.getAttribute('data-cfemail')) {
-                                                            for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice( - 2);
-                                                            p.replaceChild(document.createTextNode(decodeURIComponent(e)), c)
-                                                        }
-                                                        p.removeChild(t)
-                                                    }
-                                                } catch(u) {}
-                                            } ()
-                                            /* ]]> */
-                                            </script>
+                                        <a href="mailto:sevice@weinaya.com">service@weinaya.com</a>
                                     </p>
                                     <p>产品合作 -
-                                        <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="61060403080f215251514f020f">[email&#160;protected]</a>
-                                        <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */
-                                            !
-                                            function(t, e, r, n, c, a, p) {
-                                                try {
-                                                    t = document.currentScript ||
-                                                    function() {
-                                                        for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e]
-                                                    } ();
-                                                    if (t && (c = t.previousSibling)) {
-                                                        p = t.parentNode;
-                                                        if (a = c.getAttribute('data-cfemail')) {
-                                                            for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice( - 2);
-                                                            p.replaceChild(document.createTextNode(decodeURIComponent(e)), c)
-                                                        }
-                                                        p.removeChild(t)
-                                                    }
-                                                } catch(u) {}
-                                            } ()
-                                            /* ]]> */
-                                            </script>
+                                        <a href="mailto:chanpinhezuo@weinaya.com">chanpinhezuo@weinaya.com</a>
                                     </p>
                                     <p>媒介合作 -
-                                        <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="9deafcf3faf7f4fcf3e5e8f3ddaeadadb3fef3">[email&#160;protected]</a>
-                                        <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */
-                                            !
-                                            function(t, e, r, n, c, a, p) {
-                                                try {
-                                                    t = document.currentScript ||
-                                                    function() {
-                                                        for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e]
-                                                    } ();
-                                                    if (t && (c = t.previousSibling)) {
-                                                        p = t.parentNode;
-                                                        if (a = c.getAttribute('data-cfemail')) {
-                                                            for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice( - 2);
-                                                            p.replaceChild(document.createTextNode(decodeURIComponent(e)), c)
-                                                        }
-                                                        p.removeChild(t)
-                                                    }
-                                                } catch(u) {}
-                                            } ()
-                                            /* ]]> */
-                                            </script>
+                                        <a href="mailto:meijiehezuo@weinaya.com" >meijiehezuo@weinaya.com</a>
                                     </p>
                                 </dd>
                             </dl>

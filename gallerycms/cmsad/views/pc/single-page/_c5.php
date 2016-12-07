@@ -16,72 +16,72 @@
                                 <span>01</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>电信级IDC机房</div>
+                                <span class="after"></span>SEM托管</div>
                         </div>
-                        <div class="pop_box">6大电信级机房，带宽拥有量超过50G，3000多组高性能集群服务器，与中国电信、新联通和教育网三线互通。</div></li>
+                        <div class="pop_box">专注打造效果营销!10年经验，超过100个行业，1亿关键词的投放经验</div></li>
                     <li class="business_lists business_list2">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>02</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>集群部署</div>
+                                <span class="after"></span>SEO顾问</div>
                         </div>
-                        <div class="pop_box">服务器群组的集成部署（Web服务器集群 应用服务器集群、论坛服务器集群、制作 服务器集群） 应用服务器分离，拥有负载均衡设备和专用的NAS储存。</div></li>
+                        <div class="pop_box">你的公司是否在SEO上走了很多弯路？我们提供一站式门户网站SEO解决方案</div></li>
                     <li class="business_lists business_list3">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>03</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>网络安全保障</div>
+                                <span class="after"></span>舆情监控</div>
                         </div>
-                        <div class="pop_box">采用先进的防火墙、负载均衡，防DDOS攻击；IDS设备定期安全扫描，及时发现漏洞，实时安全分析。</div></li>
+                        <div class="pop_box">专注于网络舆情监测软件的舆情公司,国内领先的舆情监测、微博营销机构</div></li>
                     <li class="business_lists business_list4">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>04</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>数据备份保障</div>
+                                <span class="after"></span>新闻发布</div>
                         </div>
-                        <div class="pop_box">所有网络设备采用双点备份，避免单点故障，确保在系统信息发生问题时可以快速恢复系统正常。</div></li>
+                        <div class="pop_box">提供新闻稿发布、微博推广、微信推广、论坛加精置顶、博客推广等服务，一手价格，优惠多多！</div></li>
                     <li class="business_lists business_list5">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>05</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>网络连通性保障</div>
+                                <span class="after"></span>SMO</div>
                         </div>
-                        <div class="pop_box">双光纤直连ChinaNet骨干节点，各中心均拥有4G以上ChinaNet出口带宽，有效保障网络的稳定性和高速性。</div></li>
+                        <div class="pop_box">利用社会媒体对外发布网站的新闻，这不是对网站本身的某些元素进行优化</div></li>
                     <li class="business_lists business_list6">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>06</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>客户服务保障</div>
+                                <span class="after"></span>SEM培训</div>
                         </div>
-                        <div class="pop_box">标准服务等级协议(SLA)，保障您轻松无忧；7天×24小时客服热线，及时为您排忧解难；完整服务指标体系，让您的网络营销平台高枕无忧。</div></li>
+                        <div class="pop_box">9年实战经验，帮助企业全面而有效的利用搜索引擎来进行网络营销和推广</div></li>
                     <li class="business_lists business_list7">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>07</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>智能终端 移动商务</div>
+                                <span class="after"></span>SEO指导</div>
                         </div>
-                        <div class="pop_box">支持计算机的常规浏览和手机、PDA在内的无线终端设备对企业网站的浏览，客户可以随时随地、不受限制地访问您的网站。</div></li>
+                        <div class="pop_box">SEO不是一种技术，而是一种系统化的策略，我们将站到网站运营的角度，结合网站技术，网站编辑、网站运营、用户体验、营销策略等方面的个性化需求，为你策划一套可以个性化的《SEO优化执行方案》</div></li>
                     <li class="business_lists business_list8">
                         <div class="list_inner">
                             <div class="busList_num">
                                 <span>08</span></div>
                             <div class="busList_txt">
                                 <span class="before"></span>
-                                <span class="after"></span>海外镜像</div>
+                                <span class="after"></span>媒介服务</div>
                         </div>
-                        <div class="pop_box">提高海外用户访问速度，加强网站的海外影响力，提升企业品牌国际影响力，海外实时监控服务器状态，随时处理突发事件。</div></li>
+                        <div class="pop_box">代理百度，360，搜狗，神马搜索引擎开户，广点通、DSP、智慧推开户业务</div></li>
                 </ul>
             </div>
             <div class="service floatR">

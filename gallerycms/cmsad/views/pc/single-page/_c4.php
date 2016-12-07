@@ -14,8 +14,8 @@
                     <div class="step_text">
                         <div class="step_img">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_order01.png" alt="SEM托管" /></div>
-                        <h3>SEM托管</h3>
-                        <p>专注打造效果营销!10年经验，超过100个行业，1亿关键词的投放经验</p>
+                        <h3>主动营销 请来客户</h3>
+                        <p>邮件、短信、免费搜索引擎优化网 站地图提交等多种网络网站宣传方式， 让您的企业网站在茫茫网海中脱颖 而出，让客户主动找上门</p>
                     </div>
                 </li>
                 <li>

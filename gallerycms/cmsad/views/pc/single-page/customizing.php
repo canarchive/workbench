@@ -20,8 +20,8 @@ $this->params['formPositionName'] = $view;
 <input type="hidden" id="admin_add_value" name="admin_add_value" value="">
 <!-- 第七屏 end-->
 <?= $this->render('../common/_ask'); ?>
-<script src="http://s.300.cn/current/home/js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="http://s.300.cn/current/home/js/newZ.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/newZ.js"></script>
 <script type="text/javascript">$(function() {
         $('.flexslider').flexslider({
             directionNav: false,

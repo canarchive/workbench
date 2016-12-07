@@ -122,7 +122,7 @@ $this->params['jsFiles'] = [
             <li>
                 <a href="/case/857.html">
                     <div class="img">
-                        <img src="http://a.300.cn/case/mxm/datu/49.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/49.jpg" alt=""></div>
                     <p class="case-name">并行科技 网站建设</p>
                     <p class="case-trade case-glance">
                         <em></em>15394</p>
@@ -131,7 +131,7 @@ $this->params['jsFiles'] = [
             <li>
                 <a href="/case/941.html">
                     <div class="img">
-                        <img src="http://a.300.cn/case/mxm/datu/164.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/164.jpg" alt=""></div>
                     <p class="case-name">南通吉安时装有限公司</p>
                     <p class="case-trade case-glance">
                         <em></em>22635</p>
@@ -140,7 +140,7 @@ $this->params['jsFiles'] = [
             <li>
                 <a href="/case/899.html">
                     <div class="img">
-                        <img src="http://a.300.cn/case/mxm/datu/113.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/113.jpg" alt=""></div>
                     <p class="case-name">广东连坚集团有限公司</p>
                     <p class="case-trade case-glance">
                         <em></em>22080</p>
@@ -149,7 +149,7 @@ $this->params['jsFiles'] = [
             <li>
                 <a href="/case/1221.html">
                     <div class="img">
-                        <img src="http://a.300.cn/case/buy2buyupfile/201571013133544157s.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/201571013133544157s.jpg" alt=""></div>
                     <p class="case-name">哈尔滨予泰兴邦工贸有限公司</p>
                     <p class="case-trade case-glance">
                         <em></em>18580</p>
