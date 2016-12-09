@@ -22,14 +22,14 @@ $this->params['formPositionName'] = $view;
     <div class="zyy_warp">
         <div class="zyy_title">
             <h2>我们是谁？</h2>
-            <p>北京维来亚科技有限公司</p>
+            <p>北京维纳亚科技有限公司</p>
         </div>
         <div class="zyy_it2_left">
             <div class="zyy_text">
                 <!--<span class="zyy_text_title">京维来亚科技有限公司</span>-->
-                <h3>京维来亚科技有限公司</h3>
+                <h3>北京维纳亚科技有限公司</h3>
                 <div class="txt">
-                    <p>北京维来亚科技有限公司是一家旨在通过整合各类网络营销资源，帮助中小企业全面提高营销水平和网络营销效果的高科技创业型企业。</p>
+                    <p>北京维纳亚科技有限公司是一家旨在通过整合各类网络营销资源，帮助中小企业全面提高营销水平和网络营销效果的高科技创业型企业。</p>
                 </div>
             </div>
             <div class="zyy_text">
@@ -44,8 +44,6 @@ $this->params['formPositionName'] = $view;
             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic1.png" alt="全球云游 畅通无忧的企业邮局" /></div>
     </div>
 </div>
-<!-- Z云邮部分二 end-->
-<!-- Z云邮部分三 -->
 <div class="zyy_item3">
     <div class="zyy_warp">
         <p class="bg">
@@ -58,22 +56,21 @@ $this->params['formPositionName'] = $view;
             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2.png" alt="Z云邮 . 多终端使用" /></div>
         <div class="zyy_it3_right">
             <div class="zyy_text">
-                <span class="zyy_text_title">收发邮件同步</span>
+                <span class="zyy_text_title">我们能做什么？</span>
                 <div class="txt">
-                    <p>支持IMAP协议，PC客户端、移动客户端中的邮件、文件夹和web端的收发邮件完全同步</p>
+                    <p>整合流量营销+推广效果营销根据企业的实际情况，充分整合产品与搜索引擎（SEM+SEO）、网络媒体、社交网络等信息流手段加营销工具。为企业提供全方位的流量整合营销策略，从而提升企业品牌形象与企业价值增值。</p>
                 </div>
             </div>
             <div class="zyy_text">
-                <span class="zyy_text_title">通讯录同步</span>
+                <span class="zyy_text_title">为什么选择维纳亚？</span>
                 <div class="txt">
-                    <p>PC安装登陆客户端助手；手机安装Z云邮客户端即可实现通讯录的同步</p>
-                    <p>无需登录Webmail，在Foxmail客户端、APP手机客户端可直接使用企业通讯录，并上传超大附件</p>
+                    <p>自主开发的SEM监控系统与卡位算法及SEO精准搜索规则，可以高精度锁定受众人群，让SEM、SEO引流更精准更智能，同时投入成本大大降低，ROI提升３０％以上。</p>
                 </div>
             </div>
             <div class="zyy_text">
-                <span class="zyy_text_title">网盘数据同步</span>
+                <span class="zyy_text_title">我们的定位</span>
                 <div class="txt">
-                    <p>个人云盘空间数据自动上传下载，时刻保持同步，移动客户端随时获取</p>
+                    <p>维来亚定位原则每年同行服务的客户控制在５家左右！我们只服务有口碑与有潜力成为行业领袖的客户！</p>
                 </div>
             </div>
         </div>
@@ -84,17 +81,18 @@ $this->params['formPositionName'] = $view;
 <div class="zyy_item4">
     <div class="zyy_warp zyy_warp1">
         <div class="zyy_title">
-            <h2>选Z云邮 . 高效省心</h2>
-            <p>应用丰富 高效省心的企业邮局</p>
+            <h2>我们的优势</h2>
+            <p>经验+系统完美结合</p>
         </div>
         <div class="zyy_it4_left zyy_text_box2">
             <div class="zyy_text">
-                <span class="zyy_text_title">优势一</span>
-                <h3>监控企业邮件，维护企业业务安全</h3>
+                <h3>SEM托管</h3>
                 <div class="txt">
-                    <p>域内监控规则随便设置，你想监控谁都可以</p>
-                    <p>监控邮件全部集中存放在邮件监控文件夹中，方便查看</p>
-                    <p>可以通过被监控者、邮件主题、类型和时间范围快速定位目标邮件</p>
+                    <p>账户托管优化一步到位，自主开发程序监控，数据一目了然</p>
+                </div>
+                <h3>SEO优化</h3>
+                <div class="txt">
+                    <p>快速高效精准，提升自然流量、宣传企业品牌，将流量转换成实际订单</p>
                 </div>
             </div>
         </div>
@@ -106,47 +104,9 @@ $this->params['formPositionName'] = $view;
             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic4.png" alt="Z云邮 . 高效省心 " /></div>
         <div class="zyy_it4_right zyy_text_box2">
             <div class="zyy_text">
-                <span class="zyy_text_title">优势二</span>
-                <h3>企业云盘 企业内部的信息仓库 方便企业快速分发共享内部资料</h3>
+                <h3>帮客户节省成本是我们最大的责任</h3>
                 <div class="txt">
-                    <p>云盘空间，自由分配，支持无限扩容</p>
-                    <p>分权管理，不同用户设置不同的权限</p>
-                    <p>云盘监控，实时监控用户云盘使用情况</p>
-                    <p>支持多个文件同时上传，支持断点续传</p>
-                    <p>企业内部文件共享，无需发送，对方即可查看</p>
-                    <p>云盘回收站，误删文件随时找回</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="zyy_warp zyy_warp3">
-        <div class="zyy_it4_left zyy_text_box2">
-            <div class="zyy_text">
-                <span class="zyy_text_title">优势三</span>
-                <h3>邮件归档往来邮件 历史信息有据可查</h3>
-                <div class="txt">
-                    <p>作为企业邮件数据备份：不受账号删除、个人操作的影响</p>
-                    <p>作为法律依据：归档邮件单独存放，原始信息记录完整保存，具备法律效力</p>
-                </div>
-            </div>
-        </div>
-        <div class="zyy_it4_right ">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic5.png" alt="归档邮件" /></div>
-    </div>
-    <div class="zyy_warp zyy_warp2 zyy_warp4">
-        <div class="zyy_it4_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic6.png" alt="集成即时通讯" /></div>
-        <div class="zyy_it4_right zyy_text_box2">
-            <div class="zyy_text">
-                <span class="zyy_text_title">优势四</span>
-                <h3>集成即时通讯，企业专属的即时通讯工具</h3>
-                <div class="txt">
-                    <p>企业专属的即时通讯平台</p>
-                    <p>统一的企业部门组织架构、实时同步更新</p>
-                    <p>文本会话、音视频交流、文件传送使沟通更方便</p>
-                    <p>群组、讨论组让协作更顺畅</p>
-                    <p>新邮件到达、文档更新、通知公告即时通知提醒</p>
-                    <p>空间企业资料文件“随身携带”，资料分享一触即达</p>
+                    <p>我们只为最有价值的客户及团队执行力强的客户合作，以实现我们服务的最大价值。我们拒绝把时间浪费在谈判上，团队的核心是把99%的精力用来服务合作的客户。收费模式基础服务费 + 提点（可根据实际情况，可做合理调整），详情可以联系客服。</p>
                 </div>
             </div>
         </div>
