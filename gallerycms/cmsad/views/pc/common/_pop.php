@@ -7,12 +7,12 @@
     <noscript>
         <img height=0 width=0 border=0 src="http://a.youdao.com/conv/284700/imp.gif?value=1&label=landing">
     </noscript>
-<div class="onlineserver" id="onlineserver"></div>
-<div class="activityrecommend" id="activityrecommend"></div>
+<!--<div class="onlineserver" id="onlineserver" ></div>-->
+<!--<div class="activityrecommend" id="activityrecommend"></div>-->
 <div class="scrolltop">
     <a href="###" class="t" style="display:none"></a>
 </div>
-<div class="jz-service">
+<!--<div class="jz-service">
     <div class="jz-service-open jz-service-con">
         <span class='jz-service-close'></span>
         <a target='_blank' href="/guanwang.html" class='jz-service1'>定制建站</a>
@@ -69,4 +69,4 @@
             </form>
         </div>
     </div>
-</div>
+</div>-->
