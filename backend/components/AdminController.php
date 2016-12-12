@@ -31,6 +31,16 @@ class AdminController extends Controller
         ];
     }
 
+    public function actions()
+    {
+        return [
+    
+            'upload' => [
+                'class' => 'common\ueditor\UEditorAction',
+            ],  
+        ];  
+    } 
+
     /**
      * Lists infos.
      * @return mixed
