@@ -34,7 +34,7 @@ class SiteController extends SpiderController
         }
         //$downUrl = $urlBase . "/{$code}/spider/file-down.html?id={$id}";
         $downUrl = $urlBase . "/spider/file-down.html?id={$id}";
-        $content .= "<a href='{$downUrl}' target='_blank'>下载文件</a><br />";
+        //$content .= "<a href='{$downUrl}' target='_blank'>下载文件</a><br />";
         $content .= '<br /><h3>信息处理</h3>';
         $dealActions = $actions['dealActions'];
         foreach ($dealActions as $action => $info) {
