@@ -55,7 +55,7 @@ class SpiderAbstract extends SpiderModel
         $model->url_prefix = 'default';
         $model->filename = $model->name;
         $model->description = $model->name;
-        $model->created_at = Yii::$app->params['currentTime'];
+        //$model->created_at = Yii::$app->params['currentTime'];
         $model->source_status = 0;
         $model->insert(false);
     }
@@ -97,8 +97,37 @@ class SpiderAbstract extends SpiderModel
 
     public function getRemoteContent($url)
     {
+        $ch = curl_init();
+        $ip = '220.181.108.91';  // 百度蜘蛛
+        $timeout = 15;
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_TIMEOUT,0);
+        //伪造百度蜘蛛IP  
+        curl_setopt($ch,CURLOPT_HTTPHEADER,array('X-FORWARDED-FOR:'.$ip.'','CLIENT-IP:'.$ip.'')); 
+        //伪造百度蜘蛛头部
+        curl_setopt($ch,CURLOPT_USERAGENT,"Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)");
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch,CURLOPT_HEADER,0);
+        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);
+        $content = curl_exec($ch);
+        if($content === false)
+        {//输出错误信息
+            $no = curl_errno($ch);
+            switch(trim($no))
+            {
+                case 28 : $error = '访问目标地址超时'; break;
+                default : $error = curl_error($ch); break;
+            }
+            echo $error;
+        }
+        else
+        {
+            $succ = true;
+            return $content;
+        }
+        return ;
         //$url = 'http://spider.91zuiai.com/site/test.html';
-        /*echo $url;
+        echo $url;
         $ip = rand(1,255).'.'.rand(1,255).'.'.rand(1,255).'.'.rand(1,255);
         $headerArr[] = 'X-FORWARDED-FOR' .':' . $ip;
         $ch = curl_init();
@@ -106,7 +135,7 @@ class SpiderAbstract extends SpiderModel
         curl_setopt ($ch, CURLOPT_HTTPHEADER , $headerArr );
         $re=curl_exec($ch);
         var_dump($re);
-        return ;*/
+        return ;
 
         $ch = curl_init();
         $timeout = 5;
