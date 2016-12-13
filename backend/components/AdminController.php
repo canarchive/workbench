@@ -152,8 +152,9 @@ class AdminController extends Controller
      * @param  string $id
      * @return mixed
      */
-    protected function _updateInfo($id, $scenario = '')
+    protected function _updateInfo($id)
     {
+        $scenario = $this->_getScenario();
         $model = $this->findModel($id);
         if (!empty($scenario)) {
             $model->setScenario($scenario);
@@ -163,6 +164,11 @@ class AdminController extends Controller
         }
 
         return $this->render($this->viewPrefix . 'update', ['model' => $model]);
+    }
+
+    protected function _getScenario()
+    {
+        return 'default';
     }
 
     /**
