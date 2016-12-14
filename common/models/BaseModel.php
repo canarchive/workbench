@@ -182,16 +182,21 @@ class BaseModel extends ActiveRecord
 		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
 		$groupBy = isset($params['groupBy']) ? $params['groupBy'] : [];
 
-        $data = $this->find()->where($where);
+        $data = $this->find()->select($this->_getSelect())->where($where);
 		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
 		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
-		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize]);
+		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize]);
 		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
 		$infos = $this->_formatInfos($infos);
 
 		$return = ['infos' => $infos, 'pages' => $pages];
 		return $return;
 	}
+
+    protected function _getSelect()
+    {
+        return '*';
+    }
 
 	protected function _formatInfos($infos)
 	{
