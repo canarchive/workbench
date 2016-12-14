@@ -136,7 +136,7 @@ function setLeftNav(parentCode)
   if (!haveActive) {
       var appMenusJson = <?= Json::encode($menuInfos['appMenus']);?>;
       $.each(appMenusJson, function(i2, n2) {
-          if (!haveActive && n2.display == 2) {
+          if (!haveActive && n2.display == 2 && $n2.extparam == '') {
               $("#left_menu_" + n2.code).addClass("active");
               haveActive = true;
           }
