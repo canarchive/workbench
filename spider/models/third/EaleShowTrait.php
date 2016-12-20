@@ -10,8 +10,8 @@ Trait EaleShowTrait
     public function spiderShow($siteCode)
     {
         $where = ['source_status' => 0];
-        //$infos = $this->_getShowInfos($where, 100);
-        $infos = $this->_getShowSamples($where, 100);
+        $infos = $this->_getShowInfos($where, 100);
+        //$infos = $this->_getShowSamples($where, 100);
         $num = 0;
         foreach ($infos as $info) {
             $info->source_status = 1;
@@ -38,10 +38,11 @@ Trait EaleShowTrait
         echo $num;
     }
 
-    public function show($siteCode)
+    public function dealShow($siteCode)
     {
-        $where = ['source_site_code' => $siteCode, 'source_status' => 1];
-        $infos = $this->_getShowInfos($where, 500);
+        $where = ['source_status' => 1];
+        $infos = $this->_getShowInfos($where, 100);
+        //$infos = $this->_getShowSamples($where, 100);
         foreach ($infos as $info) {
             $file = $info->showFile();
             if (!$this->fileExist($file)) {
@@ -51,34 +52,83 @@ Trait EaleShowTrait
             }
             $crawler = new Crawler();
             $crawler->addContent($this->getContent($file));
-            echo $info['source_url'];
-            //echo $file;exit();
+            //echo $info['source_url']; echo $file;exit();
+            $createdAt = $crawler->filter('.item-heading h5');
+            $createdAt = count($createdAt) > 0 ? $createdAt->text() : $crawler->filter('.item-heading p')->text();
+            $createdAt = strtotime($createdAt);
+            $title = trim($crawler->filter('.item-heading h4')->text());
+            $content = $crawler->filter('.item-con')->html();
+            echo $createdAt . '--' . $title . '--' . strlen($content) . '<br />';
+            //echo $createdAt . '--' . $title . '--' . $content . '<br />';continue;
 
-            $attrs = $crawler->filter('.pr30 span');
-            $count = count($attrs);
-            if ($count < 3) {
-                continue;
-            }
-            $created_at = $attrs->eq(0)->text();//nodeValue;
-            $created_at = strtotime($created_at);
-            $author = $attrs->eq(1)->text();//nodeValue;
-            $author = trim(str_replace('来源：', '', $author));
-            $editor = trim($attrs->eq(2)->text());//nodeValue;
-            $pos = strpos($editor, '【');
-            $editor = $pos != false ? substr($editor, 0, $pos) : $editor;
-            $editor = str_replace('编辑：', '', $editor);
-            //echo $created_at . '==' . $from_source . '==' . $editor;
-            $content = trim($crawler->filter('#ctrlfscont')->html());
-            $content = preg_replace("'<script(.*?)<\/script>'is", '', $content);
-            $content = strip_tags($content, '<p>');
-            echo $content;exit();
-
-            $info->created_at = $created_at;
-            $info->author = $author;
-            $info->editor = $editor;
+            $info->created_at = $createdAt;
+            $info->title = empty($info->title) ? $title : $info->title;
             $info->content = $content;
             $info->source_status = 2;
-            //print_r($info);exit();
+            $info->update(false);
+        }
+    }
+
+    public function dealExt($siteCode)
+    {
+        $where = ['source_status' => 2];
+        $infos = $this->_getShowSamples($where, 100);
+        foreach ($infos as $info) {
+            $id = $info['id'];
+            echo "SELECT `tag`, `tag_name` FROM `wc_samplemid` WHERE `source_id` = {$info['source_id']} GROUP BY `tag`";
+            $datas = $info->db->createCommand("SELECT `tag`, `tag_name` FROM `wc_samplemid` WHERE `source_id` = {$info['source_id']} GROUP BY `tag`")->queryAll();
+            $tags = $tagNames = [];
+            foreach ($datas as $data) {
+                $tags[] = $data['tag'];
+                $tagNames[] = $data['tag_name'];
+            }
+            $info->tag = implode(array_filter($tags), ',');
+            $info->tag_name = implode(array_filter($tagNames), ',');
+            $info->source_status = 1;
+            $info->update(false);
+        }
+    }
+
+    public function dealContent($siteCode)
+    {
+        $where = ['source_status' => 1];
+        $infos = $this->_getShowSamples($where, 100);
+        foreach ($infos as $info) {
+            $name = $info['name'];
+
+            $c = $info['content'];
+            $c = preg_replace('/alt=".*"/', "alt='{$name}'", $c);
+
+            $newC = preg_replace_callback('/<img .*>/Us', function ($matches) {
+                $str = $matches[0];
+                $sUrl = '@src=.*"(?P<url>.*)".*@Us';
+                preg_match($sUrl, $str, $url);
+                if (!isset($url['url'])) {
+                    return $str;
+                }
+                $sFile = $url['url'];
+                $sFile = strpos($sFile, '@') !== false ? substr($sFile, intval(strpos($sFile, '@')) + 1) : $sFile;
+                $pre = '/data/htmlwww/common/upload/third/eale/picbefore/';
+                $file = $pre . $sFile;
+                if (!file_exists($file)) {
+                    echo 'no--' . $file . '<br />';
+                    return $str;
+                }
+                $preNew = '/data/htmlwww/common/upload/third/eale/content/';
+                $fileNew = $preNew . $sFile;
+                copy($file, $fileNew);
+                $newUrl = str_replace('/data/htmlwww/common/upload/', 'http://60.205.145.0/common/upload/', $fileNew);
+                $str = preg_replace('/src=".*"/', "src='{$newUrl}'", $str);
+                //print_r($matches);
+                return $str;
+            },
+            $c);
+            $info->content = trim($newC);
+            $formatC = strip_tags($newC);
+            $info->search = "{$info->name} {$info->title} {$info->sort_name} {$info->tag} {$formatC}";
+
+            $id = $info['id'];
+            $info->source_status = 2;
             $info->update(false);
         }
     }

@@ -10,20 +10,20 @@ Trait EaleFileTrait
     {
         $model = new Attachment();
         $where = ['source_status' => 0];
-        $infos = $model->find()->where($where)->limit(100)->all();
+        $infos = $model->find()->where($where)->limit(300)->all();
         //$localBase = 'http://sj.shedaojia.com/';
         $localBase = 'http://60.205.145.0/common/upload/third/';
         $pathBase = '/data/htmlwww/common/upload/third/';
         foreach ($infos as $info) {
             $sFile = $info['source_url'];
-            $sFile = substr($sFile, intval(strpos($sFile, '@') + 1));
+            $sFile = strpos($sFile, '@') !== false ? substr($sFile, intval(strpos($sFile, '@')) + 1) : $sFile;
             //echo $sFile . '--';
             $pos1 = strrpos($sFile, '/');
             $sFile = $pos1 > 0 ? substr($sFile, $pos1 + 1) : $sFile;
             //echo $sFile , '<br />';continue;
             $pos = strpos($sFile, '?');
             $sFile = $pos ? substr($sFile, 0, $pos) : $sFile;
-            $fileOld = $pathBase . 'eale/picturebak/' . $sFile;
+            $fileOld = $pathBase . 'eale/picbefore/' . $sFile;
  
             if (!file_exists($fileOld)) {
                 echo 'no--' . $fileOld . '<br />';

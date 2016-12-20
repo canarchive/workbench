@@ -15,7 +15,7 @@ Trait EaleAdTrait
         //print_r($datas);exit();
         $positions = [
             'slide' => 'all',
-            'top' => ['site-index'],
+            'indexthree' => ['site-index'],
             'announce' => ['site-index'],
             'fivepicture' => ['aboutus-desc', 'service-list', 'info-list', 'sample-campus', 'info-train'],
         ];
@@ -54,11 +54,13 @@ Trait EaleAdTrait
             $url = count($url) > 0 ? trim($url->attr('href')) : '';
             $pic = trim($node->filter('img')->attr('src'));
             $nameExt = trim($node->filter('img')->attr('alt'));
+            $mark = $info['site_code'] . $info['page'] . $info['position'] . $i;
 
             $data = $info;
             $data['url'] = $url;
+            $data['thumb'] = $i;
             $data['picture'] = $i;
-            $data['picture_ext'] = $i;
+            $data['description'] = $mark;
             $cModel = new Adpicture($data);
             $cModel->insert(false);
             echo $url  . '--' . $pic .  $nameExt . '<br />';
@@ -67,9 +69,9 @@ Trait EaleAdTrait
                 'source_url' => $pic,
                 'name' => $info['name'] . $nameExt,
                 'info_table' => 'adpicture',
-                'info_field' => 'picture',
+                'info_field' => 'thumb',
                 'source_site_code' => 'eale',
-                'source_id' => $i,
+                'source_id' => $mark,
             ];
             $this->_addAttachment(new Attachment($aData));
             $i++;
@@ -87,11 +89,13 @@ Trait EaleAdTrait
             $url = count($url) > 0 ? trim($url->attr('href')) : '';
             $pic = trim($node->filter('img')->attr('src'));
             $nameExt = trim($node->filter('img')->attr('alt'));
+            $mark = $info['site_code'] . $info['page'] . $info['position'] . $i;
 
             $data = $info;
             $data['url'] = $url;
+            $data['thumb'] = $i;
             $data['picture'] = $i;
-            $data['picture_ext'] = $i;
+            $data['description'] = $mark;
             $cModel = new Adpicture($data);
             $cModel->insert(false);
             echo $url  . '--' . $pic .  $nameExt . '<br />';
@@ -100,9 +104,9 @@ Trait EaleAdTrait
                 'source_url' => $pic,
                 'name' => $info['name'] . $nameExt,
                 'info_table' => 'adpicture',
-                'info_field' => 'picture',
+                'info_field' => 'thumb',
                 'source_site_code' => 'eale',
-                'source_id' => $i,
+                'source_id' => $mark,
             ];
             $this->_addAttachment(new Attachment($aData));
             $i++;
@@ -110,7 +114,7 @@ Trait EaleAdTrait
         });
     }
 
-    protected function _topDeal($file, $info)
+    protected function _indexthreeDeal($file, $info)
     {
         $crawler = new Crawler();
         $crawler->addContent($this->getContent($file));
@@ -123,23 +127,25 @@ Trait EaleAdTrait
             $pic2 = trim($node->filter('img')->attr('onmouseout'));
             $pic2 = str_replace(["this.src='", "'"], '', $pic2);
             $nameExt = trim($node->filter('img')->attr('alt'));
+            $mark = $info['site_code'] . $info['page'] . $info['position'] . $i;
 
             $data = $info;
             $data['url'] = $url;
+            $data['thumb'] = $i;
             $data['picture'] = $i;
-            $data['picture_ext'] = $i;
+            $data['description'] = $mark;
             $cModel = new Adpicture($data);
             $cModel->insert(false);
             echo $url  . '--' . $pic1 . '-' . $pic2 .  $nameExt . '<br />';
 
-            foreach (['picture' => $pic2, 'picture_ext' => $pic1] as $field => $pic) {
+            foreach (['thumb' => $pic2, 'picture' => $pic1] as $field => $pic) {
             $aData = [
                 'source_url' => $pic,
                 'name' => $info['name'] . $nameExt,
                 'info_table' => 'adpicture',
                 'info_field' => $field,
                 'source_site_code' => 'eale',
-                'source_id' => $i,
+                'source_id' => $mark,
             ];
             $this->_addAttachment(new Attachment($aData));
             }
@@ -158,10 +164,12 @@ Trait EaleAdTrait
             $url = count($url) > 0 ? trim($url->attr('href')) : '';
             $pic = trim($node->filter('img')->attr('src'));
             $nameExt = trim($node->filter('img')->attr('alt'));
+            $mark = $info['site_code'] . $info['page'] . $info['position'] . $i;
 
             $data = $info;
             $data['url'] = $url;
-            $data['picture'] = $i;
+            $data['thumb'] = $i;
+            $data['description'] = $mark;
             $cModel = new Adpicture($data);
             $cModel->insert(false);
             echo $url  . '--' . $pic . '-' . $nameExt . '<br />';
@@ -170,9 +178,9 @@ Trait EaleAdTrait
                 'source_url' => $pic,
                 'name' => $info['name'] . $nameExt,
                 'info_table' => 'adpicture',
-                'info_field' => 'picture',
+                'info_field' => 'thumb',
                 'source_site_code' => 'eale',
-                'source_id' => $i,
+                'source_id' => $mark,
             ];
             $this->_addAttachment(new Attachment($aData));
             $i++;
