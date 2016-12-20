@@ -11,15 +11,15 @@ trait EaleDealTrait
     public function dealInfoList()
     {
         $sorts = [
-            'eale' => ['1', '2'],
-            'ieale' => ['1'],
-            'iealecn' => ['1'], 
-            'train' => ['1'],
+            'eale' => ['eale-info-list.html', 'eale-info-list-2.html'],
+            'ieale' => ['ieale-info-list.html'],
+            'iealecn' => ['iealecn-info-list.html'], 
+            'train' => ['iealecn-info-train.html'],
         ];
         
-        foreach ($sorts as $code => $info) {
-            foreach ($info as $i) {
-                $file = "eale/news-{$code}-{$i}.html";
+        foreach ($sorts as $code => $files) {
+            foreach ($files as $file) {
+                $file = "eale/site/{$file}";
                 echo $file . '<br/>';
                 $this->_dealNews($file, $code);
             }
@@ -95,7 +95,11 @@ trait EaleDealTrait
             for ($i = 1; $i <= $data['page']; $i++) {
                 $file = "eale/listext/{$code}-{$sort}-{$i}.html";
 
+                if ($file != 'eale/listext/iealecn-studentworks-1.html') {
+                continue;
+                }
                 echo $file . '<br />';
+
                 $info = [
                     'code' => $code,
                     'sort' => $sort,
@@ -158,7 +162,7 @@ trait EaleDealTrait
             $cModel->thumb = $i;
             $cModel->title = $title;
             $cModel->content = '';
-            $cModel->insert(false);
+            //$cModel->insert(false);
 
             $pos = strpos($pic, '?');
             $pic = $pos ? substr($pic, 0, $pos) : $pic;
@@ -173,7 +177,7 @@ trait EaleDealTrait
                 'source_id' => $info['sort'] . '-' . $sourceId,
             ];
             echo $name . '--' . $urlPre . str_replace('../', '/', $url)  . '--' . $pic . '--' . $title . '<br />';
-            $this->_addAttachment(new Attachment($aData));
+            //$this->_addAttachment(new Attachment($aData));
             $i++;
              
         });

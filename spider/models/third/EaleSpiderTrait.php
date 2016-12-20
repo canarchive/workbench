@@ -33,6 +33,16 @@ Trait EaleSpiderTrait
     public function spiderTag($siteCode)
     {
         $datas = require Yii::getAlias('@spider') . '/config/params-eale-sort.php';
+        /*$str = '';
+        foreach ($datas as $data) {
+            $str .= "'{$data['sort']}' => [<br />";
+            foreach ($data['subInfo'] as $subInfo) {
+                $str .= "    '{$subInfo['codeTag']}' => '{$subInfo['tag']}',<br />";
+            }
+            $str .= "],<br />";
+        }
+        echo $str;exit();
+        print_r($datas);exit();*/
         foreach ($datas as $key => $data) {
             $code = $data['code'];
             $sort = $data['sort'];
