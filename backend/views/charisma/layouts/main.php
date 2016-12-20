@@ -161,7 +161,11 @@ function updateElemByAjax(url, info_id, field, value)
         url: url,
         data: data,
         success: function(data,status) {
-            alert("Data: " + data + "\nStatus: " + status);
+            if (status == 'success') {
+                alert('编辑成功');
+            } else {
+                alert('编辑失败');
+            }
         }
     });
 }
