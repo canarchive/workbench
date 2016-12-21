@@ -33,12 +33,13 @@ class AdminController extends Controller
 
     public function actions()
     {
-        return [
+        $actions = parent::actions();
+        return array_merge($actions, [
     
             'upload' => [
                 'class' => 'common\ueditor\UEditorAction',
             ],  
-        ];  
+        ]);  
     } 
 
     /**
