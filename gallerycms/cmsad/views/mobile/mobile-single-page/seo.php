@@ -11,114 +11,70 @@ $this->params['jsFiles'] = [
 ?>
 <section class="content">
     <div class="top-banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-banner.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/mobile-banner11.jpg" alt=""></div>
     <div class="vone-range m-part vone-part google-ggc">
-        <h2>海外网站宣传方案</h2>
+        <h2>SEO整体解决方案</h2>
         <div class="m-con">
             <div class="tg-item">
                 <div class="tg-item-t">
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-l'>
-                        <em></em>
-                    </span>搜索引擎
-                    <span class='square-l'>
-                        <em></em></span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
+                    <span class='square-s'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-l'><em></em></span>搜索引擎
+                    <span class='square-l'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-s'><em></em></span>
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img1.jpg" alt=""></div>
-                    <h4>Google人所共知的搜索引擎</h4>
-                    <p>Google搜索占全球搜索市场份额的68%，外贸企业实现全球网站宣传的首选</p>
-                    <h4>Yandex俄罗斯搜索龙头</h4>
-                    <p>俄罗斯最大的线上广告平台全球第五大搜索引擎，企业通往俄罗斯的门户</p>
+                    <h4>Baidu最大的中文检索引擎</h4>
+                    <p>移动搜索绝对的霸主，全球最大的中文搜索引擎</p>
+                    <h4>sogou借助于输入法成为发展最快的搜索引擎</h4>
+                    <p>借助于搜狗输入法，抢占用户市场</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-l'>
-                        <em></em>
-                    </span>移动广告
-                    <span class='square-l'>
-                        <em></em></span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
+                    <span class='square-s'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-l'><em></em></span>SEO顾问优势
+                    <span class='square-l'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-s'><em></em></span>
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img2.jpg" alt=""></div>
-                    <h4>Admob</h4>
-                    <p>覆盖30亿手机用户，Google搜索占全球搜索市场份额的68%，外贸企业实现全球网站宣传的首选</p>
-                    <h4>Inmobi</h4>
-                    <p>全球最大移动广告网络印度屈指可数的移动广告公司。它的移动广告已覆盖到了3.32亿个独立手机用户</p>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img4.jpg" alt=""></div>
+                    <h4>经验丰富</h4>
+                    <p>兔班长SEO总监亲自操刀，8年经验，值得信赖！</p>
+                    <h4>保证效果</h4>
+                    <p>流量无明显提升，官网保证全额退款</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-l'>
-                        <em></em>
-                    </span>社交及其他媒体
-                    <span class='square-l'>
-                        <em></em></span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
+                    <span class='square-s'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-l'><em></em></span>SEO顾问流程
+                    <span class='square-l'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-s'><em></em></span>
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img3.jpg" alt=""></div>
-                    <h4>Youtube全球闻名的视频网站</h4>
-                    <p>Youtube视频广告投放， 720°全景制作，展示公司环境和规模，彰显公司实力</p>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img5.jpg" alt=""></div>
+                    <h4>SEO具体服务流程</h4>
+                    <p>双方沟通---》确认受理---》报价确认---》签订合同---》收款确认---》顾问开始</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-l'>
-                        <em></em>
-                    </span>Seo搜索引擎优化
-                    <span class='square-l'>
-                        <em></em></span>
-                    <span class='square-m'>
-                        <em></em>
-                    </span>
-                    <span class='square-s'>
-                        <em></em>
-                    </span>
+                    <span class='square-s'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-l'><em></em></span>Seo搜索引擎优化
+                    <span class='square-l'><em></em></span>
+                    <span class='square-m'><em></em></span>
+                    <span class='square-s'><em></em></span>
                 </div>
             </div>
             <div class="range-main">
