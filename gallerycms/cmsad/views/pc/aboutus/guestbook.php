@@ -125,8 +125,8 @@ $this->params['formPositionName'] = $view;
             //var mcode = form.find("input[name=mcode]");
             //$('#hidden_value').val(admin_add);
             if (content.val() == '' || gp.val() == '' || gt.val() == '' || gp.val() == '请选择省份' || gt.val() == '请选择城市' || mycall.val() == '' || name.val() == '') {
-                alert('信息不能为空!');
-                return false;
+                //alert('信息不能为空!');
+                //return false;
             }
             if (!validate.checkMobile(mycall.val())) {
                 alert('手机号码格式有误');
@@ -141,8 +141,33 @@ $this->params['formPositionName'] = $view;
         }
 
         $('.feedbackSubmit').click(function() {
+            showRequest();
+	        var url = '<?= Url::to(['/user/view-ajax']); ?>';
+	        var data = {
+		        '_csrf': $('#_csrf').val(),
+		        'ids': ids
+	        };
+            console.log(data);
+            
+            $.ajax({
+        	    type: "POST",
+        	    url: url,
+        		data: data,
+                success: function(data,status) {
+        			if (data.status != 200) {
+        				alert(data.message);
+        			} else {
+        				var datas = data.datas;
+                        //datas.each(function(index,item) {
+        				$.each(datas, function(index, item) {
+        					$('#info-' + index).text(item.mobile);
+        					$('#info_at-' + index).text(item.viewAt);
+                        });
+        			console.log(datas);
+        			}
+        		}
+        	});
             $('#formdata').ajaxSubmit({
-                beforeSubmit: showRequest,
                 //提交前处理
                 success: function(data) {
                     if (data.status != '400') {

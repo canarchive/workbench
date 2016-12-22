@@ -1,11 +1,11 @@
     <div class="zqdl-content" id='page4'>
         <ul class='hd clearfix'>
             <li class="active">
-                <em></em>关于中企</li>
+                <em></em>关于我们</li>
             <li>
                 <em></em>资讯中心</li>
             <li class="last">
-                <em></em>信息讲堂</li>
+                <em></em>品牌合作</li>
         </ul>
         <div class="bd">
             <ul class='bd clearfix'>

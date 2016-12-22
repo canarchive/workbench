@@ -8,115 +8,66 @@ $this->params['jsFiles'] = [
 	'jquery-1.8.3.min', 'swiper.min', 'public-m', 'common-m', 'createCity', 'position-m', 'city-select', 'count',
 ];
 //$this->context->pcMappingUrl = '';
+$ourDatas = [
+    'SEM托管', 'SEO优化', 'SMO优化', '网站建设', '服务器托管', '渠道开户',
+    '微信开发', '微博营销', '微信营销', '自媒体营销', '新闻营销',
+    '危机公关', '企业内训', 'DSP', '智慧推', '广点通', '信息流广告', '全网营销',
+];
+$colors = ['blue', 'purple', 'green'];
+
 ?>
 <section class="content newz-content">
     <div class="top-banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-banner.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/mobile-banner21.png" alt=""></div>
     <div class="vone-range m-part vone-part zshop-part">
-        <h2>NEW Z+功能全面
-            <em>18大功能模块系统任你选</em></h2>
+        <h2>定制化功能全面<em>18大功能任意选</em></h2>
         <div class="m-con">
             <div class="newz-func-main">
                 <ul class='clearfix'>
-                    <li class='icon-blue'>
-                        <div class="li-inner">
-                            <div class="new-func-list">
-                                <em></em>产品管理系统</div>
-                            <div class="new-func-list">
-                                <em></em>咨询管理系统</div>
-                            <div class="new-func-list">
-                                <em></em>友情链接管理</div>
-                        </div>
-                    </li>
-                    <li class='icon-purple'>
-                        <div class="li-inner">
-                            <div class="new-func-list">
-                                <em></em>海外访问加速</div>
-                            <div class="new-func-list">
-                                <em></em>招聘管理系统</div>
-                            <div class="new-func-list">
-                                <em></em>文件下载系统</div>
-                        </div>
-                    </li>
-                    <li class='icon-green'>
-                        <div class="li-inner">
-                            <div class="new-func-list">
-                                <em></em>智能地图系统</div>
-                            <div class="new-func-list">
-                                <em></em>短信业务提醒</div>
-                            <div class="new-func-list">
-                                <em></em>邮件业务提醒</div>
-                        </div>
-                    </li>
-                    <li class='icon-green'>
-                        <div class="li-inner">
-                            <div class="new-func-list">
-                                <em></em>运营统计分析</div>
-                            <div class="new-func-list">
-                                <em></em>图片管理系统</div>
-                            <div class="new-func-list">
-                                <em></em>内容管理系统</div>
-                        </div>
-                    </li>
-                    <li class='icon-blue'>
-                        <div class="li-inner">
-                            <div class="new-func-list">
-                                <em></em>会员管理系统</div>
-                            <div class="new-func-list">
-                                <em></em>留言管理系统</div>
-                            <div class="new-func-list">
-                                <em></em>广告管理系统</div>
-                        </div>
-                    </li>
-                    <li class='icon-purple'>
-                        <div class="li-inner">
-                            <div class="new-func-list">
-                                <em></em>网上订购系统</div>
-                            <div class="new-func-list">
-                                <em></em>在线客服系统</div>
-                            <div class="new-func-list">
-                                <em></em>询价管理系统</div>
-                        </div>
-                    </li>
+                    <?php $j = $i = 0; foreach ($ourDatas as $ourData) { ?>
+                    <?php if (($i % 3) == 0) { ?><li class='icon-<?= $colors[($j % 3)]; ?>'><div class="li-inner"><?php $j++;} ?>
+                        <div class="new-func-list"><em></em><?= $ourData; ?></div>
+                    <?php if (($i % 3) == 2) { ?></div></li><?php } ?>
+                    <?php $i++; } ?>
                 </ul>
             </div>
             <div class="center-rhomh"></div>
         </div>
     </div>
     <div class="conmmon-part vone-part newz-ld">
-        <h2>NEW Z+产品亮点</h2>
+        <h2>六步营销　赚取大把订单</h2>
         <div class="m-con">
             <div class="newz-ld-img">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-img1.png" alt=""></div>
             <ul class='clearfix'>
                 <li>
                     <div class="newz-ld-t">
-                        <em>1</em>功能全面</div>
-                    <div class="newz-ld-d">18大功能模块系统，想要什么完全自由掌控</div></li>
+                        <em>1</em>主动营销 请来客户</div>
+                    <div class="newz-ld-d">邮件、短信、SEO免费搜索引擎优化</div></li>
                 <li>
                     <div class="newz-ld-t">
-                        <em>2</em>营销效果佳</div>
-                    <div class="newz-ld-d">网站建成后效果佳，意向客户自然至，客户易管理</div></li>
+                        <em>2</em>客户上门 热情接待</div>
+                    <div class="newz-ld-d">多种获客工具，全方位服务每一个客户</div></li>
                 <li>
                     <div class="newz-ld-t">
-                        <em>3</em>客户易管理</div>
-                    <div class="newz-ld-d">一目了然轻松管理您的客户</div></li>
+                        <em>3</em>产品展厅 留住客户</div>
+                    <div class="newz-ld-d">优化着陆页提升用户体验</div></li>
                 <li>
                     <div class="newz-ld-t">
-                        <em>4</em>维护极简单</div>
-                    <div class="newz-ld-d">后台操作简便，维护简单</div></li>
+                        <em>4</em>销售管理 订单不丢</div>
+                    <div class="newz-ld-d">客户管理系统帮企业开展“数据库营销”，短信、邮件等强大而智能的客户关怀功能，随时随地给不同类型客户送去节日问候，建立稳固合作关系。</div></li>
                 <li>
                     <div class="newz-ld-t">
-                        <em>5</em>安全又稳定</div>
-                    <div class="newz-ld-d">强大的专家技术团队支撑</div></li>
+                        <em>5</em>流量分析 赢在决策</div>
+                    <div class="newz-ld-d">数据分析支撑市场营销策略，创造最大生意价值</div></li>
                 <li>
                     <div class="newz-ld-t">
-                        <em>6</em>服务有保障</div>
-                    <div class="newz-ld-d">7*24小时制不间断客户服务</div></li>
+                        <em>6</em>定期总结，赢在未来</div>
+                    <div class="newz-ld-d">定期的全流程分析总结，提升每个节点的效率</div></li>
             </ul>
         </div>
     </div>
-    <div class="case-list case-enjoy conmmon-part vone-part newx-case">
+    <!--<div class="case-list case-enjoy conmmon-part vone-part newx-case">
         <h2>客户案例</h2>
         <ul class="clearfix">
             <li>
@@ -156,56 +107,55 @@ $this->params['jsFiles'] = [
                 </a>
             </li>
         </ul>
-    </div>
+    </div>-->
     <div class="m-part vone-part newz-five">
-        <h2>NEW Z+五步营销
-            <em>赚大把订单，就是这么简单！</em></h2>
+        <h2>服务与保障<em>80%的客户来源于口碑</em></h2>
         <div class="m-con">
             <ul class="good-list">
                 <li>
                     <span class="zm-good-icon good-icon">
                         <img src="/current/mobile/images/newz-goodlist1.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
-                        <h3>1.主动营销 请来客户</h3>
-                        <p>邮件、短信、免费搜索引擎优化网站地图提交等多种网络网站宣传方式， 让您的企业网站在茫茫网海中脱颖而 出，让客户主动找上门</p>
+                        <h3>1.6大服务实力，提升企业销售业绩</h3>
+                        <p>专业的SEM服务团队，依赖顶尖的产品技术团队，为多行业多领域的客户提供全方位的账户优化服务。</p>
                     </div>
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
                         <img src="/current/mobile/images/newz-goodlist2.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
-                        <h3>2.客户上门 热情接待</h3>
-                        <p>在线客服、售前咨询、在线留言、4006号码服务等多种在线沟通工具，让您的订单客户在第一次咨询时，都能感受到您热情周到的服务</p>
+                        <h3>2.顶尖的技术团队</h3>
+                        <p>有专门的BI团队研究，提供丰富的账户优化策略，方案。有业内最顶尖的产品研发团队，致力于数字广告系统研发、消费者行为分析等给优化团队提供强有力的技术支持。</p>
                     </div>
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
                         <img src="/current/mobile/images/newz-goodlist3.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
-                        <h3>3.产品展厅 留住客户</h3>
-                        <p>多样式展示形式、站内产品多件对比、放大镜细节观察、商品多角度多图展示等功能，为您的订单客户节省大量选货时间、成本、精力，商品询价、在线客服等多渠道收集客户信息，让您的产品展厅留住每一位客户。</p>
+                        <h3>3.丰富的行业经验</h3>
+                        <p>多年深耕教育、电商零售、金融、旅游等行业；服务智联招聘、搜狐焦点、苏宁易购等几千万级的大客户，为客户提供精细化执行方案</p>
                     </div>
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
                         <img src="/current/mobile/images/newz-goodlist4.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
-                        <h3>4.销售管理 订单不丢</h3>
-                        <p>客户管理系统帮企业开展“数据库营销”，短信、邮件等强大而智能的客户关怀功能，随时随地给不同类型客户送去节日问候，建立稳固合作关系。</p>
+                        <h3>4.24小时客服热线</h3>
+                        <p>为企业提供全年365天的 7x24小时“一站式”服务</p>
                     </div>
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
                         <img src="/current/mobile/images/newz-goodlist5.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
-                        <h3>5.流量分析 赢在决策</h3>
-                        <p>网站流量统计分析和客户统计分析系统，帮助企业发现目标市场及生意机会，有的放矢的指定市场营销策略，创造最大生意价值。</p>
+                        <h3>5.客户培训服务</h3>
+                        <p>为企业客户定制专属SEM和SEO培训课程，提升企业销售业绩，降低企业获客成本</p>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="m-part vone-part newz-service">
+    <!--<div class="m-part vone-part newz-service">
         <h2>服务保障
             <em>保证您的网站高效、快速、稳定运行</em></h2>
         <div class="m-con">
@@ -303,7 +253,7 @@ $this->params['jsFiles'] = [
                 <div class="swiper-pagination swiper-pagination-bullets" id="swiper-pagination1"></div>
             </div>
         </div>
-    </div>
+    </div>-->
     <?= $this->render('../common/_product'); ?>
     <?= $this->render('../common/_ask_inner'); ?>
 </section>
