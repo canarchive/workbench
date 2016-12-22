@@ -6,6 +6,9 @@ use yii\web\AssetBundle;
 
 class UEditorAsset extends AssetBundle
 {
+    public $baseUrl = '@backendurl/assets';
+    public $basePath = '@backend/assets';
+
     public $js = [
         'ueditor.config.js',
         'ueditor.all.js',

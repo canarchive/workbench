@@ -124,6 +124,9 @@ class AccessControl extends \yii\base\ActionFilter
         foreach ($menus as $key => $menu) {
             $route = '/' . trim($menu['module'] . '/' . $menu['controller'] . '/' . $menu['method'], '/');
             $menu['url'] = Url::toRoute($route);
+            if (!empty($menu['extparam'])) {
+                $menu['url'] = $menu['url'] . '?' . $menu['extparam'];
+            }
             if ($key == $currentMenu['code']) {
                 $currentMenu['url'] = $menu['url'];
             }
