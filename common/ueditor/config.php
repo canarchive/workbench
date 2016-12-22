@@ -24,6 +24,7 @@ return [
     "imageUrlPrefix"          => \Yii::$app->params['urlParams']['default'],
     /* 图片访问路径前缀 */
     "imageRoot"               => \Yii::$app->params['pathParams']['default'],
+    "fileRoot"               => \Yii::$app->params['pathParams']['default'],
     "imagePathFormat"         => "/content/image/{yyyy}{mm}{dd}/{time}{rand:6}",
     /* 上传保存路径,可以自定义保存路径和文件名格式 */
     /* {filename} 会替换成原文件名,配置这项需要注意中文乱码问题 */
@@ -71,7 +72,7 @@ return [
     /* 执行抓取远程图片的action名称 */
     "catcherFieldName"        => "source",
     /* 提交的图片列表表单名称 */
-    "catcherPathFormat"       => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "catcherPathFormat"       => "/content/image/{yyyy}{mm}{dd}/{time}{rand:6}",
     /* 上传保存路径,可以自定义保存路径和文件名格式 */
     "catcherUrlPrefix"        => "",
     /* 图片访问路径前缀 */

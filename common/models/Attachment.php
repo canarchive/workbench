@@ -20,6 +20,7 @@ class Attachment extends BaseModel
     public $files;
     public $file;
     public $noFile;
+    public $filePre = '';
 
     /**
      * @var string Upload path
@@ -89,8 +90,8 @@ class Attachment extends BaseModel
 
             [['filepath'], 'string', 'max' => 256],
             [['filepath'], 'default', 'value' => function() {
-                $key = md5(microtime() . $this->file->name);
-                $base = "{$this->info_table}/{$this->info_field}";
+                $key = md5($this->file->name);
+                $base = "{$this->filePre}{$this->info_table}/{$this->info_field}";
                 if ($this->directoryLevel > 0) {
                     for ($i = 0; $i < $this->directoryLevel; ++$i) {
                         if (($prefix = substr($key, $i + $i, 2)) !== false) {
