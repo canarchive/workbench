@@ -4,7 +4,7 @@ use yii\helpers\Url;
 <div class="products-why">
     <div class="products-why-con">
         <div class="products-why-con-01">
-            <h2 class="title">为什么选择兔班长？</h2>
+            <h2 class="title">为什么选择<?= Yii::$app->params['siteNameBase']; ?>？</h2>
             <p>网络营销一站式服务商</p>
         </div>
         <div class="products-why-con-02">
@@ -13,7 +13,7 @@ use yii\helpers\Url;
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-why17.png" alt='17年行业服务经验' />
                     <h3>9年SEM行业经验</h3>
                     <p>9年SEM实战经验，服务过亿级账户</p>
-                    <u>了解中企</u>
+                    <u>了解<?= Yii::$app->params['siteNameBase']; ?></u>
                 </a>
             </div>
             <span></span>

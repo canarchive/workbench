@@ -6,7 +6,7 @@ use yii\helpers\Url;
     <div class="container">
         <div class="footer-menu">
             <p id="list" class="list">
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'index']); ?>" class="first">关于中企</a><span>|</span>
+                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'index']); ?>" class="first">关于<?= Yii::$app->params['siteNameBase']; ?></a><span>|</span>
                 <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'attention']); ?>">法律隐私</a><span>|</span>
                 <!--<a target="_blank" href="/job/">工作机会</a><span>|</span>-->
                 <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>">联系我们</a><span>|</span>

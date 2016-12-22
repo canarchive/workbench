@@ -201,7 +201,7 @@ $this->params['formPositionName'] = '首页量房';
         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/ztc/ztc-icon-close1.png" alt=""></span>
     <div class='ztc-quick-txt'>
         <div class="quick-txt-hd">企业建站“直通车”</div>
-        <div class="quick-txt-sub">中企动力为您打造VIP式建站服务</div></div>
+        <div class="quick-txt-sub"><?= Yii::$app->params['siteNameBase']; ?>为您打造VIP式建站服务</div></div>
     <div class="ztc-quick-iden">
         <span class='quick-iden-q'>您的身份？</span>
         <ul class="clearfix">

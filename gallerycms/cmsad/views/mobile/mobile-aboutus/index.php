@@ -120,7 +120,7 @@ $this->params['jsFiles'] = [
                     <div class="bd">
                         <ul class='bd clearfix'>
                             <li class="active">
-                                <h3>为什么选择中企动力？</h3>
+                                <h3>为什么选择<?= Yii::$app->params['siteNameBase']; ?>？</h3>
                                 <div class="txt-con">
                                     <div class='txt-con-item1'>
                                         <h4>16年行业经验</h4>
@@ -226,19 +226,19 @@ $this->params['jsFiles'] = [
                                 <ul class='develop-progress'>
                                     <li>
                                         <span>• 2014.09</span>
-                                        <p>中企动力自1999年成立以来15年风雨历程，15年华彩篇章。为了感谢广大客户的支持，9月14日在国家奥体中心举办了群星演唱会，邀约客户一同狂欢。</p>
+                                        <p><?= Yii::$app->params['siteNameBase']; ?>自1999年成立以来15年风雨历程，15年华彩篇章。为了感谢广大客户的支持，9月14日在国家奥体中心举办了群星演唱会，邀约客户一同狂欢。</p>
                                     </li>
                                     <li>
                                         <span>• 2013.01</span>
-                                        <p>由中企动力研发的ZtouchS全网营销型网站正式上市。</p>
+                                        <p>由<?= Yii::$app->params['siteNameBase']; ?>研发的ZtouchS全网营销型网站正式上市。</p>
                                     </li>
                                     <li>
                                         <span>• 2013.03</span>
-                                        <p>3月14日，由中企动力主办、中国互联网协会网络营销委员会协办的“2013中小企业移动互联网安家工程全国巡讲”活动在冰城哈尔滨正式启动。</p>
+                                        <p>3月14日，由<?= Yii::$app->params['siteNameBase']; ?>主办、中国互联网协会网络营销委员会协办的“2013中小企业移动互联网安家工程全国巡讲”活动在冰城哈尔滨正式启动。</p>
                                     </li>
                                     <li>
                                         <span>• 2013.06</span>
-                                        <p>6月27日，由工信部中小企业司主办的“云计算服务中小企业”活动在北京举行，来自全国中小企业主管部门的近300名领导考察了中企动力科技股份有限公司。</p>
+                                        <p>6月27日，由工信部中小企业司主办的“云计算服务中小企业”活动在北京举行，来自全国中小企业主管部门的近300名领导考察了<?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司。</p>
                                     </li>
                                 </ul>
                             </div>
@@ -246,19 +246,19 @@ $this->params['jsFiles'] = [
                                 <ul class='develop-progress'>
                                     <li>
                                         <span>• 2012.06</span>
-                                        <p>6月5日，中企动力在风景宜人的青岛海滨举办了题为“触享官网新时代”的新品发布会，隆重推出了新一代企业官方网站建站产品Ztouch触享官网。</p>
+                                        <p>6月5日，<?= Yii::$app->params['siteNameBase']; ?>在风景宜人的青岛海滨举办了题为“触享官网新时代”的新品发布会，隆重推出了新一代企业官方网站建站产品Ztouch触享官网。</p>
                                     </li>
                                     <li>
                                         <span>• 2012.12</span>
-                                        <p>12月24日，中企动力隆重推出Zmobile手机客户端。Zmobile能够帮助企业在手机上宣传品牌，展示产品，联系客户，助力中小企业开启移动营销之路。</p>
+                                        <p>12月24日，<?= Yii::$app->params['siteNameBase']; ?>隆重推出Zmobile手机客户端。Zmobile能够帮助企业在手机上宣传品牌，展示产品，联系客户，助力中小企业开启移动营销之路。</p>
                                     </li>
                                     <li>
                                         <span>• 2011.06</span>
-                                        <p>举办主题为“运营•提速•成长”的2011成长型企业信息化应用全国推进工程新闻发布会，这也标志着中企动力“成长型企业信息化服务工程”第二阶段工作的正式启动。</p>
+                                        <p>举办主题为“运营•提速•成长”的2011成长型企业信息化应用全国推进工程新闻发布会，这也标志着<?= Yii::$app->params['siteNameBase']; ?>“成长型企业信息化服务工程”第二阶段工作的正式启动。</p>
                                     </li>
                                     <li>
                                         <span>• 2011.09</span>
-                                        <p>举行召开“新中企时代——中企动力12周年庆典暨战略发布会”，回顾了公司12年的成长历程，并对外发布了公司的未来发展战略。</p>
+                                        <p>举行召开“新<?= Yii::$app->params['siteNameBase']; ?>时代——<?= Yii::$app->params['siteNameBase']; ?>12周年庆典暨战略发布会”，回顾了公司12年的成长历程，并对外发布了公司的未来发展战略。</p>
                                     </li>
                                 </ul>
                             </div>
@@ -270,15 +270,15 @@ $this->params['jsFiles'] = [
                                     </li>
                                     <li>
                                         <span>• 2010.9</span>
-                                        <p>中企动力发起成立“中国电子商务协会信息化应用中心”，致力于推动中国企业信息化应用。</p>
+                                        <p><?= Yii::$app->params['siteNameBase']; ?>发起成立“中国电子商务协会信息化应用中心”，致力于推动中国企业信息化应用。</p>
                                     </li>
                                     <li>
                                         <span>• 2010.10</span>
-                                        <p>由中国电子商务协会信息化应用中心主办，中企动力承办的“成长型企业信息化应用研讨会”在京隆重召开。</p>
+                                        <p>由中国电子商务协会信息化应用中心主办，<?= Yii::$app->params['siteNameBase']; ?>承办的“成长型企业信息化应用研讨会”在京隆重召开。</p>
                                     </li>
                                     <li>
                                         <span>• 2010.10</span>
-                                        <p>中企动力与中国电子商务协会信息化应用中心联合启动“成长型企业信息化服务工程”，开始在全国各地开展400余场的中小企业主的信息化培训。</p>
+                                        <p><?= Yii::$app->params['siteNameBase']; ?>与中国电子商务协会信息化应用中心联合启动“成长型企业信息化服务工程”，开始在全国各地开展400余场的中小企业主的信息化培训。</p>
                                     </li>
                                 </ul>
                             </div>
@@ -387,7 +387,7 @@ $this->params['jsFiles'] = [
             <li>
                 <a href="http://m.300.cn/case">精美案例</a></li>
             <li>
-                <a href="http://m.300.cn/aboutzq.html">关于中企</a></li>
+                <a href="http://m.300.cn/aboutzq.html">关于<?= Yii::$app->params['siteNameBase']; ?></a></li>
             <li>
                 <a href="http://m.300.cn/info">资讯中心</a></li>
             <li>
@@ -524,7 +524,7 @@ $this->params['jsFiles'] = [
 
     //标注点数组
     var markerArr = [{
-        title: "中企动力科技股份有限公司",
+        title: "<?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司",
         content: "我的备注",
         point: "116.506507|39.789206",
         isOpen: 0,
@@ -606,7 +606,7 @@ $this->params['jsFiles'] = [
     _mvq.push(['$setAccount', 'm-72632-0']);
     _mvq.push(['$setGeneral', '', '',
     /*用户名*/
-    '中企动力科技',
+    '<?= Yii::$app->params['siteNameBase']; ?>科技',
     /*用户id*/
     '324879318']); //如果不传用户名、用户id，此句可以删掉
     _mvq.push(['$logConversion']); (function() {

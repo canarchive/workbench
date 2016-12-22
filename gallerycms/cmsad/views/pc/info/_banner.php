@@ -3,10 +3,10 @@
     <div class="flexslider">
         <ul class="slides">
             <li style="display: none; background: url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/56a725e723c20.jpg) 50% 0% no-repeat;">
-                <a href="/" class="qplj" target="_blank"></a>
+                <a href="javascript:void(0);" class="qplj"></a>
             </li>
             <li style="display: none; background: url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/565eeebc9b20d.jpg) 50% 0% no-repeat;">
-                <a href="/" class="qplj" target="_blank"></a>
+                <a href="javascript:void(0);" class="qplj"></a>
             </li>
         </ul>
     </div>

@@ -49,7 +49,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-left">
                             <div class="t t02">
                                 关键词排名无明显提升，官网保证全额退款</div>
-                            <div class="con">苦于没有顶级SEO，兔班长SEO总监亲自操刀，8年经验，值得信赖！</div></div>
+                            <div class="con">苦于没有顶级SEO，<?= Yii::$app->params['siteNameBase']; ?>SEO总监亲自操刀，8年经验，值得信赖！</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">

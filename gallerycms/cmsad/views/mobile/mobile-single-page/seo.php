@@ -46,7 +46,7 @@ $this->params['jsFiles'] = [
                     <div class="tg-item-img">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img4.jpg" alt=""></div>
                     <h4>经验丰富</h4>
-                    <p>兔班长SEO总监亲自操刀，8年经验，值得信赖！</p>
+                    <p><?= Yii::$app->params['siteNameBase']; ?>SEO总监亲自操刀，8年经验，值得信赖！</p>
                     <h4>保证效果</h4>
                     <p>流量无明显提升，官网保证全额退款</p>
                 </div>

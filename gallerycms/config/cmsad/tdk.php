@@ -31,8 +31,8 @@ return [
         'description' => '{{DESCRIPTION}}',
 	],
 	'info-index' => [
-        'title' => '企业营销学院_北京营销学院_企业网络营销-{{SITENAME}}营销公司',
-        'keyword' => '企业营销学院,北京营销学院,企业网络营销',
+        'title' => '{{TAGSTR}}-{{SITENAME}}营销公司',
+        'keyword' => '{{TAGSTR}}',
         'description' => '企业营销学院,北京营销学院,企业网络营销；主要提供网络营销,网络推广技术交流,包括seo、百度竞价、微博营销、EDM营销、电子书营销和网站建设方面的交流和培训。',
 	],
     'info-cat' => [
@@ -41,10 +41,9 @@ return [
         'description' => '{栏目名称}{动态获取当前栏目下面第一篇文章的描述}',
     ],
 	'info-show' => [
-
-	    'title' => '资讯详情-【{{SITENAME}}】',
-	    'keyword' => '资讯详情,{{SITENAME}}',
-	    'description' => '【{{SITENAME}}】资讯详情',
+        'title' => '{{INFONAME}}-{{TAGSTR}}-{{SITENAME}}营销公司',
+        'keyword' => '{{INFONAME}},{{TAGSTR}}',
+        'description' => '{{INFONAME}},{{DESCRIPTION}}',
 	],
 	'aboutus-index' => [
         'title' => '关于我们-{{SITENAME}}营销公司',

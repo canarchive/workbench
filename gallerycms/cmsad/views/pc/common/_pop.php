@@ -22,14 +22,14 @@
         <a target='_blank' href="/shoujijianzhan.html" class='jz-service5'>手机建站</a>
         <a target='_blank' href="/sheji.html" class='jz-service6'>高端设计</a></div>
     <div class="jz-service-packup jz-service-con"></div>
-</div>
+</div>-->
 <div class=" zx_pop active_pop" style="display:none">
     <div class="apply-con">
         <a href="javascript:void(0);" class="close"></a>
         <div class="title">免费咨询</div>
         <div class="subtitle">欢迎您免费咨询，请填写以下信息，我们收到后会尽快与您联系</div>
         <div class="form">
-            <form action="/customer/feedback?is_ajax=1" method="post" id="submitform" name="submitform">
+            <form action="" id="formpop" name="submitform" onsubmit="return false;">
                 <input type="hidden" name="is_pop" value="1" />
                 <div class="textfile">
                     <span class="t">公司名称</span>
@@ -65,8 +65,8 @@
                     <span class="t">邮箱地址</span>
                     <input type="text" name="email" id="email" /></div>
                 <div class="textfile">
-                    <a href="javascript:void(0);" class="submit zixunsubmit">提交</a></div>
+                    <a href="javascript:void(0);" data-formId="formpop" class="submit zixunsubmit">提交</a></div>
             </form>
         </div>
     </div>
-</div>-->
+</div>

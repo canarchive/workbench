@@ -170,7 +170,7 @@ $this->params['formPositionName'] = '首页量房';
             </div>
             <div class="free-tips">我们会尽快联系您，等待期间需要获取更多信息，请
                 <a href="<?= Yii::getAlias('@ad.cmsurl'); ?>">继续访问</a>或
-                <a id="TQzx3" clickCount="true" clickAdd="zaixianzixun">联系我们</a>。感谢您对中企产品及服务的支持。</div></div>
+                <a id="TQzx3" clickCount="true" clickAdd="zaixianzixun">联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
     </div>
     <script>$(function() {
             $('#email_bottom2').mailAutoComplete({

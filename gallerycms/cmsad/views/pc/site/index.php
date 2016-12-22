@@ -15,7 +15,7 @@ $this->params['formPositionName'] = '首页量房';
     <?= $this->render('_banner'); ?>
     <?= $this->render('_myservice'); ?>
     <?php //echo $this->render('_service_more'); ?>
-    <?= $this->render('_sample', ['infos' => $sampleInfos]); ?>
+    <?php //echo $this->render('_sample', ['infos' => $sampleInfos]); ?>
     <?= $this->render('_why'); ?>
     <?php //$this->render('_buildweb'); ?>
     <?= $this->render('_info', ['infos' => $articleInfos]); ?>

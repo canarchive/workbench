@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count'];
 //$this->params['footerJsStr'] = $this->render('_after_js');
@@ -111,4 +112,6 @@ $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 
         }
 
     });</script>
+<?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
+<?php echo $this->render('../../pc/common/_popjs'); ?>
 <?php $this->endContent(); ?>

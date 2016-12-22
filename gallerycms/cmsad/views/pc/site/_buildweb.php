@@ -17,7 +17,7 @@
                     <div class="y-clear" style="width:1017px;">
                         <div class="anli-main-plan-content">
                             <div>
-                                <p style="text-align:left; line-height:31px; color:#666; padding-top:42px; padding-left:0px;">中企动力—企业网站建设专家！专业网站建设团队，为您提供针对性、个性化的企业网站建设解决方案。深入了解客户需求，根据不同客户的行业特点和个性需求，为您建设功能强大的企业网站。以营销为导向的企业网站建设产品，帮助您充分利用网站获得更多的客户，为企业带来更高的效益。</p></div>
+                                <p style="text-align:left; line-height:31px; color:#666; padding-top:42px; padding-left:0px;"><?= Yii::$app->params['siteNameBase']; ?>—企业网站建设专家！专业网站建设团队，为您提供针对性、个性化的企业网站建设解决方案。深入了解客户需求，根据不同客户的行业特点和个性需求，为您建设功能强大的企业网站。以营销为导向的企业网站建设产品，帮助您充分利用网站获得更多的客户，为企业带来更高的效益。</p></div>
                         </div>
                         <div class="anli-main-plan-img">
                             <p>&nbsp;</p>
@@ -94,7 +94,7 @@
                     <div class="y-clear" style="width: 100%;">
                         <div class="anli-main-plan-content">
                             <div>
-                                <p style="text-align:left; line-height:31px; color:#666; padding-top:42px; padding-left:0px;">中企动力——企业网站全网整合营销服务顾问！十余年专业积累，覆盖了40大行业1000多个细分行业，服务超过30万家企业客户，与多家商贸网站及知名搜索引擎等优质资源合作，提供精准国内和外贸营销解决方案让您足不出户营销全球。</p></div>
+                                <p style="text-align:left; line-height:31px; color:#666; padding-top:42px; padding-left:0px;"><?= Yii::$app->params['siteNameBase']; ?>——企业网站全网整合营销服务顾问！十余年专业积累，覆盖了40大行业1000多个细分行业，服务超过30万家企业客户，与多家商贸网站及知名搜索引擎等优质资源合作，提供精准国内和外贸营销解决方案让您足不出户营销全球。</p></div>
                         </div>
                         <div class="anli-main-plan-img">
                             <p>&nbsp;</p>
