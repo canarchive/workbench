@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count'];
 $this->params['footerJsStr'] = $this->render('_after_js');
@@ -17,6 +18,8 @@ $this->params['footerJsStr'] = $this->render('_after_js');
 <input type="hidden" name="admin_add" id="admin_add" value="88" />
 <input name="areacode" id="area_code" type="hidden" value="" />
 
+<?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
+<?php echo $this->render('../common/_popjs'); ?>
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none">
 <?= Yii::$app->params['statUrl']; ?>
 </div>

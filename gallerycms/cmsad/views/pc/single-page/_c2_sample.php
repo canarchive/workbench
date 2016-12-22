@@ -210,7 +210,7 @@
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel01.jpg" alt="企业级门户网站建设案例-贵州中越商贸有限公司" /></div>
                     <div class="client_det">
                         <h3>贵州中越商贸有限公司 总经理赵奇</h3>
-                        <p>中企动力帮助我们建成了一个行业网站的同时，还为中越商贸网选择了全球知名的Google网站进...
+                        <p><?= Yii::$app->params['siteNameBase']; ?>帮助我们建成了一个行业网站的同时，还为中越商贸网选择了全球知名的Google网站进...
                             <!-- <a href="#">[详情]</a> --></p></div>
                 </li>
                 <li class="last">
@@ -218,7 +218,7 @@
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel02.jpg" alt="企业级门户网站建设案例-昆明“李烧鸭”食品公司" /></div>
                     <div class="client_det">
                         <h3>昆明“李烧鸭”食品公司 总经理李明</h3>
-                        <p>和中企动力合作三年来，从网站建设到网络网站宣传中企动力从技术和服务上，为我们提供了很多支...
+                        <p>和<?= Yii::$app->params['siteNameBase']; ?>合作三年来，从网站建设到网络网站宣传<?= Yii::$app->params['siteNameBase']; ?>从技术和服务上，为我们提供了很多支...
                             <!-- <a href="#">[详情]</a> --></p></div>
                 </li>
                 <li>
@@ -234,7 +234,7 @@
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/newZ_feel04.jpg" alt="企业级门户网站建设案例-南京俊景金属材料有限公司" /></div>
                     <div class="client_det">
                         <h3>南京俊景金属材料有限公司 总经理隆楠</h3>
-                        <p>南京俊景金属材料有限公司总经理隆楠女士对中企动力有着非常的印象。她说，中企动力是一家...
+                        <p>南京俊景金属材料有限公司总经理隆楠女士对<?= Yii::$app->params['siteNameBase']; ?>有着非常的印象。她说，<?= Yii::$app->params['siteNameBase']; ?>是一家...
                             <!-- <a href="#">[详情]</a> --></p></div>
                 </li>
             </ul>

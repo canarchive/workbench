@@ -43,19 +43,25 @@ class AboutusController extends CmsadController
             'view' => 'guestbook',
 
         ];
-        $model = new Guestbook();
-        //if (true) {//Yii::$app->request->isPost) {
-        if (Yii::$app->request->isPost) {
-		    Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-            //$_GET['city'] = $_GET['province'] . '-' . $_GET['city'];
-            //$model->load(Yii::$app->request->get(), '');
-            $_POST['city'] = $_POST['province'] . '-' . $_POST['city'];
-            $model->load(Yii::$app->request->post(), '');
-
-            $return = $model->doSubmitInfo();
-            return $return;
-        }
 		$this->getTdkInfos('aboutus-guestbook');
 		return $this->render('guestbook', $datas);
+
+    }
+
+    public function actionRecord()
+    {
+        if (!Yii::$app->request->isPost) {
+            return ['status' => 400, 'message' => '操作异常，请您重新提交'];
+        }
+
+        $model = new Guestbook();
+		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        //$_GET['city'] = $_GET['province'] . '-' . $_GET['city'];
+        //$model->load(Yii::$app->request->get(), '');
+        $_POST['city'] = $_POST['province'] . '-' . $_POST['city'];
+        $model->load(Yii::$app->request->post(), '');
+
+        $return = $model->doSubmitInfo();
+        return $return;
     }
 }

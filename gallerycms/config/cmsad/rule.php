@@ -5,6 +5,7 @@ return [
     Yii::getAlias('@ad.cmsurl') . '/sp-<view:\w+>' => '/cmsad/single-page/index', 
     Yii::getAlias('@ad.cmsurl') . '/friendlink' => '/cmsad/aboutus/friendlink', 
     Yii::getAlias('@ad.cmsurl') . '/guestbook' => '/cmsad/aboutus/guestbook', 
+    Yii::getAlias('@ad.cmsurl') . '/record' => '/cmsad/aboutus/record', 
     Yii::getAlias('@ad.cmsurl') . '/aboutus/<view:\w+>' => '/cmsad/aboutus/index', 
     Yii::getAlias('@ad.cmsurl') . '/<view:(attention|privacy|statement)>' => '/cmsad/aboutus/statement', 
 	[
@@ -16,9 +17,9 @@ return [
     Yii::getAlias('@ad.cmsurl') . '/sample/<id:\d+>' => '/cmsad/sample/show', 
 	[
         'suffix' => '/',
-		'pattern' => Yii::getAlias('@ad.cmsurl') . '/info/<tag:\w+>/<page:\d+>',
+		'pattern' => Yii::getAlias('@ad.cmsurl') . '/info/<tag:[a-zA-Z0-9]+>/<page:\d+>',
 		'route'	=> '/cmsad/info/index',
-		'defaults' => ['tag' => '', 'page' => 1],
+		'defaults' => ['page' => 1, 'tag' => ''],
 	],
     Yii::getAlias('@ad.cmsurl') . '/info/<id:\d+>' => '/cmsad/info/show', 
 

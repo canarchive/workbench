@@ -4,6 +4,7 @@ namespace gallerycms\cmsad\controllers;
 
 use Yii;
 use yii\web\NotFoundHttpException;
+use yii\helpers\StringHelper;
 use gallerycms\components\CmsadController;
 use gallerycms\cmsad\models\Article;
 use gallerycms\cmsad\models\Category;
@@ -15,22 +16,23 @@ class InfoController extends CmsadController
 		$page = Yii::$app->request->get('page');
         $tag = Yii::$app->request->get('tag');
         $tagInfos = $this->_checkTag($tag);
-        //print_r($tagInfos);exit();
 
-        $where = $tagInfos['ids'] === null ? [] : ['category_id' => $tagInfos['ids']];
+        $where = $tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
 		$model = new Article();
-		$infos = $model->getInfos($where, 15);
+        $orderBy = ['created_at' => SORT_DESC];
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 10]);
 		$datas = [
 			'page' => $page,
 			'model' => $model,
-			'infos' => $infos,
             'tagInfos' => $tagInfos,
+			'infos' => $infos['infos'],
+            'pages' => $infos['pages'],
 		];
 		$pageStr = $page > 1 ? "_第{$page}页-" : '-';
 
-        $tagStr = isset($tagInfo['cInfo']) ? $tagInfo['cInfo']['name'] : '资讯列表';
+        $tagStr = isset($tagInfos['cInfo']['name']) ? $tagInfos['cInfo']['name'] : '企业营销学院_北京营销学院_企业网络营销';
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('sample-index', $dataTdk);
+		$this->getTdkInfos('info-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
 
@@ -47,8 +49,10 @@ class InfoController extends CmsadController
         $categoryInfo = $cModel->getInfo($info['category_id']);
         $tagInfos = $this->_checkTag($categoryInfo['catdir']);
 
-		$dataTdk = ['{{INFONAME}}' => $info['name']];
-		$this->getTdkInfos('sample-show', $dataTdk);
+        //$description = str_replace(' ', '', $info['description']);
+        $description = StringHelper::truncate(strip_tags($info['content']), 200, '');
+		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $info['tags'], '{{DESCRIPTION}}' => $description];
+		$this->getTdkInfos('info-show', $dataTdk);
 
         $infos = $model->getInfos(['category_id' => $tagInfos['ids']], 6);
 		$datas = [

@@ -12,7 +12,7 @@ $this->params['jsFiles'] = [
 <section class='content' style="background-color:#eee;">
     <?= $this->render('_banner'); ?>
     <?= $this->render('_product'); ?>
-    <?= $this->render('_sample'); ?>
+    <?php //echo $this->render('_sample'); ?>
     <?= $this->render('_info'); ?>
     <input id="admin_add" value="36" type="hidden" />
 </section>

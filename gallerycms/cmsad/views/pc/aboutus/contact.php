@@ -63,7 +63,7 @@ $this->params['formPositionName'] = $view;
         markerContent.appendChild(markerImg);
         //点标记中的文本
         var markerSpan = document.createElement("b");
-        markerSpan.innerHTML = "中企动力科技股份有限公司";
+        markerSpan.innerHTML = "<?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司";
         markerContent.appendChild(markerSpan);
         var marker = new AMap.Marker({
             map: map,

@@ -1,10 +1,14 @@
+<?php
+use yii\helpers\Url;
+use yii\helpers\Html;
+?>
 <!-- 免费咨询 begin-->
 <div class="free-ask">
     <div class="title">
         <span>免费咨询</span></div>
     <div class="con">
         <div class="form">
-            <form action="/customer/feedback?is_ajax=1">
+            <form action="" id="formbottom" onsubmit="return false">
                 <input type="hidden" name="ischeckMobile" value="0" />
                 <div class="textfile">
                     <span class="t">公司名称</span>
@@ -20,10 +24,10 @@
                         <input type="text" class="gt" value="请选择城市" readonly="" id="gt_bottom2" name="city">
                         <ul class="city" style="display: none;"></ul>
                     </div>
-                    <div class="nice-select gbb" name="nice-select">
+                    <!--<div class="nice-select gbb" name="nice-select">
                         <input type="text" class="gd" value="请选择区/县" readonly="" id="gd_bottom2" name="district">
                         <ul class="district" style="display: none;"></ul>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="textfile lxman">
                     <span class="t">联系人</span>
@@ -38,10 +42,10 @@
                     <span class="t">邮箱地址</span>
                     <input type="text" name="email" id="email_bottom2"></div>
                 <div class="textfile">
-                    <a href="javascript:void(0);" class="submit zixunsubmit" value="99">提交</a></div>
+                    <a href="javascript:void(0);" data-formId="formbottom" class="submit zixunsubmit" value="99">提交</a></div>
             </form>
         </div>
         <div class="free-tips">我们会尽快联系您，等待期间需要获取更多信息，请
             <a href="<?= Yii::getAlias('@ad.cmsurl'); ?>">继续访问</a>或
-            <a id="TQzx3" clickCount="true" clickAdd="zaixianzixun">联系我们</a>。感谢您对中企产品及服务的支持。</div></div>
+            <a href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>" >联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
 </div>

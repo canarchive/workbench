@@ -14,14 +14,14 @@ use yii\helpers\Url;
             <?php } ?>
         </ul>
     </div>
-    <div class="ad-con ad-con1">
+    <!--<div class="ad-con ad-con1">
         <a href="<?= Url::to(['/cmsad/sample/index', 'page' => 1]); ?>" target="_blank">
             <h2>经典案例</h2>
             <div class="ad-img">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img1.jpg" alt=""></div>
             <p>看经典案例，放心建网站</p>
         </a>
-    </div>
+    </div>-->
     <div class="ad-con ad-con2">
         <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" target="_blank">
             <h2>
@@ -30,14 +30,14 @@ use yii\helpers\Url;
             </h2>
             <div class="ad-img">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt=""></div>
-            <p>中企动力服务过120万客户</p>
+            <p><?= Yii::$app->params['siteNameBase']; ?>服务过120万客户</p>
         </a>
     </div>
     <div class="ad-con ad-con3">
         <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'seo']); ?>" target="_blank">
             <h2>SEO顾问</h2>
             <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img3.jpg" alt=""></div>
-            <p>中企动力，只拿网站宣传效果说话</p>
+            <p><?= Yii::$app->params['siteNameBase']; ?>，只拿网站宣传效果说话</p>
         </a>
     </div>
 </div>

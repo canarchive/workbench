@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->params['cssFiles'] = [
@@ -22,7 +23,7 @@ $this->params['formPositionName'] = $view;
                 <span>意见反馈</span></div>
             <p class="sug-tips">留下您的宝贵意见，我们会在第一时间回复您</p>
             <!--<form action="/feed_back/submit" method="post" id="formdata" enctype="multipart/form-data">-->
-            <?php $form = ActiveForm::begin(['options' => ['id' => 'formdata']]); ?>
+            <?php $form = ActiveForm::begin(['options' => ['id' => 'formguestbook']]); ?>
                 <div class="con">
                     <div class="form">
                         <!--<div class="textfile identity">
@@ -83,11 +84,12 @@ $this->params['formPositionName'] = $view;
                         </div>-->
                         <div class="textfile jt">
                             <span class="t"></span>
-                            <a href="javascript:" class="submit feedbackSubmit" style="border: 0;">提交</a></div>
+                            <a href="javascript:" data-formId="formguestbook" class="submit zixunsubmit" style="border: 0;">提交</a></div>
                         <!-- <div class="textfile">
                         <a href="###" class="submit">提交申请</a></div> -->
                     </div>
                 </div>
+                <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
             <?php ActiveForm::end(); ?>
         </div>
     </div>
@@ -102,91 +104,3 @@ $this->params['formPositionName'] = $view;
         });
     });</script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.form.main.js"></script>
-<script>$(function() {
-        var feedbackTime = true;
-        $('#email_bottom3').mailAutoComplete({
-            width: '306px'
-        });
-
-        function showRequest() {
-            if (!feedbackTime) {
-                alert('已提交，不需要重复提交！');
-                return;
-            }
-            var form = $("#formdata");
-            var company = form.find("input[name=company_name]");
-            var mycall = form.find("input[name=mobile]");
-            var gp = form.find("input[name=province]");
-            var gt = form.find("input[name=city]");
-            var name = form.find("input[name=contact]");
-            var gender = form.find("input[name='gender']:checked");
-            var email = form.find("input[name=email]");
-            var content = form.find("textarea[name=content]");
-            //var mcode = form.find("input[name=mcode]");
-            //$('#hidden_value').val(admin_add);
-            if (content.val() == '' || gp.val() == '' || gt.val() == '' || gp.val() == '请选择省份' || gt.val() == '请选择城市' || mycall.val() == '' || name.val() == '') {
-                //alert('信息不能为空!');
-                //return false;
-            }
-            if (!validate.checkMobile(mycall.val())) {
-                alert('手机号码格式有误');
-                return false;
-            }
-            if (!validate.checkEmail(email.val())) {
-                alert('email格式有误');
-                return false;
-            }
-            feedbackTime = false;
-            return true;
-        }
-
-        $('.feedbackSubmit').click(function() {
-            showRequest();
-	        var url = '<?= Url::to(['/user/view-ajax']); ?>';
-	        var data = {
-		        '_csrf': $('#_csrf').val(),
-		        'ids': ids
-	        };
-            console.log(data);
-            
-            $.ajax({
-        	    type: "POST",
-        	    url: url,
-        		data: data,
-                success: function(data,status) {
-        			if (data.status != 200) {
-        				alert(data.message);
-        			} else {
-        				var datas = data.datas;
-                        //datas.each(function(index,item) {
-        				$.each(datas, function(index, item) {
-        					$('#info-' + index).text(item.mobile);
-        					$('#info_at-' + index).text(item.viewAt);
-                        });
-        			console.log(datas);
-        			}
-        		}
-        	});
-            $('#formdata').ajaxSubmit({
-                //提交前处理
-                success: function(data) {
-                    if (data.status != '400') {
-                        // 允许提交
-                        feedbackTime = true;
-                        alert('亲，我们已经收到你的意见反馈，会尽快处理');
-                        return false;
-                    }
-                    feedbackTime = false;
-                    setTimeout(function() {
-                        feedbackTime = true;
-                    },
-                    60000);
-                    alert(data.message);
-                    return;
-                },
-                //处理完成
-                resetForm: true,
-                dataType: 'json'
-            });
-        });
-    });</script>

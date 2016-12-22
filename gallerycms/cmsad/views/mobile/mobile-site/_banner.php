@@ -3,7 +3,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'sem']); ?>">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/5768e79db8966.jpg" alt="感恩有您-中企动力企业Z云邮免费试用"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/5768e79db8966.jpg" alt="感恩有您-<?= Yii::$app->params['siteNameBase']; ?>企业Z云邮免费试用"></a>
             </div>
             <div class="swiper-slide">
                 <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'seo']); ?>">

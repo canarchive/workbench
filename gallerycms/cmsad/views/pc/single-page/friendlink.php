@@ -5,9 +5,9 @@
         <meta charset="utf-8">
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>友情链接 - 中企动力科技股份有限公司</title>
+        <title>友情链接 - <?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司</title>
         <meta name="keywords" content="南海控股、中国数码、网站建设、企业网站建设、企业邮箱、企业域名服务、域名注册、网上商城" />
-        <meta name="description" content="中企动力科技股份有限公司成立于1999年9月16日，是中国领先的企业电子商务服务运营商，是南海控股集团旗下中国数码集团的全资子公司。" />
+        <meta name="description" content="<?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司成立于1999年9月16日，是中国领先的企业电子商务服务运营商，是南海控股集团旗下中国数码集团的全资子公司。" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link href="http://s.300.cn/current/home/css/common.css" rel="stylesheet" type="text/css" />
@@ -67,7 +67,7 @@
                 <div class="header_bg"></div>
                 <div class="container head">
                     <h1 class="logo">
-                        <a href="/" title='中企动力企业网站建设'>中企动力企业网站建设</a></h1>
+                        <a href="/" title='<?= Yii::$app->params['siteNameBase']; ?>企业网站建设'><?= Yii::$app->params['siteNameBase']; ?>企业网站建设</a></h1>
                     <ul class="nav">
                         <li class="d_2">
                             <a href="http://www.300.cn/qiyedianshang.html">网站建设</a></li>
@@ -80,7 +80,7 @@
                         <li class="d_2">
                             <a href="http://www.300.cn/case">案例中心</a></li>
                         <li class="d_2">
-                            <a href="http://www.300.cn/aboutus/company">关于中企</a></li>
+                            <a href="http://www.300.cn/aboutus/company">关于<?= Yii::$app->params['siteNameBase']; ?></a></li>
                     </ul>
                     <!--<div class="tel">客服电话 400-600-5555 </div>--></div>
                 <div class="subnav">
@@ -172,8 +172,8 @@
                                 <li>
                                     <span class="steps-num">1</span>
                                     <div class="con-inner">
-                                        <p class="steps-tit">请先在贵网站做好中企动力的文字友情链接</p>
-                                        <p class="steps-det">链接文字：中企动力
+                                        <p class="steps-tit">请先在贵网站做好<?= Yii::$app->params['siteNameBase']; ?>的文字友情链接</p>
+                                        <p class="steps-det">链接文字：<?= Yii::$app->params['siteNameBase']; ?>
                                             <br>链接地址：http://www.300.cn/</p></div>
                                 </li>
                                 <li>
@@ -202,13 +202,13 @@
                                                 /* ]]> */
                                                 </script>
                                         </p>
-                                        <p class="steps-det">经中企动力管理员审核后，可以显示在 此友情链接页面</p></div>
+                                        <p class="steps-det">经<?= Yii::$app->params['siteNameBase']; ?>管理员审核后，可以显示在 此友情链接页面</p></div>
                                 </li>
                                 <li>
                                     <span class="steps-num">3</span>
                                     <div class="con-inner">
                                         <p class="steps-tit">符合本站友情链接要求（br>=3 且pr>=5,alexa中文排名3万以内 ）的网站</p>
-                                        <p class="steps-det">经中企动力管理员审核后，可以显示在 此友情链接页面</p></div>
+                                        <p class="steps-det">经<?= Yii::$app->params['siteNameBase']; ?>管理员审核后，可以显示在 此友情链接页面</p></div>
                                 </li>
                                 <li class="last">
                                     <span class="steps-num">4</span>
@@ -267,7 +267,7 @@
                     </div>
                     <div class="free-tips">我们会尽快联系您，等待期间需要获取更多信息，请
                         <a href="http://www.300.cn">继续访问</a>或
-                        <a id="TQzx3" clickCount="true" clickAdd="zaixianzixun">联系我们</a>。感谢您对中企产品及服务的支持。</div></div>
+                        <a id="TQzx3" clickCount="true" clickAdd="zaixianzixun">联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
             </div>
             <script>$(function() {
                     $('#email_bottom2').mailAutoComplete({
@@ -316,7 +316,7 @@
             <div class="container">
                 <div class="footer-menu">
                     <p id="list" class="list">
-                        <a target="_blank" href="/aboutus/company" class="first">关于中企</a>
+                        <a target="_blank" href="/aboutus/company" class="first">关于<?= Yii::$app->params['siteNameBase']; ?></a>
                         <span>|</span>
                         <a target="_blank" href="/attention.html">法律隐私</a>
                         <span>|</span>
@@ -330,7 +330,7 @@
                         <span>|</span>
                         <a href="/feedback.html" target="_blank">意见反馈</a></p>
                 </div>
-                <div class="copyright">版权所有 © 1999-2016 中企动力科技股份有限公司&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 1999-2016 300.cn All Rights Reserved
+                <div class="copyright">版权所有 © 1999-2016 <?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 1999-2016 300.cn All Rights Reserved
                     <!-- <span style="color:#ffffff">v1.01</span> -->
                     <br>京公网安备110301000300号
                     <a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#999">京ICP证010249号</a></div>
@@ -503,7 +503,7 @@
             _mvq.push(['$setAccount', 'm-72632-0']);
             _mvq.push(['$setGeneral', '', '',
             /*用户名*/
-            '中企动力科技',
+            '<?= Yii::$app->params['siteNameBase']; ?>科技',
             /*用户id*/
             '324879318']); //如果不传用户名、用户id，此句可以删掉
             _mvq.push(['$logConversion']); (function() {

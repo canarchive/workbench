@@ -5,7 +5,7 @@ $firstLevels = [
     ['view' => 'sem', 'name' => 'SEM托管'],
     ['view' => 'seo', 'name' => 'SEO顾问'],
     ['view' => 'customizing', 'name' => '企业定制'],
-    ['controller' => 'sample', 'name' => '成功案例'],
+    //['controller' => 'sample', 'name' => '成功案例'],
     ['controller' => 'info', 'tag' => '', 'name' => '营销学院'],
     ['controller' => 'aboutus', 'view' => 'index', 'name' => '关于我们'],
 ];
@@ -21,7 +21,7 @@ $secondLevels = [
         ['view' => 'customizing', 'name' => 'SMO'],
         ['view' => 'customizing', 'name' => '新闻营销'],
     ],
-    [],
+    //[],
     [
         ['controller' => 'info', 'tag' => 'yxtg', 'name' => '营销推广'],
         ['controller' => 'info', 'tag' => 'wzqz', 'name' => '网站权重'],

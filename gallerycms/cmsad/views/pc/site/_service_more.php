@@ -2,7 +2,7 @@
         <div class="products-xl-con">
             <div class="products-xl-con-01">
                 <h2 class="title">更多互联网建站服务</h2>
-                <p>成就客户，中企动力为您提供互联网一站式服务</p>
+                <p>成就客户，<?= Yii::$app->params['siteNameBase']; ?>为您提供互联网一站式服务</p>
             </div>
             <div class="products-xl-con-02">
                 <div>
@@ -21,7 +21,7 @@
                         <h3>域名服务</h3>
                         <p>超1000万域名在此注册
                             <br>国内域名市场遥遥领先
-                            <br>每天400万次域名在中企查询
+                            <br>每天400万次域名在<?= Yii::$app->params['siteNameBase']; ?>查询
                             <br>超30种域名供您选择</p>
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-wfyuming.png" alt='域名服务' />
                         <i class="uhover">域名查询</i></a>
