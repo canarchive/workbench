@@ -183,6 +183,8 @@ class BaseModel extends ActiveRecord
 		$groupBy = isset($params['groupBy']) ? $params['groupBy'] : [];
 
         $data = $this->find()->select($this->_getSelect())->where($where);
+        $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
+        $data = $this->find()->select($selectStr)->where($where);
 		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
 		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
 		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize]);
