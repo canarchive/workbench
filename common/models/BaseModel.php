@@ -106,6 +106,11 @@ class BaseModel extends ActiveRecord
 
         return true;
     }
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 
     public function searchTimeElem(& $query, $field = 'created_at')
     {
@@ -180,7 +185,7 @@ class BaseModel extends ActiveRecord
 		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
 		$where = isset($params['where']) ? $params['where'] : [];
 		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
-		$groupBy = isset($params['groupBy']) ? $params['groupBy'] : [];
+		$groupBy = isset($params['groupBy']) && !empty($params['groupBy']) ? $params['groupBy'] : null;
 
         $data = $this->find()->select($this->_getSelect())->where($where);
         $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
