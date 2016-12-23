@@ -106,11 +106,6 @@ class BaseModel extends ActiveRecord
 
         return true;
     }
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
 
     public function searchTimeElem(& $query, $field = 'created_at')
     {
