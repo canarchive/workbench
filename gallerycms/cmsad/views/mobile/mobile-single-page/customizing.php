@@ -55,7 +55,7 @@ $colors = ['blue', 'purple', 'green'];
                 <li>
                     <div class="newz-ld-t">
                         <em>4</em>销售管理 订单不丢</div>
-                    <div class="newz-ld-d">客户管理系统帮企业开展“数据库营销”，短信、邮件等强大而智能的客户关怀功能，随时随地给不同类型客户送去节日问候，建立稳固合作关系。</div></li>
+                    <div class="newz-ld-d">客户管理系统帮企业开展“数据库营销”</div></li>
                 <li>
                     <div class="newz-ld-t">
                         <em>5</em>流量分析 赢在决策</div>
@@ -114,7 +114,7 @@ $colors = ['blue', 'purple', 'green'];
             <ul class="good-list">
                 <li>
                     <span class="zm-good-icon good-icon">
-                        <img src="/current/mobile/images/newz-goodlist1.png" alt=""></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist1.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
                         <h3>1.6大服务实力，提升企业销售业绩</h3>
                         <p>专业的SEM服务团队，依赖顶尖的产品技术团队，为多行业多领域的客户提供全方位的账户优化服务。</p>
@@ -122,7 +122,7 @@ $colors = ['blue', 'purple', 'green'];
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
-                        <img src="/current/mobile/images/newz-goodlist2.png" alt=""></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist2.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
                         <h3>2.顶尖的技术团队</h3>
                         <p>有专门的BI团队研究，提供丰富的账户优化策略，方案。有业内最顶尖的产品研发团队，致力于数字广告系统研发、消费者行为分析等给优化团队提供强有力的技术支持。</p>
@@ -130,7 +130,7 @@ $colors = ['blue', 'purple', 'green'];
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
-                        <img src="/current/mobile/images/newz-goodlist3.png" alt=""></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist3.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
                         <h3>3.丰富的行业经验</h3>
                         <p>多年深耕教育、电商零售、金融、旅游等行业；服务智联招聘、搜狐焦点、苏宁易购等几千万级的大客户，为客户提供精细化执行方案</p>
@@ -138,7 +138,7 @@ $colors = ['blue', 'purple', 'green'];
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
-                        <img src="/current/mobile/images/newz-goodlist4.png" alt=""></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist4.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
                         <h3>4.24小时客服热线</h3>
                         <p>为企业提供全年365天的 7x24小时“一站式”服务</p>
@@ -146,7 +146,7 @@ $colors = ['blue', 'purple', 'green'];
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
-                        <img src="/current/mobile/images/newz-goodlist5.png" alt=""></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist5.png" alt=""></span>
                     <div class="zm-goog-txt good-txt">
                         <h3>5.客户培训服务</h3>
                         <p>为企业客户定制专属SEM和SEO培训课程，提升企业销售业绩，降低企业获客成本</p>

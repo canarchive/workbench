@@ -14,9 +14,10 @@ class Guestbook extends GallerycmsModel
         return [
             ['mobile', 'filter', 'filter' => 'trim'],
             ['content', 'filter', 'filter' => 'strip_tags'],
-            [['mobile', 'contact', 'company_name', 'gender', 'city', 'content'], 'required'],
+            [['mobile', 'company_name'], 'required'],
             ['mobile', 'common\validators\MobileValidator'],
 			['email', 'email'],
+            [['contact', 'content', 'gender', 'city'], 'safe'],
         ];
     }
 

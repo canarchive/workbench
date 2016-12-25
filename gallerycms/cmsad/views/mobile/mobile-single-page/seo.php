@@ -117,10 +117,5 @@ $this->params['jsFiles'] = [
         </div>
     </div>
     <?= $this->render('../common/_product'); ?>
-    <script>$(function() {
-            var url = window.location.href;
-            var slug = ZQDL.util.domain.getslug(url);
-            $('.zyy-s-nav').find('#' + slug).remove();
-        });</script>
     <?= $this->render('../common/_ask_inner'); ?>
 </section>

@@ -13,7 +13,7 @@ $this->params['jsFiles'] = [
     <?= $this->render('_banner'); ?>
     <?= $this->render('_product'); ?>
     <?php //echo $this->render('_sample'); ?>
-    <?= $this->render('_info'); ?>
+    <?= $this->render('_info', ['infos' => $articleInfos]); ?>
     <input id="admin_add" value="36" type="hidden" />
 </section>
 

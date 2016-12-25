@@ -24,10 +24,10 @@ use yii\helpers\Html;
                         <input type="text" class="gt" value="请选择城市" readonly="" id="gt_bottom2" name="city">
                         <ul class="city" style="display: none;"></ul>
                     </div>
-                    <!--<div class="nice-select gbb" name="nice-select">
+                    <div class="nice-select gbb" name="nice-select">
                         <input type="text" class="gd" value="请选择区/县" readonly="" id="gd_bottom2" name="district">
                         <ul class="district" style="display: none;"></ul>
-                    </div>-->
+                    </div>
                 </div>
                 <div class="textfile lxman">
                     <span class="t">联系人</span>
