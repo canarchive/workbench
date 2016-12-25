@@ -50,12 +50,14 @@ Trait ChinazShowTrait
             }
             $crawler = new Crawler();
             $crawler->addContent($this->getContent($file));
-            echo $info['source_url'];
             //echo $file;exit();
 
             $attrs = $crawler->filter('.pr30 span');
             $count = count($attrs);
             if ($count < 3) {
+                echo $info['source_url'] . '<br />';
+                $info->source_status = -1;
+                $info->update(false);
                 continue;
             }
             $created_at = $attrs->eq(0)->text();//nodeValue;
@@ -70,7 +72,7 @@ Trait ChinazShowTrait
             $content = trim($crawler->filter('#ctrlfscont')->html());
             $content = preg_replace("'<script(.*?)<\/script>'is", '', $content);
             $content = strip_tags($content, '<p>');
-            echo $content;exit();
+            //echo $content;exit();
 
             $info->created_at = $created_at;
             $info->author = $author;
