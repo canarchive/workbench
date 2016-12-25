@@ -6,14 +6,14 @@
             <div class="info-block">
                 <form action="" id="formbottom" onsubmit="return false;">
                     <div class="info-item">
+                        <span class="redStar">*</span>
                         <div class="t">公司名称</div>
-                        <input type="text" placeholder="请输入公司名称" name="company" id="company"></div>
+                        <input type="text" placeholder="请输入公司名称" name="company_name" id="company_name"></div>
                     <div class="info-item positionR">
                         <span class="redStar">*</span>
                         <div class="t">手机号码</div>
                         <input type="text" placeholder="请输入手机号码" name="mobile" id="mobile"></div>
                     <div class="info-item info-add positionR">
-                        <span class="redStar">*</span>
                         <div class="t">所在城市</div>
                         <div class="add-select">
                             <select name="province" id="province" class="gp" onchange="set_city(this, this.form.city, this.form.district);">

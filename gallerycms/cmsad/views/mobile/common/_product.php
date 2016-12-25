@@ -38,8 +38,3 @@ use yii\helpers\Url;
         </div>
     </div>
 </div>
-<script>$(function() {
-        var url = window.location.href;
-        var slug = ZQDL.util.domain.getslug(url);
-        $('.zyy-s-nav').find('#' + slug).remove();
-    });</script>

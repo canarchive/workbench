@@ -31,7 +31,7 @@ return [
         'description' => '{{DESCRIPTION}}',
 	],
 	'info-index' => [
-        'title' => '{{TAGSTR}}-{{SITENAME}}营销公司',
+        'title' => '{{TAGSTR}}-{{PAGESTR}}{{SITENAME}}营销公司',
         'keyword' => '{{TAGSTR}}',
         'description' => '企业营销学院,北京营销学院,企业网络营销；主要提供网络营销,网络推广技术交流,包括seo、百度竞价、微博营销、EDM营销、电子书营销和网站建设方面的交流和培训。',
 	],

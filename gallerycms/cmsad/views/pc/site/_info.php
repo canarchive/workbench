@@ -25,7 +25,7 @@ use yii\helpers\StringHelper;
                         <?php foreach ($info['subInfos'] as $data) { ?>
                         <dt>
                             <a href="<?= Url::to(['/cmsad/info/show', 'id' => $data['id']]); ?>" title="<?= $data['name']; ?>">
-                            <?= StringHelper::truncate($data['name'], 18, ''); ?></a>
+                            <?= StringHelper::truncate($data['name'], 17, ''); ?></a>
                         </dt>
                         <?php } ?>
                     </dl>

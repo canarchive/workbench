@@ -22,9 +22,9 @@ $this->params['jsFiles'] = [
                             <dt><h4><?= $info['name']; ?></h4></dt>
                             <dd>
                              <p><?= $info['description']; ?></p>
-                                <div class="list-b clearfix">
-                                    <!--<div class="come-from">来源：</div>-->
-                                    <div class="zx-time"><?= date('Y-m-d', $info['created_at']); ?></div></div>
+                                <!--<div class="list-b clearfix">
+                                    <div class="come-from"></div>
+                                    <div class="zx-time"><?= date('Y-m-d', $info['created_at']); ?></div></div>-->
                             </dd>
                         </dl>
                     </a>

@@ -28,7 +28,7 @@ class InfoController extends CmsadController
 			'infos' => $infos['infos'],
             'pages' => $infos['pages'],
 		];
-		$pageStr = $page > 1 ? "_第{$page}页-" : '-';
+		$pageStr = $page > 1 ? "第{$page}页-" : '';
 
         $tagStr = isset($tagInfos['cInfo']['name']) ? $tagInfos['cInfo']['name'] : '企业营销学院_北京营销学院_企业网络营销';
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
