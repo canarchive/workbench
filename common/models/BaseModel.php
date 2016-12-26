@@ -6,7 +6,7 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
-use yii\data\Pagination;
+use common\components\Pagination;
 
 class BaseModel extends ActiveRecord
 {
@@ -180,12 +180,15 @@ class BaseModel extends ActiveRecord
 		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
 		$where = isset($params['where']) ? $params['where'] : [];
 		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
-		$groupBy = isset($params['groupBy']) ? $params['groupBy'] : [];
+		$groupBy = isset($params['groupBy']) && !empty($params['groupBy']) ? $params['groupBy'] : null;
 
         $data = $this->find()->select($this->_getSelect())->where($where);
+        $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
+        $data = $this->find()->select($selectStr)->where($where);
 		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
 		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
-		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize]);
+        $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
+		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr]);
 		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
 		$infos = $this->_formatInfos($infos);
 
