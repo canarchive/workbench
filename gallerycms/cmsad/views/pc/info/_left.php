@@ -8,7 +8,7 @@ use yii\helpers\Url;
             <?php foreach ($cInfos as $info) { ?>
             <li></li>
             <li class="m1">
-                <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $info['catdir'], 'page' => 1]); ?>" <?php if ($id == $info['id']) { echo 'class="active"'; } ?>><?= $info['name']; ?></a>
+                <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_' . $info['catdir'], 'page' => '_1']); ?>" <?php if ($id == $info['id']) { echo 'class="active"'; } ?>><?= $info['name']; ?></a>
                 <ul style=""></ul>
             </li>
             <?php } ?>
