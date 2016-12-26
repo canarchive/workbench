@@ -1,6 +1,10 @@
 <?php
 return [
-    Yii::getAlias('@gallerycmsurl') . '/test' => '/cmsad/sitemap/index', 
+    [
+        'suffix' => '.xml',
+        'pattern' => Yii::getAlias('@ad.cmsurl') . '/sitemap',
+        'route' => '/cmsad/sitemap/index',
+    ],
     Yii::getAlias('@ad.cmsurl') . '/' => '/cmsad/site/index', 
     Yii::getAlias('@ad.cmsurl') . '/sp-<view:\w+>' => '/cmsad/single-page/index', 
     Yii::getAlias('@ad.cmsurl') . '/friendlink' => '/cmsad/aboutus/friendlink', 
@@ -23,6 +27,11 @@ return [
 	],
     Yii::getAlias('@ad.cmsurl') . '/info/<id:\d+>' => '/cmsad/info/show', 
 
+    [
+        'suffix' => '.xml',
+        'pattern' => Yii::getAlias('@m.ad.cmsurl') . '/sitemap',
+        'route' => '/cmsad/mobile-sitemap/index',
+    ],
     Yii::getAlias('@m.ad.cmsurl') . '/' => '/cmsad/mobile-site/index', 
     Yii::getAlias('@m.ad.cmsurl') . '/sp-<view:\w+>' => '/cmsad/mobile-single-page/index', 
     Yii::getAlias('@m.ad.cmsurl') . '/aboutus/<view:\w+>' => '/cmsad/mobile-aboutus/index', 
