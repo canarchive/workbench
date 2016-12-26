@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\house\models;
+namespace gallerycms\merchant\models;
 
 use common\models\MerchantModel;
 use yii\helpers\ArrayHelper;

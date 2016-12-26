@@ -1,11 +1,11 @@
 <?php
 
-namespace merchant\house\models\searchs;
+namespace gallerycms\merchant\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use merchant\house\models\Designer as DesignerModel;
+use gallerycms\merchant\models\Designer as DesignerModel;
 
 class Designer extends DesignerModel
 {

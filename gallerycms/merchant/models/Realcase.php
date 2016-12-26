@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\house\models;
+namespace gallerycms\merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -12,6 +12,7 @@ use spread\models\CustomService;
  */
 class Realcase extends MerchantModel
 {
+    use MerchantTrait;
 	public $design_sketch;
 	//public $merchantInfo;
 	public $pictureDesignInfo;

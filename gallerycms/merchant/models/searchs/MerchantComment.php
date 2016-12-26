@@ -1,11 +1,11 @@
 <?php
 
-namespace merchant\house\models\searchs;
+namespace gallerycms\merchant\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use merchant\house\models\MerchantComment as MerchantCommentModel;
+use gallerycms\merchant\models\MerchantComment as MerchantCommentModel;
 
 class MerchantComment extends MerchantCommentModel
 {

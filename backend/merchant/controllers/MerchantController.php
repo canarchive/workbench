@@ -2,16 +2,16 @@
 
 namespace backend\merchant\controllers;
 
-use Yii;
-use merchant\house\models\Merchant;
-use merchant\house\models\searchs\Merchant as MerchantSearch;
-use yii\web\NotFoundHttpException;
 use backend\components\AdminController;
+use backend\components\ControllerFullTrait;
 
 class MerchantController extends AdminController
 {
+    protected $modelClass = 'gallerycms\merchant\models\Merchant';
+    protected $modelSearchClass = 'gallerycms\merchant\models\searchs\Merchant';
+    public $showSubnav = false;
+    use ControllerFullTrait;
     use MerchantInfoTrait;
-	protected $modelClass = 'merchant\house\models\Merchant';
 
     public function init()
     {
@@ -20,37 +20,11 @@ class MerchantController extends AdminController
 		$this->_initInfo();
     }
 
-    public function actionListinfo()
-    {
-        $searchModel = new MerchantSearch();
-		return $this->_listinfoInfo($searchModel);
-    }
-
-    public function actionView($id)
-    {
-		return $this->_viewInfo($id);
-    }
-
-    public function actionAdd()
-    {
+	protected function _addData()
+	{
 		$data = [
-			'city_code' => isset($this->companyInfo['code_short']) ? $this->companyInfo['code_short'] : '',
-			'is_joined' => $this->is_joined,
-		];
-		return $this->_addInfo(new Merchant($data));
-    }
-
-    public function actionUpdate($id = 0)
-    {
-		if (Yii::$app->request->isAjax) {
-		    return $this->_updateByAjax();
-		}
-
-		return $this->_updateInfo($id);
-    }
-
-    public function actionDelete($id)
-    {
-		return $this->_deleteInfo($id);
-    }
+			'city_code' => isset($this->companyInfo['code']) ? $this->companyInfo['code'] : '',
+        ];
+        return $data;
+	}
 }

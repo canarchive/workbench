@@ -5,8 +5,8 @@ namespace gallerycms\house\controllers;
 use Yii;
 use yii\helpers\Url;
 use gallerycms\components\HouseController;
-use merchant\house\models\Merchant;
-use merchant\house\models\Working;
+use gallerycms\merchant\models\Merchant;
+use gallerycms\merchant\models\Working;
 
 class DecorationCompanyController extends HouseController
 {

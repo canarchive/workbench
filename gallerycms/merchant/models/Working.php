@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\house\models;
+namespace gallerycms\merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -12,6 +12,7 @@ use spread\models\CustomService;
  */
 class Working extends MerchantModel
 {
+    use MerchantTrait;
 	public $name;
 	public $statusDatas;
 	//public $merchantInfo;

@@ -1,8 +1,8 @@
 <?php
 
-namespace merchant\house;
+namespace gallerycms\merchant;
 
-use merchant\components\ModuleBase;
+use gallerycms\merchant\components\ModuleBase;
 
 class Module extends ModuleBase
 {

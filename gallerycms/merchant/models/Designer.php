@@ -1,12 +1,13 @@
 <?php
 
-namespace merchant\house\models;
+namespace gallerycms\merchant\models;
 
 use common\models\MerchantModel;
 use yii\helpers\ArrayHelper;
 
 class Designer extends MerchantModel
 {
+    use MerchantTrait;
 	public $select;
 
     /**

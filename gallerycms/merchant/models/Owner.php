@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\house\models;
+namespace gallerycms\merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -9,6 +9,7 @@ use spread\models\CustomService;
 
 class Owner extends MerchantModel
 {
+    use MerchantTrait;
 	public $avatar;
 	public $nameCommunity;
 	public $serviceInfo;
@@ -109,7 +110,7 @@ class Owner extends MerchantModel
 	{
 		$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 		$info['status'] = isset($info->statusInfos[$info->status]) ? $info->statusInfos[$info->status] : $info->status;
-		$info['serviceInfo'] = CustomService::findOne($info['service_id']);//->toArray();
+		$info['serviceInfo'] = [];//CustomService::findOne($info['service_id']);//->toArray();
 		//$info['merchantInfo'] = Merchant::findOne($info['merchant_id']);
 
 		$info['house_type'] = isset($info->houseTypeInfos[$info->house_type]) ? $info->houseTypeInfos[$info->house_type] : $info->house_type;

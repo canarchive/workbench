@@ -3,9 +3,9 @@
 namespace backend\merchant\controllers;
 
 use Yii;
-use merchant\models\Company;
-use merchant\models\Merchant;
-use merchant\house\models\Owner;
+use common\models\Company;
+use gallerycms\merchant\models\Merchant;
+use gallerycms\merchant\models\Owner;
 
 trait MerchantInfoTrait
 {

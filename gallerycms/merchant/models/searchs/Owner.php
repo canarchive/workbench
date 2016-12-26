@@ -1,11 +1,11 @@
 <?php
 
-namespace merchant\house\models\searchs;
+namespace gallerycms\merchant\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use merchant\house\models\Owner as OwnerModel;
+use gallerycms\merchant\models\Owner as OwnerModel;
 
 class Owner extends OwnerModel
 {
