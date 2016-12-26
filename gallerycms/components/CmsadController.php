@@ -63,4 +63,10 @@ class CmsadController extends Controller
         Yii::$app->params['jsFiles'] = $infos['jsFiles'];
         return ;
     }
+
+    protected function _getHost($type)
+    {
+        $host = $type == 'mobile' ? Yii::getAlias('@m.ad.cmsurl') : Yii::getAlias('@ad.cmsurl');
+        return $host;
+    }
 }

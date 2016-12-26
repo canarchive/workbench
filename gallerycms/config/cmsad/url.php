@@ -24,21 +24,25 @@ return [
 		'name' => '成功案例',
 		'pc-url' => '/sample/',
 		'mobile-url' => '/sample/',
+        'no-sitemap' => true,
 	],
 	'sample-show' => [
 		'name' => '成功案例详情',
 		'pc-url' => '/sample/1.html',
 		'mobile-url' => '/sample/1.html',
+        'no-sitemap' => true,
 	],
 	'info-index' => [
-		'name' => '成功资讯',
+		'name' => '资讯',
 		'pc-url' => '/info/',
 		'mobile-url' => '/info/',
+        'no-sitemap' => true,
 	],
 	'info-show' => [
-		'name' => '成功资讯详情',
+		'name' => '资讯详情',
 		'pc-url' => '/info/1.html',
 		'mobile-url' => '/info/1.html',
+        'no-sitemap' => true,
 	],
 	'aboutus-index' => [
 		'name' => '关于我们',
