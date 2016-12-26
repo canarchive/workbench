@@ -63,7 +63,7 @@ $secondLevels = [
                 <a href="/" title='<?= Yii::$app->params['siteName']; ?>'><?= Yii::$app->params['siteName']; ?></a>
             </h1>
             <ul class="nav">
-                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; if ($controllerUrl == 'info') { $urlData['tag'] = $urlInfo['tag']; } } ?>
+                <?php foreach ($firstLevels as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if (in_array($controllerUrl, ['sample', 'info'])) { $urlData['page'] = 1; if ($controllerUrl == 'info') { $urlData['tag'] = '_' . $urlInfo['tag'];  $urlData['page'] = '_1';} } ?>
                 <li class="d_2">
                     <a href="<?= Url::to($urlData); ?>"><?= $urlInfo['name']; ?></a>
                 </li>
@@ -76,7 +76,7 @@ $secondLevels = [
             <div class="subnav_con">
                 <?php foreach ($secondLevels as $subInfos) { ?>
                 <ul style="display:none">
-                    <?php foreach ($subInfos as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if ($controllerUrl == 'info') {$urlData['page'] = 1; $urlData['tag'] = $urlInfo['tag']; } ?>
+                    <?php foreach ($subInfos as $urlInfo) { $controllerUrl = isset($urlInfo['controller']) ? $urlInfo['controller'] : 'single-page'; $urlData = ["/cmsad/{$controllerUrl}/index"]; if (isset($urlInfo['view'])) {$urlData['view'] = $urlInfo['view']; } if ($controllerUrl == 'info') {$urlData['page'] = '_1'; $urlData['tag'] = '_' . $urlInfo['tag']; } ?>
                 <li class="d_2">
                     <a href="<?= Url::to($urlData); ?>"><?= $urlInfo['name']; ?></a>
                 </li>

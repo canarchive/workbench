@@ -41,4 +41,8 @@ class SiteController extends CmsadController
 		$this->getTdkInfos('site-map');
 		return $this->render('sitemap', $datas);
 	}
+
+    public function actionCreateMap()
+    {
+    }
 }

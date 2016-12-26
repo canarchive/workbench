@@ -13,14 +13,14 @@ class InfoController extends CmsadController
 {
 	public function actionIndex()
 	{
-		$page = Yii::$app->request->get('page');
-        $tag = Yii::$app->request->get('tag');
+		$page = ltrim(Yii::$app->request->get('page'), '_');
+        $tag = ltrim(Yii::$app->request->get('tag'), '_');
         $tagInfos = $this->_checkTag($tag);
 
         $where = $tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
 		$model = new Article();
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 10]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 10, 'pagePreStr' => '_']);
 		$datas = [
 			'page' => $page,
 			'model' => $model,
