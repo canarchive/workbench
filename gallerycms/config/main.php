@@ -6,8 +6,10 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 $routeRules = array_merge(
-    require(__DIR__ . '/cmsad/rule.php')
+    require(__DIR__ . '/cmsad/rule.php'),
+    require(__DIR__ . '/sinfo/rule.php')
 );
+//print_r($routeRules);exit();
 return [
     'id' => 'app-gallerycms',
     'basePath' => dirname(__DIR__),
@@ -40,6 +42,9 @@ return [
     'modules' => [
         'cmsad' => [
             'class' => 'gallerycms\cmsad\Module',
+        ],
+        'sinfo' => [
+            'class' => 'gallerycms\sinfo\Module',
         ],
     ],
     'params' => $params,

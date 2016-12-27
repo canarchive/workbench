@@ -10,15 +10,32 @@ class CmsadController extends Controller
     {
         parent::init();
 
+        $this->host = Yii::$app->request->hostInfo;
+
+        //$this->isMobile = $this->clientIsMobile();
+        $this->isMobile = $this->host == $this->_getHost('mobile') ? true : false;
+
+        $url = Yii::$app->request->url;
+        $redirect = strpos($url, 'index.php') !== false ? true : false;
+        $redirect = $redirect ? $redirect : $this->_checkRedirect();
+        if ($redirect) {
+            $rule = $this->_redirectRule();
+            $url = Url::to([$rule, 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
+            header("Location:$url");
+            //return Yii::$app->response->redirect($url)->send();
+            exit();
+        }
+
+        if (isset($this->module->viewPath)) {
+            $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
+        }
+
     }
 
 	protected function _redirectRule()
 	{
-        $rule = $this->isMobile ? '/cmsad/mobile-site/index' : '/cmsad/site/home';
-        $url = Url::to([$rule, 'city_code' => Yii::$app->params['currentCompany']['code']]);
-        echo $url . '--' .$rule;exit();
+        $url = $this->isMobile ? $this->_getHost('mobile') : $this->_getHost();
         header("Location:$url");
-        //return Yii::$app->response->redirect($url)->send();
         exit();
 	}
 
@@ -64,7 +81,7 @@ class CmsadController extends Controller
         return ;
     }
 
-    protected function _getHost($type)
+    protected function _getHost($type = 'pc')
     {
         $host = $type == 'mobile' ? Yii::getAlias('@m.ad.cmsurl') : Yii::getAlias('@ad.cmsurl');
         return $host;

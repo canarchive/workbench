@@ -43,7 +43,7 @@ $this->params['jsFiles'] = [
                     <h3>企业资质</h3>
                     <div class="swiper-container wrap-s" id='wrap-s'>
                         <div class="swiper-wrapper">
-                            <!--<div class="swiper-slide">
+                            <div class="swiper-slide">
                                 <div class="img">
                                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img1.jpg" alt=""></div>
                                 <div class="zz-name">2013年度优秀域名注册服务机构</div></div>
@@ -66,7 +66,7 @@ $this->params['jsFiles'] = [
                             <div class="swiper-slide">
                                 <div class="img">
                                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img6.jpg" alt=""></div>
-                                <div class="zz-name">通用网址金牌验证服务中心</div></div>-->
+                                <div class="zz-name">通用网址金牌验证服务中心</div></div>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -81,21 +81,21 @@ $this->params['jsFiles'] = [
                         <div class="linkus-add">
                             <dl>
                                 <dt>地址：</dt>
-                                <dd></dd></dl>
+                                <dd>北京市经济技术开发区地盛西路1号 数码庄园A2座</dd></dl>
                             <dl>
                                 <dt>邮编：</dt>
-                                <dd>100</dd></dl>
+                                <dd>100176</dd></dl>
                             <dl>
                                 <dt>ADD：</dt>
-                                <dd></dd></dl>
+                                <dd>Building A2,No.1,Disheng West Road Beijing Econom ic-Technological Development Area</dd></dl>
                         </div>
                         <div class="linkus-ways">
                             <dl>
                                 <dt>电话：</dt>
-                                <dd>400--</dd></dl>
+                                <dd>400-660-5555</dd></dl>
                             <dl>
                                 <dt>网址：</dt>
-                                <dd>www.weinaya.com</dd></dl>
+                                <dd>www.300.cn</dd></dl>
                             <dl>
                                 <dt>邮箱：</dt>
                                 <dd>
