@@ -8,37 +8,12 @@ use merchant\models\Company;
 
 class Controller extends CommonController
 {
-    public $moduleId;
-    public $isMobile;
     public $host;
-    public $hostPc;
-    public $hostMobile;
+    public $isMobile;
 
     public function init()
     {
         parent::init();
-
-        $this->host = Yii::$app->request->hostInfo;
-        $this->hostPc = $this->_getHost('pc');
-        $this->hostMobile = $this->_getHost('mobile');
-
-        //$this->isMobile = $this->clientIsMobile();
-        $this->isMobile = $this->host == $this->hostMobile ? true : false;
-
-        $url = Yii::$app->request->url;
-        $redirect = strpos($url, 'index.php') !== false ? true : false;
-        $redirect = $redirect ? $redirect : $this->_checkRedirect();
-        if ($redirect) {
-            $rule = $this->_redirectRule();
-            $url = Url::to([$rule, 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
-            header("Location:$url");
-            //return Yii::$app->response->redirect($url)->send();
-            exit();
-        }
-
-        if (isset($this->module->viewPath)) {
-            $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
-        }
 
         $this->_initAsset();
     }
@@ -82,12 +57,6 @@ class Controller extends CommonController
     protected function _getTdkInfos()
     {
         return [];
-    }
-
-    protected function _getHost($type)
-    {
-        $host = $type == 'mobile' ? Yii::getAlias('@m.gallerycmsurl') : Yii::getAlias('@gallerycmsurl');
-        return $host;
     }
 
     public function _checkRedirect()
