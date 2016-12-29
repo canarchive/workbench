@@ -18,6 +18,12 @@ class ManagerController extends AdminController
         return ['scenario' => 'create'];
     }
 
+
+    protected function _getScenario()
+    {
+        return 'update';
+    }
+
     public function actionEditInfo()
     {
         $model = Manager::findOne(Yii::$app->user->identity->id);

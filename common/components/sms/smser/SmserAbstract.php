@@ -55,6 +55,9 @@ abstract class SmserAbstract
 
     protected function _formatContent($content)
     {
+		if (strpos($content, '】') !== false) {
+			return $content;
+		}
         $signName = isset(\Yii::$app->params['smsSignName']) ? \Yii::$app->params['smsSignName'] : '';
 
         return $content . $signName;

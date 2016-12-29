@@ -31,17 +31,28 @@ class AdminController extends Controller
         ];
     }
 
+    public function actions()
+    {
+        $actions = parent::actions();
+        return array_merge($actions, [
+    
+            'upload' => [
+                'class' => 'common\ueditor\UEditorAction',
+            ],  
+        ]);  
+    } 
+
     /**
      * Lists infos.
      * @return mixed
      */
-    protected function _listinfoInfo()
+    protected function _listinfoInfo($view = 'listinfo')
     {
         $searchClass = $this->modelSearchClass;
         $searchModel = new $searchClass();
         $searchDatas = $searchModel->getSearchDatas();
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
-        return $this->render($this->viewPrefix . 'listinfo', [
+        return $this->render($this->viewPrefix . $view, [
             'dataProvider' => $dataProvider,
             'searchModel' => $searchModel,
             'searchDatas' => $searchDatas,
@@ -78,7 +89,7 @@ class AdminController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    protected function _addInfo($data = [], $returnView = true)
+    protected function _addInfo($returnView = true)
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass($this->_addData());
@@ -142,8 +153,9 @@ class AdminController extends Controller
      * @param  string $id
      * @return mixed
      */
-    protected function _updateInfo($id, $scenario = '')
+    protected function _updateInfo($id)
     {
+        $scenario = $this->_getScenario();
         $model = $this->findModel($id);
         if (!empty($scenario)) {
             $model->setScenario($scenario);
@@ -153,6 +165,11 @@ class AdminController extends Controller
         }
 
         return $this->render($this->viewPrefix . 'update', ['model' => $model]);
+    }
+
+    protected function _getScenario()
+    {
+        return 'default';
     }
 
     /**

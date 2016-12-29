@@ -13,6 +13,7 @@ $formPositionName = isset($this->params['formPositionName']) ? $this->params['fo
 $mobileMappingUrl = isset($this->context->mobileMappingUrl) ? $this->context->mobileMappingUrl : '';
 $cssAllFiles = isset(Yii::$app->params['cssFiles']) ? Yii::$app->params['cssFiles'] : [];
 $jsAllFiles = isset(Yii::$app->params['jsFiles']) ? Yii::$app->params['jsFiles'] : [];
+$faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] : Yii::getAlias('@asseturl') . '/backend/img/favicon-fb.ico';
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -39,8 +40,8 @@ $jsAllFiles = isset(Yii::$app->params['jsFiles']) ? Yii::$app->params['jsFiles']
 <meta name="description" content="<?= $seoDescription; ?>" />
 <meta name="keywords" content="<?= $seoKeyword; ?>" />
 <?php if (isset(Yii::$app->params['robotRule'])) { echo Yii::$app->params['robotRule']; } ?>
-<link rel="icon" href="<?= Yii::getAlias('@asseturl'); ?>/cmsad/faviocon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="<?= Yii::getAlias('@asseturl'); ?>/cmsad/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?= $faviconUrl; ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?= $faviconUrl; ?>" type="image/x-icon" />
 
 <?php if (isset($cssFiles)) { foreach ($cssFiles as $cssFile) { $cssFile = isset($cssAllFiles[$cssFile]) ? $cssAllFiles[$cssFile] : $cssFile; ?>
 <link rel="stylesheet" type="text/css" href="<?= $cssFile; ?>" />
