@@ -6,6 +6,7 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
+use yii\data\Pagination;
 
 class BaseModel extends ActiveRecord
 {
@@ -130,28 +131,28 @@ class BaseModel extends ActiveRecord
 
     public function statisticRecord($data, $type)
     {
-return ;
         $keywordTypes = ['visit', 'signup'];
         if (in_array($type, $keywordTypes)) {
-            $keyword = new \spread\models\statistic\Keyword();
+            $keyword = $this->_newModel('statisticKeyword');
+            //print_r($keyword);exit();
             $keyword->recordData($data, $type);
         }
 
         $reportTypes = ['visit', 'signup'];
         if (in_array($type, $reportTypes)) {
-            $report = new \spread\models\statistic\Report();
+            $report = $this->_newModel('statisticReport');
             $report->recordData($data, $type);
         }
 
         $reportServiceTypes = ['signup'];
         if (in_array($type, $reportServiceTypes)) {
-            $reportServiceService = new \spread\models\statistic\ReportService();
-            $reportServiceService->recordData($data, $type);
+            $reportService = $this->_newModel('statisticReportService');
+            $reportService->recordData($data, $type);
         }
 
         $dispatchTypes = ['dispatch'];
         if (in_array($type, $dispatchTypes)) {
-            $dispatch = new \spread\models\statistic\Dispatch();
+            $dispatch = $this->_newModel('statisticDispatch');
             $dispatch->recordData($data, $type);
         }
     }
@@ -173,4 +174,32 @@ return ;
     {
         return [];
     }
+
+	public function getInfosByPage($params = [])
+	{
+		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
+		$where = isset($params['where']) ? $params['where'] : [];
+		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
+		$groupBy = isset($params['groupBy']) ? $params['groupBy'] : [];
+
+        $data = $this->find()->select($this->_getSelect())->where($where);
+		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
+		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
+		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize]);
+		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
+		$infos = $this->_formatInfos($infos);
+
+		$return = ['infos' => $infos, 'pages' => $pages];
+		return $return;
+	}
+
+    protected function _getSelect()
+    {
+        return '*';
+    }
+
+	protected function _formatInfos($infos)
+	{
+		return $infos;
+	}
 }
