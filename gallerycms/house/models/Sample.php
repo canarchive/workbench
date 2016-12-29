@@ -5,8 +5,9 @@ namespace gallerycms\house\models;
 use yii\helpers\ArrayHelper;
 use common\models\GallerycmsModel;
 
-class HouseSample extends GallerycmsModel
+class Sample extends GallerycmsModel
 {
+    use HouseTrait;
 	public $picture;
 	public $tagHeaders = [
 		'h' => 'house_type', 

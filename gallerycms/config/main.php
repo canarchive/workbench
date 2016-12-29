@@ -7,9 +7,9 @@ $params = array_merge(
 );
 
 $routeRules = array_merge(
+    require(__DIR__ . '/merchant/rule.php'),
     require(__DIR__ . '/house/rule.php')
 );
-
 
 return [
     'id' => 'app-gallerycms',
@@ -42,6 +42,9 @@ return [
     'modules' => [
         'house' => [
             'class' => 'gallerycms\house\Module',
+        ],
+        'merchant' => [
+            'class' => 'gallerycms\merchant\Module',
         ],
     ],
     'params' => $params,

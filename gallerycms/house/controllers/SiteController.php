@@ -4,11 +4,10 @@ namespace gallerycms\house\controllers;
 
 use Yii;
 use gallerycms\components\HouseController;
-use merchant\house\models\Merchant;
-use merchant\house\models\Realcase;
-use merchant\house\models\Working;
-use gallerycms\house\models\HouseSample;
-use common\models\RegionCounty;
+use gallerycms\merchant\models\Merchant;
+use gallerycms\merchant\models\Realcase;
+use gallerycms\merchant\models\Working;
+use gallerycms\house\models\Sample;
 
 class SiteController extends HouseController
 {
@@ -53,7 +52,7 @@ class SiteController extends HouseController
 
 	protected function getSampleInfos()
 	{
-		$model = new HouseSample();
+		$model = new Sample();
 		$infos = $model->getInfos([]);
 		return $infos;
 	}
@@ -81,7 +80,7 @@ class SiteController extends HouseController
 
 	protected function getMapInfos()
 	{
-		$modelSample = new HouseSample();
+		$modelSample = new Sample();
 		$modelRegion = new RegionCounty();
 		$datas = [
 			'houseSortInfos' => $modelSample->houseSortInfos,

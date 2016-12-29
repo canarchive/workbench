@@ -2,7 +2,7 @@
 
 namespace gallerycms\merchant;
 
-use gallerycms\merchant\components\ModuleBase;
+use common\components\ModuleBase;
 
 class Module extends ModuleBase
 {

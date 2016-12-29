@@ -2,7 +2,7 @@
 
 namespace gallerycms\house;
 
-use gallerycms\components\ModuleBase;
+use common\components\ModuleBase;
 
 class Module extends ModuleBase
 {
