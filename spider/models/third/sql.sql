@@ -1,3 +1,4 @@
+UPDATE `wc_attachment` SET `in_use` = 1;
 INSERT INTO `wc_attachment` ( `name`, `filepath`, `path_prefix`, `url_prefix`, `filename`, `orderlist`, `description`, `size`, `type`, `extname`, `info_table`, `info_field`, `info_id`, `in_use`, `created_at`, `source_site_code`, `source_id`, `source_url`, `source_status`, `source_status_ext`) SELECT `name`, `filepath`, `path_prefix`, `url_prefix`, `filename`, `orderlist`, `description`, `size`, `type`, `extname`, `info_table`, `info_field`, `info_id`, `in_use`, `created_at`, `source_site_code`, `source_id`, `source_url`, `source_status`, `source_status_ext` FROM `wc_attachmentmid` GROUP BY `source_id`;
 
 INSERT INTO `wc_sample` ( `name`, `title`, `sort`, `tag`, `thumb`, `created_at`, `orderlist`, `updated_at`, `status`, `description`, `content`, `sort_name`, `tag_name`, `source_url`, `source_id`, `source_status`) SELECT `name`, `title`, `sort`, `tag`, `thumb`, `created_at`, `orderlist`, `updated_at`, `status`, `description`, `content`, `sort_name`, `tag_name`, `source_url`, `source_id`, `source_status` FROM `wc_samplemid` GROUP BY `sort`, `source_id`; 
@@ -23,3 +24,8 @@ UPDATE `wc_attachment` AS `a`, `wc_adpicture` AS `b` SET `b`.`thumb` = `a`.`id` 
 
 UPDATE `wc_attachment` AS `a`, `wc_adpicture` AS `b` SET `a`.`info_id` = `b`.`id` WHERE `a`.`info_table` = 'adpicture' AND `info_field` = 'picture' AND `a`.`source_id` = `b`.`description`;
 UPDATE `wc_attachment` AS `a`, `wc_adpicture` AS `b` SET `b`.`picture` = `a`.`id` WHERE `a`.`info_table` = 'adpicture' AND `info_field` = 'picture' AND `a`.`info_id` = `b`.`id`;
+
+UPDATE `wc_adpicture` SET `orderlist` = 1000 - `id`;
+UPDATE `wc_sample` SET `orderlist` = 1000 - `id`;
+UPDATE `wc_sample` SET `sort` = 'studentwork' WHERE `sort` = 'studentworks';
+UPDATE `wc_info` SET `orderlist` = 1000 - `id`;

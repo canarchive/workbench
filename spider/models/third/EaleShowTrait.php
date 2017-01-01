@@ -10,8 +10,8 @@ Trait EaleShowTrait
     public function spiderShow($siteCode)
     {
         $where = ['source_status' => 0];
-        $infos = $this->_getShowInfos($where, 100);
-        //$infos = $this->_getShowSamples($where, 100);
+        //$infos = $this->_getShowInfos($where, 100);
+        $infos = $this->_getShowSamples($where, 100);
         $num = 0;
         foreach ($infos as $info) {
             $info->source_status = 1;
@@ -41,8 +41,8 @@ Trait EaleShowTrait
     public function dealShow($siteCode)
     {
         $where = ['source_status' => 1];
-        $infos = $this->_getShowInfos($where, 100);
-        //$infos = $this->_getShowSamples($where, 100);
+        //$infos = $this->_getShowInfos($where, 100);
+        $infos = $this->_getShowSamples($where, 100);
         foreach ($infos as $info) {
             $file = $info->showFile();
             if (!$this->fileExist($file)) {
@@ -92,7 +92,8 @@ Trait EaleShowTrait
     public function dealContent($siteCode)
     {
         $where = ['source_status' => 1];
-        $infos = $this->_getShowSamples($where, 100);
+        //$infos = $this->_getShowSamples($where, 100);
+        $infos = $this->_getShowInfos($where, 100);
         foreach ($infos as $info) {
             $name = $info['name'];
 
@@ -125,7 +126,7 @@ Trait EaleShowTrait
             $c);
             $info->content = trim($newC);
             $formatC = strip_tags($newC);
-            $info->search = "{$info->name} {$info->title} {$info->sort_name} {$info->tag} {$formatC}";
+            //$info->search = "{$info->name} {$info->title} {$info->sort_name} {$info->tag_name} {$formatC}";
 
             $id = $info['id'];
             $info->source_status = 2;
