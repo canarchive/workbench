@@ -1,18 +1,34 @@
 <?php
 use yii\helpers\Html;
 
+$pathTmp = '/tmp/ad/';
+$strPc = $strMobile = '';
 foreach ($urlInfos as $code => $info) {
     if (isset($info['pc-url'])) {
+        $strPc .= "<a href='pc/{$code}.html' target='_blank'>{$info['name']}</a><br />\n";
         $info['pc-url'] = Yii::getAlias('@ad.cmsurl') . $info['pc-url'];
+        //$filePc = "{$pathTmp}pc/{$code}.html";
+        //$contentPc = file_get_contents($info['pc-url']);
+        //file_put_contents($filePc, $contentPc);
+        //echo $filePc;
     }
     if (isset($info['mobile-url'])) {
+        $strMobile .= "<a href='mobile/{$code}.html' target='_blank'>{$info['name']}</a><br />\n";
         $info['mobile-url'] = Yii::getAlias('@m.ad.cmsurl') . $info['mobile-url'];
+        //$fileMobile = "{$pathTmp}mobile/{$code}.html";
+        //$contentMobile = file_get_contents($info['mobile-url']);
+        //file_put_contents($fileMobile, $contentMobile);
+        //echo $fileMobile;
     }
     $info['title'] = isset($tdkInfos[$code]) ? $tdkInfos[$code]['title'] : '';
     $info['keyword'] = isset($tdkInfos[$code]) ? $tdkInfos[$code]['keyword'] : '';
     $info['description'] = isset($tdkInfos[$code]) ? $tdkInfos[$code]['description'] : '';
     $urlInfos[$code] = $info;
 }
+//$fileIndex = $pathTmp . 'index.html';
+//$contentStr = "<meta charset='utf-8'>PC页面列表：<br />\n" . $strPc . "<br />\n" . "Mobile页面列表:<br />\n" . $strMobile;
+//file_put_contents($fileIndex, $contentStr);
+//echo $strPc . $strMobile;exit();
 //print_r($urlInfos) ;
 ?>
 <div class="row">

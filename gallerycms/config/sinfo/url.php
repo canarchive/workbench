@@ -1,7 +1,7 @@
 <?php 
 return [
     'site-index' => [
-		'name' => '分站首页',
+		'name' => '首页',
 		'pc-url' => '/',
 		'mobile-url' => '/',
     ],
@@ -19,18 +19,6 @@ return [
 		'name' => '企业定制',
 		'pc-url' => '/sp-customizing.html',
 		'mobile-url' => '/sp-customizing.html',
-	],
-	'sample-index' => [
-		'name' => '成功案例',
-		'pc-url' => '/sample/',
-		'mobile-url' => '/sample/',
-        'no-sitemap' => true,
-	],
-	'sample-show' => [
-		'name' => '成功案例详情',
-		'pc-url' => '/sample/1.html',
-		'mobile-url' => '/sample/1.html',
-        'no-sitemap' => true,
 	],
 	'info-index' => [
 		'name' => '资讯',

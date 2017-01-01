@@ -5,7 +5,7 @@ namespace gallerycms\sinfo\controllers;
 use Yii;
 use gallerycms\components\SinfoController;
 use gallerycms\sinfo\models\Sample;
-use gallerycms\sinfo\models\Article;
+use gallerycms\sinfo\models\Info;
 
 class SiteController extends SinfoController
 {
@@ -13,8 +13,8 @@ class SiteController extends SinfoController
 	{
 		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];
 		$datas = [
-			'articleInfos' => $this->getArticleInfos($where),
-			'sampleInfos' => $this->getSampleInfos(),
+			'infoInfos' => $this->getInfoInfos($where),
+			//'sampleInfos' => $this->getSampleInfos(),
 		];
 		$this->getTdkInfos('site-index');
 
@@ -28,9 +28,9 @@ class SiteController extends SinfoController
 		return $infos;
     }
 
-    protected function getArticleInfos()
+    protected function getInfoInfos()
     {
-		$model = new Article();
+		$model = new Info();
 		$infos = $model->getInfosForIndex();
 		return $infos;
     }

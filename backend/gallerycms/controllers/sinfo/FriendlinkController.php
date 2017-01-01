@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\gallerycms\controllers\eale;
+namespace backend\gallerycms\controllers\sinfo;
 
 use backend\gallerycms\controllers\Friendlink;
 
 class FriendlinkController extends Friendlink
 {
-    protected $modelClass = 'gallerycms\eale\models\Friendlink';
-    protected $modelSearchClass = 'gallerycms\eale\models\searchs\Friendlink';
+    protected $modelClass = 'gallerycms\sinfo\models\Friendlink';
+    protected $modelSearchClass = 'gallerycms\sinfo\models\searchs\Friendlink';
 
 }
