@@ -188,7 +188,8 @@ class BaseModel extends ActiveRecord
 		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
 		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
         $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
-		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr]);
+        $noHost = isset($params['noHost']) ? $params['noHost'] : '';
+		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr, 'noHost' => $noHost]);
 		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
 		$infos = $this->_formatInfos($infos);
 
