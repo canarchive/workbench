@@ -19,6 +19,6 @@ return [
         //'dealSampleTag' => ['name' => '作品标签'],
         //'dealShow' => ['name' => '详情处理'],
         'file' => ['name' => '附件处理'],
-        //'show' => ['name' => '详情'],
+        'show' => ['name' => '详情'],
     ],
 ];
