@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\gallerycms\controllers\eale;
+namespace backend\gallerycms\controllers\sinfo;
 
 use Yii;
 use backend\gallerycms\controllers\TdkInfo;
@@ -20,12 +20,15 @@ class TdkInfoController extends TdkInfo
 
     public function getUrlTdkInfos()
     {
-        $type = Yii::$app->request->get('type', 'eale');
-        $tdkInfos = require(Yii::getAlias('@gallerycms') . '/config/eale/tdk-' . $type . '.php');
-        $urlInfos = require(Yii::getAlias('@gallerycms') . '/config/eale/url-' . $type . '.php');
-        $domain = $type == '' ? 'eale' : $type;
-        $pcDomain = Yii::getAlias("@{$domain}.cmsurl");
-        $mobileDomain = Yii::getAlias("@m.{$domain}.cmsurl");
+        $type = Yii::$app->request->get('type', 'sinfo');
+        $siteInfos = require Yii::getAlias('@gallerycms') . '/config/sinfo/site-infos.php';
+        $type = !in_array($type, array_keys($siteInfos)) ? 'sinfo' : $type;
+
+        $tdkInfos = require(Yii::getAlias('@gallerycms') . '/config/sinfo/tdk.php');
+        $urlInfos = require(Yii::getAlias('@gallerycms') . '/config/sinfo/url.php');
+
+        $pcDomain = $siteInfos[$type]['url'];
+        $mobileDomain = $siteInfos[$type]['urlMobile'];
 
         $return = ['currentElem' => $type, 'tdkInfos' => $tdkInfos, 'urlInfos' => $urlInfos, 'pcDomain' => $pcDomain, 'mobileDomain' => $mobileDomain];
         return $return;

@@ -9,6 +9,7 @@ class SinfoController extends Controller
     public $siteCode;
     public $hostInfos;
     public $siteInfos;
+    public $currentSiteInfo;
     public $clientType;
 
     public function init()
@@ -32,6 +33,7 @@ class SinfoController extends Controller
         }
 
         $this->host = $host;
+        $this->currentSiteInfo = $this->siteInfos[$this->siteCode];
         $this->isMobile = $this->clientType == 'mobile' ? true : false;
         if (isset($this->module->viewPath)) {
             $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
@@ -49,13 +51,11 @@ class SinfoController extends Controller
 
     protected function _getTdkInfos()
     {
-        return require(Yii::getAlias('@gallerycms') . '/config/sinfo/tdk-' . $this->siteCode . '.php');
-    }
+        $baseTdkInfos = require(Yii::getAlias('@gallerycms') . '/config/sinfo/tdk.php');
+        foreach ($baseTdkInfos as $key => $value) {
 
-    protected function _getHost($type)
-    {
-        $host = $type == 'mobile' ? Yii::getAlias('@m.sinfo.cmsurl') : Yii::getAlias('@sinfo.cmsurl');
-        return $host;
+        }
+        return $baseTdkInfos;
     }
 
     public function _initAsset()
@@ -64,10 +64,5 @@ class SinfoController extends Controller
         Yii::$app->params['cssFiles'] = $infos['cssFiles'];
         Yii::$app->params['jsFiles'] = $infos['jsFiles'];
         return ;
-    }
-
-    public function getCurrentSiteInfo()
-    {
-        return $this->siteInfos[$this->siteCode];
     }
 }

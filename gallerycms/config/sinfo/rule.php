@@ -54,8 +54,8 @@ $ruleInfos = [
         'only' => [],
         'data' => [
             'suffix' => '/',
-		    'pattern' => Yii::getAlias('@ad.cmsurl') . '/info<tag:_[a-zA-Z]+><page:_[0-9]+>',
-		    'route'	=> '/cmsad/info/index',
+		    'pattern' => '/info<tag:_[a-zA-Z]+><page:_[0-9]+>',
+		    'route'	=> '/sinfo/info/index',
 		    'defaults' => ['page' => '_1', 'tag' => '_'],
         ],
 	],

@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\gallerycms\controllers\eale;
+namespace backend\gallerycms\controllers\sinfo;
 
 use Yii;
 use backend\components\AdminController;
@@ -12,8 +12,8 @@ class InfoController extends AdminController
     public $sort;
     
     use ControllerFullTrait;
-	protected $modelClass = 'gallerycms\eale\models\Info';
-    protected $modelSearchClass = 'gallerycms\eale\models\searchs\Info';
+	protected $modelClass = 'gallerycms\sinfo\models\Info';
+    protected $modelSearchClass = 'gallerycms\sinfo\models\searchs\Info';
 
     public function init()
     {
