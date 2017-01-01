@@ -8,6 +8,7 @@ use yii\data\Pagination as PaginationBase;
 class Pagination extends PaginationBase
 {
     public $pagePreStr;
+    public $noHost;
 
     /**
      * Creates the URL suitable for pagination with the specified page number.
@@ -44,9 +45,17 @@ class Pagination extends PaginationBase
         $params[0] = $this->route === null ? Yii::$app->controller->getRoute() : $this->route;
         $urlManager = $this->urlManager === null ? Yii::$app->getUrlManager() : $this->urlManager;
         if ($absolute) {
-            return $urlManager->createAbsoluteUrl($params);
+            $return = $urlManager->createAbsoluteUrl($params);
         } else {
-            return $urlManager->createUrl($params);
+            $return = $urlManager->createUrl($params);
         }
+
+        if ($this->noHost) {
+            $urlInfos = parse_url($return);
+            $return = isset($urlInfos['path']) ? $urlInfos['path'] : '';
+            $return .= isset($urlInfos['query']) ? $urlInfos['query'] : '';
+        }
+
+        return $return;
     }
 }
