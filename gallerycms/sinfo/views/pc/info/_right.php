@@ -27,14 +27,5 @@
                     <div>全国7×24小时热线服务</div></div>
             </div>
         </li>
-        <!--<li class="ask_ways4">
-            <h3>免费报价</h3>
-            <div class="ask_ways_detail clearfix">
-                <span class="floatL"></span>
-                <div class="detail_txt floatL pop_zixun">
-                    <div>专属专业顾问1对1报价</div>
-                    <a >免费报价</a></div>
-            </div>
-        </li>-->
     </ul>
 </div>

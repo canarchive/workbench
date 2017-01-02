@@ -19,20 +19,20 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
+                <h1 class="gwtg-title gwtg-title01">网站访客手机号抓取</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Baidu</span>最大的中文检索引擎</div>
-                            <div class="con">移动搜索绝对的霸主，全球最大的中文搜索引擎</div></div>
+                                <span>QQ云统计</span>为营销而生</div>
+                            <div class="con">一段神奇的代码，改变了世界、也改变了企业的营销模式</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>sogou</span>借助于输入法成为发展最快的搜索引擎</div>
-                            <div class="con">借助于搜狗输入法，抢占用户市场</div></div>
+                                <span>QQ号云统计</span>免费注册</div>
+                            <div class="con">一段代码，即可获取网站访客手机号码，你值得拥有！</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -40,21 +40,20 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">SEO顾问优势</h1>
+                <h1 class="gwtg-title gwtg-title01">QQ云统计功能</h1>
                 <div class="zmail-p-con">
                     <div class="img floatL">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
-                            <div class="t t02">
-                                关键词排名无明显提升，官网保证全额退款</div>
-                            <div class="con">苦于没有顶级SEO，<?= Yii::$app->params['siteNameBase']; ?>SEO总监亲自操刀，8年经验，值得信赖！</div></div>
+                            <div class="t t02">网站访客手机号抓取统计</div>
+                            <div class="con">迅速三网通关获取无碍、低廉成本低、性价比高</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span></span>只为优质企业提供定制服务，每年只选择10家企业，保证每一个客户都是成功案例。</div>
-                            <div class="con">完全按照搜索引擎官方手册操作，拒绝黑帽，网站优化一步解决！</div></div>
+                                <span></span>网站访客QQ号抓取统计</div>
+                            <div class="con">精准获取访客QQ号码、实时智能邮件推送</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -62,22 +61,16 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">SEO顾问流程</h1>
+                <h1 class="gwtg-title gwtg-title03">安装方法</h1>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
                     <div class="word word-01 floatL">
-                        <!--<div class="gwtg-left">
-                        <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
-                        <div class="con">
-                        利用Facebook上真实的人脉信息，更高效精准的网站宣传公司至目标群体
-                        </div>
-                        </div>-->
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
-                            <div class="t t03">
-                                <span></span>SEO具体服务流程</div>
-                            <div class="con">双方沟通---》确认受理---》报价确认---》签订合同---》收款确认---》顾问开始</div></div>
+                            <!--<div class="t t03"><span>安装方法</span></div>-->
+                            <div class="con">将获取后的代码安装在网站页头Body之前或网站&lt;/body&gt;前，所有页面都需要添加上。目前我们软件支持市面上的绝大部分程序、比如Asp、Php、Java等等，操作系统支持安卓系统、苹果系统、塞班系统等等。</div>
+                            <div class="con">注意：安装时代码默认抓取的是所有区域，如填写推广区域，则只抓取推广区域的访客。请按自己实际推广需求决定是否填写区域。</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -85,23 +78,23 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part gwtg-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title04">Seo搜索引擎优化</h1>
+                <h1 class="gwtg-title gwtg-title04">为营销而生</h1>
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
-                            <a href="javascript:;">强化品牌形象</a>
+                            <a href="javascript:;">精准营销</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">提高用户体验</a>
+                            <a href="javascript:;">客户无限</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">优化流量</a>
+                            <a href="javascript:;">客户管理</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">更多转化</a>
+                            <a href="javascript:;">营销闭环</a>
                             <em></em>
                         </li>
                     </ul>
@@ -114,8 +107,8 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>强化品牌形象</span></div>
-                                        <div class="con">搜索获得正确答案; 确定官方唯一地位; 抑制负面声音</div></div>
+                                            <span>精准营销，抢占先机</span></div>
+                                        <div class="con">轻松获取访客QQ号码及访客来源，从而掌握客户需求，实现精准营销</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -128,9 +121,8 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>提高用户体验</span></div>
-                                        <div class="con">提供用户所需内容，增强满意度
-                                            <br/>及时更新和丰富内容，提高用户回访率和粘稠度</div></div>
+                                            <span>市场广泛，客户无限</span></div>
+                                        <div class="con">访客手机号码抓取，三网通关，获取无碍，成本低廉，高性价比</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -143,9 +135,8 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>优化流量</span></div>
-                                        <div class="con">内容与搜索词相关，有效传递信息
-                                            <br/>提高关键词排名和网站流量；覆盖长尾词</div></div>
+                                            <span>CRM客户管理系统</span></div>
+                                        <div class="con">通过对您网站访客的抓取,对有意向客户进行跟进,大大提升成交量</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -158,47 +149,16 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>更多转化</span></div>
-                                        <div class="con">流量提高，相对的转化数提高
-                                            <br/>内容精准，转化提高；活动或礼品促进转化</div></div>
+                                            <span>打造营销闭环</span></div>
+                                        <div class="con">依托于强大CRM管理系统，对抓取的数据设置加微信好友与邮件推送服务</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br />
-                <br />
-                <br />
-                <br /></div>
+            </div>
         </div>
-        <!--<div class="newz-customer dxal-01">
-        <div class="newz-con">
-        <h1 class="gwtg-title gwtg-title05">产品案例</h1>
-        <div class="con customer-slides">
-        <a class="slid_prev" href="###"></a>
-        <a class="slid_next" href="###"></a>
-        <div class="slid">
-        <ul>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <div class="clear"></div></ul>
-        </div>
-        </div>
-        </div>
-        </div>-->
-        <!-- 免费咨询 begin-->
         <?= $this->render('../common/_ask'); ?>
     </div>
 </div>
-

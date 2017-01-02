@@ -19,20 +19,20 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
+                <h1 class="gwtg-title gwtg-title01">网站访客QQ号抓取</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Baidu</span>最大的中文检索引擎</div>
-                            <div class="con">移动搜索绝对的霸主，全球最大的中文搜索引擎</div></div>
+                                <span>QQ号云统计</span>免费注册</div>
+                            <div class="con">一段代码，即可获取网站访客QQ号码，你值得拥有！</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>sogou</span>借助于输入法成为发展最快的搜索引擎</div>
-                            <div class="con">借助于搜狗输入法，抢占用户市场</div></div>
+                                <span>QQ云统计</span>为营销而生</div>
+                            <div class="con">一段神奇的代码，改变了世界、也改变了企业的营销模式</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -40,7 +40,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">信息流广告</h1>
+                <h1 class="gwtg-title gwtg-title01">QQ云统计功能</h1>
                 <div class="zmail-p-con">
                     <div class="img floatL">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
@@ -48,13 +48,13 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>今日头条</span>中国最大的资讯平台</div>
-                            <div class="con">移动端5.5亿人群每天在今日头条看新闻，信息流是趋势</div></div>
+                                <span></span>网站访客QQ号抓取统计</div>
+                            <div class="con">精准获取访客QQ号码、实时智能邮件推送</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>智慧推</span>全球最大移动广告网络</div>
-                            <div class="con">整合腾讯资讯、娱乐等网络媒体的PC和移动端资源，面向区域企业提供的“品效合一”的营销推广服务</div></div>
+                                <span></span>网站访客手机号抓取统计</div>
+                            <div class="con">迅速三网通关获取无碍、低廉成本低、性价比高</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -62,22 +62,15 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">SEM托管的优势</h1>
+                <h1 class="gwtg-title gwtg-title03">安装方法</h1>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
                     <div class="word word-01 floatL">
-                        <!--<div class="gwtg-left">
-                        <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
-                        <div class="con">
-                        利用Facebook上真实的人脉信息，更高效精准的网站宣传公司至目标群体
-                        </div>
-                        </div>-->
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
-                            <div class="t t03">
-                                <span>SEM</span>根据拓词系统快速找到转化率最高的前300个关键词，优化价格，做到高效投放；</div>
-                            <div class="con">独立开发全流程的SEM托管系统，数据分析一目了然；公司SEM总监亲自操刀诊断，企业内训分享实操经验；专业营销策划，制作高转化着陆页；</div></div>
+                            <div class="con">将获取后的代码安装在网站页头Body之前或网站&lt;/body&gt;前，所有页面都需要添加上。目前我们软件支持市面上的绝大部分程序、比如Asp、Php、Java等等，操作系统支持安卓系统、苹果系统、塞班系统等等。</div>
+                            <div class="con">注意：安装时代码默认抓取的是所有区域，如填写推广区域，则只抓取推广区域的访客。请按自己实际推广需求决定是否填写区域。</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -85,23 +78,23 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part gwtg-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title04">SEM搜索引擎营销</h1>
+                <h1 class="gwtg-title gwtg-title04">为营销而生</h1>
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
-                            <a href="javascript:;">强化品牌形象</a>
+                            <a href="javascript:;">精准营销</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">提高体验</a>
+                            <a href="javascript:;">客户无限</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">拓展关键词</a>
+                            <a href="javascript:;">客户管理</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">更多转化</a>
+                            <a href="javascript:;">营销闭环</a>
                             <em></em>
                         </li>
                     </ul>
@@ -114,8 +107,8 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>强化品牌形象</span></div>
-                                        <div class="con">搜索获得正确答案; 确定官方唯一地位; 抑制负面声音</div></div>
+                                            <span>精准营销，抢占先机</span></div>
+                                        <div class="con">轻松获取访客QQ号码及访客来源，从而掌握客户需求，实现精准营销</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -128,9 +121,8 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>提高用户体验</span></div>
-                                        <div class="con">提供用户所需内容，增强满意度
-                                            <br/>及时更新和丰富内容，提高用户回访率和粘稠度</div></div>
+                                            <span>市场广泛，客户无限</span></div>
+                                        <div class="con">目前QQ占有率超过6亿，流量大，成本低是实行EDM精准营销的好途经</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -143,9 +135,8 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>拓展搜索词</span></div>
-                                        <div class="con">关键词不一定有转化，
-                                            <br/>但是搜索词的转化让企业报名倍增</div></div>
+                                            <span>CRM客户管理系统</span></div>
+                                        <div class="con">通过对您网站访客的抓取,对有意向客户进行跟进,大大提升成交量</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -158,19 +149,15 @@ $this->params['formPositionName'] = '首页量房';
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
-                                            <span>更多转化</span></div>
-                                        <div class="con">流量提高，相对的转化数提高
-                                            <br/>内容精准，转化提高；活动或礼品促进转化</div></div>
+                                            <span>打造营销闭环</span></div>
+                                        <div class="con">依托于强大CRM管理系统，对抓取的数据设置加微信好友与邮件推送服务</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br />
-                <br />
-                <br />
-                <br /></div>
+            </div>
         </div>
         <?= $this->render('../common/_ask'); ?>
     </div>

@@ -5,9 +5,9 @@
                     <!--<a href="javascript:;" >-->
                     <div>
                         <div class="fuwu-main-benefit-pic">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwukuaijie.png" alt="9年实战经验，1600+成功案例" /></div>
-                        <h3>实战</h3>
-                        <p>全国近80家分公司便捷服务</p>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwukuaijie.png" alt="实现网站访客精准营销" /></div>
+                        <h3>精准</h3>
+                        <p>实现网站访客精准营销</p>
                     </div>
                     <!--</a>--></div>
                 <div class="fuwu-main-benefit-pannel">
@@ -50,9 +50,9 @@
                     <!--<a href="javascript:;" >-->
                     <div>
                         <div class="fuwu-main-benefit-pic">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwujisu.png" alt="5倍赔付终端服务的时间" /></div>
-                        <h3>极速</h3>
-                        <p>5倍赔付终端服务的时间</p>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/s-fuwujisu.png" alt="代码经过加速处理，抓取更效率" /></div>
+                        <h3>高效</h3>
+                        <p>代码经过加速处理，抓取更效率</p>
                     </div>
                     <!--</a>--></div>
             </div>

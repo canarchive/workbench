@@ -11,7 +11,6 @@ class SinglePageController extends SinfoController
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
-		$views = ['sheji', 'jianli', 'yanfang', 'kaopu', 'baojia'];
 
 		$datas = [
             'controllerId' => $this->id,
@@ -19,6 +18,11 @@ class SinglePageController extends SinfoController
 		];
 		
 		$this->getTdkInfos('single-page-' . $view);
+
+        if (in_array($view, ['login', 'register'])) {
+            $this->layout = false;
+            $view = 'login';
+        }
 		return $this->render($view, $datas);
 	}
 }

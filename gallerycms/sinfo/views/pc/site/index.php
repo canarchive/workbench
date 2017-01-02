@@ -18,7 +18,7 @@ $this->params['formPositionName'] = '首页量房';
     <?php //echo $this->render('_sample', ['infos' => $sampleInfos]); ?>
     <?= $this->render('_why'); ?>
     <?php //$this->render('_buildweb'); ?>
-    <?= $this->render('_info', ['infos' => $articleInfos]); ?>
+    <?= $this->render('_info', ['infos' => $infoInfos]); ?>
     <?= $this->render('_advantage'); ?>
 </div>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/jquery.flexslider-min.js"></script>

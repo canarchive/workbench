@@ -17,21 +17,18 @@ $this->params['formPositionName'] = '首页量房';
     <div class="container">
         <div class="top_links">
             <a href="/" class="index_link">首页</a><em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '', 'page'=> 1]); ?>">营销学院</a>
-            <?php if (!empty($tagInfos['pInfo'])) { $pInfo = $tagInfos['pInfo']; ?><em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $pInfo['catdir'], 'page'=> 1]); ?>"><?= $pInfo['name']; ?></a>
-            <?php } ?>
-            <?php if (!empty($tagInfos['cInfo'])) { $cInfo = $tagInfos['cInfo']; ?><em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $cInfo['catdir'], 'page'=> 1]); ?>"><?= $cInfo['name']; ?></a>
+            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>">获取访客信息攻略</a>
+            <?php if (!empty($currentSort)) { ?><em>></em>
+            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_' . $currentSort, 'page'=> '_1']); ?>"><?= $currentSortName; ?></a>
             <?php } ?>
         </div>
         <div class="aboutzq">
-            <?= $this->render('_left', ['cInfos' => $tagInfos['cInfos'], 'id' => $tagInfos['id']]); ?>
+            <?= $this->render('_left', ['model' => $model, 'currentSort' => $currentSort]); ?>
             <div class="zq-content floatL">
                 <ul class="media-list-con">
                     <?php foreach ($infos as $info) { ?>
                     <li>
-                        <a href="<?= Url::to(['/cmsad/info/show', 'id' => $info['id']]); ?>">
+                        <a href="<?= Url::to(['/sinfo/info/show', 'id' => $info['id']]); ?>">
                             <div class="t"><?= $info['name']; ?>
                                 <span class="time"><?= date('Y-m-d H:i:s', $info['created_at']); ?></span>
                             </div>
