@@ -5,45 +5,45 @@ use yii\helpers\Url;
     <h2><span>我们的服务</span><!--<a href="">More</a>--></h2>
     <ul class="clearfix">
         <li>
-            <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'sem']); ?>">
+            <a href="/sp-sqq.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/part2-img1.png" alt=""></div>
-                <p>SEM托管</p>
+                <p>QQ抓取</p>
             </a>
         </li>
         <li>
-            <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'seo']); ?>">
+            <a href="/sp-smobile.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/part2-img2.png" alt=""></div>
-                <p>SEO顾问</p>
+                <p>手机号抓取</p>
             </a>
         </li>
         <li>
-            <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
+            <a href="/info/1.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/part2-img3.png" alt=""></div>
-                <p>企业定制</p>
+                <p>营销利器</p>
             </a>
         </li>
         <li>
-            <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
+            <a href="/info/2.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/part2-img4.png" alt=""></div>
-                <p>网站制作</p>
+                <p>使用方法</p>
             </a>
         </li>
         <li>
-            <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
+            <a href="/info/3.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/part2-img5.png" alt=""></div>
-                <p>舆情监控</p>
+                <p>常见问题</p>
             </a>
         </li>
         <li>
-            <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
+            <a href="/sp-register.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/part2-img7.png" alt=""></div>
-                <p>新闻营销</p>
+                <p>免费注册</p>
             </a>
         </li>
     </ul>

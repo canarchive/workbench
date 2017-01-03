@@ -11,15 +11,14 @@ $this->params['jsFiles'] = [
 ?>
 <section class="content">
     <div class="top-banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/5768e79db8966.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/mobile-banner11.jpg" alt=""></div>
     <div class="vone-range m-part vone-part google-ggc">
-        <h2>搜索引擎营销解决方案</h2>
         <div class="m-con">
             <div class="tg-item">
                 <div class="tg-item-t">
                     <span class='square-s'><em></em></span>
                     <span class='square-m'><em></em></span>
-                    <span class='square-l'><em></em></span>搜索引擎
+                    <span class='square-l'><em></em></span>QQ号抓取
                     <span class='square-l'><em></em></span>
                     <span class='square-m'><em></em></span>
                     <span class='square-s'><em></em></span>
@@ -27,51 +26,51 @@ $this->params['jsFiles'] = [
                 <div class="tg-item-det">
                     <div class="tg-item-img">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img1.jpg" alt=""></div>
-                    <h4>Baidu最大的中文检索引擎</h4>
-                    <p>移动搜索绝对的霸主，全球最大的中文搜索引擎</p>
-                    <h4>sogou借助于输入法成为发展最快的搜索引擎</h4>
-                    <p>借助于搜狗输入法，抢占用户市场</p>
+                    <h4>免费体验　只需三步</h4>
+                    <p>注册帐户-部署代码 -获取访客</p>
+                    <h4>为营销而生、马上试试</h4>
+                    <p>已有超过680万多家名客户通过“QQ云统计”实现业绩增长!</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
                     <span class='square-s'><em></em></span>
                     <span class='square-m'><em></em></span>
-                    <span class='square-l'><em></em></span>信息流广告
+                    <span class='square-l'><em></em></span>常见问题
                     <span class='square-l'><em></em></span>
                     <span class='square-m'><em></em></span>
                     <span class='square-s'><em></em></span>
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img2.jpg" alt=""></div>
-                    <h4>今日头条</h4>
-                    <p>移动端5.5亿人群每天在今日头条看新闻，信息流是趋势</p>
-                    <h4>智慧推</h4>
-                    <p>整合腾讯资讯、娱乐等网络媒体的PC和移动端资源，面向区域企业提供的“品效合一”的营销推广服务</p>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img4.jpg" alt=""></div>
+                    <h4>抓取率如何？</h4>
+                    <p>QQ号码的抓取率在20%到40%左右，不同漏洞的接口抓取率不一样。使用过程抓取率会有一定的波动，但不管怎么样，号码都能抓取，只是概率大小而 已，这个是行业现状，介意的话，<b>建议您免费注册自己测试一下</b>，看看效果。</p>
+                    <h4>注意事项</h4>
+                    <p>注册后，我们一个有三个套餐，<b>基础套餐、专业套餐、旗舰套餐</b>，其中基础套餐只能统计QQ号码，<b>只想抓取网站QQ号码的客户请选择此套餐</b>。专业套餐、旗舰套餐<b>可以同时抓取QQ号码和手机号码</b>，想要手机号码和QQ号码的客户请选择这两种套餐，专业套餐、旗舰套餐</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
                     <span class='square-s'><em></em></span>
                     <span class='square-m'><em></em></span>
-                    <span class='square-l'><em></em></span>SEM托管的优势
+                    <span class='square-l'><em></em></span>安装建议
                     <span class='square-l'><em></em></span>
                     <span class='square-m'><em></em></span>
                     <span class='square-s'><em></em></span>
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img3.jpg" alt=""></div>
-                    <h4>SEM系统和经验的结合</h4>
-                    <p>公司SEM总监亲自操刀诊断，企业内训分享实操经验；专业营销策划，制作高转化着陆页；</p>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img5.jpg" alt=""></div>
+                    <h4>如何提升抓取率</h4>
+                    <p>建议代码添加在网站所有页面头部的 标志对中间，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
                     <span class='square-s'><em></em></span>
                     <span class='square-m'><em></em></span>
-                    <span class='square-l'><em></em></span>选择维纳亚的4大理由
+                    <span class='square-l'><em></em></span>选择QQ云统计的四大理由
                     <span class='square-l'><em></em></span>
                     <span class='square-m'><em></em></span>
                     <span class='square-s'><em></em></span>
@@ -83,32 +82,32 @@ $this->params['jsFiles'] = [
                         <div class="range-img">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img1.png" alt=""></div>
                         <div class="range-txt">
-                            <h3>拒绝浪费</h3>
-                            <p>客户做推广要的是“竞价花最少的钱，得到更多的回报”，我们的竞价宗旨也是这样，不做无效果的铺张浪费。</p>
+                            <h3>精准营销</h3>
+                            <p>轻松获取访客手机号码及访客来源，从而掌握客户需求，实现精准营销。</p>
                         </div>
                     </li>
                     <li class='bdb'>
                         <div class="range-img">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img2.png" alt=""></div>
                         <div class="range-txt">
-                            <h3>深度挖掘</h3>
-                            <p>我们会从多维度/多角度/多视野，来分析客户的产品，找出闪光点，加入产品特定优点，力争做到最合理的设置。</p>
+                            <h3>客户无限</h3>
+                            <p>市场广泛，客户无限，号码抓取，三网通关，获取无碍，成本低廉，高性价比。</p>
                         </div>
                     </li>
                     <li class='bdr'>
                         <div class="range-img">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img3.png" alt=""></div>
                         <div class="range-txt">
-                            <h3>注重体验</h3>
-                            <p>用户体验直接影响转化效果，我们会从用户的角度来优化关键词及着陆页，从而提高网站转化率，提高ROI</p>
+                            <h3>管理系统</h3>
+                            <p>客户管理系统、营销跟进系统、统计数据系统、邮件群发系统、短信群发系统等</p>
                         </div>
                     </li>
                     <li>
                         <div class="range-img">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img4.png" alt=""></div>
                         <div class="range-txt">
-                            <h3>持续调整</h3>
-                            <p>我们会根据各种来源，做出分析和统计通过持续调整，账户才能发挥最好的效果，您的账户交给我们托管很放心。</p>
+                            <h3>营销闭环</h3>
+                            <p>打造营销闭环 依托于强大CRM管理系统，对抓取的数据设置自动短信与邮件推送服务</p>
                         </div>
                     </li>
                 </ul>

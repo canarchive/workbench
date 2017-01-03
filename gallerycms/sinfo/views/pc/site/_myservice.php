@@ -3,7 +3,7 @@ use yii\helpers\Url;
 ?>
 <div class="i-m-bg">
     <div class="i-m-center">
-        <h2 class="i-m-h2">一段神奇的代码、改变了世界、也改变了企业的营销模式</h2>
+        <h2 class="i-m-h2">正版绿色获客软件，100%安全，让营销自动化</h2>
         <div class="module">
             <div class="page-products">
                 <div class="w-wrap-inner">
@@ -42,7 +42,7 @@ use yii\helpers\Url;
                                 <div class="main w-fl">
                                     <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
                                         <h3>手机号抓取</h3>
-                                        <span class="descrip">为网络营销而生</span>
+                                        <span class="descrip">拓展精准客户，仅需3秒搞定</span>
                                         <span class="btm">轻松获取访客手机号码，移动、电信、联通三网通关，全国首套移动客户跟单CRM系统，让您成交率直线上升。</span></a>
                                 </div>
                                 <div class="detail w-fl four-item">
@@ -101,7 +101,7 @@ use yii\helpers\Url;
                                 <div class="main w-fl">
                                     <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
                                         <h3>客户系统</h3>
-                                        <span class="descrip">让营销变得更简单</span>
+                                        <span class="descrip">让营销自动化运行</span>
                                         <span class="btm">把更多的网站访客转换为客户，获取到网站访客联系方式后，进行跟踪营销，您还会担心没有订单吗？</span></a>
                                 </div>
                                 <div class="detail w-fl three-item">

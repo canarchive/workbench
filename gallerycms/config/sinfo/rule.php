@@ -37,7 +37,7 @@ $ruleInfos = [
         'mobile' => true,
         'only' => [],
         'data' => [
-            'pattern' => '/<view:(guestbook|friendlink|record|contact|aboutus)>',
+            'pattern' => '/<view:(guestbook|friendlink|record|contactus|aboutus)>',
             'route' => '/sinfo/aboutus/index', 
         ],
     ],
@@ -46,7 +46,7 @@ $ruleInfos = [
         'only' => [],
         'data' => [
             'pattern' => '/<view:(attention|privacy|statement)>',
-            'route' => '/sinfo/aboutus/statement', 
+            'route' => '/sinfo/aboutus/index', 
         ],
     ],
     'info' => [

@@ -6,19 +6,19 @@ use yii\helpers\Url;
     <div class="container">
         <div class="footer-menu">
             <p id="list" class="list">
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'index']); ?>" class="first">关于<?= Yii::$app->params['siteNameBase']; ?></a><span>|</span>
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'attention']); ?>">法律隐私</a><span>|</span>
-                <!--<a target="_blank" href="/job/">工作机会</a><span>|</span>-->
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>">联系我们</a><span>|</span>
-                <!--<a target="_blank" href="/map.html">网站地图</a><span>|</span>-->
-                <!--<a target="_blank" href="<?= Url::to(['/cmsad/aboutus/friendlink']); ?>">友情链接</a><span>|</span>-->
-                <a href="<?= Url::to(['/cmsad/aboutus/guestbook']); ?>" target="_blank">意见反馈</a>
+                <a href="/aboutus.html" class="first">关于<?= Yii::$app->params['siteNameBase']; ?></a><span>|</span>
+                <a href="/attention.html">法律隐私</a><span>|</span>
+                <!--<a href="/job/">工作机会</a><span>|</span>-->
+                <a href="/contactus.html">联系我们</a><span>|</span>
+                <!--<a href="/map.html">网站地图</a><span>|</span>-->
+                <!--<a href="/friendlink.html">友情链接</a><span>|</span>-->
+                <a href="/guestbook.html" target="_blank">意见反馈</a>
             </p>
         </div>
         <div class="copyright">
             <?= Yii::$app->params['siteCopyRightInfo']; ?>
             <br>
-            <a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#999"><?= Yii::$app->params['siteIcpInfo']; ?></a>
+            <a href="http://www.miitbeian.gov.cn/" style="color:#999"><?= Yii::$app->params['siteIcpInfo']; ?></a>
         </div>
         <div class="gzwm">
             <div class="hotLine">客服热线：

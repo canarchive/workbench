@@ -15,9 +15,10 @@ $thumb = $attachmentModel->getFieldInfos('sample', 'thumb');
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'orderlist')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'site_code')->dropDownList($model->siteCodeInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'sort')->dropDownList($model->sortInfos, ['prompt' => '']); ?>
-    <?= $form->field($model, 'thumb')->hiddenInput(); ?>
     <?= $form->field($model, 'tags')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'thumb')->hiddenInput(); ?>
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[thumb]',

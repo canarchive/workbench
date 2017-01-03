@@ -6,33 +6,33 @@ use yii\helpers\Url;
     <div class="m-con">
         <div class="zyy-nav-inner clearfix">
             <div class='nav-item' id="newz">
-                <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'sem']); ?>">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon1.png" alt=""></em>SEM托管</span>
+                <a href="/sp-smobile.html">
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon1.png" alt=""></em>手机号抓取</span>
                 </a>
             </div>
             <div class='nav-item' id="zmobile">
-                <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'seo']); ?>">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon2.png" alt=""></em>SEO顾问</span>
+                <a href="/sp-sqq.html">
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon2.png" alt=""></em>QQ抓取</span>
                 </a>
             </div>
             <div class='nav-item' id="zshop">
-                <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon3.png" alt=""></em>企业定制</span>
+                <a href="/info/1.html">
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon3.png" alt=""></em>营销利器</span>
                 </a>
             </div>
             <div class='nav-item' id="ztouch">
-                <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon4.png" alt=""></em>网站制作</span>
+                <a href="/info/2.html">
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon4.png" alt=""></em>使用方法</span>
                 </a>
             </div>
             <div class='nav-item' id="kexinwangzhan">
-                <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon10.png" alt=""></em>舆情监控</span>
+                <a href="/info/3.html">
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon10.png" alt=""></em>常见问题</span>
                 </a>
             </div>
             <div class='nav-item' id="vone">
-                <a href="<?= Url::to(['/cmsad/mobile-single-page/index', 'view' => 'customizing']); ?>">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon5.png" alt=""></em>新闻营销</span>
+                <a href="/sp-register.html">
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zyy-nav-icon5.png" alt=""></em>免费注册</span>
                 </a>
             </div>
         </div>

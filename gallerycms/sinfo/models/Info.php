@@ -2,6 +2,7 @@
 
 namespace gallerycms\sinfo\models;
 
+use Yii;
 use common\models\GallerycmsModel;
 use yii\helpers\ArrayHelper;
 
@@ -59,6 +60,16 @@ class Info extends GallerycmsModel
 		];	
 		return $datas;
 	}
+
+    public function getSiteCodeInfos()
+    {
+        $datasSource = require Yii::getAlias('@gallerycms') . '/config/sinfo/site-infos.php';
+        $datas = [];
+        foreach ($datasSource as $key => $data) {
+            $datas[$key] = $data['name'];
+        }
+        return $datas;
+    }
 
 	public function getStatusInfos()
 	{

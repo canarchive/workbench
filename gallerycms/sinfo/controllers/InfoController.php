@@ -56,7 +56,7 @@ class InfoController extends SinfoController
 		$datas = [
             'model' => $model,
             'currentSort' => $info['sort'],
-            'currentSortName' => $model->sortInfos[$info['sort']],
+            'currentSortName' => isset($model->sortInfos[$info['sort']]) ? $model->sortInfos[$info['sort']] : '',
 			'info' => $info,
             'infos' => $infos,
 		];
