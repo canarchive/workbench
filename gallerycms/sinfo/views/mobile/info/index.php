@@ -11,7 +11,7 @@ $this->params['jsFiles'] = [
 ?>
 <section class='content'>
     <div class="banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/5768e79db8966.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/5768e79db8966.jpg" alt=""></div>
     <div class="zqdl-content mt0">
         <div class="bd">
             <ul class="zixun-list1">

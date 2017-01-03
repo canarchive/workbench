@@ -13,7 +13,7 @@ $this->params['formPositionName'] = $view;
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
 <style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
-<div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmaile--banner.jpg) no-repeat top center">
+<div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmaile--banner.jpg) no-repeat top center">
     <div class="topimg-con zmail-img pop_zixun">
         <a href="javascript:void(0);" value="1">立即咨询</a></div>
 </div>
@@ -39,19 +39,19 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it2_right">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic1.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic1.png" alt="" /></div>
     </div>
 </div>
 <div class="zyy_item3">
     <div class="zyy_warp">
         <p class="bg">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2_bg.png" alt="" /></p>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic2_bg.png" alt="" /></p>
         <div class="zyy_title">
             <h2></h2>
             <p></p>
         </div>
         <div class="zyy_it3_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic2.png" alt="" /></div>
         <div class="zyy_it3_right">
             <div class="zyy_text">
                 <span class="zyy_text_title">软件介绍</span>
@@ -95,11 +95,11 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it4_right">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic3.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic3.png" alt="" /></div>
     </div>
     <div class="zyy_warp zyy_warp2">
         <div class="zyy_it4_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic4.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic4.png" alt="" /></div>
         <div class="zyy_it4_right zyy_text_box2">
             <div class="zyy_text">
                 <h3>帮客户节省成本是我们最大的责任</h3>

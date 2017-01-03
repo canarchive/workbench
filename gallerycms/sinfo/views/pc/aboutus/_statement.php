@@ -1,18 +1,12 @@
 <div class="about-content floatR">
     <div class="fl-con">
-        <div class="t">关于仿冒<?= Yii::$app->params['siteNameBase']; ?>网站的声明</div>
+        <div class="t"><?= Yii::$app->params['siteNameBase']; ?>网站的声明</div>
         <div class="con">
             <div class="a_privacy">
-                <p style="text-indent:2em">近期发现多家机构和个人以类似我公司的名称，或类似我公司网站界面的平台，仿冒我公司发布信息，严重侵害了我公司客户的权益，损害了我公司的声誉。为此，我们郑重声明如下：</p>
-                <p style="text-indent:2em">1.<?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司成立于1999年9月16日，是中国领先的企业电子商务服务运营商，是南海控股集团旗下中国数码集团的全资子公司，<?= Yii::$app->params['siteNameBase']; ?>的官方网站为http://www.300.cn，全国服务电话为400-660-5555；
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/logoz.jpg">和
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/logox.png">是我公司的注册商标。</p>
-                <p style="text-indent:2em">2.提请广大认准“<?= Yii::$app->params['siteNameBase']; ?>”品牌的用户注意，在合作前谨慎核实公司名称，避免上当受骗。如果发现有自称“<?= Yii::$app->params['siteNameBase']; ?>”的公司，但其公司名称、办公地址，公司网站与正版<?= Yii::$app->params['siteNameBase']; ?>网站的信息不一致的，请拨打官方网站中当地分公司的电话或全国服务电话确认或直接报警。</p>
-                <p style="text-indent:2em">3.对于任何仿冒“<?= Yii::$app->params['siteNameBase']; ?>”名义进行商业活动的单位和个人，我们保留采取进一步法律行动的权利！</p>
+                <p style="text-indent:2em">所有文字、图片和音视频内容，版权均属55jia所有，任何媒体、网站或个人未经本网协议授权不得转载、链接、转贴或以其他方式复制发布。违者本网将依法追究责任。</p>
                 <br>
                 <p>特此声明！</p>
-                <p style="margin-left: 610px;"><?= Yii::$app->params['siteNameBase']; ?>科技股份有限公司</p>
-                <p style="margin-left: 640px;">二零一五年十月十五日</p></div>
+            </div>
         </div>
     </div>
 </div>

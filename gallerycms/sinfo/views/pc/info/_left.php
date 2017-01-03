@@ -21,14 +21,14 @@ use yii\helpers\Url;
                 <i></i>
             </h2>
             <div class="ad-img">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/sinfo/pc/img/about-ad-img2.jpg" alt=""></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt=""></div>
             <p>市场广泛，客户无限</p>
         </a>
     </div>
     <div class="ad-con ad-con3">
         <a href="/sp-sqq.html" target="_blank">
             <h2>QQ号抓取</h2>
-            <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/sinfo/pc/img/about-ad-img3.jpg" alt=""></div>
+            <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img3.jpg" alt=""></div>
             <p>精准营销，抢占先机</p>
         </a>
     </div>

@@ -4,7 +4,7 @@ use yii\helpers\Url;
 <section class="nav">
     <header>
         <div class="logo">
-            <a href="/"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/logo.png" alt=""></a>
+            <a href="/"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/logo.png" alt=""></a>
         </div>
         <div class="close"><a href="javascript:;"></a></div>
     </header>

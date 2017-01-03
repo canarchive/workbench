@@ -13,7 +13,7 @@ $this->params['formPositionName'] = '首页量房';
 ?>
 <div class="section">
     <div class="vone_main">
-        <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/SEO.jpg) no-repeat top center">
+        <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/seo.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
                 <a value="1" href="javascript:void(0);">立即拥有</a></div>
         </div>
@@ -22,7 +22,7 @@ $this->params['formPositionName'] = '首页量房';
                 <h1 class="gwtg-title gwtg-title01">网站访客手机号抓取</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-01.png" alt=""></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
@@ -43,7 +43,7 @@ $this->params['formPositionName'] = '首页量房';
                 <h1 class="gwtg-title gwtg-title01">QQ云统计功能</h1>
                 <div class="zmail-p-con">
                     <div class="img floatL">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-02.png"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
@@ -64,7 +64,7 @@ $this->params['formPositionName'] = '首页量房';
                 <h1 class="gwtg-title gwtg-title03">安装方法</h1>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-03.png"></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
@@ -103,7 +103,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main" style="display:block">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-04.png"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -117,7 +117,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-05.png"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -131,7 +131,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-06.png"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -145,7 +145,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-07.png"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">

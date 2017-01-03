@@ -27,7 +27,7 @@ use yii\helpers\Url;
             <div class="attention">
                 <!--关注我们：<a href="http://weibo.com/weinaya" class="gz-wb" target="_blank">新浪微博</a>-->
                 <div class="ewm">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zqdl-wx.png"></div>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zqdl-wx.png"></div>
             </div>
         </div>
     </div>

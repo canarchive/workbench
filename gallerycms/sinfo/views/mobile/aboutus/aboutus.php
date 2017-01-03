@@ -45,27 +45,27 @@ $this->params['jsFiles'] = [
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img1.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img1.jpg" alt=""></div>
                                 <div class="zz-name">2013年度优秀域名注册服务机构</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img2.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img2.jpg" alt=""></div>
                                 <div class="zz-name">ZtouchS软件著作权登记证书</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img3.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img3.jpg" alt=""></div>
                                 <div class="zz-name">质量管理体系认证证书(中文)</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img4.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img4.jpg" alt=""></div>
                                 <div class="zz-name">Z+软件著作权证书</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img5.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img5.jpg" alt=""></div>
                                 <div class="zz-name">可信网站明星验证服务中心</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img6.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img6.jpg" alt=""></div>
                                 <div class="zz-name">通用网址金牌验证服务中心</div></div>
                         </div>
                         <!-- Add Pagination -->
