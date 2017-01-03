@@ -23,7 +23,7 @@ $this->params['formPositionName'] = $view;
                         <li>
                             <a href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'privacy']); ?>" <?php if ($view == 'privacy') { echo 'class="active"'; } ?>>隐私保护</a></li>
                         <li>
-                            <a href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'statement']); ?>" <?php if ($view == 'statement') { echo 'class="active"'; } ?>>仿冒声明</a></li>
+                            <a href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'statement']); ?>" <?php if ($view == 'statement') { echo 'class="active"'; } ?>>声明</a></li>
                     </ul>
                 </div>
                 <?= $this->render("_{$view}"); ?>

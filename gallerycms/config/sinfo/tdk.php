@@ -1,78 +1,147 @@
 <?php 
 return [
-	'site-index' => [
-        'title' => '{{SITENAME}}网络营销公司-北京专业SEM托管和网络营销外包服务商! ',
-        'keyword' => '网络营销软件,网络营销,网络营销外包',
-        'description' => '网络营销公司{{SITENAME}}专做网络效果营销，为企业提供网络营销培训、SEM托管、网络营销策划、网络营销顾问服务。专业的操盘手配合独立开发的SEM软件，让转化率飞速提升!',
-	],
-	'single-page-sem' => [
-        'title' => 'SEM托管_竞价托管_百度竞价托管费用,多少钱-{{SITENAME}}营销公司',
-        'keyword' => 'SEM托管,竞价托管,百度竞价托管费用,SEM托管多少钱',
-        'description' => '{{SITENAME}}网络营销公司是北京最专业的网络营销外包服务商,为企业提供SEM托管,竞价托管,百度竞价托管费用,SEM托管多少钱,帮助企业降低成本提高转化率。'
-	],
-	'single-page-seo' => [
-        'title' => '北京seo优化_北京seo托管_北京seo顾问服务-{{SITENAME}}营销公司',
-        'keyword' => '北京seo优化,北京seo托管,北京seo顾问服务',
-        'description' => '{{SITENAME}}网络营销公司是北京最专业的网络营销外包服务商,为企业提供北京seo优化,北京seo托管,北京seo顾问服务,帮助企业降低成本提高转化率。',
-	],
-	'single-page-customizing' => [
-        'title' => '企业定制_网站制作_SEO内训_软文推广-{{SITENAME}}营销公司',
-        'keyword' => '网站建设,服务器托管,舆情监控,SEM培训,SEO指导,SMO,新闻营销',
-        'description' => '本网站为您提供定制服务包括：网站建设,服务器托管,舆情监控,SEM培训,SEO指导,SMO,新闻营销。',
-	],
-	'sample-index' => [
-        'title' => '网站营销SEM托管案例汇总-{{SITENAME}}营销公司',
-        'keyword' => '网站营销SEM托管案例',
-        'description' => '网站建设、网站制作营销专家维纳亚为中小企业提供营销解决方案,拥有大量出色的网站营销托管案例',
-	],
-	'sample-show' => [
-        'title' => '{{INFONAME}}-{{SITENAME}}营销公司',
-        'keyword' => '{{INFONAME}}',
-        'description' => '{{DESCRIPTION}}',
-	],
-	'info-index' => [
-        'title' => '{{TAGSTR}}-{{PAGESTR}}{{SITENAME}}营销公司',
-        'keyword' => '{{TAGSTR}}',
-        'description' => '企业营销学院,北京营销学院,企业网络营销；主要提供网络营销,网络推广技术交流,包括seo、百度竞价、微博营销、EDM营销、电子书营销和网站建设方面的交流和培训。',
-	],
-    'info-cat' => [
-        'title' => '{栏目名称}-{{SITENAME}}营销公司',
-        'keyword' => '{栏目名称}',
-        'description' => '{栏目名称}{动态获取当前栏目下面第一篇文章的描述}',
+    // QQ云统计
+    'qqyuntongji' => [
+        'site-index' => [
+            'title' => '网站手机号码抓取软件_手机抓取软件_网站访客qq统计-QQ云统计系统',
+            'keyword' => '手机号码抓取软件，网站手机号码抓取软件，qq访客抓取，网站访客qq统计,抓取手机号码的软件',
+            'description' => '【免费体验】QQ云统计系统专业提供网站访客手机号码抓取软件,网站手机号码抓取软件,网站访客qq统计，qq访客抓取系统,等抓取网站访客手机号码QQ号码的相关软件营销服务。',
+        ],
+        'single-page-smobile' => [
+            'title' => '抓取网站访客手机_网站手机抓取软件_网站访客手机号抓取-QQ云统计',
+            'keyword' => '抓取网站访客手机，网站手机抓取软件，网站访客手机号抓取',
+            'description' => 'QQ云统计，最专业的网站访客手机号抓取统计软件。可实时高效抓取网站访客手机号，您的同行都在用，欢迎免费体验。',
+        ],
+        'single-page-sqq' => [
+            'title' => '网站访客qq统计系统_网站访客qq获取软件_网站访客qq号码抓取-QQ云统计',
+            'keyword' => '网站访客qq统计系统，网站访客qq获取软件，网站访客qq号码抓取，网站访客qq系统',
+            'description' => 'QQ云统计，专业获取网站访客qq统计系统。可实时高效实现网站访客qq号码抓取，580万家企业推荐的网站访客qq获取软件，欢迎免费体验。',
+        ],
     ],
-	'info-show' => [
-        'title' => '{{INFONAME}}-{{TAGSTR}}-{{SITENAME}}营销公司',
-        'keyword' => '{{INFONAME}},{{TAGSTR}}',
-        'description' => '{{INFONAME}},{{DESCRIPTION}}',
-	],
-	'aboutus-index' => [
-        'title' => '关于我们-{{SITENAME}}营销公司',
-        'keyword' => '关于我们',
-        'description' => '北京维纳亚科技有限公司为中小企业提供网站建设、全网营销、域名注册和企业定制化等服务。',
-	],
-	'aboutus-contact' => [
-        'title' => '联系我们-{{SITENAME}}营销公司',
-        'keyword' => '联系我们',
-        'description' => '北京维纳亚科技有限公司 地址：addrees 邮编：100176',
-	],
-    'aboutus-guestbook' => [
-        'title' => '意见反馈-{{SITENAME}}营销公司',
-        'keyword' => '意见反馈',
-        'description' => '{{SITENAME, 意见反馈',
+    // 移动访客精灵
+    'h5tj' => [
+        'site-index' => [
+            'title' => '移动访客精灵',
+            'keyword' => '移动访客精灵',
+            'description' => '移动访客精灵',
+        ],
+        'single-page-smobile' => [
+            'title' => '移动访客精灵',
+            'keyword' => '移动访客精灵',
+            'description' => '移动访客精灵',
+        ],
+        'single-page-sqq' => [
+            'title' => '移动访客精灵',
+            'keyword' => '移动访客精灵',
+            'description' => '移动访客精灵',
+        ],
     ],
-    'aboutus-attention' => [
-        'title' => '法律公告-{{SITENAME}}营销公司',
-        'keyword' => '法律公告',
-        'description' => '{{SITENAME, 法律公告',
+    // 搜客宝访客统计
+    'h5qz' => [
+        'site-index' => [
+            'title' => '搜客宝访客统计',
+            'keyword' => '搜客宝访客统计',
+            'description' => '搜客宝访客统计',
+        ],
+        'single-page-smobile' => [
+            'title' => '搜客宝访客统计',
+            'keyword' => '搜客宝访客统计',
+            'description' => '搜客宝访客统计',
+        ],
+        'single-page-sqq' => [
+            'title' => '搜客宝访客统计',
+            'keyword' => '搜客宝访客统计',
+            'description' => '搜客宝访客统计',
+        ],
     ],
-    'aboutus-privacy' => [
-        'title' => '隐私保护-{{SITENAME}}营销公司',
-        'keyword' => '隐私保护',
-        'description' => '{{SITENAME, 隐私保护',
+    // 松松手机云抓取
+    'shoujiyunzhuaqu' => [
+        'site-index' => [
+            'title' => '松松手机云抓取',
+            'keyword' => '松松手机云抓取',
+            'description' => '松松手机云抓取',
+        ],
+        'single-page-smobile' => [
+            'title' => '松松手机云抓取',
+            'keyword' => '松松手机云抓取',
+            'description' => '松松手机云抓取',
+        ],
+        'single-page-sqq' => [
+            'title' => '松松手机云抓取',
+            'keyword' => '松松手机云抓取',
+            'description' => '松松手机云抓取',
+        ],
     ],
-    'aboutus-statement' => [
-        'title' => '仿冒声明-{{SITENAME}}营销公司',
-        'keyword' => '仿冒声明',
-        'description' => '{{SITENAME, 仿冒声明',
+    // 小蜜蜂手机号码抓取
+    'teltongji' => [
+        'site-index' => [
+            'title' => '小蜜蜂手机号码抓取',
+            'keyword' => '小蜜蜂手机号码抓取',
+            'description' => '小蜜蜂手机号码抓取',
+        ],
+        'single-page-smobile' => [
+            'title' => '小蜜蜂手机号码抓取',
+            'keyword' => '小蜜蜂手机号码抓取',
+            'description' => '小蜜蜂手机号码抓取',
+        ],
+        'single-page-sqq' => [
+            'title' => '小蜜蜂手机号码抓取',
+            'keyword' => '小蜜蜂手机号码抓取',
+            'description' => '小蜜蜂手机号码抓取',
+        ],
+    ],
+    // 云销客抓取
+    'zhuaquyun' => [
+        'site-index' => [
+            'title' => '云销客抓取',
+            'keyword' => '云销客抓取',
+            'description' => '云销客抓取',
+        ],
+        'single-page-smobile' => [
+            'title' => '云销客抓取',
+            'keyword' => '云销客抓取',
+            'description' => '云销客抓取',
+        ],
+        'single-page-sqq' => [
+            'title' => '云销客抓取',
+            'keyword' => '云销客抓取',
+            'description' => '云销客抓取',
+        ],
+    ],
+    // 手机云统计
+    'shoujiyuntongji' => [
+        'site-index' => [
+            'title' => '手机云统计',
+            'keyword' => '手机云统计',
+            'description' => '手机云统计',
+        ],
+        'single-page-smobile' => [
+            'title' => '手机云统计',
+            'keyword' => '手机云统计',
+            'description' => '手机云统计',
+        ],
+        'single-page-sqq' => [
+            'title' => '手机云统计',
+            'keyword' => '手机云统计',
+            'description' => '手机云统计',
+        ],
+    ],
+    // 手机号抓取
+    'shoujihaozhuaqu' => [
+        'site-index' => [
+            'title' => '手机号抓取',
+            'keyword' => '手机号抓取',
+            'description' => '手机号抓取',
+        ],
+        'single-page-smobile' => [
+            'title' => '手机号抓取',
+            'keyword' => '手机号抓取',
+            'description' => '手机号抓取',
+        ],
+        'single-page-sqq' => [
+            'title' => '手机号抓取',
+            'keyword' => '手机号抓取',
+            'description' => '手机号抓取',
+        ],
     ],
 ];

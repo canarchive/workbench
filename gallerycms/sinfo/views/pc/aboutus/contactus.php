@@ -16,7 +16,7 @@ $this->params['formPositionName'] = $view;
         <div class="container">
             <div class="top_links">
                 <a href="/" class="index_link" target="_blank">首页></a>
-                <a href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>" target="_blank">联系我们</a></div>
+                <a href="/contactus.html" target="_blank">联系我们</a></div>
             <div class="server-content">
                 <div class="connect-us">
                     <div class="t">联系方式</div>

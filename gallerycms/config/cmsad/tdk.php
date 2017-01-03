@@ -53,26 +53,26 @@ return [
 	'aboutus-contact' => [
         'title' => '联系我们-{{SITENAME}}营销公司',
         'keyword' => '联系我们',
-        'description' => '北京维纳亚科技有限公司 地址：addrees 邮编：100176',
+        'description' => '{{SITENAME}} 地址：北京市昌平区科星西路106号(国风美唐综合楼)2号楼407室 邮编：102209',
 	],
     'aboutus-guestbook' => [
         'title' => '意见反馈-{{SITENAME}}营销公司',
         'keyword' => '意见反馈',
-        'description' => '{{SITENAME, 意见反馈',
+        'description' => '{{SITENAME}}, 意见反馈',
     ],
     'aboutus-attention' => [
         'title' => '法律公告-{{SITENAME}}营销公司',
         'keyword' => '法律公告',
-        'description' => '{{SITENAME, 法律公告',
+        'description' => '{{SITENAME}}, 法律公告',
     ],
     'aboutus-privacy' => [
         'title' => '隐私保护-{{SITENAME}}营销公司',
         'keyword' => '隐私保护',
-        'description' => '{{SITENAME, 隐私保护',
+        'description' => '{{SITENAME}}, 隐私保护',
     ],
     'aboutus-statement' => [
-        'title' => '仿冒声明-{{SITENAME}}营销公司',
-        'keyword' => '仿冒声明',
-        'description' => '{{SITENAME, 仿冒声明',
+        'title' => '声明-{{SITENAME}}营销公司',
+        'keyword' => '声明',
+        'description' => '{{SITENAME}}, 声明',
     ],
 ];

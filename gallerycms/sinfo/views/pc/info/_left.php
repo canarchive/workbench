@@ -8,36 +8,28 @@ use yii\helpers\Url;
             <?php foreach ($model->sortInfos as $sort => $sortName) { ?>
             <li></li>
             <li class="m1">
-                <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_' . $sort, 'page' => '_1']); ?>" <?php if ($sort == $currentSort) { echo 'class="active"'; } ?>><?= $sortName; ?></a>
+                <a href="/info_<?= $sort; ?>/" <?php if ($sort == $currentSort) { echo 'class="active"'; } ?>><?= $sortName; ?></a>
                 <ul style=""></ul>
             </li>
             <?php } ?>
         </ul>
     </div>
-    <!--<div class="ad-con ad-con1">
-        <a href="<?= Url::to(['/sinfo/sample/index', 'page' => 1]); ?>" target="_blank">
-            <h2>经典案例</h2>
-            <div class="ad-img">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/sinfo/pc/img/about-ad-img1.jpg" alt=""></div>
-            <p>看经典案例，放心建网站</p>
-        </a>
-    </div>-->
     <div class="ad-con ad-con2">
-        <a href="<?= Url::to(['/sinfo/single-page/index', 'view' => 'sem']); ?>" target="_blank">
+        <a href="/sp-smobile.html" target="_blank">
             <h2>
-                <span>SEM推广</span>
+                <span>手机号抓取</span>
                 <i></i>
             </h2>
             <div class="ad-img">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/sinfo/pc/img/about-ad-img2.jpg" alt=""></div>
-            <p><?= Yii::$app->params['siteNameBase']; ?>服务过120万客户</p>
+            <p>市场广泛，客户无限</p>
         </a>
     </div>
     <div class="ad-con ad-con3">
-        <a href="<?= Url::to(['/sinfo/single-page/index', 'view' => 'seo']); ?>" target="_blank">
-            <h2>SEO顾问</h2>
+        <a href="/sp-sqq.html" target="_blank">
+            <h2>QQ号抓取</h2>
             <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/sinfo/pc/img/about-ad-img3.jpg" alt=""></div>
-            <p><?= Yii::$app->params['siteNameBase']; ?>，只拿网站宣传效果说话</p>
+            <p>精准营销，抢占先机</p>
         </a>
     </div>
 </div>

@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
 $urlController = $this->context->isMobile ? 'mobile-aboutus' : 'aboutus';
-$url = Url::to(['/cmsad/' . $urlController . '/record']);
+$url = '/record.html';
 ?>
 <script>
 $(function() {

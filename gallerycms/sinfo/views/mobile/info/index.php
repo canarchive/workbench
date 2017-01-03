@@ -17,7 +17,7 @@ $this->params['jsFiles'] = [
             <ul class="zixun-list1">
                 <?php foreach ($infos as $info) { ?>
                 <li>
-                    <a href="<?= Url::to(['/cmsad/mobile-info/show', 'id' => $info['id']]); ?>">
+                    <a href="/info/<?= $info['id']; ?>.html">
                         <dl>
                             <dt><h4><?= $info['name']; ?></h4></dt>
                             <dd>

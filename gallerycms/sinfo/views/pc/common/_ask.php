@@ -46,6 +46,6 @@ use yii\helpers\Html;
             </form>
         </div>
         <div class="free-tips">我们会尽快联系您，等待期间需要获取更多信息，请
-            <a href="<?= Yii::getAlias('@ad.cmsurl'); ?>">继续访问</a>或
-            <a href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>" >联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
+            <a href="/">继续访问</a>或
+            <a href="/contactus.html" >联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
 </div>
