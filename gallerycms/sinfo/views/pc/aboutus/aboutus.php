@@ -13,7 +13,7 @@ $this->params['formPositionName'] = $view;
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
 <style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
-<div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmaile--banner.jpg) no-repeat top center">
+<div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/banner/aboutus_qqyuntongji.jpg) no-repeat top center">
     <div class="topimg-con zmail-img pop_zixun">
         <a href="javascript:void(0);" value="1">立即咨询</a></div>
 </div>

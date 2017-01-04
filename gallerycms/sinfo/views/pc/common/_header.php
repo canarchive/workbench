@@ -21,7 +21,17 @@ $secondLevels = [
 
 //$topSortInfos = $this->context->topSortInfos;
 ?>
-<style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
+<style>
+#notice{margin-left:13px; } #notice:hover{color: #ec6500;}
+.logo {
+    background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/cmsad/logo/pc_logo_<?= $this->context->siteCode; ?>.png") no-repeat scroll 0 0;
+    height: 56px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 120px;
+}
+</style>
 <div class="section">
     <div class="topmenu">
         <div class="container">

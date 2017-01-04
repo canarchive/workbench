@@ -13,7 +13,7 @@ $this->params['formPositionName'] = '首页量房';
 ?>
 <div class="section">
     <div class="vone_main">
-        <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/seo.jpg) no-repeat top center">
+        <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/banner/smobile_qqyuntongji.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
                 <a value="1" href="javascript:void(0);">立即拥有</a></div>
         </div>

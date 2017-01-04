@@ -8,7 +8,7 @@
 </head>
 <body style="margin:0;padding:0;scroll:none; background: url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/reg.jpg) center repeat-x #ffe5e5">
 <div style="width:100%; margin:0 auto;">
-<p style=" text-align:center; margin-top:200px;"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/log_logo.png" width="280" height="72" alt="QQ云统计登陆"/></p>
+<p style=" text-align:center; margin-top:200px;"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/logo/pc_login_qqyuntongji.png" width="280" height="72" alt="QQ云统计登陆"/></p>
 </div>
 <iframe id="frmDialog" scrolling="no" src="http://tj.tubanzhang.cn/member/reg.php?d=9309" frameborder="0" height="358px" width="100%" style="margin:0 auto;"></iframe>
 <div style="width:100%; margin:0 auto;">

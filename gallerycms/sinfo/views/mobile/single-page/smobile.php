@@ -11,7 +11,7 @@ $this->params['jsFiles'] = [
 ?>
 <section class="content">
     <div class="top-banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/mobile-banner11.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/banner/smobile_<?= $this->context->siteCode; ?>.jpg" alt=""></div>
     <div class="vone-range m-part vone-part google-ggc">
         <div class="m-con">
             <div class="tg-item">

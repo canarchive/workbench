@@ -19,10 +19,13 @@ foreach ($urlInfos as $code => $info) {
     <ul class="breadcrumb">
 <?php
 $subnavString = '';
+$i = 0;
 foreach ($siteInfos as $elem => $elemInfo) {
     $styleStr =  $currentElem == $elem ? 'style="color:#009900;"' : '';
     $urlStr =  $currentElem == $elem ? 'javascript:void(0);' : '?type=' . $elem;
-    $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$elemInfo['name']}</a></li>";
+    $brStr = $i == 3 ? '<br />' : '&nbsp;&nbsp;';
+    $subnavString .= "{$elem}-<li><a href='{$urlStr}' {$styleStr}>{$elemInfo['name']}</a></li>{$brStr}";
+    $i++;
 }
 echo $subnavString;
 ?>
