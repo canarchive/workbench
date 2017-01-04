@@ -18,12 +18,14 @@ foreach ($urlInfos as $code => $info) {
 <div>
     <ul class="breadcrumb">
 <?php
-$elems = ['eale' => '右视觉摄影机构', 'ieale' => '右视觉美学馆', 'iealecn' => '右视觉培训机构'];
 $subnavString = '';
-foreach ($elems as $elem => $elemName) {
+$i = 0;
+foreach ($siteInfos as $elem => $elemInfo) {
     $styleStr =  $currentElem == $elem ? 'style="color:#009900;"' : '';
     $urlStr =  $currentElem == $elem ? 'javascript:void(0);' : '?type=' . $elem;
-    $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$elemName}</a></li>";
+    $brStr = $i == 3 ? '<br />' : '&nbsp;&nbsp;';
+    $subnavString .= "{$elem}-<li><a href='{$urlStr}' {$styleStr}>{$elemInfo['name']}</a></li>{$brStr}";
+    $i++;
 }
 echo $subnavString;
 ?>

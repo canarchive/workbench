@@ -3,7 +3,7 @@ use yii\helpers\Url;
 ?>
 <div class="i-m-bg">
     <div class="i-m-center">
-        <h2 class="i-m-h2">9年SEM托管经验，提供全方位营销解决方案</h2>
+        <h2 class="i-m-h2">正版绿色获客软件，100%安全，让营销自动化</h2>
         <div class="module">
             <div class="page-products">
                 <div class="w-wrap-inner">
@@ -11,92 +11,87 @@ use yii\helpers\Url;
                         <li class="J_item on" style="width:464px ;">
                             <div class="item-inner domain clearfix">
                                 <div class="main w-fl">
-                                    <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" >
-                                        <h3>竞价托管</h3>
-                                        <span class="descrip">一对一定制化解决方案</span>
-                                        <span class="btm">账户托管 = 关键词挖掘 + SEM优化 + 网盟优化 + 数据分析 + 文案策划 + 美工设计</span>
+                                    <a href="/sp-sqq.html">
+                                        <h3>QQ号抓取</h3>
+                                        <span class="descrip">一段代码打开财富</span>
+                                        <span class="btm">轻松获取访客QQ号、昵称、地区等信息！根据访客来源，掌握客户需求，从而进行一键对话，抢占市场先机。</span>
                                     </a>
                                 </div>
                                 <div class="detail w-fl three-item">
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" >
-                                            <span class="tag">账户搭建</span>
+                                        <a href="/sp-sqq.html">
+                                            <span class="tag">免费注册</span>
                                             <span class="price"></span>
-                                            <span class="descrip">分析同行结合公司业务搭建账户</span></a>
+                                            <span class="descrip">现在注册，可免费体验三天</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" >
-                                            <span class="tag">着陆页优化</span>
+                                        <a href="/sp-sqq.html">
+                                            <span class="tag">来源分析</span>
                                             <span class="price"></span>
-                                            <span class="descrip">根据经验和分析同行调整着陆页</span></a>
+                                            <span class="descrip">根据访客关键字，分析客户需求</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" >
-                                            <span class="tag">数据分析</span>
+                                        <a href="/sp-sqq.html">
+                                            <span class="tag">一键对话</span>
                                             <span class="price"></span>
-                                            <span class="descrip">利用我们开发的独有SEM数据分析系统，全方位分析投放数据</span></a>
-                                    </div>
-                                </div>
+                                            <span class="descrip">获取访客QQ后，一键进行对话</span></a>
                             </div>
                         </li>
                         <li class="J_item" style="width:238px ;">
                             <div class="item-inner hosting clearfix">
                                 <div class="main w-fl">
-                                    <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                        <h3>企业定制</h3>
-                                        <span class="descrip">从网站到流量，一站式解决</span>
-                                        <span class="btm">企业定制 = 网站建设+服务器托管+舆情监控+SEM培训+SEO指导+SMO+
-新闻营销</span></a>
+                                    <a href="/sp-smobile.html">
+                                        <h3>手机号抓取</h3>
+                                        <span class="descrip">拓展精准客户，仅需3秒搞定</span>
+                                        <span class="btm">轻松获取访客手机号码，移动、电信、联通三网通关，全国首套移动客户跟单CRM系统，让您成交率直线上升。</span></a>
                                 </div>
                                 <div class="detail w-fl four-item">
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">网站建设</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">免费注册</span>
                                             <span class="price"></span>
-                                            <span class="descrip">营销型网站定制化开发</span></a>
+                                            <span class="descrip">注册后，可联系客服申请免费试用</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">SMO</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">精准定位</span>
                                             <span class="price"></span>
-                                            <span class="descrip">社会化媒体营销矩阵</span></a>
+                                            <span class="descrip">可以按您指定的城市，进行抓取</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">新闻营销</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">来源分析</span>
                                             <span class="price"></span>
-                                            <span class="descrip">新闻源打造公司品牌</span></a>
+                                            <span class="descrip">根据访客搜索词，分析客户需求</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">负面删除</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">超级接口</span>
                                             <span class="price"></span>
-                                            <span class="descrip">提升企业口碑</span></a>
+                                            <span class="descrip">开启超级接口，抓取率飙升5倍</span></a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="J_item " style="width: 238px;">
                             <div class="item-inner cloudmail clearfix">
-                                <!--<div class="main w-fl"><a href="/guoneituiguang.html"  ><strong>网站网站宣传</strong><span class="descrip">有效提升企业品牌影响力</span><span class="btm">覆盖全国近80个城市的服务网络<br>-->
                                 <div class="main w-fl">
-                                    <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'seo']); ?>" >
-                                        <h3>网站SEO</h3>
-                                        <span class="descrip">有效提升企业品牌影响力</span>
-                                        <span class="btm">覆盖全国近80个城市的服务网络
-                                            <br>网站宣传专家面对面提供咨询服务</span></a>
+                                    <a href="/sp-sqq.html">
+                                        <h3>抓取系统</h3>
+                                        <span class="descrip">订单暴涨的秘密</span>
+                                        <span class="btm">一段神奇的代码，改变了世界、也改变了企业的营销模式。一段代码、幸福一生！你值得拥有！</span></a>
                                 </div>
                                 <div class="detail w-fl">
-                                    <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'seo']); ?>" >
+                                    <a href="/sp-sqq.html">
                                         <div class="sort">
-                                            <span class="tag">国内网站宣传</span>
-                                            <span class="price">为中小企业设计开发的“大把推”全网络整合营销服务，覆盖了40大行业1000多个细分行业，与多家商贸网站及知名搜索引擎合作共赢。</span></div>
+                                            <span class="tag">手机号抓取</span>
+                                            <span class="price">您的同行都在用，截止到目前，已为客户抓取手机号码和QQ号码累计达到108亿以上</span></div>
                                     </a>
-                                    <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'seo']); ?>" >
+                                    <a href="/sp-sqq.html">
                                         <div class="sort">
-                                            <span class="tag">搜索引擎优化</span>
+                                            <span class="tag">QQ号抓取</span>
                                             <span class="price"></span>
-                                            <span class="descrip">提供定制化SEO解决方案，针对各大知名搜索引擎做精准营销</span></div>
+                                            <span class="descrip">目前代码全面升级，现打造百度、360、搜狗、神马、竞价全网通，目前服务企业680多万家</span></div>
                                     </a>
                                 </div>
                             </div>
@@ -104,36 +99,30 @@ use yii\helpers\Url;
                         <li class="J_item last" style="width: 238px;">
                             <div class="item-inner website clearfix">
                                 <div class="main w-fl">
-                                    <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                        <h3>企业内训</h3>
-                                        <span class="descrip">实战培训，让企业业绩倍增</span>
-                                        <span class="btm">SEO指导+SEM实战培训，<br />大大降低企业获客成本</span></a>
+                                    <a href="/sp-smobile.html">
+                                        <h3>客户系统</h3>
+                                        <span class="descrip">让营销自动化运行</span>
+                                        <span class="btm">把更多的网站访客转换为客户，获取到网站访客联系方式后，进行跟踪营销，您还会担心没有订单吗？</span></a>
                                 </div>
                                 <div class="detail w-fl three-item">
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">SEO指导</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">邮件群发</span>
                                             <span class="price"></span>
-                                            <span class="descrip">专业实战，落地执行</span></a>
+                                            <span class="descrip">EDM智能主动邮件推送，独家多模板多帐户循环发送</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">SEM培训</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">短信群发</span>
                                             <span class="price"></span>
-                                            <span class="descrip">降低成本70%，只需一礼拜</span></a>
+                                            <span class="descrip">智能推送欢迎短信，随时选择目标客户进行短信群发</span></a>
                                     </div>
                                     <div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">自媒体营销</span>
+                                        <a href="/sp-smobile.html">
+                                            <span class="tag">CRM管理</span>
                                             <span class="price"></span>
-                                            <span class="descrip">矩阵模式，引领品牌新玩法</span></a>
+                                            <span class="descrip">无需购买免费使用，帮您轻松提升业绩，让您销售更简单</span></a>
                                     </div>
-                                    <!--<div class="sort">
-                                        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'customizing']); ?>" >
-                                            <span class="tag">负面删除</span>
-                                            <span class="price"></span>
-                                            <span class="descrip">提升企业口碑</span></a>
-                                    </div>-->
                                 </div>
                             </div>
                         </li>

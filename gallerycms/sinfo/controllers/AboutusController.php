@@ -19,7 +19,7 @@ class AboutusController extends SinfoController
 		];
 		
 		$this->getTdkInfos('aboutus-' . $view);
-        $view = in_array($view, ['aboutus']) ? $view : 'statement';
+        $view = in_array($view, ['aboutus', 'guestbook', 'contactus']) ? $view : 'statement';
 		return $this->render($view, $datas);
 	}
 

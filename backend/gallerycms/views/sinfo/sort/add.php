@@ -1,2 +1,4 @@
 <?php
-include dirname(__DIR__) . '/tag/' . basename(__FILE__);
+$formContent = $this->render('_form', ['model' => $model]);
+
+echo $this->render('@app/views/common/change', ['formContent' => $formContent]);

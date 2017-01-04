@@ -19,11 +19,11 @@ $this->params['formPositionName'] = $view;
                     <ul>
                         <li class="t">法律隐私</li>
                         <li>
-                            <a href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'attention']); ?>" <?php if ($view == 'attention') { echo 'class="active"'; } ?>>法律公告</a></li>
+                            <a href="/attention.html" <?php if ($view == 'attention') { echo 'class="active"'; } ?>>法律公告</a></li>
                         <li>
-                            <a href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'privacy']); ?>" <?php if ($view == 'privacy') { echo 'class="active"'; } ?>>隐私保护</a></li>
+                            <a href="/privacy.html" <?php if ($view == 'privacy') { echo 'class="active"'; } ?>>隐私保护</a></li>
                         <li>
-                            <a href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'statement']); ?>" <?php if ($view == 'statement') { echo 'class="active"'; } ?>>仿冒声明</a></li>
+                            <a href="/statement.html" <?php if ($view == 'statement') { echo 'class="active"'; } ?>>仿冒声明</a></li>
                     </ul>
                 </div>
                 <?= $this->render("_{$view}"); ?>

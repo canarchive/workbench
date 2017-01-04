@@ -2,40 +2,36 @@
 use yii\helpers\Url;
 
 $firstLevels = [
-    ['view' => 'sem', 'name' => 'SEM托管', 'url' => '/sp-sem.html'],
-    ['view' => 'seo', 'name' => 'SEO顾问', 'url' => '/sp-seo.html'],
-    ['view' => 'customizing', 'name' => '企业定制', 'url' => '/sp-customizing.html'],
-    //['controller' => 'sample', 'name' => '成功案例'],
-    ['controller' => 'info', 'tag' => '', 'name' => '营销学院', 'url' => '/info/'],
+    ['view' => 'smobile', 'name' => '手机号抓取', 'url' => '/sp-smobile.html'],
+    ['view' => 'sqq', 'name' => 'QQ号抓取', 'url' => '/sp-sqq.html'],
+    ['view' => 'register', 'name' => '注册', 'url' => '/sp-register.html'],
+    ['view' => 'login', 'name' => '登陆', 'url' => '/sp-login.html'],
     ['controller' => 'aboutus', 'view' => 'index', 'name' => '关于我们', 'url' => '/aboutus.html'],
 ];
 $secondLevels = [
     [],
     [],
-    [
-        ['view' => 'customizing', 'name' => '网站建设', 'url' => '/sp-customizing.html'],
-        ['view' => 'customizing', 'name' => '服务器托管', 'url' => '/sp-customizing.html'],
-        ['view' => 'customizing', 'name' => '舆情监控', 'url' => '/sp-customizing.html'],
-        ['view' => 'customizing', 'name' => 'SEM培训', 'url' => '/sp-customizing.html'],
-        ['view' => 'customizing', 'name' => 'SEO指导', 'url' => '/sp-customizing.html'],
-        ['view' => 'customizing', 'name' => 'SMO', 'url' => '/sp-customizing.html'],
-        ['view' => 'customizing', 'name' => '新闻营销', 'url' => '/sp-customizing.html'],
-    ],
+    [],
     //[],
+    [],
     [
-        ['controller' => 'info', 'tag' => 'yxtg', 'name' => '营销推广', 'url' => '/info_yxtg/'],
-        ['controller' => 'info', 'tag' => 'wzqz', 'name' => '网站权重', 'url' => '/info_wzqz/'],
-        ['controller' => 'info', 'tag' => 'jingjia', 'name' => 'SEM竞价', 'url' => '/info_jingjia/'],
-        ['controller' => 'info', 'tag' => 'seo', 'name' => 'SEO网站', 'url' => '/info_seo/'],
-    ],
-    [
-        ['controller' => 'aboutus', 'view' => 'contact', 'name' => '联系我们', 'url' => '/contact.html'],
+        //['controller' => 'aboutus', 'view' => 'contact', 'name' => '联系我们', 'url' => '/contact.html'],
     ],
 ];
 
 //$topSortInfos = $this->context->topSortInfos;
 ?>
-<style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
+<style>
+#notice{margin-left:13px; } #notice:hover{color: #ec6500;}
+.logo {
+    background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/cmsad/logo/pc_logo_<?= $this->context->siteCode; ?>.png") no-repeat scroll 0 0;
+    height: 56px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 120px;
+}
+</style>
 <div class="section">
     <div class="topmenu">
         <div class="container">

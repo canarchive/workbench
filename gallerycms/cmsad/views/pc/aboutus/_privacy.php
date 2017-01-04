@@ -2,7 +2,7 @@
     <div class="fl-con">
         <div class="t">隐私保护</div>
         <div class="con">
-            <div class="fl_des"><?= Yii::$app->params['siteNameBase']; ?>( www.300.cn)承诺尊重和保护您的隐私，并将此作为<?= Yii::$app->params['siteNameBase']; ?>事业活动的基础和社会责任及义务。因此在您访问<?= Yii::$app->params['siteNameBase']; ?>网站时，<?= Yii::$app->params['siteNameBase']; ?>会尽力帮助您维护互联网个人数据的控制权。</div>
+            <div class="fl_des"><?= Yii::$app->params['siteNameBase']; ?>承诺尊重和保护您的隐私，并将此作为<?= Yii::$app->params['siteNameBase']; ?>事业活动的基础和社会责任及义务。因此在您访问<?= Yii::$app->params['siteNameBase']; ?>网站时，<?= Yii::$app->params['siteNameBase']; ?>会尽力帮助您维护互联网个人数据的控制权。</div>
             <div class="a_privacy">
                 <p class="tt">对您的信息的收集</p>
                 <p>为向您提供更好的服务，我们会要求您在进行产品试用申请、购买、售前咨询等情况下提供您的姓名(或名称)、地址及联络方式，以便我们为您提供快速准确的优质服务。</p>

@@ -17,19 +17,16 @@ $this->params['formPositionName'] = '首页量房';
         <div class="top_links">
             <a href="/" class="index_link">首页</a>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '', 'page'=> 1]); ?>">营销学院</a>
-            <?php if (!empty($tagInfos['pInfo'])) { $pInfo = $tagInfos['pInfo']; ?>
+            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>">营销学院</a>
+            <?php if (!empty($currentSort)) { ?>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $pInfo['catdir'], 'page'=> 1]); ?>"><?= $pInfo['name']; ?></a>
+            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_' . $currentSort, 'page'=> '_1']); ?>"><?= $currentSortName; ?></a>
             <?php } ?>
-            <?php if (!empty($tagInfos['cInfo'])) { $cInfo = $tagInfos['cInfo']; ?>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $cInfo['catdir'], 'page'=> 1]); ?>"><?= $cInfo['name']; ?></a>
-            <?php } ?>
             <a href="javascript:void(0);"><?= $info['name']; ?></a>
         </div>
         <div class="aboutzq">
-            <?= $this->render('_left', ['cInfos' => $tagInfos['cInfos'], 'id' => $tagInfos['id']]); ?>
+            <?= $this->render('_left', ['model' => $model, 'currentSort' => $currentSort]); ?>
             <div class="zq-content floatL">
                 <div class="news-content">
                     <h1 class="title"><?= $info['name']; ?></h1>
@@ -66,7 +63,7 @@ $this->params['formPositionName'] = '首页量房';
                     <ul>
                         <?php $i = 1; foreach ($infos as $value) { if ($value['id'] == $info['id'] || $i > 5) { continue;}?> 
                         <li>
-                            <a href="<?= Url::to(['/cmsad/info/show', 'id' => $value['id']]); ?>" target="_blank">
+                            <a href="<?= Url::to(['/sinfo/info/show', 'id' => $value['id']]); ?>" target="_blank">
                             <span><?= date('Y-m-d', $value['created_at']); ?></span><?= $value['name']; ?>
                             </a>
                         </li>

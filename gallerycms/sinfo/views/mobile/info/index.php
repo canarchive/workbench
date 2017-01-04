@@ -11,13 +11,13 @@ $this->params['jsFiles'] = [
 ?>
 <section class='content'>
     <div class="banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/5768e79db8966.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/5768e79db8966.jpg" alt=""></div>
     <div class="zqdl-content mt0">
         <div class="bd">
             <ul class="zixun-list1">
                 <?php foreach ($infos as $info) { ?>
                 <li>
-                    <a href="<?= Url::to(['/cmsad/mobile-info/show', 'id' => $info['id']]); ?>">
+                    <a href="/info/<?= $info['id']; ?>.html">
                         <dl>
                             <dt><h4><?= $info['name']; ?></h4></dt>
                             <dd>

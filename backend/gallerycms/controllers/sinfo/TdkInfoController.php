@@ -20,17 +20,26 @@ class TdkInfoController extends TdkInfo
 
     public function getUrlTdkInfos()
     {
-        $type = Yii::$app->request->get('type', 'sinfo');
+        $type = Yii::$app->request->get('type', 'qqyuntongji');
         $siteInfos = require Yii::getAlias('@gallerycms') . '/config/sinfo/site-infos.php';
         $type = !in_array($type, array_keys($siteInfos)) ? 'sinfo' : $type;
 
-        $tdkInfos = require(Yii::getAlias('@gallerycms') . '/config/sinfo/tdk.php');
+        $baseTdkInfos = require(Yii::getAlias('@gallerycms') . "/config/sinfo/tdk-base.php");
+        $siteTdkInfos = require(Yii::getAlias('@gallerycms') . "/config/sinfo/tdk.php");
+        $tdkInfos = array_merge($baseTdkInfos, $siteTdkInfos[$type]);
         $urlInfos = require(Yii::getAlias('@gallerycms') . '/config/sinfo/url.php');
 
-        $pcDomain = $siteInfos[$type]['url'];
-        $mobileDomain = $siteInfos[$type]['urlMobile'];
+        $pcDomain = $siteInfos[$type]['pc'];
+        $mobileDomain = $siteInfos[$type]['mobile'];
 
-        $return = ['currentElem' => $type, 'tdkInfos' => $tdkInfos, 'urlInfos' => $urlInfos, 'pcDomain' => $pcDomain, 'mobileDomain' => $mobileDomain];
+        $return = [
+            'currentElem' => $type, 
+            'tdkInfos' => $tdkInfos, 
+            'urlInfos' => $urlInfos, 
+            'pcDomain' => $pcDomain, 
+            'mobileDomain' => $mobileDomain,
+            'siteInfos' => $siteInfos,
+        ];
         return $return;
     }
 }

@@ -17,19 +17,19 @@ $this->params['jsFiles'] = [
                     <div class="bd">
                         <ul class='bd clearfix'>
                             <li class="active">
-                                <h3>为什么选择<?= Yii::$app->params['siteNameBase']; ?>？</h3>
+                                <h3>关于我们</h3>
                                 <div class="txt-con">
                     <div class='txt-con-item1'>
-                        <h4>9年SEM行业经验</h4>
-                        <p>9年SEM实战经验，服务过亿级账户</p>
+                        <h4>倾注多年心血实践研发</h4>
+                        <p>让QQ云统计，如一道闪电横空面世</p>
                     </div>
                     <div class='txt-con-item2'>
-                        <h4>360套</h4>
-                        <p>针对360行专属落地营销解决方案</p>
+                        <h4>提升业绩</h4>
+                        <p>只需三步，锁定精准意向客户</p>
                     </div>
                     <div class='txt-con-item3'>
-                        <h4>品牌合作案例</h4>
-                        <p>全国1000家品牌合作案例，因为专业所以专注</p>
+                        <h4>为营销而生</h4>
+                        <p>一段神奇的代码、改变了世界。</p>
                     </div>
                                 </div>
                             </li>
@@ -45,27 +45,27 @@ $this->params['jsFiles'] = [
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img1.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img1.jpg" alt=""></div>
                                 <div class="zz-name">2013年度优秀域名注册服务机构</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img2.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img2.jpg" alt=""></div>
                                 <div class="zz-name">ZtouchS软件著作权登记证书</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img3.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img3.jpg" alt=""></div>
                                 <div class="zz-name">质量管理体系认证证书(中文)</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img4.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img4.jpg" alt=""></div>
                                 <div class="zz-name">Z+软件著作权证书</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img5.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img5.jpg" alt=""></div>
                                 <div class="zz-name">可信网站明星验证服务中心</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img6.jpg" alt=""></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zz-img6.jpg" alt=""></div>
                                 <div class="zz-name">通用网址金牌验证服务中心</div></div>
                         </div>
                         <!-- Add Pagination -->
@@ -81,21 +81,15 @@ $this->params['jsFiles'] = [
                         <div class="linkus-add">
                             <dl>
                                 <dt>地址：</dt>
-                                <dd>北京市经济技术开发区地盛西路1号 数码庄园A2座</dd></dl>
+                                <dd><?= Yii::$app->params['siteAddressInfo']; ?></dd></dl>
                             <dl>
                                 <dt>邮编：</dt>
                                 <dd>100176</dd></dl>
-                            <dl>
-                                <dt>ADD：</dt>
-                                <dd>Building A2,No.1,Disheng West Road Beijing Econom ic-Technological Development Area</dd></dl>
                         </div>
                         <div class="linkus-ways">
                             <dl>
                                 <dt>电话：</dt>
-                                <dd>400-660-5555</dd></dl>
-                            <dl>
-                                <dt>网址：</dt>
-                                <dd>www.300.cn</dd></dl>
+                                <dd><?= Yii::$app->params['siteHotline']; ?></dd></dl>
                             <dl>
                                 <dt>邮箱：</dt>
                                 <dd>

@@ -5,20 +5,25 @@ return [
 		'pc-url' => '/',
 		'mobile-url' => '/',
     ],
-	'single-page-sem' => [
-		'name' => 'SEM托管',
-		'pc-url' => '/sp-sem.html',
-		'mobile-url' => '/sp-sem.html',
+	'single-page-smobile' => [
+		'name' => '手机号抓取',
+		'pc-url' => '/sp-smobile.html',
+		'mobile-url' => '/sp-smobile.html',
 	],
-	'single-page-seo' => [
-		'name' => 'SEO顾问',
-		'pc-url' => '/sp-seo.html',
-		'mobile-url' => '/sp-seo.html',
+	'single-page-sqq' => [
+		'name' => 'QQ号抓取',
+		'pc-url' => '/sp-sqq.html',
+		'mobile-url' => '/sp-sqq.html',
 	],
-	'single-page-customizing' => [
-		'name' => '企业定制',
-		'pc-url' => '/sp-customizing.html',
-		'mobile-url' => '/sp-customizing.html',
+	'single-page-login' => [
+		'name' => '登陆',
+		'pc-url' => '/sp-login.html',
+		'mobile-url' => '/sp-login.html',
+	],
+	'single-page-register' => [
+		'name' => '注册',
+		'pc-url' => '/sp-register.html',
+		'mobile-url' => '/sp-register.html',
 	],
 	'info-index' => [
 		'name' => '资讯',
@@ -34,17 +39,12 @@ return [
 	],
 	'aboutus-index' => [
 		'name' => '关于我们',
-		'pc-url' => '/aboutus/index.html',
-		'mobile-url' => '/aboutus/index.html',
-	],
-	'aboutus-contact' => [
-		'name' => '联系我们',
-		'pc-url' => '/aboutus/contact.html',
-		//'mobile-url' => '/aboutus/contact.html',
+		'pc-url' => '/aboutus.html',
+		'mobile-url' => '/aboutus.html',
 	],
 	'aboutus-guestbook' => [
 		'name' => '意见反馈',
-		'pc-url' => '/aboutus/guestbook.html',
+		'pc-url' => '/guestbook.html',
 		//'mobile-url' => '/aboutus/guestbook.html',
 	],
 	'aboutus-privacy' => [

@@ -49,5 +49,5 @@ $gridViewParams = [
     ],
 ];
 
-echo $this->render('_nav');
+//echo $this->render('_nav');
 echo $this->render('@app/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
