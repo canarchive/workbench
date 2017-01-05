@@ -21,7 +21,7 @@ $this->params['jsFiles'] = [
                                 <div class="txt-con">
                     <div class='txt-con-item1'>
                         <h4>倾注多年心血实践研发</h4>
-                        <p>让QQ云统计，如一道闪电横空面世</p>
+                        <p>让<?= $this->context->currentSiteInfo['name']; ?>，如一道闪电横空面世</p>
                     </div>
                     <div class='txt-con-item2'>
                         <h4>提升业绩</h4>

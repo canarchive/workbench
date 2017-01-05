@@ -2,9 +2,9 @@
     <ul>
         <li class="" id="yptel" clickCount="true" clickAdd="dhzixun"><em></em>电话咨询</li>
         <li>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=3237822793&site=qq&menu=yes" style="color:#fff;"><em></em>售前咨询</a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" style="color:#fff;"><em></em>售前咨询</a>
         </li>
-        <li class="last"><em></em><a href="/sp-register.html" title="免费注册">免费注册</a></li>
+        <li class="last"><em></em><a href="/sp-register.html" title="免费体验">免费体验</a></li>
     </ul>
     <script>$("#yptel").click(function(j) {
             form.tqCount(this);

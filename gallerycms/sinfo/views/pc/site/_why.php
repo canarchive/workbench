@@ -5,7 +5,7 @@ use yii\helpers\Url;
     <div class="products-why-con">
         <div class="products-why-con-01">
             <h2 class="title">为营销而生、马上试试</h2>
-            <p>已有超过680万多家名客户通过“QQ云统计”实现业绩增长!</p>
+            <p>已有超过680万多家名客户通过“<?= $this->context->currentSiteInfo['name']; ?>”实现业绩增长!</p>
         </div>
         <div class="products-why-con-02">
             <div>

@@ -32,7 +32,7 @@ use yii\helpers\Url;
             </div>
             <div class='nav-item' id="vone">
                 <a href="/sp-register.html">
-                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zyy-nav-icon5.png" alt=""></em>免费注册</span>
+                    <span><em><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/zyy-nav-icon5.png" alt=""></em>免费体验</span>
                 </a>
             </div>
         </div>
