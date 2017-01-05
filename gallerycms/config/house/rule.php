@@ -1,8 +1,19 @@
 <?php
-return [
-    [
-        'pattern' => Yii::getAlias('@cityurl') . '/', 
-        'route' => '/house/site/home', 
-        'suffix' => ''
+return \gallerycms\components\RuleFormat::formatRule([
+    'index' => [
+        'hosts' => ['base'],
+        'data' => [
+            'pattern' => '/', 
+            'route' => '/house/site/index', 
+            'suffix' => ''
+        ],
     ],
-];
+    'mobile-index' => [
+        'hosts' => ['m', '3g', 'wap'],
+        'data' => [
+            'pattern' => '/', 
+            'route' => '/house/mobile-site/index', 
+            'suffix' => ''
+        ],
+    ],
+]);

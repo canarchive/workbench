@@ -7,6 +7,7 @@ use yii\helpers\ArrayHelper;
 
 class HouseCommunity extends GallerycmsModel
 {
+    use HouseTrait;
 	public $region_level1;
 	public $picture;
     /**
