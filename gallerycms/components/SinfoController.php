@@ -31,6 +31,10 @@ class SinfoController extends Controller
         $this->host = $host;
         $this->currentSiteInfo = $this->siteInfos[$this->siteCode];
         Yii::$app->params['siteName'] = $this->currentSiteInfo['name'];
+        Yii::$app->params['siteNameBase'] = $this->currentSiteInfo['name'];
+        Yii::$app->params['siteQQ'] = '2376816784';
+        Yii::$app->params['siteCopyRightInfo'] = "Coptyright&nbsp;&copy;&nbsp;2009-2017&nbsp;{$this->currentSiteInfo['domain']},All&nbsp;rights&nbsp;reserved.&nbsp;";
+        Yii::$app->params['siteIcpInfo'] = $this->currentSiteInfo['icp'];
         $this->isMobile = $this->clientType == 'mobile' ? true : false;
         if (isset($this->module->viewPath)) {
             $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';

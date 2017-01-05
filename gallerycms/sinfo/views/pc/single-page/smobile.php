@@ -8,7 +8,7 @@ $this->params['jsFiles'] = [
     'jquery-1.8.3.min',
 ];
 $this->params['formPosition'] = 'index';
-$this->params['formPositionName'] = '首页量房';
+$this->params['formPositionName'] = '';
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
 <div class="section">
@@ -26,13 +26,13 @@ $this->params['formPositionName'] = '首页量房';
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>QQ云统计</span>为营销而生</div>
-                            <div class="con">一段神奇的代码，改变了世界、也改变了企业的营销模式</div></div>
-                        <div class="gwtg-jg"></div>
+                                <span></span>一段神奇的代码，改变了世界</div>
+                            <div class="con">当有访客用手机访问你的移动站时，系统会自动获取访客的手机号码、搜索关键词、地区，等相关访客信息。三网通关、全国首套精准移动客户跟单系统，助您成交率直线上升。</div></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>QQ号云统计</span>免费注册</div>
-                            <div class="con">一段代码，即可获取网站访客手机号码，你值得拥有！</div></div>
+                                <span></span>好消息</div>
+                            <div class="con">现在购买“专业版”赠送60个免费手机配额，购买“旗舰版”赠送120个免费手机配额。（手机配额是专门抓手机号的）目前正式开通产品的用户,我们还将免费赠送价值超过两万元的销售技巧教程,请开通后联系客服索取! </div></div>
+                        <div class="gwtg-jg"></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -40,20 +40,20 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">QQ云统计功能</h1>
+                <h1 class="gwtg-title gwtg-title01"><?= $this->context->currentSiteInfo['name']; ?>功能</h1>
                 <div class="zmail-p-con">
                     <div class="img floatL">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-02.png"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
-                            <div class="t t02">网站访客手机号抓取统计</div>
-                            <div class="con">迅速三网通关获取无碍、低廉成本低、性价比高</div></div>
+                            <div class="t t02">注意事项</div>
+                            <div class="con">注册后，我们一个有三个套餐，基础套餐、专业套餐、旗舰套餐，其中基础套餐只能统计QQ号码，如想抓取手机号访客，请使用专业套餐或者旗舰套餐，此二款可以同时抓取手机号码和QQ号码，<b>需要抓取手机号码的请一定要注意选择专业套餐或旗舰套餐。</b></div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span></span>网站访客QQ号抓取统计</div>
-                            <div class="con">精准获取访客QQ号码、实时智能邮件推送</div></div>
+                                <span></span>抓取率如何？</div>
+                            <div class="con">手机号抓取<b>开通超级接口</b>后大约在<b>15%到20%</b>甚至更多，抓取率主要取决于客户的访问渠道，如果都是使用手机本身流量来访问的话，抓取率会更高。我们说的15%到%是一个综合对比的概率。<b>建议您免费体验自己测试一下</b>，看看效果。另外QQ号码的抓取率在20%到40%左右，不同漏洞的接口抓取率不一样。</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -69,7 +69,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <!--<div class="t t03"><span>安装方法</span></div>-->
-                            <div class="con">将获取后的代码安装在网站页头Body之前或网站&lt;/body&gt;前，所有页面都需要添加上。目前我们软件支持市面上的绝大部分程序、比如Asp、Php、Java等等，操作系统支持安卓系统、苹果系统、塞班系统等等。</div>
+                            <div class="con">安装时，建议代码添加在网站所有页面头部&lt;/head&gt;标签前面，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。另外，我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</div>
                             <div class="con">注意：安装时代码默认抓取的是所有区域，如填写推广区域，则只抓取推广区域的访客。请按自己实际推广需求决定是否填写区域。</div></div>
                     </div>
                     <div class="clear"></div>
@@ -108,7 +108,7 @@ $this->params['formPositionName'] = '首页量房';
                                     <div class="gwtg-left">
                                         <div class="t t01">
                                             <span>精准营销，抢占先机</span></div>
-                                        <div class="con">轻松获取访客QQ号码及访客来源，从而掌握客户需求，实现精准营销</div></div>
+                                        <div class="con">轻松获取访客手机号及访客来源，从而掌握客户需求，实现精准营销</div></div>
                                 </div>
                                 <div class="clear"></div>
                             </div>

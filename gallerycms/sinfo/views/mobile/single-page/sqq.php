@@ -29,7 +29,7 @@ $this->params['jsFiles'] = [
                     <h4>免费体验　只需三步</h4>
                     <p>注册帐户-部署代码 -获取访客</p>
                     <h4>为营销而生、马上试试</h4>
-                    <p>已有超过680万多家名客户通过“QQ云统计”实现业绩增长!</p>
+                    <p>已有超过680万多家名客户通过“<?= $this->context->currentSiteInfo['name']; ?>”实现业绩增长!</p>
                 </div>
             </div>
             <div class="tg-item">
@@ -63,14 +63,14 @@ $this->params['jsFiles'] = [
                     <div class="tg-item-img">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img5.jpg" alt=""></div>
                     <h4>如何提升抓取率</h4>
-                    <p>建议代码添加在网站所有页面头部的 标志对中间，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</p>
+                    <p>安装时，建议代码添加在网站所有页面头部&lt;/head&gt;标签前面，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。另外，我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
                     <span class='square-s'><em></em></span>
                     <span class='square-m'><em></em></span>
-                    <span class='square-l'><em></em></span>选择QQ云统计的四大理由
+                    <span class='square-l'><em></em></span>选择<?= $this->context->currentSiteInfo['name']; ?>的四大理由
                     <span class='square-l'><em></em></span>
                     <span class='square-m'><em></em></span>
                     <span class='square-s'><em></em></span>

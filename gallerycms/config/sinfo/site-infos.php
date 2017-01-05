@@ -2,35 +2,43 @@
 $siteInfos = [
     'h5tj' => [
         'domain' => 'h5tj.com',
+        'icp' => '京ICP备10039249-1号',
         'name' => '移动访客精灵',
     ],
     'h5qz' => [
         'domain' => 'h5qz.com',
+        'icp' => '京ICP备10039249-2号',
         'name' => '搜客宝访客统计',
     ],
     'shoujiyunzhuaqu' => [
         'domain' => 'shoujiyunzhuaqu.com',
+        'icp' => '京ICP备10039249-3号',
         'name' => '松松手机云抓取',
     ],
     'teltongji' => [
+        'icp' => '京ICP备10039249-4号',
         'domain' => 'teltongji.com',
         'name' => '小蜜蜂手机号码抓取',
     ],
     'zhuaquyun' => [
         'domain' => 'zhuaquyun.com',
+        'icp' => '京ICP备10039249-4号',
         'name' => '云销客抓取',
     ],
     'shoujiyuntongji' => [
         'domain' => 'shoujiyuntongji.com',
+        'icp' => '京ICP备10039249-4号',
         'name' => '手机云统计',
     ],
     'shoujihaozhuaqu' => [
         'domain' => 'shoujihaozhuaqu.com',
+        'icp' => '京ICP备10039249-4号',
         'name' => '手机号抓取',
     ],
     'qqyuntongji' => [
         'domain' => 'qqyuntongji.com',
-        'name' => 'qq云统计',
+        'icp' => '京ICP备10039249-4号',
+        'name' => 'QQ云统计',
     ],
 ];
 $str = $strReal = $strTdk = '';

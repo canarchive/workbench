@@ -45,7 +45,7 @@ $ruleInfos = [
         'mobile' => true,
         'only' => [],
         'data' => [
-            'pattern' => '/<view:(attention|privacy|statement)>',
+            'pattern' => '/<view:(attention|privacy|statement|agreement)>',
             'route' => '/sinfo/aboutus/index', 
         ],
     ],

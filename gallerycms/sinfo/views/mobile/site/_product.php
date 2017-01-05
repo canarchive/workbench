@@ -43,7 +43,7 @@ use yii\helpers\Url;
             <a href="/sp-register.html">
                 <div class="img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/part2-img7.png" alt=""></div>
-                <p>免费注册</p>
+                <p>免费体验</p>
             </a>
         </li>
     </ul>

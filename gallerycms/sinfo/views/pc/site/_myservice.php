@@ -19,8 +19,8 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="detail w-fl three-item">
                                     <div class="sort">
-                                        <a href="/sp-sqq.html">
-                                            <span class="tag">免费注册</span>
+                                        <a href="/sp-register.html">
+                                            <span class="tag">免费体验</span>
                                             <span class="price"></span>
                                             <span class="descrip">现在注册，可免费体验三天</span></a>
                                     </div>
@@ -47,8 +47,8 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="detail w-fl four-item">
                                     <div class="sort">
-                                        <a href="/sp-smobile.html">
-                                            <span class="tag">免费注册</span>
+                                        <a href="/sp-register.html">
+                                            <span class="tag">免费体验</span>
                                             <span class="price"></span>
                                             <span class="descrip">注册后，可联系客服申请免费试用</span></a>
                                     </div>

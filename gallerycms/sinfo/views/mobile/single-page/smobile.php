@@ -47,7 +47,7 @@ $this->params['jsFiles'] = [
                     <h4>注意事项</h4>
                     <p>注册后，我们一个有三个套餐，基础套餐、专业套餐、旗舰套餐，其中基础套餐只能统计QQ号码，如想抓取手机号访客，请使用专业套餐或者旗舰套餐，此二款可以同时抓取手机号码和QQ号码，<b>需要抓取手机号码的请一定要注意选择专业套餐或旗舰套餐。</b></p>
                     <h4>抓取率如何？</h4>
-                    <p>手机号抓取<b>开通超级接口</b>后大约在<b>15%到20%</b>甚至更多，抓取率主要取决于客户的访问渠道，如果都是使用手机本身流量来访问的话，抓取率会更高。我们说的15%到%是一个综合对比的概率。<b>建议您免费注册自己测试一下</b>，看看效果。另外QQ号码的抓取率在20%到40%左右，不同漏洞的接口抓取率不一样。</p>
+                    <p>手机号抓取<b>开通超级接口</b>后大约在<b>15%到20%</b>甚至更多，抓取率主要取决于客户的访问渠道，如果都是使用手机本身流量来访问的话，抓取率会更高。我们说的15%到%是一个综合对比的概率。<b>建议您免费体验自己测试一下</b>，看看效果。另外QQ号码的抓取率在20%到40%左右，不同漏洞的接口抓取率不一样。</p>
                 </div>
             </div>
             <div class="tg-item">
@@ -63,14 +63,14 @@ $this->params['jsFiles'] = [
                     <div class="tg-item-img">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img5.jpg" alt=""></div>
                     <h4>如何提升抓取率</h4>
-                    <p>建议代码添加在网站所有页面头部的 标志对中间，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</p>
+                    <p>安装时，建议代码添加在网站所有页面头部&lt;/head&gt;标签前面，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。另外，我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</p>
                 </div>
             </div>
             <div class="tg-item">
                 <div class="tg-item-t">
                     <span class='square-s'><em></em></span>
                     <span class='square-m'><em></em></span>
-                    <span class='square-l'><em></em></span>选择QQ云统计的四大理由
+                    <span class='square-l'><em></em></span>选择<?= $this->context->currentSiteInfo['name']; ?>的四大理由
                     <span class='square-l'><em></em></span>
                     <span class='square-m'><em></em></span>
                     <span class='square-s'><em></em></span>

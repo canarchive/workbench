@@ -19,6 +19,8 @@ $this->params['formPositionName'] = $view;
                     <ul>
                         <li class="t">法律隐私</li>
                         <li>
+                            <a href="/agreement.html" <?php if ($view == 'agreement') { echo 'class="active"'; } ?>>注册协议</a></li>
+                        <li>
                             <a href="/attention.html" <?php if ($view == 'attention') { echo 'class="active"'; } ?>>法律公告</a></li>
                         <li>
                             <a href="/privacy.html" <?php if ($view == 'privacy') { echo 'class="active"'; } ?>>隐私保护</a></li>

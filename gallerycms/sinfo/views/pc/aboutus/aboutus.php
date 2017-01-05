@@ -34,7 +34,7 @@ $this->params['formPositionName'] = $view;
             <div class="zyy_text">
                 <h3>我们的目标</h3>
                 <div class="txt">
-                    <p>不断提升产品水平,为客户带来更大价值! 倾注多年的心血研究与实践，日以继夜的研发出了“QQ云统计”，帮助我们的客户，花费更少的成本，获取更多的潜在客户，创造更好的业绩。</p>
+                    <p>不断提升产品水平,为客户带来更大价值! 倾注多年的心血研究与实践，日以继夜的研发出了“<?= $this->context->currentSiteInfo['name']; ?>”，帮助我们的客户，花费更少的成本，获取更多的潜在客户，创造更好的业绩。</p>
                 </div>
             </div>
         </div>
@@ -56,13 +56,13 @@ $this->params['formPositionName'] = $view;
             <div class="zyy_text">
                 <span class="zyy_text_title">软件介绍</span>
                 <div class="txt">
-                    <p>QQ云统计、是专门针对营销推广来获取网站访客手机号与QQ号的专业统计软件，从而来达到让营销变得更简单，截止到目前，已为客户抓取手机号码和QQ号码累计达到108亿以上</p>
+                    <p><?= $this->context->currentSiteInfo['name']; ?>、是专门针对营销推广来获取网站访客手机号与QQ号的专业统计软件，从而来达到让营销变得更简单，截止到目前，已为客户抓取手机号码和QQ号码累计达到108亿以上</p>
                 </div>
             </div>
             <div class="zyy_text">
                 <span class="zyy_text_title">功能介绍</span>
                 <div class="txt">
-                    <p>历经6年，QQ云统计现以集成QQ抓取、手机抓取、CRM管理系统、智能QQ对话弹窗、智能主动推送、访客关键词来路分析、数据分析等功能，可对客户CRM管理系统的客户进行精准的电话、EDM、QQ和短信营销等，功能与技术国内前茅！</p>
+                    <p>历经6年，<?= $this->context->currentSiteInfo['name']; ?>现以集成QQ抓取、手机抓取、CRM管理系统、智能QQ对话弹窗、智能主动推送、访客关键词来路分析、数据分析等功能，可对客户CRM管理系统的客户进行精准的电话、EDM、QQ和短信营销等，功能与技术国内前茅！</p>
                 </div>
             </div>
             <div class="zyy_text">
@@ -79,7 +79,7 @@ $this->params['formPositionName'] = $view;
 <div class="zyy_item4">
     <div class="zyy_warp zyy_warp1">
         <div class="zyy_title">
-            <h2>使用QQ云统计，您能获得什么？</h2>
+            <h2>使用<?= $this->context->currentSiteInfo['name']; ?>，您能获得什么？</h2>
             <p>让营销变得更简单</p>
         </div>
         <div class="zyy_it4_left zyy_text_box2">
@@ -104,7 +104,7 @@ $this->params['formPositionName'] = $view;
             <div class="zyy_text">
                 <h3>帮客户节省成本是我们最大的责任</h3>
                 <div class="txt">
-                    <p>如果您使用了QQ云统计，一个月您将获得至少100*30 = 3000个精准客户的联系方式. 就算只有十分之一的客户购买了您的产品或服务,那也有超过300单的成交量. 以每单50元利润来计算,每个月QQ云统计将帮助您多赚300*50=15000元. 如果您没有使用QQ云统计,那么您将损失大量的精准客户,每一个网站访客都需要我们付出很大的成本,您想眼睁睁看着他们流失吗? 现在QQ云统计可以免费试用三天,您只需要注册帐号,获取代码并添加到您的网站就可以使用,像添加统计代码一样简单,完全免费,不收任何费用,感觉效果满意再购买,不满意直接去掉统计代码即可!让您完全无任何后顾之忧!早用早受益! </p>
+                    <p>如果您使用了<?= $this->context->currentSiteInfo['name']; ?>，一个月您将获得至少100*30 = 3000个精准客户的联系方式. 就算只有十分之一的客户购买了您的产品或服务,那也有超过300单的成交量. 以每单50元利润来计算,每个月<?= $this->context->currentSiteInfo['name']; ?>将帮助您多赚300*50=15000元. 如果您没有使用<?= $this->context->currentSiteInfo['name']; ?>,那么您将损失大量的精准客户,每一个网站访客都需要我们付出很大的成本,您想眼睁睁看着他们流失吗? 现在<?= $this->context->currentSiteInfo['name']; ?>可以免费试用三天,您只需要注册帐号,获取代码并添加到您的网站就可以使用,像添加统计代码一样简单,完全免费,不收任何费用,感觉效果满意再购买,不满意直接去掉统计代码即可!让您完全无任何后顾之忧!早用早受益! </p>
                 </div>
             </div>
         </div>

@@ -25,6 +25,7 @@ class CmsadController extends Controller
             //return Yii::$app->response->redirect($url)->send();
             exit();
         }
+        Yii::$app->params['siteCustomServiceQQ'] = '1298115377';
 
         if (isset($this->module->viewPath)) {
             $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
