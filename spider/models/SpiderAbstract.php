@@ -35,14 +35,19 @@ class SpiderAbstract extends SpiderModel
     {
         foreach ($infos as $info) {
             $fileSuffix = '';
-            $file = $this->listFile();
+            $file = $info->listFile();
             $info->status = 1;
             $info->updated_at = Yii::$app->params['currentTime'];
             if ($this->fileExist($file)) {
+                //echo $file . '<br />';
                 $info->update();
                 continue;
             }
-            $content = file_get_contents($info['url_source']);
+            //$header = get_headers($info['url_source']);
+            //echo "wget -O {$info['id']}-{$info['page']}.html {$info['url_source']}<br />";
+            //continue ;
+            //$content = file_get_contents($info['url_source']);
+            $content = $this->getRemoteContent($info['url_source']);
             $this->writeFile($file, $content);
             $info->update();
         }
