@@ -9,7 +9,7 @@ Trait ShowTrait
 
     public function showSpider($siteCode)
     {
-        $where = ['source_site_code' => $siteCode, 'source_status' => 0];
+        $where = ['source_status' => 0];
         $infos = $this->_getShowInfos($where, 100);
         $num = 0;
         foreach ($infos as $info) {
@@ -21,16 +21,19 @@ Trait ShowTrait
                 $info->update();
                 continue;
             }
-            $content = @ file_get_contents($url);
-            //$content = $this->getRemoteContent($url);
+            //$content = @ file_get_contents($url);
+            $content = $this->getRemoteContent($url);
             //echo strlen($content);
             if ($content) {
                 $num++;
                 $this->writeFile($file, $content);
             } else {
-                $header = @ get_headers($url);
-                $info->source_url_header = isset($header[0]) ? $header[0] : '';
-                $info->source_status = -1;
+                $num++;
+
+                echo "wget -O {$info['id']}.html {$info['source_url']}<br />";
+                //$header = @ get_headers($url);
+                //$info->source_url_header = isset($header[0]) ? $header[0] : '';
+                $info->source_status = 1;
             }
             $info->update();
         }
@@ -39,8 +42,9 @@ Trait ShowTrait
 
     public function show($siteCode)
     {
-        $where = ['source_site_code' => $siteCode, 'source_status' => 1];
-        $infos = $this->_getShowInfos($where, 500);
+        $where = ['source_status' => 1];
+        $infos = $this->_getShowInfos($where, 1000);
+        $num = 0;
         foreach ($infos as $info) {
             $file = $info->showFile();
             if (!$this->fileExist($file)) {
@@ -50,37 +54,115 @@ Trait ShowTrait
             }
             $crawler = new Crawler();
             $crawler->addContent($this->getContent($file));
-            //echo $file;exit();
 
-            $attrs = $crawler->filter('.pr30 span');
-            $count = count($attrs);
-            if ($count < 3) {
-                echo $info['source_url'] . '<br />';
-                $info->source_status = -1;
+            $siteCode = $info['source_site_code'];
+            //if ($siteCode == 'laiyixia') {
+            //if ($siteCode == 'baisou') {
+            //if ($siteCode == 'sousuopai') {
+            //if ($siteCode == 'lrblog') {
+            if ($siteCode == 'sogou') {
+            //if ($siteCode == '92991') {
+            //if ($siteCode == '51soudao') {
+            //if ($siteCode == 'qqluowang') {
+                $method = "_{$siteCode}Show";
+                $this->$method($crawler, $info);
+                $info->status = 1;
+                //print_r($info);exit();
                 $info->update(false);
-                continue;
+                $num++;
             }
-            $created_at = $attrs->eq(0)->text();//nodeValue;
-            $created_at = strtotime($created_at);
-            $author = $attrs->eq(1)->text();//nodeValue;
-            $author = trim(str_replace('来源：', '', $author));
-            $editor = trim($attrs->eq(2)->text());//nodeValue;
-            $pos = strpos($editor, '【');
-            $editor = $pos != false ? substr($editor, 0, $pos) : $editor;
-            $editor = str_replace('编辑：', '', $editor);
-            //echo $created_at . '==' . $from_source . '==' . $editor;
-            $content = trim($crawler->filter('#ctrlfscont')->html());
-            $content = preg_replace("'<script(.*?)<\/script>'is", '', $content);
-            $content = strip_tags($content, '<p>');
-            //echo $content;exit();
-
-            $info->created_at = $created_at;
-            $info->author = $author;
-            $info->editor = $editor;
-            $info->content = $content;
-            $info->source_status = 2;
-            //print_r($info);exit();
-            $info->update(false);
         }
+
+        echo $num;
+    }
+
+    protected function _qqluowangShow($crawler, & $info)
+    {
+        $content = $crawler->filter('.art_con');
+        if (count($content) < 1) {
+            echo $info['id'];
+            echo $info['source_url'] . '<br />';
+            exit();
+        }
+        $content = $content->html();
+
+        $ad1 = $crawler->filter('.art_con h1');
+        $ad1 = count($ad1) > 0 ? $ad1->html() : '';
+        $ad2 = $crawler->filter('.art_con .p');
+        $ad2 = count($ad2) > 0 ? $ad2->html() : '';
+        $content = str_replace([$ad1, $ad2], ['', ''], $content);
+        $info->content = $content;
+        $info->source_status = 2;
+    }
+
+    protected function _sogouShow($crawler, & $info)
+    {
+        $info->content = trim($crawler->filter('.rich_media_content ')->html());
+        $info->source_status = 2;
+    }
+
+    protected function _51soudaoShow($crawler, & $info)
+    {
+        $info->content = trim($crawler->filter('.ncontent')->html());
+        $info->source_status = 2;
+    }
+
+    protected function _92991Show($crawler, & $info)
+    {
+        $time = trim($crawler->filter('.collb_la p span')->text());
+        preg_match('#(\d+-\d+-\d+ \d+:\d+)#Us', $time, $result);
+        $time = isset($result[0]) ? $result[0] : false;
+        $info->created_at = !empty($time) ? strtotime($time) : $info->created_at;
+        $info->content = trim($crawler->filter('.collb_lb')->html());
+        $info->source_status = 2;
+    }
+
+    protected function _lrblogShow($crawler, & $info)
+    {
+        $content = trim($crawler->filter('.entry')->html());
+        $ad = $crawler->filter('.entry .gggpost-above')->html();
+        $content = str_replace($ad, '', $content);
+        $info->content = $content;
+        $tags = $crawler->filter('.post-tag a');
+        $tagStr = '';
+        if (count($tags) > 0) {
+            foreach ($tags as $tag) {
+                $tagStr .= $tag->nodeValue . ',';
+            }
+        }
+        $info->tags = $tagStr;
+        echo $info->tags . '<br />';
+        $info->source_status = 2;
+    }
+
+    protected function _sousuopaiShow($crawler, & $info)
+    {
+        $time = trim($crawler->filter('h4')->text());
+        preg_match('#(\d+-\d+-\d+ \d+:\d+:\d+)#Us', $time, $result);
+        $time = isset($result[0]) ? $result[0] : false;
+        $info->created_at = !empty($time) ? strtotime($time) : $info->created_at;
+        $content = trim($crawler->filter('.nr_text')->html());
+        $content = preg_replace('#<script.*</script>#Us', '', $content);
+        //echo strlen($content);exit();
+        $info->content = $content;
+        $info->source_status = 2;
+    }
+
+    protected function _baisouShow($crawler, & $info)
+    {
+        $content = trim($crawler->filter('.text')->html());
+        //$content = preg_match('#<h1>.*</h3>#Us', $content, $r);
+        $content = preg_replace('#<h1>.*</h3>#Us', '', $content);
+        $info->content = $content;
+        $info->source_status = 2;
+    }
+
+    protected function _laiyixiaShow($crawler, & $info)
+    {
+        $created_at = trim($crawler->filter('.newsInfo .hd span')->text());
+        $created_at = str_replace('发布时间：', '', $created_at);
+        $info->created_at = strtotime($created_at);
+        $info->content = trim($crawler->filter('.newsInfo .bd')->html());
+        $info->source_status = 2;
     }
 }

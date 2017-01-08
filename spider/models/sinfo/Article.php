@@ -2,6 +2,7 @@
 
 namespace spider\models\sinfo;
 
+use Yii;
 use common\models\GallerycmsModel;
 
 class Article extends GallerycmsModel
@@ -11,20 +12,14 @@ class Article extends GallerycmsModel
         return '{{%article}}';
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
+    public static function getDb()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return Yii::$app->dbSinfo;
     }
 
     public function showFile()
     {
-        $file = "{$this->source_site_code}/show/{$this->category_code_first}/{$this->category_code}/{$this->source_id}.html";
+        $file = "sinfo/{$this->source_site_code}/show/{$this->id}.html";
         return $file;
     }
 }
