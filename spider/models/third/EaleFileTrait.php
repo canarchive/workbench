@@ -12,8 +12,8 @@ Trait EaleFileTrait
         $where = ['source_status' => 0];
         $infos = $model->find()->where($where)->limit(300)->all();
         //$localBase = 'http://sj.shedaojia.com/';
-        $localBase = 'http://60.205.145.0/common/upload/third/';
-        $pathBase = '/data/htmlwww/common/upload/third/';
+        $localBase = 'http://upthird.up.acanstudio.com/';
+        $pathBase = '/data/htmlwww/filesys/upthird/';
         foreach ($infos as $info) {
             $sFile = $info['source_url'];
             $sFile = strpos($sFile, '@') !== false ? substr($sFile, intval(strpos($sFile, '@')) + 1) : $sFile;

@@ -10,8 +10,8 @@ Trait EaleShowTrait
     public function spiderShow($siteCode)
     {
         $where = ['source_status' => 0];
-        //$infos = $this->_getShowInfos($where, 100);
-        $infos = $this->_getShowSamples($where, 100);
+        $infos = $this->_getShowInfos($where, 100);
+        //$infos = $this->_getShowSamples($where, 100);
         $num = 0;
         foreach ($infos as $info) {
             $info->source_status = 1;
@@ -41,8 +41,8 @@ Trait EaleShowTrait
     public function dealShow($siteCode)
     {
         $where = ['source_status' => 1];
-        //$infos = $this->_getShowInfos($where, 100);
-        $infos = $this->_getShowSamples($where, 100);
+        $infos = $this->_getShowInfos($where, 100);
+        //$infos = $this->_getShowSamples($where, 100);
         foreach ($infos as $info) {
             $file = $info->showFile();
             if (!$this->fileExist($file)) {
@@ -92,8 +92,8 @@ Trait EaleShowTrait
     public function dealContent($siteCode)
     {
         $where = ['source_status' => 1];
-        //$infos = $this->_getShowSamples($where, 100);
-        $infos = $this->_getShowInfos($where, 100);
+        $infos = $this->_getShowSamples($where, 100);
+        //$infos = $this->_getShowInfos($where, 100);
         foreach ($infos as $info) {
             $name = $info['name'];
 
@@ -109,16 +109,16 @@ Trait EaleShowTrait
                 }
                 $sFile = $url['url'];
                 $sFile = strpos($sFile, '@') !== false ? substr($sFile, intval(strpos($sFile, '@')) + 1) : $sFile;
-                $pre = '/data/htmlwww/common/upload/third/eale/picbefore/';
+                $pre = '/data/htmlwww/filesys/upthird/eale/picbefore/';
                 $file = $pre . $sFile;
                 if (!file_exists($file)) {
                     echo 'no--' . $file . '<br />';
                     return $str;
                 }
-                $preNew = '/data/htmlwww/common/upload/third/eale/content/';
+                $preNew = '/data/htmlwww/filesys/upthird/eale/content/';
                 $fileNew = $preNew . $sFile;
                 copy($file, $fileNew);
-                $newUrl = str_replace('/data/htmlwww/common/upload/', 'http://60.205.145.0/common/upload/', $fileNew);
+                $newUrl = str_replace('/data/htmlwww/filesys/upthird/', 'http://upthird.up.acanstudio.com/', $fileNew);
                 $str = preg_replace('/src=".*"/', "src='{$newUrl}'", $str);
                 //print_r($matches);
                 return $str;
