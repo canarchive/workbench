@@ -11,7 +11,7 @@ trait EaleDealTrait
     public function dealInfoList()
     {
         $sorts = [
-            'eale' => ['eale-info-list.html', 'eale-info-list-2.html'],
+            'eale' => ['eale-info-list.html', 'eale-info-list-2.html', 'eale-info-list-3.html'],
             'ieale' => ['ieale-info-list.html'],
             'iealecn' => ['iealecn-info-list.html'], 
             'train' => ['iealecn-info-train.html'],

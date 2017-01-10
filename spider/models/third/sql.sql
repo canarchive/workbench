@@ -29,3 +29,7 @@ UPDATE `wc_adpicture` SET `orderlist` = 1000 - `id`;
 UPDATE `wc_sample` SET `orderlist` = 1000 - `id`;
 UPDATE `wc_sample` SET `sort` = 'studentwork' WHERE `sort` = 'studentworks';
 UPDATE `wc_info` SET `orderlist` = 1000 - `id`;
+
+
+UPDATE `wc_info` SET `content` = REPLACE(`content`,'http://upcms.up.acanstudio.com', 'http://upthird.up.acanstudio.com') WHERE 1 ;
+UPDATE `wc_sample` SET `content` = REPLACE(`content`,'http://upcms.up.acanstudio.com', 'http://upthird.up.acanstudio.com') WHERE 1 ;
