@@ -13,17 +13,12 @@ class ModuleBase extends \yii\base\Module
      */
     public $defaultRoute = '';
     public $currentCityCode;
+    public $cityCodeValid = true;
 
     public function init()
     {
         parent::init();
-        //echo $this->viewPath;exit();
-        //$this->viewPath = '@gallerycms/views/house';
         $this->layout = 'main';
-        //$this->layoutPath = Yii::getAlias('@app/info/views');
-
-        Yii::$app->params['companyInfos'] = $this->getCompanyInfos();
-        Yii::$app->params['currentCompany'] = $this->getCurrentCompany();
     }
 
     protected function getCompanyInfos()
@@ -43,9 +38,9 @@ class ModuleBase extends \yii\base\Module
         $session = Yii::$app->session;
         //$session['current_company'] = [];
         $currentCompany = isset($session['current_company']) ? $session['current_company'] : [];
-        $currentCode = isset($currentCompany['code_short']) ? $currentCompany['code_short'] : '';
+        $currentCode = isset($currentCompany['code']) ? $currentCompany['code'] : '';
         if (!empty($currentCode) && (is_null($code) || $currentCode == $code)) {
-            //return $currentCompany;
+            return $currentCompany;
         }
 
         $company = new Company();
@@ -55,8 +50,11 @@ class ModuleBase extends \yii\base\Module
             return $info;
         }
 
-        $info = $company->getInfoByCodeShort($code);
-        $info = empty($info) ? $company->getInfoByIP() : $info;
+        $info = $company->getInfoByCode($code);
+        if (empty($info)) {
+            $this->cityCodeValid = false;
+            $info = $company->getInfoByIP();
+        }
         $session['current_company'] = $info;
         return $info;
     }
