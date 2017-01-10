@@ -21,7 +21,7 @@ class Sample extends GallerycmsModel
      */
     public static function tableName()
     {
-        return '{{%house_sample}}';
+        return '{{%sample}}';
     }
 
     /**

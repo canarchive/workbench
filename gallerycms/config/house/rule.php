@@ -8,11 +8,11 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => ''
         ],
     ],
-    'mobile-index' => [
-        'hosts' => ['m', '3g', 'wap'],
+    'city-index' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
-            'pattern' => '/', 
-            'route' => '/house/mobile-site/index', 
+            'pattern' => '/<city_code:\w+>/', 
+            'route' => '/house/site/index', 
             'suffix' => ''
         ],
     ],

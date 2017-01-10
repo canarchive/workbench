@@ -3,7 +3,7 @@ use yii\helpers\Html;
 
 foreach ($urlInfos as $code => $info) {
     if (isset($info['pc-url'])) {
-        $info['pc-url'] = 'http://' . str_replace('{{DOMAIN}}', $domain, $info['pc-url']);
+        $info['pc-url'] = "http://{$domain}{$info['pc-url']}";
     }
     if (isset($info['mobile-url'])) {
         $info['mobile-url'] = Yii::getAlias('@m.gallerycmsurl') . $info['mobile-url'];
