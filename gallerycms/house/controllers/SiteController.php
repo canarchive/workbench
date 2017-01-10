@@ -11,11 +11,6 @@ use gallerycms\house\models\Sample;
 
 class SiteController extends HouseController
 {
-	public function actionHome()
-	{
-		return $this->actionIndex();
-	}
-
 	public function actionIndex()
 	{
 		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];

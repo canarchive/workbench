@@ -2,8 +2,8 @@
 return [
     'merchant-index' => [
 		'name' => '商家首页',
-		'pc-url' => 'sj-jz.{{DOMAIN}}/',
-		'mobile-url' => 'm.{{DOMAIN}}/sj-jz/',
+		'pc-url' => 'http://sj-jz.{{DOMAIN}}/',
+		'mobile-url' => '/sj-jz/',
     ],
     'merchant-realcase' => [
 		'name' => '商家案例',
@@ -27,7 +27,7 @@ return [
     ],
     'merchant-info' => [
 		'name' => '商家详情',
-		'pc-url' => 'bj.{{DOMAIN}}/jzjj-1.html',
-		'mobile-url' => '/bj/jzjj-1.html',
+		'pc-url' => '/beijing/show_jz.html',
+		'mobile-url' => '/beijing/show_jz.html',
     ],
 ];

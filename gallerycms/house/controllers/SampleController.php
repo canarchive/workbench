@@ -5,7 +5,7 @@ namespace gallerycms\house\controllers;
 use Yii;
 use yii\web\NotFoundHttpException;
 use gallerycms\components\HouseController;
-use gallerycms\house\models\HouseSample;
+use gallerycms\house\models\Sample;
 
 class SampleController extends HouseController
 {
@@ -16,8 +16,8 @@ class SampleController extends HouseController
 
 	protected function _list()
 	{
-		$tag = Yii::$app->request->get('tag', '');
-		$model = new HouseSample();
+		/*$tag = Yii::$app->request->get('tag', '');
+		$model = new Sample();
 		$houseSortInfos = $model->houseSortInfos;
 		$tagInfos = $model->formatTag($tag, $houseSortInfos);
 		if ($tagInfos === false) {
@@ -42,9 +42,10 @@ class SampleController extends HouseController
 			$tagStr .= $houseSortInfos[$tagKey]['values'][$tagValue];
 		}
 		//$tagStr = rtrim($tagStr, '-');
-		$pageStr = $page > 1 ? "_第{$page}页-" : '-';
+        $pageStr = $page > 1 ? "_第{$page}页-" : '-';*/
+        $datas = [];
 
-		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
+		$dataTdk = [];//['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('sample-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
@@ -52,7 +53,7 @@ class SampleController extends HouseController
 	public function actionShow()
 	{
         $id = \Yii::$app->getRequest()->get('id');
-        $model = new HouseSample();
+        /*$model = new Sample();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
             return $this->redirect('/')->send();
@@ -74,9 +75,9 @@ class SampleController extends HouseController
 		}
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-		$this->getTdkInfos('sample-show', $dataTdk);
+        $this->getTdkInfos('sample-show', $dataTdk);*/
 		$datas = [
-			'info' => $info,
+			'info' => [],//$info,
 		];
 		return $this->render('show', $datas);
 	}

@@ -5,6 +5,21 @@ return [
 		'pc-url' => '/beijing/',
 		'mobile-url' => '/beijing/',
     ],
+    'sample-list' => [
+		'name' => '案例列表',
+		'pc-url' => '/sample/',
+		'mobile-url' => '/sample/',
+    ],
+    'sample-list-1' => [
+		'name' => '案例列表',
+		'pc-url' => '/sample/h_two-s_mediterranean-a/50/',
+		'mobile-url' => '/sample/h_two-s_mediterranean-a/50/',
+    ],
+    'sample-show' => [
+		'name' => '案例详情',
+		'pc-url' => '/sample-1.html',
+		'mobile-url' => '/sample-1.html',
+    ],
     'merchant-list' =>  [
 		'name' => '商家列表',
 		'pc-url' => '/beijing/merchant/',
@@ -29,21 +44,6 @@ return [
 		'name' => '实景详情',
 		'pc-url' => '/beijing/realcase-1.html',
 		'mobile-url' => '/beijing/realcase-1.html',
-    ],
-    'sample-list' => [
-		'name' => '案例列表',
-		'pc-url' => '/beijing/sample/',
-		'mobile-url' => '/beijing/sample/',
-    ],
-    'sample-list-1' => [
-		'name' => '案例列表',
-		'pc-url' => '{{CMS-DOMAIN}}/meitu/h_two-s_mediterranean-a_50.html',
-		'mobile-url' => '/meitu/h_two-s_mediterranean-a_50.html',
-    ],
-    'sample-show' => [
-		'name' => '案例详情',
-		'pc-url' => '{{CMS-DOMAIN}}/mt-1.html',
-		'mobile-url' => '/mt-1.html',
     ],
 	'info-aboutus' => [
 		'name' => '关于我们',

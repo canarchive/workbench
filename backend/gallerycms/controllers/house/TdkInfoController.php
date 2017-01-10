@@ -19,8 +19,12 @@ class TdkInfoController extends TdkInfo
 
     public function getUrlTdkInfos()
     {
-        $tdkInfos = require(Yii::getAlias('@gallerycms') . '/config/house/tdk.php');
-        $urlInfos = require(Yii::getAlias('@gallerycms') . '/config/house/url.php');
+        $tdkMerchant = require(Yii::getAlias('@gallerycms') . '/config/merchant/tdk.php');
+        $tdkHouse = require(Yii::getAlias('@gallerycms') . '/config/house/tdk.php');
+        $tdkInfos = array_merge($tdkHouse, $tdkMerchant);
+        $urlMerchant = require(Yii::getAlias('@gallerycms') . '/config/merchant/url.php');
+        $urlHouse = require(Yii::getAlias('@gallerycms') . '/config/house/url.php');
+        $urlInfos = array_merge($urlHouse, $urlMerchant);
 
         return ['tdkInfos' => $tdkInfos, 'urlInfos' => $urlInfos];
     }

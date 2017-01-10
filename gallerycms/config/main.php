@@ -10,6 +10,7 @@ $routeRules = array_merge(
     require(__DIR__ . '/merchant/rule.php'),
     require(__DIR__ . '/house/rule.php')
 );
+//print_r($routeRules);exit();
 
 return [
     'id' => 'app-gallerycms',
