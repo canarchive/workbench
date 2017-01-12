@@ -30,7 +30,7 @@ class Controller extends CommonController
 
         $placeholder = array_merge(
             [
-                '{{CITYNAME}}',
+                //'{{CITYNAME}}',
                 '{{SITENAME}}',
                 '{{BASETITLE}}',
                 '{{BASEKEYWORD}}',
@@ -39,7 +39,7 @@ class Controller extends CommonController
         );
         $replace = array_merge(
             [
-                Yii::$app->params['currentCompany']['name'],
+                //Yii::$app->params['currentCompany']['name'],
                 Yii::$app->params['siteName'],
                 $default['title'],
                 $default['keyword'],
