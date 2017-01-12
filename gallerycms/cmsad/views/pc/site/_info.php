@@ -13,14 +13,10 @@ use yii\helpers\StringHelper;
             <li <?php if ($i == 4) { echo ' class="last"'; } ?>>
                 <div class="top clearfix">
                     <h3 class="title floatL"><?= $info['name']; ?></h3>
-                    <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $tag, 'page' => 1]); ?>" target='_blank' class="more floatR">More
+                    <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_' . $tag, 'page' => '_1']); ?>" target='_blank' class="more floatR">More
                         <span></span></a>
                 </div>
                 <div class="con">
-                    <!--<div class="img">
-                        <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $tag, 'page' => 1]); ?>" >
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zx.png" alt="<?= $info['name']; ?>" /></a>
-                    </div>-->
                     <dl>
                         <?php foreach ($info['subInfos'] as $data) { ?>
                         <dt>

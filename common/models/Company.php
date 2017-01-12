@@ -123,7 +123,7 @@ class Company extends PassportModel
         $city = IP::find($ip);
         $city = isset($city[1]) ? $city[1] : '北京';
         $info = $this->findOne(['name' => $city]);
-        $info = empty($info) ? $this->findOne(['code_short' => 'bj']) : $info;
+        $info = empty($info) ? $this->findOne(['code' => 'beijing']) : $info;
         return $info;
     }
 
