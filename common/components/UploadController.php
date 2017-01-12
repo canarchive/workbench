@@ -22,7 +22,7 @@ class UploadController extends \yii\web\Controller
     public function behaviors()
     {
         header("Access-Control-Allow-Origin:*");
-        return ArrayHelper::merge([
+        return ArrayHelper::merge(parent::behaviors(), [
             [
                 'class' => Cors::className(),
                 'cors' => [
@@ -30,7 +30,7 @@ class UploadController extends \yii\web\Controller
                     'Access-Control-Request-Method' => ['GET', 'HEAD', 'POST', 'OPTIONS'],
                 ],
             ],
-        ], parent::behaviors());
+        ]);
     }
 
     public function actionIndex()

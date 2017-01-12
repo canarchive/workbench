@@ -10,7 +10,6 @@ $seoKeyword = isset($tdkInfos['keyword']) ? $tdkInfos['keyword'] : Yii::$app->pa
 $seoDescription = isset($tdkInfos['description']) ? $tdkInfos['description'] : Yii::$app->params['seoDescription'];
 $formPosition = isset($this->params['formPosition']) ? $this->params['formPosition'] : '';
 $formPositionName = isset($this->params['formPositionName']) ? $this->params['formPositionName'] : '';
-$mobileMappingUrl = isset($this->context->mobileMappingUrl) ? $this->context->mobileMappingUrl : '';
 $cssAllFiles = isset(Yii::$app->params['cssFiles']) ? Yii::$app->params['cssFiles'] : [];
 $jsAllFiles = isset(Yii::$app->params['jsFiles']) ? Yii::$app->params['jsFiles'] : [];
 $faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] : Yii::getAlias('@asseturl') . '/backend/img/favicon-fb.ico';
@@ -34,7 +33,13 @@ $faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] :
 <meta name="format-detection" content="address=no">
 <meta name="format-detection" content="telephone=no">
 <meta content="false" name="twcClient" id="twcClient" />
-
+<?php if ($this->context->isMobile) { ?>
+<link rel="canonical" href="<?= $this->context->pcMappingUrl; ?>">
+<?php } else { ?>
+<meta http-equiv="mobile-agent" content="format=xhtml;url=<?= $this->context->mobileMappingUrl; ?>" />
+<meta http-equiv="mobile-agent" content="format=html5;url=<?= $this->context->mobileMappingUrl; ?>" />
+<meta http-equiv="mobile-agent" content="format=wml;url=<?= $this->context->mobileMappingUrl; ?>" />
+<?php } ?>
 
 <title><?= $seoTitle; ?></title>
 <meta name="description" content="<?= $seoDescription; ?>" />
@@ -50,12 +55,6 @@ $faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] :
 <script type="text/javascript" src="<?= $jsFile; ?>"></script>
 <?php } } ?>
 <script type="text/javascript">
-<?php if (isset($this->adaptive)) { ?>
-var isMobile = '<?= intval($this->context->isMobile); ?>';
-if (isMobile == 1) {
-    window.location.href = "<?= $mobileMappingUrl; ?>";
-}
-<?php } ?>
 window.BASE_URL = "<?= Yii::getAlias('@gallerycmsurl'); ?>";
 window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
 </script>
