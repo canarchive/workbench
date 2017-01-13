@@ -18,7 +18,7 @@ use yii\helpers\Url;
             </div>
             <div class="swiper-slide">
                 <a href="/sp-sqq.html">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/banner/index_<?= $this->context->siteCode; ?>_4.png" alt=""></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/banner/index_<?= $this->context->siteCode; ?>_4.jpg" alt=""></a>
             </div>
         </div>
         <!-- Add Pagination -->

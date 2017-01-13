@@ -11,9 +11,8 @@ class SiteController extends CmsadController
 {
 	public function actionIndex()
 	{
-		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];
 		$datas = [
-			'articleInfos' => $this->getArticleInfos($where),
+			'articleInfos' => $this->getArticleInfos(),
 			'sampleInfos' => $this->getSampleInfos(),
 		];
 		$this->getTdkInfos('site-index');

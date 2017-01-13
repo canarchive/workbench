@@ -6,6 +6,7 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 $routeRules = array_merge(
+    ['tmp' => '/tmp/test'],
     require(__DIR__ . '/cmsad/rule.php'),
     require(__DIR__ . '/sinfo/rule.php')
 );

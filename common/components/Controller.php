@@ -7,6 +7,9 @@ use yii\web\Controller as YiiController;
 
 class Controller extends YiiController
 {
+	public $pcMappingUrl;
+	public $mobileMappingUrl;
+
     /**
      * @inheritdoc
      */

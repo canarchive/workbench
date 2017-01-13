@@ -99,7 +99,7 @@ class Article extends GallerycmsModel
         $cInfos = $cModel->getDatas('catdir');
         //print_r($cInfos);exit();
         $levelInfos = $cModel->getlevelDatas();
-        $catdirs = ['yxtg', 'wzqz', 'jingjia', 'SEO'];
+        $catdirs = ['yxtg', 'wzqz', 'jingjia', 'seo'];
         $cDatas = [];
         foreach ($catdirs as $catdir) {
             $id = $cInfos[$catdir]['id'];

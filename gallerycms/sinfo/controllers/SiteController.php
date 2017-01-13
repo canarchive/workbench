@@ -11,9 +11,8 @@ class SiteController extends SinfoController
 {
 	public function actionIndex()
 	{
-		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];
 		$datas = [
-			'infoInfos' => $this->getInfoInfos($where),
+			'infoInfos' => $this->getInfoInfos(),
 			//'sampleInfos' => $this->getSampleInfos(),
 		];
 		$this->getTdkInfos('site-index');
