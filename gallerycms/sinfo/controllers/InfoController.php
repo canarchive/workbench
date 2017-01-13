@@ -16,7 +16,7 @@ class InfoController extends SinfoController
 		$page = ltrim(Yii::$app->request->get('page'), '_');
         $tag = ltrim(Yii::$app->request->get('tag'), '_');
 
-        $where = [];//['status' => 1, 'site_code' => $this->siteCode];
+        $where = ['status' => 1];
         $where = empty($tag) ? $where : array_merge($where, ['sort' => $tag]);
 		$model = new Info();
         $orderBy = ['created_at' => SORT_DESC];
