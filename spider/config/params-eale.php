@@ -2,10 +2,10 @@
 return [
     'spiderActions' => [
         //'getTags' => ['name' => '获取作品标签'],
-        //'spiderSite' => ['name' => '获取整站页面'],
-        //'spiderTag' => ['name' => '获取标签页面'],
-        //'spiderList' => ['name' => '获取列表页面'],
-        //'spiderShow' => ['name' => '新闻详情采集'],
+        'spiderSite' => ['name' => '获取整站页面'],
+        'spiderTag' => ['name' => '获取标签页面'],
+        'spiderList' => ['name' => '获取列表页面'],
+        'spiderShow' => ['name' => '新闻详情采集'],
 
         //'spiderCustomer' => ['name' => '合作客户'],
         //'spiderStar' => ['name' => '合作艺人l'],
