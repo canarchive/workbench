@@ -16,4 +16,40 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => '/'
         ],
     ],
+    'working-list' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '/',
+    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/working/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'route'	=> '/house/working/index',
+    		'defaults' => ['page' => 1, 'tag' => ''],
+        ],
+    ],
+    'realcase-list' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '/',
+    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/realcase/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'route'	=> '/house/realcase/index',
+    		'defaults' => ['page' => 1, 'tag' => ''],
+        ],
+    ],
+    'designer-list' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '/',
+    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/designer/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'route'	=> '/house/designer/index',
+    		'defaults' => ['page' => 1, 'tag' => ''],
+        ],
+    ],
+    'comment-list' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '/',
+    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/comment/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'route'	=> '/house/comment/index',
+    		'defaults' => ['page' => 1, 'tag' => ''],
+        ],
+    ],
 ]);

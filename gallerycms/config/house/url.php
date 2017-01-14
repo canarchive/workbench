@@ -10,54 +10,64 @@ return [
 		'pc-url' => '/sample/',
 		'mobile-url' => '/sample/',
     ],
-    'sample-list-1' => [
-		'name' => '案例列表',
-		'pc-url' => '/sample/h_two-s_mediterranean-a/50/',
-		'mobile-url' => '/sample/h_two-s_mediterranean-a/50/',
-    ],
     'sample-show' => [
 		'name' => '案例详情',
 		'pc-url' => '/sample-1.html',
 		'mobile-url' => '/sample-1.html',
     ],
-    'merchant-list' =>  [
-		'name' => '商家列表',
-		'pc-url' => '/beijing/merchant/',
-		'mobile-url' => '/beijing/merchant/',
+    'ask-index' => [
+		'name' => '问答首页',
+		'pc-url' => '/ask/',
+		'mobile-url' => '/ask/',
     ],
-    'working-list' => [
-		'name' => '工地列表',
-		'pc-url' => '/beijing/working/',
-		'mobile-url' => '/beijing/working/',
+    'ask-list' => [
+		'name' => '问答列表',
+		'pc-url' => '/ask/lm/',
+		'mobile-url' => '/ask/lm/',
     ],
-    'working-show' => [
-		'name' => '工地详情',
-		'pc-url' => '/beijing/workibng-1.html',
-		'mobile-url' => '/beijing/working-1.html',
+    'ask-show' => [
+		'name' => '问答详情',
+		'pc-url' => '/ask-1.html',
+		'mobile-url' => '/ask-1.html',
     ],
-    'realcase-list' => [
-		'name' => '实景列表',
-		'pc-url' => '/beijing/realcase/',
-		'mobile-url' => '/beijing/realcase/',
+    'quote-list' => [
+		'name' => '报价列表',
+		'pc-url' => '/quote/',
+		'mobile-url' => '/quote/',
     ],
-    'realcase-show' => [
-		'name' => '实景详情',
-		'pc-url' => '/beijing/realcase-1.html',
-		'mobile-url' => '/beijing/realcase-1.html',
+    'quote-show' => [
+		'name' => '报价详情',
+		'pc-url' => '/quote-1.html',
+		'mobile-url' => '/quote-1.html',
     ],
-	'info-aboutus' => [
+	'aboutus-desc' => [
 		'name' => '关于我们',
-		'pc-url' => '{{CMS-DOMAIN}}/info-aboutus.html',
+		'pc-url' => '/desc.html',
 		//'mobile-url' => '/info-aboutus.html',
 	],
-	'info-joinus' => [
-		'name' => '加入我们',
-		'pc-url' => '{{CMS-DOMAIN}}/info-joinus.html',
-		//'mobile-url' => '/info-joinus.html',
-	],
-	'info-statement' => [
+	'aboutus-culture' => [
+		'name' => '企业文化',
+		'pc-url' => '/culture.html',
+		//'mobile-url' => '/info-aboutus.html',
+    ],
+	'aboutus-culture' => [
+		'name' => '联系我们',
+		'pc-url' => '/contactus.html',
+		//'mobile-url' => '/info-aboutus.html',
+    ],
+	'aboutus-guestbook' => [
+		'name' => '意见反馈',
+		'pc-url' => '/guestbook.html',
+		//'mobile-url' => '/info-aboutus.html',
+    ],
+	'aboutus-friendlink' => [
+		'name' => '友情链接',
+		'pc-url' => '/guestbook.html',
+		//'mobile-url' => '/info-aboutus.html',
+    ],
+	'aboutus-statement' => [
 		'name' => '声明',
-		'pc-url' => '{{CMS-DOMAIN}}/info-statement.html',
-		//'mobile-url' => '/info-statemnt.html',
-	],
+		'pc-url' => '/statement.html',
+		//'mobile-url' => '/info-aboutus.html',
+    ],
 ];
