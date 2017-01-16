@@ -9,6 +9,8 @@ class Controller extends YiiController
 {
 	public $pcMappingUrl;
 	public $mobileMappingUrl;
+    public $pagePosition = 'default';
+    public $pagePositionName = 'default';
 
     /**
      * @inheritdoc
