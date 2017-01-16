@@ -3,9 +3,9 @@
     
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>【澳普利发门窗加盟网友点评】澳普利发门窗加盟项目怎么样/好不好 - 中国加盟网</title>
-        <meta name="keywords" content="澳普利发门窗加盟项目如何,澳普利发门窗加盟项目好不好,澳普利发门窗加盟项目怎么样" />
-        <meta name="description" content="【澳普利发门窗加盟网友点评】想了解澳普利发门窗加盟如何,澳普利发门窗加盟好不好,澳普利发门窗加盟怎么样，不妨先看看澳普利发门窗加盟项目网友点评,【中国加盟网】助您创业成功！" />
+        <title>【澳普利发门窗加盟】澳普利发门窗加盟怎么样_如何加盟澳普利发门窗 - 中国加盟网</title>
+        <meta name="keywords" content="澳普利发门窗,澳普利发门窗加盟,澳普利发门窗招商, 澳普利发门窗加盟费用,澳普利发门窗加盟店,澳普利发门窗官网" />
+        <meta name="description" content="【澳普利发门窗项目介绍】为您提供澳普利发门窗加盟费用,如何加盟澳普利发门窗,怎样加盟澳普利发门窗, 澳普利发门窗加盟流程有哪些, 更多澳普利发门窗加盟项目介绍,登陆【中国加盟网】官网,助您创业成功！" />
         <link rel="stylesheet" type="text/css" href="http://image1.jmw.com.cn/newSearchPage/css/style.css" />
         <link rel="stylesheet" type="text/css" href="http://image1.jmw.com.cn/newSearchPage/css/jmw_shangqiao.css" />
         <link rel="stylesheet" type="text/css" href="http://image1.jmw.com.cn/newSearchPage/css/bzCommon2.css" />
@@ -178,8 +178,8 @@
                 <a target="_blank" href="http://www.jmw.com.cn">
                     <img title="中国加盟网" width="133" height="34" src="http://image1.jmw.com.cn/search/images/logo.jpg"></a>
                 <div style="border-left:1px solid #cdcdcd;float:left;color:#444;margin-top:20px;padding-left:14px;overflow:hidden;width: 220px;text-overflow: ellipsis;white-space: nowrap;">
-                    <h1 title="如何加盟澳普利发门窗" style="font:20px '微软雅黑';font-weight:bold;color:#444;">如何加盟澳普利发门窗</h1>
-                    <span title="澳普利发门窗加盟点评" style="font:12px '微软雅黑';color:#999999; font-weight:normal;">澳普利发门窗加盟点评</span></div>
+                    <h1 title="澳普利发门窗加盟怎么样" style="font:20px '微软雅黑';font-weight:bold;color:#444;">澳普利发门窗加盟怎么样</h1>
+                    <span title="澳普利发门窗加盟好不好" style="font:12px '微软雅黑';color:#999999; font-weight:normal;">澳普利发门窗加盟好不好</span></div>
             </div>
             <div class="logo_right fr">
                 <div class="content1_top clearfix">
@@ -406,7 +406,7 @@
                 <li>
                     <a target="_blank" href="http://www.jmw.com.cn/xm76445/" title="澳普利发门窗加盟首页">品牌首页</a></li>
                 <li>
-                    <a target="_blank" href="http://www.jmw.com.cn/xm76445/xiangmujieshao/" title="澳普利发门窗加盟项目介绍">项目介绍</a></li>
+                    <a target="_blank" class='current2' href="http://www.jmw.com.cn/xm76445/xiangmujieshao/" title="澳普利发门窗加盟项目介绍">项目介绍</a></li>
                 <li>
                     <a target="_blank" href="http://www.jmw.com.cn/xm76445/pinpaituku/" title="澳普利发门窗加盟图库">品牌图库</a></li>
                 <li>
@@ -416,7 +416,7 @@
                 <li>
                     <a target="_blank" href="http://www.jmw.com.cn/xm76445/zizhiheshi/" title="澳普利发门窗加盟好不好">资质核实</a></li>
                 <li>
-                    <a target="_blank" class='current2' href="http://www.jmw.com.cn/xm76445/wangyoudianping/" title="澳普利发门窗项目点评">网友点评</a></li>
+                    <a target="_blank" href="http://www.jmw.com.cn/xm76445/wangyoudianping/" title="澳普利发门窗项目点评">网友点评</a></li>
                 <li>
                     <a target="_blank" href="http://www.jmw.com.cn/xm76445/chenggonganli/" title="澳普利发门窗加盟成功案例">成功案例</a></li>
                 <script type="text/javascript">jQuery(document).ready(function() {
@@ -699,7 +699,7 @@
                     <img src="http://attachment.jmw.com.cn/comp_uploadfile/logo/2016/05/10/50891462859712.jpg" width="113" height="87" alt="澳普利发门窗加盟" /></a>
             </div>
             <div class="fl shop_r">
-                <h2>澳普利发门窗网友点评</h2>
+                <h2>澳普利发门窗项目介绍</h2>
                 <div class="shop_rChild">
                     <ul class="ul_one clearfix">
                         <li class="clearfix">
@@ -868,829 +868,107 @@
         <!--content-->
         <div class="content wrapper clearfix">
             <div class="fl cont_left">
-                <div class="picture file_one">
-                    <div class="title">
-                        <h2>澳普利发门窗加盟网友点评</h2></div>
-                    <div class="comment">
-                        <div class="star clearfix">
-                            <!--综合评分 左 B-->
-                            <style>.star_left p .x1{ background: url("http://image1.jmw.com.cn/newSearchPage/images/xingx.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -80px; } .star_left p .x2{ background: url("http://image1.jmw.com.cn/newSearchPage/images/xingx.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -60px; } .star_left p .x3{ background: url("http://image1.jmw.com.cn/newSearchPage/images/xingx.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -40px; } .star_left p .x4{ background: url("http://image1.jmw.com.cn/newSearchPage/images/xingx.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -20px; } .star_left p .x5{ background: url("http://image1.jmw.com.cn/newSearchPage/images/xingx.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px 0px; }</style>
-                            <div class="fl star_left">
-                                <h3>综合平均分</h3>
-                                <p class="clearfix">
-                                    <i class="x4"></i>
-                                    <span>很好</span></p>
-                                <div class="progress">
-                                    <dl class="clearfix">
-                                        <dt class="fl">特别好:</dt>
-                                        <dd class="fl clearfix">
-                                            <span class="fl bar bar1">
-                                                <i style="width:33.33%"></i>
-                                            </span>
-                                            <span class="fl percen">33.33%</span></dd>
-                                    </dl>
-                                    <dl class="clearfix">
-                                        <dt class="fl">很好:</dt>
-                                        <dd class="fl clearfix">
-                                            <span class="fl bar bar2">
-                                                <i style="width:33.33%"></i>
-                                            </span>
-                                            <span class="fl percen">33.33%</span></dd>
-                                    </dl>
-                                    <dl class="clearfix">
-                                        <dt class="fl">比较好:</dt>
-                                        <dd class="fl clearfix">
-                                            <span class="fl bar bar3">
-                                                <i style="width:33.33%"></i>
-                                            </span>
-                                            <span class="fl percen">33.33%</span></dd>
-                                    </dl>
-                                    <dl class="clearfix">
-                                        <dt class="fl">一般:</dt>
-                                        <dd class="fl clearfix">
-                                            <span class="fl bar bar4">
-                                                <i style="width:0%"></i>
-                                            </span>
-                                            <span class="fl percen">0%</span></dd>
-                                    </dl>
-                                    <dl class="clearfix">
-                                        <dt class="fl">不好:</dt>
-                                        <dd class="fl clearfix">
-                                            <span class="fl bar bar5">
-                                                <i style="width:0%"></i>
-                                            </span>
-                                            <span class="fl percen">0%</span></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!--综合评分 左 End-->
-                            <!--我要点评star-->
-                            <input class="projectId" type="hidden" value="76445" />
-                            <div class="fr star_right">
-                                <h3>我要点评</h3>
-                                <div class="fell clearfix">
-                                    <span class="span_a">您在</span>
-                                    <div class="commun">
-                                        <span>沟通咨询</span>
-                                        <ul name="" id='com_select' class="commun_li" style="display:none;width:120px;height:auto;background:#ffffff;color:#666;text-indent:6px;background: #f0f0f0;">
-                                            <li menuid="2">沟通咨询</li>
-                                            <li menuid="3">实地考察</li></ul>
-                                        <input type="hidden" id="com_select_hidden" value="2" /></div>
-                                    <span class="car">后感觉：
-                                        <i>澳普利发门</i>
-                                    </span>
-                                </div>
-                                <!--下拉框特效-->
-                                <script type="text/javascript">var commun_class = true;
-                                    $(function() {
-                                        $("body").click(function() {
-                                            if (commun_class) $(".commun_li").hide();
-                                        });
-                                        $(".commun span").click(function() {
-                                            $(".commun_li").show();
-                                        });
-                                        $(".commun_li li").mouseover(function() {
-                                            $(this).css('background', '#ccc');
-                                        }).mouseout(function() {
-                                            $(this).css('background', '#f0f0f0');
-
-                                        });
-                                        $(".commun_li li").click(function() {
-                                            var menuid = $(this).attr('menuid');
-                                            $("#com_select_hidden").val(menuid);
-                                            $(".commun span").html($(this).html());
-                                            $(".commun_li").hide();
-                                        });
-                                        $(".commun").mouseout(function() {
-                                            commun_class = true;
-                                        });
-                                        $(".commun").mouseover(function() {
-                                            commun_class = false;
-                                        });
-                                    })</script>
-                                <!--我要点评五角星-star-->
-                                <link href="http://image1.jmw.com.cn/newSearchPage/css/grade.css" rel="stylesheet" type="text/css" />
-                                <style>.gradeRank_big{float:left;width:118px;height:20px;margin:0 10px 0 0;overflow:hidden;background-image:url(http://image1.jmw.com.cn/newSearchPage/images/xingx.png);background-position:-1px -100px;background-repeat:no-repeat;} .gradeRank_big.b_star0{background-position:-1px -151px;} .gradeRank_big.b_star1{background-position:-1px -121px;} .gradeRank_big.b_star2{background-position:-1px -91px;} .gradeRank_big.b_star3{background-position:-1px -61px;} .gradeRank_big.b_star4{background-position:-1px -31px;} .gradeRank_big.b_star5{background-position:-1px -1px;} .gradeBox{height:20px;line-height:20px;margin:15px 0;overflow:hidden;} .gradeBox li a.choose_star{background-image:url(http://image1.jmw.com.cn/newSearchPage/images/xingx.png);background-repeat:no-repeat;} .gradeBox li a.clrs{background-image:none;} .gradeBox li a.hover_star{background-image:url(http://image1.jmw.com.cn/newSearchPage/images/xingx.png);background-repeat:no-repeat;} .gradeBox li a.one_star{width:20px;z-index:5;background-position: -1px -80px;} .gradeBox li a.two_star{width:45px;z-index:4;background-position: -1px -60px;} .gradeBox li a.three_star{width:66px;z-index:3;background-position: -1px -40px;} .gradeBox li a.four_star{width:93px;z-index:2;background-position: -1px -20px;} .gradeBox li a.five_star{width:118px;z-index:1;background-position: -1px 0px;}</style>
-                                <div class="gradeBox">
-                                    <ul class="gradeRank_big">
-                                        <li>
-                                            <a class="one_star" href="javascript:;" hideFocus="true" data-rate-value="1" data-note="不好" title="不好"></a>
-                                        </li>
-                                        <li>
-                                            <a class="two_star" href="javascript:;" hideFocus="true" data-rate-value="2" data-note="一般" title="一般"></a>
-                                        </li>
-                                        <li>
-                                            <a class="three_star" href="javascript:;" hideFocus="true" data-rate-value="3" data-note="比较好" title="比较好"></a>
-                                        </li>
-                                        <li>
-                                            <a class="four_star choose_star" href="javascript:;" hideFocus="true" data-rate-value="4" data-note="很好" title="很好"></a>
-                                        </li>
-                                        <li>
-                                            <a class="five_star" href="javascript:;" hideFocus="true" data-rate-value="5" data-note="特别好" title="特别好"></a>
-                                        </li>
-                                    </ul>
-                                    <span class="note">
-                                        <em>很好</em>
-                                        <input type='hidden' id='grade_num' name='grade_num' value='4' /></span>
-                                </div>
-                                <script>$(function() {
-                                        $('.conTextarea').focus(function() {
-                                            $(this).css('color', '#555');
-
-                                        })
-
-                                    })
-
-                                    function insertFaceFun(obj) {
-                                        $("#com_text").animate({
-                                            'opacity': 1
-                                        },
-                                        300).addClass('txtColor');
-                                        var face = obj.find('a').attr('ico-val');
-                                        var text_id = obj.attr("name");
-                                        var show_dom_id = obj.attr('show_dom_id');
-                                        var len = obj.attr("len");
-                                        if ($("#" + text_id).val() == ' 与网友分享您的感受...' || $("#" + text_id).val() == ' 回复TA一句...') {
-                                            $("#" + text_id).val("");
-                                        }
-                                        if (($("#" + text_id).val().length + face.length) > len) {
-                                            return;
-                                        }
-                                        insertFace(obj.attr("name"), face, ' 与网友分享您的感受...');
-                                        checkLength(text_id, show_dom_id, len);
-                                    }
-                                    function checkInsertLength(obj) {
-                                        var insert_id = obj.attr('id');
-                                        var show_dom_id = obj.attr('show_dom_id');
-                                        var insert_num = obj.attr('insert_num') var checklen = checkLength(insert_id, show_dom_id, insert_num);
-                                        //if(!checklen){alert('输入长度不能超过'+insert_num+'字！');}
-                                    }
-                                    function loginShow() {
-                                        $("#itemAtt").attr('class', 'popWrap loginWin');
-                                        $("#hidSidVal").val(projectId);
-                                        $("#brandNameOne").attr('href', '');
-                                        $("#brandNameOne").html('');
-                                        $("#brandNameTwo").attr('href', '');
-                                        $("#brandNameTwo").html('');
-                                        $("#tipsOne").html('');
-                                        $("#tipsTwo").html('');
-                                        $("#attTips").attr('class', 'attTips');
-                                        showPop("#itemAtt", 405);
-                                        $("#quickBox").hide();
-                                        $("#c_infoBox2").hide();
-                                        $("#c_infoBox1").hide();
-                                        $("#hidLoginDiv").show();
-                                        $("#hidAttentionDiv").hide();
-                                    }</script>
-                                <textarea class="conTextarea" style="height:78px" rows="" cols="" id="com_text" show_dom_id="dom_show" insert_num="300" onkeyup="checkInsertLength($(this));return false;">与网友分享您的感受...</textarea>
-                                <div class="expression_input clearfix">
-                                    <span class="show_expression">
-                                        <a class="show_hit" href="javascript:;" tabindex="0" hideFocus="true">表情</a>
-                                        <ul class="expression_list">
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/jy.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/fendou.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/gz.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/wx.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/kel.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/qq.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[晕]" title="晕" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/yun.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/bq.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/mg.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[强]" title="强" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/qiang.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[握手]" title="握手" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/ws.gif" alt="" /></a>
-                                            </li>
-                                            <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
-                                                <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                                    <img src="http://image1.jmw.com.cn/search/images/grade/expression/xin.gif" alt="" /></a>
-                                            </li>
-                                        </ul>
-                                        <script type="text/javascript">$(function() {
-                                                var submitstatus = true;
-                                                function ec(ss) {
-
-                                                    //var ss=" fsd fsdaf";                 
-                                                    return ss.replace(/[ ]/g, "");
-
-                                                }
-                                                $('#com_submit').click(function() {
-                                                    var com_text_val = $('#com_text').val();
-                                                    if (ec(com_text_val) == "" || com_text_val == '与网友分享您的感受...') {
-                                                        alert("请输入内容");
-                                                        return false;
-                                                    }
-                                                    if (!submitstatus) {
-                                                        return;
-                                                    }
-                                                    submitstatus = false;
-                                                    var com_select = $('#com_select_hidden').val(); //点评选择框
-                                                    if (com_select == '') {
-                                                        alert("请选择评价类型！");
-                                                        submitstatus = true;
-                                                        return;
-                                                    }
-                                                    if ($("#com_text").val() == '与网友分享您的感受...') {
-                                                        $("#com_text").val('');
-                                                    }
-                                                    var checklen = checkLength('com_text', 'dom_show', 300);
-                                                    if (!checklen) {
-                                                        alert('输入长度不能超过300字！');
-                                                        submitstatus = true;
-                                                        return;
-                                                    }
-                                                    var grade_num = $('#grade_num').val(); //评分
-                                                    var com_text = com_text_val.replace(/(^\s*)|(\s*$)/g, ""); //内容
-                                                    var projectId = $(".projectId").val(); //点评的项目ids
-                                                    //alert(projectId);
-                                                    if (com_text == '' || com_text == '与网友分享您的感受...') {
-                                                        alert('请输入内容');
-                                                        return false;
-                                                    } else {
-                                                        $.ajax({
-                                                            type: "GET",
-                                                            url: 'http://rating.jmw.com.cn/addComments.php',
-                                                            data: "com_select=" + com_select + "&grade_num=" + grade_num + "&com_text=" + encodeURIComponent(com_text) + "&tid=" + projectId,
-                                                            dataType: 'jsonp',
-                                                            cache: false,
-                                                            jsonp: "jsonpcallback",
-                                                            success: function(html) {
-                                                                submitstatus = true;
-                                                                if (html == -3) {
-                                                                    alert("您对（澳普利发门窗）的评论次数今日已达上限！明天可以继续评论！");
-
-                                                                } else if (html == -6) {
-                                                                    alert("您已经点评过该项目，如需追加点评请登录！");
-                                                                } else if (html == -5) {
-                                                                    alert("您的分享内容包含敏感词，无法提交");
-                                                                } else {
-                                                                    alert("评论成功！");
-                                                                    $("#com_text").val('与网友分享您的感受...');
-                                                                    window.location.reload();
-                                                                }
-
-                                                            }
-                                                        });
-                                                    }
-
-                                                });
-
-                                            });
-                                            //
-                                            </script>
-                                    </span>
-                                    <span class="txtLength">还能输入
-                                        <i id='dom_show'>300</i>个字符</span>
-                                    <input class="formSubmit_btn" name="" type="button" id="com_submit" value="发布" /></div>
-                            </div>
-                            <!--我要点评end--></div>
-                        <!--点评列表star-->
-                        <style>.formSubmit_btn{ background: url("http://image1.jmw.com.cn/newSearchPage/images/fabu.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; color: #fff; cursor: pointer; position:absolute; top:0; right:0; z-index: 10; font-family: "微软雅黑"; font-size: 16px; height: 30px; line-height: 28px; overflow: hidden; width: 100px; } .my_feel1{ background: url("http://image1.jmw.com.cn/newSearchPage/images/five_xs.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -57px; } .my_feel2{ background: url("http://image1.jmw.com.cn/newSearchPage/images/five_xs.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -42px; } .my_feel3{ background: url("http://image1.jmw.com.cn/newSearchPage/images/five_xs.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -27px; } .my_feel4{ background: url("http://image1.jmw.com.cn/newSearchPage/images/five_xs.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -15px; } .my_feel5{ background: url("http://image1.jmw.com.cn/newSearchPage/images/five_xs.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px 0px; }</style>
-                        <script>//回复
-                            var replystatus = true;
-                            function reply(obj) {
-                                /*alert('1');
-                            if(!replystatus) { alert('2'); return;}
-                            replystatus = false;
-                            alert('3');*/
-                                var tid = obj.attr('tid'); //'项目id';
-                                var reply_content = $('#com_text' + tid).val(); //回复内容;
-                                if (reply_content == "") {
-                                    alert("请输入内容");
-                                    return false;
-                                }
-                                if (reply_content == '回复TA一句...' || reply_content.length > 200 || reply_content.length < 2) {
-                                    alert("回复内容不能为空并且输入长度必须在2-200之间！");
-                                    replystatus = true;
-                                    return;
-                                }
-                                $.ajax({
-                                    type: "GET",
-                                    url: 'http://rating.jmw.com.cn/reply.php',
-                                    data: "tid=" + tid + "&reply_content=" + encodeURIComponent(reply_content),
-                                    dataType: 'jsonp',
-                                    cache: false,
-                                    jsonp: "jsonpcallback",
-                                    success: function(html) {
-                                        replystatus = true;
-                                        if (html == -4) {
-                                            alert('您回复的太快了，请过15秒后试试！');
-                                        } else if (html == -5) {
-                                            alert('您回复的内容中有敏感词出现，无法提交。');
-                                        } else {
-                                            alert("回复成功！");
-                                            $('#com_text' + tid).val('回复TA一句...');
-                                            window.location.reload();
-                                        }
-                                    }
-                                });
-                            }
-                            //查看更多
-                            function showMore(obj) {
-                                var isfold = obj.attr("isfold");
-                                if (isfold == "true") {
-
-                                    obj.parents('.replyGrade').find('.replyList').height('');
-                                    obj.parents('span').animate({
-                                        'width': 197
-                                    },
-                                    200,
-                                    function() {
-                                        $(this).find('.click_fold').fadeIn(300);
-                                    });
-                                    obj.attr("isfold", "false");
-                                    return;
-                                }
-                                var tid = obj.attr('tid'); //项目id
-                                var lastid = $("#afterReply" + tid + " li:last-child").attr('key');
-                                var pagenum = 10;
-                                $.ajax({
-                                    type: "GET",
-                                    url: 'http://rating.jmw.com.cn/showMore.php',
-                                    data: "tid=" + tid + "&lastid=" + lastid + "&pagenum=" + pagenum,
-                                    dataType: 'jsonp',
-                                    cache: false,
-                                    jsonp: "jsonpcallback",
-                                    success: function(html) {
-                                        if (html['error'] != -1) {
-                                            $("#afterReply" + tid).append(html['html']);
-                                            obj.parents('span').animate({
-                                                'width': 197
-                                            },
-                                            200,
-                                            function() {
-                                                $(this).find('.click_fold').fadeIn(300);
-                                            });
-                                        } else {
-                                            obj.html("暂无更多");
-                                        }
-                                    }
-                                });
-                            }
-                            //**支持反对
-                            //**
-                            var isstatus = true;
-                            function isSupport(obj) {
-                                if (!isstatus) {
-                                    return;
-                                }
-                                isstatus = false;
-                                var projectId = $("#projectId").val();
-                                var pid = obj.attr("pid");
-                                var act = obj.attr("act");
-                                var num = parseInt(obj.attr("num"));
-                                $.ajax({
-                                    type: "GET",
-                                    url: 'http://rating.jmw.com.cn/isSupport.php',
-                                    data: "pid=" + pid + "&act=" + act + '&projectId=' + projectId,
-                                    dataType: 'jsonp',
-                                    cache: false,
-                                    jsonp: "jsonpcallback",
-                                    success: function(html) {
-                                        if (html == 1) {
-                                            //num++;
-                                            if (num == 0) {
-                                                obj.find('span').text(1);
-                                            } else {
-                                                obj.find('span').text(num + 1);
-                                            }
-                                            if (act == 'yes') {
-                                                var info = "支持成功！";
-                                            } else {
-                                                var info = "反对成功！";
-                                            }
-
-                                        } else if (html == -1) {
-                                            if (act == 'yes') {
-                                                var info = "您已经支持过了！";
-                                            } else {
-                                                var info = "您已经反对过了！";
-                                            }
-                                        }
-                                        alert(info);
-                                        isstatus = true;
-                                    }
-                                });
-                            }
-                            //收起
-                            function fold(obj) {
-                                obj.fadeOut(300,
-                                function() {
-                                    var li_obj = obj.parents('.replyGrade').find('.replyList li');
-                                    var li_h1 = li_obj.eq(0).height();
-                                    var li_h2 = li_obj.eq(1).height();
-                                    var li_h3 = li_obj.eq(2).height();
-                                    var li_h4 = li_obj.eq(3).height();
-                                    var h_all = li_h1 + li_h2 + li_h3 + li_h4 + 84;
-                                    obj.parents('.replyGrade').find('.replyList').animate({
-                                        'height': h_all
-                                    },
-                                    200);
-                                    obj.parents('span').animate({
-                                        'width': 132
-                                    },
-                                    200);
-                                    obj.prev().attr("isfold", "true");
-                                    obj.prev().html("查看更多回复");
-                                });
-                            }</script>
-                        <a name="anchor22794"></a>
-                        <div class="join clearfix">
-                            <a name="anchor22794"></a>
-                            <img src="" class="peo" width="69" height="69" />
-                            <div class="join_box">
-                                <div class="join_eva clearfix">
-                                    <span class="span_red fl">意向加盟者</span>
-                                    <span class="span_time fl">2016年08月29日</span>
-                                    <span class="span_gray fl">实地考察</span>
-                                    <span class="span_red fl">
-                                        <a href="http://www.jmw.com.cn/xm76445/xiangmujieshao/" target="_blank" title="澳普利发门窗加盟">澳普利发门窗</a></span>
-                                    <span class="span_gray fl">后感觉：</span>
-                                    <span class="span_good fl">特别好</span>
-                                    <i class="xs_5y fl my_feel5"></i>
-                                </div>
-                                <div class="join_infor">
-                                    <a href="http://www.jmw.com.cn/xm76445/" target="_blank" style="color:#666;">澳普利发门窗</a>这个品牌知名度还可以，让我觉得
-                                    <a href="http://www.jmw.com.cn/" target="_blank" style="color:#666;">加盟</a>这个项目很不错，咨询后觉得
-                                    <a href="http://search.jmw.com.cn/i230/" target="_blank" style="color:#666;">服务</a>还可以，具体不知道扶持落地性如何，还得考察看看。</div>
-                                <ul class="clearfix">
-                                    <!-- <li class="my_replay" style="display:block;"><a href="javascript:;" name="toggleReply" title="隐藏回复">回复(<span></span>)</a></li>-->
-                                    <!--li><span class="line"></span></li-->
-                                    <li>
-                                        <a href="javascript:void(0);" pid="22794" act="yes" num="0" onclick="isSupport($(this));return false;">支持(
-                                            <span>0</span>)</a></li>
-                                    <li>
-                                        <span class="line"></span>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" pid="22794" act="no" num="0" onclick="isSupport($(this));return false;">反对(
-                                            <span>0</span>)</a></li>
-                                </ul>
-                                <div class="space">
-                                    <textarea id="com_text22794" cols="" rows="" class="conTextarea replyTextarea" style="height:22px;" show_dom_id="show_dom22794" insert_num="200" onkeyup="checkInsertLength($(this));return false;">回复TA一句...</textarea>
-                                    <span class="space_sj"></span>
-                                    <div class="expression_input clearfix">
-                                        <span class="show_expression">
-                                            <a class="show_hit" tabindex="0" hideFocus="true">表情</a>
-                                            <ul class="expression_list">
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/jy.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/fendou.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/gz.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/wx.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/kel.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/qq.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[晕]" title="晕" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/yun.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/bq.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/mg.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[强]" title="强" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/qiang.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[握手]" title="握手" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/ws.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22794" len="200" show_dom_id="show_dom22794" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/xin.gif" alt="" /></a>
-                                                </li>
-                                            </ul>
-                                        </span>
-                                        <span class="txtLength">还能输入
-                                            <i id="show_dom22794">200</i>个字符</span>
-                                        <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="22794" onclick="javascript:reply($(this));return false;" /></div>
-                                    <!---回复框开始 ---->
-                                    <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(../images/grade/grade_06a.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(../images/grade/grade_06b.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
-                                    <script type="text/javascript">function click_fold(show_reply_more_id) {
-                                            $('.click_fold').fadeOut();
-                                            $("#show_reply_more_" + show_reply_more_id).hide();
-                                        }</script>
-                                </div>
-                            </div>
-                        </div>
-                        <a name="anchor22712"></a>
-                        <div class="join clearfix">
-                            <a name="anchor22712"></a>
-                            <img src="" class="peo" width="69" height="69" />
-                            <div class="join_box">
-                                <div class="join_eva clearfix">
-                                    <span class="span_red fl">意向加盟者</span>
-                                    <span class="span_time fl">2016年08月28日</span>
-                                    <span class="span_gray fl">实地考察</span>
-                                    <span class="span_red fl">
-                                        <a href="http://www.jmw.com.cn/xm76445/xiangmujieshao/" target="_blank" title="澳普利发门窗加盟">澳普利发门窗</a></span>
-                                    <span class="span_gray fl">后感觉：</span>
-                                    <span class="span_good fl">很好</span>
-                                    <i class="xs_5y fl my_feel4"></i>
-                                </div>
-                                <div class="join_infor">我咨询的时候正好赶上
-                                    <a href="http://www.jmw.com.cn/xm76445/" target="_blank" style="color:#666;">澳普利发门窗</a>品牌方举办
-                                    <a href="http://jmw.com.cn/" target="_blank" style="color:#666;">招商</a>会，抱着比较好奇的心态去参加了一下，一到现场就被在场的气氛震住了，人真不少，我看还有当场签约的，场面相当火爆。</div>
-                                <ul class="clearfix">
-                                    <!-- <li class="my_replay" style="display:block;"><a href="javascript:;" name="toggleReply" title="隐藏回复">回复(<span></span>)</a></li>-->
-                                    <!--li><span class="line"></span></li-->
-                                    <li>
-                                        <a href="javascript:void(0);" pid="22712" act="yes" num="0" onclick="isSupport($(this));return false;">支持(
-                                            <span>0</span>)</a></li>
-                                    <li>
-                                        <span class="line"></span>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" pid="22712" act="no" num="0" onclick="isSupport($(this));return false;">反对(
-                                            <span>0</span>)</a></li>
-                                </ul>
-                                <div class="space">
-                                    <textarea id="com_text22712" cols="" rows="" class="conTextarea replyTextarea" style="height:22px;" show_dom_id="show_dom22712" insert_num="200" onkeyup="checkInsertLength($(this));return false;">回复TA一句...</textarea>
-                                    <span class="space_sj"></span>
-                                    <div class="expression_input clearfix">
-                                        <span class="show_expression">
-                                            <a class="show_hit" tabindex="0" hideFocus="true">表情</a>
-                                            <ul class="expression_list">
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/jy.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/fendou.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/gz.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/wx.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/kel.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/qq.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[晕]" title="晕" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/yun.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/bq.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/mg.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[强]" title="强" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/qiang.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[握手]" title="握手" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/ws.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text22712" len="200" show_dom_id="show_dom22712" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/xin.gif" alt="" /></a>
-                                                </li>
-                                            </ul>
-                                        </span>
-                                        <span class="txtLength">还能输入
-                                            <i id="show_dom22712">200</i>个字符</span>
-                                        <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="22712" onclick="javascript:reply($(this));return false;" /></div>
-                                    <!---回复框开始 ---->
-                                    <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(../images/grade/grade_06a.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(../images/grade/grade_06b.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
-                                    <script type="text/javascript">function click_fold(show_reply_more_id) {
-                                            $('.click_fold').fadeOut();
-                                            $("#show_reply_more_" + show_reply_more_id).hide();
-                                        }</script>
-                                </div>
-                            </div>
-                        </div>
-                        <a name="anchor10107"></a>
-                        <div class="join clearfix">
-                            <a name="anchor10107"></a>
-                            <img src="http://image1.jmw.com.cn/user/images/mediumBoy.jpg" class="peo" width="69" height="69" />
-                            <div class="join_box">
-                                <div class="join_eva clearfix">
-                                    <span class="span_red fl"></span>
-                                    <span class="span_time fl">2015年01月20日</span>
-                                    <span class="span_gray fl">沟通咨询</span>
-                                    <span class="span_red fl">
-                                        <a href="http://www.jmw.com.cn/xm76445/xiangmujieshao/" target="_blank" title="澳普利发门窗加盟">澳普利发门窗</a></span>
-                                    <span class="span_gray fl">后感觉：</span>
-                                    <span class="span_good fl">比较好</span>
-                                    <i class="xs_5y fl my_feel3"></i>
-                                </div>
-                                <div class="join_infor">还行吧</div>
-                                <ul class="clearfix">
-                                    <!-- <li class="my_replay" style="display:block;"><a href="javascript:;" name="toggleReply" title="隐藏回复">回复(<span></span>)</a></li>-->
-                                    <!--li><span class="line"></span></li-->
-                                    <li>
-                                        <a href="javascript:void(0);" pid="10107" act="yes" num="0" onclick="isSupport($(this));return false;">支持(
-                                            <span>0</span>)</a></li>
-                                    <li>
-                                        <span class="line"></span>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" pid="10107" act="no" num="0" onclick="isSupport($(this));return false;">反对(
-                                            <span>0</span>)</a></li>
-                                </ul>
-                                <div class="space">
-                                    <textarea id="com_text10107" cols="" rows="" class="conTextarea replyTextarea" style="height:22px;" show_dom_id="show_dom10107" insert_num="200" onkeyup="checkInsertLength($(this));return false;">回复TA一句...</textarea>
-                                    <span class="space_sj"></span>
-                                    <div class="expression_input clearfix">
-                                        <span class="show_expression">
-                                            <a class="show_hit" tabindex="0" hideFocus="true">表情</a>
-                                            <ul class="expression_list">
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/jy.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/fendou.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/gz.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/wx.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/kel.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/qq.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[晕]" title="晕" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/yun.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/bq.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/mg.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[强]" title="强" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/qiang.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[握手]" title="握手" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/ws.gif" alt="" /></a>
-                                                </li>
-                                                <li name="com_text10107" len="200" show_dom_id="show_dom10107" onclick="insertFaceFun($(this));return false;">
-                                                    <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                                        <img src="http://image1.jmw.com.cn/search/images/grade/expression/xin.gif" alt="" /></a>
-                                                </li>
-                                            </ul>
-                                        </span>
-                                        <span class="txtLength">还能输入
-                                            <i id="show_dom10107">200</i>个字符</span>
-                                        <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="10107" onclick="javascript:reply($(this));return false;" /></div>
-                                    <!---回复框开始 ---->
-                                    <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(../images/grade/grade_06a.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(../images/grade/grade_06b.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
-                                    <script type="text/javascript">function click_fold(show_reply_more_id) {
-                                            $('.click_fold').fadeOut();
-                                            $("#show_reply_more_" + show_reply_more_id).hide();
-                                        }</script>
-                                </div>
-                            </div>
-                        </div>
-                        <script>function show_reply_more(score_id, pid, score_reply_page) {
-                                var hidden_num = $('.hidden_num:last').val();
-                                var name = "four_reply" + score_id;
-                                var inpname = "hid_last_id_" + score_id;
-                                var divname = "appendDiv_" + score_id;
-                                var last_id = $("#" + inpname).val();
-                                $("." + name).show();
-                                if (hidden_num != '') {
-                                    $.ajax({
-                                        type: 'get',
-                                        url: "http://search.jmw.com.cn/show_more_reply.php",
-                                        data: 'last_id=' + last_id + '&score_id=' + score_id + '&pid=' + pid,
-                                        dataType: "jsonp",
-                                        jsonp: "callback",
-                                        //传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
-                                        jsonpCallback: "success_jsonpCallback",
-                                        //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                                        success: function(data) {
-                                            $("." + name).append(data.html);
-                                            $("#" + inpname).val(data.last_id);
-
-                                        }
-
-                                    });
-                                } else if (hidden_num == 0) {
-                                    $(".click_fold").click(function() {
-                                        $('.click_fold').fadeOut();
-                                    });
-                                }
-
-                            }
-                            function click_fold(score_id) {
-                                var sectionname = "four_reply" + score_id;
-                                $("." + sectionname).hide();
-                            }</script>
-                        <!--回复框效果ya-->
-                        <script type="text/javascript">$(function() {
-
-                                var reply = '回复TA一句...';
-                                $("#huifu").focus(function() {
-
-                                    if ($(this).val() == '回复TA一句...') {
-                                        $(this).val("");
-                                        $(this).css('color', '#666');
-                                    } else {
-                                        $(this).css('color', '#666');
-                                    }
-                                }).blur(function() {
-                                    if (!$(this).val()) {
-                                        $(this).val(reply);
-                                        $(this).css('color', '#ccc');
-                                    } else {
-                                        $(this).css('color', '#666');
-                                    }
-                                });
-                                $(".my_replay").toggle(function() {
-                                    $(this).parent().next().fadeIn("slow");
-                                },
-                                function() {
-                                    $(this).parent().next().fadeOut("slow");
-
-                                })
-
-                            })</script>
-                        <!--回复框-end-->
-                        <!--点评列表end--></div>
-                    <div class="black2">
-                        <a class="current">1</a></div>
+                <div class="jiameng_change">
+                    <div class="word">
+                        <p style="text-align: center;">
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">
+                                        <img alt="" src="http://attachment.jmw.com.cn/comp_uploadfile/description/2016/05/10/15841462860000.jpg" /></span>
+                                </span>
+                            </span>
+                        </p>
+                        <p>
+                            <br />
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">　　创立于2008年的
+                                        <a href="http://www.jmw.com.cn/xm76445/" target="_blank">
+                                            <span style="background-color: rgb(255, 240, 245);">澳普利发门窗</span></a>系统有限公司，自成立以来一直是中国
+                                        <a href="http://menchuang.jmw.com.cn/" target="_blank" style="color:#666;">门窗</a>行业翘楚，是国内全系统门窗的开先河者和&ldquo;领航人&rdquo;。凭着不断创新的理念与&ldquo;精工理念，航天品质&rdquo;的生产制造目标，成为市场畅销的门窗品牌。
+                                        <br />
+                                        <br />　　2015年，澳普利发颠覆传统门窗生产制造与销售模式，推出全系统门窗&ldquo;百厂千店&rdquo;战略，成立
+                                        <a href="http://search.jmw.com.cn/i230/" target="_blank" style="color:#666;">服务</a>于本土市场的门窗加工中心和运营中心，严格实施&ldquo;厂商一体化、品牌大众化、渠道精细化、生产标准化&rdquo;产销一体的新商业模式。开启高端品牌本土化运营大幕。
+                                        <br />
+                                        <br />　　
+                                        <a href="http://www.jmw.com.cn/xm76445/" target="_blank">
+                                            <span style="background-color: rgb(255, 240, 245);">澳普利发</span></a>根据消费地域文化和地理气候特点，运用先进的等压腔技术原理，开发出一系列气密性、水密性、隔音性、抗风压和
+                                        <a href="http://search.jmw.com.cn/i54/" target="_blank" style="color:#666;">节能</a>性俱佳的高精度门窗产品。</span></span>
+                            </span>
+                            <br />&nbsp;</p>
+                        <p style="text-align: center;">
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">
+                                        <img alt="" src="http://attachment.jmw.com.cn/comp_uploadfile/description/2016/05/10/40351462860043.jpg" /></span>
+                                </span>
+                            </span>
+                        </p>
+                        <p>
+                            <br />
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">　　2015年，
+                                        <a href="http://www.jmw.com.cn/xm76445/" target="_blank">
+                                            <span style="background-color: rgb(255, 240, 245);">澳普利发</span></a>通过资本运作与资源整合，先后收购&ldquo;宝纳丽金&rdquo;通风门窗品牌，&ldquo;艾迪雅&rdquo;北欧风格铝木组合门窗品牌，至此，澳普利发形成7大系列产品矩阵为消费者提供系统化门窗解决方案。 &nbsp;&nbsp;</span>
+                                </span>
+                            </span>
+                        </p>
+                        <p>
+                            <br />
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">
+                                        <strong>
+                                            <a href="http://www.jmw.com.cn/xm76445/" target="_blank" style="color:#666;">澳普利发门窗</a>九大变革成品化模式变革</strong>
+                                        <br />由铝型材销售模式转变为成品门窗销售模式的变革
+                                        <br />产品商品化变革
+                                        <br />单纯性的型材转变为设计、性能、款式、配件、品质等标准化、系统化的型材和配件以及加工工艺形成的产品，并规划其档次，使型材全方位商品化
+                                        <br />品牌变革
+                                        <br />由卖材料的铝型材品牌转变为成品门窗品牌
+                                        <br />消费变革
+                                        <br />成品化让顾客由传统的被动选购模式转向主动选购模式，根据个人喜好来选购，易于顾客接受，从而提高门店的销售业绩，以获丰厚的利润
+                                        <br />经销模式变革
+                                        <br />以区域为中心建立服务于本土市场的门窗加工厂，设多个终端形象专营店
+                                        <br />标准化生产变革
+                                        <br />对成品门窗标准重新定义，每个环节按标准验收产品效果，保证产品质量
+                                        <br />渠道直供化变革
+                                        <br />澳普利发的产品营销模式，从厂家直销到门店，减少了环节
+                                        <br />服务变革
+                                        <br />避免市场淡旺季导致的供需不平衡，服务不一致，澳普利发从材料到成品，从供货到销售，形成一体化的服务体系。使其得到更强大的后续服务支持
+                                        <br />市场区隔化变革
+                                        <br />成品销售区隔材料销售的市场格局，避免
+                                        <a href="http://www.jmw.com.cn/" target="_blank" style="color:#666;">加盟</a>商走在一条低价竞争的道路。</span></span>
+                            </span>
+                            <br />&nbsp;</p>
+                        <p>
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">
+                                        <img alt="" src="http://attachment.jmw.com.cn/comp_uploadfile/description/2016/05/10/17511462860179.jpg" /></span>
+                                </span>
+                            </span>
+                        </p>
+                        <p>
+                            <br />
+                            <span style="color: rgb(0, 0, 0);">
+                                <span style="font-size: 14px;">
+                                    <span style="font-family: 宋体;">
+                                        <strong>
+                                            <a href="http://www.jmw.com.cn/xm76445/" target="_blank">
+                                                <span style="background-color: rgb(255, 240, 245);">澳普利发门窗</span></a>八大支持</strong>
+                                        <br />标准化生产模式支持
+                                        <br />服务支持系统
+                                        <br />展厅装修及物料支持
+                                        <br />广告支持系统
+                                        <br />技术支持系统
+                                        <br />培训支持系统
+                                        <br />人员推广系统
+                                        <br />系统化
+                                        <a href="http://jmw.com.cn/" target="_blank" style="color:#666;">招商</a>支持</span></span>
+                            </span>
+                        </p>
+                    </div>
                 </div>
                 <!---留言--->
                 <div class="nineth">
@@ -1912,7 +1190,7 @@
                             <input type="hidden" name="lasturl" id="lasturl" />
                             <input type="hidden" name="fromurl" id="fromurl" />
                             <input type="hidden" name="project_message_targetId" id="project_message_targetId" value="76445" />
-                            <input type="hidden" name="project_message_origin" id="project_message_origin" value="7" />
+                            <input type="hidden" name="project_message_origin" id="project_message_origin" value="2" />
                             <div class="J-say">
                                 <div class="say_t">
                                     <div class="say_tL">
@@ -2879,7 +2157,7 @@
             <div class="popWrap_sub" id="popWrap_sub"></div>
             <div class="popBox" id="popBox">
                 <!--未登录提示 begin-->
-                <iframe id="hidLoginDiv" name="hidLoginDiv" style="display:none;" src="http://person.jmw.com.cn/iframeLogin.php?url=http://www.jmw.com.cn/xm76445/wangyoudianping/" width="634" scrolling="no" height="393" frameborder="0"></iframe>
+                <iframe id="hidLoginDiv" name="hidLoginDiv" style="display:none;" src="http://person.jmw.com.cn/iframeLogin.php?url=http://www.jmw.com.cn/xm76445/xiangmujieshao/" width="634" scrolling="no" height="393" frameborder="0"></iframe>
                 <!--未登录提示 end-->
                 <!--关注状态 begin-->
                 <div class="attState" id="hidAttentionDiv">
@@ -3165,6 +2443,60 @@
             <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006020700545" target="_blank">
                 <img src="http://image1.jmw.com.cn/public/images/biaozhi.jpg" /></a>京ICP证：040787号 京公海网安备案编号:1101084667
             <br /></div>
-        <!--底部 结束--></body>
+        <!--底部 结束-->
+        <div class="advice_hotline" id="advice_hotline">
+            <div id="parameter"></div>
+            <div class="advice-2">
+                <span>免费通话</span>
+                <a href="javascript:;"></a>
+            </div>
+            <div class="advice-3">
+                <div class="advice-3-tips">
+                    <span>免费电话</span>(请输入您的电话，点击免费呼叫，按提示音操作)</div>
+                <p>
+                    <span for="">您的姓名</span>
+                    <input onfocus="this.style.color='#000';if(this.value=='请填写姓名！') this.value='';" onblur="this.style.color='#999';if(this.value=='') this.value='请填写姓名！';" class="s_tes" type="text" id="name" name="name" fourTelUserName="fourTelUserName" value="请填写姓名！" />
+                    <span class="sexi">
+                        <input type="radio" checked="checked" name="tel_sex" id="sex" fourTelUserGender="fourTelUserGender" value="0" />
+                        <label for="man">男</label></span>
+                    <span class="sexi">
+                        <input type="radio" name="tel_sex" id="sex" fourTelUserGender="fourTelUserGender" id="woman" value="1" />
+                        <label for="woman">女</label></span>
+                </p>
+                <p>
+                    <span for="">手机号码</span>
+                    <input type="text" class="s_tes" onblur="this.style.color='#999';if(this.value=='') this.value='请填写手机号码！';" onkeyup="if(event.keyCode==13){doSearch();}" onfocus="this.style.color='#000';if(this.value=='请填写手机号码！') this.value='';" value="请填写手机号码！" id="mobil" name="mobil"></p>
+                <p>
+                    <span for="">电子邮箱</span>
+                    <input class="s_tes" type="text" id="email" name="email" /></p>
+                <div class="advice-3-bot">
+                    <input type="button" value="免费呼叫" onclick="Webcall();return false;" /></div>
+            </div>
+            <div class="advice-4">
+                <span>温馨提示：</span>通话费用将由企业支付，请放心拨打！</div></div>
+        <div id="black_ceng" style="width: 1423px; height: 1495px; display: none;"></div>
+        <style type="text/css">.advice_hotline{ position: fixed !important; left: 50%; top: 50%; margin-left: -203.5px !important; margin-top: -219.5px; z-index: 8000; background: url(http://image1.jmw.com.cn/newSearchPage/images/free_bg.png) no-repeat; width: 407px; height: 439px; overflow: hidden; padding: 5px; display: none;} .advice-1{ height: 67px; background: url(http://image1.jmw.com.cn/newSearchPage/images/phone_bg.png) no-repeat 34px 12px; width: 270px; text-align: center; padding-left: 105px; padding-top: 13px;} .advice-1 p{ font-size: 17px; color: #fff;} .advice-1 strong{ display: block; font-size: 24px; color: #fff;} .advice-2{ height: 46px;} .advice-2 span{ float: left; font-size: 18px; color: #fff; padding-left: 25px; line-height: 48px;} .advice-2 a{ float: right; background: url(http://image1.jmw.com.cn/newSearchPage/images/free_close.gif) no-repeat; width: 12px; height: 11px; margin-top: 17px; margin-right: 16px;} .advice-3{ height: 260px;} .advice-3-tips{ font-size: 14px; color: #999; height: 24px; line-height: 24px; text-align: left; float: left; width: 407px; text-indent: 26px; margin-top: 22px; margin-bottom: 14px;} .advice-3-tips span{ color: #444;} .advice-3 p{ margin-bottom: 10px; padding-left: 26px;} .advice-3 p span{ display: inline-block; vertical-align: middle; font-size: 14px; color: #444; padding-right: 7px;} .advice-3 p .s_tes{ vertical-align: middle; width: 168px; height: 18px; line-height: 18px; padding: 5px 3px; color: #333; border: 1px solid #e8e8e8;} .advice-3-bot input{ width: 149px; height: 42px; line-height: 40px; overflow: hidden; background: url(http://image1.jmw.com.cn/newSearchPage/images/huhu.png) no-repeat; color: #fff; border: none; text-align: center; font-size: 18px; cursor: pointer; margin-left: 93px; margin-top: 2px;} .advice-3 p span.sexi{ padding-left: 5px; padding-right: 2px;} .sexi input{ vertical-align: middle;} .sexi label{ display: inline-block; vertical-align: middle;} .advice-4{ color: #999; height: 53px; line-height: 53px; overflow: hidden; padding-left: 32px;} .advice-4 span{ color: #126ebc;}</style>
+        <script type="text/javascript">$(function() {
+                $("#black_ceng").css({
+                    'width': $(window).width() + 'px',
+                    'height': $(window).height() + 'px'
+                });
+                window.onresize = function() {
+                    $("#black_ceng").css({
+                        'width': $(window).width() + 'px',
+                        'height': $(window).height() + 'px'
+                    });
+                }
+                $("div.free").click(function() {
+                    $(".advice_hotline").show();
+                    $("#black_ceng").show();
+                });
+                $(".advice-2 a").click(function() {
+                    $(".advice_hotline").hide();
+                    $("#black_ceng").hide();
+                    //$("#bgDiv").hide();
+                });
+            });</script>
+    </body>
 
 </html>

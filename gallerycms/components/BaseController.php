@@ -6,6 +6,7 @@ use Yii;
 class BaseController extends Controller
 {
     public $mHosts;
+    public $layout = '@gallerycms/views/layouts/main-merchant';
 
     public function init()
     {

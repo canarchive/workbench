@@ -62,7 +62,7 @@ return [
     ],
     'merchant-info' => [
 		'name' => '商家信息',
-		'pc-url' => '/beijing/show_jz.html',
-		'mobile-url' => '/beijing/show_jz.html',
+		'pc-url' => '/beijing/showsj_jz.html',
+		'mobile-url' => '/beijing/showsj_jz.html',
     ],
 ];

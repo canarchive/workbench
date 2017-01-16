@@ -43,14 +43,14 @@ return [
 	'aboutus-desc' => [
 		'name' => '关于我们',
 		'pc-url' => '/desc.html',
-		//'mobile-url' => '/info-aboutus.html',
+		'mobile-url' => '/desc.html',
 	],
 	'aboutus-culture' => [
 		'name' => '企业文化',
 		'pc-url' => '/culture.html',
 		//'mobile-url' => '/info-aboutus.html',
     ],
-	'aboutus-culture' => [
+	'aboutus-contactus' => [
 		'name' => '联系我们',
 		'pc-url' => '/contactus.html',
 		//'mobile-url' => '/info-aboutus.html',
@@ -58,7 +58,7 @@ return [
 	'aboutus-guestbook' => [
 		'name' => '意见反馈',
 		'pc-url' => '/guestbook.html',
-		//'mobile-url' => '/info-aboutus.html',
+		'mobile-url' => '/guestbook.html',
     ],
 	'aboutus-friendlink' => [
 		'name' => '友情链接',
@@ -66,8 +66,13 @@ return [
 		//'mobile-url' => '/info-aboutus.html',
     ],
 	'aboutus-statement' => [
-		'name' => '声明',
+		'name' => '法律声明',
 		'pc-url' => '/statement.html',
 		//'mobile-url' => '/info-aboutus.html',
+    ],
+	'aboutus-question' => [
+		'name' => '常见问题',
+		//'pc-url' => '/question.html',
+		'mobile-url' => '/question.html',
     ],
 ];

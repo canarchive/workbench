@@ -11,7 +11,7 @@ class AboutusController extends HouseController
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
-        $this->layout = 'main-about';
+        $this->layout = '@gallerycms/views/layouts/main-about';
 		
         $navs = [
             'desc' => '公司简介',

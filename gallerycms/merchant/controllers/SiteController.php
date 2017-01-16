@@ -10,6 +10,8 @@ use gallerycms\merchant\models\Working;
 
 class SiteController extends MerchantController
 {
+    public $layout = '@gallerycms/views/layouts/main-merchant';
+
 	public function actionIndex()
 	{
 		/*$model = new Merchant();
@@ -26,6 +28,8 @@ class SiteController extends MerchantController
 
 	public function actionShow()
 	{
+        $datas = [];
+		return $this->render('show', $datas);
 		$action = Yii::$app->request->get('action');
 		$actions = ['sjjj' => 'info', 'sjsj' => 'realcase', 'sjgd' => 'working', 'sj' => 'showindex', 'sjdp' => 'comment', 'sjsjs' => 'designer'];
 		if (!in_array($action, array_keys($actions))) {

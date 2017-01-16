@@ -10,7 +10,6 @@ $this->params['jsFiles'] = [
 ];
 ?>
 <div class="global_wrap" id='gloWrap'>
-    <link type="text/css" rel="stylesheet" href="http://www.to8to.com/about/css/style_new.css?v=1473840944">
     <script type="text/javascript" src="http://static.to8to.com/gb_js/about_new_v2.js?v=1467110193"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7233fde1057bb867913663813486baad"></script>
     <?= $this->render('_nav', ['navs' => $navs, 'view' => $view]); ?>

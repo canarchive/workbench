@@ -9,6 +9,8 @@ use gallerycms\house\models\Comment;
 
 class CommentController extends HouseController
 {
+    public $layout = '@gallerycms/views/layouts/main-merchant';
+
 	public function actionIndex()
 	{
 		return $this->_list();

@@ -10,8 +10,8 @@ $this->params['jsFiles'] = [
 ];
 ?>
 <div class="global_wrap" id='gloWrap'>
-    <div id="content">
-        <?= $this->render('_nav', ['navs' => $navs, 'view' => $view]); ?>
+    <?= $this->render('_nav', ['navs' => $navs, 'view' => $view]); ?>
+    <div "content" class="limit_w about_centent">
         <div class="new_content_fb">
             <p class="new_fb_p">意见反馈
                 <span>Feedback</span></p>

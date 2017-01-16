@@ -16,6 +16,14 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => '/'
         ],
     ],
+    'merchant-show' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'pattern' => '/<city_code:\w+>/showsj_<code:\w+>', 
+            'route' => '/merchant/site/show', 
+            'suffix' => '.html'
+        ],
+    ],
     'working-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
