@@ -8,8 +8,6 @@ $tdkInfos = isset(Yii::$app->params['tdkInfos']) ? Yii::$app->params['tdkInfos']
 $seoTitle = isset($tdkInfos['title']) ? $tdkInfos['title'] : Yii::$app->params['seoTitle'];
 $seoKeyword = isset($tdkInfos['keyword']) ? $tdkInfos['keyword'] : Yii::$app->params['seoKeyword'];
 $seoDescription = isset($tdkInfos['description']) ? $tdkInfos['description'] : Yii::$app->params['seoDescription'];
-$formPosition = isset($this->params['formPosition']) ? $this->params['formPosition'] : '';
-$formPositionName = isset($this->params['formPositionName']) ? $this->params['formPositionName'] : '';
 $cssAllFiles = isset(Yii::$app->params['cssFiles']) ? Yii::$app->params['cssFiles'] : [];
 $jsAllFiles = isset(Yii::$app->params['jsFiles']) ? Yii::$app->params['jsFiles'] : [];
 $faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] : Yii::getAlias('@asseturl') . '/backend/img/favicon-fb.ico';
@@ -51,25 +49,26 @@ $faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] :
 <?php if (isset($cssFiles)) { foreach ($cssFiles as $cssFile) { $cssFile = isset($cssAllFiles[$cssFile]) ? $cssAllFiles[$cssFile] : $cssFile; ?>
 <link rel="stylesheet" type="text/css" href="<?= $cssFile; ?>" />
 <?php } } ?>
-<?php if (isset($jsFiles)) { foreach ($jsFiles as $jsFile) { $jsFile = isset($jsAllFiles[$jsFile]) ? $jsAllFiles[$jsFile] : $jsFile; ?>
-<script type="text/javascript" src="<?= $jsFile; ?>"></script>
-<?php } } ?>
 <script type="text/javascript">
 window.BASE_URL = "<?= Yii::getAlias('@gallerycmsurl'); ?>";
 window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
+<?php if (isset($this->params['jsFilePre'])) { echo $this->params['jsFilePre']; } ?>
 </script>
+<?php if (isset($jsFiles)) { foreach ($jsFiles as $jsFile) { $jsFile = isset($jsAllFiles[$jsFile]) ? $jsAllFiles[$jsFile] : $jsFile; ?>
+<script type="text/javascript" src="<?= $jsFile; ?>"></script>
+<?php } } ?>
 <?= isset($this->params['headerOtherStr']) ? $this->params['headerOtherStr'] : ''; ?>
 <?= isset($this->params['statCodeStr']) ? $this->params['statCodeStr'] : ''; ?>
 </head>
-<body>
+<body <?php if (isset($this->params['bodyClass'])) { echo $this->params['bodyClass']; } ?>>
 <?= $content; ?>
 <?php 
 $jsFooterFiles = isset($this->params['jsFooterFiles']) ? $this->params['jsFooterFiles'] : []; foreach ($jsFooterFiles as $jsFile) { $jsFile = isset($jsAllFiles[$jsFile]) ? $jsAllFiles[$jsFile] : $jsFile; ?>
 <script type="text/javascript" src="<?= $jsFile; ?>"></script>
 <?php } ?>
 <?=  isset($this->params['footerJsStr']) ? $this->params['footerJsStr'] : ''; ?>
-<input type="hidden" id="position" value="<?= $formPosition; ?>" />
-<input type="hidden" id="position_name" value="<?= $formPositionName; ?>" />
+<input type="hidden" id="position" value="<?= $this->context->pagePosition; ?>" />
+<input type="hidden" id="position_name" value="<?= $this->context->pagePositionName; ?>" />
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none"></div>
 </body>
 </html>
