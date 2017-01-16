@@ -11,14 +11,25 @@ class AboutusController extends HouseController
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
+        $this->layout = 'main-about';
+		
+        $navs = [
+            'desc' => '公司简介',
+            'culture' => '企业文化',
+            'statement' => '法律声明',
+            'guestbook' => '意见反馈',
+            'friendlink' => '友情链接',
+            'contactus' => '联系我们',
+        ];
+        $this->pagePosition = $view;
+        $this->pagePositionName = $navs[$view];
 
 		$datas = [
+            'navs' => $navs,
 			//'ownerInfos' => $this->_getOwnerInfos(),
 			'view' => $view,
 			'communityInfo' => [],
 		];
-        $this->layout = 'main-about';
-		
 		$this->getTdkInfos('aboutus-' . $view);
 		return $this->render($view, $datas);
 	}
