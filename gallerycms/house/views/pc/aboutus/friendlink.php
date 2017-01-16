@@ -26,7 +26,7 @@
                         <link rel="shortcut icon" href="/favicon.ico" />
                         <link rel="stylesheet" type="text/css" href="http://static.to8to.com/css/new_global_forold.css?v=1483588268">
                         <link href="http://static.to8to.com/css/global.css?v=1440396867" rel="stylesheet" type="text/css" />
-                        <link href="/about/css/style_new.css?v=1473840944" rel="stylesheet" type="text/css" />
+                        <link href="http://www.to8to.com/about/css/style_new.css?v=1473840944" rel="stylesheet" type="text/css" />
                         <link rel="stylesheet" href="http://static.to8to.com/assets_dist/common/widgets/consult_online/consult_online.css?v=1483430974">
                         <script src="http://static.to8to.com/gb_js/jquery-1.10.2.min.js?v=1411152719"></script>
                         <script>var jq = jQuery.noConflict();</script>

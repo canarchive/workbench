@@ -17,6 +17,7 @@ class AboutusController extends HouseController
 			'view' => $view,
 			'communityInfo' => [],
 		];
+        $this->layout = 'main-about';
 		
 		$this->getTdkInfos('aboutus-' . $view);
 		return $this->render($view, $datas);

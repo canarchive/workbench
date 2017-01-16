@@ -24,4 +24,12 @@ class BaseController extends Controller
 		$this->pcMappingUrl = '/';
 		$this->mobileMappingUrl = '/';
     }
+
+    public function _initAsset()
+    {
+        $infos = require Yii::getAlias('@app') . '/config/asset.php';
+        Yii::$app->params['cssFiles'] = $infos['cssFiles'];
+        Yii::$app->params['jsFiles'] = $infos['jsFiles'];
+        return ;
+    }
 }
