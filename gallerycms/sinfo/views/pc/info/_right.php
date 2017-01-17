@@ -1,12 +1,12 @@
 <div class="ask_ways floatR">
     <ul>
         <li class="ask_ways1">
-            <h3>预约专家</h3>
+            <h3>免费注册</h3>
             <div class="ask_ways_detail clearfix">
                 <span class="floatL"></span>
                 <div class="detail_txt floatL pop_zixun">
-                    <div>为您提供一对一解决方案</div>
-                    <a class="" href="javascript:" value="1">立即预约</a></div>
+                    <div>提升效果，只需三步</div>
+                    <a class="" href="/sp-register.html" value="1">立即体验</a></div>
             </div>
         </li>
         <li class="ask_ways2">
@@ -14,8 +14,9 @@
             <div class="ask_ways_detail clearfix">
                 <span class="floatL"></span>
                 <div class="detail_txt floatL pop_zixun">
-                    <div>周一至周五9:00——17:30</div>
-                    <a id="TQzx0" class="zaixianzixun" clickCount="true" clickAdd="zaixianzixun">立即咨询</a></div>
+                    <div>7*24小时在线客服</div>
+                    <a rel="nofollow" id="TQzx0" class="zaixianzixun" clickCount="true" clickAdd="zaixianzixun" href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" >点击咨询</a>
+                </div>
             </div>
         </li>
         <li class="ask_ways3">

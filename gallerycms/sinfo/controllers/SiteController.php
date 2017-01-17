@@ -29,8 +29,9 @@ class SiteController extends SinfoController
 
     protected function getInfoInfos()
     {
+		$where = ['site_code' => $this->siteCode, 'status' => 1];
 		$model = new Info();
-		$infos = $model->getInfosForIndex();
+		$infos = $model->getInfosForIndex($where);
 		return $infos;
     }
 }
