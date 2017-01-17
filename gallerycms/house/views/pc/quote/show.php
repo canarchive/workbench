@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html>
+<?php
+use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>北京雷捷时代广场130㎡新古典风格装修报价,多少钱,预算_一起装修网</title>
-<meta http-equiv="mobile-agent" content="format=xhtml;url=http://m.beijing.17house.com/baojia/644868.html" />
-<meta name="mobile-agent" content="format=html5; url=http://m.beijing.17house.com/baojia/644868.html">
-<meta name="mobile-agent" content="format=wml; url=http://m.beijing.17house.com/baojia/644868.html">
-<meta name="keywords" content="北京雷捷时代广场130㎡新古典风格装修报价, 北京雷捷时代广场130㎡新古典风格装修报价多少钱, 北京雷捷时代广场130㎡新古典风格装修报价预算" />
-<meta name="description" content="一起装修网通过房屋装修智能报价工具为您估算北京雷捷时代广场130㎡新古典风格装修报价,预算多少钱，让您的装修更透明更放心。" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="renderer" content="webkit">
-<!-- 强制360用webkit -->
-<link href="http://s1.17house.com/common/css/common_pc.css?v=2016060102" rel="stylesheet" />
-<link href="http://s1.17house.com/common/css/poplayer.css?v=2016060102" rel="stylesheet">
-<!-- 弹窗 -->
-<link href="http://s1.17house.com/znbj/css/animate.min.css?v=2016060102" rel="stylesheet" />
-<!-- css3动画库 -->
-<link href="http://s1.17house.com/znbj/css/poplunbo.css?v=2016060102" rel="stylesheet">
-<!-- 弹窗轮播 -->
-<link href="http://s1.17house.com/znbj/css/offer.css?v=2016060102" rel="stylesheet" />
-<!-- 当前css -->
-<script src="http://s1.17house.com/common/js/jquery-1.11.3.min.js?v=2016060102"></script>
-<script src="http://s1.17house.com/common/js/common.js?v=2016060102"></script>
-<script src="http://s1.17house.com/common/js/jquery.lazyload.min.js?v=2016060102"></script>
-<!-- 图片懒加载 -->
-<script src="http://s1.17house.com/common/js/provinces.js?v=2016060102"></script>
-<script src="http://s1.17house.com/common/js/poplayer.js?v=2016060102"></script>
-<script src="http://s1.17house.com/znbj/js/poplunbo.js?v=2016060102"></script>
-<script src="http://s1.17house.com/znbj/js/offer.js?v=2016060102"></script>
-<link rel="stylesheet" href="http://s1.17house.com/common/css/common.css">
-<!-- 省市 --></head>
-
-<body>
+$this->params['cssFiles'] = [
+    'quote1-common_pc', 'quote1-poplayer', 'quote1-animate.min', 'quote1-poplunbo', 'quote1-offer', 'quote1-common',
+];
+$this->params['jsFiles'] = [
+    'quote1-jquery-1.11.3.min', 'quote1-common', 'quote1-jquery.lazyload.min', 
+    'quote1-provinces', 'quote1-poplayer', 'quote1-poplunbo', 'quote1-offer',
+];
+?>
 <style type="text/css">.iclose{width:26px;height: 26px;background: url(http://beijing.17house.com/images/close.png) no-repeat;position: absolute; right: 3px;top:10px;} .iclose:hover{background: url(http://beijing.17house.com/images/close-h.png) no-repeat;}</style>
 <div style="background: url(http://static.17house.com/web/cp/201612/29/161229092714283802dbb5c131f527768f4673991a12.gif) 50% 0 no-repeat;position: relative;height: 70px;overflow: hidden;">
     <a href="http://tuan.17house.com/bj/2764.html" style="display:block; height:70px; width:100%;"></a>

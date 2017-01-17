@@ -35,6 +35,13 @@ return [
         'zxbjWidgetNew' => $baseAsseturl . 'ask/css/zxbjWidgetNew.css',
         'zxbj_bottom_slide' => $baseAsseturl . 'ask/css/zxbj_bottom_slide.css',
 
+        'quote1-animate.min' => $baseAsseturl . 'quote1/css/animate.min.css',
+        'quote1-common' => $baseAsseturl . 'quote1/css/common.css',
+        'quote1-common_pc' => $baseAsseturl . 'quote1/css/common_pc.css',
+        'quote1-offer' => $baseAsseturl . 'quote1/css/offer.css',
+        'quote1-poplayer' => $baseAsseturl . 'quote1/css/poplayer.css',
+        'quote1-poplunbo' => $baseAsseturl . 'quote1/css/poplunbo.css',
+
         'plat-bzCommon2' => $baseAsseturl . 'plat/css/bzCommon2.css',
         'plat-gai1_style' => $baseAsseturl . 'plat/css/gai1_style.css',
         'plat-global' => $baseAsseturl . 'plat/css/global.css',
@@ -45,6 +52,7 @@ return [
         'plat-menu' => $baseAsseturl . 'plat/css/menu.css',
         'plat-reset' => $baseAsseturl . 'plat/css/reset.css',
         'plat-style' => $baseAsseturl . 'plat/css/style.css',
+        'plat-style-s' => $baseAsseturl . 'plat/css/style-s.css',
         'plat-trade1' => $baseAsseturl . 'plat/css/trade1.css',
         'plat-v9_jquery-ui' => $baseAsseturl . 'plat/css/v9_jquery-ui.css',
         'plat-v9_style' => $baseAsseturl . 'plat/css/v9_style.css',
@@ -91,6 +99,14 @@ return [
         'xiaoguotu_new' => $baseAsseturl . 'ask/js/xiaoguotu_new.js',
         'zxbjWidgetNew' => $baseAsseturl . 'ask/js/zxbjWidgetNew.js',
         'zxbj_bottom_slide' => $baseAsseturl . 'ask/js/zxbj_bottom_slide.js', 
+
+        'quote1-common' => $baseAsseturl . 'quote1/js/common.js',
+        'quote1-jquery-1.11.3.min' => $baseAsseturl . 'quote1/js/jquery-1.11.3.min.js',
+        'quote1-jquery.lazyload.min' => $baseAsseturl . 'quote1/js/jquery.lazyload.min.js',
+        'quote1-offer' => $baseAsseturl . 'quote1/js/offer.js',
+        'quote1-poplayer' => $baseAsseturl . 'quote1/js/poplayer.js',
+        'quote1-poplunbo' => $baseAsseturl . 'quote1/js/poplunbo.js',
+        'quote1-provinces' => $baseAsseturl . 'quote1/js/provinces.js',
 
         'plat-Cookie' => $baseAsseturl . 'plat/js/Cookie.js',
         'plat-ScrollPic-min' => $baseAsseturl . 'plat/js/ScrollPic-min.js',

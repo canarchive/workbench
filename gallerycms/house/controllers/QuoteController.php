@@ -9,6 +9,13 @@ use gallerycms\house\models\Quote;
 
 class QuoteController extends HouseController
 {
+    public function init()
+    {
+        parent::init();
+
+        $this->layout = '@gallerycms/views/layouts/main-quote';
+    }
+
 	public function actionIndex()
 	{
 		return $this->_list();
