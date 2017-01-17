@@ -37,7 +37,7 @@ $secondLevels = [
         <div class="container">
             <div class="login floatL" style="width:auto;">
                 <span class="s-homeico"></span>
-                <a href="/" style="margin-right:25px;">官网首页</a>
+                <a href="javascript:void(0);" style="margin-right:25px;">为营销而生</a>
                 <!--<a id="home_login" href="" target="_blank" style="margin-right: 4px;">登录</a>-->
                 <a id="home_out_line" style="display:none;">|</a>
                 <a id="home_out" style="display:none" onclick="ZQDL.apps.login.logout()">退出</a>
@@ -61,7 +61,7 @@ $secondLevels = [
             <ul class="nav">
                 <?php foreach ($firstLevels as $urlInfo) { ?>
                 <li class="d_2">
-                    <a href="<?= $urlInfo['url']; ?>"><?= $urlInfo['name']; ?></a>
+					<a <?php if ($urlInfo['view'] == 'login' || $urlInfo['view'] == 'register') { echo 'rel="nofollow"'; } ?> href="<?= $urlInfo['url']; ?>"><?= $urlInfo['name']; ?></a>
                 </li>
                 <?php } ?>
             </ul>

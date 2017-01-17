@@ -41,12 +41,13 @@ $siteInfos = [
         'name' => 'QQ云统计',
     ],
 ];
-$str = $strReal = $strTdk = '';
+$str = $strReal = $strTdk = $hostStr = '';
 foreach ($siteInfos as $siteKey => & $baseInfo) {
     //$str .= "Yii::setAlias('{$siteKey}.cmsurl', 'http://{$siteKey}.sinfo.alyee.com');\n";
     //$str .= "Yii::setAlias('m.{$siteKey}.cmsurl', 'http://m{$siteKey}.sinfo.alyee.com');\n";
     //$strReal .= "Yii::setAlias('{$siteKey}.cmsurl', 'http://www.{$baseInfo['domain']}');\n";
     //$strReal .= "Yii::setAlias('m.{$siteKey}.cmsurl', 'http://m.{$baseInfo['domain']}');\n";
+	$hostStr .= '*.' . $baseInfo['domain'] . ',';
     $strTdk .= "// {$baseInfo['name']}\n";
     $strTdk .= "'{$siteKey}' => [\n    'site-index' => [\n        'title' => '{$baseInfo['name']}',\n        'keyword' => '{$baseInfo['name']}',\n        'description' => '{$baseInfo['name']}',\n    ],\n";
     $strTdk .= "    'single-page-smobile' => [\n        'title' => '{$baseInfo['name']}',\n        'keyword' => '{$baseInfo['name']}',\n        'description' => '{$baseInfo['name']}',\n    ],\n";
@@ -57,6 +58,7 @@ foreach ($siteInfos as $siteKey => & $baseInfo) {
     $siteInfos[$siteKey] = $baseInfo;
 }
 //echo $strTdk;exit();
+//echo $hostStr;exit();
 //echo $str . $strReal;
 return $siteInfos;
 

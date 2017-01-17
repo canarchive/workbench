@@ -13,7 +13,7 @@
 <iframe id="frmDialog" scrolling="no" src="http://tj.tubanzhang.cn/member/reg.php?d=9309" frameborder="0" height="358px" width="100%" style="margin:0 auto;"></iframe>
 <div style="width:100%; margin:0 auto;">
     <p align="center" style="color:#037C11; font-family: 'Microsoft YaHei Mono', 'Microsoft YaHei UI'">
-        <a href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" class="lookall" target="_blank"><?= $this->context->currentSiteInfo['name']; ?>  客服QQ：<?= Yii::$app->params['siteQQ']; ?></a><br />
+        <a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" class="lookall" target="_blank"><?= $this->context->currentSiteInfo['name']; ?>  客服QQ：<?= Yii::$app->params['siteQQ']; ?></a><br />
     </p>
 </div>
 </body>

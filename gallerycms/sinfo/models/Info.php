@@ -122,16 +122,28 @@ class Info extends GallerycmsModel
 		return $info;
 	}
 
-    public function getInfosForIndex()
+    public function getInfosForIndex($where)
     {
         $sorts = $this->getSortInfos();
         $infos = [];
         foreach ($sorts as $sort => $name) {
-            $subInfos = $this->getInfos(['sort' => $sort], 7);
+			$where = array_merge($where, ['sort' => $sort]);
+            $subInfos = $this->getInfos($where, 5);
             $infos[$sort]['name'] = $name;
             $infos[$sort]['subInfos'] = $subInfos;
         }
 
         return $infos;
     }
+
+	public function autoPublish()
+	{
+		$siteCodes = $this->siteCodeInfos;
+		foreach ($siteCodes as $siteCode => $value) {
+			$info = $this->find()->where(['site_code' => $siteCode, 'status' => 0])->one();
+			$info->status = 1;
+			$info->orderlist = $info->id;
+			print_r($info);
+		}
+	}
 }

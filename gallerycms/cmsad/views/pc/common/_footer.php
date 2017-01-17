@@ -6,13 +6,13 @@ use yii\helpers\Url;
     <div class="container">
         <div class="footer-menu">
             <p id="list" class="list">
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'index']); ?>" class="first">关于<?= Yii::$app->params['siteNameBase']; ?></a><span>|</span>
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'attention']); ?>">法律隐私</a><span>|</span>
+                <a rel="nofollow" target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'index']); ?>" class="first">关于<?= Yii::$app->params['siteNameBase']; ?></a><span>|</span>
+                <a rel="nofollow" target="_blank" href="<?= Url::to(['/cmsad/aboutus/statement', 'view' => 'attention']); ?>">法律隐私</a><span>|</span>
                 <!--<a target="_blank" href="/job/">工作机会</a><span>|</span>-->
-                <a target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>">联系我们</a><span>|</span>
+                <a rel="nofollow" target="_blank" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>">联系我们</a><span>|</span>
                 <!--<a target="_blank" href="/map.html">网站地图</a><span>|</span>-->
                 <!--<a target="_blank" href="<?= Url::to(['/cmsad/aboutus/friendlink']); ?>">友情链接</a><span>|</span>-->
-                <a href="<?= Url::to(['/cmsad/aboutus/guestbook']); ?>" target="_blank">意见反馈</a>
+                <a rel="nofollow" href="<?= Url::to(['/cmsad/aboutus/guestbook']); ?>" target="_blank">意见反馈</a>
             </p>
         </div>
         <div class="copyright">
