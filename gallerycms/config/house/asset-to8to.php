@@ -40,6 +40,7 @@ return [
         'askbase-m-zxgl-new.min' => $baseAsseturl . 'askbase-m/css/zxgl-new.min.css',
     ],
     'jsFiles' => [
+        'askbase-jq' => $baseAsseturl . 'askbase/js/jq.js',
         'askbase-2a19dc2ac1471a7470fe7187a5537960' => $baseAsseturl . 'askbase/js/2a19dc2ac1471a7470fe7187a5537960.js',
         'askbase-GlobalProvinces' => $baseAsseturl . 'askbase/js/GlobalProvinces.js',
         'askbase-about_new' => $baseAsseturl . 'askbase/js/about_new.js',

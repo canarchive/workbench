@@ -3,10 +3,12 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->params['cssFiles'] = [
-    'new_global_forold', 'global', 'style_new', 'consult_online',
+    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
+    'askbase-consult_online',
 ];
 $this->params['jsFiles'] = [
-    'jquery-1.10.2.min', 'to8torsas', 'tender', 'common', 'common_new_forold', 
+    'askbase-jquery-1.10.2.min', 'askbase-jq', 'askbase-to8torsas', 
+    'askbase-tender', 'askbase-common',
 ];
 ?>
 <div class="global_wrap" id='gloWrap'>

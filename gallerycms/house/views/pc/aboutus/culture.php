@@ -3,10 +3,10 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->params['cssFiles'] = [
-    'new_global_forold', 'global', 'style_new',
+    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
 ];
 $this->params['jsFiles'] = [
-    'jquery', 'common', 'user_login', 'common_new_forold', 
+    'askbase-jquery', 'askbase-jq', 'askbase-common', 'askbase-user_login',
 ];
 ?>
 <div class="w970">
@@ -51,20 +51,20 @@ $this->params['jsFiles'] = [
                 <ul class="mission_vision">
                     <li class="fl">
                         <i>
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/about/img/culture_pic1.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>的使命" /></i>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/culture_pic1.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>的使命" /></i>
                         <span><?= Yii::$app->params['siteNameBase']; ?>的使命</span>
                         <p>让天下没有烦心的装修</p>
                     </li>
                     <li class="fr">
                         <i>
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/about/img/culture_pic2.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>的愿景" /></i>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/culture_pic2.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>的愿景" /></i>
                         <span><?= Yii::$app->params['siteNameBase']; ?>的愿景</span>
                         <p>成为全球家居装修领域的领导者</p>
                     </li>
                 </ul>
                 <div class="to8to_creed">
                     <span class="to8to_creed_pic">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/about/img/culture_pic3.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>信条" /></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/culture_pic3.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>信条" /></span>
                     <div class="to8to_creed_text">
                         <h5><?= Yii::$app->params['siteNameBase']; ?>的信条</h5>
                         <strong>第一信条：</strong>

@@ -1,5 +1,6 @@
 <?php
 $leftNavs = $navs;
+unset($leftNavs['question']);
 ?>
 <?php if (in_array($view, ['desc', 'culture', 'statement'])) { ?>
 <div class="about_nav"></div>

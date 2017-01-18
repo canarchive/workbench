@@ -3,10 +3,10 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->params['cssFiles'] = [
-    'new_global_forold', 'global', 'style_new',
+    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
 ];
 $this->params['jsFiles'] = [
-    'jquery', 'common', 'user_login', 'common_new_forold', 
+    'askbase-jquery', 'askbase-jq', 'askbase-common', 'askbase-user_login',
 ];
 ?>
 <div class="w970">
