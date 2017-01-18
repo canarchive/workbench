@@ -11,7 +11,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'aboutus' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
-            'pattern' => '/<view:(desc|contactus|guestbook|friendlink|culture|statement)>',
+            'pattern' => '/<view:(desc|contactus|guestbook|friendlink|culture|statement|question)>',
             'route' => '/house/aboutus/index', 
             'suffix' => '.html',
         ],
