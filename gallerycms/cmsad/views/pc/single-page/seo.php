@@ -19,7 +19,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
+                <h2 class="gwtg-title gwtg-title01">搜索引擎</h2>
                 <div class="zmail-p-con">
                     <div class="img floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
@@ -40,7 +40,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">SEO顾问优势</h1>
+                <h2 class="gwtg-title gwtg-title01">SEO顾问优势</h2>
                 <div class="zmail-p-con">
                     <div class="img floatL">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
@@ -62,7 +62,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">SEO顾问流程</h1>
+                <h2 class="gwtg-title gwtg-title03">SEO顾问流程</h2>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
@@ -85,7 +85,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part gwtg-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title04">Seo搜索引擎优化</h1>
+                <h2 class="gwtg-title gwtg-title04">Seo搜索引擎优化</h2>
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
@@ -174,7 +174,7 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <!--<div class="newz-customer dxal-01">
         <div class="newz-con">
-        <h1 class="gwtg-title gwtg-title05">产品案例</h1>
+        <h2 class="gwtg-title gwtg-title05">产品案例</h2>
         <div class="con customer-slides">
         <a class="slid_prev" href="###"></a>
         <a class="slid_next" href="###"></a>
