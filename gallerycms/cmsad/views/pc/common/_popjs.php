@@ -11,7 +11,6 @@ $(function() {
     });
 
     function showRequest(formId) {
-        alert(formId);
         if (!feedbackTime) {
             alert('已提交，不需要重复提交！');
             return;

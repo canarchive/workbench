@@ -43,30 +43,10 @@ $this->params['jsFiles'] = [
                     <h3>企业资质</h3>
                     <div class="swiper-container wrap-s" id='wrap-s'>
                         <div class="swiper-wrapper">
-                            <!--<div class="swiper-slide">
-                                <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img1.jpg" alt=""></div>
-                                <div class="zz-name">2013年度优秀域名注册服务机构</div></div>
                             <div class="swiper-slide">
                                 <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img2.jpg" alt=""></div>
-                                <div class="zz-name">ZtouchS软件著作权登记证书</div></div>
-                            <div class="swiper-slide">
-                                <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img3.jpg" alt=""></div>
-                                <div class="zz-name">质量管理体系认证证书(中文)</div></div>
-                            <div class="swiper-slide">
-                                <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img4.jpg" alt=""></div>
-                                <div class="zz-name">Z+软件著作权证书</div></div>
-                            <div class="swiper-slide">
-                                <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img5.jpg" alt=""></div>
-                                <div class="zz-name">可信网站明星验证服务中心</div></div>
-                            <div class="swiper-slide">
-                                <div class="img">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zz-img6.jpg" alt=""></div>
-                                <div class="zz-name">通用网址金牌验证服务中心</div></div>-->
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/zhizhao.jpg" alt=""></div>
+                                <div class="zz-name">营业执照</div></div>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -80,22 +60,19 @@ $this->params['jsFiles'] = [
                     <div class="linkus-con">
                         <div class="linkus-add">
                             <dl>
-                                <dt>地址：</dt>
-                                <dd></dd></dl>
+							<dt>地址：</dt>
+                                <dd><?= Yii::$app->params['siteAddressInfo']; ?></dd></dl>
                             <dl>
                                 <dt>邮编：</dt>
-                                <dd>100</dd></dl>
-                            <dl>
-                                <dt>ADD：</dt>
-                                <dd></dd></dl>
+                                <dd>102209</dd></dl>
                         </div>
                         <div class="linkus-ways">
                             <dl>
                                 <dt>电话：</dt>
-                                <dd>400--</dd></dl>
+								<dd><?= Yii::$app->params['siteHotline']; ?></dd></dl>
                             <dl>
                                 <dt>网址：</dt>
-                                <dd>www.weinaya.com</dd></dl>
+								<dd><a href="http://www.weinaya.com">www.weinaya.com</a></dd></dl>
                             <dl>
                                 <dt>邮箱：</dt>
                                 <dd>

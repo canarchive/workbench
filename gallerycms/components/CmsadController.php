@@ -12,8 +12,8 @@ class CmsadController extends Controller
 
         $this->host = Yii::$app->request->hostInfo;
 
-        //$this->isMobile = $this->clientIsMobile();
-        $this->isMobile = $this->host == $this->_getHost('mobile') ? true : false;
+        $this->isMobile = $this->clientIsMobile();
+        //$this->isMobile = $this->host == $this->_getHost('mobile') ? true : false;
 
         $url = Yii::$app->request->url;
         $redirect = strpos($url, 'index.php') !== false ? true : false;
@@ -28,8 +28,11 @@ class CmsadController extends Controller
         Yii::$app->params['siteCustomServiceQQ'] = '1298115377';
 
         if (isset($this->module->viewPath)) {
-            $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
+            $this->module->viewPath .= $this->host == $this->_getHost('mobile') ? '/mobile' : '/pc';
         }
+		$this->pcMappingUrl = $this->_getHost('pc') . Yii::$app->request->url;
+		$this->mobileMappingUrl = $this->_getHost('mobile') . Yii::$app->request->url;
+        //$this->isMobile = $this->clientIsMobile();
 
     }
 

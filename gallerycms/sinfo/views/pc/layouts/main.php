@@ -6,6 +6,12 @@ $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 
 $this->params['footerJsStr'] = $this->render('_after_js');
 ?>
 <?php $this->beginContent('@common/views/main-base.php'); ?>
+<script>
+var isMobile = '<?= intval($this->context->isMobile); ?>';
+if (isMobile == 1) {
+    window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
+}
+</script>
 
 <!--[if lte IE 6]>
     <script src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/png_0.0.8a-min.js" type="text/javascript"></script>
