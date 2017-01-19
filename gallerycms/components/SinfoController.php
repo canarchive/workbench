@@ -35,10 +35,13 @@ class SinfoController extends Controller
         Yii::$app->params['siteQQ'] = '2376816784';
         Yii::$app->params['siteCopyRightInfo'] = "Coptyright&nbsp;&copy;&nbsp;2009-2017&nbsp;{$this->currentSiteInfo['domain']},All&nbsp;rights&nbsp;reserved.&nbsp;";
         Yii::$app->params['siteIcpInfo'] = $this->currentSiteInfo['icp'];
-        $this->isMobile = $this->clientType == 'mobile' ? true : false;
+        $this->clientType == 'mobile' ? true : false;
+        $this->isMobile = $this->clientIsMobile();
         if (isset($this->module->viewPath)) {
-            $this->module->viewPath .= $this->isMobile ? '/mobile' : '/pc';
+            $this->module->viewPath .= $this->clientType == 'mobile' ? '/mobile' : '/pc';
         }
+		$this->pcMappingUrl = $this->currentSiteInfo['pc'] . Yii::$app->request->url;
+		$this->mobileMappingUrl = $this->currentSiteInfo['mobile'] . Yii::$app->request->url;
     }
 
 	protected function _redirectRule()

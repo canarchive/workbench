@@ -40,8 +40,8 @@ $secondLevels = [
     <div class="topmenu">
         <div class="container">
             <div class="login floatL" style="width:auto;">
-                <span class="s-homeico"></span>
-                <a href="/" style="margin-right:25px;">官网首页</a>
+                <span class=""></span>
+                <a href="/" style="margin-right:25px;">专注互联网效果营销</a>
                 <!--<a id="home_login" href="" target="_blank" style="margin-right: 4px;">登录</a>-->
                 <a id="home_out_line" style="display:none;">|</a>
                 <a id="home_out" style="display:none" onclick="ZQDL.apps.login.logout()">退出</a>

@@ -4,8 +4,15 @@ use yii\helpers\Html;
 
 $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count'];
 $this->params['footerJsStr'] = $this->render('_after_js');
+$this->params['statCodeStr'] = $this->render('../../_stat'); 
 ?>
 <?php $this->beginContent('@common/views/main-base.php'); ?>
+<script>
+var isMobile = '<?= intval($this->context->isMobile); ?>';
+if (isMobile == 1) {
+    window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
+}
+</script>
 
 <!--[if lte IE 6]>
     <script src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/js/png_0.0.8a-min.js" type="text/javascript"></script>

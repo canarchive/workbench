@@ -6,6 +6,12 @@ $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 
 //$this->params['footerJsStr'] = $this->render('_after_js');
 ?>
 <?php $this->beginContent('@common/views/main-base.php'); ?>
+<script>
+var isMobile = '<?= intval($this->context->isMobile); ?>';
+if (isMobile == 0) {
+    window.location.href = "<?= $this->context->pcMappingUrl; ?>";
+}
+</script>
 <script>//微信tel失效问题,去除sukey
     if (navigator.userAgent.indexOf('MicroMessenger') != -1) {
         var shref = window.location.href;
