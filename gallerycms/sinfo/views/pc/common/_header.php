@@ -55,9 +55,9 @@ $secondLevels = [
     <div class="header">
         <div class="header_bg"></div>
         <div class="container head">
-            <h1 class="logo">
+            <h2 class="logo">
                 <a href="/" title='<?= Yii::$app->params['siteName']; ?>'><?= Yii::$app->params['siteName']; ?></a>
-            </h1>
+            </h2>
             <ul class="nav">
                 <?php foreach ($firstLevels as $urlInfo) { ?>
                 <li class="d_2">
