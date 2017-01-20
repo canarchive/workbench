@@ -8,25 +8,25 @@ use yii\helpers\Url;
             <?php foreach ($model->sortInfos as $sort => $sortName) { ?>
             <li></li>
             <li class="m1">
-                <a href="/info_<?= $sort; ?>/" <?php if ($sort == $currentSort) { echo 'class="active"'; } ?>><?= $sortName; ?></a>
+				<a href="/info_<?= $sort; ?>/" <?php if ($sort == $currentSort) { echo 'class="active"'; } ?> title="<?= $sortName; ?>"><?= $sortName; ?></a>
                 <ul style=""></ul>
             </li>
             <?php } ?>
         </ul>
     </div>
     <div class="ad-con ad-con2">
-        <a href="/sp-smobile.html" target="_blank">
+        <a rel="nofollow" href="/sp-smobile.html" target="_blank" title="手机号抓取">
             <h2>
                 <span>手机号抓取</span>
                 <i></i>
             </h2>
             <div class="ad-img">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt=""></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt="手机号抓取"></div>
             <p>市场广泛，客户无限</p>
         </a>
     </div>
     <div class="ad-con ad-con3">
-        <a href="/sp-sqq.html" target="_blank">
+        <a rel="nofollow" href="/sp-sqq.html" target="_blank" title="QQ号抓取">
             <h2>QQ号抓取</h2>
             <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img3.jpg" alt=""></div>
             <p>精准营销，抢占先机</p>

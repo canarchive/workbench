@@ -15,14 +15,14 @@ $this->params['formPositionName'] = '';
     <div class="vone_main">
         <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/banner/smobile_<?= $this->context->siteCode; ?>.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
-                <a value="1" href="javascript:void(0);">立即拥有</a></div>
+                <a rel="nofollow" value="1" href="/sp-login.html">立即拥有</a></div>
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h2 class="gwtg-title gwtg-title01">网站访客手机号抓取</h2>
+                <h1 class="gwtg-title gwtg-title01">网站访客手机号抓取</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-01.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-01.png" alt="网站访客手机号抓取"></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
@@ -43,7 +43,7 @@ $this->params['formPositionName'] = '';
                 <h2 class="gwtg-title gwtg-title01"><?= $this->context->currentSiteInfo['name']; ?>功能</h2>
                 <div class="zmail-p-con">
                     <div class="img floatL">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-02.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-02.png" alt="注意事项"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
@@ -53,7 +53,7 @@ $this->params['formPositionName'] = '';
                         <div class="gwtg-left">
                             <div class="t t02">
                                 <span></span>抓取率如何？</div>
-                            <div class="con">手机号抓取<b>开通超级接口</b>后大约在<b>15%到20%</b>甚至更多，抓取率主要取决于客户的访问渠道，如果都是使用手机本身流量来访问的话，抓取率会更高。我们说的15%到%是一个综合对比的概率。<b>建议您免费体验自己测试一下</b>，看看效果。另外QQ号码的抓取率在20%到40%左右，不同漏洞的接口抓取率不一样。</div></div>
+                            <div class="con">手机号抓取<b>开通超级接口</b>后大约在<b>15%到20%</b>甚至更多，抓取率主要取决于客户的访问渠道，如果都是使用手机本身流量来访问的话，抓取率会更高。我们说的15%到20%是一个综合对比的概率。<b>建议您免费体验自己测试一下</b>，看看效果。另外QQ号码的抓取率在20%到40%左右，不同漏洞的接口抓取率不一样。</div></div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -64,7 +64,7 @@ $this->params['formPositionName'] = '';
                 <h2 class="gwtg-title gwtg-title03">安装方法</h2>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-03.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-03.png" alt="安装方法"></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
@@ -82,19 +82,19 @@ $this->params['formPositionName'] = '';
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
-                            <a href="javascript:;">精准营销</a>
+                            <a rel="nofollow" href="javascript:;">精准营销</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">客户无限</a>
+                            <a rel="nofollow" href="javascript:;">客户无限</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">客户管理</a>
+                            <a rel="nofollow" href="javascript:;">客户管理</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">营销闭环</a>
+                            <a rel="nofollow" href="javascript:;">营销闭环</a>
                             <em></em>
                         </li>
                     </ul>
@@ -103,7 +103,7 @@ $this->params['formPositionName'] = '';
                         <div class="gwtg-c-main" style="display:block">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-04.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-04.png" alt="精准营销，抢占先机"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -117,7 +117,7 @@ $this->params['formPositionName'] = '';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-05.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-05.png" alt="市场广泛，客户无限"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -131,7 +131,7 @@ $this->params['formPositionName'] = '';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-06.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-06.png" alt="CRM客户管理系统"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -145,7 +145,7 @@ $this->params['formPositionName'] = '';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-07.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/gwtg-07.png" alt="打造营销闭环"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">

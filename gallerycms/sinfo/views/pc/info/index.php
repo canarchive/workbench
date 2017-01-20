@@ -16,10 +16,13 @@ $this->params['formPositionName'] = '';
     <?= $this->render('_banner'); ?>
     <div class="container">
         <div class="top_links">
-            <a href="/" class="index_link">首页</a><em>></em>
-            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>">获取访客信息攻略</a>
+			<a href="/" class="index_link" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteNameBase']; ?></a><em>></em>
+			<?php if (!empty($currentSort)) { ?>
+            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>" title="获取访客信息攻略">获取访客信息攻略</a>
+            <?php } else { echo '<strong>获取访客信息攻略</strong>'; } ?>
+
             <?php if (!empty($currentSort)) { ?><em>></em>
-            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_' . $currentSort, 'page'=> '_1']); ?>"><?= $currentSortName; ?></a>
+            <strong><?= $currentSortName; ?></strong>
             <?php } ?>
         </div>
         <div class="aboutzq">
@@ -28,12 +31,11 @@ $this->params['formPositionName'] = '';
                 <ul class="media-list-con">
                     <?php foreach ($infos as $info) { ?>
                     <li>
-                        <a href="<?= Url::to(['/sinfo/info/show', 'id' => $info['id']]); ?>">
-                            <div class="t"><?= $info['name']; ?>
+                            <div class="t">
+					    <a href="<?= Url::to(['/sinfo/info/show', 'id' => $info['id']]); ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
                                 <span class="time"><?= date('Y-m-d H:i:s', $info['created_at']); ?></span>
                             </div>
                             <div class="des"><?= $info['description']; ?></div>
-                        </a>
                     </li>
                     <?php } ?>
                 </ul>

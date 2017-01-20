@@ -15,7 +15,7 @@ $this->params['formPositionName'] = $view;
 <style>#notice{margin-left:13px; } #notice:hover{color: #ec6500;}</style>
 <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/banner/aboutus_qqyuntongji.jpg) no-repeat top center">
     <div class="topimg-con zmail-img pop_zixun">
-        <a href="javascript:void(0);" value="1">立即咨询</a></div>
+        <a rel="nofollow" href="/sp-login.html" value="1">立即咨询</a></div>
 </div>
 <!-- Z云邮部分二 -->
 <div class="zyy_item2">
@@ -39,19 +39,19 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it2_right">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic1.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic1.png" alt="一段神奇的代码、改变了世界" /></div>
     </div>
 </div>
 <div class="zyy_item3">
     <div class="zyy_warp">
         <p class="bg">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic2_bg.png" alt="" /></p>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic2_bg.png" alt="软件介绍" /></p>
         <div class="zyy_title">
             <h2></h2>
             <p></p>
         </div>
         <div class="zyy_it3_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic2.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic2.png" alt="软件介绍" /></div>
         <div class="zyy_it3_right">
             <div class="zyy_text">
                 <span class="zyy_text_title">软件介绍</span>
@@ -95,16 +95,17 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it4_right">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic3.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic3.png" alt="你能获得什么" /></div>
     </div>
     <div class="zyy_warp zyy_warp2">
         <div class="zyy_it4_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic4.png" alt="" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/zmail-pic4.png" alt="帮客户节省成本是我们最大的责任" /></div>
         <div class="zyy_it4_right zyy_text_box2">
             <div class="zyy_text">
                 <h3>帮客户节省成本是我们最大的责任</h3>
                 <div class="txt">
-                    <p>如果您使用了<?= $this->context->currentSiteInfo['name']; ?>，一个月您将获得至少100*30 = 3000个精准客户的联系方式. 就算只有十分之一的客户购买了您的产品或服务,那也有超过300单的成交量. 以每单50元利润来计算,每个月<?= $this->context->currentSiteInfo['name']; ?>将帮助您多赚300*50=15000元. 如果您没有使用<?= $this->context->currentSiteInfo['name']; ?>,那么您将损失大量的精准客户,每一个网站访客都需要我们付出很大的成本,您想眼睁睁看着他们流失吗? 现在<?= $this->context->currentSiteInfo['name']; ?>可以免费试用三天,您只需要注册帐号,获取代码并添加到您的网站就可以使用,像添加统计代码一样简单,完全免费,不收任何费用,感觉效果满意再购买,不满意直接去掉统计代码即可!让您完全无任何后顾之忧!早用早受益! </p>
+					<p>如果您使用了<?= $this->context->currentSiteInfo['name']; ?>，一个月您将获得至少100*30 = 3000个精准客户的联系方式. 就算只有十分之一的客户购买了您的产品或服务,那也有超过300单的成交量. 以每单50元利润来计算,每个月<?= $this->context->currentSiteInfo['name']; ?>将帮助您多赚300*50=15000元. 如果您没有使用<?= $this->context->currentSiteInfo['name']; ?>,那么您将损失大量的精准客户,每一个网站访客都需要我们付出很大的成本,您想眼睁睁看着他们流失吗? </p>
+                    <!--<p>现在<?= $this->context->currentSiteInfo['name']; ?>可以免费试用三天,您只需要注册帐号,获取代码并添加到您的网站就可以使用,像添加统计代码一样简单,完全免费,不收任何费用,感觉效果满意再购买,不满意直接去掉统计代码即可!让您完全无任何后顾之忧!早用早受益! </p>-->
                 </div>
             </div>
         </div>

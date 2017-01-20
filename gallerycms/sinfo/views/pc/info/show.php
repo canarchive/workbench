@@ -15,15 +15,14 @@ $this->params['formPositionName'] = '';
     <?= $this->render('_banner'); ?>
     <div class="container">
         <div class="top_links">
-            <a href="/" class="index_link">首页</a>
-            <em>></em>
-            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>">营销学院</a>
+			<a href="/" class="index_link" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteNameBase']; ?></a><em>></em>
+            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>" title="获取访客信息攻略">获取访客信息攻略</a>
             <?php if (!empty($currentSort)) { ?>
             <em>></em>
             <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_' . $currentSort, 'page'=> '_1']); ?>"><?= $currentSortName; ?></a>
             <?php } ?>
             <em>></em>
-            <a href="javascript:void(0);"><?= $info['name']; ?></a>
+            <strong><?= $info['name']; ?></strong>
         </div>
         <div class="aboutzq">
             <?= $this->render('_left', ['model' => $model, 'currentSort' => $currentSort]); ?>
@@ -63,7 +62,7 @@ $this->params['formPositionName'] = '';
                     <ul>
                         <?php $i = 1; foreach ($infos as $value) { if ($value['id'] == $info['id'] || $i > 5) { continue;}?> 
                         <li>
-                            <a href="<?= Url::to(['/sinfo/info/show', 'id' => $value['id']]); ?>" target="_blank">
+						    <a href="<?= Url::to(['/sinfo/info/show', 'id' => $value['id']]); ?>" title="<?= $value['name']; ?>">
                             <span><?= date('Y-m-d', $value['created_at']); ?></span><?= $value['name']; ?>
                             </a>
                         </li>

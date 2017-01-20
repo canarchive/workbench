@@ -41,19 +41,19 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it2_right">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic1.png" alt="全球云游 畅通无忧的企业邮局" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic1.png" alt="我们能做什么？" /></div>
     </div>
 </div>
 <div class="zyy_item3">
     <div class="zyy_warp">
         <p class="bg">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2_bg.png" alt="云邮 . 多终端使用" /></p>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2_bg.png" alt="我们能做什么？" /></p>
         <div class="zyy_title">
             <h2></h2>
             <p></p>
         </div>
         <div class="zyy_it3_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2.png" alt="Z云邮 . 多终端使用" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic2.png" alt="我们能做什么？" /></div>
         <div class="zyy_it3_right">
             <div class="zyy_text">
                 <span class="zyy_text_title">我们能做什么？</span>
@@ -97,11 +97,11 @@ $this->params['formPositionName'] = $view;
             </div>
         </div>
         <div class="zyy_it4_right">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic3.png" alt="Z云邮 . 高效省心 " /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic3.png" alt="我们的优势" /></div>
     </div>
     <div class="zyy_warp zyy_warp2">
         <div class="zyy_it4_left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic4.png" alt="Z云邮 . 高效省心 " /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/zmail-pic4.png" alt="我们的优势" /></div>
         <div class="zyy_it4_right zyy_text_box2">
             <div class="zyy_text">
                 <h3>帮客户节省成本是我们最大的责任</h3>

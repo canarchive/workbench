@@ -31,8 +31,8 @@ use yii\helpers\Url;
                 <ul class="zixun-list">
                     <?php $j = 0; foreach ($subInfo['subInfos'] as $info) { ?>
                     <li>
-                        <a href="/info/<?= $info['id']; ?>.html">
-                            <h4><?= $info['name']; ?></h4>
+					    <a href="/info/<?= $info['id']; ?>.html" title="<?= $info['name']; ?>">
+                            <p><?= $info['name']; ?></p>
                             <!--<p><?= $info['description']; ?></p>-->
                         </a>
                     </li>

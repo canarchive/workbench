@@ -1,6 +1,6 @@
 <div class="page6">
     <div class="newZ_main">
-        <h2>企业营销自动化，帮您节省成本提升效率</h2>
+        <h1>企业营销自动化，帮您节省成本提升效率</h1>
         <div class="top_title clearfix">
             <div class="rmb_icon floatL"></div>
             <div class="title_txt floatL">五步营销　赚取大把订单
