@@ -11,7 +11,8 @@ $this->params['jsFiles'] = [
 ?>
 <section class="content">
     <div class="top-banner">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/banner/smobile_<?= $this->context->siteCode; ?>.jpg" alt=""></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/banner/smobile.jpg" alt="手机号抓取"></div>
+    <h1>手机号抓取</h1>
     <div class="vone-range m-part vone-part google-ggc">
         <div class="m-con">
             <div class="tg-item">
@@ -25,7 +26,7 @@ $this->params['jsFiles'] = [
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img1.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img1.jpg" alt="手机号抓取"></div>
                     <h4>免费体验　只需三步</h4>
                     <p>注册帐户-部署代码 -获取访客</p>
                     <h4>一段神奇的代码，改变了世界</h4>
@@ -43,7 +44,7 @@ $this->params['jsFiles'] = [
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img4.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img4.jpg" alt="常见问题"></div>
                     <h4>注意事项</h4>
                     <p>注册后，我们一个有三个套餐，基础套餐、专业套餐、旗舰套餐，其中基础套餐只能统计QQ号码，如想抓取手机号访客，请使用专业套餐或者旗舰套餐，此二款可以同时抓取手机号码和QQ号码，<b>需要抓取手机号码的请一定要注意选择专业套餐或旗舰套餐。</b></p>
                     <h4>抓取率如何？</h4>
@@ -61,7 +62,7 @@ $this->params['jsFiles'] = [
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img5.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/google-ggc-img5.jpg" alt="安装建议"></div>
                     <h4>如何提升抓取率</h4>
                     <p>安装时，建议代码添加在网站所有页面头部&lt;/head&gt;标签前面，这样更利于代码加载，有助于号码抓取。特别是移动站，一定要加在页面的头部。另外，我们服务器带宽充足，同时做过CDN加速处理，不会影响网站速度，请放心使用！</p>
                 </div>
@@ -80,7 +81,7 @@ $this->params['jsFiles'] = [
                 <ul class='clearfix'>
                     <li class='bdb bdr'>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img1.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img1.png" alt="精确营销"></div>
                         <div class="range-txt">
                             <h3>精准营销</h3>
                             <p>轻松获取访客手机号码及访客来源，从而掌握客户需求，实现精准营销。</p>
@@ -88,7 +89,7 @@ $this->params['jsFiles'] = [
                     </li>
                     <li class='bdb'>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img2.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img2.png" alt="客户无限"></div>
                         <div class="range-txt">
                             <h3>客户无限</h3>
                             <p>市场广泛，客户无限，号码抓取，三网通关，获取无碍，成本低廉，高性价比。</p>
@@ -96,7 +97,7 @@ $this->params['jsFiles'] = [
                     </li>
                     <li class='bdr'>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img3.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img3.png" alt="管理系统"></div>
                         <div class="range-txt">
                             <h3>管理系统</h3>
                             <p>客户管理系统、营销跟进系统、统计数据系统、邮件群发系统、短信群发系统等</p>
@@ -104,7 +105,7 @@ $this->params['jsFiles'] = [
                     </li>
                     <li>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img4.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img4.png" alt="营销闭环"></div>
                         <div class="range-txt">
                             <h3>营销闭环</h3>
                             <p>打造营销闭环 依托于强大CRM管理系统，对抓取的数据设置自动短信与邮件推送服务</p>

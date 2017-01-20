@@ -13,7 +13,7 @@ $this->params['jsFiles'] = [
     <div class="top-banner">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/mobile-banner11.jpg" alt=""></div>
     <div class="vone-range m-part vone-part google-ggc">
-        <h2>SEO整体解决方案</h2>
+        <h1>SEO整体解决方案</h1>
         <div class="m-con">
             <div class="tg-item">
                 <div class="tg-item-t">

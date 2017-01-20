@@ -6,7 +6,7 @@
                 <span class="floatL"></span>
                 <div class="detail_txt floatL pop_zixun">
                     <div>提升效果，只需三步</div>
-                    <a class="" href="/sp-register.html" value="1">立即体验</a></div>
+                    <a rel="nofollow" class="" href="/sp-register.html" value="1">立即体验</a></div>
             </div>
         </li>
         <li class="ask_ways2">

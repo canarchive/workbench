@@ -32,8 +32,8 @@ class InfoController extends SinfoController
 		];
 		$pageStr = $page > 1 ? "第{$page}页-" : '';
 
-        $tagStr = !empty($currentSortName) ? $currentSortName : '企业营销学院_北京营销学院_企业网络营销';
-		$dataTdk = ['{{TAGSTR}}' => $currentSortName, '{{PAGESTR}}' => $pageStr];
+        $tagStr = !empty($currentSortName) ? $currentSortName : '获取访客信息攻略';
+		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('info-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
