@@ -19,7 +19,7 @@ $this->params['formPositionName'] = '';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">网站访客手机号抓取</h1>
+                <h2 class="gwtg-title gwtg-title01">网站访客手机号抓取</h2>
                 <div class="zmail-p-con">
                     <div class="img floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-01.png" alt=""></div>
@@ -40,7 +40,7 @@ $this->params['formPositionName'] = '';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01"><?= $this->context->currentSiteInfo['name']; ?>功能</h1>
+                <h2 class="gwtg-title gwtg-title01"><?= $this->context->currentSiteInfo['name']; ?>功能</h2>
                 <div class="zmail-p-con">
                     <div class="img floatL">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-02.png"></div>
@@ -61,7 +61,7 @@ $this->params['formPositionName'] = '';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">安装方法</h1>
+                <h2 class="gwtg-title gwtg-title03">安装方法</h2>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/simg/guowaituiguang-03.png"></div>
@@ -78,7 +78,7 @@ $this->params['formPositionName'] = '';
         </div>
         <div class="vone-part gwtg-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title04">为营销而生</h1>
+                <h2 class="gwtg-title gwtg-title04">为营销而生</h2>
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">

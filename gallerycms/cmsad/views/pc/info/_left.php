@@ -8,35 +8,27 @@ use yii\helpers\Url;
             <?php foreach ($cInfos as $info) { ?>
             <li></li>
             <li class="m1">
-                <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_' . $info['catdir'], 'page' => '_1']); ?>" <?php if ($id == $info['id']) { echo 'class="active"'; } ?>><?= $info['name']; ?></a>
+				<a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_' . $info['catdir'], 'page' => '_1']); ?>" <?php if ($id == $info['id']) { echo 'class="active"'; } ?> title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
                 <ul style=""></ul>
             </li>
             <?php } ?>
         </ul>
     </div>
-    <!--<div class="ad-con ad-con1">
-        <a href="<?= Url::to(['/cmsad/sample/index', 'page' => 1]); ?>" target="_blank">
-            <h2>经典案例</h2>
-            <div class="ad-img">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img1.jpg" alt=""></div>
-            <p>看经典案例，放心建网站</p>
-        </a>
-    </div>-->
     <div class="ad-con ad-con2">
-        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" target="_blank">
+        <a rel="nofollow" href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'sem']); ?>" title="SEM推广">
             <h2>
                 <span>SEM推广</span>
                 <i></i>
             </h2>
             <div class="ad-img">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt=""></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img2.jpg" alt="SEM推广"></div>
             <p><?= Yii::$app->params['siteNameBase']; ?>服务过120万客户</p>
         </a>
     </div>
     <div class="ad-con ad-con3">
-        <a href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'seo']); ?>" target="_blank">
+        <a rel="nofollow" href="<?= Url::to(['/cmsad/single-page/index', 'view' => 'seo']); ?>" title="SEO顾问">
             <h2>SEO顾问</h2>
-            <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img3.jpg" alt=""></div>
+            <div class="ad-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/about-ad-img3.jpg" alt="SEO顾问"></div>
             <p><?= Yii::$app->params['siteNameBase']; ?>，只拿网站宣传效果说话</p>
         </a>
     </div>

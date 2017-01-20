@@ -17,17 +17,12 @@ $this->params['jsFiles'] = [
             <ul class="zixun-list1">
                 <?php foreach ($infos as $info) { ?>
                 <li>
-                    <a href="<?= Url::to(['/cmsad/mobile-info/show', 'id' => $info['id']]); ?>">
-                        <dl>
-                            <dt><h4><?= $info['name']; ?></h4></dt>
-                            <dd>
-                             <p><?= $info['description']; ?></p>
-                                <!--<div class="list-b clearfix">
-                                    <div class="come-from"></div>
-                                    <div class="zx-time"><?= date('Y-m-d', $info['created_at']); ?></div></div>-->
-                            </dd>
-                        </dl>
-                    </a>
+                    <dl>
+					    <dt>
+					        <h4><a href="<?= Url::to(['/cmsad/mobile-info/show', 'id' => $info['id']]); ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a></h4>
+                        </dt>
+                        <dd><p><?= $info['description']; ?></p></dd>
+                    </dl>
                 </li>
                 <?php } ?>
             </ul>

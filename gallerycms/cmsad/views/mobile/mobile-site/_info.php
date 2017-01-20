@@ -31,9 +31,8 @@ use yii\helpers\Url;
                 <ul class="zixun-list">
                     <?php $j = 0; foreach ($subInfo['subInfos'] as $info) { ?>
                     <li>
-                        <a href="<?= Url::to(['/cmsad/mobile-info/show', 'id' => $info['id']]); ?>">
+					    <a href="<?= Url::to(['/cmsad/mobile-info/show', 'id' => $info['id']]); ?>" title="<?= $info['name']; ?>">
                             <h4><?= $info['name']; ?></h4>
-                            <!--<p><?= $info['description']; ?></p>-->
                         </a>
                     </li>
                     <?php } ?>

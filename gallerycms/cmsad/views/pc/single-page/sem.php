@@ -7,22 +7,22 @@ $this->params['cssFiles'] = [
 $this->params['jsFiles'] = [
     'jquery-1.8.3.min',
 ];
-$this->params['formPosition'] = 'index';
-$this->params['formPositionName'] = '首页量房';
+$this->params['formPosition'] = 'sem';
+$this->params['formPositionName'] = 'sem';
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
 <div class="section">
     <div class="vone_main">
         <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
-                <a value="1" href="javascript:void(0);">立即拥有</a></div>
+                <a rel="nofollow" value="1" href="javascript:void(0);">立即拥有</a></div>
         </div>
         <div class="vone-part">
             <div class="vone-con">
                 <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt="搜索引擎"></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
@@ -40,10 +40,10 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title01">信息流广告</h1>
+                <h2 class="gwtg-title gwtg-title01">信息流广告</h2>
                 <div class="zmail-p-con">
                     <div class="img floatL">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png" alt="信息流广告"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
@@ -62,10 +62,10 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title03">SEM托管的优势</h1>
+                <h2 class="gwtg-title gwtg-title03">SEM托管的优势</h2>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png" alt="SEM托管的优势"></div>
                     <div class="word word-01 floatL">
                         <!--<div class="gwtg-left">
                         <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
@@ -85,23 +85,23 @@ $this->params['formPositionName'] = '首页量房';
         </div>
         <div class="vone-part gwtg-part bg-f5f6fa">
             <div class="vone-con">
-                <h1 class="gwtg-title gwtg-title04">SEM搜索引擎营销</h1>
+                <h2 class="gwtg-title gwtg-title04">SEM搜索引擎营销</h2>
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
-                            <a href="javascript:;">强化品牌形象</a>
+                            <a rel="nofollow" href="javascript:;">强化品牌形象</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">提高体验</a>
+                            <a rel="nofollow" href="javascript:;">提高体验</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">拓展关键词</a>
+                            <a rel="nofollow" href="javascript:;">拓展关键词</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">更多转化</a>
+                            <a rel="nofollow" href="javascript:;">更多转化</a>
                             <em></em>
                         </li>
                     </ul>
@@ -110,7 +110,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main" style="display:block">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png" alt="强化品牌形象"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -124,7 +124,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png" alt="提高用户体验"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -139,7 +139,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png" alt="拓展搜索词"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -154,7 +154,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png" alt="更多转化"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">

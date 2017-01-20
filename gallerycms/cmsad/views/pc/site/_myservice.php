@@ -3,7 +3,7 @@ use yii\helpers\Url;
 ?>
 <div class="i-m-bg">
     <div class="i-m-center">
-        <h2 class="i-m-h2">9年SEM托管经验，提供全方位营销解决方案</h2>
+        <h1 class="i-m-h2">9年SEM托管经验，提供全方位营销解决方案</h1>
         <div class="module">
             <div class="page-products">
                 <div class="w-wrap-inner">

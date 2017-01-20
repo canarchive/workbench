@@ -26,7 +26,7 @@ $this->params['jsFiles'] = [
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img1.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img1.jpg" alt="搜索引擎"></div>
                     <h4>Baidu最大的中文检索引擎</h4>
                     <p>移动搜索绝对的霸主，全球最大的中文搜索引擎</p>
                     <h4>sogou借助于输入法成为发展最快的搜索引擎</h4>
@@ -44,7 +44,7 @@ $this->params['jsFiles'] = [
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img2.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img2.jpg" alt="信息流广告"></div>
                     <h4>今日头条</h4>
                     <p>移动端5.5亿人群每天在今日头条看新闻，信息流是趋势</p>
                     <h4>智慧推</h4>
@@ -62,7 +62,7 @@ $this->params['jsFiles'] = [
                 </div>
                 <div class="tg-item-det">
                     <div class="tg-item-img">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img3.jpg" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img3.jpg" alt="SEM托管的优势"></div>
                     <h4>SEM系统和经验的结合</h4>
                     <p>公司SEM总监亲自操刀诊断，企业内训分享实操经验；专业营销策划，制作高转化着陆页；</p>
                 </div>
@@ -81,7 +81,7 @@ $this->params['jsFiles'] = [
                 <ul class='clearfix'>
                     <li class='bdb bdr'>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img1.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img1.png" alt="拒绝浪费"></div>
                         <div class="range-txt">
                             <h3>拒绝浪费</h3>
                             <p>客户做推广要的是“竞价花最少的钱，得到更多的回报”，我们的竞价宗旨也是这样，不做无效果的铺张浪费。</p>
@@ -89,7 +89,7 @@ $this->params['jsFiles'] = [
                     </li>
                     <li class='bdb'>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img2.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img2.png" alt="深度挖掘"></div>
                         <div class="range-txt">
                             <h3>深度挖掘</h3>
                             <p>我们会从多维度/多角度/多视野，来分析客户的产品，找出闪光点，加入产品特定优点，力争做到最合理的设置。</p>
@@ -97,7 +97,7 @@ $this->params['jsFiles'] = [
                     </li>
                     <li class='bdr'>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img3.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img3.png" alt="注重体验"></div>
                         <div class="range-txt">
                             <h3>注重体验</h3>
                             <p>用户体验直接影响转化效果，我们会从用户的角度来优化关键词及着陆页，从而提高网站转化率，提高ROI</p>
@@ -105,7 +105,7 @@ $this->params['jsFiles'] = [
                     </li>
                     <li>
                         <div class="range-img">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img4.png" alt=""></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/vone-range-img4.png" alt="持续调整"></div>
                         <div class="range-txt">
                             <h3>持续调整</h3>
                             <p>我们会根据各种来源，做出分析和统计通过持续调整，账户才能发挥最好的效果，您的账户交给我们托管很放心。</p>

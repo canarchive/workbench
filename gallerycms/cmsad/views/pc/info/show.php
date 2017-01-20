@@ -15,18 +15,19 @@ $this->params['formPositionName'] = '首页量房';
     <?= $this->render('_banner'); ?>
     <div class="container">
         <div class="top_links">
-            <a href="/" class="index_link">首页</a>
+			<a href="/" class="index_link" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteNameBase']; ?></a>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '', 'page'=> 1]); ?>">营销学院</a>
+            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '', 'page'=> 1]); ?>" title="营销学院">营销学院</a>
             <?php if (!empty($tagInfos['pInfo'])) { $pInfo = $tagInfos['pInfo']; ?>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $pInfo['catdir'], 'page'=> 1]); ?>"><?= $pInfo['name']; ?></a>
+			<a href="<?= Url::to(['/cmsad/info/index', 'tag' => $pInfo['catdir'], 'page'=> 1]); ?>" title="<?= $pInfo['name']; ?>"><?= $pInfo['name']; ?></a>
             <?php } ?>
             <?php if (!empty($tagInfos['cInfo'])) { $cInfo = $tagInfos['cInfo']; ?>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => $cInfo['catdir'], 'page'=> 1]); ?>"><?= $cInfo['name']; ?></a>
+			<a href="<?= Url::to(['/cmsad/info/index', 'tag' => $cInfo['catdir'], 'page'=> 1]); ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
+            <em>></em>
             <?php } ?>
-            <a href="javascript:void(0);"><?= $info['name']; ?></a>
+            <strong><?= $info['name']; ?></strong>
         </div>
         <div class="aboutzq">
             <?= $this->render('_left', ['cInfos' => $tagInfos['cInfos'], 'id' => $tagInfos['id']]); ?>
@@ -66,7 +67,7 @@ $this->params['formPositionName'] = '首页量房';
                     <ul>
                         <?php $i = 1; foreach ($infos as $value) { if ($value['id'] == $info['id'] || $i > 5) { continue;}?> 
                         <li>
-                            <a href="<?= Url::to(['/cmsad/info/show', 'id' => $value['id']]); ?>" target="_blank">
+						    <a href="<?= Url::to(['/cmsad/info/show', 'id' => $value['id']]); ?>" title="<?= $value['name']; ?>">
                             <span><?= date('Y-m-d', $value['created_at']); ?></span><?= $value['name']; ?>
                             </a>
                         </li>
