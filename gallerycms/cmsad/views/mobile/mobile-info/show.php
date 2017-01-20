@@ -12,7 +12,7 @@ $this->params['jsFiles'] = [
 <section class='content'>
     <div class="zx-detail">
         <div class="article-top">
-            <h2><?= $info['name']; ?></h2>
+            <h1><?= $info['name']; ?></h1>
             <!--<div class="zx-source">来源：电商报</div>-->
             <p class='release-time'>发布时间：<?= date('Y-m-d H:i:s', $info['created_at']); ?></p></div>
             <article><?= $info['content']; ?></article>

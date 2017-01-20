@@ -42,10 +42,10 @@ use yii\helpers\Html;
                     <span class="t">邮箱地址</span>
                     <input type="text" name="email" id="email_bottom2"></div>
                 <div class="textfile">
-                    <a href="javascript:void(0);" data-formId="formbottom" class="submit zixunsubmit" value="99">提交</a></div>
+                    <a rel="nofollow" href="javascript:void(0);" data-formId="formbottom" class="submit zixunsubmit" value="99">提交</a></div>
             </form>
         </div>
         <div class="free-tips">我们会尽快联系您，等待期间需要获取更多信息，请
             <a href="<?= Yii::getAlias('@ad.cmsurl'); ?>">继续访问</a>或
-            <a href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>" >联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
+            <a rel="nofollow" href="<?= Url::to(['/cmsad/aboutus/index', 'view' => 'contact']); ?>" >联系我们</a>。感谢您对<?= Yii::$app->params['siteNameBase']; ?>产品及服务的支持。</div></div>
 </div>

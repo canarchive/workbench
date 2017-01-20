@@ -7,22 +7,22 @@ $this->params['cssFiles'] = [
 $this->params['jsFiles'] = [
     'jquery-1.8.3.min',
 ];
-$this->params['formPosition'] = 'index';
-$this->params['formPositionName'] = '首页量房';
+$this->params['formPosition'] = 'seo';
+$this->params['formPositionName'] = 'seo';
 //$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
 ?>
 <div class="section">
     <div class="vone_main">
         <div class="topimg-360" style="background:url(<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/SEO.jpg) no-repeat top center">
             <div class="topimg-con vone-img gwtg-img pop_zixun">
-                <a value="1" href="javascript:void(0);">立即拥有</a></div>
+                <a rel="nofollow" value="1" href="javascript:void(0);">立即拥有</a></div>
         </div>
         <div class="vone-part">
             <div class="vone-con">
-                <h2 class="gwtg-title gwtg-title01">搜索引擎</h2>
+                <h1 class="gwtg-title gwtg-title01">搜索引擎</h1>
                 <div class="zmail-p-con">
                     <div class="img floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt=""></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-01.png" alt="搜索引擎"></div>
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
@@ -43,7 +43,7 @@ $this->params['formPositionName'] = '首页量房';
                 <h2 class="gwtg-title gwtg-title01">SEO顾问优势</h2>
                 <div class="zmail-p-con">
                     <div class="img floatL">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-02.png" alt="SEO顾问优势"></div>
                     <div class="word word-01 floatR">
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
@@ -65,7 +65,7 @@ $this->params['formPositionName'] = '首页量房';
                 <h2 class="gwtg-title gwtg-title03">SEO顾问流程</h2>
                 <div class="zmail-p-con">
                     <div class="img img-03 floatR">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png"></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png" alt="SEO顾问流程"></div>
                     <div class="word word-01 floatL">
                         <!--<div class="gwtg-left">
                         <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
@@ -89,19 +89,19 @@ $this->params['formPositionName'] = '首页量房';
                 <div class="gwtg-wrap">
                     <ul class="service-f01 gwtg-btn">
                         <li class="current">
-                            <a href="javascript:;">强化品牌形象</a>
+                            <a rel="nofollow" href="javascript:;">强化品牌形象</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">提高用户体验</a>
+                            <a rel="nofollow" href="javascript:;">提高用户体验</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">优化流量</a>
+                            <a rel="nofollow" href="javascript:;">优化流量</a>
                             <em></em>
                         </li>
                         <li>
-                            <a href="javascript:;">更多转化</a>
+                            <a rel="nofollow" href="javascript:;">更多转化</a>
                             <em></em>
                         </li>
                     </ul>
@@ -110,7 +110,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main" style="display:block">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-04.png" alt="强化品牌形象"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -124,7 +124,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-05.png" alt="提高用户体验"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -139,7 +139,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-01 floatR">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-06.png" alt="优化流量"></div>
                                 <div class="word word-02 floatL">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -154,7 +154,7 @@ $this->params['formPositionName'] = '首页量房';
                         <div class="gwtg-c-main">
                             <div class="zmail-p-con">
                                 <div class="img img-02 floatL">
-                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png"></div>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/gwtg-07.png" alt="更多转化"></div>
                                 <div class="word word-02 floatR">
                                     <div class="gwtg-left">
                                         <div class="t t01">
@@ -172,31 +172,6 @@ $this->params['formPositionName'] = '首页量房';
                 <br />
                 <br /></div>
         </div>
-        <!--<div class="newz-customer dxal-01">
-        <div class="newz-con">
-        <h2 class="gwtg-title gwtg-title05">产品案例</h2>
-        <div class="con customer-slides">
-        <a class="slid_prev" href="###"></a>
-        <a class="slid_next" href="###"></a>
-        <div class="slid">
-        <ul>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic7.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic8.jpg"></li>
-        <li><img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/dzsw-pic9.jpg"></li>
-        <div class="clear"></div></ul>
-        </div>
-        </div>
-        </div>
-        </div>-->
         <!-- 免费咨询 begin-->
         <?= $this->render('../common/_ask'); ?>
     </div>

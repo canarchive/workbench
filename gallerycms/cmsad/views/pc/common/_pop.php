@@ -10,22 +10,11 @@
 <!--<div class="onlineserver" id="onlineserver" ></div>-->
 <!--<div class="activityrecommend" id="activityrecommend"></div>-->
 <div class="scrolltop">
-    <a href="###" class="t" style="display:none"></a>
+    <a rel="nofollw" href="###" class="t" style="display:none"></a>
 </div>
-<!--<div class="jz-service">
-    <div class="jz-service-open jz-service-con">
-        <span class='jz-service-close'></span>
-        <a target='_blank' href="/guanwang.html" class='jz-service1'>定制建站</a>
-        <a target='_blank' href="/quanwangyingxiao.html" class='jz-service2'>全网建站</a>
-        <a target='_blank' href="/appzhuanti.html" class='jz-service3'>手机APP</a>
-        <a target='_blank' href="/shangcheng.html" class='jz-service4'>网上商城</a>
-        <a target='_blank' href="/shoujijianzhan.html" class='jz-service5'>手机建站</a>
-        <a target='_blank' href="/sheji.html" class='jz-service6'>高端设计</a></div>
-    <div class="jz-service-packup jz-service-con"></div>
-</div>-->
 <div class=" zx_pop active_pop" style="display:none">
     <div class="apply-con">
-        <a href="javascript:void(0);" class="close"></a>
+        <a rel="nofollow" href="javascript:void(0);" class="close"></a>
         <div class="title">免费咨询</div>
         <div class="subtitle">欢迎您免费咨询，请填写以下信息，我们收到后会尽快与您联系</div>
         <div class="form">
@@ -65,7 +54,7 @@
                     <span class="t">邮箱地址</span>
                     <input type="text" name="email" id="email" /></div>
                 <div class="textfile">
-                    <a href="javascript:void(0);" data-formId="formpop" class="submit zixunsubmit">提交</a></div>
+                    <a rel="nofollow" href="javascript:void(0);" data-formId="formpop" class="submit zixunsubmit">提交</a></div>
             </form>
         </div>
     </div>
