@@ -40,7 +40,7 @@ $this->params['jsFiles'] = [
             </div>
             <div class="swiper-slide">
                 <div class="container">
-                    <h3>企业资质</h3>
+                    <h3>为营销而生</h3>
                     <div class="swiper-container wrap-s" id='wrap-s'>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
