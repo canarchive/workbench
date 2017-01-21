@@ -84,7 +84,7 @@ $this->params['jsFiles'] = [
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/simages/vone-range-img1.png" alt="精确营销"></div>
                         <div class="range-txt">
                             <h3>精准营销</h3>
-                            <p>轻松获取访客手机号码及访客来源，从而掌握客户需求，实现精准营销。</p>
+                            <p>轻松获取访客QQ号及访客来源，从而掌握客户需求，实现精准营销。</p>
                         </div>
                     </li>
                     <li class='bdb'>
