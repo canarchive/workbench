@@ -10,20 +10,20 @@ class SpiderAbstract extends SpiderModel
 
     public function fileExist($file)
     {
-        $file = Yii::getAlias('@spider/runtime') . '/source/' . $file;
+        $file = Yii::$app->params['spiderPath'] . 'source/' . $file;
         return file_exists($file);
     }
 
     public function getContent($file)
     {
-        $file = Yii::getAlias('@spider/runtime') . '/source/' . $file;
+        $file = Yii::$app->params['spiderPath'] . 'source/' . $file;
         $content = file_get_contents($file);
         return $content;
     }
 
     public function writeFile($file, $content)
     {
-        $logFile = Yii::getAlias('@spider/runtime') . '/source/' . $file;
+        $logFile = Yii::$app->params['spiderPath'] . 'source/' . $file;
         $path = dirname($logFile);
         if (!is_dir($path)) {
             FileHelper::createDirectory($path, 0777);
