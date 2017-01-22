@@ -38,6 +38,9 @@ return [
         ],
     ],
     'modules' => [
+        'page' => [
+            'class' => 'spider\page\Module',
+        ],
     ],
     'params' => $params,
 ];
