@@ -1,8 +1,19 @@
 <?php
 use yii\helpers\Url;
+
+$friendlinkInfos = isset($this->params['friendlinkInfos']) ? $this->params['friendlinkInfos'] : [];
 ?>
 <!-- footer -->
 <div class="footer border-top">
+    <?php if (!empty($friendlinkInfos)) { ?>
+    <div class="container">
+        <p class="list">友情链接：
+            <?php foreach ($friendlinkInfos as $flInfo) { ?>
+            <a target="_blank" href="<?= $flInfo['url']; ?>" title="<?= $flInfo['name']; ?>"><?= $flInfo['name']; ?></a>
+            <?php } ?>
+        </p>
+    </div>
+    <?php } ?>
     <div class="container">
         <div class="footer-menu">
             <p id="list" class="list">

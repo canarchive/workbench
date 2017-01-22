@@ -7,9 +7,7 @@ $this->params['cssFiles'] = [
 $this->params['jsFiles'] = [
     'jquery-1.8.3.min',
 ];
-$this->params['formPosition'] = 'index';
-$this->params['formPositionName'] = '';
-//$this->context->mobileMappingUrl = Url::to(['/house/mobile-site/index', 'city_code' => Yii::$app->params['currentCompany']['code_short']]);
+$this->params['friendlinkInfos'] = $this->context->friendlinkInfos;
 ?>
 <div class="main">
     <?= $this->render('_banner'); ?>

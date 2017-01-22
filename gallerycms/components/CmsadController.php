@@ -3,6 +3,7 @@ namespace gallerycms\components;
 
 use Yii;
 use yii\helpers\Url;
+use gallerycms\cmsad\models\Friendlink;
 
 class CmsadController extends Controller
 {
@@ -89,5 +90,12 @@ class CmsadController extends Controller
     {
         $host = $type == 'mobile' ? Yii::getAlias('@m.ad.cmsurl') : Yii::getAlias('@ad.cmsurl');
         return $host;
+    }
+
+    public function getFriendLinkInfos($where = [])
+    {
+        $model = new Friendlink();
+        $infos = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->limit(100)->asArray()->all();
+        return $infos;
     }
 }
