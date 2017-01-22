@@ -4,7 +4,7 @@
             <h3>免费注册</h3>
             <div class="ask_ways_detail clearfix">
                 <span class="floatL"></span>
-                <div class="detail_txt floatL pop_zixun">
+                <div class="detail_txt floatL ">
                     <div>提升效果，只需三步</div>
                     <a rel="nofollow" class="" href="/sp-register.html" value="1">立即体验</a></div>
             </div>
@@ -13,9 +13,9 @@
             <h3>售前咨询</h3>
             <div class="ask_ways_detail clearfix">
                 <span class="floatL"></span>
-                <div class="detail_txt floatL pop_zixun">
+                <div class="detail_txt floatL ">
                     <div>7*24小时在线客服</div>
-                    <a rel="nofollow" id="TQzx0" class="zaixianzixun" clickCount="true" clickAdd="zaixianzixun" href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" >点击咨询</a>
+                    <a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" >点击咨询</a>
                 </div>
             </div>
         </li>

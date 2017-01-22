@@ -3,6 +3,7 @@ namespace gallerycms\components;
 
 use Yii;
 use yii\helpers\Url;
+use gallerycms\sinfo\models\Friendlink;
 
 class SinfoController extends Controller
 {
@@ -65,5 +66,12 @@ class SinfoController extends Controller
         Yii::$app->params['cssFiles'] = $infos['cssFiles'];
         Yii::$app->params['jsFiles'] = $infos['jsFiles'];
         return ;
+    }
+
+    public function getFriendLinkInfos($where = [])
+    {
+        $model = new Friendlink();
+        $infos = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->limit(100)->asArray()->all();
+        return $infos;
     }
 }
