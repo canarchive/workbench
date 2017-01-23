@@ -37,4 +37,34 @@ class TmpController extends SpiderController
         ];
         return $this->render('listinfo', $datas);
     }   
+
+    public function actionSpider()
+    {
+        $this->pageModel = new Page();
+        $pageInfos = $this->pageModel->find()->where(['status' => 0])->all();
+        foreach ($pageInfos as $info) {
+            //echo $info['site_code'] . '-' . $info['is_mobile'] . '-' . $info['name'];exit();
+            $info->spider();
+        }
+    }
+
+    public function actionSpiderCss()
+    {
+        $model = new Asset();
+        $infos = $model->find()->where(['name_ext' => 'css', 'status' => 1])->limit(2000)->all();
+        //$infos = $model->find()->limit(2000)->all();
+        foreach ($infos as $info) {
+            $info->spider();
+        }
+    }
+
+    public function actionDown()
+    {
+        $model = new Asset();
+        $infos = $model->find()->where(['status' => 0])->limit(2000)->all();
+        //$infos = $model->find()->limit(2000)->all();
+        foreach ($infos as $info) {
+            $info->down();
+        }
+    }
 }
