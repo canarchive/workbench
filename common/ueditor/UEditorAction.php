@@ -220,6 +220,7 @@ class UEditorAction extends Action
     {
         /* 上传配置 */
         $config = array(
+            "pathRoot" => ArrayHelper::getValue($this->config, "fileRoot", $_SERVER['DOCUMENT_ROOT']),
             "pathFormat" => $this->config['catcherPathFormat'],
             "maxSize" => $this->config['catcherMaxSize'],
             "allowFiles" => $this->config['catcherAllowFiles'],
@@ -239,7 +240,7 @@ class UEditorAction extends Action
             $info = $item->getFileInfo();
             array_push($list, array(
                 "state" => $info["state"],
-                "url" => $info["url"],
+                "url" => $this->config['imageUrlPrefix'] . $info["url"],
                 "size" => $info["size"],
                 "title" => htmlspecialchars($info["title"]),
                 "original" => htmlspecialchars($info["original"]),

@@ -136,7 +136,7 @@ function setLeftNav(parentCode)
   if (!haveActive) {
       var appMenusJson = <?= Json::encode($menuInfos['appMenus']);?>;
       $.each(appMenusJson, function(i2, n2) {
-          if (!haveActive && n2.display == 2) {
+          if (!haveActive && n2.display == 2 && $n2.extparam == '') {
               $("#left_menu_" + n2.code).addClass("active");
               haveActive = true;
           }
@@ -161,7 +161,11 @@ function updateElemByAjax(url, info_id, field, value)
         url: url,
         data: data,
         success: function(data,status) {
-            alert("Data: " + data + "\nStatus: " + status);
+            if (status == 'success') {
+                alert('编辑成功');
+            } else {
+                alert('编辑失败');
+            }
         }
     });
 }

@@ -10,12 +10,18 @@ use backend\components\ControllerFullTrait;
 class ManagerController extends AdminController
 {
     protected $modelClass = 'backend\models\Manager';
-    protected $modelSearchClass = 'backend\models\Searchs\Manager';
+    protected $modelSearchClass = 'backend\models\searchs\Manager';
     use ControllerFullTrait;
 
     public function _addData()
     {
         return ['scenario' => 'create'];
+    }
+
+
+    protected function _getScenario()
+    {
+        return 'update';
     }
 
     public function actionEditInfo()

@@ -7,6 +7,11 @@ use yii\web\Controller as YiiController;
 
 class Controller extends YiiController
 {
+	public $pcMappingUrl;
+	public $mobileMappingUrl;
+    public $pagePosition = 'default';
+    public $pagePositionName = 'default';
+
     /**
      * @inheritdoc
      */
@@ -64,11 +69,12 @@ class Controller extends YiiController
     public function beforeAction($action)
     {
         Yii::$app->params['statUrl'] = '';
-        $channelSpread = Yii::$app->request->get('channel');
+        $channelSpread = Yii::$app->request->get('qudao');
         if (!empty($channelSpread)) {
             $urlPre = strval(Yii::$app->request->referrer);
             $cityCode = Yii::$app->request->get('city_code', '');
             $statUrl = Yii::getAlias('@spreadurl') . '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
+            //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";
         }
 
