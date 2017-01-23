@@ -1,11 +1,7 @@
 <?php
-
-use yii\bootstrap\NavBar;
+use yii\helpers\Html;
 use backend\assets\CharismaAsset;
 use backend\assets\Ltie9Asset;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Json;
 
 CharismaAsset::register($this);
 Ltie9Asset::register($this);
@@ -33,12 +29,10 @@ $menus = [];
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <?php echo $this->render('_topbar', ['menus' => $menus]); ?>
 <div class="ch-container">
     <div class="row">
         <?php echo $this->render('_left-menu', ['menus' => $menus]); ?>
-
         <div id="content" class="col-lg-10 col-sm-10">
             <!-- content starts -->
             <?php if ($controller->showSubnav) { ?>
@@ -58,17 +52,12 @@ $menus = [];
             </div>
             <?php } ?>
             <?= $content ?>
-            <?php //echo $this->render('content'); ?>
-            <!-- content ends -->
-        </div><!--/#content.col-md-0-->
-    </div><!--/fluid-row-->
-
+        </div>
+    </div>
     <hr>
     <?php echo $this->render('_modal'); ?>
     <?php //echo $this->render('footer'); ?>
-
 </div><!--/.fluid-container-->
-
 <?php $this->endBody() ?>
 
 <?php if (isset($this->params['haveTreeList'])) { ?>
