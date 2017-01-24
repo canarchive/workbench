@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 $this->params['jsFooterFiles'] = ['common', 'position', 'public', 'createCity', 'submit', 'jquery.cityselect', 'jquery.mailAutoComplete', 'right', 'count'];
 $this->params['footerJsStr'] = $this->render('_after_js');
+$this->params['statCodeStr'] = $this->render('../../_stat'); 
 ?>
 <?php $this->beginContent('@common/views/main-base.php'); ?>
 <script>

@@ -8,6 +8,15 @@ $ruleInfos = [
             'route' => '/sinfo/info/show', 
         ],
     ],
+    /*'sm-check' => [
+        'mobile' => true,
+        'only' => [],
+        'data' => [
+            'suffix' => '.txt',
+            'pattern' => '/shenma-site-verification',
+            'route' => '/sinfo/sitemap/smcheck', 
+        ],
+	],*/
     'sitemap' => [
         'mobile' => true,
         'only' => [],
