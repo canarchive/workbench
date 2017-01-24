@@ -16,7 +16,13 @@ class Asset extends AbstractModel
             //print_r($data);return;
             $new = new self($data);
             $new->insert(false);
-        }
+        } /*else {
+            $info->css_id = $data['css_id'];//$info->code . '<br />';
+            echo $info->css_id . '<br />';
+
+            $info->status = 3;
+            $info->update(false);
+        }*/
     }
 
     public function spider()
@@ -44,11 +50,49 @@ class Asset extends AbstractModel
             }
             $data['page_id'] = $this->page_id;
             $data['sort'] = 'ext';
-            print_r($data);
+            $data['css_id'] = $this->id;
             $this->_getAsset()->addInfo($data, $pageInfo);
-            $this->status = 2;
-            $this->update(false);
+            //$this->status = 2;
+            //$this->update(false);
         }
+    }
+
+    public function deal()
+    {
+        if ($this->name_ext != 'css') {
+            return ;
+        }
+
+        $path = Yii::$app->params['spiderPath'] . 'pages/source/css/';
+        $file = $path . $this->path;
+        if (!file_exists($file)) {
+            $this->status = 0;
+            $this->update(false);
+            echo 'nono---' . $file . '<br />';
+            return ;
+        }
+        $fileDeal = str_replace('source/css', 'asset', $file);
+        if (file_exists($fileDeal)) {
+            echo $fileDeal . '---exists<br />';
+            return ;
+        }
+
+        $content = file_get_contents($file);
+        $assets = $this->getAssets($content);
+        $rDatas = [];
+        foreach ($assets as $asset) {
+            $data = $this->formatFile($asset);
+            if (empty($data)) {
+                continue;
+            }
+            $aData = $this->_getAsset()->findOne(['url_base' => $data['url_base']]);
+            $rDatas[$asset] = $aData['sort'] == 'page' ? '../img/' . $aData['code'] : '../images/' . $aData['code'];
+            $this->status = 2;
+            //$this->update(false);
+        }
+        FileHelper::createDirectory(dirname($fileDeal));
+        $contentNew = str_replace(array_keys($rDatas), array_values($rDatas), $content);
+        file_put_contents($fileDeal, $contentNew);
     }
 
     public function down()

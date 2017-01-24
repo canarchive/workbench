@@ -65,6 +65,40 @@ class Page extends AbstractModel
         }
     }
 
+    public function deal()
+    {
+        $this->urlInfo = parse_url($this->url);
+        $file = $this->_getFile();
+        if (!file_exists($file)) {
+            $this->status = 0;
+            $this->update(false);
+            echo $file . '---no<br />';
+        }
+        $fileDeal = str_replace('source', 'source-deal', $file);
+        if (file_exists($fileDeal)) {
+            echo $fileDeal . '---exists<br />';
+            return ;
+        }
+
+        $content = file_get_contents($file);
+        $assets = $this->getAssets($content);
+        $urlPrefix = Yii::$app->params['pageAssetUrl'] . 'asset/';
+        $rDatas = [];
+        foreach ($assets as $asset) {
+            $data = $this->formatFile($asset);
+            if (empty($data)) {
+                continue;
+            }
+            $aData = $this->_getAsset()->findOne(['url_base' => $data['url_base']]);
+            $rDatas[$asset] = $urlPrefix . $aData['path'];
+            $this->status = 2;
+            //$this->update(false);
+        }
+        FileHelper::createDirectory(dirname($fileDeal));
+        $contentNew = str_replace(array_keys($rDatas), array_values($rDatas), $content);
+        file_put_contents($fileDeal, $contentNew);
+    }
+
     public function getLocalName()
     {
         $name = $this->name . '-' . $this->isMobileInfos[$this->is_mobile];

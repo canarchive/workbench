@@ -53,6 +53,8 @@ class TmpController extends SpiderController
         $model = new Asset();
         $infos = $model->find()->where(['name_ext' => 'css', 'status' => 1])->limit(2000)->all();
         //$infos = $model->find()->limit(2000)->all();
+        //$infos = $model->find()->where(['name_ext' => 'css', 'status' => [0, 1, 2]])->limit(2000)->all();
+        //echo count($infos);exit();
         foreach ($infos as $info) {
             $info->spider();
         }
@@ -65,6 +67,26 @@ class TmpController extends SpiderController
         //$infos = $model->find()->limit(2000)->all();
         foreach ($infos as $info) {
             $info->down();
+        }
+    }
+
+    public function actionDeal()
+    {
+        $this->pageModel = new Page();
+        $pageInfos = $this->pageModel->find()->where(['status' => 1])->all();
+        foreach ($pageInfos as $info) {
+            $info->deal();
+        }
+    }
+
+    public function actionDealCss()
+    {
+        $model = new Asset();
+        $infos = $model->find()->where(['name_ext' => 'css'])->limit(2000)->all();
+        //$infos = $model->find()->where(['name_ext' => 'css', 'status' => [0, 1, 2]])->limit(2000)->all();
+        //echo count($infos);exit();
+        foreach ($infos as $info) {
+            $info->deal();
         }
     }
 }
