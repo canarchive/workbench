@@ -4,41 +4,49 @@ $siteInfos = [
         'domain' => 'h5tj.com',
         'icp' => '京ICP备10039249-1号',
         'name' => '移动访客精灵',
+		'siteCheck' => '',
     ],
     'h5qz' => [
         'domain' => 'h5qz.com',
         'icp' => '京ICP备10039249-2号',
         'name' => '搜客宝访客统计',
+		'siteCheck' => '',
     ],
     'shoujiyunzhuaqu' => [
         'domain' => 'shoujiyunzhuaqu.com',
         'icp' => '京ICP备10039249-3号',
         'name' => '松松手机云抓取',
+		'siteCheck' => '',
     ],
     'teltongji' => [
         'icp' => '京ICP备10039249-4号',
         'domain' => 'teltongji.com',
         'name' => '小蜜蜂手机号码抓取',
+		'siteCheck' => '',
     ],
     'zhuaquyun' => [
         'domain' => 'zhuaquyun.com',
         'icp' => '京ICP备10039249-4号',
         'name' => '云销客抓取',
+		'siteCheck' => '',
     ],
     'shoujiyuntongji' => [
         'domain' => 'shoujiyuntongji.com',
         'icp' => '京ICP备10039249-4号',
         'name' => '手机云统计',
+		'siteCheck' => '',
     ],
     'shoujihaozhuaqu' => [
         'domain' => 'shoujihaozhuaqu.com',
         'icp' => '京ICP备10039249-4号',
         'name' => '手机号抓取',
+		'siteCheck' => '',
     ],
     'qqyuntongji' => [
         'domain' => 'qqyuntongji.com',
         'icp' => '京ICP备10039249-4号',
         'name' => 'QQ云统计',
+		'siteCheck' => '<meta name="baidu-site-verification" content="pnTrrBDk0t" />',
     ],
 ];
 $str = $strReal = $strTdk = $hostStr = '';
