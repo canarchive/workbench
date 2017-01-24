@@ -206,4 +206,15 @@ class BaseModel extends ActiveRecord
 	{
 		return $infos;
 	}
+
+	public function resizePic($field, $width, $height)
+	{
+		$str = $this->$field;
+		if (empty($str)) {
+			return '';
+		}
+
+		$str .= "?x-oss-process=image/resize,m_fill,w_{$width},h_{$height},limit_0/auto-orient,0/quality,q_90";
+		return $str;
+	}
 }
