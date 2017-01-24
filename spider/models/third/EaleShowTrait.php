@@ -10,8 +10,8 @@ Trait EaleShowTrait
     public function spiderShow($siteCode)
     {
         $where = ['source_status' => 0];
-        $infos = $this->_getShowInfos($where, 100);
-        //$infos = $this->_getShowSamples($where, 100);
+        //$infos = $this->_getShowInfos($where, 100);
+        $infos = $this->_getShowSamples($where, 100);
         $num = 0;
         foreach ($infos as $info) {
             $info->source_status = 1;
