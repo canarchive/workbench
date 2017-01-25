@@ -7,7 +7,7 @@ class BaseController extends Controller
 {
     public $mHosts;
     public $clientType;
-    public $layout = '@gallerycms/views/layouts/main-merchant';
+    public $layout = '@gallerycms/views/main-pc';
 
     public function init()
     {
