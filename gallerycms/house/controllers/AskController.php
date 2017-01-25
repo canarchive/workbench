@@ -9,6 +9,13 @@ use gallerycms\house\models\Ask;
 
 class AskController extends HouseController
 {
+    public function init()
+    {
+        parent::init();
+
+        $this->layout = 'main-ask';
+    }
+
 	public function actionIndex()
 	{
 		return $this->_list();
