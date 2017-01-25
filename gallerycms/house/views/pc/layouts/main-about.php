@@ -12,12 +12,12 @@ $this->params['bodyClass'] = 'class="narrow_980"';
 <!--<a href="" target="_blank" class="about_nav_bg"></a>-->
 <!--<span class="slider_container"></span>-->
 <?= $content; ?>
-<script src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/js/about_new.js"></script>
-<script src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/js/2a19dc2ac1471a7470fe7187a5537960.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/about_new.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/2a19dc2ac1471a7470fe7187a5537960.js"></script>
 <div class="cler"></div>
 <?= $this->render('@gallerycms' . '/views/common/pc/footer-to'); ?>
 
-<script src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/js/common_new_forold.js?222" type="text/javascript"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/common_new_forold.js?222" type="text/javascript"></script>
 <script type="text/javascript">
 
 var city_id = getCookie('townid', 1);

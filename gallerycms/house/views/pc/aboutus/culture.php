@@ -2,12 +2,10 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->params['cssFiles'] = [
-    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
-];
-$this->params['jsFiles'] = [
-    'askbase-jquery', 'askbase-jq', 'askbase-common', 'askbase-user_login',
-];
+$cssFiles = ['355e9-6276', 'e6610-7846'];
+$jsFiles = ['jquery', 'common'];
+$this->params['cssStr'] = $this->render('../_css-aboutus', ['cssFiles' => $cssFiles]);
+$this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
 <div class="w970">
     <div class="grid">
@@ -20,53 +18,52 @@ $this->params['jsFiles'] = [
                 <ul class="core_list">
                     <li class="one_core">
                         <div class="core_text">
-                            <p>
-                                <strong>客户第一：</strong>将客户利益置于战略核心，推动行业阳光、透明</p></div>
+                            <p><strong>客户第一：</strong>将客户利益置于战略核心，推动行业阳光、透明</p>
+                        </div>
                     </li>
                     <li class="two_core">
                         <div class="core_text more_text">
-                            <p>
-                                <strong>简单可信：</strong>简单相处，直面地提出自己的观点，欣喜坦诚的看待任何意见</p></div>
+                            <p><strong>简单可信：</strong>简单相处，直面地提出自己的观点，欣喜坦诚的看待任何意见</p>
+                        </div>
                     </li>
                     <li class="three_core">
                         <div class="core_text">
-                            <p>
-                                <strong>激情进取：</strong>执着投入，永不言败</p></div>
+                            <p><strong>激情进取：</strong>执着投入，永不言败</p>
+                        </div>
                     </li>
                     <li class="four_core">
                         <div class="core_text">
-                            <p>
-                                <strong>主动协作：</strong>共享共担，平凡人做非凡事</p></div>
+                            <p><strong>主动协作：</strong>共享共担，平凡人做非凡事</p>
+                        </div>
                     </li>
                     <li class="five_core">
                         <div class="core_text">
-                            <p>
-                                <strong>快速有效：</strong>拥抱变化，动如脱兔，突破性解决问题</p></div>
+                            <p><strong>快速有效：</strong>拥抱变化，动如脱兔，突破性解决问题</p>
+                        </div>
                     </li>
                 </ul>
                 <div class="about_center_title">
-                    <h5 class="noBold"><?= Yii::$app->params['siteNameBase']; ?>的口号<span>Our Slogan</span></h5>
+                    <h5 class="noBold">土巴兔的口号<span>Our Slogan</span></h5>
                 </div>
                 <div class="slogan_title"></div>
                 <ul class="mission_vision">
                     <li class="fl">
-                        <i>
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/culture_pic1.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>的使命" /></i>
-                        <span><?= Yii::$app->params['siteNameBase']; ?>的使命</span>
+                        <i><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/f7fe4-5302.jpg" alt="土巴兔的使命" /></i>
+                        <span>土巴兔的使命</span>
                         <p>让天下没有烦心的装修</p>
                     </li>
                     <li class="fr">
-                        <i>
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/culture_pic2.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>的愿景" /></i>
-                        <span><?= Yii::$app->params['siteNameBase']; ?>的愿景</span>
+                        <i><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/d7a70-1679.jpg" alt="土巴兔的愿景" /></i>
+                        <span>土巴兔的愿景</span>
                         <p>成为全球家居装修领域的领导者</p>
                     </li>
                 </ul>
                 <div class="to8to_creed">
                     <span class="to8to_creed_pic">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/culture_pic3.jpg" alt="<?= Yii::$app->params['siteNameBase']; ?>信条" /></span>
+                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/04d24-4968.jpg" alt="土巴兔信条" />
+                    </span>
                     <div class="to8to_creed_text">
-                        <h5><?= Yii::$app->params['siteNameBase']; ?>的信条</h5>
+                        <h5>土巴兔的信条</h5>
                         <strong>第一信条：</strong>
                         <p>We are Tubatu</p>
                         <strong>机会信条：</strong>

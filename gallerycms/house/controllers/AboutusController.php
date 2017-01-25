@@ -11,8 +11,7 @@ class AboutusController extends HouseController
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
-        $layoutSuffix = $this->clientType == 'mobile' ? '-m' : '';
-        $this->layout = '@gallerycms/views/layouts/main-about' . $layoutSuffix;
+        $this->layout = 'main-about';
 		
         $navs = [
             'desc' => '公司简介',

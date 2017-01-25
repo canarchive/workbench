@@ -2,14 +2,10 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->params['cssFiles'] = [
-    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
-    'askbase-consult_online',
-];
-$this->params['jsFiles'] = [
-    'askbase-jquery-1.10.2.min', 'askbase-jq', 'askbase-to8torsas', 
-    'askbase-tender', 'askbase-common',
-];
+$cssFiles = ['9840e-60152', 'd6be2-6277', 'a61f-3180', 'e6610-7846'];
+$jsFiles = ['jquery-1.10.2.min', 'plat8rsas', 'tender', 'common', 'common_new_forold'];
+$this->params['cssStr'] = $this->render('../_css-aboutus', ['cssFiles' => $cssFiles]);
+$this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
 <div class="global_wrap" id='gloWrap'>
     <?= $this->render('_nav', ['navs' => $navs, 'view' => $view]); ?>

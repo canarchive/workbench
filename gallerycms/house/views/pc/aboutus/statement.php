@@ -2,12 +2,10 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->params['cssFiles'] = [
-    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
-];
-$this->params['jsFiles'] = [
-    'askbase-jquery', 'askbase-jq', 'askbase-common', 'askbase-user_login',
-];
+$cssFiles = ['355e9-6276', 'e6610-7846'];
+$jsFiles = ['jquery', 'common'];
+$this->params['cssStr'] = $this->render('../_css-aboutus', ['cssFiles' => $cssFiles]);
+$this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
 <div class="w970">
     <div class="grid">

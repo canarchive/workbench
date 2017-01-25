@@ -29,11 +29,11 @@
                 <ul id="side_slider" class="banner_slider" style="left:-230px">
                     <li class="on">
                         <a href="/" class="nav_fzlink" target="_blank" rel="nofollow">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/index_banner_sider5.jpg?20141103" width="230" height="70" alt="全程免费服务"></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/94ac0-5951.jpg" width="230" height="70" alt="全程免费服务"></a>
                     </li>
                     <li>
                         <a href="/ask/" class="nav_fzlink" target="_blank" rel="nofollow">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/hplat/askbase/img/index_banner_sider5.jpg?20141103" width="230" height="70" alt="全程免费服务">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/94ac0-5951.jpg" width="230" height="70" alt="全程免费服务">
                         </a>
                     </li>
                 </ul>

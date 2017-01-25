@@ -2,16 +2,13 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->params['cssFiles'] = [
-    'askbase-new_global_forold', 'askbase-global', 'askbase-k306_style_new',
-];
-$this->params['jsFiles'] = [
-    'askbase-jquery', 'askbase-jq', 'askbase-common', 'askbase-user_login',
-];
+$cssFiles = ['355e9-6276', 'e6610-7846'];
+$jsFiles = ['jquery', 'common'];
+$this->params['cssStr'] = $this->render('../_css-aboutus', ['cssFiles' => $cssFiles]);
+$this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
 <div class="global_wrap" id='gloWrap'>
     <script type="text/javascript" src="http://static.to8to.com/gb_js/about_new_v2.js?v=1467110193"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7233fde1057bb867913663813486baad"></script>
     <?= $this->render('_nav', ['navs' => $navs, 'view' => $view]); ?>
     <div class="w970">
         <div class="about_contact about_box">
@@ -34,7 +31,7 @@ $this->params['jsFiles'] = [
                         <p>
                             <i class="mail_ico"></i>邮箱：ad@corp.to8to.com</p>
                         <i class="hot_line_circle">
-                            <img src="http://img.to8to.com/front_end/pic/contact_hot_line.png?v=1456928932" /></i>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5a70a-2667.png" /></i>
                     </div>
                     <div class="hot_line_left" style="margin-top:10px;">
                         <p>如果您是媒体，想沟通采访及报道事宜。请联系：</p>
