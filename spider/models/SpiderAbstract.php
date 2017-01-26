@@ -130,7 +130,7 @@ class SpiderAbstract extends SpiderModel
             $succ = true;
             return $content;
         }
-        return ;
+        return false;
         //$url = 'http://spider.91zuiai.com/site/test.html';
         echo $url;
         $ip = rand(1,255).'.'.rand(1,255).'.'.rand(1,255).'.'.rand(1,255);
