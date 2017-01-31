@@ -4,7 +4,7 @@ use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['0e165-7624', 'd6112-7354', '683ed-3544'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'platj']);
-$this->params['jsStr'] = $this->render('@gallerycms/views/patj/pc/_js', []);
+$this->params['jsStr'] = $this->render('@gallerycms/views/platj/pc/_js', []);
 ?>
 
 <!--head-->

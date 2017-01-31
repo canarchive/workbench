@@ -346,3 +346,7 @@
     <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006020700545" target="_blank">
         <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b5e07-1754.jpg" /></a>京ICP证：040787号 京公海网安备案编号:1101084667
     <br /></div>
+<!--底部 结束-->
+<!--图片查看器容器-->
+<div id="box" style="display:none;"></div>
+<div id="showAlbumImgs"></div>
