@@ -2,24 +2,27 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$cssFiles = ['fc001-1027', 'f565b-1682', 'a398c-6484', '36c62-5795', 'a7311-6598', 'b8040-5022'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
-$this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
+$this->params['cssFiles'] = [
+    'quote1-common_pc', 'quote1-poplayer', 'quote1-animate.min', 'quote1-poplunbo', 'quote1-offer', 'quote1-common',
+];
+$this->params['jsFiles'] = [
+    'quote1-jquery-1.11.3.min', 'quote1-common', 'quote1-jquery.lazyload.min', 
+    'quote1-provinces', 'quote1-poplayer', 'quote1-poplunbo', 'quote1-offer',
+];
 ?>
-<!-- 头部 -->
 <?php echo $this->render('_header'); ?>
-<!-- 页面主题 start -->
+<!-- 路径 start -->
 <div class="main offerpath clearfix">
-    <a href="http://www.17house.com/" class="a666">北京装修网</a>&gt;
-    <a href="/baojia/b0a0o0/" class="a666">北京装修报价</a>&gt;
-	<strong class="cGray">北京雷捷时代广场130㎡新古典风格装修报价</strong>
+    <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>/" class="a666"><?= Yii::$app->params['currentCompany']['name']; ?>装修网</a>&gt;
+    <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>/quote/" class="a666"><?= Yii::$app->params['currentCompany']['name']; ?>装修报价</a>&gt;
+    <strong class="cGray"><?= ''; ?>北京雷捷时代广场130㎡新古典风格装修报价</strong>
 </div>
 <!-- 精装简装套餐 start -->
 <section class="detail-offer">
     <div class="main">
         <div class="top-share clearfix">
             <div class="wrap">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/95d6d-2970.jpg" class="share-icon">
+                <img src="http://s1.17house.com/znbj/images/sao_share.jpg" class="share-icon">
                 <span class="share-txt">分享：</span>
                 <div class="bdsharebuttonbox l" data-tag="share_1">
                     <a class="bds_tsina" data-cmd="tsina" title="新浪微博"></a>
@@ -77,9 +80,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
 <!-- 精装简装套餐 end -->
 <!-- 装修明细 start -->
 <section class="main detail-d">
-    <h2 class="title-h2">
-        <i>
-        </i>装修明细</h2>
+    <h2 class="title-h2"><i></i>装修明细</h2>
     <div class="aa-area">
         <ul class="aa-area-head">
             <li>
@@ -109,10 +110,10 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             <li class="tc f18 mt20">
                 <span class="jz-btn active">
                     <i class="three">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/fde16-7385.jpg" class="threeimg"></i>精装修</span>
+                        <img src="http://s1.17house.com/znbj/images/detail_three_active.jpg" class="threeimg"></i>精装修</span>
                 <span class="jz-btn">
                     <i class="three">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/fde16-7385.jpg" class="threeimg"></i>简装修</span>
+                        <img src="http://s1.17house.com/znbj/images/detail_three_active.jpg" class="threeimg"></i>简装修</span>
             </li>
         </ul>
         <!-- 精装修表格 start -->
@@ -1105,36 +1106,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
         <!-- 简装修表格 end --></div>
 </section>
 <!-- 装修明细 end -->
-<!-- 市场图表 start -->
-<!-- <section class="main mt20">
-<div class="detail-chart">
-<div class="duibi">
-<div class="x-line"></div>
-<div class="hot17 anima"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/48b1c-1151.jpg" class="hot17img" alt=""></div>
-<div class="zhu-base zhu1 anima bg-orange-light">
-<p class="zhu-money cOrange js-half">¥ 36079</p>
-<p class="zhu-name cWhite js-half">半包</p></div>
-<div class="zhu-base zhu2 anima bg-orange">
-<p class="zhu-money cOrange js-full">¥ 85089</p>
-<p class="zhu-name cWhite js-full">全包</p></div>
-<div class="zhu-base zhu3 anima bg-blue-light">
-<p class="zhu-money cGray js-half">¥ 40769</p>
-<p class="zhu-name cWhite js-half">半包</p></div>
-<div class="zhu-base zhu4 anima bg-blue">
-<p class="zhu-money cGray js-full">¥ 96150</p>
-<p class="zhu-name cWhite js-full">全包</p></div>
-<div class="zhu-base zhu5 anima bg-blue-light">
-<p class="zhu-money cGray js-half">¥ 44377</p>
-<p class="zhu-name cWhite js-half">半包</p></div>
-<div class="zhu-base zhu6 anima bg-blue">
-<p class="zhu-money cGray js-full">¥ 104659</p>
-<p class="zhu-name cWhite js-full">全包</p></div>
-<div class="p-base p12 f18 fB tc">一起装修网报价</div>
-<div class="p-base p34 f18 fB tc">市场预估价格</div>
-<div class="p-base p56 f18 fB tc">装修公司价格</div></div>
-<div class="detail-chart-title tc cGray f16">北京雷捷时代广场130㎡新古典风格装修报价</div></div>
-</section> -->
-<!-- 市场图表 end -->
 <!-- 装修设计图推荐 start -->
 <section class="detail-design main  f14 clearfix">
     <h2 class="title-h2 mb10">
@@ -1142,22 +1113,22 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
         </i>装修设计图推荐</h2>
     <ul class="clearfix">
         <li>
-            <a href="http://tuku.17house.com/44.html" target="_blank">
-                <img data-original="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/409f8-9450.jpg" class="img" alt="新中式实木餐厅储物区装修效果图欣赏"></a>
+            <a href="http://tuku.17house.com/14.html" target="_blank">
+                <img data-original="http://static-xiaoguotu.17house.com/000/000/201405080935425371.jpg" class="img" alt="新古典风格别墅儿童房飘窗窗帘效果图欣赏"></a>
             <p class="title">
-                <a class="cWhite">新中式实木餐厅储物区装修效果图欣赏</a></p>
+                <a class="cWhite">新古典风格别墅儿童房飘窗窗帘效果图欣赏</a></p>
         </li>
         <li>
-            <a href="http://tuku.17house.com/45.html" target="_blank">
-                <img data-original="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/18f7a-2779.jpg" class="img" alt="素雅风格跃层休闲储物区装修效果图"></a>
+            <a href="http://tuku.17house.com/648218.html" target="_blank">
+                <img data-original="http://static-xiaoguotu.17house.com/001/07/081/14376734189929.jpg" class="img" alt="混搭风格复式50平米玄关玄关柜图片"></a>
             <p class="title">
-                <a class="cWhite">素雅风格跃层休闲储物区装修效果图</a></p>
+                <a class="cWhite">混搭风格复式50平米玄关玄关柜图片</a></p>
         </li>
         <li>
-            <a href="http://tuku.17house.com/46.html" target="_blank">
-                <img data-original="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/8bcd5-7874.jpg" class="img" alt="时尚白色卧室储物区装修效果图2014"></a>
+            <a href="http://tuku.17house.com/17.html" target="_blank">
+                <img data-original="http://static-xiaoguotu.17house.com/000/000/201405080935559868.jpg" class="img" alt="复式楼客厅进门玄关过道装修效果图"></a>
             <p class="title">
-                <a class="cWhite">时尚白色卧室储物区装修效果图2014</a></p>
+                <a class="cWhite">复式楼客厅进门玄关过道装修效果图</a></p>
         </li>
     </ul>
 </section>
@@ -1181,35 +1152,35 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                 <li class="last">
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4025.html" target="_blank">八里桥市场到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4065.html" target="_blank">北潞园到官园公寓二期</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4032.html" target="_blank">北京射击场到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4254.html" target="_blank">大安山村到官园公寓二期</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4151.html" target="_blank">次渠到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4270.html" target="_blank">大红罗厂西口到官园公寓二期</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4152.html" target="_blank">次渠北里北口到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4456.html" target="_blank">河庄营到官园公寓二期</a></li>
                 <li class="last">
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4184.html" target="_blank">陈留村到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4665.html" target="_blank">莲花晴园到官园公寓二期</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4245.html" target="_blank">大厂交通局到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4679.html" target="_blank">龙庆峡到官园公寓二期</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4273.html" target="_blank">大红门锦苑小区北到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_4936.html" target="_blank">四马台水泉到官园公寓二期</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="http://beijing.17house.com/dt/lp_4526.html" target="_blank">京师园北门到官园公寓二期</a></li>
+                    <a href="http://beijing.17house.com/dt/lp_5031.html" target="_blank">天洋城小区南到官园公寓二期</a></li>
             </ul>
         </div>
         <!-- 相关地图路线 end -->
@@ -1218,45 +1189,45 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             <h2 class="title-h2">相关百科</h2>
             <ul>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452746.html" target="_blank">上海适佳装饰设计</a></li>
+                    <a href="http://baike.17house.com/doc-view-452923.html" target="_blank">上海闵行装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452997.html" target="_blank">上海安聚装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453243.html" target="_blank">北京办公室装修</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453227.html" target="_blank">装修之家</a></li>
+                    <a href="http://baike.17house.com/doc-view-452678.html" target="_blank">苏州富而特_苏州富而特装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452871.html" target="_blank">北京徽华金典装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453696.html" target="_blank">西安威博建筑装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452962.html" target="_blank">上海秦颂建筑装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-452651.html" target="_blank">昆山鼎成_昆山鼎成装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453017.html" target="_blank">济南店面装修</a></li>
+                    <a href="http://baike.17house.com/doc-view-453105.html" target="_blank">上海办公室装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453136.html" target="_blank">上海意熙建筑装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453322.html" target="_blank">石家庄东宏装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-262459.html" target="_blank">石家庄众都装饰设计</a></li>
+                    <a href="http://baike.17house.com/doc-view-452765.html" target="_blank">济南江苏天原工创装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453636.html" target="_blank">济南沣德装修</a></li>
+                    <a href="http://baike.17house.com/doc-view-453032.html" target="_blank">录音棚装修</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452995.html" target="_blank">上海万涛建筑装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453013.html" target="_blank">成都大音堂装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453632.html" target="_blank">上海JUK建筑装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453163.html" target="_blank">西安金新装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452982.html" target="_blank">石家庄方成装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453688.html" target="_blank">西安生活家家居装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453093.html" target="_blank">成都恒雅居建筑装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453130.html" target="_blank">上海千巨建筑装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-262472.html" target="_blank">成都禹衡建筑装饰设计</a></li>
+                    <a href="http://baike.17house.com/doc-view-452971.html" target="_blank">石家庄禹创建筑装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453317.html" target="_blank">成都百年居装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453475.html" target="_blank">济南风之林装修</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-452952.html" target="_blank">上海苏华装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453390.html" target="_blank">上海装饰年代</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453234.html" target="_blank">上海悦轩建筑装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-452899.html" target="_blank">石家庄冠盛家居装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453338.html" target="_blank">天津兰麝香装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453149.html" target="_blank">成都禹衡建筑装修</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453655.html" target="_blank">济南美家装饰</a></li>
+                    <a href="http://baike.17house.com/doc-view-453132.html" target="_blank">上海艾纹装饰</a></li>
                 <li>
-                    <a href="http://baike.17house.com/doc-view-453662.html" target="_blank">上海翌恒建筑装修</a></li>
+                    <a href="http://baike.17house.com/doc-view-453318.html" target="_blank">石家庄城人家装饰</a></li>
             </ul>
         </div>
         <!-- 相关百科 end -->
@@ -1267,35 +1238,35 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                 <li class="last">
                     <i>
                     </i>
-                    <a href="/baojia/398636.html" target="_blank">雷捷时代广场70㎡新古典风格装修报价</a></li>
+                    <a href="/baojia/388642.html" target="_blank">雷捷时代广场70㎡美式风格装修报价</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="/baojia/471485.html" target="_blank">雷捷时代广场90㎡欧式风格装修报价</a></li>
+                    <a href="/baojia/423277.html" target="_blank">雷捷时代广场80㎡混搭风格装修报价</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="/baojia/42296.html" target="_blank">雷捷时代广场140㎡美式风格装修报价</a></li>
+                    <a href="/baojia/485658.html" target="_blank">雷捷时代广场90㎡新古典风格装修报价</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="/baojia/101376.html" target="_blank">雷捷时代广场150㎡中式风格装修报价</a></li>
+                    <a href="/baojia/580779.html" target="_blank">雷捷时代广场120㎡地中海风格装修报价</a></li>
                 <li class="last">
                     <i>
                     </i>
-                    <a href="/baojia/231546.html" target="_blank">雷捷时代广场180㎡现代风格装修报价</a></li>
+                    <a href="/baojia/77925.html" target="_blank">雷捷时代广场150㎡现代风格装修报价</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="/baojia/237009.html" target="_blank">雷捷时代广场180㎡混搭风格装修报价</a></li>
+                    <a href="/baojia/113021.html" target="_blank">雷捷时代广场160㎡东南亚风格装修报价</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="/baojia/269480.html" target="_blank">雷捷时代广场190㎡田园风格装修报价</a></li>
+                    <a href="/baojia/247896.html" target="_blank">雷捷时代广场180㎡美式风格装修报价</a></li>
                 <li>
                     <i>
                     </i>
-                    <a href="/baojia/311897.html" target="_blank">雷捷时代广场200㎡东南亚风格装修报价</a></li>
+                    <a href="/baojia/215074.html" target="_blank">雷捷时代广场180㎡东南亚风格装修报价</a></li>
             </ul>
         </div>
         <!-- 相关报价 end -->
@@ -1304,12 +1275,13 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             <h2 class="title-h2">相关问答</h2>
             <ul>
                 <li>
-                    <a href="http://ask.17house.com/q-3053516.html" target="_blank">移动电源价格如何？</a>
-                    <p class="cGray">推荐小米品牌的产品，做工好，具有很好的耐腐蚀，耐高温，抗老化的特点，同时内部结构稳定，容量大，充电用时短，续航能力强，且价格合理，一般为60元左右，品质有保证。</p></li>
+                    <a href="http://ask.17house.com/q-.html" target="_blank"></a>
+                    <p class="cGray"></p>
+                </li>
                 <li>
-                    <a href="http://ask.17house.com/q-3053506.html" target="_blank">广州购房限购政策哪位清楚？</a>
-                    <p class="cGray">本地家庭限购第三套房非本市户籍居民家庭需提交1年以上个人所得税缴纳证明或社会保险缴纳证明限购一套
-                        <br>根据规定，在一定时期内，暂定对在本市已拥有一套住房的本市户籍居民家庭、能提供自购房之日起算的前两年内在本市累计缴纳一年以上个人所得税缴纳证明或社会保险缴纳证明的非本市户籍居民家庭，限购一套住房。同时，对于已有两套及以上住房的本市居民家庭、拥有一套及以上住房的非本市户籍居民家庭和不能提供两年内在本市缴纳一年以上个人所得税缴纳证明或社会保险缴纳证明的非本市户籍居民家庭，暂停在本市向其售房。</p></li>
+                    <a href="http://ask.17house.com/q-.html" target="_blank"></a>
+                    <p class="cGray"></p>
+                </li>
             </ul>
         </div>
         <!-- 相关报价 end --></div>
@@ -1348,7 +1320,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
 <!-- 生成报价 end -->
 <!-- 倒计时1.5秒 start -->
 <div class="poplayer pop-countdown1500">
-    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/img/c8a04-9978.png" class="img">
+    <img src="http://s1.17house.com/znbj/images/second.png" class="img">
     <div class="clips-box">
         <h5 class="txt-loading">
             <span class="txt">0</span>
@@ -1360,6 +1332,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
     <div class="txt-zz">正在为您生成报价</div></div>
 <!-- 倒计时1.5秒 end -->
 <!-- 弹框 end -->
+<!-- fixed右侧板子 start -->
 <?php //echo $this->render('_right_sao'); ?>
 <!-- 页脚 start -->
 <?php echo $this->render('_footer'); ?>

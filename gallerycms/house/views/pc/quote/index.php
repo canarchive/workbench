@@ -2,18 +2,16 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->params['cssFiles'] = [
-    'quote1-common_pc', 'quote1-poplayer', 'quote1-animate.min', 'quote1-poplunbo', 'quote1-offer', 'quote1-common',
-];
-$this->params['jsFiles'] = [
-    'quote1-jquery-1.11.3.min', 'quote1-common', 'quote1-jquery.lazyload.min', 
-    'quote1-provinces', 'quote1-poplayer', 'quote1-poplunbo', 'quote1-offer',
-];
+$cssFiles = ['fc001-1027', 'f565b-1682', 'a398c-6484', '36c62-5795', 'a7311-6598', 'b8040-5022'];
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
+$this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
 ?>
+<!-- 头部 -->
 <?php echo $this->render('_header'); ?>
 <div class="main offerpath clearfix">
     <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>/quote/" class="a666"><?= Yii::$app->params['currentCompany']['name']; ?>装修报价</a>&gt;
-    <span class="cGray">列表</span></div>
+	<span class="cGray">列表</span>
+</div>
 <div class="main clearfix">
     <?php echo $this->render('_leftnav'); ?>
     <div class="offerlist-r">
@@ -132,14 +130,12 @@ $this->params['jsFiles'] = [
                     <a href="/baojia/b0a0o0/p6/" class="pbtn ">6</a>
                     <a href="/baojia/b0a0o0/p7/" class="pbtn ">7</a>
                     <a href="/baojia/b0a0o0/p2/" class="pbtn w80">下一页</a>
-                    <a href="/baojia/b0a0o0/p64487/" class="pbtn w80">尾页</a>
-                </div>
+                    <a href="/baojia/b0a0o0/p64487/" class="pbtn w80">尾页</a></div>
             </div>
-        </div>
+            <!-- 分页 end --></div>
     </div>
-    <!-- fixed右侧板子 start -->
+    <!-- fixed右侧 start -->
     <?php //echo $this->render('_right_sao'); ?>
 </div>
-<!-- fixed右侧板子 end -->
 <!-- 页脚 start -->
-<?php echo $this->render('_footer'); ?>
+<?= $this->render('_footer'); ?>
