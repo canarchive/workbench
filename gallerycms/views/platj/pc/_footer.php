@@ -350,3 +350,42 @@
 <!--图片查看器容器-->
 <div id="box" style="display:none;"></div>
 <div id="showAlbumImgs"></div>
+<!--投诉-->
+<div class="reportZ_Z">
+    <div class="reportZ_Z_title clearfix">
+        <em>提示</em>
+        <a href="javascript:;"></a>
+    </div>
+    <div class="reportZ_Z_cont clearfix">
+        <div class="coot_Img">
+            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/150a8-3384.png" /></div>
+        <dl>
+            <dt>请将投诉内容发送到指定邮箱</dt>
+            <dd>邮箱地址：</dd>
+            <dd>
+                <span>tcsd-gc001@jmw.com.cn</span></dd>
+        </dl>
+    </div>
+</div>
+<script>$(function() {
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 700) {
+                    $(".lireturn_top").fadeIn(1500);
+                } else {
+                    $(".lireturn_top").fadeOut(1500);
+                }
+            });
+
+            //当点击跳转链接后，回到页面顶部位置
+            $(".lireturn_top").click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                },
+                1000);
+                return false;
+            });
+        });
+    });</script>
+<script type="text/javascript" async="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/ga.js"></script>
