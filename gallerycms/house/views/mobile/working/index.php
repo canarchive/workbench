@@ -3,20 +3,20 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>【领航卫士】领航卫士领航卫士- 中国加盟网手机端</title>
+        <title>【晨阳水漆】晨阳水漆晨阳水漆- 中国加盟网手机端</title>
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <meta name="description" content="手机中国加盟网为您提供真实的领航卫士加盟品牌图片，为您展示领航卫士领航卫士,助您创业成功!" />
-        <meta name="keywords" content="领航卫士产品图片，领航卫士加盟店实景图片，领航卫士加盟店装修图片，领航卫士加盟品牌图库，领航卫士加盟品牌图片，领航卫士图库 " />
-        <link rel="stylesheet" href="http://m.jmw.com.cn/css/m_reset.css" />
-        <link rel="stylesheet" href="http://m.jmw.com.cn/css/m_style.css" />
-        <script type="text/javascript" src="http://m.jmw.com.cn/js/jquery-1.10.2.min.js"></script>
-        <script src="http://m.jmw.com.cn/js/public.js" type="text/javascript"></script>
-        <script src="http://m.jmw.com.cn/js/jmw_util.js" type="text/javascript"></script>
-        <script type="text/javascript" src="http://m.jmw.com.cn/js/getAttentionCountByAjax.js"></script>
-        <script type="text/javascript" src="http://image1.jmw.com.cn/search/js/addPageView.js"></script>
-        <link rel="stylesheet" href="http://m.jmw.com.cn/css/touchTouch.css">
-        <script type="text/javascript" src="http://image1.jmw.com.cn/hangye/public/js/tongji.js"></script>
-        <script type="text/javascript" src="http://image1.jmw.com.cn/hangye/public/js/tongji_m.js"></script>
+        <meta name="description" content="手机中国加盟网为您提供真实的晨阳水漆加盟品牌图片，为您展示晨阳水漆晨阳水漆,助您创业成功!" />
+        <meta name="keywords" content="晨阳水漆产品图片，晨阳水漆加盟店实景图片，晨阳水漆加盟店装修图片，晨阳水漆加盟品牌图库，晨阳水漆加盟品牌图片，晨阳水漆图库 " />
+        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/95055-5881.css" />
+        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/35df6-9609.css" />
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/jquery-1.10.2.min.js"></script>
+        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/public.js" type="text/javascript"></script>
+        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/platj_util.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/getattentioncountbyajax.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/addpageview.js"></script>
+        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/c3a8c-8745.css">
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/tongji.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/tongji_m.js"></script>
     </head>
     <script>function goBack() {
             javascript: history.back();
@@ -32,7 +32,7 @@
         <a href="javaScript:;"  class="wy_download" id="downLoad" onClick="func()"><i></i>下载客户端</a></div>-->
         <div class="top-header">
             <a class="close fl" onclick="$('.top-header').hide();"></a>
-            <img class="top-log fl" src="http://m.jmw.com.cn/images/top-log.png">
+            <img class="top-log fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6f271-8932.png">
             <ul class="top-wenzi fl">
                 <li style="font-size: 0.75em;color:#333;line-height: 1.2rem;">下载中国加盟网APP</li>
                 <li style="font-size: 0.625em;color:#c7c7c7;">随时随地轻松找项目</li></ul>
@@ -51,7 +51,7 @@
                     alert("请在手机端下载app");
                 }
             }</script>
-        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://m.jmw.com.cn/images/top-close.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
+        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
         <!-- <section class="download">
         <a href="javaScript:;"  style="float:none; display:inline-block;" id="downLoad" onClick="func()">
         中国加盟网
@@ -76,7 +76,7 @@
         </script>  
         <style>
         .download {
-        background: rgba(0, 0, 0, 0) url("http://m.jmw.com.cn/images/down_bg.png") repeat-x scroll 0 0;
+        background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cdcc1-5344.png") repeat-x scroll 0 0;
         height: 25px;
         padding-top: 5px;
         text-align: center;
@@ -97,7 +97,7 @@
         position: relative;
         }
         .download a i {
-        background: rgba(0, 0, 0, 0) url("http://m.jmw.com.cn/images/App.png") no-repeat scroll 0 0 / 13px 13px;
+        background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9597c-6592.png") no-repeat scroll 0 0 / 13px 13px;
         display: block;
         height: 13px;
         position: absolute;
@@ -112,29 +112,29 @@
                 <div class="fl header_1">
                     <a href="javascript:;" onclick="goBack()" title="" class="icon icon1"></a>
                 </div>
-                <h2 style="width:86%;text-align:center;float:left;font-size:1.2rem;color:#fff;">领航卫士品牌图库</h2>
+                <h2 style="width:86%;text-align:center;float:left;font-size:1.2rem;color:#fff;">晨阳水漆品牌图库</h2>
                 <div class="fr header_2">
                     <a href="http://m.jmw.com.cn/seek.php" title="" class="icon icon2"></a>
                 </div>
             </div>
         </header>
-        <!-- 领航卫士官网 -->
+        <!-- 晨阳水漆官网 -->
         <section class="guanWang2">
             <dl class="clear">
                 <dt class="fl">
-                    <img src="http://photo.jmw.com.cn/pic/2013/6/20/14565555500ul4LqNfsSL.jpg" alt="领航卫士加盟" title="领航卫士加盟" /></dt>
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" alt="晨阳水漆加盟" title="晨阳水漆加盟" /></dt>
                 <dd class="fl">
-                    <h2>领航卫士品牌图库</h2>
+                    <h2>晨阳水漆品牌图库</h2>
                     <p>
                         <a href="http://m.jmw.com.cn" title="中国加盟网">中国加盟网</a>
                         <i>></i>
                         <a href="http://m.jmw.com.cn/so/i24/" title="建材">建材</a>
                         <i>></i>
-                        <a href="http://m.jmw.com.cn/so/i209/" title="安防">安防</a>
+                        <a href="http://m.jmw.com.cn/so/i89/" title="油漆">油漆</a>
                         <i>></i>
-                        <a href="http://m.jmw.com.cn/xm163460/" title="领航卫士">领航卫士</a>
+                        <a href="http://m.jmw.com.cn/xm137829/" title="晨阳水漆">晨阳水漆</a>
                         <i>></i>
-                        <a href="http://m.jmw.com.cn/xm163460/pinpaituku/" title="领航卫士品牌图库">领航卫士品牌图库</a></p>
+                        <a href="http://m.jmw.com.cn/xm137829/pinpaituku/" title="晨阳水漆品牌图库">晨阳水漆品牌图库</a></p>
                 </dd>
             </dl>
         </section>
@@ -143,45 +143,231 @@
             <section class="picture_sect">
                 <ul class="clear">
                     <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/14575757796Jky3rqyhmn.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/14575757796Jky3rqyhmn.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" alt="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
                     </li>
                     <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/14572525484QHwV1jc1BT.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/14572525484QHwV1jc1BT.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg" alt="晨阳水漆加盟 晨阳   然采丝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
                     </li>
                     <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/12312222187LrrRptttui.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/12312222187LrrRptttui.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/1231066718nahxe5QAEw.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/1231066718nahxe5QAEw.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
-                    </li>
-                    <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/12304545937nCsAhWlMum.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/12304545937nCsAhWlMum.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
-                    </li>
-                    <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/12302828671bAM8d4t1SS.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/12302828671bAM8d4t1SS.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg" alt="晨阳水漆加盟 晨阳   然采丽   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/12295252828u2v7R51h8G.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/12295252828u2v7R51h8G.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg" alt="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://photo.jmw.com.cn/pic/2013/6/20/12294040531kqpfrhSkgw.jpg">
-                            <img src="http://photo.jmw.com.cn/pic/2013/6/20/12294040531kqpfrhSkgw.jpg" alt="领航卫士加盟  " title="领航卫士加盟  " /></a>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg" alt="晨阳水漆加盟 晨阳    然采贝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7d5b7-1645.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7d5b7-1645.jpg" alt="晨阳水漆加盟 晨阳    天然净味抗碱底漆    水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae8d3-3278.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae8d3-3278.jpg" alt="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a09f-9807.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a09f-9807.jpg" alt="晨阳水漆加盟 晨阳   天然净味抗甲醛   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12b86-5439.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12b86-5439.jpg" alt="晨阳水漆加盟 晨阳   天然净味荷 叶  水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee63a-3128.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee63a-3128.jpg" alt="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2be98-4293.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2be98-4293.jpg" alt="晨阳水漆加盟 晨阳  居美加  水性内墙底漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5bbd8-9815.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5bbd8-9815.jpg" alt="晨阳水漆加盟 晨阳  居美仕  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35cf0-8630.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35cf0-8630.jpg" alt="晨阳水漆加盟 晨阳   居美清   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/778c7-6383.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/778c7-6383.jpg" alt="晨阳水漆加盟 晨阳   居美净   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72c23-3918.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72c23-3918.jpg" alt="晨阳水漆加盟 晨阳   居美易   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1d533-3965.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1d533-3965.jpg" alt="晨阳水漆加盟 晨阳  水性地坪底漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2d1b3-3867.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2d1b3-3867.jpg" alt="晨阳水漆加盟 晨阳  水性地坪面漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de9fa-1503.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de9fa-1503.jpg" alt="晨阳水漆加盟 晨阳   水性罩光工业漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac18e-8966.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac18e-8966.jpg" alt="晨阳水漆加盟 晨阳   水性银粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47995-6687.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47995-6687.jpg" alt="晨阳水漆加盟 晨阳  水性金粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c9fb9-5650.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c9fb9-5650.jpg" alt="晨阳水漆加盟 晨阳   水性调和漆工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2159e-5106.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2159e-5106.jpg" alt="晨阳水漆加盟 晨阳   水性磁漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7e24c-1899.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7e24c-1899.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构工业漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1c3f8-1531.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1c3f8-1531.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构专用漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/346f7-4715.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/346f7-4715.jpg" alt="晨阳水漆加盟 晨阳  水性装饰工业漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8d158-8404.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8d158-8404.jpg" alt="晨阳水漆加盟 晨阳   水性高级外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/077f2-2612.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/077f2-2612.jpg" alt="晨阳水漆加盟 晨阳   碧丽团   水性外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b745b-8341.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b745b-8341.jpg" alt="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/151a8-8495.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/151a8-8495.jpg" alt="晨阳水漆加盟 晨阳   碧丽阳   水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8321a-5349.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8321a-5349.jpg" alt="晨阳水漆加盟 晨阳  碧丽晨  水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/900fe-8241.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/900fe-8241.jpg" alt="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aee56-7403.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aee56-7403.jpg" alt="晨阳水漆加盟 晨阳   欧得若   水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8e1aa-8654.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8e1aa-8654.jpg" alt="晨阳水漆加盟 晨阳   清晨之源  水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/47e6a-8084.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/47e6a-8084.jpg" alt="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/093fa-4006.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/093fa-4006.jpg" alt="晨阳水漆加盟 晨阳  海之吻  水性多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3fdf7-1433.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3fdf7-1433.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用  擦色宝" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3207d-3312.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3207d-3312.jpg" alt="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9008-2992.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9008-2992.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用腻子" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b0ac2-8557.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b0ac2-8557.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣2代  水性木器漆" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ea752-8364.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ea752-8364.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b6ed0-7478.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b6ed0-7478.jpg" alt="晨阳水漆加盟 晨阳沐雅文   水性木器封闭底漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e071c-1603.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e071c-1603.jpg" alt="晨阳水漆加盟 防腐漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ec89-7791.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ec89-7791.jpg" alt="晨阳水漆加盟 防锈漆" title="晨阳水漆加盟 防锈漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/961a1-3558.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/961a1-3558.jpg" alt="晨阳水漆加盟 沐雅欣" title="晨阳水漆加盟 防锈漆" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/28680-9550.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/28680-9550.jpg" alt="晨阳水漆加盟 沐雅静" title="晨阳水漆加盟 防锈漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5740a-9622.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5740a-9622.jpg" alt="晨阳水漆加盟 碧丽吉" title="晨阳水漆加盟 碧丽吉" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3482e-4568.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3482e-4568.jpg" alt="晨阳水漆加盟 居美仕中档" title="晨阳水漆加盟 碧丽吉" /></a>
+                    </li>
+                    <li>
+                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a31b-7372.jpg">
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a31b-7372.jpg" alt="晨阳水漆加盟 居美仕" title="晨阳水漆加盟 碧丽吉" /></a>
                     </li>
                 </ul>
             </section>
         </div>
-        <script src="http://m.jmw.com.cn/js/touchTouch.jquery.js"></script>
+        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/touchtouch.jquery.js"></script>
         <script>$(function() {
                 $('#thumbs a').touchTouch();
             });</script>
@@ -192,61 +378,64 @@
         <div class="zaixianzixun ziXun">
             <div class="wen_p clear">
                 <div class="fl" style="border-bottom:none; color:#e44b46;line-height:50px;">
-                    <a href="http://m.jmw.com.cn/xm163460/liuyan/" style="color:#e44b46;font-size: 16px; ">领航卫士在线咨询</a></div>
+                    <a href="http://m.jmw.com.cn/xm137829/liuyan/" style="color:#e44b46;font-size: 16px; ">晨阳水漆在线咨询</a></div>
                 <span class="fr">
-                    <span style="color:red;">31</span>人已成功加盟</span></div>
+                    <span style="color:red;">2922</span>人已成功加盟</span></div>
             <ul class="zaixianzixun-example">
                 <li>
                     <dl class="mass-1 fl">
                         <dt>
-                            <img src="http://image1.jmw.com.cn/logo/message_user/default.jpg" alt=""></dt>
-                        <dt style="margin-bottom: 6px;">张建</dt>
-                        <dt>Android客户端</dt></dl>
-                    <ul class="mass-2 fr">
-                        <i>
-                        </i>
-                        <li class="mass-2-1">IP：119.250.183.*
-                            <span class="fr">留言时间:2016-12-05 00:33:08</span></li>
-                        <li class="mass-2-2">我想询问领航卫士项目</li></ul>
-                </li>
-                <li>
-                    <dl class="mass-1 fl">
-                        <dt>
-                            <img src="http://image1.jmw.com.cn/logo/message_user/0/05.jpg" alt=""></dt>
-                        <dt style="margin-bottom: 6px;">韩先生</dt>
-                        <dt>手机版</dt></dl>
-                    <ul class="mass-2 fr">
-                        <i>
-                        </i>
-                        <li class="mass-2-1">IP：27.209.207.*
-                            <span class="fr">留言时间:2016-11-21 15:24:11</span></li>
-                        <li class="mass-2-2">请问投资领航卫士所需要的费用有哪些? 我想去第九届中国品牌加盟投资博览会-北京国家会议中心现场看领航卫士创业项目</li></ul>
-                </li>
-                <li>
-                    <dl class="mass-1 fl">
-                        <dt>
-                            <img src="http://image1.jmw.com.cn/logo/message_user/0/01.jpg" alt=""></dt>
-                        <dt style="margin-bottom: 6px;">印先生</dt>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/79506-4799.jpg" alt=""></dt>
+                        <dt style="margin-bottom: 6px;">鲍先生</dt>
                         <dt>网页版</dt></dl>
                     <ul class="mass-2 fr">
                         <i>
                         </i>
-                        <li class="mass-2-1">IP：113.210.49.*
-                            <span class="fr">留言时间:2016-11-10 16:46:48</span></li>
-                        <li class="mass-2-2">请问你们有在海外市场拓展计划吗？ 我是中国人，目前在马来西亚从事建筑工程工作。希望有机会能在马来西亚新山开拓市场。</li></ul>
+                        <li class="mass-2-1">IP：121.17.120.*
+                            <span class="fr">留言时间:2017-01-17 15:43:09</span>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
+                        <li class="mass-2-2">资金看项目</li></ul>
                 </li>
                 <li>
                     <dl class="mass-1 fl">
                         <dt>
-                            <img src="http://image1.jmw.com.cn/logo/message_user/0/07.jpg" alt=""></dt>
-                        <dt style="margin-bottom: 6px;">王先生</dt>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" alt=""></dt>
+                        <dt style="margin-bottom: 6px;">吴正军</dt>
+                        <dt>网页版</dt></dl>
+                    <ul class="mass-2 fr">
+                        <i>
+                        </i>
+                        <li class="mass-2-1">IP：180.174.146.*
+                            <span class="fr">留言时间:2017-01-17 15:11:13</span>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
+                        <li class="mass-2-2">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
+                </li>
+                <li>
+                    <dl class="mass-1 fl">
+                        <dt>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" alt=""></dt>
+                        <dt style="margin-bottom: 6px;">陆前锋</dt>
+                        <dt>网页版</dt></dl>
+                    <ul class="mass-2 fr">
+                        <i>
+                        </i>
+                        <li class="mass-2-1">IP：58.40.195.*
+                            <span class="fr">留言时间:2017-01-16 15:19:31</span>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
+                        <li class="mass-2-2">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
+                </li>
+                <li>
+                    <dl class="mass-1 fl">
+                        <dt>
+                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6989f-5450.jpg" alt=""></dt>
+                        <dt style="margin-bottom: 6px;">李总</dt>
                         <dt>手机版</dt></dl>
                     <ul class="mass-2 fr">
                         <i>
                         </i>
-                        <li class="mass-2-1">IP：183.162.149.*
-                            <span class="fr">留言时间:2016-09-09 13:40:19</span></li>
-                        <li class="mass-2-2">请问投资领航卫士所需要的费用有哪些? 我想去第九届中国品牌加盟投资博览会-北京国家会议中心现场看领航卫士创业项目</li></ul>
+                        <li class="mass-2-1">IP：223.104.24.*
+                            <span class="fr">留言时间:2017-01-15 12:45:33</span></li>
+                        <li class="mass-2-2">我想询问晨阳水漆项目</li></ul>
                 </li>
             </ul>
         </div>
@@ -260,7 +449,7 @@
             });</script>
         <script>var is_login = "unlogin";</script>
         <section class="ziXun" id="ljzx">
-            <div class="wrap" style="color:#e44b46; border-bottom:1px solid #e8eaee; line-height:50px;">我要咨询领航卫士加盟项目</div>
+            <div class="wrap" style="color:#e44b46; border-bottom:1px solid #e8eaee; line-height:50px;">我要咨询晨阳水漆加盟项目</div>
             <form action="" method="post" class="Iwant wrap" id="form_biao">
                 <div class="clear">
                     <p class="fl current6">
@@ -273,7 +462,7 @@
                         <label class="fl" id="label6">
                             <i class="icon_sex5 fl "></i>女</label>
                         <input type="hidden" name="gender" class="fl" value="0" id="gender" />
-                        <input type="hidden" name="target_id" id="target_id" value="163460">
+                        <input type="hidden" name="target_id" id="target_id" value="137829">
                         <input type="hidden" value="13" name="origin">
                         <input type="hidden" value="" name="m_dirname" id="m_dirname">
                         <input type="hidden" name="MFoot_lasturl" id="MFoot_lasturl" />
@@ -285,7 +474,7 @@
                     <input type="text" name="phone" id="phonedbly" value="" maxlength="11"></p>
                 <p class="liuY">
                     <label>留言</label>
-                    <input type="text" name="content" id="contentdbly" value="请问投资领航卫士所需要的费用有哪些?"></p>
+                    <input type="text" name="content" id="contentdbly" value="请问投资晨阳水漆所需要的费用有哪些?"></p>
                 <p class="current9">
                     <a onclick="return checkMessageInfo_new_bx($(this));">提交留言</a></p>
                 <style type="text/css">.tongShi{padding:14px 0 8px 0px;height:11px;line-height:9px;} .tongShi input{margin:2px 12px 0 0;} .tongShi p a{color:#e43c01;font-weight:bold; }</style>
@@ -295,7 +484,7 @@
                     <p class="fl" style="width:90%;font-size:12px;padding-left:0;">已有
                         <i style="color:#e43c01;"></i>人想去
                         <span style="color: #E43C01;font-weight: bold;line-height:20px">第九届中国品牌加盟投资博览会-北京国家会议中心</span>现场看
-                        <span style="color: #E43C01;font-weight: bold;">领航卫士</span>创业项目(
+                        <span style="color: #E43C01;font-weight: bold;">晨阳水漆</span>创业项目(
                         <i style="color:#e43c01;">我也想去</i>)</p>--></div>
                 <!--<p style="width:100%; padding-left:0px; line-height:25px; background:#f9f9f9; font-size:12px;margin-top:30px">已有<i style="color:#e43c01;"></i>位创业者线上发送意向：在<i style="color:#e43c01;position:relative;">北京<span style="font-size:25px;position:absolute;top:-11px;">.</span>&nbsp;&nbsp;国家会议中心</i>现场去看<i style="color:#e43c01;">投资博览会</i></p>--></form>
         </section>
@@ -390,36 +579,36 @@
                 }
 
             }</script>
-        <style>.icon_sex5{ background:url('http://m.jmw.com.cn/images/icon-radio_02.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('http://m.jmw.com.cn/images/icon-radio2_01.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
+        <style>.icon_sex5{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
         <!--我要咨询项目 end-->
-        <!-- 领航卫士相关信息项目 -->
+        <!-- 晨阳水漆相关信息项目 -->
         <!-- 廖排骨相关信息项目 -->
         <section class="ziXun">
-            <h2 class="wrap">领航卫士相关项目信息</h2>
+            <h2 class="wrap">晨阳水漆相关项目信息</h2>
             <div class="xiangMu_ul wrap clear">
                 <ul class="fl">
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/xiangmujieshao/" title="领航卫士项目介绍">领航...项目介绍</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/xiangmujieshao/" title="晨阳水漆项目介绍">晨阳...项目介绍</a></li>
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/jiamengfeiyong/ " title="领航卫士加盟费用">领航...加盟费用</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/jiamengfeiyong/ " title="晨阳水漆加盟费用">晨阳...加盟费用</a></li>
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/youshizhichi/" title="领航卫士加盟优势">领航...加盟优势</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/youshizhichi/" title="晨阳水漆加盟优势">晨阳...加盟优势</a></li>
                 </ul>
                 <ul class="fl" style="margin-left:5%;">
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/jiamengdian/" title="领航卫士加盟店铺">领航...加盟店铺</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/jiamengdian/" title="晨阳水漆加盟店铺">晨阳...加盟店铺</a></li>
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/liuyan/" title="领航卫士在线咨询">领航...在线咨询</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/liuyan/" title="晨阳水漆在线咨询">晨阳...在线咨询</a></li>
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/wangyoudianping/" title="领航卫士网友点评">领航...网友点评</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/wangyoudianping/" title="晨阳水漆网友点评">晨阳...网友点评</a></li>
                 </ul>
                 <ul class="fr">
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/zixun/" title="领航卫士加盟资讯">领航...加盟资讯</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/zixun/" title="晨阳水漆加盟资讯">晨阳...加盟资讯</a></li>
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/" title="领航卫士官方网站">领航...官方网站</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/" title="晨阳水漆官方网站">晨阳...官方网站</a></li>
                     <li>
-                        <a href="http://m.jmw.com.cn/xm163460/bbs/" title="领航卫士创业问答">领航...创业问答</a></li>
+                        <a href="http://m.jmw.com.cn/xm137829/bbs/" title="晨阳水漆创业问答">晨阳...创业问答</a></li>
                 </ul>
             </div>
         </section>
@@ -602,13 +791,13 @@
                         <span class="fl" style="position:relative;top:16px;">
                             <em class="em1">*</em>留言
                             <em class="em2">:</em></span>
-                        <textarea name="content" id="zx_contents" cols="30" rows="10">请问投资领航卫士所需要的费用有哪些？</textarea></li>
+                        <textarea name="content" id="zx_contents" cols="30" rows="10">请问投资晨阳水漆所需要的费用有哪些？</textarea></li>
                     <li class="li5 clear">
                         <a href="javaScript:;" class="fl a1" onclick="$('#online_consult').hide();$('.gray_mask').hide();">取消</a>
                         <a href="javaScript:;" class="fr a2" onclick="return message_check_zx($(this));">确定</a></li>
                 </ul>
                 <input type="hidden" name="sex" value="" />
-                <input type="hidden" name="target_id" id="target_id" value="163460" />
+                <input type="hidden" name="target_id" id="target_id" value="137829" />
                 <input type="hidden" name="origin" value="" id="zj_origin" />
                 <input type="hidden" value="" name="m_dirname">
                 <input type="hidden" name="MCeng_lasturl" id="MCeng_lasturl" />
@@ -691,13 +880,13 @@
                 }
             }</script>
         <!--<ul class="xm_footer">
-        <li class="xm_ico1 fl"><a href="javascript:;" onclick="addTelForWap(163460,1,'4000500555');"><img src="http://m.jmw.com.cn/images/xm-fo1.png">免费通话</a></li>
-        <li class="xm_ico2 fl"><a onclick="$('.black-all').show();$('#n_content').val('请问领航卫士企业电话是多少？');$('#origin').val(9);"><img src="http://m.jmw.com.cn/images/xm-fo2.png"><span>索要企业电话</span></a></li>
-        <li class="xm_ico3 fl"><a onclick="$('.tm_bg').show()&amp;&amp;$('.J-extent').show();$('#zj_origin').val('1');$('#contents').val('请问投资领航卫士所需要的费用有哪些?');"><span>在线咨询</span></a></li></ul>-->
+        <li class="xm_ico1 fl"><a href="javascript:;" onclick="addTelForWap(137829,1,'4000500555,95542');"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/dddd7-9769.png">免费通话</a></li>
+        <li class="xm_ico2 fl"><a onclick="$('.black-all').show();$('#n_content').val('请问晨阳水漆企业电话是多少？');$('#origin').val(9);"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/dcf8d-7090.png"><span>索要企业电话</span></a></li>
+        <li class="xm_ico3 fl"><a onclick="$('.tm_bg').show()&amp;&amp;$('.J-extent').show();$('#zj_origin').val('1');$('#contents').val('请问投资晨阳水漆所需要的费用有哪些?');"><span>在线咨询</span></a></li></ul>-->
         <!-- 项目页底部定位 stop -->
-        <style>.xm_footer { position: fixed; bottom: 0; left: 0; z-index: 200; width: 100%; height: 48px; background: #f9f9f9; } .xm_footer .xm_ico1,.xm_footer .xm_ico2{border-right: 1px solid #E0E1E5;box-sizing: border-box;border-top: 1px solid #e0e1e5;} .xm_ico1,.xm_ico2{width: 30%;height:100%;position: relative;} .xm_footer .xm_ico3{width: 40%;background: #E44B46;color: #ffffff;} .xm_footer li a { display: block; color: #666666; text-align: center; font-size: 0.725em; line-height: 66px; } .xm_footer .xm_ico3 a{color: #ffffff;font-size: 0.8em;line-height: 48px;} .xm_footer .xm_ico1 img,.xm_footer .xm_ico2 img{width: 15px;height: 15px;display: block;position: absolute;top:6px;left:50%;margin-left: -7.5px;} .icon_sex1{ background:url('http://m.jmw.com.cn/images/icon-radio_02.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_sex2{ background:url('http://m.jmw.com.cn/images/icon-radio2_01.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_liu_sex2{ background:url('http://m.jmw.com.cn/images/icon-radio2_01.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
+        <style>.xm_footer { position: fixed; bottom: 0; left: 0; z-index: 200; width: 100%; height: 48px; background: #f9f9f9; } .xm_footer .xm_ico1,.xm_footer .xm_ico2{border-right: 1px solid #E0E1E5;box-sizing: border-box;border-top: 1px solid #e0e1e5;} .xm_ico1,.xm_ico2{width: 30%;height:100%;position: relative;} .xm_footer .xm_ico3{width: 40%;background: #E44B46;color: #ffffff;} .xm_footer li a { display: block; color: #666666; text-align: center; font-size: 0.725em; line-height: 66px; } .xm_footer .xm_ico3 a{color: #ffffff;font-size: 0.8em;line-height: 48px;} .xm_footer .xm_ico1 img,.xm_footer .xm_ico2 img{width: 15px;height: 15px;display: block;position: absolute;top:6px;left:50%;margin-left: -7.5px;} .icon_sex1{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_liu_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
         <!-- 标项页讯加盟低价 -->
-        <link rel="stylesheet" href="http://m.jmw.com.cn/css/message_style.css" />
+        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css" />
         <div class="gray_mask" style="display:none;"></div>
         <div class="Pline_consult" style="display:none;" id="Pline_consult">
             <form action="" method="post" id="form1">
@@ -724,13 +913,13 @@
                         <span class="fl" style="position: relative; top: 16px;">
                             <em class="em1">*</em>留言
                             <em class="em2">:</em></span>
-                        <textarea name="content" id="n_content" cols="30" rows="10">请问投资领航卫士所需要的费用有哪些?</textarea></li>
+                        <textarea name="content" id="n_content" cols="30" rows="10">请问投资晨阳水漆所需要的费用有哪些?</textarea></li>
                     <li class="li5 clear">
                         <a href="javaScript:;" class="fl a1" onclick="$('#Pline_consult').hide();$('.gray_mask').hide();$('#P_title1').html('加盟咨询')">取消</a>
                         <a href="javaScript:;" class="fr a2" onclick="return check_Standard($(this));">确定</a></li>
                 </ul>
                 <input type="hidden" name="gender" class="fl" id="sex" value="0">
-                <input type="hidden" name="target_id" id="target_id" value="163460">
+                <input type="hidden" name="target_id" id="target_id" value="137829">
                 <input type="hidden" value="" name="origin" id="origin">
                 <input type="hidden" value="" name="m_dirname">
                 <input type="hidden" name="MFoot_lasturl" id="MCeng_lasturl_1" />
@@ -829,15 +1018,26 @@
         <!--新增弹框 end-->
         <!-- 我要留言 -->
         <style type="text/css">.gray_mask{ background:rgba(0,0,0,.4); position:fixed; top:0; left:0; width:100%; height:100%; z-index:990; display:none; } .I_speak{ width:100%; height:41px; background:#404042; margin-top:4px; position:fixed; bottom:0; z-index:990;} .I_speak .li_left{ width:17.5%; background:#252724; color:#fff; height:41px; text-align:center; font-size:0.75rem; position:relative; } .I_speak .li_left i{ position:absolute; display:block; width:17px; height:17px; top:1px; right:14%; } .I_speak .li_left p{ margin-top:6px; line-height:16px; } .I_speak .li_center{ width:62%; } .I_speak .li_center input{ width:91.5%; height:31px; margin:4px auto; background:#e4e1e1; color:#a5a5a5; border:none; border-radius:6px; padding-left:13px; box-sizing:border-box; display:block; } .I_speak .li_right{ width:16%; background:#169e16; height:31px; border-radius:5px; margin-top:4px; } .I_speak .li_right dl{ margin:auto; width:81%; } .I_speak .li_right dt{ width:15px; height:15px; margin-top:8px ; } .I_speak .li_right dd{ font-size:0.75rem; color:#fff; line-height:14px; margin-left:6px;margin-top:2px;} @media (min-width:320px) and (max-width:365px){ .I_speak .li_right dd{ margin-left:2px;margin-top:2px;} } @media screen and (min-width:384px){ .I_speak .li_right dl{ margin:auto; width:74%; } } .Pline_consultL{ background:#fff; width:83%; position:fixed; left:8.5%; top:20%; border-radius:10px; z-index:1305; display:none; } .Pline_consultL .P_title1{ height:45px; line-height:45px; text-align:center; border-bottom:1px solid #e8e8e8; font-size:0.95rem; } .Pline_consultL ul li{ line-height:42px; padding:0 3%; border-bottom:1px solid #e8e8e8; font-size:0.8rem;} .Pline_consultL ul li .text{ width:33%; height:28px;font-size:0.85rem; color:#999; box-sizing:border-box; padding-left:3px; margin-left:3px; border:medium none; } .Pline_consultL ul li .button{ width:32%; height:28px; border:1px solid #e10000; color:#e10000; line-height:28px; text-align:center; background:#fff; margin-top:8px; padding:0; border-radius:2px; } .Pline_consultL .li_sex{ font-size:0.8rem; margin-right:8px; } .Pline_consultL ul li span .em1{ float:left; color:#e10000; margin-right:2px;} .Pline_consultL ul li textarea{ height:40px; font-family: "微软雅黑";width:81%;font-size:0.85rem; margin-left:3px; margin-top:10px; line-height:20px; color:#999; border:medium none; } @media screen and (max-width:330px){ .Pline_consultL ul li textarea{ width:79%; } } .Pline_consultL ul .li5{ height:46px; line-height:46px; border-bottom:none;} .Pline_consultL ul li a{ text-align:center; width:50%; display:inline-block; font-size:0.95rem; } .Pline_consultL ul .a1{ border-right:1px solid #e8e8e8; box-sizing:border-box; color:#cdcdcd; } .Pline_consultL ul .a2{ color:#4283e4; }</style>
-        <script language="javascript" type="text/javascript" src="http://image1.jmw.com.cn/search/js/WebCall.js"></script>
-        <script language="javascript" type="text/javascript" src="http://m.jmw.com.cn/js/iscroll.js"></script>
-        <style type="text/css">.yuYue{ height:48px; background:#e44b46; width:100%; position:fixed; bottom:0; z-index:990;} .yuYue li{ width:50%; height:48px; color:#fff; font-size:13px; line-height:48px; text-align:center; } .yuYue .li_left{ border-right:1px solid #fff; box-sizing:border-box; } .yuYue .li_left span{background:url('http://m.jmw.com.cn/images/message_footer.png') no-repeat 0 14px; background-size:16px 15px; padding: 12px 0 12px 22px;} .yuYue .li_right span{background:url('http://m.jmw.com.cn/images/lianXi.png') no-repeat 0 14px; background-size:16px 15px; padding: 12px 0 12px 22px;}</style>
-        <!-- 预约看项目 -->
-        <ul class="clear yuYue">
-            <li class="fl li_left" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#P_title1').html('实地考察');$('#n_content').val('我想预约考察领航卫士项目，面对面沟通加盟详情！');$('#origin').val(29);">
-                <span>预约看项目</span></li>
-            <li class="fr li_right" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#P_title1').html('专家咨询');$('#n_content').val('我想联系领航卫士项目的招商经理，详细咨询项目情况！');$('#origin').val(30);">
-                <span>联系招商经理</span></li>
+        <script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/webcall.js"></script>
+        <script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/iscroll.js"></script>
+        <ul class="I_speak clear">
+            <li class="fl li_left" onclick="$('.Pline_consultL').show();$('.gray_mask').show();">
+                <p>我要
+                    <br />留言</p>
+                <i>
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2de72-9761.png" alt="" /></i>
+            </li>
+            <li class="fl li_center">
+                <input type="text" name="phone" id="si_mobel" value="输入您的电话:138******10" onfocus="if(this.value=='输入您的电话:138******10'){this.value=''}" onblur="if(this.value==''){this.value='输入您的电话:138******10'}" maxlength="11" /></li>
+            <li class="fl li_right" onclick="si_Webcall();return false;">
+                <dl class="clear">
+                    <dt class="fl">
+                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/00698-5306.png" alt="" /></dt>
+                    <dd class="fl">在线
+                        <br />咨询</dd>
+                    <input type="hidden" name="tid" id="si_tid" value="137829">
+                    <input type="hidden" name="cname" id="si_cname" value="晨阳水漆"></dl>
+            </li>
         </ul>
         <div class="gray_mask"></div>
         <div class="Pline_consultL" style="display:none; z-index:1400;">
@@ -862,13 +1062,13 @@
                     <li>
                         <span class="fl">
                             <em class="em1">*</em>留言&nbsp;:</span>
-                        <textarea name="contant" id="liu_content" cols="30" rows="10">我想咨询领航卫士加盟费用最低多少钱?</textarea></li>
+                        <textarea name="contant" id="liu_content" cols="30" rows="10">我想咨询晨阳水漆加盟费用最低多少钱?</textarea></li>
                     <li class="li5 clear">
                         <a href="javaScript:;" class="fl a1" onclick="$('.Pline_consultL').hide();$('.gray_mask').hide();">取消</a>
                         <a href="javaScript:;" class="fr a2" onclick="return message_liuyan($(this));">确定</a></li>
                 </ul>
                 <input type="hidden" name="gender" class="fl" id="liu_sex" value="0">
-                <input type="hidden" name="target_id" id="target_id" value="163460">
+                <input type="hidden" name="target_id" id="target_id" value="137829">
                 <input type="hidden" value="22" name="origin" id="liu_origin">
                 <input type="hidden" value="" name="m_dirname">
                 <input type="hidden" name="MFoot_lasturl" id="MCeng_lasturl_1" />
