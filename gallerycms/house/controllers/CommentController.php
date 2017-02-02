@@ -16,6 +16,8 @@ class CommentController extends HouseController
 
 	protected function _list()
 	{
+        $this->layout = '@gallerycms/views/layouts/main-plat';
+
 		/*$tag = Yii::$app->request->get('tag', '');
 		$model = new Comment();
 		$houseSortInfos = $model->houseSortInfos;
