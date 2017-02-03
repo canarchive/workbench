@@ -37,7 +37,7 @@ $this->params['formPositionName'] = '首页量房';
 						<a href="<?= Url::to(['/cmsad/info/show', 'id' => $info['id']]); ?>" title="<?= $info['name']; ?>">
                             <?= $info['name']; ?>
                         </a>
-                        <span class="time"><?= date('Y-m-d H:i:s', $info['created_at']); ?></span>
+                        <span class="time"><?= date('Y-m-d', $info['created_at']); ?></span>
                         </div>
                         <div class="des"><?= $info['description']; ?></div>
                     </li>

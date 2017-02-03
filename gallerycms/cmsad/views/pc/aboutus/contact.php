@@ -20,7 +20,7 @@ $this->params['formPositionName'] = $view;
             <div class="server-content">
                 <div class="connect-us">
                     <div class="t">联系方式</div>
-                    <div class="company"><?= Yii::$app->params['siteCompanyName']; ?></div>
+                    <div class="company"><?= Yii::$app->params['siteName']; ?></div>
                     <div class="address">地址：<?= Yii::$app->params['siteAddressInfo']; ?>
                         <span>邮编：100176</span>
                     </div>

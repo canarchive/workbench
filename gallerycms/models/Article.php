@@ -110,7 +110,8 @@ class Article extends GallerycmsModel
         }
 
         foreach ($cDatas as $catdir => $info) {
-            $cDatas[$catdir]['subInfos'] = $this->getInfos(['category_id' => $info['id']], 7);
+            $cDatas[$catdir]['subInfos'] = $this->getInfos([], 7);
+            //$cDatas[$catdir]['subInfos'] = $this->getInfos(['category_id' => $info['id']], 7);
         }
 
         return $cDatas;
