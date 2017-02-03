@@ -22,10 +22,6 @@ $friendlinkInfos = isset($this->params['friendlinkInfos']) ? $this->params['frie
                 <a rel="nofollow" href="/agreement.html">注册协议</a><span>|</span>
                 <a rel="nofollow" href="/sp-register.html">免费体验</a><span>|</span>
                 <a rel="nofollow" href="/sp-login.html">登陆</a>
-                <!--<a href="/contactus.html">联系我们</a><span>|</span>-->
-                <!--<a href="/map.html">网站地图</a><span>|</span>-->
-                <!--<a href="/friendlink.html">友情链接</a><span>|</span>-->
-                <!--<a href="/guestbook.html" target="_blank">意见反馈</a>-->
             </p>
         </div>
         <div class="copyright">

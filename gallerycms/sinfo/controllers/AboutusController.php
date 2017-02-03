@@ -12,6 +12,9 @@ class AboutusController extends SinfoController
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
+		if ($view == 'record') {
+			return $this->_record();
+		}
 
 		$datas = [
             'controllerId' => $this->id,
@@ -23,14 +26,14 @@ class AboutusController extends SinfoController
 		return $this->render($view, $datas);
 	}
 
-    public function actionRecord()
+    public function _record()
     {
+		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         if (!Yii::$app->request->isPost) {
             return ['status' => 400, 'message' => '操作异常，请您重新提交'];
         }
 
         $model = new Guestbook();
-		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         //$_GET['city'] = $_GET['province'] . '-' . $_GET['city'];
         //$model->load(Yii::$app->request->get(), '');
         $_POST['city'] = $_POST['province'] . '-' . $_POST['city'];

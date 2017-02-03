@@ -18,7 +18,7 @@ $this->params['formPositionName'] = '';
         <div class="top_links">
 			<a href="/" class="index_link" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteNameBase']; ?></a><em>></em>
 			<?php if (!empty($currentSort)) { ?>
-            <a href="<?= Url::to(['/sinfo/info/index', 'tag' => '_', 'page'=> '_1']); ?>" title="获取访客信息攻略">获取访客信息攻略</a>
+            <a href="/info/" title="获取访客信息攻略">获取访客信息攻略</a>
             <?php } else { echo '<strong>获取访客信息攻略</strong>'; } ?>
 
             <?php if (!empty($currentSort)) { ?><em>></em>
@@ -33,7 +33,7 @@ $this->params['formPositionName'] = '';
                     <li>
                             <div class="t">
 					    <a href="<?= Url::to(['/sinfo/info/show', 'id' => $info['id']]); ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
-                                <span class="time"><?= date('Y-m-d H:i:s', $info['created_at']); ?></span>
+                                <span class="time"><?= date('Y-m-d', $info['created_at']); ?></span>
                             </div>
                             <div class="des"><?= $info['description']; ?></div>
                     </li>

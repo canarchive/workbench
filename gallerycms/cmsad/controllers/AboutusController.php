@@ -50,12 +50,12 @@ class AboutusController extends CmsadController
 
     public function actionRecord()
     {
+		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         if (!Yii::$app->request->isPost) {
             return ['status' => 400, 'message' => '操作异常，请您重新提交'];
         }
 
         $model = new Guestbook();
-		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         //$_GET['city'] = $_GET['province'] . '-' . $_GET['city'];
         //$model->load(Yii::$app->request->get(), '');
         $_POST['city'] = $_POST['province'] . '-' . $_POST['city'];
