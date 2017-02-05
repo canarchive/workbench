@@ -518,7 +518,8 @@
             $('.auto_ul').css('height', 'auto');
             $('.zhanKAI').hide();
             $('.shouQI').show();
-        }) $('.shouQI').click(function() {
+        });
+        $('.shouQI').click(function() {
             $('.auto_ul').css('height', '24px');
             $('.shouQI').hide();
             $('.zhanKAI').show();

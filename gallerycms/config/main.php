@@ -7,6 +7,7 @@ $params = array_merge(
 );
 
 $routeRules = array_merge(
+    ['tmp' => '/tmp/test'],
     require(__DIR__ . '/merchant/rule.php'),
     require(__DIR__ . '/house/rule.php')
 );
