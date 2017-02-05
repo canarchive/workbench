@@ -30,6 +30,7 @@ class Asset extends AbstractModel
         if ($this->name_ext != 'css') {
             return ;
         }
+        $this->urlInfo = parse_url($this->url);
 
         $path = Yii::$app->params['spiderPath'] . 'pages/source/css/';
         $file = $path . $this->path;

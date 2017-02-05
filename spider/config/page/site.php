@@ -12,4 +12,12 @@ return [
         'code' => 'plat8',
         'name' => '土巴兔',
     ],
+    'djh' => [
+        'code' => 'groupon',
+        'name' => '大件会',
+    ],
+    'rose' => [
+        'code' => 'flower',
+        'name' => 'ROSE',
+    ],
 ];

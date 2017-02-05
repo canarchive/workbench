@@ -8,6 +8,7 @@ use spider\models\SpiderAbstract;
 class AbstractModel extends SpiderAbstract
 {
     protected $validExtNames = ['js', 'css', 'png', 'jpg', 'gif', 'ico', 'jpeg'];
+    public $urlInfo;
 
     protected function formatFile($urlRemote)
     {
@@ -38,6 +39,11 @@ class AbstractModel extends SpiderAbstract
         if (strpos($url, 'http') !== false) {
             return $url;
         }
+        /*if (!isset($this->urlInfo)) {
+            echo $this->url;
+            print_r($this);
+            exit();
+        }*/
         if (substr($url, 0, 1) == '/') {
             $url = $this->urlInfo['scheme'] . '://' . $this->urlInfo['host'] . $url;
             //echo "<a href='{$url}' target='_blank'>{$url}</a>--{$urlBase}=={$this->url}<br />";

@@ -7,7 +7,6 @@ use yii\helpers\FileHelper;
 
 class Page extends AbstractModel
 {
-    public $urlInfo;
 
     public function getIsMobileInfos()
     {
