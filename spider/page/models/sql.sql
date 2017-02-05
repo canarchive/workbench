@@ -1,7 +1,65 @@
 -- ('jmw', '', '', '', '', '0', '20170121', '', 0),
 
 INSERT INTO `ws_page` 
-    (`site_code`, `code`, `name`, `name_source`, `url`, `is_mobile`, `created_at`, `description`, `isbak`)
+    (`site_code`, `code`, `name`, `name_source`, `url`, `is_mobile`, `created_at`, `description`, `isbak`) VALUES 
+    ('djh', 'index-home', '首页', '武汉首页', 'http://www.dajianhui.com/', '0', '20170126', '', 0),
+    ('djh', 'index-zz', '分站首页', '首页-郑州', 'http://zz.dajianhui.com/z-index.shtml', '0', '20170126', '', 0),
+    ('djh', 'list-activity', '活动列表', '活动专区', 'http://www.dajianhui.com/hd.shtml', '0', '20170126', '', 0),
+    ('djh', 'list-groupon', '团购列表', '精品团购', 'http://www.dajianhui.com/gp/gp_mall/70/detail.shtml', '0', '20170126', '', 0),
+    ('djh', 'list-brand', '团购品牌列表', '品牌团购', 'http://www.dajianhui.com/collect.shtml', '0', '20170126', '', 0),
+    ('djh', 'show-groupon', '团购内容页', '团购内容页', 'http://www.dajianhui.com/gpmall/23/detail.shtml', '0', '20170126', '', 0),
+    ('djh', 'show-brand', '品牌团购内容页', '精品团购内容也', 'http://www.dajianhui.com/125/collectInfo.shtml', '0', '20170126', '', 0),
+    ('djh', 'show', '活动内容页', '活动内容页', 'http://www.dajianhui.com/gp/95/detail.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-joinus', '关于我们-加入我们', '关于我们-加入我们', 'http://www.dajianhui.com/forward/joba.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-desc', '关于我们-介绍', '关于我们-介绍', 'http://www.dajianhui.com/forward/about.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-culture', '关于我们-企业文化', '关于我们-企业文化', 'http://www.dajianhui.com/forward/wenhua.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-team', '关于我们-团队风采', '关于我们-团队风采', 'http://www.dajianhui.com/forward/fengcai.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-boss', '关于我们-老板说', '关于我们-老板说', 'http://www.dajianhui.com/forward/csr.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-report', '关于我们-媒体报道', '关于我们-媒体报道', 'http://www.dajianhui.com/forward/meiti.shtml', '0', '20170126', '', 0),
+    ('djh', 'aboutus-contactus', '关于我们-联系我们', '关于我们-联系我们', 'http://www.dajianhui.com/forward/contact.shtml', '0', '20170126', '', 0),
+    ('djh', 'cms-index', '咨询首页', '消费者学院', 'http://www.dajianhui.com/cms/index.shtml', '0', '20170126', '', 0),
+    ('djh', 'cms-list', '咨询列表页', '消费者学院-列表页', 'http://www.dajianhui.com/cms/news/13/1/list.shtml', '0', '20170126', '', 0),
+    ('djh', 'cms-list-vedio', '咨询视频列表', '消费者学院-视频列表', 'http://www.dajianhui.com/cms/1/videoListShow.shtml', '0', '20170126', '', 0),
+    ('djh', 'cms-show', '咨询内容页', '消费者学院-内容页', 'http://www.dajianhui.com/cms/news/1013/index.shtml', '0', '20170126', '', 0),
+    ('djh', 'cms-show-vedio', '咨询视频内容页', '消费者学院-视频内容页', 'http://www.dajianhui.com/cms/1003/videoShow.shtml', '0', '20170126', '', 0),
+    ('djh', 'user-signup', '用户中心-注册', '用户中心-注册', 'http://www.dajianhui.com/register.shtml', '0', '20170126', '', 0),
+    ('djh', 'user-signup-success', '用户中心-注册成功', '用户中心-注册成功', 'http://www.dajianhui.com/register.shtml', '0', '20170126', '', 0),
+    ('djh', 'user-signin', '用户中心-登录', '用户中心-登录', 'http://www.dajianhui.com/login.shtml', '0', '20170126', '', 0),
+    ('djh', 'user-findpwd-1', '用户中心-找回密码-1', '用户中心-找回密码-1', 'http://www.dajianhui.com/findpwd.shtml', '0', '20170126', '', 0),
+    ('djh', 'user-findpwd-2', '用户中心-找回密码-2', '用户中心-找回密码-2', 'http://www.dajianhui.com/findpwdStep2.shtml', '0', '20170126', '', 0),
+    ('djh', 'user-findpwd-3', '用户中心-找回密码-3', '用户中心-找回密码-3', '', '0', '20170126', '', 0),
+    ('djh', 'user-findpwd-4', '用户中心-找回密码-4', '用户中心-找回密码-4', '', '0', '20170126', '', 0),
+    ('djh', 'user-index', '用户中心', '用户中心', 'http://www.dajianhui.com/member/my.shtml', '0', '20170126', '', 0),
+
+
+    ('djh', 'select-city', '选择城市', '选择城市', 'http://m.dajianhui.com/gp/selCity.shtml', '1', '20170126', '', 0),
+    ('djh', 'index-home', '首页', '武汉首页', 'http://m.dajianhui.com/', '1', '20170126', '', 0),
+    ('djh', 'index-zz', '分站首页', '首页-郑州', 'http://m.zz.dajianhui.com/index.shtml?menu=1', '1', '20170126', '', 0),
+    ('djh', 'list-activity', '活动列表', '活动专区', 'http://m.dajianhui.com/hd.shtml', '1', '20170126', '', 0),
+    ('djh', 'list-groupon', '团购列表', '精品团购', 'http://m.dajianhui.com/gp/gp_mall/70/detail.shtml', '1', '20170126', '', 0),
+    ('djh', 'list-brand', '团购品牌列表', '品牌团购', 'http://m.dajianhui.com/collect.shtml', '1', '20170126', '', 0),
+    ('djh', 'show-groupon', '团购内容页', '团购内容页', 'http://m.dajianhui.com/gpmall/23/detail.shtml', '1', '20170126', '', 0),
+    ('djh', 'show-brand', '品牌团购内容页', '精品团购内容也', 'http://m.dajianhui.com/132/collectInfo.shtml', '1', '20170126', '', 0),
+    ('djh', 'show', '活动内容页', '活动内容页', 'http://m.dajianhui.com/gp/95/detail.shtml', '1', '20170126', '', 0),
+    ('djh', 'aboutus-desc', '关于我们-介绍', '关于我们-介绍', 'http://m.dajianhui.com/forward/about.shtml', '1', '20170126', '', 0),
+    ('djh', 'cms-index', '咨询首页', '消费者学院', 'http://m.dajianhui.com/cms/index.shtml', '1', '20170126', '', 0),
+    ('djh', 'cms-list', '咨询列表页', '消费者学院-列表页', 'http://m.dajianhui.com/cms/news/13/1/list.shtml', '1', '20170126', '', 0),
+    ('djh', 'cms-list-vedio', '咨询视频列表', '消费者学院-视频列表', 'http://m.dajianhui.com/cms/1/videoListShow.shtml', '1', '20170126', '', 0),
+    ('djh', 'cms-show', '咨询内容页', '消费者学院-内容页', 'http://m.dajianhui.com/cms/news/1013/index.shtml', '1', '20170126', '', 0),
+    ('djh', 'cms-show-vedio', '咨询视频内容页', '消费者学院-视频内容页', 'http://m.dajianhui.com/cms/1003/videoShow.shtml', '1', '20170126', '', 0),
+    ('djh', 'user-signup', '用户中心-注册', '用户中心-注册', 'http://m.dajianhui.com/register.shtml', '1', '20170126', '', 0),
+    ('djh', 'user-signup-success', '用户中心-注册成功', '用户中心-注册成功', '', '1', '20170126', '', 0),
+    ('djh', 'user-signin', '用户中心-登录', '用户中心-登录', 'http://m.dajianhui.com/login.shtml', '1', '20170126', '', 0),
+    ('djh', 'user-findpwd-1', '用户中心-找回密码-1', '用户中心-找回密码-1', 'http://m.dajianhui.com/findpwd.shtml', '1', '20170126', '', 0),
+    ('djh', 'user-findpwd-2', '用户中心-找回密码-2', '用户中心-找回密码-2', 'http://m.dajianhui.com/findpwdStep2.shtml', '1', '20170126', '', 0),
+    ('djh', 'user-index', '用户中心', '用户中心', 'http://m.dajianhui.com/login.shtml', '1', '20170126', '', 0),
+
+
+
+
+
+
+    
 VALUES
     ('jmw', 'index-home', '分站首页', '建材首页', 'http://www.jc.jmw.com.cn/', '0', '20170121', '', 0),
     ('jmw', 'index-merchant', '商家首页', '晨阳水漆', 'http://www.jmw.com.cn/xm137829/', '0', '20170121', '', 0),
