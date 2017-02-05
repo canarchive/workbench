@@ -13,7 +13,7 @@ class SiteController extends HouseController
 {
 	public function actionIndex()
 	{
-		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];
+		$where = ['city_code' => Yii::$app->params['currentCompany']['code'], 'status' => 1];
 		$datas = [
 			'merchantInfos' => $this->getMerchantInfos($where),
 			'realcaseInfos' => $this->getRealcaseInfos($where),

@@ -11,7 +11,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'mobile-index' => [
         'hosts' => ['m', '3g', 'wap'],
         'data' => [
-            'pattern' => '/sj-<code:\w+>', 
+            'pattern' => '/sj-<mcode:\w+>', 
             'route' => '/merchant/mobile-site/index', 
             'suffix' => '/'
         ],
@@ -19,7 +19,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'merchant-show' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
-            'pattern' => '/<city_code:\w+>/showsj_<code:\w+>', 
+            'pattern' => '/<city_code:\w+>/showsj_<mcode:\w+>', 
             'route' => '/merchant/site/show', 
             'suffix' => '.html'
         ],

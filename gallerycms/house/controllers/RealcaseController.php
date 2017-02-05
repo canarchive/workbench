@@ -11,11 +11,6 @@ class RealcaseController extends HouseController
 {
 	public function actionIndex()
 	{
-		return $this->_list();
-	}
-
-	protected function _list()
-	{
 		/*$tag = Yii::$app->request->get('tag', '');
 		$model = new Realcase();
 		$houseSortInfos = $model->houseSortInfos;

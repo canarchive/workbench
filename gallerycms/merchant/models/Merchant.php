@@ -151,9 +151,9 @@ class Merchant extends MerchantModel
 		return $infos;
 	}
 
-	public function getInfo($id)
+	public function getInfo($where)
 	{
-		$info = static::find()->where(['id' => $id])->one();//->toArray();
+		$info = static::find()->where($where)->one();//->toArray();
 		if (empty($info)) {
 			return $info;
 		}
@@ -166,7 +166,7 @@ class Merchant extends MerchantModel
 	{
 		$info['logo'] = $info->getAttachmentUrl($info['logo']);
 		$info['picture'] = $info->getAttachmentUrl($info['picture']);
-		//$info['companyInfo'] = Company::findOne(['code_short' => $info['city_code']])->toArray();
+		//$info['companyInfo'] = Company::findOne(['code' => $info['city_code']])->toArray();
 		$domain = Yii::$app->params['baseDomain'];
 		$url = "http://{$info->city_code}.{$domain}/sj-{$info->id}.html";
 		$info['nameUrl'] = "<a href='{$url}' target='_blank'>{$info->name}</a>";
@@ -231,6 +231,14 @@ class Merchant extends MerchantModel
 	public function getCommentInfos()
 	{
 		$model = new MerchantComment();
+		$infos = $model->getInfos(['merchant_id' => $this->id]);
+
+		return $infos;
+	}
+
+	public function getOwnerInfos()
+	{
+		$model = new Owner();
 		$infos = $model->getInfos(['merchant_id' => $this->id]);
 
 		return $infos;

@@ -2,56 +2,27 @@
 
 namespace gallerycms\merchant\controllers;
 
-use Yii;
-use yii\helpers\Url;
 use gallerycms\components\MerchantController;
-use gallerycms\merchant\models\Merchant;
-use gallerycms\merchant\models\Working;
 
 class SiteController extends MerchantController
 {
 
 	public function actionIndex()
 	{
-		/*$model = new Merchant();
-		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short'], 'status' => 1];
-		$infos = $model->getInfos($where);
-		$datas = [
-			'infos' => $infos,
-		];
+        $datas = $this->_initMerchant();
+		$dataTdk = ['{{INFONAME}}' => $datas['info']['name']];
+		$this->getTdkInfos('merchant-index', $dataTdk);
 
-        $this->getTdkInfos('decoration-company-index');*/
-        $datas = [];
 		return $this->render('index', $datas);
 	}
 
 	public function actionShow()
 	{
-        $this->layout = '@gallerycms/views/layouts/main-plat';
-        $datas = [];
-		return $this->render('show', $datas);
-		$action = Yii::$app->request->get('action');
-		$actions = ['sjjj' => 'info', 'sjsj' => 'realcase', 'sjgd' => 'working', 'sj' => 'showindex', 'sjdp' => 'comment', 'sjsjs' => 'designer'];
-		if (!in_array($action, array_keys($actions))) {
-			$action = 'sj';
-            //throw new NotFoundHttpException('信息有误');
-		}
-		$currentAction = $actions[$action];
-        $datas = $this->getShowDatas();
-
-		$info = $datas['info'];
-        if ($info['city_code'] != Yii::$app->params['currentCompany']['code_short']) {
-            $url = Url::to(['/merchant/decoration-company/show', 'id' => $info['id'], 'city_code' => $info['city_code'], 'action' => $action]);
-            return $this->redirect($url, 301)->send();
-        }
-
-		$datas['action'] = $currentAction;
-        if (empty($datas)) {
-            return $this->redirect('/')->send();
-        }
+        $datas = $this->_initMerchant('merchant-show');
 		$dataTdk = ['{{INFONAME}}' => $datas['info']['name']];
-		$this->getTdkInfos('decoration-company-' . $currentAction, $dataTdk);
-		return $this->render($currentAction, $datas);
+		$this->getTdkInfos('merchant-show', $dataTdk);
+
+		return $this->render('show', $datas);
 	}
 
 	public function actionShowWorking()
@@ -63,7 +34,7 @@ class SiteController extends MerchantController
             return $this->redirect('/')->send();
 		}
 
-        if ($info['city_code'] != Yii::$app->params['currentCompany']['code_short']) {
+        if ($info['city_code'] != Yii::$app->params['currentCompany']['code']) {
             $url = Url::to(['/merchant/decoration-company/show-working', 'id' => $info['id'], 'city_code' => $info['city_code']]);
             return $this->redirect($url, 301)->send();
         }
@@ -75,27 +46,5 @@ class SiteController extends MerchantController
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{MERCHANTNAME}}' => $info['merchantInfo']['name']];
 		$this->getTdkInfos('decoration-company-show-working', $dataTdk);
 		return $this->render('show-working', $datas);
-	}
-
-    protected function getShowDatas()
-    {
-        $id = \Yii::$app->getRequest()->get('id');
-        $model = new Merchant();
-		$info = $model->getInfo($id);
-		if (empty($info)) {
-			return false;
-		}
-
-        $datas = [
-            'info' => $info,
-            'realcaseInfos' => $info->getRealcaseInfos(),
-            'workingInfos' => $info->getWorkingInfos(),
-            'designerInfos' => $info->getDesignerInfos(),
-            'commentInfos' => $info->getCommentInfos(),
-			'ownerInfos' => $this->_getOwnerInfos(),
-        ];
-		//print_r($datas);exit();
-
-		return $datas;
 	}
 }

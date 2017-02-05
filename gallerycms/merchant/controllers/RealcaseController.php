@@ -12,7 +12,7 @@ class RealcaseController extends HouseController
 	public function actionIndex()
 	{
 		$model = new Realcase();
-		$where = ['city_code' => Yii::$app->params['currentCompany']['code_short']];//, 'status' => 1];
+		$where = ['city_code' => Yii::$app->params['currentCompany']['code']];//, 'status' => 1];
 		$infos = $model->getInfos($where, 30);
 		$datas = [
 			'infos' => $infos,
@@ -31,7 +31,7 @@ class RealcaseController extends HouseController
             return $this->redirect('/')->send();
 		}
 
-        if ($info['city_code'] != Yii::$app->params['currentCompany']['code_short']) {
+        if ($info['city_code'] != Yii::$app->params['currentCompany']['code']) {
             $url = Url::to(['/house/realcase/show', 'id' => $info['id'], 'city_code' => $info['city_code']]);
             return $this->redirect($url, 301)->send();
         }

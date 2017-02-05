@@ -7,43 +7,43 @@ return [
         'description' => '【{{CITYNAME}}{{SITENAME}}】中国家装首选平台,免费提供{{CITYNAME}}多家装修公司进行多对一服务,让装修业主找到真正属于自己喜欢的装修公司。提供：室内装修,房屋装修,房子装修,室内设计,等装修设计一站式服务。',
     ],
     // 商家列表页
-    'decoration-company-index' =>  [
+    'merchant-index' =>  [
         'title' => '{{CITYNAME}}装修公司哪家最好_{{CITYNAME}}装修公司十大排名_{{CITYNAME}}装修网站大全-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{CITYNAME}}装修公司哪家好,{{CITYNAME}}装修网站,{{CITYNAME}}装修公司排名,{{CITYNAME}}装修公司十大排名,{{CITYNAME}}装修网站大全,{{CITYNAME}}装修公司大全',
         'description' => '【{{SITENAME}}】{{CITYNAME}}装修网罗列出{{CITYNAME}}装修公司网站大全,帮业主快速了解{{CITYNAME}}装修公司哪家好？{{CITYNAME}}装修公司十大排名,从而解决您的装修问题。',
     ],
     // 商家首页
-    'decoration-company-showindex' => [
+    'merchant-showindex' => [
         'title' => '{{CITYNAME}}{{INFONAME}}_{{INFONAME}}装修公司-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{CITYNAME}}{{INFONAME}}，{{INFONAME}}装修公司',
         'description' => '{{CITYNAME}}{{INFONAME}}装修公司：主要为本地家装业主提供装修、装潢、装饰等一系列装修业务服务。同时{{INFONAME}}还提供免费预约上门量房与设计报价方案活动，欢迎广大装修业主前来预约。',
     ],
-    'decoration-company-realcase' => [
+    'merchant-realcase' => [
         'title' => '{{INFONAME}}装修案例_{{INFONAME}}装修实景图-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{INFONAME}}装修案例，{{INFONAME}}装修实景图',
         'description' => '{{INFONAME}}装修案例大全：为广大装修业主分享更多{{INFONAME}}装修案例与{{INFONAME}}装修实景图，想您找到属于您自己喜欢的装修案例实景图作品。',
     ],
-    'decoration-company-working' => [
+    'merchant-working' => [
         'title' => '{{INFONAME}}装修工地_{{INFONAME}}装修现场-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{INFONAME}}装修工地，{{INFONAME}}装修现场',
         'description' => '{{INFONAME}}装修进行时，让现装修的业主时刻了解{{INFONAME}}装修工地状况和{{INFONAME}}装修现场的进度。',
     ],
-    'decoration-company-comment' => [
+    'merchant-comment' => [
         'title' => '{{INFONAME}}装修怎么样？_{{INFONAME}}装修口碑、评价、好不好？-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{INFONAME}}装修怎么样？，{{INFONAME}}装修口碑，{{INFONAME}}装修评价，{{INFONAME}}装修好不好？',
         'description' => '【{{SITENAME}}】：为{{INFONAME}}装修的客户，汇集了互联网上{{INFONAME}}怎么样？{{INFONAME}}口碑、评价、好不好，等相关信息，欢迎大家查看点评。',
     ],
-    'decoration-company-info' => [
+    'merchant-info' => [
         'title' => '{{INFONAME}}官网介绍_{{INFONAME}}地址、电话-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{INFONAME}}官网，{{INFONAME}}介绍，{{INFONAME}}地址，{{INFONAME}}电话',
         'description' => '找{{INFONAME}}就上【{{SITENAME}}】。这里汇集{{INFONAME}}网站介绍，{{INFONAME}}地址，{{INFONAME}}电话等{{INFONAME}}装修公司系列相关信息。',
     ],
-    'decoration-company-designer' => [
+    'merchant-designer' => [
         'title' => '{{INFONAME}}室内设计师_{{INFONAME}}装修设计师-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{INFONAME}}室内设计师，{{INFONAME}}装修设计师',
         'description' => '找装修设计师，就上【{{SITENAME}}】，这里汇集了{{INFONAME}}装修公司最优秀的室内设计师和装修业内最知名的装修设计师。',
     ],
-    'decoration-company-show-working' => [
+    'merchant-show-working' => [
         'title' => "{{INFONAME}}装修公司施工直播案例-【{{CITYNAME}}{{SITENAME}}】",
         'keyword' => "{{INFONAME}}装修公司，{{INFONAME}}装修案例，{{INFONAME}}装修施工",
 		'description' => "【{{CITYNAME}}{{SITENAME}}】为您提供{{MERCHANTNAME}}装修施工现状图片与{{INFONAME}}装修案例和{{INFONAME}}装修户型图，为有装修需求的业主提供户型设计图与装修设计案例等装修施工报价参考。",

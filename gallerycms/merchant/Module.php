@@ -11,6 +11,6 @@ class Module extends ModuleBase
     {
         parent::init();
 
-        Yii::$app->params['currentCompany'] = [];//$this->getCurrentCompany();
+        Yii::$app->params['currentCompany'] = $this->getCurrentCompany();
     }
 }

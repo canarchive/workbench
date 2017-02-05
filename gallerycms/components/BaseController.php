@@ -2,6 +2,9 @@
 namespace gallerycms\components;
 
 use Yii;
+use yii\helpers\Url;
+use yii\web\ForbiddenHttpException;
+use gallerycms\merchant\models\Merchant;
 
 class BaseController extends Controller
 {
@@ -29,13 +32,41 @@ class BaseController extends Controller
 		$this->mobileMappingUrl = '/';
     }
 
-    public function _initAsset()
+    protected function _initMerchant($page = 'index')
     {
-        $a1 = require Yii::getAlias('@app') . '/config/house/asset-jmw.php';
-        $a2 = require Yii::getAlias('@app') . '/config/house/asset-quote.php';
-        $a3 = require Yii::getAlias('@app') . '/config/house/asset-to8to.php';
-        Yii::$app->params['cssFiles'] = array_merge($a1['cssFiles'], $a2['cssFiles'], $a3['cssFiles']);
-        Yii::$app->params['jsFiles'] = array_merge($a1['jsFiles'], $a2['jsFiles'], $a3['jsFiles']);
-        return ;
+        $code = Yii::$app->request->get('mcode');
+        if (empty($code)) {
+            throw new ForbiddenHttpException('信息有误');
+        }
+        $datas = $this->_merchantDatas($code, $page);
+        if (empty($datas)) {
+            throw new ForbiddenHttpException('信息不存在');
+        }
+        if ($page != 'merchant-index') {
+            $this->layout = '@gallerycms/views/layouts/main-plat';
+        }
+
+        return $datas;
     }
+
+    protected function _merchantDatas($code, $page)
+    {
+        $model = new Merchant();
+		$info = $model->getInfo(['code' => $code]);
+		if (empty($info)) {
+			return false;
+		}
+
+        $datas = [
+            'info' => $info,
+            'realcaseInfos' => $info->getRealcaseInfos(),
+            'workingInfos' => $info->getWorkingInfos(),
+            'designerInfos' => $info->getDesignerInfos(),
+            'commentInfos' => $info->getCommentInfos(),
+			'ownerInfos' => $info->getOwnerInfos(),
+        ];
+		//print_r($datas);exit();
+
+		return $datas;
+	}
 }
