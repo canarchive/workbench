@@ -4,6 +4,8 @@ namespace common\models;
 
 class GallerycmsModel extends BaseModel
 {
+    use HouseParamsTrait;
+
     public static function getDb()
     {
         return \Yii::$app->dbGallerycms;

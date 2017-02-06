@@ -96,6 +96,52 @@ trait HouseParamsTrait
         return $datas;
     }
 
+	public function getRenovationBudgetInfos()
+	{
+		$datas = [
+			'one' => '3万以下',
+			'two' => '3-5万',
+			'three' => '5-8万',
+			'four' => '8-12万',
+			'five' => '12-18万',
+			'six' => '18-30万',
+			'seven' => '30-100万',
+			'eight' => '100万以上',
+		];
+
+		return $datas;
+	}	
+
+    public function getDecorationSortInfos()
+    {
+        $datas = [
+            'common' => '普通住宅',
+            'solo' => '小户型',
+            'villa' => '别墅',
+            'part' => '局部装修',
+            'ktv' => 'ktv',
+            'store' => '商铺',
+            'dining' => '餐厅/酒楼',
+            'beauty' => '美容/美发',
+            'recreation' => '娱乐场所',
+            'hotel' => '酒店',
+            'showroom' => '展厅',
+            'office' => '办公室',
+            'workshop' => '厂房',
+            'school' => '学校',
+            'hospital' => '医院',
+            'specailty' => '专卖店',
+            'bar' => '酒吧',
+            'super' => '超市/商场',
+            'other' => '其他',
+            'plat' => '平层',
+            'loft' => '阁楼',
+            'selfbuild' => '自建房',
+            'double' => '复式',
+        ];
+        return $datas;
+    }
+
 	public function getMerchantInfo()
 	{
 		if (empty($this->merchant_id)) {

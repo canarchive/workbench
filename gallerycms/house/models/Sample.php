@@ -96,15 +96,18 @@ class Sample extends GallerycmsModel
 			return $info;
 		}
 
-		$info = $this->_formatInfo($info);
+		$info = $this->_formatInfo($info, false);
 
         //\Yii::$app->cacheRedis->set($key, $info);
 		return $info;
 	}
 
-	protected function _formatInfo($info)
+	protected function _formatInfo($info, $noPic = true)
 	{
 		$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+        if ($noPic) {
+            return $info;
+        }
 
         $condition = [ 
             'info_table' => 'house_sample',
@@ -219,4 +222,9 @@ class Sample extends GallerycmsModel
 		}
 		return trim($tagStr, '-');
 	}
+
+    protected function _getSelect()
+    {
+        return 'id,name,thumb,created_at,status';
+    }
 }

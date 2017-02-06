@@ -39,11 +39,6 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/platj/pc/_pic-js', [])
             <a title="珠宝加盟" href="http://search.jmw.com.cn/i21/">珠宝</a>
             <a title="饰品加盟" href="http://search.jmw.com.cn/i7/">饰品</a></div>
     </div>
-    <!--<div class="fr top_ind_rt">
-    <span>现有加盟项目：<em><script type="text/javascript" 
-    src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/xmcount.js"></script></em> 个</span>
-    <i>|</i>
-    <span>在线投资人数：<em><script type="text/javascript" src="http://la.jmw.com.cn/c.asp"></script></em> 人</span></div>-->
     <div class="fr top_ind_rt">
         <span>现有加盟项目：
             <em>86554</em>个</span>
@@ -52,10 +47,10 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/platj/pc/_pic-js', [])
             <em>3417</em>人</span></div>
 </div>
 <!--channel begin-->
-<?= $this->render('@gallerycms/views/platj/pc/_pic-sort'); ?>
+<?php echo $this->render('_filter', ['houseSortInfos' => $houseSortInfos, 'tagInfos' => $tagInfos, 'model' => $model]); ?>
 <!--content begin searcy_type showType -->
 <div class="sel_box clearfix wrapper">
-    <?php echo $this->render('@gallerycms/views/platj/pc/_pic-left'); ?>
+    <?php echo $this->render('_content', ['infos' => $infos, 'pages' => $pages]); ?>
     <?php echo $this->render('@gallerycms/views/platj/pc/_pic-right'); ?>
 </div>
 <?php echo $this->render('@gallerycms/views/platj/pc/_pic-bottom-js'); ?>
