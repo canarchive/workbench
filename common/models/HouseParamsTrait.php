@@ -96,7 +96,7 @@ trait HouseParamsTrait
         return $datas;
     }
 
-	public function getRenovationBudgetInfos()
+	public function getBudgetInfos()
 	{
 		$datas = [
 			'one' => '3万以下',

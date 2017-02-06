@@ -5,45 +5,55 @@ namespace gallerycms\house\controllers;
 use Yii;
 use yii\web\NotFoundHttpException;
 use gallerycms\components\HouseController;
-use gallerycms\house\models\Realcase;
+use gallerycms\merchant\models\Realcase;
 
 class RealcaseController extends HouseController
 {
 	public function actionIndex()
 	{
-		/*$tag = Yii::$app->request->get('tag', '');
-		$model = new Realcase();
-		$houseSortInfos = $model->houseSortInfos;
-		$tagInfos = $model->formatTag($tag, $houseSortInfos);
-		if ($tagInfos === false) {
-            throw new NotFoundHttpException('页面不存在');
-		}
+        $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $datas = $this->_getInfos($where);
 
-		$page = Yii::$app->request->get('page');
-		$infos = $model->getInfos([]);
-		$datas = [
-			'tag' => $tag,
-			'page' => $page,
-			'infos' => $infos,
-			'tagInfos' => $tagInfos,
-			'houseSortInfos' => $houseSortInfos,
-			'model' => $model,
-		];
-		$tagStr = '';
-		foreach ($tagInfos as $tagKey => $tagValue) {
-			if (empty($tagValue)) {
-				continue;
-			}
-			$tagStr .= $houseSortInfos[$tagKey]['values'][$tagValue];
-		}
-		//$tagStr = rtrim($tagStr, '-');
-        $pageStr = $page > 1 ? "_第{$page}页-" : '-';*/
-        $datas = [];
+        $pageStr = $datas['page'] > 1 ? "_第{$datas['page']}页-" : '-';
 
-		$dataTdk = [];//['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('working-index', $dataTdk);
+		$dataTdk = ['{{PAGESTR}}' => $pageStr];
+		$this->getTdkInfos('realcase-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
+
+    public function actionMerchant()
+    {
+        $datas = $this->_initMerchant('merchant-show');
+        print_r($datas);exit();
+        $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $infos = $this->_getInfos($where);
+
+        $datas['realcaseInfos'] = $infos;
+
+        $pageStr = $info['page'] > 1 ? "_第{$infos['page']}页-" : '-';
+
+		$dataTdk = ['{{PAGESTR}}' => $pageStr];
+		$this->getTdkInfos('realcase-index', $dataTdk);
+		return $this->render('merchant', $datas);
+    }
+
+    protected function _getInfos($where)
+    {
+		$model = new Realcase();
+
+		$page = Yii::$app->request->get('page');
+        $orderBy = ['created_at' => SORT_DESC];
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 18]);
+		$datas = [
+			'page' => $page,
+			'infos' => $infos['infos'],
+            'pages' => $infos['pages'],
+			'model' => $model,
+		];
+
+        return $datas;
+    }
 
 	public function actionShow()
 	{

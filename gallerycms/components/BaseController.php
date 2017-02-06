@@ -11,6 +11,7 @@ class BaseController extends Controller
     public $mHosts;
     public $clientType;
     public $layout = '@gallerycms/views/main-pc';
+    public $currentCityCode;
 
     public function init()
     {
@@ -30,6 +31,7 @@ class BaseController extends Controller
 
 		$this->pcMappingUrl = '/';
 		$this->mobileMappingUrl = '/';
+        $this->currentCityCode = Yii::$app->params['currentCompany']['code'];
     }
 
     protected function _initMerchant($page = 'index')
