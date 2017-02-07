@@ -40,21 +40,21 @@ return [
 		'pc-url' => '/beijing/working-1.html',
 		'mobile-url' => '/beijing/working-1.html',
     ],
-    'designer-list' => [
+    /*'designer-list' => [
 		'name' => '设计师列表',
 		'pc-url' => '/beijing/designer/',
 		'mobile-url' => '/beijing/designer/',
-    ],
+    ],*/
     'merchant-designer' => [
 		'name' => '商家设计师',
 		'pc-url' => '/beijing/jz/designer/',
 		'mobile-url' => '/beijing/jz/designer/',
     ],
-    'comment-list' => [
+    /*'comment-list' => [
 		'name' => '点评列表',
 		'pc-url' => '/beijing/comment/',
 		'mobile-url' => '/beijing/comment/',
-    ],
+    ],*/
     'merchant-comment' => [
 		'name' => '商家点评',
 		'pc-url' => '/beijing/jz/comment/',

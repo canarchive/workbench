@@ -19,7 +19,7 @@ use gallerycms\components\LinkPager;
     <div id="gallery" class="vadio">
         <div class="tab_ul_imgs">
             <ul class="clearfix">
-                <?php $i = 0; foreach ($realcaseInfos['infos'] as $info) { ?>
+                <?php $i = 0; foreach ($designerInfos['infos'] as $info) { ?>
                 <li <?php if ($i % 4 == 3) { echo ' class="current9"'; } ?>>
                     <a href="<?= $info['id']; ?>">
                         <img src="<?= $info['thumb']; ?>" width="170" height="128" alt="<?= $info['name']; ?>" title="<?= $info['name']; ?>" /></a>
@@ -28,7 +28,7 @@ use gallerycms\components\LinkPager;
                 <?php $i++; } ?>
             </ul>
             <div class="black2">
-            <?= LinkPager::widget(['pagination' => $realcaseInfos['pages'], 'activePageCssClass' => 'current']); ?>
+            <?= LinkPager::widget(['pagination' => $designerInfos['pages'], 'activePageCssClass' => 'current']); ?>
             </div>
             <script>function show_all_img(id, album_id, imgSrc) {
                     $("#box").show();

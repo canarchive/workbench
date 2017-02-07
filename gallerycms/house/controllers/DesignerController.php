@@ -5,81 +5,52 @@ namespace gallerycms\house\controllers;
 use Yii;
 use yii\web\NotFoundHttpException;
 use gallerycms\components\HouseController;
-use gallerycms\house\models\Designer;
+use gallerycms\merchant\models\Designer;
 
 class DesignerController extends HouseController
 {
 	public function actionIndex()
 	{
-		return $this->_list();
-	}
+        $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $datas = $this->_getInfos($where);
 
-	protected function _list()
-	{
-        $this->layout = '@gallerycms/views/layouts/main-plat';
-		/*$tag = Yii::$app->request->get('tag', '');
-		$model = new Designer();
-		$houseSortInfos = $model->houseSortInfos;
-		$tagInfos = $model->formatTag($tag, $houseSortInfos);
-		if ($tagInfos === false) {
-            throw new NotFoundHttpException('页面不存在');
-		}
+        $pageStr = $datas['page'] > 1 ? "_第{$datas['page']}页-" : '-';
 
-		$page = Yii::$app->request->get('page');
-		$infos = $model->getInfos([]);
-		$datas = [
-			'tag' => $tag,
-			'page' => $page,
-			'infos' => $infos,
-			'tagInfos' => $tagInfos,
-			'houseSortInfos' => $houseSortInfos,
-			'model' => $model,
-		];
-		$tagStr = '';
-		foreach ($tagInfos as $tagKey => $tagValue) {
-			if (empty($tagValue)) {
-				continue;
-			}
-			$tagStr .= $houseSortInfos[$tagKey]['values'][$tagValue];
-		}
-		//$tagStr = rtrim($tagStr, '-');
-        $pageStr = $page > 1 ? "_第{$page}页-" : '-';*/
-        $datas = [];
-
-		$dataTdk = [];//['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('working-index', $dataTdk);
+		$dataTdk = ['{{PAGESTR}}' => $pageStr];
+		$this->getTdkInfos('designer-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
 
-	public function actionShow()
-	{
-        $id = \Yii::$app->getRequest()->get('id');
-        /*$model = new Designer();
-		$info = $model->getInfo($id);
-		if (empty($info)) {
-            return $this->redirect('/')->send();
-		}
-		$houseSortInfos = $model->houseSortInfos;
-		$tagStr = '';
-		foreach ($houseSortInfos as $tagKey => $tagValue) {
-			if (empty($info[$tagKey])) {
-				continue;
-			}
-			$tagKeyInfo = $info[$tagKey];
-			if ($tagKey == 'area') {
-				$tagKeyInfo = ceil($tagKeyInfo / 10) * 10;
-				$tagKeyInfo = $tagKeyInfo > 130 ? 130 : $tagKeyInfo;
-			}
-			$str = $tagValue['values'][$tagKeyInfo];
-			$tagStr .= $str;
-			$info[$tagKey] = $str;
-		}
+    public function actionMerchant()
+    {
+        $datas = $this->_initMerchant('merchant-show');
+        $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $infos = $this->_getInfos($where);
 
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-        $this->getTdkInfos('sample-show', $dataTdk);*/
+        $datas['designerInfos'] = $infos;
+
+        $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
+
+		$dataTdk = ['{{PAGESTR}}' => $pageStr];
+		$this->getTdkInfos('designer-index', $dataTdk);
+		return $this->render('merchant', $datas);
+    }
+
+    protected function _getInfos($where)
+    {
+		$model = new Designer();
+
+		$page = Yii::$app->request->get('page');
+        $orderBy = ['created_at' => SORT_DESC];
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 1]);
 		$datas = [
-			'info' => [],//$info,
+			'page' => $page,
+			'infos' => $infos['infos'],
+            'pages' => $infos['pages'],
+			'model' => $model,
 		];
-		return $this->render('show', $datas);
-	}
+
+        return $datas;
+    }
 }

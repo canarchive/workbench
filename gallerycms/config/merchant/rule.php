@@ -47,7 +47,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'data' => [
             'suffix' => '/',
     		'pattern' => '/<city_code:\w+>/<mcode:\w+>/designer/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
-    		'route'	=> '/house/designer/index',
+    		'route'	=> '/house/designer/merchant',
     		'defaults' => ['page' => 1, 'tag' => ''],
         ],
     ],
@@ -56,7 +56,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'data' => [
             'suffix' => '/',
     		'pattern' => '/<city_code:\w+>/<mcode:\w+>/comment/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
-    		'route'	=> '/house/comment/index',
+    		'route'	=> '/house/comment/merchant',
     		'defaults' => ['page' => 1, 'tag' => ''],
         ],
     ],

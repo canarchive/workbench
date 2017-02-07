@@ -25,13 +25,12 @@ class RealcaseController extends HouseController
     public function actionMerchant()
     {
         $datas = $this->_initMerchant('merchant-show');
-        print_r($datas);exit();
         $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
         $infos = $this->_getInfos($where);
 
         $datas['realcaseInfos'] = $infos;
 
-        $pageStr = $info['page'] > 1 ? "_第{$infos['page']}页-" : '-';
+        $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('realcase-index', $dataTdk);
@@ -44,7 +43,7 @@ class RealcaseController extends HouseController
 
 		$page = Yii::$app->request->get('page');
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 18]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 1]);
 		$datas = [
 			'page' => $page,
 			'infos' => $infos['infos'],
