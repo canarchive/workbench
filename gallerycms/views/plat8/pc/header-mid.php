@@ -4,7 +4,6 @@
             <span class="hcc_logo">
                 <a href="/" class="logo" id="logourl"><?= Yii::$app->params['siteNameBase']; ?>装修网</a>
             </span>
-            <?php if (!$noForm) { ?>
             <form id="searchform" action="http://www.to8to.com/company/" method="get">
                 <div class="header_search">
                     <div class="header_select">
@@ -21,7 +20,6 @@
                     <input type="submit" class="header_search_submit" value="搜 索">
                 </div>
             </form>
-            <?php } ?>
             <!-- banner区域[[ -->
             <div class="index_banner_s">
                 <a class="bLeft" href="javascript:void(0);">

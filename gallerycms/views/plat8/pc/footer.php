@@ -76,6 +76,7 @@
                         <a hidefocus="" href="/statement.html" target="_blank" rel="nofollow">法律声明</a></li>
                 </ul>
             </div>
+            <div class="fbc_copyright">免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。</div>
             <div class="fbc_copyright"><?= Yii::$app->params['siteCopyRightInfo']; ?></div>
             <div class="fbc_icp">中国装修网
                 <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow"><?= Yii::$app->params['siteIcpInfo']; ?></a></div>

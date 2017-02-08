@@ -2,9 +2,6 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$cssFiles = ['768a5-2994', '2a61f-3180', '89183-8983'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
-$this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
 $this->params['bodyClass'] = 'class="narrow_1220"';
 ?>
 <div class="ask_index">

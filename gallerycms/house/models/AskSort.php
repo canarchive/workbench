@@ -23,7 +23,7 @@ class AskSort extends GallerycmsModel
     {
         return [
             [['name', 'code'], 'required'],
-            ['code', 'unique', 'targetClass' => '\gallerycms\hosue\models\AskSort', 'message' => '代码已经被使用。'],
+            //['code', 'unique', 'targetClass' => '\gallerycms\house\models\AskSort', 'message' => '代码已经被使用。'],
             [['parent_code'], 'filterParent'],
             [['orderlist'], 'default', 'value' => 0],
             [['parent_code'], 'default', 'value' => ''],

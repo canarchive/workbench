@@ -5,9 +5,9 @@ $this->params['bodyClass'] = 'class="narrow_980"';
 ?>
 <?php $this->beginContent('@gallerycms/views/main-pc.php'); ?>
 <div class="header">
-    <?= $this->render('@gallerycms' . '/views/plat8/pc/header-top'); ?>
-    <?= $this->render('@gallerycms' . '/views/plat8/pc/header-mid'); ?>
-    <?= $this->render('@gallerycms' . '/views/plat8/pc/header-nav'); ?>
+    <?= $this->render('@gallerycms/views/plat8/pc/header-top'); ?>
+    <?= $this->render('@gallerycms/views/plat8/pc/header-mid', ['noForm' => false]); ?>
+    <?= $this->render('@gallerycms/views/plat8/pc/header-nav'); ?>
 </div>
 <!--<a href="" target="_blank" class="about_nav_bg"></a>-->
 <!--<span class="slider_container"></span>-->

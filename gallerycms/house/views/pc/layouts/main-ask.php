@@ -1,13 +1,16 @@
 <?php
 use yii\helpers\Url;
 
+$cssFiles = ['768a5-2994', '2a61f-3180', '89183-8983'];
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
+$this->params['jsStr'] = $this->render('../ask/_js-header');
 ?>
 <?php $this->beginContent('@gallerycms/views/main-pc.php'); ?>
 <div class="global_wrap clear" id="gloWrap">
     <div class="header">
-    <?= $this->render('@gallerycms' . '/views/plat8/pc/header-top'); ?>
-    <?= $this->render('@gallerycms' . '/views/plat8/pc/header-mid', ['noForm' => true]); ?>
-    <?= $this->render('@gallerycms' . '/views/plat8/pc/header-nav', ['showRightNav' => true]); ?>
+    <?= $this->render('@gallerycms/views/plat8/pc/header-top'); ?>
+    <?= $this->render('@gallerycms/views/plat8/pc/header-mid', ['noForm' => true]); ?>
+    <?= $this->render('@gallerycms/views/plat8/pc/header-nav', ['showRightNav' => true]); ?>
     </div>
     <?= $content; ?>
     <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/ask.js"></script>
@@ -55,7 +58,7 @@ use yii\helpers\Url;
                     }
                 }
             })
-        }) jq('.seca_bdl').on('click',
+        }); jq('.seca_bdl').on('click',
         function() {
             clickStream.getCvParams('1_3_4_6');
         });
@@ -94,7 +97,7 @@ use yii\helpers\Url;
                     jq('#autourl').attr('href', autourl);
                 }
             }
-        }) try {
+        }); try {
             weChatQrcode.init();
         } catch(e) {
 

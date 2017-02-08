@@ -3,9 +3,10 @@
 namespace gallerycms\controllers;
 
 use Yii;
+use Overtrue\Pinyin\Pinyin; 
 use gallerycms\components\Controller as GallerycmsController;
-use gallerycms\cmsad\models\Article;
 use gallerycms\house\models\AskQuestion;
+use gallerycms\house\models\AskSort;
 
 class TmpController extends GallerycmsController
 {
@@ -18,9 +19,91 @@ class TmpController extends GallerycmsController
     protected function updateSort()
     {   
         $model = new AskQuestion();
-        //$sortInfos = $model->db->createCommand('SELECT `sort_parent`, `sort`, COUNT(*) AS `count` FROM `wc_ask_question` GROUP BY `sort_parent`, `sort`')->queryAll();
+        $sortInfos = $model->db->createCommand('SELECT `sort_parent`, `sort`, COUNT(*) AS `count` FROM `wc_ask_question` GROUP BY `sort_parent`, `sort`')->queryAll();
+        $datas = [];
+        foreach ($sortInfos as $sInfo) {
+            $datas[$sInfo['sort_parent']][] = $sInfo['sort'];
+        }
+        var_export($datas);exit();
+    }
 
+    protected function writeSort()
+    {
         $datas = require(Yii::getAlias('@gallerycms/runtime/sort-ext.php'));
+        unset($datas['其他']);
+        $model = new AskSort();
+        foreach ($datas as $sortParent => $data) {
+            $pCode = Pinyin::letter($sortParent, ['delimiter' => '', 'accent' => false]); 
+            $pInfos = [
+                'code' => $pCode,
+                'name' => $sortParent,
+                'status' => 1,
+                'parent_code' => '',
+            ];
+            //print_r($pInfos);
+            $newParent = new AskSort($pInfos);
+            $newParent->insert();
+            foreach ($data as $sort) {
+                $code = Pinyin::letter($sort, ['delimiter' => '', 'accent' => false]); 
+                $code = empty($code) ? strtolower($sort) : $code;
+                $infos = [
+                    'code' => $code,
+                    'name' => $sort,
+                    'status' => 1,
+                    'parent_code' => $pCode,
+                ];
+                //print_r($infos);
+                $info = new AskSort($infos);
+                $info->insert();
+            }
+        }
+    }
+
+    protected function dealSort()
+    {
+        $datas = require(Yii::getAlias('@gallerycms/runtime/sort-ext.php'));
+        unset($datas['其他']);
+        $model = new AskQuestion();
+        $infos = $model->db->createCommand('SELECT `id`, `name` FROM `wc_ask_question` WHERE `sort_parent` = "其他" AND `status` = 0 LIMIT 10000')->queryAll();
+        foreach ($infos as $info) {
+            $update = false;
+            $sql = '';
+            foreach ($datas as $sortParent => $data) {
+                foreach ($data as $sort) {
+                    $pos = strpos($info['name'], $sort);
+                    if (empty($pos) && strpos($sort, '/') !== false) {
+                        $subSort = explode('/', $sort);
+                        $pos = strpos($info['name'], $subSort[0]);
+                        $pos = empty($pos) ? strpos($info['name'], $subSort[1]) : $pos;
+                    }
+                    if ($pos !== false) {
+                        $update = true;
+                        $sql = "UPDATE `wc_ask_question` SET `sort_parent` = '{$sortParent}', `sort` = '{$sort}' WHERE `id` = {$info['id']}";
+                //echo 'yes-' . $sql . '<br />';
+                    }
+                }
+                if (!$update) {
+                    $pos = strpos($info['name'], substr($sortParent, 0, 6));
+                    if ($pos !== false) {
+                        $sql = "UPDATE `wc_ask_question` SET `sort_parent` = '{$sortParent}', `sort` = '其他' WHERE `id` = {$info['id']}";
+                        //echo 'pppp-' . $sql;
+                    }
+
+                }
+            }
+            if (!$update) {
+                $sql = "UPDATE `wc_ask_question` SET `status` = 99 WHERE `id` = {$info['id']}";
+                //echo 'no-' . $info['name'] . $sql . '<br />';
+            }
+            if (!empty($sql)) {
+                $model->db->createCommand($sql)->execute();
+            }
+        }
+
+        exit();
+        //echo $sql;exit();
+        print_r($infos);exit();
+
         $others = $datas['其他'];
         unset($datas['其他']);
         $sql = '';

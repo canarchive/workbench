@@ -33,6 +33,14 @@ return \gallerycms\components\RuleFormat::formatRule([
     		'route'	=> '/house/sample/show',
         ],
     ],
+    'ask-tag' => [
+        'hosts' => ['base'],//, 'm', '3g', 'wap'],
+        'data' => [
+            'pattern' => '/ask/tag', 
+            'route' => '/house/ask/tag', 
+            'suffix' => '.html'
+        ],
+    ],
     'ask-index' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
@@ -45,9 +53,18 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/ask/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/ask/lm-<sort:[a-z]+><page:_[0-9]+>',
     		'route'	=> '/house/ask/list',
-    		'defaults' => ['page' => 1],
+    		'defaults' => ['page' => '_1'],
+        ],
+    ],
+    'ask-taglist' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '/',
+    		'pattern' => '/ask/<tag:\d+>_<page:[0-9]+>',
+    		'route'	=> '/house/ask/taglist',
+    		'defaults' => ['page' => '_1'],
         ],
     ],
     'ask-show' => [
