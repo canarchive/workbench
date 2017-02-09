@@ -2,16 +2,16 @@
     <div class="mui-slider-group mui-slider-loop">
         <!--支持循环，需要重复图片节点-->
                     <div class="mui-slider-item mui-slider-item-duplicate"><img id="img_url" src="" /></div>
-                                <div class="mui-slider-item"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" /></div>
-                                            <div class="mui-slider-item"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg" /></div>
-                                            <div class="mui-slider-item"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg" /></div>
-                                            <div class="mui-slider-item"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg" /></div>
-                                            <div class="mui-slider-item"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg" /></div>
+                                <div class="mui-slider-item"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg" /></div>
+                                            <div class="mui-slider-item"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4634b-4708.jpg" /></div>
+                                            <div class="mui-slider-item"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/004c6-4388.jpg" /></div>
+                                            <div class="mui-slider-item"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/29be4-6543.jpg" /></div>
+                                            <div class="mui-slider-item"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d0559-9249.jpg" /></div>
                     <script>
-                    var img_url = "http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg";
+                    var img_url = "<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d0559-9249.jpg";
                     $('#img_url').attr('src',img_url);
                     </script>
-                                    <div class="mui-slider-item mui-slider-item-duplicate"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" /></div>
+                                    <div class="mui-slider-item mui-slider-item-duplicate"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg" /></div>
          
         <!--支持循环，需要重复图片节点-->
     </div>

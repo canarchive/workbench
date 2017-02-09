@@ -31,7 +31,7 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
                         <p>
                             <i class="mail_ico"></i>邮箱：ad@corp.to8to.com</p>
                         <i class="hot_line_circle">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5a70a-2667.png" /></i>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5a70a-2667.png" /></i>
                     </div>
                     <div class="hot_line_left" style="margin-top:10px;">
                         <p>如果您是媒体，想沟通采访及报道事宜。请联系：</p>

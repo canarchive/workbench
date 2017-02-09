@@ -1,7 +1,7 @@
 <div class="logo wrapper clearfix">
     <div class="logo_left fl clearfix">
         <a target="_blank" title="中国加盟网" href="http://www.jmw.com.cn/">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6d314-1942.jpg" alt="" width="160" height="41" /></a>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6d314-1942.jpg" alt="" width="160" height="41" /></a>
         <div class="logo-title">
             <h1>门窗加盟项目</h1>
             <span>门窗品牌加盟</span></div>

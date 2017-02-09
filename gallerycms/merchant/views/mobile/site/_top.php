@@ -1,6 +1,6 @@
 <div class="top-header">
     <a class="close fl" onclick="$('.top-header').hide();"></a>
-    <img class="top-log fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6f271-8932.png">
+    <img class="top-log fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6f271-8932.png">
     <ul class="top-wenzi fl">
         <li style="font-size: 0.75em;color:#333;line-height: 1.2rem;">下载中国加盟网APP</li>
         <li style="font-size: 0.625em;color:#c7c7c7;">随时随地轻松找项目</li>
@@ -28,7 +28,7 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 <!--<标项页头部定位 stop-->
 <style>
 .top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;}
-.top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;}
+.top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;}
 .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;}
 .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}
 </style>
@@ -41,8 +41,8 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
             <!--<a href="javascript:;" id="fenxiang" class="icon icon3"></a>-->
             <html>
 <head>
-<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/95055-5881.css" />
-<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/35df6-9609.css" />
+<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/95055-5881.css" />
+<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/35df6-9609.css" />
 </head>
 <body>
     <!-- JiaThis Button BEGIN -->
@@ -64,7 +64,7 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
                 "bdSize" : 32       //分享按钮的尺寸  16｜24｜32
             }]
         }
-        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/share.js'+~(-new Date()/36e5)];
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/share.js'+~(-new Date()/36e5)];
     </script>
 </body>
 </html>

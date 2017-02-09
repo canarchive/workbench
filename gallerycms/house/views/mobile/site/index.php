@@ -8,24 +8,24 @@
         <meta name="keywords" content="加盟,连锁,创业,招商,代理，投资项目,创业项目,加盟店，加盟品牌，中国加盟网手机，手机加盟网" />
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/cd7cd-5015.css" />
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/mui.js"></script>
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/556dc-3586.css" />
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/92ee4-2657.css" />
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css" />
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/df376-8815.css" />
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/tongji.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/tongji_m.js"></script>
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/cd7cd-5015.css" />
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/mui.js"></script>
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/556dc-3586.css" />
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/92ee4-2657.css" />
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css" />
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/df376-8815.css" />
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/tongji.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/tongji_m.js"></script>
         <script>var is_login = 'unlogin';</script>
-        <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/0d0c2-9033.css" /></head>
+        <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/0d0c2-9033.css" /></head>
     
     <body>
         <!--<标项页头部定位 stop-->
-        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
+        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
         <div class="top-header">
             <a class="close fl" onclick="$('.top-header').hide();"></a>
-            <img class="top-log fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6f271-8932.png">
+            <img class="top-log fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6f271-8932.png">
             <ul class="top-wenzi fl">
                 <li style="font-size: 0.75em;color:#333;line-height: 1.2rem;">下载中国加盟网APP</li>
                 <li style="font-size: 0.625em;color:#c7c7c7;">随时随地轻松找项目</li></ul>
@@ -53,23 +53,23 @@
                         <img id="img_url" src="" /></div>
                 <div class="mui-slider-item">
                     <a href="http://m.jmw.com.cn/xm6624270/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/792b1-2553.jpg" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/792b1-2553.jpg" /></a>
                 </div>
                 <div class="mui-slider-item">
                     <a href="http://m.jmw.com.cn/xm210499/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/eae66-2830.jpg" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/eae66-2830.jpg" /></a>
                 </div>
                 <div class="mui-slider-item">
                     <a href="http://m.jmw.com.cn/xm6597666/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e192f-6849.jpg" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e192f-6849.jpg" /></a>
                 </div>
                 <script>var link_url = "http://m.jmw.com.cn/xm6597666/";
-                    var img_url = "http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e192f-6849.jpg";
+                    var img_url = "<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e192f-6849.jpg";
                     $('#img_url').attr('src', img_url);
                     $('#link_url').attr('href', link_url);</script>
                 <div class="mui-slider-item mui-slider-item-duplicate">
                     <a href="http://m.jmw.com.cn/xm6624270/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/792b1-2553.jpg" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/792b1-2553.jpg" /></a>
                 </div>
                 <!--支持循环，需要重复图片节点--></div>
             <div class="mui-slider-indicator">
@@ -115,7 +115,7 @@
         <!--文字滚动-->
         <div id="MoveTex">
             <span>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/892ab-4068.png"></span>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/892ab-4068.png"></span>
             <div class="main">
                 <div class="text">
                     <div id="newP">
@@ -185,7 +185,7 @@
                     </a>
                 </div>
                 <div onclick="$('.show_content1').hide()&&$('.chooseNav3').show()&&$('.chooseNav4').show()&&$('.show_content12').show()" class="show_content1" style="display: block;color: #b0b0b0;font-size: 14px;line-height: 42px; height:42px; ">展示全部加盟
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png"></div>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png"></div>
                 <div class="flexbox chooseNav3" style="display: none;">
                     <a id="wapdsy_D02_04" href="http://m.jmw.com.cn/so/i3/" class="n4" alt="美容加盟" title="美容加盟">
                         <i>
@@ -232,9 +232,9 @@
                 </div>
                 <div class="show_content12" style="display: none;color: #b0b0b0;font-size: 14px; height: 20px; line-height:20px; padding:10px 0; overflow: hidden;">
                     <span onclick="$('.show_content1').hide()&&$('.show_content3').show()&&$('.show_content12').hide()&&$('.chooseNav5').show()&&$('.chooseNav6').show()&&$('.chooseNav7').show()" class="show_content2 fl">展示全部加盟
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png"></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png"></span>
                     <span onclick="$('.show_content1').show()&&$('.show_content3').hide()&&$('.show_content12').hide()&&$('.chooseNav3').hide()&&$('.chooseNav4').hide()" class="show_content2 fr">收起
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41a26-4399.png"></span></div>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41a26-4399.png"></span></div>
                 <div class="flexbox chooseNav5" style="display: none;">
                     <a id="wapdsy_D02_12" href="http://m.jmw.com.cn/so/i17/" class="n12" alt="环保加盟" title="环保加盟">
                         <i>
@@ -302,35 +302,35 @@
                     </a>
                 </div>
                 <div onclick="$('.show_content1').show()&&$('.show_content3').hide()&&$('.chooseNav3').hide()&&$('.chooseNav4').hide()&&$('.chooseNav5').hide()&&$('.chooseNav6').hide()&&$('.chooseNav7').hide()" class="show_content3" style="display: none;color: #b0b0b0;font-size: 14px;line-height: 42px;">收起
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41a26-4399.png"></div></div>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41a26-4399.png"></div></div>
         </section>
         <!--新加展会索取入口的LOGo-->
         <!--<a href="https://weidian.com/?userid=214234322" rel="nofollow" class="show-logo" style="width: 100%;margin-top: 2%;position: relative;display:block;">  
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/14271-6316.jpg" style="width: 100%;height: auto;"></a>-->
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/14271-6316.jpg" style="width: 100%;height: auto;"></a>-->
         <!--新加展会索取入口的LOGo-->
         <div id="helpYou">
             <ul>
                 <li onclick="_MEIQIA._SHOWPANEL()">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d475d-7810.png" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d475d-7810.png" /></li>
                 <li onclick="help_message('11','40-1','我想找招商经理咨询项目，请马上与我联系！')">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0d163-6545.png" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0d163-6545.png" /></li>
                 <li onclick="help_message('11','40-2','我想了解一下项目的优惠情况，请马上与我联系！')">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c1a22-8365.png" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c1a22-8365.png" /></li>
                 <li style="margin: 0;" onclick="_MEIQIA._SHOWPANEL()">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a818b-4154.png" /></li>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a818b-4154.png" /></li>
             </ul>
         </div>
         <!--倒计时-->
         <div id="time">
             <div class="left1">
                 <a href="https://weidian.com/?userid=214234322">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c013e-1969.png" /></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c013e-1969.png" /></a>
             </div>
             <div class="right1">
                 <a href="http://m.jmw.com.cn/xm6584312/">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c32ce-1221.png" /></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c32ce-1221.png" /></a>
                 <a href="http://m.jmw.com.cn/xm155795/">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/30cf2-2627.png" /></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/30cf2-2627.png" /></a>
             </div>
         </div>
         <!--倒计时-->
@@ -470,7 +470,7 @@
         </div>
         <style>
         .scrollUp{width: 96%;margin: 10px auto;padding: 11px 2%;background: #ffffff;overflow: hidden;}
-        .scrollUp-left{width: 48px;height: 52px;box-sizing: border-box; border-right: 1px solid #D4D4D4; background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f1c6f-6198.png") no-repeat scroll 0.03rem 0.2rem; background-size: 83% 87%;}
+        .scrollUp-left{width: 48px;height: 52px;box-sizing: border-box; border-right: 1px solid #D4D4D4; background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f1c6f-6198.png") no-repeat scroll 0.03rem 0.2rem; background-size: 83% 87%;}
         .scrollUp-right{width: 81%;height: 100%;margin-left: 2%;}
         @media screen and (max-width:320px) {.scrollUp-right{width: 79%;}}
         .scrollUp-right li{height: 20px;width: 100%;overflow: hidden;line-height: 15px;margin-bottom: 4px;}
@@ -482,16 +482,16 @@
         <!-- 加盟优惠秒杀 -->
         <!--<div class="limit_project clear"> 
         <div class="left_project fl"> 
-        <a href="http://m.jmw.com.cn/buying.php" class="a1_pro"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/56fee-9686.png" alt="" /></a>
-        <a href="http://m.jmw.com.cn/xm6649634/" class="a2_pro"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e790d-2893.png" alt="" /></a>
+        <a href="http://m.jmw.com.cn/buying.php" class="a1_pro"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/56fee-9686.png" alt="" /></a>
+        <a href="http://m.jmw.com.cn/xm6649634/" class="a2_pro"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e790d-2893.png" alt="" /></a>
         <span class="hour time"></span>
         <span class="minute time"></span>
         <span class="second time"></span></div>
         <div class="right_progect fr"> 
-        <a href="http://m.jmw.com.cn/so/" class="a3_pro"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1654b-8729.png" alt="" /></a>
+        <a href="http://m.jmw.com.cn/so/" class="a3_pro"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/1654b-8729.png" alt="" /></a>
         <div class="clear" style="margin-top:-1px;">
-        <a href="http://m.jmw.com.cn/so/" class="fl" style=" width:50%; border-right:1px solid #f2f2f2; box-sizing: border-box;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/29cd8-4788.png" alt="" /></a>
-        <a href="https://weidian.com/?userid=214234322" rel="nofollow" class="fr" style=" width:50%; border-right:1px solid #fff; box-sizing: border-box;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/02fb3-7483.jpg" alt="" /></a></div>
+        <a href="http://m.jmw.com.cn/so/" class="fl" style=" width:50%; border-right:1px solid #f2f2f2; box-sizing: border-box;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/29cd8-4788.png" alt="" /></a>
+        <a href="https://weidian.com/?userid=214234322" rel="nofollow" class="fr" style=" width:50%; border-right:1px solid #fff; box-sizing: border-box;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/02fb3-7483.jpg" alt="" /></a></div>
         </div>
         </div>
         <script>
@@ -572,7 +572,7 @@
         </div>-->
         <!--创业者 加盟商统计 stop-->
         <!-- 加盟聚焦 start-->
-        <style type="text/css">#listPage{ margin-top:6px; font-family:"Hiragino Sans GB",Helvetica,sans-serif; } #listPage img{ width:100%; height:100%; } .Ruogu_jiaM1{ padding:15px 2%; background:#fff; margin-bottom:6px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; } .Ruogu_jiaM1 .ruodetail{ width:28%; } .Ruogu_jiaM1 .ruodetail dl{ position:relative; } .Ruogu_jiaM1 .ruodetail .a_font{ position:absolute; padding:3px 6px; background:rgba(0,0,0,.3); display:block; top:0; left:0; z-index:11; color:#fff; font-size:0.75rem; } .Ruogu_jiaM1 .ruodetail dd{ font-size:0.625em; margin-top:7px; text-align:center; height:20px; line-height:26px; color:#b0b0b0; } .Ruogu_jiaM1 .ruodetail dd a{ color:#f80000; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px;} .Ruogu_jiaM1 .ruodetail2{ width:70%; } .Ruogu_jiaM1 .ul1{ width:64%; } .Ruogu_jiaM1 .phone{ width:32%; } .Ruogu_jiaM1 .ul1 li { line-height: 18px; overflow: hidden; color: #b0b0b0; font-size: 10px; } .Ruogu_jiaM1 .ul1 li span{ color:#f80000; font-weight:bold; font-style:italic; font-size:0.85rem; } .Ruogu_jiaM1 .ul1 .a1{ font-size:0.9rem; color:#333; display:block; margin-bottom:6px; } .Ruogu_jiaM1 .phone a{ font-size: 0.65em; height: 28px; line-height: 29px; border-radius: 3px; display:block; margin-top:8px; } .Ruogu_jiaM1 .phone .free { background: #e14546; color: #fff; border: 1px solid #e14546; margin-top:5px;} .Ruogu_jiaM1 .phone .line { border: 1px solid #e14546; color: #333; margin-top:8px; } .Ruogu_jiaM1 .phone .line span { display: block; background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8ee65-8773.png') no-repeat 2px; background-size: 14px 14px; text-indent: 16px; width: 65px; margin: 0 auto; } .Ruogu_jiaM1 .phone .free span { display: block; background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/930a5-4586.png') no-repeat 2px; background-size: 14px 13px; width: 66px; text-indent: 18px; margin: auto; overflow: hidden; } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .ruodetail2 .ul2{ margin-top:7px; } .ruodetail2 .ul2 li{ float:left; font-size:0.7em; color:#999999; margin-right:6px; padding:0.5px 3px; line-height:15px; } .ruodetail2 .ul2 .li2{ color:#fe9f21; border:1px solid #fe9f21; } .ruodetail2 .ul2 .li3{ color:#fdcf31; border:1px solid #fdcf31; } .ruodetail2 .ul2 .li4{ color:#98d055; border:1px solid #98d055; } .ruodetail2 .ul2 .li5{ color:#96e79f; border:1px solid #96e79f; } .ruodetail2 .ul2 .li6{ color:#4dc7ee; border:1px solid #4dc7ee; } .ruodetail2 .ul2 .li7{ color:#fe80c0; border:1px solid #fe80c0; } .ruodetail2 .ul2 .li8{ color:#f98585; border:1px solid #f98585; } @media screen and (min-width:360px){ .Ruogu_jiaM1 .ul1 li { line-height: 18px; } } @media screen and (min-width:400px){ .Ruogu_jiaM1 .ul1 li { line-height: 20px; font-size:0.75rem; } } @media screen and (max-width:340px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } @media (min-width: 320px) and (max-width: 359px){ .ruodetail dt{ height:66px; overflow:hidden; } } @media (min-width: 360px) and (max-width: 375px){ .ruodetail dt{ height:74px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } } @media (min-width: 376px) and (max-width: 415px){ .ruodetail dt{ height:84px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } .Ruogu_jiaM1 .phone { width: 28%; } } @media (min-width: 376px) and (max-width: 395px){ .Ruogu_jiaM1 .ruodetail dd{ height:8px; line-height:9px;} } @media (min-width: 396px) and (max-width: 415px){ .Ruogu_jiaM1 .ruodetail dd{ height:16px; line-height:20px;} } @media (min-width: 341px) and (max-width: 359px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px; border-radius:4px; } #font b{ color:#d90000; } .returntop { bottom: 60px; display: block; position: fixed; right: 8px; z-index: 1300; width: 1.7066rem; height: 1.7066rem; } #more_jiameng{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5cd67-8705.png') no-repeat; width:20px; height:15px; margin-left:4px; background-size:20px; }</style>
+        <style type="text/css">#listPage{ margin-top:6px; font-family:"Hiragino Sans GB",Helvetica,sans-serif; } #listPage img{ width:100%; height:100%; } .Ruogu_jiaM1{ padding:15px 2%; background:#fff; margin-bottom:6px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; } .Ruogu_jiaM1 .ruodetail{ width:28%; } .Ruogu_jiaM1 .ruodetail dl{ position:relative; } .Ruogu_jiaM1 .ruodetail .a_font{ position:absolute; padding:3px 6px; background:rgba(0,0,0,.3); display:block; top:0; left:0; z-index:11; color:#fff; font-size:0.75rem; } .Ruogu_jiaM1 .ruodetail dd{ font-size:0.625em; margin-top:7px; text-align:center; height:20px; line-height:26px; color:#b0b0b0; } .Ruogu_jiaM1 .ruodetail dd a{ color:#f80000; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px;} .Ruogu_jiaM1 .ruodetail2{ width:70%; } .Ruogu_jiaM1 .ul1{ width:64%; } .Ruogu_jiaM1 .phone{ width:32%; } .Ruogu_jiaM1 .ul1 li { line-height: 18px; overflow: hidden; color: #b0b0b0; font-size: 10px; } .Ruogu_jiaM1 .ul1 li span{ color:#f80000; font-weight:bold; font-style:italic; font-size:0.85rem; } .Ruogu_jiaM1 .ul1 .a1{ font-size:0.9rem; color:#333; display:block; margin-bottom:6px; } .Ruogu_jiaM1 .phone a{ font-size: 0.65em; height: 28px; line-height: 29px; border-radius: 3px; display:block; margin-top:8px; } .Ruogu_jiaM1 .phone .free { background: #e14546; color: #fff; border: 1px solid #e14546; margin-top:5px;} .Ruogu_jiaM1 .phone .line { border: 1px solid #e14546; color: #333; margin-top:8px; } .Ruogu_jiaM1 .phone .line span { display: block; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8ee65-8773.png') no-repeat 2px; background-size: 14px 14px; text-indent: 16px; width: 65px; margin: 0 auto; } .Ruogu_jiaM1 .phone .free span { display: block; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/930a5-4586.png') no-repeat 2px; background-size: 14px 13px; width: 66px; text-indent: 18px; margin: auto; overflow: hidden; } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .ruodetail2 .ul2{ margin-top:7px; } .ruodetail2 .ul2 li{ float:left; font-size:0.7em; color:#999999; margin-right:6px; padding:0.5px 3px; line-height:15px; } .ruodetail2 .ul2 .li2{ color:#fe9f21; border:1px solid #fe9f21; } .ruodetail2 .ul2 .li3{ color:#fdcf31; border:1px solid #fdcf31; } .ruodetail2 .ul2 .li4{ color:#98d055; border:1px solid #98d055; } .ruodetail2 .ul2 .li5{ color:#96e79f; border:1px solid #96e79f; } .ruodetail2 .ul2 .li6{ color:#4dc7ee; border:1px solid #4dc7ee; } .ruodetail2 .ul2 .li7{ color:#fe80c0; border:1px solid #fe80c0; } .ruodetail2 .ul2 .li8{ color:#f98585; border:1px solid #f98585; } @media screen and (min-width:360px){ .Ruogu_jiaM1 .ul1 li { line-height: 18px; } } @media screen and (min-width:400px){ .Ruogu_jiaM1 .ul1 li { line-height: 20px; font-size:0.75rem; } } @media screen and (max-width:340px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } @media (min-width: 320px) and (max-width: 359px){ .ruodetail dt{ height:66px; overflow:hidden; } } @media (min-width: 360px) and (max-width: 375px){ .ruodetail dt{ height:74px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } } @media (min-width: 376px) and (max-width: 415px){ .ruodetail dt{ height:84px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } .Ruogu_jiaM1 .phone { width: 28%; } } @media (min-width: 376px) and (max-width: 395px){ .Ruogu_jiaM1 .ruodetail dd{ height:8px; line-height:9px;} } @media (min-width: 396px) and (max-width: 415px){ .Ruogu_jiaM1 .ruodetail dd{ height:16px; line-height:20px;} } @media (min-width: 341px) and (max-width: 359px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px; border-radius:4px; } #font b{ color:#d90000; } .returntop { bottom: 60px; display: block; position: fixed; right: 8px; z-index: 1300; width: 1.7066rem; height: 1.7066rem; } #more_jiameng{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5cd67-8705.png') no-repeat; width:20px; height:15px; margin-left:4px; background-size:20px; }</style>
         <!-- 行业站品牌 start -->
         <div id="listPage">
             <div class="title_span clear">
@@ -586,7 +586,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6584328/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cb394-8797.jpg" title="千叶珠宝加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/cb394-8797.jpg" title="千叶珠宝加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6584328" />已申请加盟:
@@ -628,7 +628,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6558704/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fa19a-2757.jpg" title="野马汽车加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fa19a-2757.jpg" title="野马汽车加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6558704" />已申请加盟:
@@ -670,7 +670,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6650233/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d1210-3577.jpg" title="憨豆蜡之家族加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d1210-3577.jpg" title="憨豆蜡之家族加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6650233" />已申请加盟:
@@ -713,7 +713,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm1316/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d535c-7832.jpg" title="东方娃娃加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d535c-7832.jpg" title="东方娃娃加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="1316" />已申请加盟:
@@ -756,7 +756,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6624475/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b52bc-6413.jpg" title="巴比酷肉蟹煲加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b52bc-6413.jpg" title="巴比酷肉蟹煲加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6624475" />已申请加盟:
@@ -798,7 +798,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6591839/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0aec3-7984.jpg" title="好集乐国际英语加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0aec3-7984.jpg" title="好集乐国际英语加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6591839" />已申请加盟:
@@ -841,7 +841,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6649630/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/80229-6879.jpg" title="东时便当加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/80229-6879.jpg" title="东时便当加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6649630" />已申请加盟:
@@ -883,7 +883,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6578773/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/97d10-5152.jpg" title="kiumi韩式美食屋加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/97d10-5152.jpg" title="kiumi韩式美食屋加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6578773" />已申请加盟:
@@ -925,7 +925,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6567067/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2e86e-4270.jpg" title="UBTV小主播加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2e86e-4270.jpg" title="UBTV小主播加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6567067" />已申请加盟:
@@ -968,7 +968,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6676549/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/37456-2470.jpg" title="趣学英语加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/37456-2470.jpg" title="趣学英语加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6676549" />已申请加盟:
@@ -1010,7 +1010,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6653057/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/51729-1897.jpg" title="达森家居加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/51729-1897.jpg" title="达森家居加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6653057" />已申请加盟:
@@ -1052,7 +1052,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm164104/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c4a8-3202.jpg" title="英国天线宝宝早教加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c4a8-3202.jpg" title="英国天线宝宝早教加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="164104" />已申请加盟:
@@ -1094,7 +1094,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6674654/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b24b7-4024.jpg" title="手商云加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b24b7-4024.jpg" title="手商云加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6674654" />已申请加盟:
@@ -1137,7 +1137,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6675965/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2eaa0-3727.jpg" title="慧读国际少儿英语加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2eaa0-3727.jpg" title="慧读国际少儿英语加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6675965" />已申请加盟:
@@ -1180,7 +1180,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6575459/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/25f35-9051.jpg" title="利信创通加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/25f35-9051.jpg" title="利信创通加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6575459" />已申请加盟:
@@ -1222,7 +1222,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm60748/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/be529-7092.jpg" title="曼妮芬内衣加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/be529-7092.jpg" title="曼妮芬内衣加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="60748" />已申请加盟:
@@ -1266,7 +1266,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6584328/">
-                                <img title="千叶珠宝加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cb394-8797.jpg"></a>
+                                <img title="千叶珠宝加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/cb394-8797.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6584328" class="slow_ajaxGetNumById">已申请加盟:
@@ -1308,7 +1308,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6674681/">
-                                <img title="展腾投资集团加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e771c-5840.jpg"></a>
+                                <img title="展腾投资集团加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e771c-5840.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6674681" class="slow_ajaxGetNumById">已申请加盟:
@@ -1351,7 +1351,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6597666/">
-                                <img title="能力风暴机器人加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c69b9-3450.jpg"></a>
+                                <img title="能力风暴机器人加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c69b9-3450.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6597666" class="slow_ajaxGetNumById">已申请加盟:
@@ -1394,7 +1394,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm210499/">
-                                <img title="阳光喔作文培训加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0535d-3408.jpg"></a>
+                                <img title="阳光喔作文培训加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0535d-3408.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="210499" class="slow_ajaxGetNumById">已申请加盟:
@@ -1437,7 +1437,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6558704/">
-                                <img title="野马汽车加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fa19a-2757.jpg"></a>
+                                <img title="野马汽车加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fa19a-2757.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6558704" class="slow_ajaxGetNumById">已申请加盟:
@@ -1479,7 +1479,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm14105/">
-                                <img title="赛维洗衣加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8b621-3651.jpg"></a>
+                                <img title="赛维洗衣加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8b621-3651.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="14105" class="slow_ajaxGetNumById">已申请加盟:
@@ -1522,7 +1522,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6676136/">
-                                <img title="福汽启腾加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a8929-8996.jpg"></a>
+                                <img title="福汽启腾加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a8929-8996.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6676136" class="slow_ajaxGetNumById">已申请加盟:
@@ -1564,7 +1564,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6585473/">
-                                <img title="紫光美食云加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2b6aa-1774.jpg"></a>
+                                <img title="紫光美食云加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2b6aa-1774.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6585473" class="slow_ajaxGetNumById">已申请加盟:
@@ -1606,7 +1606,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm1103/">
-                                <img title="昂立国际教育加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5bf78-6805.jpg"></a>
+                                <img title="昂立国际教育加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5bf78-6805.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="1103" class="slow_ajaxGetNumById">已申请加盟:
@@ -1648,7 +1648,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6649634/">
-                                <img title="爱麦思加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/4ea6b-9965.jpg"></a>
+                                <img title="爱麦思加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/4ea6b-9965.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6649634" class="slow_ajaxGetNumById">已申请加盟:
@@ -1690,7 +1690,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6649630/">
-                                <img title="东时便当加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/80229-6879.jpg"></a>
+                                <img title="东时便当加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/80229-6879.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6649630" class="slow_ajaxGetNumById">已申请加盟:
@@ -1732,7 +1732,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm63014/">
-                                <img title="北大青鸟IT职业教育加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7be6a-1995.jpg"></a>
+                                <img title="北大青鸟IT职业教育加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/7be6a-1995.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="63014" class="slow_ajaxGetNumById">已申请加盟:
@@ -1774,7 +1774,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6572151/">
-                                <img title="爱代驾加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6448e-8432.jpg"></a>
+                                <img title="爱代驾加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6448e-8432.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6572151" class="slow_ajaxGetNumById">已申请加盟:
@@ -1817,7 +1817,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6595088/">
-                                <img title="饿狼串说加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cf38b-9652.jpg"></a>
+                                <img title="饿狼串说加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/cf38b-9652.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6595088" class="slow_ajaxGetNumById">已申请加盟:
@@ -1859,7 +1859,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm75507/">
-                                <img title="珂兰钻石加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fc6a5-3889.jpg"></a>
+                                <img title="珂兰钻石加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fc6a5-3889.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="75507" class="slow_ajaxGetNumById">已申请加盟:
@@ -1901,7 +1901,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm209554/">
-                                <img title="成桂西餐厅加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41998-7162.jpg"></a>
+                                <img title="成桂西餐厅加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41998-7162.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="209554" class="slow_ajaxGetNumById">已申请加盟:
@@ -1944,7 +1944,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6574915/">
-                                <img title="文新学堂加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/333fb-4440.jpg"></a>
+                                <img title="文新学堂加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/333fb-4440.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6574915" class="slow_ajaxGetNumById">已申请加盟:
@@ -1987,7 +1987,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm152544/">
-                                <img title="卡乐滋汉堡加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8587f-1373.jpg"></a>
+                                <img title="卡乐滋汉堡加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8587f-1373.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="152544" class="slow_ajaxGetNumById">已申请加盟:
@@ -2029,7 +2029,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm86635/">
-                                <img title="爱贝国际少儿英语加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e00fd-5960.jpg"></a>
+                                <img title="爱贝国际少儿英语加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e00fd-5960.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="86635" class="slow_ajaxGetNumById">已申请加盟:
@@ -2072,7 +2072,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6650233/">
-                                <img title="憨豆蜡之家族加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d1210-3577.jpg"></a>
+                                <img title="憨豆蜡之家族加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d1210-3577.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6650233" class="slow_ajaxGetNumById">已申请加盟:
@@ -2115,7 +2115,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6624475/">
-                                <img title="巴比酷肉蟹煲加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b52bc-6413.jpg"></a>
+                                <img title="巴比酷肉蟹煲加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b52bc-6413.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6624475" class="slow_ajaxGetNumById">已申请加盟:
@@ -2158,7 +2158,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6676540/">
-                                <img title="泺喜机器人加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/4ac3f-6197.jpg"></a>
+                                <img title="泺喜机器人加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/4ac3f-6197.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6676540" class="slow_ajaxGetNumById">已申请加盟:
@@ -2200,7 +2200,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6624270/">
-                                <img title="勾馋麻辣烫加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1bd76-3950.jpg"></a>
+                                <img title="勾馋麻辣烫加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/1bd76-3950.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6624270" class="slow_ajaxGetNumById">已申请加盟:
@@ -2242,7 +2242,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6578773/">
-                                <img title="kiumi韩式美食屋加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/97d10-5152.jpg"></a>
+                                <img title="kiumi韩式美食屋加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/97d10-5152.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6578773" class="slow_ajaxGetNumById">已申请加盟:
@@ -2284,7 +2284,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6558121/">
-                                <img title="芝麻街英语加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d5c25-3792.jpg"></a>
+                                <img title="芝麻街英语加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d5c25-3792.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6558121" class="slow_ajaxGetNumById">已申请加盟:
@@ -2327,7 +2327,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm140435/">
-                                <img title="图途户外加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/640a4-2611.jpg"></a>
+                                <img title="图途户外加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/640a4-2611.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="140435" class="slow_ajaxGetNumById">已申请加盟:
@@ -2370,7 +2370,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm153328/">
-                                <img title="四海缘老火锅加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0cfbd-1934.jpg"></a>
+                                <img title="四海缘老火锅加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0cfbd-1934.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="153328" class="slow_ajaxGetNumById">已申请加盟:
@@ -2413,7 +2413,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6650077/">
-                                <img title="奥龙串串加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5df1e-9672.jpg"></a>
+                                <img title="奥龙串串加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5df1e-9672.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6650077" class="slow_ajaxGetNumById">已申请加盟:
@@ -2455,7 +2455,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm157955/">
-                                <img title="BBunion早教加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2322a-6763.jpg"></a>
+                                <img title="BBunion早教加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2322a-6763.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="157955" class="slow_ajaxGetNumById">已申请加盟:
@@ -2498,7 +2498,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm143208/">
-                                <img title="例格女装加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/db952-5204.jpg"></a>
+                                <img title="例格女装加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/db952-5204.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="143208" class="slow_ajaxGetNumById">已申请加盟:
@@ -2540,7 +2540,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm13002/">
-                                <img title="乡水源火锅加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/02823-2142.jpg"></a>
+                                <img title="乡水源火锅加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/02823-2142.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="13002" class="slow_ajaxGetNumById">已申请加盟:
@@ -2583,7 +2583,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6591839/">
-                                <img title="好集乐国际英语加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0aec3-7984.jpg"></a>
+                                <img title="好集乐国际英语加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0aec3-7984.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6591839" class="slow_ajaxGetNumById">已申请加盟:
@@ -2625,7 +2625,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6584639/">
-                                <img title="优瑞英语加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a1f69-7660.jpg"></a>
+                                <img title="优瑞英语加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a1f69-7660.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6584639" class="slow_ajaxGetNumById">已申请加盟:
@@ -2668,7 +2668,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6581216/">
-                                <img title="睿丁英语加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e19fb-7407.jpg"></a>
+                                <img title="睿丁英语加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e19fb-7407.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6581216" class="slow_ajaxGetNumById">已申请加盟:
@@ -2710,7 +2710,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6570056/">
-                                <img title="舌尖上的嘿小面加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/74c69-5166.jpg"></a>
+                                <img title="舌尖上的嘿小面加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/74c69-5166.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6570056" class="slow_ajaxGetNumById">已申请加盟:
@@ -2752,7 +2752,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm148416/">
-                                <img title="罗兰数字音乐教育加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/667ec-1388.jpg"></a>
+                                <img title="罗兰数字音乐教育加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/667ec-1388.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="148416" class="slow_ajaxGetNumById">已申请加盟:
@@ -2794,7 +2794,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm139363/">
-                                <img title="掌上明珠加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/add0c-6458.jpg"></a>
+                                <img title="掌上明珠加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/add0c-6458.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="139363" class="slow_ajaxGetNumById">已申请加盟:
@@ -2836,7 +2836,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm1316/">
-                                <img title="东方娃娃加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d535c-7832.jpg"></a>
+                                <img title="东方娃娃加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d535c-7832.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="1316" class="slow_ajaxGetNumById">已申请加盟:
@@ -2879,7 +2879,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6649597/">
-                                <img title="万邦教育加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/df4c3-2259.jpg"></a>
+                                <img title="万邦教育加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/df4c3-2259.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6649597" class="slow_ajaxGetNumById">已申请加盟:
@@ -2922,7 +2922,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6596151/">
-                                <img title="杰睿学校加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9ed11-6229.jpg"></a>
+                                <img title="杰睿学校加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9ed11-6229.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6596151" class="slow_ajaxGetNumById">已申请加盟:
@@ -2964,7 +2964,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6591889/">
-                                <img title="悦思途互联网连锁酒店加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3a7d0-8909.jpg"></a>
+                                <img title="悦思途互联网连锁酒店加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3a7d0-8909.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6591889" class="slow_ajaxGetNumById">已申请加盟:
@@ -3006,7 +3006,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6591043/">
-                                <img title="谷喜农韩国料理加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/96423-4668.jpg"></a>
+                                <img title="谷喜农韩国料理加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/96423-4668.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6591043" class="slow_ajaxGetNumById">已申请加盟:
@@ -3048,7 +3048,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm277/">
-                                <img title="小天鹅火锅加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aed3c-8880.jpg"></a>
+                                <img title="小天鹅火锅加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/aed3c-8880.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="277" class="slow_ajaxGetNumById">已申请加盟:
@@ -3090,7 +3090,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6567583/">
-                                <img title="寻鱼私烤加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2f274-7906.jpg"></a>
+                                <img title="寻鱼私烤加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2f274-7906.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6567583" class="slow_ajaxGetNumById">已申请加盟:
@@ -3132,7 +3132,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6631356/">
-                                <img title="好用电话加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/65114-5442.jpg"></a>
+                                <img title="好用电话加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/65114-5442.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6631356" class="slow_ajaxGetNumById">已申请加盟:
@@ -3175,7 +3175,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6577825/">
-                                <img title="乐仕堡儿童拓展乐园加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/36978-5685.jpg"></a>
+                                <img title="乐仕堡儿童拓展乐园加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/36978-5685.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6577825" class="slow_ajaxGetNumById">已申请加盟:
@@ -3218,7 +3218,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm57172/">
-                                <img title="大脑地图少儿英语加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0e249-7871.jpg"></a>
+                                <img title="大脑地图少儿英语加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0e249-7871.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="57172" class="slow_ajaxGetNumById">已申请加盟:
@@ -3261,7 +3261,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6591486/">
-                                <img title="蓝旗亲子游泳加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e93f6-6438.jpg"></a>
+                                <img title="蓝旗亲子游泳加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e93f6-6438.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6591486" class="slow_ajaxGetNumById">已申请加盟:
@@ -3303,7 +3303,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6588643/">
-                                <img title="中宫格五天练字加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/33e6c-4118.jpg"></a>
+                                <img title="中宫格五天练字加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/33e6c-4118.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6588643" class="slow_ajaxGetNumById">已申请加盟:
@@ -3346,7 +3346,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6562900/">
-                                <img title="室美伦加盟" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d801b-7524.jpg"></a>
+                                <img title="室美伦加盟" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d801b-7524.jpg"></a>
                         </dt>
                         <dd>
                             <input type="hidden" value="6562900" class="slow_ajaxGetNumById">已申请加盟:
@@ -3445,7 +3445,7 @@
         <p class="p1 fl">加盟行业导航</span></p>
         <span class="fr" style="font-size:0.75rem; color:#999; ">加盟行业共<em style="color:red">17</em>个分类</span></div>
         <div class="industry_hotB"> 
-        <p class="industry_pic" style="left:9%;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2c4aa-9327.png" alt="" /></p>
+        <p class="industry_pic" style="left:9%;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2c4aa-9327.png" alt="" /></p>
         <ul class="clear">
         <li> 
         <a href="http://m.jmw.com.cn/fz/" class="a_yellow">服装加盟</a>
@@ -3475,7 +3475,7 @@
         <a href="javascript:;" class="more fl" onclick="$('.add_hideLi').show();$('.more_shouqi').show();$(this).hide();">更多加盟行业<i class="more-icon"></i></a>
         <a href="javascript:;" class="more more_shouqi fl" style="display:none;" onclick="$('.add_hideLi').hide();$('.more').show();$(this).hide();">收起<i class="more-icon2"></i></a></div>
         <style type="text/css"> 
-        .industry_hotB .more-icon2 { background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d7907-5537.png') no-repeat; width: 12px; height: 6px; display: inline-block; background-size: 12px 6px; margin-left: 8px;}
+        .industry_hotB .more-icon2 { background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d7907-5537.png') no-repeat; width: 12px; height: 6px; display: inline-block; background-size: 12px 6px; margin-left: 8px;}
         </style>-->
         <!-- 热门行业end -->
         <script>function publish_message(target_id, origin, message) {
@@ -3560,7 +3560,7 @@
                 </ul>
             </div>
             <!-- 收起 -->
-            <style type="text/css">.z_more_Infs{ font-size: 0.625em; height: 20px; background: #ffffff; line-height: 20px; border-top:1px solid #f2f2f2; padding:10px 0; } .z_more_Infs .more-Inf { width: 50%; color: #62C77B; text-align: center; border-right:1px solid #e5e5e5; box-sizing:border-box; } .z_more_Infs .more-icon { background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png') no-repeat; width: 12px; height: 6px; display: inline-block; background-size: 12px; margin-left: 8px; } .z_more_Infs .more-Inf2 { width: 50%; color: #62C77B; text-align: center; } .z_more_Infs .more-icon2 { background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d7907-5537.png') no-repeat; width: 12px; height: 6px; display: inline-block; background-size: 12px 6px; margin-left: 8px; } @media screen and (max-device-width: 480px){ body{ -webkit-text-size-adjust: none; } }</style>
+            <style type="text/css">.z_more_Infs{ font-size: 0.625em; height: 20px; background: #ffffff; line-height: 20px; border-top:1px solid #f2f2f2; padding:10px 0; } .z_more_Infs .more-Inf { width: 50%; color: #62C77B; text-align: center; border-right:1px solid #e5e5e5; box-sizing:border-box; } .z_more_Infs .more-icon { background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png') no-repeat; width: 12px; height: 6px; display: inline-block; background-size: 12px; margin-left: 8px; } .z_more_Infs .more-Inf2 { width: 50%; color: #62C77B; text-align: center; } .z_more_Infs .more-icon2 { background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d7907-5537.png') no-repeat; width: 12px; height: 6px; display: inline-block; background-size: 12px 6px; margin-left: 8px; } @media screen and (max-device-width: 480px){ body{ -webkit-text-size-adjust: none; } }</style>
             <div class="con">
                 <div style="display: block;" class="jiaMeng_ul2">
                     <div class="jmtt">
@@ -3575,8 +3575,8 @@
                                 <a href="http://m.jmw.com.cn/rdgz_lm/17550764.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;7</a>
                                 <span style="float:right;">&nbsp;557&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/rdgz_lm/17550764.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                         <section class="zhiFu_s">
                             <p class="p_wen">
@@ -3589,13 +3589,13 @@
                                 <a href="http://m.jmw.com.cn/rdgz_lm/17550762.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;16</a>
                                 <span style="float:right;">&nbsp;1376&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/rdgz_lm/17550762.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/rdgz_lm/17550754.html" style="color: #333;">【置顶】倾城优雅力 新品推荐
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1df92-9701.png" style="width:10px;height:10px;margin-left:2px;"></a></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/1df92-9701.png" style="width:10px;height:10px;margin-left:2px;"></a></p>
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3604,8 +3604,8 @@
                                 <a href="http://m.jmw.com.cn/rdgz_lm/17550754.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;9</a>
                                 <span style="float:right;">&nbsp;763&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/rdgz_lm/17550754.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                     </div>
                     <div class="more-Infs" id="jmtt">
@@ -3640,7 +3640,7 @@
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/jmkx_lm/17550621.html" style="color: #333;">入驻丝路名城！MIXBOX新店落户敦煌！</a></p>
-                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/news/">加盟快讯</a><span style="float:left;">&nbsp;|&nbsp;2017-01-13&nbsp;&nbsp;</span><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;1475&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/jmkx_lm/17550621.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;17</a></p>-->
+                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/news/">加盟快讯</a><span style="float:left;">&nbsp;|&nbsp;2017-01-13&nbsp;&nbsp;</span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;1475&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/jmkx_lm/17550621.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;17</a></p>-->
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3649,13 +3649,13 @@
                                 <a href="http://m.jmw.com.cn/jmkx_lm/17550621.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;17</a>
                                 <span style="float:right;">&nbsp;1475&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/jmkx_lm/17550621.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/jmkx_lm/17547746.html" style="color: #333;">人人微商时代，多数创业者根本没挣到钱</a></p>
-                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/news/">加盟快讯</a><span style="float:left;">&nbsp;|&nbsp;2017-01-10&nbsp;&nbsp;</span><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;1613&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/jmkx_lm/17547746.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;19</a></p>-->
+                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/news/">加盟快讯</a><span style="float:left;">&nbsp;|&nbsp;2017-01-10&nbsp;&nbsp;</span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;1613&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/jmkx_lm/17547746.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;19</a></p>-->
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3664,13 +3664,13 @@
                                 <a href="http://m.jmw.com.cn/jmkx_lm/17547746.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;19</a>
                                 <span style="float:right;">&nbsp;1613&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/jmkx_lm/17547746.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/jmkx_lm/17547712.html" style="color: #333;">屌爆了！高颜值流浪猫新年奇遇甄嬛、王思聪</a></p>
-                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/news/">加盟快讯</a><span style="float:left;">&nbsp;|&nbsp;2017-01-10&nbsp;&nbsp;</span><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;2804&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/jmkx_lm/17547712.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;32</a></p>-->
+                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/news/">加盟快讯</a><span style="float:left;">&nbsp;|&nbsp;2017-01-10&nbsp;&nbsp;</span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;2804&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/jmkx_lm/17547712.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;32</a></p>-->
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3679,8 +3679,8 @@
                                 <a href="http://m.jmw.com.cn/jmkx_lm/17547712.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;32</a>
                                 <span style="float:right;">&nbsp;2804&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/jmkx_lm/17547712.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                     </div>
                     <div class="more-Infs" id="jmkx">
@@ -3700,7 +3700,7 @@
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/zhppdt_lm/17550711.html" style="color: #333;">第十届中国品牌加盟投资博览会进入倒计时1...</a></p>
-                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/jmdt/">品牌动态</a><span style="float:left;">&nbsp;|&nbsp;2017-01-17&nbsp;&nbsp;</span><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;2603&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/zhppdt_lm/17550711.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;30</a></p>-->
+                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/jmdt/">品牌动态</a><span style="float:left;">&nbsp;|&nbsp;2017-01-17&nbsp;&nbsp;</span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;2603&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/zhppdt_lm/17550711.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;30</a></p>-->
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3709,13 +3709,13 @@
                                 <a href="http://m.jmw.com.cn/zhppdt_lm/17550711.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;30</a>
                                 <span style="float:right;">&nbsp;2603&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/zhppdt_lm/17550711.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/zhppdt_lm/17547773.html" style="color: #333;">听了首富的金句，创业者为什么还要迫不及待...</a></p>
-                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/jmdt/">品牌动态</a><span style="float:left;">&nbsp;|&nbsp;2017-01-12&nbsp;&nbsp;</span><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;3026&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/zhppdt_lm/17547773.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;35</a></p>-->
+                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/jmdt/">品牌动态</a><span style="float:left;">&nbsp;|&nbsp;2017-01-12&nbsp;&nbsp;</span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;3026&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/zhppdt_lm/17547773.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;35</a></p>-->
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3724,13 +3724,13 @@
                                 <a href="http://m.jmw.com.cn/zhppdt_lm/17547773.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;35</a>
                                 <span style="float:right;">&nbsp;3026&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/zhppdt_lm/17547773.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                         <section class="zhiFu_s">
                             <p class="p_wen">
                                 <a href="http://m.jmw.com.cn/zhppdt_lm/17547740.html" style="color: #333;">看不懂名创模式的人，就像10年前看不懂阿...</a></p>
-                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/jmdt/">品牌动态</a><span style="float:left;">&nbsp;|&nbsp;2017-01-10&nbsp;&nbsp;</span><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;3331&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/zhppdt_lm/17547740.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;38</a></p>-->
+                            <!--<p class="p_panda"><a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a><span style="float:left;">&gt;</span><a style="color: #b0b0b0;float:left;" href="http://m.jmw.com.cn/jmdt/">品牌动态</a><span style="float:left;">&nbsp;|&nbsp;2017-01-10&nbsp;&nbsp;</span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png" style="width:16px;margin-left:6px;float:left;"><span style="float:left;">&nbsp;3331&nbsp;&nbsp;</span><a href="http://m.jmw.com.cn/zhppdt_lm/17547740.html#dpwzxq" style="color: #b0b0b0;float:left;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:left;">&nbsp;38</a></p>-->
                             <p class="p_panda">
                                 <a href="http://m.jmw.com.cn/" style="color: #b0b0b0;float:left;">中国加盟网</a>
                                 <span style="float:left;">&gt;</span>
@@ -3739,8 +3739,8 @@
                                 <a href="http://m.jmw.com.cn/zhppdt_lm/17547740.html#dpwzxq" style="color: #b0b0b0;float:right;">&nbsp;38</a>
                                 <span style="float:right;">&nbsp;3331&nbsp;&nbsp;
                                     <a href="http://m.jmw.com.cn/zhppdt_lm/17547740.html#dpwzxq" style="color: #b0b0b0;float:right;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
-                                <img style="width:16px;margin-left:6px;float:right;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/105e3-1964.png"></p>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/f7f60-1280.png" style="width:16px;margin-left:6px;float:right;"></a></span>
+                                <img style="width:16px;margin-left:6px;float:right;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/105e3-1964.png"></p>
                         </section>
                     </div>
                     <div class="more-Infs" id="jmdt">
@@ -4057,7 +4057,7 @@
                 <i>
                 </i>
                 <a style="height:12px;" href="http://pc.jmw.com.cn/">
-                    <!--<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9238a-6241.png">-->电脑版</a></p>
+                    <!--<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9238a-6241.png">-->电脑版</a></p>
             <p class="copy-2">
                 <span>友情提示：投资有风险，加盟需谨慎</span></p>
             <p class="copy-2">
@@ -4077,7 +4077,7 @@
                 }
             }</script>
         <a class="returntop" href="#top" style="display: none;">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41560-7162.png"></a>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
         <script>$(document).scroll(function() {
                 var top = $(document).scrollTop();
                 if (top == 0) {
@@ -4172,8 +4172,8 @@
                 <input type="hidden" name="MFoot_fromurl" id="MCeng_fromurl_1" /></form>
         </div>
         <!-- 标项页讯加盟低价 -->
-        <style>.icon_sex1{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; } .icon_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }</style>
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css" />
+        <style>.icon_sex1{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; } .icon_sex2{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }</style>
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css" />
         <div class="gray_mask" style="display:none;"></div>
         <div class="Pline_consult" style="display:none;" id="Pline_consult_hel">
             <form action="" method="post" id="form1">
@@ -4710,11 +4710,11 @@
         <style type="text/css">#ad_tanceng{ width: 12.25rem; height: 8rem; position: fixed; top: 40%; left: 22%; } #ad_tanceng img{ width: 12.25rem; height: 8rem; } #ad_tanceng span{ display: block; width: 0.95rem; height: 0.95rem; background: yellow; position: absolute; top: 0.1rem; right: 1.6rem; opacity: 0; }</style>
         <!-- 双11弹层 -->
         <!-- 屏蔽 <div id="ad_tanceng">
-        <a href="https://weidian.com/?userid=214234322"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/13491-3651.png"/></a>
+        <a href="https://weidian.com/?userid=214234322"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/13491-3651.png"/></a>
         <span id="display"></span></div> 
         -->
         <!-- 双11弹层 js-->
-        <!-- 屏蔽 <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+        <!-- 屏蔽 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/fastclick.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
         //解除移动端的300毫秒的延迟
         $(function() {
@@ -4739,9 +4739,9 @@
         <div id="div" style="display: block; position:fixed; right:-8px; top:56%; padding-top: 15px; text-align:center; z-index:9999; box-sizing: border-box;width:57px; height:57px; border-radius:50%; color: rgb(255, 255, 255);font-size: 14px; background-color: rgb(255, 70, 55);">
             <a id="widget" onclick="_MEIQIA._SHOWPANEL()" href="javascript:;" style="color:#fff;">在线
                 <br />咨询</a></div>
-        <!--<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/fastclick.js"></script>-->
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/jquery.textslider.js"></script>
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/mindex.js"></script>
+        <!--<script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/fastclick.js"></script>-->
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/jquery.textslider.js"></script>
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/mindex.js"></script>
     </body>
 
 </html>

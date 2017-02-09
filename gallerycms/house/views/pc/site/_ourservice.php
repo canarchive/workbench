@@ -44,11 +44,11 @@
         <div class="weiWeima clear">
             <dl class="fl">
                 <dt>
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5aeff-6715.png" alt="" /></dt>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5aeff-6715.png" alt="" /></dt>
                 <dd>android版</dd></dl>
             <dl class="fr">
                 <dt>
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5d573-7654.png" alt="" /></dt>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5d573-7654.png" alt="" /></dt>
                 <dd>iPhone版</dd></dl>
         </div>
     </div>
@@ -58,6 +58,6 @@
         <p class="p1">招商咨询:</p>
         <p class="p2">010-62168889</p>
         <p class="p3">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/483e4-8567.png" alt="" /></p>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/483e4-8567.png" alt="" /></p>
     </div>
 </div>

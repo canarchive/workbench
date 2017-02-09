@@ -1,7 +1,7 @@
 <script type="text/javascript" id="bdshell_js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/imgready.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/decorate_gallery_banner.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/xiaoguotu_new.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/imgready.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/decorate_gallery_banner.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/xiaoguotu_new.js"></script>
 <script>try {
         goTopInit();
     } catch(e) {}
@@ -132,13 +132,13 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(mvl, s);
     })();</script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/globalprovinces.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/globalprovinces.js"></script>
 <script type="text/javascript">var gpm = new GlobalProvincesModule;
     try {
         headerFooter.init();
     } catch(e) {}</script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/referrerpathrecord.js" type="text/javascript"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/seostatis.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/referrerpathrecord.js" type="text/javascript"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/seostatis.js"></script>
 <script type="text/javascript">var _hmt = _hmt || []; (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?dbdd94468cf0ef471455c47f380f58d2";
@@ -146,14 +146,14 @@
         s.parentNode.insertBefore(hm, s);
     })();</script>
 </div>
-<link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/css/ec6ff-6001.css">
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/submodal.js" type="text/javascript"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/2a19dc2ac1471a7470fe7187a5537960.js"></script>
+<link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/css/ec6ff-6001.css">
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/submodal.js" type="text/javascript"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/2a19dc2ac1471a7470fe7187a5537960.js"></script>
 <script>jq('.zxzs-set').click(function(e) {
         e.preventDefault();
         var ptag = jq(this).attr('dataptag'); (typeof clickStream !== 'undefined') && clickStream.getCvParams(ptag); //埋点
         window.location.href = jq(this).attr('href');
     });</script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/entrance.js" id="zhichiScript" class="zhiCustomBtn" data-args="manual=true"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/weixin_pop.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/consult_online.js" type="text/javascript"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/entrance.js" id="zhichiScript" class="zhiCustomBtn" data-args="manual=true"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/weixin_pop.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/consult_online.js" type="text/javascript"></script>

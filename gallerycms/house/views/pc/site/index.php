@@ -36,5 +36,5 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <?= $this->render('_ourservice'); ?>
 <!-- footer -->
 <?= $this->render('@gallerycms/views/platj/pc/_footer-base'); ?>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/trade.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/trade.js"></script>
 <div style="display:none;">欢迎访问中国加盟网!!!</div></body>

@@ -13,18 +13,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=4.0, user-scalable=no" name="viewport" id="viewport" />
         <meta name="format-detection" content="telephone=no">
-        <link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/1b17c-4289.css">
-        <link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/be233-6823.css">
-        <link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/35df6-9609.css">
-        <link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css">
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/jq.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/mjs.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/mpublic.js"></script>
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/jquery-1.8.2.min.js" type="text/javascript"></script>
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/addpageview.js" type="text/javascript"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/tongji.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/tongji_m.js"></script>
-        <style type="text/css">#listPage{ margin-top:6px; font-family:"Hiragino Sans GB",Helvetica,sans-serif; } .Ruogu_jiaM1{ padding:15px 2%; background:#fff; margin-bottom:6px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; } .Ruogu_jiaM1 .ruodetail{ width:28%; } .Ruogu_jiaM1 .ruodetail dl{ position:relative; } .Ruogu_jiaM1 .ruodetail .a_font{ position:absolute; padding:3px 6px; background:rgba(0,0,0,.3); display:block; top:0; left:0; z-index:11; color:#fff; font-size:0.75rem; } .Ruogu_jiaM1 .ruodetail dd{ font-size:0.625em; margin-top:7px; text-align:center; height:20px; line-height:26px; color:#b0b0b0; } .Ruogu_jiaM1 .ruodetail dd a{ color:#f80000; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px;} .Ruogu_jiaM1 .ruodetail2{ width:70%; } .Ruogu_jiaM1 .ul1{ width:64%; } .Ruogu_jiaM1 .phone{ width:32%; } .Ruogu_jiaM1 .ul1 li { line-height: 18px; overflow: hidden; color: #b0b0b0; font-size: 10px; } .Ruogu_jiaM1 .ul1 li span{ color:#f80000; font-weight:bold; font-style:italic; font-size:0.85rem; } .Ruogu_jiaM1 .ul1 .a1{ font-size:0.9rem; color:#333; display:block; margin-bottom:6px; } .Ruogu_jiaM1 .phone a{ font-size: 0.65em; height: 28px; line-height: 29px; border-radius: 3px; display:block; margin-top:8px; } .Ruogu_jiaM1 .phone .free { background: #e14546; color: #fff; border: 1px solid #e14546; margin-top:5px;} .Ruogu_jiaM1 .phone .line { border: 1px solid #e14546; color: #333; margin-top:8px; } .Ruogu_jiaM1 .phone .line span { display: block; background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8ee65-8773.png') no-repeat 2px; background-size: 14px 14px; text-indent: 16px; width: 65px; margin: 0 auto; } .Ruogu_jiaM1 .phone .free span { display: block; background: url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/930a5-4586.png') no-repeat 2px; background-size: 14px 13px; width: 66px; text-indent: 18px; margin: auto; overflow: hidden; } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .ruodetail2 .ul2{ margin-top:7px; } .ruodetail2 .ul2 li{ float:left; font-size:0.7em; color:#999999; margin-right:6px; padding:0.5px 3px; line-height:15px; } .ruodetail2 .ul2 .li2{ color:#fe9f21; border:1px solid #fe9f21; } .ruodetail2 .ul2 .li3{ color:#fdcf31; border:1px solid #fdcf31; } .ruodetail2 .ul2 .li4{ color:#98d055; border:1px solid #98d055; } .ruodetail2 .ul2 .li5{ color:#96e79f; border:1px solid #96e79f; } .ruodetail2 .ul2 .li6{ color:#4dc7ee; border:1px solid #4dc7ee; } .ruodetail2 .ul2 .li7{ color:#fe80c0; border:1px solid #fe80c0; } .ruodetail2 .ul2 .li8{ color:#f98585; border:1px solid #f98585; } @media screen and (min-width:360px){ .Ruogu_jiaM1 .ul1 li { line-height: 18px; } } @media screen and (min-width:400px){ .Ruogu_jiaM1 .ul1 li { line-height: 20px; font-size:0.75rem; } } @media screen and (max-width:340px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } @media (min-width: 320px) and (max-width: 359px){ .ruodetail dt{ height:66px; overflow:hidden; } } @media (min-width: 360px) and (max-width: 375px){ .ruodetail dt{ height:74px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:69px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } } @media (min-width: 376px) and (max-width: 415px){ .ruodetail dt{ height:84px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:69px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } .Ruogu_jiaM1 .phone { width: 28%; } } @media (min-width: 376px) and (max-width: 395px){ .Ruogu_jiaM1 .ruodetail dd{ height:8px; line-height:9px;} } @media (min-width: 396px) and (max-width: 415px){ .Ruogu_jiaM1 .ruodetail dd{ height:16px; line-height:20px;} } @media (min-width: 341px) and (max-width: 359px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px; border-radius:4px 4px 4px 4px; } #font b{ color:#d90000; } .returntop { bottom: 60px; display: block; position: fixed; right: 8px; z-index: 1300; width: 1.7066rem; height: 1.7066rem; } @media screen and (max-device-width: 480px){ body{ -webkit-text-size-adjust: none; } }</style></head>
+        <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/1b17c-4289.css">
+        <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/be233-6823.css">
+        <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/35df6-9609.css">
+        <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css">
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/jq.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/mjs.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/mpublic.js"></script>
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/addpageview.js" type="text/javascript"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/tongji.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/tongji_m.js"></script>
+        <style type="text/css">#listPage{ margin-top:6px; font-family:"Hiragino Sans GB",Helvetica,sans-serif; } .Ruogu_jiaM1{ padding:15px 2%; background:#fff; margin-bottom:6px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; } .Ruogu_jiaM1 .ruodetail{ width:28%; } .Ruogu_jiaM1 .ruodetail dl{ position:relative; } .Ruogu_jiaM1 .ruodetail .a_font{ position:absolute; padding:3px 6px; background:rgba(0,0,0,.3); display:block; top:0; left:0; z-index:11; color:#fff; font-size:0.75rem; } .Ruogu_jiaM1 .ruodetail dd{ font-size:0.625em; margin-top:7px; text-align:center; height:20px; line-height:26px; color:#b0b0b0; } .Ruogu_jiaM1 .ruodetail dd a{ color:#f80000; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px;} .Ruogu_jiaM1 .ruodetail2{ width:70%; } .Ruogu_jiaM1 .ul1{ width:64%; } .Ruogu_jiaM1 .phone{ width:32%; } .Ruogu_jiaM1 .ul1 li { line-height: 18px; overflow: hidden; color: #b0b0b0; font-size: 10px; } .Ruogu_jiaM1 .ul1 li span{ color:#f80000; font-weight:bold; font-style:italic; font-size:0.85rem; } .Ruogu_jiaM1 .ul1 .a1{ font-size:0.9rem; color:#333; display:block; margin-bottom:6px; } .Ruogu_jiaM1 .phone a{ font-size: 0.65em; height: 28px; line-height: 29px; border-radius: 3px; display:block; margin-top:8px; } .Ruogu_jiaM1 .phone .free { background: #e14546; color: #fff; border: 1px solid #e14546; margin-top:5px;} .Ruogu_jiaM1 .phone .line { border: 1px solid #e14546; color: #333; margin-top:8px; } .Ruogu_jiaM1 .phone .line span { display: block; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8ee65-8773.png') no-repeat 2px; background-size: 14px 14px; text-indent: 16px; width: 65px; margin: 0 auto; } .Ruogu_jiaM1 .phone .free span { display: block; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/930a5-4586.png') no-repeat 2px; background-size: 14px 13px; width: 66px; text-indent: 18px; margin: auto; overflow: hidden; } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .ruodetail2 .ul2{ margin-top:7px; } .ruodetail2 .ul2 li{ float:left; font-size:0.7em; color:#999999; margin-right:6px; padding:0.5px 3px; line-height:15px; } .ruodetail2 .ul2 .li2{ color:#fe9f21; border:1px solid #fe9f21; } .ruodetail2 .ul2 .li3{ color:#fdcf31; border:1px solid #fdcf31; } .ruodetail2 .ul2 .li4{ color:#98d055; border:1px solid #98d055; } .ruodetail2 .ul2 .li5{ color:#96e79f; border:1px solid #96e79f; } .ruodetail2 .ul2 .li6{ color:#4dc7ee; border:1px solid #4dc7ee; } .ruodetail2 .ul2 .li7{ color:#fe80c0; border:1px solid #fe80c0; } .ruodetail2 .ul2 .li8{ color:#f98585; border:1px solid #f98585; } @media screen and (min-width:360px){ .Ruogu_jiaM1 .ul1 li { line-height: 18px; } } @media screen and (min-width:400px){ .Ruogu_jiaM1 .ul1 li { line-height: 20px; font-size:0.75rem; } } @media screen and (max-width:340px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } @media (min-width: 320px) and (max-width: 359px){ .ruodetail dt{ height:66px; overflow:hidden; } } @media (min-width: 360px) and (max-width: 375px){ .ruodetail dt{ height:74px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:69px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } } @media (min-width: 376px) and (max-width: 415px){ .ruodetail dt{ height:84px; overflow:hidden; } .Ruogu_jiaM1 .phone .line span{ width:69px; font-size:0.825rem; } .Ruogu_jiaM1 .phone .free span{ width:72px; font-size:0.825rem; } .Ruogu_jiaM1 .ul1{ margin-left:2%; } .Ruogu_jiaM1 .ul2{ margin-left:2%; } .Ruogu_jiaM1 .phone { width: 28%; } } @media (min-width: 376px) and (max-width: 395px){ .Ruogu_jiaM1 .ruodetail dd{ height:8px; line-height:9px;} } @media (min-width: 396px) and (max-width: 415px){ .Ruogu_jiaM1 .ruodetail dd{ height:16px; line-height:20px;} } @media (min-width: 341px) and (max-width: 359px){ .Ruogu_jiaM1 .ruodetail dd{ margin-top:16px; } } .ruodetail2 .ul1 li i{ font-size:0.75rem; font-style:italic; } .Ruogu_jiaM1 .ruodetail dl dt a img { max-width: 298px; border-radius:4px 4px 4px 4px; } #font b{ color:#d90000; } .returntop { bottom: 60px; display: block; position: fixed; right: 8px; z-index: 1300; width: 1.7066rem; height: 1.7066rem; } @media screen and (max-device-width: 480px){ body{ -webkit-text-size-adjust: none; } }</style></head>
     <script>function goBack() {
             javascript: history.back();
         }</script>
@@ -41,7 +41,7 @@
         <a href="javaScript:;"  class="wy_download" id="downLoad" onClick="func()"><i></i>下载客户端</a></div>-->
         <div class="top-header">
             <a class="close fl" onclick="$('.top-header').hide();"></a>
-            <img class="top-log fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6f271-8932.png">
+            <img class="top-log fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6f271-8932.png">
             <ul class="top-wenzi fl">
                 <li style="font-size: 0.75em;color:#333;line-height: 1.2rem;">下载中国加盟网APP</li>
                 <li style="font-size: 0.625em;color:#c7c7c7;">随时随地轻松找项目</li></ul>
@@ -60,7 +60,7 @@
                     alert("请在手机端下载app");
                 }
             }</script>
-        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
+        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
         <!-- <section class="download">
         <a href="javaScript:;"  style="float:none; display:inline-block;" id="downLoad" onClick="func()">
         中国加盟网
@@ -85,7 +85,7 @@
         </script>  
         <style>
         .download {
-        background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cdcc1-5344.png") repeat-x scroll 0 0;
+        background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/cdcc1-5344.png") repeat-x scroll 0 0;
         height: 25px;
         padding-top: 5px;
         text-align: center;
@@ -106,7 +106,7 @@
         position: relative;
         }
         .download a i {
-        background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9597c-6592.png") no-repeat scroll 0 0 / 13px 13px;
+        background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9597c-6592.png") no-repeat scroll 0 0 / 13px 13px;
         display: block;
         height: 13px;
         position: absolute;
@@ -584,7 +584,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6562900/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d801b-7524.jpg" title="室美伦加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d801b-7524.jpg" title="室美伦加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6562900" />已申请加盟:
@@ -631,7 +631,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6589649/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/da670-7504.jpg" title="空间美贝壳粉生态涂料加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/da670-7504.jpg" title="空间美贝壳粉生态涂料加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6589649" />已申请加盟:
@@ -678,7 +678,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm158545/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/09426-2080.jpg" title="舒鑫e家加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/09426-2080.jpg" title="舒鑫e家加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="158545" />已申请加盟:
@@ -725,7 +725,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm137829/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" title="晨阳水漆加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg" title="晨阳水漆加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="137829" />已申请加盟:
@@ -771,7 +771,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6572154/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5d427-9238.jpg" title="欧克斯门窗加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5d427-9238.jpg" title="欧克斯门窗加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6572154" />已申请加盟:
@@ -818,7 +818,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm58277/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0a3ba-4625.jpg" title="德尔地板加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0a3ba-4625.jpg" title="德尔地板加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="58277" />已申请加盟:
@@ -864,7 +864,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm79341/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d564b-1823.jpg" title="樱花涂料加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d564b-1823.jpg" title="樱花涂料加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="79341" />已申请加盟:
@@ -910,7 +910,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6675488/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e20fe-9405.jpg" title="钛能门业加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e20fe-9405.jpg" title="钛能门业加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6675488" />已申请加盟:
@@ -957,7 +957,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6594594/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f5718-4081.jpg" title="忆江南锦缎泥加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f5718-4081.jpg" title="忆江南锦缎泥加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6594594" />已申请加盟:
@@ -1004,7 +1004,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6593563/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/44465-1091.jpg" title="VOTO沃土加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/44465-1091.jpg" title="VOTO沃土加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6593563" />已申请加盟:
@@ -1050,7 +1050,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6581027/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d3164-3737.jpg" title="荣事达管业加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d3164-3737.jpg" title="荣事达管业加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6581027" />已申请加盟:
@@ -1097,7 +1097,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm76445/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/25eca-9629.jpg" title="澳普利发门窗加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/25eca-9629.jpg" title="澳普利发门窗加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="76445" />已申请加盟:
@@ -1143,7 +1143,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm63088/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bfef6-9900.jpg" title="纤之韵-墙衣加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bfef6-9900.jpg" title="纤之韵-墙衣加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="63088" />已申请加盟:
@@ -1190,7 +1190,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm60837/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5c527-8907.jpg" title="法恩莎瓷砖加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5c527-8907.jpg" title="法恩莎瓷砖加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="60837" />已申请加盟:
@@ -1236,7 +1236,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm6582517/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9eff6-4305.jpg" title="定荣家加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9eff6-4305.jpg" title="定荣家加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="6582517" />已申请加盟:
@@ -1282,7 +1282,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm164402/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/106df-9843.jpg" title="普罗巴克加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/106df-9843.jpg" title="普罗巴克加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="164402" />已申请加盟:
@@ -1327,7 +1327,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm163471/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aca0e-6603.jpg" title="福科斯加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/aca0e-6603.jpg" title="福科斯加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="163471" />已申请加盟:
@@ -1373,7 +1373,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm163460/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c5300-2778.jpg" title="领航卫士加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c5300-2778.jpg" title="领航卫士加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="163460" />已申请加盟:
@@ -1420,7 +1420,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm163456/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0cf0a-5228.jpg" title="泰科安防加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0cf0a-5228.jpg" title="泰科安防加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="163456" />已申请加盟:
@@ -1467,7 +1467,7 @@
                     <dl>
                         <dt>
                             <a href="http://m.jmw.com.cn/xm162516/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fcc74-3296.jpg" title="大运豪门加盟"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fcc74-3296.jpg" title="大运豪门加盟"></a>
                         </dt>
                         <dd>
                             <input type="hidden" class="ajaxGetNumById" value="162516" />已申请加盟:
@@ -1559,7 +1559,7 @@
             }</script>
         <!-- 查看更多 end --></div>
         <!-- 首页底部 start -->
-        <link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/be233-6823.css">
+        <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/be233-6823.css">
         <div class="copyright">
             <p class="copy-1">
                 <a href="http://m.jmw.com.cn/">回到首页</a>
@@ -1575,7 +1575,7 @@
                 <i>
                 </i>
                 <a style="width:56px; height:12px;" href="javascript:;" onclick="gotoPC()">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/97186-8985.png"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/97186-8985.png"></a>
                 <script>function gotoPC() {
                         window.location.href = 'http://pc.jc.jmw.com.cn';
                     }</script>
@@ -1607,7 +1607,7 @@
                 $('#MCeng_fromurl_1').val(MCeng_fromurl);
             });</script>
         <script>var is_login = "unlogin";</script>
-        <style>.zp_icon{background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9b13-8560.png') no-repeat;display:inline-block;background-size:100px 100px;vertical-align:middle;} .zp_icon1{ background-position:-26px 0; width:16px; height:16px; } .zp_icon2{ background-position:-27px -24px; width:16px; height:16px; } .zp_icon3{ background-position:-27px -48px; width:18px; height:16px; } .zp_icon4{ background-position:-27px -84px; width:16px; height:16px; } .fixed_footer .doing{color:#e7625d;} .fixed_footer a.doing .zp_icon1{background-position:0 0;width:16px;height:16px;} .fixed_footer a.doing .zp_icon2{background-position:0 -24px;width:16px;height:16px;} .fixed_footer a.doing .zp_icon3{background-position:0 -48px;width:18px;height:16px;} .fixed_footer a.doing .zp_icon4{background-position:0 -84px;width:16px;height:16px;} .fixed_footer{ width:100%; height:49px; } .fixed_footer a{ width:25%; height:49px; float:left; text-align:center; font-size:0.75rem; display:block; color:#999; } .fixed_footer a i{ margin:8px auto 5px;} .more_box{ width:110px; border:1px solid #e0e1e5; border-radius:3px; position:absolute; right:10px; bottom:49px; background:#fff; display:none; } .more_box a{ display:block; height:40px; line-height:40px; border-bottom:1px solid #e0e1e5; color:#999999; font-size:0.75rem; padding-left:15px; } .more_box span{ display:block; width:11px; height:6px; position:absolute; right:25px; bottom:-6px; z-index:1000; } .more_box a i{ display:block; width:16px; height:16px; margin-top:12px; float:left; margin-right:8px; } .more_box .li2 i{ height:17px; } .gray_mask{ background:rgba(0,0,0,.7); position:fixed; top:0; left:0; width:100%; height:100%; z-index:990; display:none; } .fixed_service{ width:75%; position:absolute; right:12.5%; bottom:60px; z-index:996; display:none; } .fixed_service .p_top{ height:30px; } .fixed_service .p_top span{ display:inline-block; width:14px; height:14px; float:right; margin-top:8px; } .fixed_service .fixed_sanJiao{ display:block; width:15px; height:8px; position:absolute; right:31%; bottom:-5px; } .fixed_service2{ border-radius:6px; background:#fff; border:1px solid #e0e1e5; } .fixed_service2 .ul1{ width:87%; margin:auto; padding:10px 0 0px 0; font-size:0.75rem; } .fixed_service2 .ul1 li{ padding:14px 8px; border:1px solid #b9b9b9; border-radius:5px; position:relative; margin-bottom:10px; line-height:20px; } .fixed_service2 .ul1 li span{ display:block; width:6px; height:10px; } .fixed_service2 .ul1 .li1{ background:#fa9895; color:#fff; } .fixed_service2 .ul1 .li2{ background:#fff; } .fixed_service2 .ul1 .li1 .span1{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul1 .li2 .span2{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul2{ background:#f8f8f8; padding:15px 6.5% 0px; border-radius:6px; } .fixed_service2 .ul2 li{ line-height:30px; margin-bottom:10px; } .fixed_service2 .ul2 span{ width:16%; font-size:0.8rem; float:left; } .fixed_service2 .ul2 input{ color:#cecece;height:30px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; padding-left:6px; box-sizing:border-box; } .fixed_service2 .ul2 textarea{ height:60px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; color:#cecece; padding:10px 7px; box-sizing:border-box; } .fixed_service2 .ul2 .button{background: #e44b46; height: 32px; border: none;color: #fff;margin-left: 16%; width: 83%;display: block;border-radius: 3px;text-align: center;line-height: 30px;} .p_jmw{ line-height:90px; color:#e3e3e3; text-align:center;}</style>
+        <style>.zp_icon{background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a9b13-8560.png') no-repeat;display:inline-block;background-size:100px 100px;vertical-align:middle;} .zp_icon1{ background-position:-26px 0; width:16px; height:16px; } .zp_icon2{ background-position:-27px -24px; width:16px; height:16px; } .zp_icon3{ background-position:-27px -48px; width:18px; height:16px; } .zp_icon4{ background-position:-27px -84px; width:16px; height:16px; } .fixed_footer .doing{color:#e7625d;} .fixed_footer a.doing .zp_icon1{background-position:0 0;width:16px;height:16px;} .fixed_footer a.doing .zp_icon2{background-position:0 -24px;width:16px;height:16px;} .fixed_footer a.doing .zp_icon3{background-position:0 -48px;width:18px;height:16px;} .fixed_footer a.doing .zp_icon4{background-position:0 -84px;width:16px;height:16px;} .fixed_footer{ width:100%; height:49px; } .fixed_footer a{ width:25%; height:49px; float:left; text-align:center; font-size:0.75rem; display:block; color:#999; } .fixed_footer a i{ margin:8px auto 5px;} .more_box{ width:110px; border:1px solid #e0e1e5; border-radius:3px; position:absolute; right:10px; bottom:49px; background:#fff; display:none; } .more_box a{ display:block; height:40px; line-height:40px; border-bottom:1px solid #e0e1e5; color:#999999; font-size:0.75rem; padding-left:15px; } .more_box span{ display:block; width:11px; height:6px; position:absolute; right:25px; bottom:-6px; z-index:1000; } .more_box a i{ display:block; width:16px; height:16px; margin-top:12px; float:left; margin-right:8px; } .more_box .li2 i{ height:17px; } .gray_mask{ background:rgba(0,0,0,.7); position:fixed; top:0; left:0; width:100%; height:100%; z-index:990; display:none; } .fixed_service{ width:75%; position:absolute; right:12.5%; bottom:60px; z-index:996; display:none; } .fixed_service .p_top{ height:30px; } .fixed_service .p_top span{ display:inline-block; width:14px; height:14px; float:right; margin-top:8px; } .fixed_service .fixed_sanJiao{ display:block; width:15px; height:8px; position:absolute; right:31%; bottom:-5px; } .fixed_service2{ border-radius:6px; background:#fff; border:1px solid #e0e1e5; } .fixed_service2 .ul1{ width:87%; margin:auto; padding:10px 0 0px 0; font-size:0.75rem; } .fixed_service2 .ul1 li{ padding:14px 8px; border:1px solid #b9b9b9; border-radius:5px; position:relative; margin-bottom:10px; line-height:20px; } .fixed_service2 .ul1 li span{ display:block; width:6px; height:10px; } .fixed_service2 .ul1 .li1{ background:#fa9895; color:#fff; } .fixed_service2 .ul1 .li2{ background:#fff; } .fixed_service2 .ul1 .li1 .span1{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul1 .li2 .span2{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul2{ background:#f8f8f8; padding:15px 6.5% 0px; border-radius:6px; } .fixed_service2 .ul2 li{ line-height:30px; margin-bottom:10px; } .fixed_service2 .ul2 span{ width:16%; font-size:0.8rem; float:left; } .fixed_service2 .ul2 input{ color:#cecece;height:30px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; padding-left:6px; box-sizing:border-box; } .fixed_service2 .ul2 textarea{ height:60px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; color:#cecece; padding:10px 7px; box-sizing:border-box; } .fixed_service2 .ul2 .button{background: #e44b46; height: 32px; border: none;color: #fff;margin-left: 16%; width: 83%;display: block;border-radius: 3px;text-align: center;line-height: 30px;} .p_jmw{ line-height:90px; color:#e3e3e3; text-align:center;}</style>
         <div class="gray_mask"></div>
         <div style="width:100%; height:49px; border-top:1px solid #e0e1e5; background:#fff; position:fixed; bottom:0; left:0; z-index:999;">
             <div class="fixed_footer clear">
@@ -1627,35 +1627,35 @@
             <div class="more_box" id="more_box">
                 <a href="http://bbs.jmw.com.cn/" class="li1">
                     <i>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5061c-8123.png" alt="" /></i>论坛</a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5061c-8123.png" alt="" /></i>论坛</a>
                 <a href="http://m.jmw.com.cn/usercenter/footprint.php" class="li2">
                     <i>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/edf77-6051.png" alt="" /></i>足迹</a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/edf77-6051.png" alt="" /></i>足迹</a>
                 <a href="http://m.jmw.com.cn/usercenter/grzx.php" class="li3" style="border-bottom:none;">
                     <i>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bce2b-5485.png" alt="" /></i>个人中心</a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bce2b-5485.png" alt="" /></i>个人中心</a>
                 <span>
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fb6dd-1992.png" alt="" /></span>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fb6dd-1992.png" alt="" /></span>
             </div>
             <!-- 客服论坛 -->
             <div class="fixed_service" id="fixed_service">
                 <form action="" method="post" id="m_footer">
                     <p class="clear p_top" id="fixedp_top">
                         <span>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d1c4a-6203.png" alt="" /></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d1c4a-6203.png" alt="" /></span>
                     </p>
                     <div class="fixed_service2">
                         <ul class="ul1">
                             <li class="li1">
                                 <p>您好,欢迎光临中国加盟网</p>
                                 <span class="span1">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/266e0-2266.png" alt="" /></span>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/266e0-2266.png" alt="" /></span>
                             </li>
                             <li class="li2">
                                 <p>请问有什么需要咨询的？</p>
                                 <p>您可以先留下联系方式，我们稍后会联系您。</p>
                                 <span class="span2">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6b222-5826.png" alt="" /></span>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6b222-5826.png" alt="" /></span>
                             </li>
                         </ul>
                         <ul class="ul2">
@@ -1678,7 +1678,7 @@
                     <input type="hidden" name="MFoot_fromurl" id="MCeng_fromurl_1" />
                     <input type="hidden" name="message_num" id="message_num_m" value="1" />
                     <span class="fixed_sanJiao">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2e025-6056.png" alt="" /></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2e025-6056.png" alt="" /></span>
                 </form>
             </div>
         </div>
@@ -1797,7 +1797,7 @@
                 }
             }</script>
         <!-- 公共短信验证 -->
-        <link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css">
+        <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css">
         <div class="Pline_consult" id="Pline_Message" style="display:none;">
             <script>function Auto_trigger() {
                     var curCount = 60;
@@ -2046,7 +2046,7 @@
         <!-- 公共底部 end -->
         <!-- 项目页底部定位 endd -->
         <a class="returntop" href="#top" style="display: none;">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41560-7162.png"></a>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
         <script>$(document).scroll(function() {
                 var top = $(document).scrollTop();
                 if (top == 0) {

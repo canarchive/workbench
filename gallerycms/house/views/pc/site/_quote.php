@@ -47,7 +47,7 @@
                         <div class='seekContentMiddleL fl '>
                             <div>
                                 <a href="http://zhaoming.jmw.com.cn/zhaominjiamengzixun/17417010.html" title="国家重点新产品计划 天雄榜上有名加盟">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/64919-4943.png" alt="国家重点新产品计划 天雄榜上有名"></a>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/64919-4943.png" alt="国家重点新产品计划 天雄榜上有名"></a>
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>
@@ -74,7 +74,7 @@
                     <div class='seekContentMiddle clear'>
                         <div class='seekContentMiddleL fl '>
                             <a href="http://www.jc.jmw.com.cn/jiancaizhaoshangyouhuisudi/17369846.html " title="品位生活灯饰优惠：品动四月 签约送礼加盟">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a2d10-7480.jpg" alt="品位生活灯饰优惠：品动四月 签约送礼"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a2d10-7480.jpg" alt="品位生活灯饰优惠：品动四月 签约送礼"></a>
                         </div>
                         <div class='seekContentMiddleR fl'>
                             <a href='http://www.jc.jmw.com.cn/jiancaizhaoshangyouhuisudi/17369846.html' class='oneLine' title="品位生活灯饰优惠：品动四月 签约送礼加盟">品位生活灯饰优惠：品动四月 签约送礼</a>
@@ -109,11 +109,11 @@
                         <div class='seekContentMiddleL fl '>
                             <div>
                                 <a href="http://www.jc.jmw.com.cn/jiancaipinpaidongtai/17550584.html" title="小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术加盟">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e0079-1819.png" alt="小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术"></a>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e0079-1819.png" alt="小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术"></a>
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>
-                            <a href='http://www.jc.jmw.com.cn/jiancaipinpaidongtai/17550584.html' class='oneLine' title='小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e0079-1819.png加盟' alt='小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术'>小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术</a>
+                            <a href='http://www.jc.jmw.com.cn/jiancaipinpaidongtai/17550584.html' class='oneLine' title='小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e0079-1819.png加盟' alt='小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术'>小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术</a>
                             <p class='twoLine'>小型塑料粉碎机怎样？小型塑料粉碎机主要用于破碎各种塑性塑......
                                 <a href="http://www.jc.jmw.com.cn/jiancaipinpaidongtai/17550584.html" title="小型塑料粉碎机怎样？小型塑料粉碎机主件配置及核心技术加盟">[详细]</a></p>
                         </div>
@@ -137,7 +137,7 @@
                         <div class='seekContentMiddleL fl '>
                             <div>
                                 <a href="http://zhaoming.jmw.com.cn/zhaomindianjingyingjiqiao/16778742.html" title="灯具加盟连锁的营销策略加盟">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5392d-4700.png" alt="灯具加盟连锁的营销策略"></a>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5392d-4700.png" alt="灯具加盟连锁的营销策略"></a>
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>
@@ -173,7 +173,7 @@
                         <div class='seekContentMiddleL fl '>
                             <div>
                                 <a href="http://www.jc.jmw.com.cn/jiancairuhexuanxiangmu/17533690.html" title="锦缎泥已成系列产品，锦缎泥B型正式上市啦！！加盟">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/42d62-6138.jpg" alt="锦缎泥已成系列产品，锦缎泥B型正式上市啦！！"></a>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/42d62-6138.jpg" alt="锦缎泥已成系列产品，锦缎泥B型正式上市啦！！"></a>
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>
@@ -201,7 +201,7 @@
                         <div class='seekContentMiddleL fl '>
                             <div>
                                 <a href="http://www.jc.jmw.com.cn/ruhekaijiancaidian/17533058.html" title="人造石建材加盟店的导购要懂得推销产品加盟">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cec13-7687.jpg" alt="人造石建材加盟店的导购要懂得推销产品"></a>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cec13-7687.jpg" alt="人造石建材加盟店的导购要懂得推销产品"></a>
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>

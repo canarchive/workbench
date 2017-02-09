@@ -7,16 +7,16 @@
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <meta name="description" content="手机中国加盟网为您提供真实的晨阳水漆加盟品牌图片，为您展示晨阳水漆晨阳水漆,助您创业成功!" />
         <meta name="keywords" content="晨阳水漆产品图片，晨阳水漆加盟店实景图片，晨阳水漆加盟店装修图片，晨阳水漆加盟品牌图库，晨阳水漆加盟品牌图片，晨阳水漆图库 " />
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/95055-5881.css" />
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/35df6-9609.css" />
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/jquery-1.10.2.min.js"></script>
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/public.js" type="text/javascript"></script>
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/platj_util.js" type="text/javascript"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/getattentioncountbyajax.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/addpageview.js"></script>
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/c3a8c-8745.css">
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/tongji.js"></script>
-        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/tongji_m.js"></script>
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/95055-5881.css" />
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/35df6-9609.css" />
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/jquery-1.10.2.min.js"></script>
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/public.js" type="text/javascript"></script>
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/platj_util.js" type="text/javascript"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/getattentioncountbyajax.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/addpageview.js"></script>
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/c3a8c-8745.css">
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/tongji.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/tongji_m.js"></script>
     </head>
     <script>function goBack() {
             javascript: history.back();
@@ -32,7 +32,7 @@
         <a href="javaScript:;"  class="wy_download" id="downLoad" onClick="func()"><i></i>下载客户端</a></div>-->
         <div class="top-header">
             <a class="close fl" onclick="$('.top-header').hide();"></a>
-            <img class="top-log fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6f271-8932.png">
+            <img class="top-log fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6f271-8932.png">
             <ul class="top-wenzi fl">
                 <li style="font-size: 0.75em;color:#333;line-height: 1.2rem;">下载中国加盟网APP</li>
                 <li style="font-size: 0.625em;color:#c7c7c7;">随时随地轻松找项目</li></ul>
@@ -51,7 +51,7 @@
                     alert("请在手机端下载app");
                 }
             }</script>
-        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
+        <style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
         <!-- <section class="download">
         <a href="javaScript:;"  style="float:none; display:inline-block;" id="downLoad" onClick="func()">
         中国加盟网
@@ -76,7 +76,7 @@
         </script>  
         <style>
         .download {
-        background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cdcc1-5344.png") repeat-x scroll 0 0;
+        background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/cdcc1-5344.png") repeat-x scroll 0 0;
         height: 25px;
         padding-top: 5px;
         text-align: center;
@@ -97,7 +97,7 @@
         position: relative;
         }
         .download a i {
-        background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9597c-6592.png") no-repeat scroll 0 0 / 13px 13px;
+        background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9597c-6592.png") no-repeat scroll 0 0 / 13px 13px;
         display: block;
         height: 13px;
         position: absolute;
@@ -122,7 +122,7 @@
         <section class="guanWang2">
             <dl class="clear">
                 <dt class="fl">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" alt="晨阳水漆加盟" title="晨阳水漆加盟" /></dt>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f3dc5-2512.jpg" alt="晨阳水漆加盟" title="晨阳水漆加盟" /></dt>
                 <dd class="fl">
                     <h2>晨阳水漆品牌图库</h2>
                     <p>
@@ -143,231 +143,231 @@
             <section class="picture_sect">
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" alt="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg" alt="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg" alt="晨阳水漆加盟 晨阳   然采丝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4634b-4708.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4634b-4708.jpg" alt="晨阳水漆加盟 晨阳   然采丝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg" alt="晨阳水漆加盟 晨阳   然采丽   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg" alt="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg" alt="晨阳水漆加盟 晨阳    然采贝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7d5b7-1645.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7d5b7-1645.jpg" alt="晨阳水漆加盟 晨阳    天然净味抗碱底漆    水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/004c6-4388.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/004c6-4388.jpg" alt="晨阳水漆加盟 晨阳   然采丽   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae8d3-3278.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae8d3-3278.jpg" alt="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/29be4-6543.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/29be4-6543.jpg" alt="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a09f-9807.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a09f-9807.jpg" alt="晨阳水漆加盟 晨阳   天然净味抗甲醛   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d0559-9249.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d0559-9249.jpg" alt="晨阳水漆加盟 晨阳    然采贝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12b86-5439.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12b86-5439.jpg" alt="晨阳水漆加盟 晨阳   天然净味荷 叶  水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee63a-3128.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee63a-3128.jpg" alt="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2be98-4293.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2be98-4293.jpg" alt="晨阳水漆加盟 晨阳  居美加  水性内墙底漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5bbd8-9815.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5bbd8-9815.jpg" alt="晨阳水漆加盟 晨阳  居美仕  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7d5b7-1645.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7d5b7-1645.jpg" alt="晨阳水漆加盟 晨阳    天然净味抗碱底漆    水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35cf0-8630.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35cf0-8630.jpg" alt="晨阳水漆加盟 晨阳   居美清   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ae8d3-3278.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ae8d3-3278.jpg" alt="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/778c7-6383.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/778c7-6383.jpg" alt="晨阳水漆加盟 晨阳   居美净   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a09f-9807.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a09f-9807.jpg" alt="晨阳水漆加盟 晨阳   天然净味抗甲醛   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72c23-3918.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72c23-3918.jpg" alt="晨阳水漆加盟 晨阳   居美易   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1d533-3965.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1d533-3965.jpg" alt="晨阳水漆加盟 晨阳  水性地坪底漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2d1b3-3867.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2d1b3-3867.jpg" alt="晨阳水漆加盟 晨阳  水性地坪面漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de9fa-1503.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de9fa-1503.jpg" alt="晨阳水漆加盟 晨阳   水性罩光工业漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/12b86-5439.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/12b86-5439.jpg" alt="晨阳水漆加盟 晨阳   天然净味荷 叶  水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac18e-8966.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac18e-8966.jpg" alt="晨阳水漆加盟 晨阳   水性银粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ee63a-3128.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ee63a-3128.jpg" alt="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47995-6687.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47995-6687.jpg" alt="晨阳水漆加盟 晨阳  水性金粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2be98-4293.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2be98-4293.jpg" alt="晨阳水漆加盟 晨阳  居美加  水性内墙底漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c9fb9-5650.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c9fb9-5650.jpg" alt="晨阳水漆加盟 晨阳   水性调和漆工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2159e-5106.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2159e-5106.jpg" alt="晨阳水漆加盟 晨阳   水性磁漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7e24c-1899.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7e24c-1899.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构工业漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1c3f8-1531.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1c3f8-1531.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构专用漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5bbd8-9815.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5bbd8-9815.jpg" alt="晨阳水漆加盟 晨阳  居美仕  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/346f7-4715.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/346f7-4715.jpg" alt="晨阳水漆加盟 晨阳  水性装饰工业漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/35cf0-8630.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/35cf0-8630.jpg" alt="晨阳水漆加盟 晨阳   居美清   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8d158-8404.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8d158-8404.jpg" alt="晨阳水漆加盟 晨阳   水性高级外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/778c7-6383.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/778c7-6383.jpg" alt="晨阳水漆加盟 晨阳   居美净   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/077f2-2612.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/077f2-2612.jpg" alt="晨阳水漆加盟 晨阳   碧丽团   水性外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b745b-8341.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b745b-8341.jpg" alt="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/151a8-8495.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/151a8-8495.jpg" alt="晨阳水漆加盟 晨阳   碧丽阳   水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8321a-5349.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8321a-5349.jpg" alt="晨阳水漆加盟 晨阳  碧丽晨  水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/72c23-3918.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/72c23-3918.jpg" alt="晨阳水漆加盟 晨阳   居美易   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/900fe-8241.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/900fe-8241.jpg" alt="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1d533-3965.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1d533-3965.jpg" alt="晨阳水漆加盟 晨阳  水性地坪底漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aee56-7403.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aee56-7403.jpg" alt="晨阳水漆加盟 晨阳   欧得若   水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2d1b3-3867.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2d1b3-3867.jpg" alt="晨阳水漆加盟 晨阳  水性地坪面漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8e1aa-8654.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8e1aa-8654.jpg" alt="晨阳水漆加盟 晨阳   清晨之源  水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/47e6a-8084.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/47e6a-8084.jpg" alt="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/093fa-4006.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/093fa-4006.jpg" alt="晨阳水漆加盟 晨阳  海之吻  水性多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3fdf7-1433.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3fdf7-1433.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用  擦色宝" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/de9fa-1503.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/de9fa-1503.jpg" alt="晨阳水漆加盟 晨阳   水性罩光工业漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3207d-3312.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3207d-3312.jpg" alt="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ac18e-8966.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ac18e-8966.jpg" alt="晨阳水漆加盟 晨阳   水性银粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9008-2992.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9008-2992.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用腻子" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/47995-6687.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/47995-6687.jpg" alt="晨阳水漆加盟 晨阳  水性金粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b0ac2-8557.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b0ac2-8557.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣2代  水性木器漆" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
-                    </li>
-                </ul>
-                <ul class="clear">
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ea752-8364.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ea752-8364.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b6ed0-7478.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b6ed0-7478.jpg" alt="晨阳水漆加盟 晨阳沐雅文   水性木器封闭底漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
-                    </li>
-                    <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e071c-1603.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e071c-1603.jpg" alt="晨阳水漆加盟 防腐漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c9fb9-5650.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c9fb9-5650.jpg" alt="晨阳水漆加盟 晨阳   水性调和漆工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ec89-7791.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ec89-7791.jpg" alt="晨阳水漆加盟 防锈漆" title="晨阳水漆加盟 防锈漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2159e-5106.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2159e-5106.jpg" alt="晨阳水漆加盟 晨阳   水性磁漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/961a1-3558.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/961a1-3558.jpg" alt="晨阳水漆加盟 沐雅欣" title="晨阳水漆加盟 防锈漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/7e24c-1899.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/7e24c-1899.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构工业漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/28680-9550.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/28680-9550.jpg" alt="晨阳水漆加盟 沐雅静" title="晨阳水漆加盟 防锈漆" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/1c3f8-1531.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/1c3f8-1531.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构专用漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
                     </li>
                 </ul>
                 <ul class="clear">
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5740a-9622.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5740a-9622.jpg" alt="晨阳水漆加盟 碧丽吉" title="晨阳水漆加盟 碧丽吉" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/346f7-4715.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/346f7-4715.jpg" alt="晨阳水漆加盟 晨阳  水性装饰工业漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3482e-4568.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3482e-4568.jpg" alt="晨阳水漆加盟 居美仕中档" title="晨阳水漆加盟 碧丽吉" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8d158-8404.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8d158-8404.jpg" alt="晨阳水漆加盟 晨阳   水性高级外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
                     </li>
                     <li>
-                        <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a31b-7372.jpg">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a31b-7372.jpg" alt="晨阳水漆加盟 居美仕" title="晨阳水漆加盟 碧丽吉" /></a>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/077f2-2612.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/077f2-2612.jpg" alt="晨阳水漆加盟 晨阳   碧丽团   水性外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b745b-8341.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b745b-8341.jpg" alt="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/151a8-8495.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/151a8-8495.jpg" alt="晨阳水漆加盟 晨阳   碧丽阳   水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8321a-5349.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8321a-5349.jpg" alt="晨阳水漆加盟 晨阳  碧丽晨  水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/900fe-8241.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/900fe-8241.jpg" alt="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/aee56-7403.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/aee56-7403.jpg" alt="晨阳水漆加盟 晨阳   欧得若   水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8e1aa-8654.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/8e1aa-8654.jpg" alt="晨阳水漆加盟 晨阳   清晨之源  水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/47e6a-8084.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/47e6a-8084.jpg" alt="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/093fa-4006.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/093fa-4006.jpg" alt="晨阳水漆加盟 晨阳  海之吻  水性多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3fdf7-1433.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3fdf7-1433.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用  擦色宝" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3207d-3312.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3207d-3312.jpg" alt="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a9008-2992.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a9008-2992.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用腻子" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b0ac2-8557.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b0ac2-8557.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣2代  水性木器漆" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ea752-8364.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ea752-8364.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b6ed0-7478.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b6ed0-7478.jpg" alt="晨阳水漆加盟 晨阳沐雅文   水性木器封闭底漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e071c-1603.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e071c-1603.jpg" alt="晨阳水漆加盟 防腐漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ec89-7791.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ec89-7791.jpg" alt="晨阳水漆加盟 防锈漆" title="晨阳水漆加盟 防锈漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/961a1-3558.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/961a1-3558.jpg" alt="晨阳水漆加盟 沐雅欣" title="晨阳水漆加盟 防锈漆" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/28680-9550.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/28680-9550.jpg" alt="晨阳水漆加盟 沐雅静" title="晨阳水漆加盟 防锈漆" /></a>
+                    </li>
+                </ul>
+                <ul class="clear">
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5740a-9622.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5740a-9622.jpg" alt="晨阳水漆加盟 碧丽吉" title="晨阳水漆加盟 碧丽吉" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3482e-4568.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/3482e-4568.jpg" alt="晨阳水漆加盟 居美仕中档" title="晨阳水漆加盟 碧丽吉" /></a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3a31b-7372.jpg">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3a31b-7372.jpg" alt="晨阳水漆加盟 居美仕" title="晨阳水漆加盟 碧丽吉" /></a>
                     </li>
                 </ul>
             </section>
         </div>
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/touchtouch.jquery.js"></script>
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/touchtouch.jquery.js"></script>
         <script>$(function() {
                 $('#thumbs a').touchTouch();
             });</script>
@@ -385,7 +385,7 @@
                 <li>
                     <dl class="mass-1 fl">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/79506-4799.jpg" alt=""></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/79506-4799.jpg" alt=""></dt>
                         <dt style="margin-bottom: 6px;">鲍先生</dt>
                         <dt>网页版</dt></dl>
                     <ul class="mass-2 fr">
@@ -393,13 +393,13 @@
                         </i>
                         <li class="mass-2-1">IP：121.17.120.*
                             <span class="fr">留言时间:2017-01-17 15:43:09</span>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
                         <li class="mass-2-2">资金看项目</li></ul>
                 </li>
                 <li>
                     <dl class="mass-1 fl">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" alt=""></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5448b-6171.jpg" alt=""></dt>
                         <dt style="margin-bottom: 6px;">吴正军</dt>
                         <dt>网页版</dt></dl>
                     <ul class="mass-2 fr">
@@ -407,13 +407,13 @@
                         </i>
                         <li class="mass-2-1">IP：180.174.146.*
                             <span class="fr">留言时间:2017-01-17 15:11:13</span>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
                         <li class="mass-2-2">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
                 </li>
                 <li>
                     <dl class="mass-1 fl">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" alt=""></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5448b-6171.jpg" alt=""></dt>
                         <dt style="margin-bottom: 6px;">陆前锋</dt>
                         <dt>网页版</dt></dl>
                     <ul class="mass-2 fr">
@@ -421,13 +421,13 @@
                         </i>
                         <li class="mass-2-1">IP：58.40.195.*
                             <span class="fr">留言时间:2017-01-16 15:19:31</span>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;" /></li>
                         <li class="mass-2-2">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
                 </li>
                 <li>
                     <dl class="mass-1 fl">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6989f-5450.jpg" alt=""></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6989f-5450.jpg" alt=""></dt>
                         <dt style="margin-bottom: 6px;">李总</dt>
                         <dt>手机版</dt></dl>
                     <ul class="mass-2 fr">
@@ -579,7 +579,7 @@
                 }
 
             }</script>
-        <style>.icon_sex5{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
+        <style>.icon_sex5{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
         <!--我要咨询项目 end-->
         <!-- 晨阳水漆相关信息项目 -->
         <!-- 廖排骨相关信息项目 -->
@@ -880,13 +880,13 @@
                 }
             }</script>
         <!--<ul class="xm_footer">
-        <li class="xm_ico1 fl"><a href="javascript:;" onclick="addTelForWap(137829,1,'4000500555,95542');"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/dddd7-9769.png">免费通话</a></li>
-        <li class="xm_ico2 fl"><a onclick="$('.black-all').show();$('#n_content').val('请问晨阳水漆企业电话是多少？');$('#origin').val(9);"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/dcf8d-7090.png"><span>索要企业电话</span></a></li>
+        <li class="xm_ico1 fl"><a href="javascript:;" onclick="addTelForWap(137829,1,'4000500555,95542');"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/dddd7-9769.png">免费通话</a></li>
+        <li class="xm_ico2 fl"><a onclick="$('.black-all').show();$('#n_content').val('请问晨阳水漆企业电话是多少？');$('#origin').val(9);"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/dcf8d-7090.png"><span>索要企业电话</span></a></li>
         <li class="xm_ico3 fl"><a onclick="$('.tm_bg').show()&amp;&amp;$('.J-extent').show();$('#zj_origin').val('1');$('#contents').val('请问投资晨阳水漆所需要的费用有哪些?');"><span>在线咨询</span></a></li></ul>-->
         <!-- 项目页底部定位 stop -->
-        <style>.xm_footer { position: fixed; bottom: 0; left: 0; z-index: 200; width: 100%; height: 48px; background: #f9f9f9; } .xm_footer .xm_ico1,.xm_footer .xm_ico2{border-right: 1px solid #E0E1E5;box-sizing: border-box;border-top: 1px solid #e0e1e5;} .xm_ico1,.xm_ico2{width: 30%;height:100%;position: relative;} .xm_footer .xm_ico3{width: 40%;background: #E44B46;color: #ffffff;} .xm_footer li a { display: block; color: #666666; text-align: center; font-size: 0.725em; line-height: 66px; } .xm_footer .xm_ico3 a{color: #ffffff;font-size: 0.8em;line-height: 48px;} .xm_footer .xm_ico1 img,.xm_footer .xm_ico2 img{width: 15px;height: 15px;display: block;position: absolute;top:6px;left:50%;margin-left: -7.5px;} .icon_sex1{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_liu_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
+        <style>.xm_footer { position: fixed; bottom: 0; left: 0; z-index: 200; width: 100%; height: 48px; background: #f9f9f9; } .xm_footer .xm_ico1,.xm_footer .xm_ico2{border-right: 1px solid #E0E1E5;box-sizing: border-box;border-top: 1px solid #e0e1e5;} .xm_ico1,.xm_ico2{width: 30%;height:100%;position: relative;} .xm_footer .xm_ico3{width: 40%;background: #E44B46;color: #ffffff;} .xm_footer li a { display: block; color: #666666; text-align: center; font-size: 0.725em; line-height: 66px; } .xm_footer .xm_ico3 a{color: #ffffff;font-size: 0.8em;line-height: 48px;} .xm_footer .xm_ico1 img,.xm_footer .xm_ico2 img{width: 15px;height: 15px;display: block;position: absolute;top:6px;left:50%;margin-left: -7.5px;} .icon_sex1{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_sex2{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;} .icon_liu_sex2{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
         <!-- 标项页讯加盟低价 -->
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css" />
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css" />
         <div class="gray_mask" style="display:none;"></div>
         <div class="Pline_consult" style="display:none;" id="Pline_consult">
             <form action="" method="post" id="form1">
@@ -1018,21 +1018,21 @@
         <!--新增弹框 end-->
         <!-- 我要留言 -->
         <style type="text/css">.gray_mask{ background:rgba(0,0,0,.4); position:fixed; top:0; left:0; width:100%; height:100%; z-index:990; display:none; } .I_speak{ width:100%; height:41px; background:#404042; margin-top:4px; position:fixed; bottom:0; z-index:990;} .I_speak .li_left{ width:17.5%; background:#252724; color:#fff; height:41px; text-align:center; font-size:0.75rem; position:relative; } .I_speak .li_left i{ position:absolute; display:block; width:17px; height:17px; top:1px; right:14%; } .I_speak .li_left p{ margin-top:6px; line-height:16px; } .I_speak .li_center{ width:62%; } .I_speak .li_center input{ width:91.5%; height:31px; margin:4px auto; background:#e4e1e1; color:#a5a5a5; border:none; border-radius:6px; padding-left:13px; box-sizing:border-box; display:block; } .I_speak .li_right{ width:16%; background:#169e16; height:31px; border-radius:5px; margin-top:4px; } .I_speak .li_right dl{ margin:auto; width:81%; } .I_speak .li_right dt{ width:15px; height:15px; margin-top:8px ; } .I_speak .li_right dd{ font-size:0.75rem; color:#fff; line-height:14px; margin-left:6px;margin-top:2px;} @media (min-width:320px) and (max-width:365px){ .I_speak .li_right dd{ margin-left:2px;margin-top:2px;} } @media screen and (min-width:384px){ .I_speak .li_right dl{ margin:auto; width:74%; } } .Pline_consultL{ background:#fff; width:83%; position:fixed; left:8.5%; top:20%; border-radius:10px; z-index:1305; display:none; } .Pline_consultL .P_title1{ height:45px; line-height:45px; text-align:center; border-bottom:1px solid #e8e8e8; font-size:0.95rem; } .Pline_consultL ul li{ line-height:42px; padding:0 3%; border-bottom:1px solid #e8e8e8; font-size:0.8rem;} .Pline_consultL ul li .text{ width:33%; height:28px;font-size:0.85rem; color:#999; box-sizing:border-box; padding-left:3px; margin-left:3px; border:medium none; } .Pline_consultL ul li .button{ width:32%; height:28px; border:1px solid #e10000; color:#e10000; line-height:28px; text-align:center; background:#fff; margin-top:8px; padding:0; border-radius:2px; } .Pline_consultL .li_sex{ font-size:0.8rem; margin-right:8px; } .Pline_consultL ul li span .em1{ float:left; color:#e10000; margin-right:2px;} .Pline_consultL ul li textarea{ height:40px; font-family: "微软雅黑";width:81%;font-size:0.85rem; margin-left:3px; margin-top:10px; line-height:20px; color:#999; border:medium none; } @media screen and (max-width:330px){ .Pline_consultL ul li textarea{ width:79%; } } .Pline_consultL ul .li5{ height:46px; line-height:46px; border-bottom:none;} .Pline_consultL ul li a{ text-align:center; width:50%; display:inline-block; font-size:0.95rem; } .Pline_consultL ul .a1{ border-right:1px solid #e8e8e8; box-sizing:border-box; color:#cdcdcd; } .Pline_consultL ul .a2{ color:#4283e4; }</style>
-        <script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/webcall.js"></script>
-        <script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/iscroll.js"></script>
+        <script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/webcall.js"></script>
+        <script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/iscroll.js"></script>
         <ul class="I_speak clear">
             <li class="fl li_left" onclick="$('.Pline_consultL').show();$('.gray_mask').show();">
                 <p>我要
                     <br />留言</p>
                 <i>
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2de72-9761.png" alt="" /></i>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2de72-9761.png" alt="" /></i>
             </li>
             <li class="fl li_center">
                 <input type="text" name="phone" id="si_mobel" value="输入您的电话:138******10" onfocus="if(this.value=='输入您的电话:138******10'){this.value=''}" onblur="if(this.value==''){this.value='输入您的电话:138******10'}" maxlength="11" /></li>
             <li class="fl li_right" onclick="si_Webcall();return false;">
                 <dl class="clear">
                     <dt class="fl">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/00698-5306.png" alt="" /></dt>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/00698-5306.png" alt="" /></dt>
                     <dd class="fl">在线
                         <br />咨询</dd>
                     <input type="hidden" name="tid" id="si_tid" value="137829">

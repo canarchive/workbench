@@ -99,7 +99,7 @@
                                     <p>
                                         <strong>您可以根据意向选择下列[快捷留言]</strong>
                                         <a href="javascript:;" onclick="jQuery('#secly_0000').hide();">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3bb8b-4720.gif" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3bb8b-4720.gif" /></a>
                                     </p>
                                     <ul id="messageUl" class='clearfix'>
                                         <li>
@@ -337,7 +337,7 @@
     </div>
     <div class="reportZ_Z_cont clearfix">
         <div class="coot_Img">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/150a8-3384.png" /></div>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/150a8-3384.png" /></div>
         <dl>
             <dt>请将投诉内容发送到指定邮箱</dt>
             <dd>邮箱地址：</dd>
@@ -367,4 +367,4 @@
             });
         });
     });</script>
-<script type="text/javascript" async="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/ga.js"></script>
+<script type="text/javascript" async="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/ga.js"></script>

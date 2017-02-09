@@ -37,7 +37,7 @@
                         <div class="many_jiaMLbtCon clear">
                             <div class="jiaM_navs clear">
                                 <p class="prev clear">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5191c-5835.png" alt="" /></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5191c-5835.png" alt="" /></p>
                                 <ul class="ul_jsNav fl clear">
                                     <li class="navs_select">
                                         <a href="http://www.cy.jmw.com.cn/" target="_blank" title="餐饮品牌加盟">餐饮品牌加盟</a></li>
@@ -61,7 +61,7 @@
                                         <a href="http://www.jj.jmw.com.cn/" target="_blank" title="家居品牌加盟">家居品牌加盟</a></li>
                                 </ul>
                                 <p class="next clear ">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f958-5786.png" alt="" /></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f958-5786.png" alt="" /></p>
                             </div>
                             <div class="jsNav_bottomBoss clear">
                                 <div class="jsNav_bottom dis_b clear">
@@ -97,43 +97,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6585473/" title="紫光美食云加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d9ebe-9353.jpg" alt="紫光美食云加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d9ebe-9353.jpg" alt="紫光美食云加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6649634/" title="爱麦思加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f55f3-8917.jpg" alt="爱麦思加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f55f3-8917.jpg" alt="爱麦思加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6649630/" title="东时便当加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/96eb9-7568.jpg" alt="东时便当加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/96eb9-7568.jpg" alt="东时便当加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6595088/" title="饿狼串说加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/97788-5840.jpg" alt="饿狼串说加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/97788-5840.jpg" alt="饿狼串说加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm209554/" title="成桂西餐厅加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/83655-2146.jpg" alt="成桂西餐厅加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/83655-2146.jpg" alt="成桂西餐厅加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm152544/" title="卡乐滋汉堡加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1ceb1-1568.jpg" alt="卡乐滋汉堡加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1ceb1-1568.jpg" alt="卡乐滋汉堡加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6624475/" title="巴比酷肉蟹煲加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ed98-9760.jpg" alt="巴比酷肉蟹煲加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9ed98-9760.jpg" alt="巴比酷肉蟹煲加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6624270/" title="勾馋麻辣烫加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f9fbb-7690.jpg" alt="勾馋麻辣烫加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f9fbb-7690.jpg" alt="勾馋麻辣烫加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6578773/" title="kiumi韩式美食屋加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/79fb4-2680.jpg" alt="kiumi韩式美食屋加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/79fb4-2680.jpg" alt="kiumi韩式美食屋加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm153328/" title="四海缘老火锅加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee72f-5984.jpg" alt="四海缘老火锅加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ee72f-5984.jpg" alt="四海缘老火锅加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -154,43 +154,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6597666/" title="能力风暴机器人加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f03c-5060.jpg" alt="能力风暴机器人加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f03c-5060.jpg" alt="能力风暴机器人加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm210499/" title="阳光喔作文培训加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae38b-6624.jpg" alt="阳光喔作文培训加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ae38b-6624.jpg" alt="阳光喔作文培训加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm1103/" title="昂立国际教育加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/41bce-3464.jpg" alt="昂立国际教育加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/41bce-3464.jpg" alt="昂立国际教育加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm63014/" title="北大青鸟IT职业教育加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/61511-5880.jpg" alt="北大青鸟IT职业教育加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/61511-5880.jpg" alt="北大青鸟IT职业教育加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6574915/" title="文新学堂加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/68db3-1324.jpg" alt="文新学堂加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/68db3-1324.jpg" alt="文新学堂加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm86635/" title="爱贝国际少儿英语加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/85df6-8603.jpg" alt="爱贝国际少儿英语加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/85df6-8603.jpg" alt="爱贝国际少儿英语加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6676540/" title="泺喜机器人加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bd92c-3567.jpg" alt="泺喜机器人加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bd92c-3567.jpg" alt="泺喜机器人加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6558121/" title="芝麻街英语加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dc4ff-2914.jpg" alt="芝麻街英语加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dc4ff-2914.jpg" alt="芝麻街英语加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591839/" title="好集乐国际英语加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d2ad9-9778.jpg" alt="好集乐国际英语加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d2ad9-9778.jpg" alt="好集乐国际英语加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6584639/" title="优瑞英语加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7227c-1867.jpg" alt="优瑞英语加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7227c-1867.jpg" alt="优瑞英语加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -210,43 +210,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm157955/" title="BBunion早教加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/333a2-3337.jpg" alt="BBunion早教加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/333a2-3337.jpg" alt="BBunion早教加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6577825/" title="乐仕堡儿童拓展乐园加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ced7e-7320.jpg" alt="乐仕堡儿童拓展乐园加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ced7e-7320.jpg" alt="乐仕堡儿童拓展乐园加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591486/" title="蓝旗亲子游泳加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a62a4-4402.jpg" alt="蓝旗亲子游泳加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a62a4-4402.jpg" alt="蓝旗亲子游泳加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm164104/" title="英国天线宝宝早教加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5729e-3758.jpg" alt="英国天线宝宝早教加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5729e-3758.jpg" alt="英国天线宝宝早教加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6597526/" title="山姆大叔幼儿园加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/278e7-7050.jpg" alt="山姆大叔幼儿园加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/278e7-7050.jpg" alt="山姆大叔幼儿园加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6595751/" title="蜜麻花加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a834-7195.jpg" alt="蜜麻花加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a834-7195.jpg" alt="蜜麻花加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591712/" title="鲱鱼宝宝早教中心加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/502b6-6167.jpg" alt="鲱鱼宝宝早教中心加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/502b6-6167.jpg" alt="鲱鱼宝宝早教中心加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm165595/" title="月儿湾母婴游泳早教加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f4acc-7969.jpg" alt="月儿湾母婴游泳早教加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f4acc-7969.jpg" alt="月儿湾母婴游泳早教加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6578289/" title="香港艾乐国际幼儿园加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/82237-3642.jpg" alt="香港艾乐国际幼儿园加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/82237-3642.jpg" alt="香港艾乐国际幼儿园加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6555741/" title="美林高瞻国际幼儿园加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/73a2d-2003.jpg" alt="美林高瞻国际幼儿园加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/73a2d-2003.jpg" alt="美林高瞻国际幼儿园加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -273,43 +273,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm140435/" title="图途户外加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c0c4c-3755.jpg" alt="图途户外加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c0c4c-3755.jpg" alt="图途户外加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm143208/" title="例格女装加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9b9cb-2995.jpg" alt="例格女装加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9b9cb-2995.jpg" alt="例格女装加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6560207/" title="丹比奴加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/32494-9920.jpg" alt="丹比奴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/32494-9920.jpg" alt="丹比奴加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm2308/" title="可可鸭加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2a3f3-1324.jpg" alt="可可鸭加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2a3f3-1324.jpg" alt="可可鸭加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156448/" title="西瓜王子加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0214-7835.jpg" alt="西瓜王子加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0214-7835.jpg" alt="西瓜王子加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm37402/" title="炫彩生活加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/18003-2066.jpg" alt="炫彩生活加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/18003-2066.jpg" alt="炫彩生活加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6575067/" title="欧米皮具加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/23183-1892.jpg" alt="欧米皮具加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/23183-1892.jpg" alt="欧米皮具加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm149910/" title="太和女装加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4584c-7596.jpg" alt="太和女装加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4584c-7596.jpg" alt="太和女装加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm127179/" title="阿尤加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/974c9-8756.jpg" alt="阿尤加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/974c9-8756.jpg" alt="阿尤加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm22499/" title="食草堂加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06a6d-3573.jpg" alt="食草堂加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06a6d-3573.jpg" alt="食草堂加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -324,43 +324,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm14105/" title="赛维洗衣加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56bb4-3581.jpg" alt="赛维洗衣加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56bb4-3581.jpg" alt="赛维洗衣加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm26683/" title="奥特洗福莱加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/33f22-3817.jpg" alt="奥特洗福莱加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/33f22-3817.jpg" alt="奥特洗福莱加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm7955/" title="布兰奇干洗加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ce80c-9197.jpg" alt="布兰奇干洗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ce80c-9197.jpg" alt="布兰奇干洗加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm158556/" title="蓝涤加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5d629-6046.jpg" alt="蓝涤加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5d629-6046.jpg" alt="蓝涤加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm157885/" title="涤雅洗衣加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1f465-8697.jpg" alt="涤雅洗衣加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1f465-8697.jpg" alt="涤雅洗衣加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm157784/" title="上海艾依莎加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f49bb-9521.jpg" alt="上海艾依莎加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f49bb-9521.jpg" alt="上海艾依莎加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm157452/" title="多多洗衣加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/95336-4649.jpg" alt="多多洗衣加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/95336-4649.jpg" alt="多多洗衣加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156682/" title="美尼斯加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/10faa-2265.jpg" alt="美尼斯加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/10faa-2265.jpg" alt="美尼斯加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156260/" title="三星美妮加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/33aa5-2436.jpg" alt="三星美妮加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/33aa5-2436.jpg" alt="三星美妮加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156115/" title="宝路喜加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f7375-4428.jpg" alt="宝路喜加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f7375-4428.jpg" alt="宝路喜加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -378,43 +378,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6585371/" title="爱灸堂养生加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/07512-3132.jpg" alt="爱灸堂养生加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/07512-3132.jpg" alt="爱灸堂养生加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm138699/" title="梵美诗加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c68-4773.jpg" alt="梵美诗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c68-4773.jpg" alt="梵美诗加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6592418/" title="群芳泽加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/671be-1749.jpg" alt="群芳泽加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/671be-1749.jpg" alt="群芳泽加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6675860/" title="凡尘智能电动口罩加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f8c95-6535.jpg" alt="凡尘智能电动口罩加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f8c95-6535.jpg" alt="凡尘智能电动口罩加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6674184/" title="曲姿美体瘦身加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ecaff-7532.jpg" alt="曲姿美体瘦身加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ecaff-7532.jpg" alt="曲姿美体瘦身加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6674058/" title="荟宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/90a53-7799.jpg" alt="荟宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/90a53-7799.jpg" alt="荟宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6649486/" title="迅瘦师加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ced82-3730.jpg" alt="迅瘦师加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ced82-3730.jpg" alt="迅瘦师加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6624463/" title="超级辣妈美体瘦身加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a79cf-3700.jpg" alt="超级辣妈美体瘦身加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a79cf-3700.jpg" alt="超级辣妈美体瘦身加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6623411/" title="LOVEAGAIN加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/39791-5768.jpg" alt="LOVEAGAIN加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/39791-5768.jpg" alt="LOVEAGAIN加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6622532/" title="金紫雨植物养发加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/24799-6372.jpg" alt="金紫雨植物养发加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/24799-6372.jpg" alt="金紫雨植物养发加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -434,43 +434,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591889/" title="悦思途互联网连锁酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/79920-4703.jpg" alt="悦思途互联网连锁酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/79920-4703.jpg" alt="悦思途互联网连锁酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm141598/" title="都市118酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e196f-8524.jpg" alt="都市118酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e196f-8524.jpg" alt="都市118酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6588018/" title="南苑e家连锁酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1cebd-8368.jpg" alt="南苑e家连锁酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1cebd-8368.jpg" alt="南苑e家连锁酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm13440/" title="格林豪泰酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/21057-4624.jpg" alt="格林豪泰酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/21057-4624.jpg" alt="格林豪泰酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm2029/" title="7天酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7af48-8848.jpg" alt="7天酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7af48-8848.jpg" alt="7天酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6672834/" title="榴莲糖果酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bbcb1-6204.jpg" alt="榴莲糖果酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bbcb1-6204.jpg" alt="榴莲糖果酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6594137/" title="艾特概念酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4f4e-5690.jpg" alt="艾特概念酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4f4e-5690.jpg" alt="艾特概念酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6588956/" title="优格青年旅舍加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72182-9741.jpg" alt="优格青年旅舍加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/72182-9741.jpg" alt="优格青年旅舍加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6588158/" title="兰欧酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5aa69-3801.jpg" alt="兰欧酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5aa69-3801.jpg" alt="兰欧酒店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6588157/" title="花美时美景酒店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dd7db-4447.jpg" alt="花美时美景酒店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dd7db-4447.jpg" alt="花美时美景酒店加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -492,43 +492,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6562900/" title="室美伦加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87e6f-3315.jpg" alt="室美伦加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87e6f-3315.jpg" alt="室美伦加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589649/" title="空间美贝壳粉生态涂料加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cc0d1-6382.jpg" alt="空间美贝壳粉生态涂料加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cc0d1-6382.jpg" alt="空间美贝壳粉生态涂料加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm158545/" title="舒鑫e家加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d876d-7265.jpg" alt="舒鑫e家加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d876d-7265.jpg" alt="舒鑫e家加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm137829/" title="晨阳水漆加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" alt="晨阳水漆加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f3dc5-2512.jpg" alt="晨阳水漆加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6572154/" title="欧克斯门窗加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1a6cc-2428.jpg" alt="欧克斯门窗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1a6cc-2428.jpg" alt="欧克斯门窗加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm58277/" title="德尔地板加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1b162-5962.jpg" alt="德尔地板加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1b162-5962.jpg" alt="德尔地板加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm79341/" title="樱花涂料加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c0c11-2034.jpg" alt="樱花涂料加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c0c11-2034.jpg" alt="樱花涂料加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6675488/" title="钛能门业加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee9ba-6078.jpg" alt="钛能门业加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ee9ba-6078.jpg" alt="钛能门业加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6594594/" title="忆江南锦缎泥加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d6fd2-7228.jpg" alt="忆江南锦缎泥加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d6fd2-7228.jpg" alt="忆江南锦缎泥加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6593563/" title="VOTO沃土加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a2a90-3470.jpg" alt="VOTO沃土加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a2a90-3470.jpg" alt="VOTO沃土加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -542,43 +542,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6597074/" title="空气天使加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3cb8f-9506.jpg" alt="空气天使加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3cb8f-9506.jpg" alt="空气天使加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591264/" title="高洁雅空气治理服务加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/50879-9360.jpg" alt="高洁雅空气治理服务加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/50879-9360.jpg" alt="高洁雅空气治理服务加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6675698/" title="雅威空气净化器加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/711f7-7244.jpg" alt="雅威空气净化器加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/711f7-7244.jpg" alt="雅威空气净化器加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm152423/" title="太阳雨太阳能加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1845f-1255.jpg" alt="太阳雨太阳能加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1845f-1255.jpg" alt="太阳雨太阳能加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm146092/" title="蜜雪儿太阳能加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0aa33-5895.jpg" alt="蜜雪儿太阳能加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0aa33-5895.jpg" alt="蜜雪儿太阳能加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144417/" title="金德泉净水器加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2bb2a-4777.jpg" alt="金德泉净水器加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2bb2a-4777.jpg" alt="金德泉净水器加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm143925/" title="德天电器加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9b457-8055.jpg" alt="德天电器加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9b457-8055.jpg" alt="德天电器加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm143547/" title="净莱泉加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/63c58-8626.jpg" alt="净莱泉加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/63c58-8626.jpg" alt="净莱泉加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm140528/" title="立升加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/44a72-7477.jpg" alt="立升加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/44a72-7477.jpg" alt="立升加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm140207/" title="品翔加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/26ca8-3824.jpg" alt="品翔加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/26ca8-3824.jpg" alt="品翔加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -598,43 +598,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm139363/" title="掌上明珠加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8f58c-4999.jpg" alt="掌上明珠加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8f58c-4999.jpg" alt="掌上明珠加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6588125/" title="卡翡亚加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fd651-2181.jpg" alt="卡翡亚加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fd651-2181.jpg" alt="卡翡亚加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm112705/" title="护童健康学习桌加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/414ac-2349.jpg" alt="护童健康学习桌加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/414ac-2349.jpg" alt="护童健康学习桌加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6571264/" title="移康智能家居加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dcc6e-3368.jpg" alt="移康智能家居加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dcc6e-3368.jpg" alt="移康智能家居加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6673056/" title="学习星儿童学习桌加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/38133-5805.jpg" alt="学习星儿童学习桌加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/38133-5805.jpg" alt="学习星儿童学习桌加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6562387/" title="荣事达晾衣架加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0de8e-1197.jpg" alt="荣事达晾衣架加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0de8e-1197.jpg" alt="荣事达晾衣架加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm155755/" title="摩思卫浴加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cea9e-8573.jpg" alt="摩思卫浴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cea9e-8573.jpg" alt="摩思卫浴加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm140437/" title="欧曼克加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0d0a-1496.jpg" alt="欧曼克加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0d0a-1496.jpg" alt="欧曼克加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm138489/" title="卡茜卫浴加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e5db8-9939.jpg" alt="卡茜卫浴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e5db8-9939.jpg" alt="卡茜卫浴加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm122269/" title="贵族卫浴加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d1b52-2374.jpg" alt="贵族卫浴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d1b52-2374.jpg" alt="贵族卫浴加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -643,7 +643,7 @@
                         <div class="many_jiaMLbtCon22">
                             <div class="jiaM_navs">
                                 <p class="prev ">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5191c-5835.png" alt="" /></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5191c-5835.png" alt="" /></p>
                                 <ul class="ul_jsNav fl">
                                     <li class="navs_select">
                                         <a href="http://www.qc.jmw.com.cn/" target="_blank" title="汽车品牌加盟">汽车品牌加盟</a></li>
@@ -667,7 +667,7 @@
                                         <a href="http://search.jmw.com.cn/i234/" target="_blank" title="食品品牌加盟">食品品牌加盟</a></li>
                                 </ul>
                                 <p class="next ">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f958-5786.png" alt="" /></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f958-5786.png" alt="" /></p>
                             </div>
                             <div class="jsNav_bottomBoss">
                                 <div class="jsNav_bottom dis_b clear">
@@ -685,43 +685,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6558704/" title="野马汽车加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72d12-4944.jpg" alt="野马汽车加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/72d12-4944.jpg" alt="野马汽车加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6676136/" title="福汽启腾加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a978c-3254.jpg" alt="福汽启腾加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a978c-3254.jpg" alt="福汽启腾加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6572151/" title="爱代驾加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ab47e-7756.jpg" alt="爱代驾加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ab47e-7756.jpg" alt="爱代驾加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm43031/" title="靓车会加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1e871-2209.jpg" alt="靓车会加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1e871-2209.jpg" alt="靓车会加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590260/" title="比比卡汽车养护中心加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c6c72-4767.jpg" alt="比比卡汽车养护中心加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c6c72-4767.jpg" alt="比比卡汽车养护中心加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6555744/" title="车仆加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/36b34-9185.jpg" alt="车仆加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/36b34-9185.jpg" alt="车仆加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm31405/" title="爱车王国加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5473c-7172.jpg" alt="爱车王国加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5473c-7172.jpg" alt="爱车王国加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6672556/" title="国立汽服加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29e6b-5801.jpg" alt="国立汽服加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/29e6b-5801.jpg" alt="国立汽服加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6623077/" title="凹复原车身快修连锁加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a0a5-5263.jpg" alt="凹复原车身快修连锁加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3a0a5-5263.jpg" alt="凹复原车身快修连锁加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590716/" title="悠驾加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/84cfa-4400.jpg" alt="悠驾加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/84cfa-4400.jpg" alt="悠驾加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -740,43 +740,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6674681/" title="展腾投资集团加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a0284-8272.jpg" alt="展腾投资集团加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a0284-8272.jpg" alt="展腾投资集团加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6587657/" title="拓天速贷加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/eedb2-4770.jpg" alt="拓天速贷加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/eedb2-4770.jpg" alt="拓天速贷加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590840/" title="企易+加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/70882-3761.jpg" alt="企易+加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/70882-3761.jpg" alt="企易+加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6570382/" title="1号钱庄加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22e88-5517.jpg" alt="1号钱庄加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22e88-5517.jpg" alt="1号钱庄加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591698/" title="汇小贷网金融加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0975f-5025.jpg" alt="汇小贷网金融加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0975f-5025.jpg" alt="汇小贷网金融加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6567801/" title="润德信通加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e2d11-8657.jpg" alt="润德信通加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e2d11-8657.jpg" alt="润德信通加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6576244/" title="万利泓通加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/65eb1-9294.jpg" alt="万利泓通加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/65eb1-9294.jpg" alt="万利泓通加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6565102/" title="儒金投资加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/73e67-3081.jpg" alt="儒金投资加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/73e67-3081.jpg" alt="儒金投资加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6565093/" title="达飞财富加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9eaad-7283.jpg" alt="达飞财富加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9eaad-7283.jpg" alt="达飞财富加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6565089/" title="金天喜加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/187ef-6772.jpg" alt="金天喜加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/187ef-6772.jpg" alt="金天喜加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -793,43 +793,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6584328/" title="千叶珠宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fe54c-5905.jpg" alt="千叶珠宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fe54c-5905.jpg" alt="千叶珠宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm75507/" title="珂兰钻石加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/81927-2283.jpg" alt="珂兰钻石加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/81927-2283.jpg" alt="珂兰钻石加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm13294/" title="金嘉利珠宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0721a-7953.jpg" alt="金嘉利珠宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0721a-7953.jpg" alt="金嘉利珠宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6557801/" title="子冈玉坊加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c7e8e-7254.jpg" alt="子冈玉坊加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c7e8e-7254.jpg" alt="子冈玉坊加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6597714/" title="金至福珠宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d45da-4651.jpg" alt="金至福珠宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d45da-4651.jpg" alt="金至福珠宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600816/" title="泰源珠宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/840a5-3759.jpg" alt="泰源珠宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/840a5-3759.jpg" alt="泰源珠宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590398/" title="周生生珠宝首饰加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9cc90-7452.jpg" alt="周生生珠宝首饰加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9cc90-7452.jpg" alt="周生生珠宝首饰加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6582131/" title="钻石小鸟加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/51e76-3225.jpg" alt="钻石小鸟加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/51e76-3225.jpg" alt="钻石小鸟加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151515/" title="华昌珠宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0cf37-4256.jpg" alt="华昌珠宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0cf37-4256.jpg" alt="华昌珠宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm60314/" title="金伯利钻石加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/867ac-7391.jpg" alt="金伯利钻石加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/867ac-7391.jpg" alt="金伯利钻石加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -847,43 +847,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6559529/" title="视尚眼艺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/00a61-4599.jpg" alt="视尚眼艺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/00a61-4599.jpg" alt="视尚眼艺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6584109/" title="秀妍饰品加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de015-8200.jpg" alt="秀妍饰品加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/de015-8200.jpg" alt="秀妍饰品加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm47143/" title="新光饰品加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/21696-9646.jpg" alt="新光饰品加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/21696-9646.jpg" alt="新光饰品加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6676190/" title="YOOLENS美目优瞳加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/756b6-2356.jpg" alt="YOOLENS美目优瞳加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/756b6-2356.jpg" alt="YOOLENS美目优瞳加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156047/" title="宝银坊加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f52c6-9410.jpg" alt="宝银坊加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f52c6-9410.jpg" alt="宝银坊加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156043/" title="银世汇加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/beee1-4413.jpg" alt="银世汇加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/beee1-4413.jpg" alt="银世汇加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm155279/" title="信德缘银饰加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7199d-1541.jpg" alt="信德缘银饰加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7199d-1541.jpg" alt="信德缘银饰加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151490/" title="同顺裕隆—缘加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4496-6582.jpg" alt="同顺裕隆—缘加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4496-6582.jpg" alt="同顺裕隆—缘加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm150071/" title="雅诗宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/01610-9215.jpg" alt="雅诗宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/01610-9215.jpg" alt="雅诗宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm149742/" title="银灵石尚加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ccd30-5804.jpg" alt="银灵石尚加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ccd30-5804.jpg" alt="银灵石尚加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -898,43 +898,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6650233/" title="憨豆蜡之家族加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7be29-9983.jpg" alt="憨豆蜡之家族加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7be29-9983.jpg" alt="憨豆蜡之家族加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6631356/" title="好用电话加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b49c2-7487.jpg" alt="好用电话加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b49c2-7487.jpg" alt="好用电话加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6624043/" title="爱家物业无忧加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/09b93-9574.jpg" alt="爱家物业无忧加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/09b93-9574.jpg" alt="爱家物业无忧加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6595364/" title="必虎智能WiFi加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7afed-3745.jpg" alt="必虎智能WiFi加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7afed-3745.jpg" alt="必虎智能WiFi加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6674201/" title="无忧保在线社保代缴加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a2d0b-3005.jpg" alt="无忧保在线社保代缴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a2d0b-3005.jpg" alt="无忧保在线社保代缴加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6674654/" title="手商云加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/74475-4600.jpg" alt="手商云加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/74475-4600.jpg" alt="手商云加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6673629/" title="抉择加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9794c-2402.jpg" alt="抉择加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9794c-2402.jpg" alt="抉择加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6650352/" title="超级队长加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06f36-2299.jpg" alt="超级队长加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06f36-2299.jpg" alt="超级队长加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6647819/" title="脉单加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/399d3-6681.jpg" alt="脉单加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/399d3-6681.jpg" alt="脉单加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590343/" title="装酷网装修平台加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5b90e-8686.jpg" alt="装酷网装修平台加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5b90e-8686.jpg" alt="装酷网装修平台加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -957,43 +957,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6675948/" title="怡水缘加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dc646-8072.jpg" alt="怡水缘加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dc646-8072.jpg" alt="怡水缘加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm117397/" title="久斯加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5c876-2586.jpg" alt="久斯加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5c876-2586.jpg" alt="久斯加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm37246/" title="球动力台球加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/83af1-9969.jpg" alt="球动力台球加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/83af1-9969.jpg" alt="球动力台球加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151552/" title="伟林台球加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/16831-6025.jpg" alt="伟林台球加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/16831-6025.jpg" alt="伟林台球加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm78766/" title="时代风影院加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/93ff1-8841.jpg" alt="时代风影院加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/93ff1-8841.jpg" alt="时代风影院加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6597485/" title="蓝钻ktv加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/886b0-4621.jpg" alt="蓝钻ktv加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/886b0-4621.jpg" alt="蓝钻ktv加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6596505/" title="健英台球加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6c412-8785.jpg" alt="健英台球加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6c412-8785.jpg" alt="健英台球加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6593548/" title="血手网咖加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3ae12-6293.jpg" alt="血手网咖加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3ae12-6293.jpg" alt="血手网咖加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589501/" title="欢乐空间加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/541d3-6846.jpg" alt="欢乐空间加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/541d3-6846.jpg" alt="欢乐空间加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589442/" title="游戏小作坊加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/efa77-3041.jpg" alt="游戏小作坊加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/efa77-3041.jpg" alt="游戏小作坊加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1010,43 +1010,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm154099/" title="大瓷坊酒加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ffad3-3685.jpg" alt="大瓷坊酒加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ffad3-3685.jpg" alt="大瓷坊酒加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600865/" title="波图波特酒庄加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/96c43-1446.jpg" alt="波图波特酒庄加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/96c43-1446.jpg" alt="波图波特酒庄加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151388/" title="法国吉洛酒庄加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a7ba5-1241.jpg" alt="法国吉洛酒庄加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a7ba5-1241.jpg" alt="法国吉洛酒庄加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm159917/" title="蓝大冰迪啤酒加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d8158-3331.jpg" alt="蓝大冰迪啤酒加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d8158-3331.jpg" alt="蓝大冰迪啤酒加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156108/" title="名品世家加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/baca5-2802.jpg" alt="名品世家加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/baca5-2802.jpg" alt="名品世家加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156024/" title="甘斐酒庄加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8e6c5-9652.jpg" alt="甘斐酒庄加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8e6c5-9652.jpg" alt="甘斐酒庄加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm155804/" title="君临天下加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9df78-6745.jpg" alt="君临天下加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9df78-6745.jpg" alt="君临天下加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm155749/" title="盛诺堡加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c0954-3343.jpg" alt="盛诺堡加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c0954-3343.jpg" alt="盛诺堡加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm153210/" title="武当红加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/823b6-6235.jpg" alt="武当红加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/823b6-6235.jpg" alt="武当红加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm153209/" title="卡罗斯加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d5d7c-5960.jpg" alt="卡罗斯加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d5d7c-5960.jpg" alt="卡罗斯加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1064,43 +1064,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156455/" title="亿哲自行车加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dbd2b-8148.jpg" alt="亿哲自行车加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dbd2b-8148.jpg" alt="亿哲自行车加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm156243/" title="绿源电动车加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bbf3f-6218.jpg" alt="绿源电动车加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bbf3f-6218.jpg" alt="绿源电动车加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm152679/" title="绿得通加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72555-3448.jpg" alt="绿得通加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/72555-3448.jpg" alt="绿得通加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151584/" title="卓家海产加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a125d-7723.jpg" alt="卓家海产加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a125d-7723.jpg" alt="卓家海产加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151292/" title="美菱伽帝芙加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1a62b-8963.jpg" alt="美菱伽帝芙加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1a62b-8963.jpg" alt="美菱伽帝芙加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151290/" title="骑达加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d11ab-5453.jpg" alt="骑达加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d11ab-5453.jpg" alt="骑达加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm145758/" title="芊礼加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0ae0f-2324.jpg" alt="芊礼加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0ae0f-2324.jpg" alt="芊礼加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144588/" title="怡佳仁零食店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a5448-1366.jpg" alt="怡佳仁零食店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a5448-1366.jpg" alt="怡佳仁零食店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144572/" title="如宝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f2b9d-6753.jpg" alt="如宝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f2b9d-6753.jpg" alt="如宝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144239/" title="贝发文具加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8324c-8005.jpg" alt="贝发文具加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8324c-8005.jpg" alt="贝发文具加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1117,43 +1117,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6587765/" title="老裁缝家纺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf148-9052.jpg" alt="老裁缝家纺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf148-9052.jpg" alt="老裁缝家纺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm168139/" title="宜庭家纺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a02d7-4825.jpg" alt="宜庭家纺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a02d7-4825.jpg" alt="宜庭家纺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm167873/" title="宝罗家纺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/848d8-9592.jpg" alt="宝罗家纺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/848d8-9592.jpg" alt="宝罗家纺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm167832/" title="卡罗家纺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4a6c3-9022.jpg" alt="卡罗家纺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4a6c3-9022.jpg" alt="卡罗家纺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm167814/" title="仙娥加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bdd49-9851.jpg" alt="仙娥加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bdd49-9851.jpg" alt="仙娥加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm167417/" title="杭州施诺家纺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/19102-8433.jpg" alt="杭州施诺家纺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/19102-8433.jpg" alt="杭州施诺家纺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm167211/" title="东营老粗布加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/09b34-3643.jpg" alt="东营老粗布加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/09b34-3643.jpg" alt="东营老粗布加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm167099/" title="南通绣阳家纺加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2f8f8-8637.jpg" alt="南通绣阳家纺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2f8f8-8637.jpg" alt="南通绣阳家纺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm166996/" title="怡莲丝绸加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/229ce-4727.jpg" alt="怡莲丝绸加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/229ce-4727.jpg" alt="怡莲丝绸加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm166989/" title="科恩保罗加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/25fe0-9490.jpg" alt="科恩保罗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/25fe0-9490.jpg" alt="科恩保罗加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1176,43 +1176,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm655353/" title="天山的恩赐加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/807a6-1678.jpg" alt="天山的恩赐加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/807a6-1678.jpg" alt="天山的恩赐加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581864/" title="西味特蛋糕店加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/028a0-7412.jpg" alt="西味特蛋糕店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/028a0-7412.jpg" alt="西味特蛋糕店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581859/" title="薇的婚礼蛋糕加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ea5a7-9936.jpg" alt="薇的婚礼蛋糕加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ea5a7-9936.jpg" alt="薇的婚礼蛋糕加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm5180/" title="金橙板栗加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/59dc3-1920.jpg" alt="金橙板栗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/59dc3-1920.jpg" alt="金橙板栗加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6608708/" title="益洋食用油加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/23f6f-9744.jpg" alt="益洋食用油加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/23f6f-9744.jpg" alt="益洋食用油加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6608703/" title="华洋植物油加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d36c0-2739.jpg" alt="华洋植物油加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d36c0-2739.jpg" alt="华洋植物油加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6601455/" title="兴达美纯调味品加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fda81-1572.jpg" alt="兴达美纯调味品加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fda81-1572.jpg" alt="兴达美纯调味品加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6601016/" title="庆雪面粉加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/80549-6489.jpg" alt="庆雪面粉加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/80549-6489.jpg" alt="庆雪面粉加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600769/" title="惠元粉丝加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8b46b-5082.jpg" alt="惠元粉丝加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8b46b-5082.jpg" alt="惠元粉丝加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600672/" title="三角洲米业加盟">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c35e9-6808.jpg" alt="三角洲米业加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c35e9-6808.jpg" alt="三角洲米业加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1221,7 +1221,7 @@
                         <div class="many_jiaMLbtCon33">
                             <div class="jiaM_navs">
                                 <p class="prev">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5191c-5835.png" alt="" /></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5191c-5835.png" alt="" /></p>
                                 <ul class="ul_jsNav fl">
                                     <li class="navs_select">
                                         <a href="http://search.jmw.com.cn/i230/" title="服务品牌加盟">服务品牌加盟</a></li>
@@ -1245,7 +1245,7 @@
                                         <a href="http://search.jmw.com.cn/i308/" title="众筹品牌加盟">众筹品牌加盟</a></li>
                                 </ul>
                                 <p class="next">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f958-5786.png" alt="" /></p>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f958-5786.png" alt="" /></p>
                             </div>
                             <div class="jsNav_bottomBoss">
                                 <div class="jsNav_bottom dis_b clear">
@@ -1268,43 +1268,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6586778/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3314e-2450.jpg" alt="缘兴家事无忧加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3314e-2450.jpg" alt="缘兴家事无忧加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm145995/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ed63b-3231.jpg" alt="深圳万家加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ed63b-3231.jpg" alt="深圳万家加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm209071/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f754b-3026.jpg" alt="诗缔婚礼加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f754b-3026.jpg" alt="诗缔婚礼加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm209044/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/adb0d-4898.jpg" alt="七彩乐居加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/adb0d-4898.jpg" alt="七彩乐居加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm24055/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4e937-9954.jpg" alt="华夏中青加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4e937-9954.jpg" alt="华夏中青加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm3559/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f4964-1990.jpg" alt="爱家喜庆加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f4964-1990.jpg" alt="爱家喜庆加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600867/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3f18f-9352.jpg" alt="友缘家政加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3f18f-9352.jpg" alt="友缘家政加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600845/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3deda-2278.jpg" alt="我爱我妻家政加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3deda-2278.jpg" alt="我爱我妻家政加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6600840/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fe50c-2357.jpg" alt="蝴蝶家政服务加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fe50c-2357.jpg" alt="蝴蝶家政服务加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6596817/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2b02a-6106.jpg" alt="同孚家政加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2b02a-6106.jpg" alt="同孚家政加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1320,43 +1320,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6673757/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/256c1-9284.jpg" alt="艾斯力加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/256c1-9284.jpg" alt="艾斯力加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm152882/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/82b3d-1409.jpg" alt="帕捷罗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/82b3d-1409.jpg" alt="帕捷罗加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm128243/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8af-9932.jpg" alt="斯舒朗加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8af-9932.jpg" alt="斯舒朗加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm128242/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dfdf6-8877.jpg" alt="万杰隆加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dfdf6-8877.jpg" alt="万杰隆加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm128235/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/daa60-9431.jpg" alt="爱天奴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/daa60-9431.jpg" alt="爱天奴加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm87894/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/574a3-9784.jpg" alt="瑞典式户外加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/574a3-9784.jpg" alt="瑞典式户外加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm77965/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/53ae3-7311.jpg" alt="麦迪逊运动加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/53ae3-7311.jpg" alt="麦迪逊运动加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm17703/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6f635-3075.jpg" alt="双星登峰加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6f635-3075.jpg" alt="双星登峰加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm1945/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9c0c7-8421.jpg" alt="乐途加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9c0c7-8421.jpg" alt="乐途加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm12511/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/324b8-2038.jpg" alt="路伊梵服装加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/324b8-2038.jpg" alt="路伊梵服装加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1372,43 +1372,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm3371/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/db813-2566.jpg" alt="7-11便利店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/db813-2566.jpg" alt="7-11便利店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm153656/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/340f7-9099.jpg" alt="百比佳超市加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/340f7-9099.jpg" alt="百比佳超市加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151768/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/15f0c-8451.jpg" alt="田森便利加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/15f0c-8451.jpg" alt="田森便利加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm147470/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4df83-2503.jpg" alt="天富便利店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4df83-2503.jpg" alt="天富便利店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144231/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/abae5-1020.jpg" alt="全家便利店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/abae5-1020.jpg" alt="全家便利店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144222/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac2dc-8195.jpg" alt="超市发加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ac2dc-8195.jpg" alt="超市发加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144197/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fa180-4242.jpg" alt="新合作西果加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fa180-4242.jpg" alt="新合作西果加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144179/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/73a1e-1593.jpg" alt="华润万家加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/73a1e-1593.jpg" alt="华润万家加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144161/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e8bdf-4684.jpg" alt="泰纳国际果业加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e8bdf-4684.jpg" alt="泰纳国际果业加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm144155/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7fe9b-8325.jpg" alt="可喜加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7fe9b-8325.jpg" alt="可喜加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1423,43 +1423,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581852/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/18872-7401.jpg" alt="宠爱它宠物用品店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/18872-7401.jpg" alt="宠爱它宠物用品店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581847/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a0e88-6135.jpg" alt="艾威宠物用品店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a0e88-6135.jpg" alt="艾威宠物用品店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581844/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/02abf-1557.jpg" alt="畅享宠物店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/02abf-1557.jpg" alt="畅享宠物店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581841/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a84f1-9428.jpg" alt="惜时宠物食品店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a84f1-9428.jpg" alt="惜时宠物食品店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581835/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/39931-1033.jpg" alt="皇品宠物店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/39931-1033.jpg" alt="皇品宠物店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581832/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f4f86-1512.jpg" alt="环球宠物店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f4f86-1512.jpg" alt="环球宠物店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581827/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5ea9b-1419.jpg" alt="贵族宠物店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5ea9b-1419.jpg" alt="贵族宠物店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581823/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/208e7-9386.jpg" alt="极度宠物店加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/208e7-9386.jpg" alt="极度宠物店加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6583314/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d70d3-2791.jpg" alt="路斯宠物食品加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d70d3-2791.jpg" alt="路斯宠物食品加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6583309/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2ae96-2776.jpg" alt="南通宠物店用品加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2ae96-2776.jpg" alt="南通宠物店用品加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1475,43 +1475,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm40126/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fbf8-5492.jpg" alt="英仕加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fbf8-5492.jpg" alt="英仕加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm155921/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/23074-2075.jpg" alt="爱而福德加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/23074-2075.jpg" alt="爱而福德加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm153500/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/60f3e-3185.jpg" alt="造纸机械加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/60f3e-3185.jpg" alt="造纸机械加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm153291/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/be357-5425.jpg" alt="奥利尔加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/be357-5425.jpg" alt="奥利尔加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151969/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de28c-9952.jpg" alt="金博阀门加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/de28c-9952.jpg" alt="金博阀门加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm151524/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8ec05-2617.jpg" alt="沪工阀门加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8ec05-2617.jpg" alt="沪工阀门加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm142052/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4baa7-5209.jpg" alt="德国klc加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4baa7-5209.jpg" alt="德国klc加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm138463/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/90349-7263.jpg" alt="德宇加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/90349-7263.jpg" alt="德宇加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm65108/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ea16-4693.jpg" alt="顶固加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9ea16-4693.jpg" alt="顶固加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm69404/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6e837-3630.jpg" alt="奥斯龙五金加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6e837-3630.jpg" alt="奥斯龙五金加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1528,43 +1528,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6597188/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/630f0-8302.jpg" alt="全红插板加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/630f0-8302.jpg" alt="全红插板加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6591097/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d6e33-6260.jpg" alt="钻石虎热水器加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d6e33-6260.jpg" alt="钻石虎热水器加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6587708/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0b55e-2730.jpg" alt="汇银电器加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0b55e-2730.jpg" alt="汇银电器加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6586655/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/52fd9-6753.jpg" alt="家家乐油烟机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/52fd9-6753.jpg" alt="家家乐油烟机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6586597/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7f6d2-7763.jpg" alt="帅康油烟机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7f6d2-7763.jpg" alt="帅康油烟机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581897/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/45fe2-2750.jpg" alt="EK空调加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/45fe2-2750.jpg" alt="EK空调加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581896/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f4b01-4948.jpg" alt="科龙空调加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f4b01-4948.jpg" alt="科龙空调加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581834/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/37fef-2006.jpg" alt="倍科洗衣机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/37fef-2006.jpg" alt="倍科洗衣机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581831/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/aaa0e-3344.jpg" alt="波尔卡洗衣机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/aaa0e-3344.jpg" alt="波尔卡洗衣机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581829/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/aefbe-8633.jpg" alt="博世洗衣机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/aefbe-8633.jpg" alt="博世洗衣机加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1579,43 +1579,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590075/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/af6f1-9332.jpg" alt="深圳爱贝多加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/af6f1-9332.jpg" alt="深圳爱贝多加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581451/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9fb2a-9745.jpg" alt="仙娜相机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9fb2a-9745.jpg" alt="仙娜相机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581449/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47983-4768.jpg" alt="柏卡相机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/47983-4768.jpg" alt="柏卡相机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581444/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/452d0-9889.jpg" alt="迪士尼儿童数码相机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/452d0-9889.jpg" alt="迪士尼儿童数码相机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581439/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/baf04-9173.jpg" alt="音狐数码相机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/baf04-9173.jpg" alt="音狐数码相机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581438/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/60cd8-4802.jpg" alt="拍得丽相机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/60cd8-4802.jpg" alt="拍得丽相机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581121/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8544c-1401.jpg" alt="TQ平板电脑加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8544c-1401.jpg" alt="TQ平板电脑加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581117/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b1ebf-9593.jpg" alt="尚科平板电脑加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b1ebf-9593.jpg" alt="尚科平板电脑加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581087/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6a31b-4189.jpg" alt="朗驰摄像机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6a31b-4189.jpg" alt="朗驰摄像机加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6581085/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a1914-3192.jpg" alt="恒天视摄像机加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a1914-3192.jpg" alt="恒天视摄像机加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1626,43 +1626,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625033/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2ab4f-2369.jpg" alt="上海乐搜信息科技有限公司加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2ab4f-2369.jpg" alt="上海乐搜信息科技有限公司加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625032/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0735-8682.jpg" alt="欧丽妍加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d0735-8682.jpg" alt="欧丽妍加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625031/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7c014-4268.jpg" alt="酷伙伴加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7c014-4268.jpg" alt="酷伙伴加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625029/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/eee1d-4555.jpg" alt="微联盟加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/eee1d-4555.jpg" alt="微联盟加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625028/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/612d5-4107.jpg" alt="试客圈加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/612d5-4107.jpg" alt="试客圈加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625026/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/36cdd-4221.png" alt="KS魔力发帽加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/36cdd-4221.png" alt="KS魔力发帽加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625025/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8b42d-6173.jpg" alt="小猪cms加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8b42d-6173.jpg" alt="小猪cms加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625023/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fc427-8316.jpg" alt="点点客加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fc427-8316.jpg" alt="点点客加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625020/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/15b28-1485.jpg" alt="古瓷化妆品加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/15b28-1485.jpg" alt="古瓷化妆品加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6625018/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fd0f4-9867.jpg" alt="e牛商城加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fd0f4-9867.jpg" alt="e牛商城加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1677,43 +1677,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6586854/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/51001-1947.jpg" alt="初恋美淘加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/51001-1947.jpg" alt="初恋美淘加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6601510/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c07b8-8787.jpg" alt="时时果蔬o2o加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c07b8-8787.jpg" alt="时时果蔬o2o加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6590086/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3d82f-6127.jpg" alt="御福千秋加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3d82f-6127.jpg" alt="御福千秋加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589974/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf87c-3677.jpg" alt="图派加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf87c-3677.jpg" alt="图派加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589512/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/82512-5541.jpg" alt="博客天下加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/82512-5541.jpg" alt="博客天下加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589464/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e85eb-3891.jpg" alt="万里眼加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e85eb-3891.jpg" alt="万里眼加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589376/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f4534-5428.jpg" alt="中联国际加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f4534-5428.jpg" alt="中联国际加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589355/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/211af-9489.jpg" alt="几盒网铺加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/211af-9489.jpg" alt="几盒网铺加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589291/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/128d2-4897.jpg" alt="爱在囧途旅行网加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/128d2-4897.jpg" alt="爱在囧途旅行网加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6589170/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/32622-7772.jpg" alt="成名网加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/32622-7772.jpg" alt="成名网加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1724,43 +1724,43 @@
                                     <ul class="zhengMo_ul clear">
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6657654/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/55769-8123.jpg" alt="人众金融加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/55769-8123.jpg" alt="人众金融加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6657627/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/680ea-4230.jpg" alt="京东众筹加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/680ea-4230.jpg" alt="京东众筹加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6657413/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2660f-7518.jpg" alt="惠众金融加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2660f-7518.jpg" alt="惠众金融加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6657184/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d9fc8-2892.jpg" alt="前海红筹加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d9fc8-2892.jpg" alt="前海红筹加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6657146/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4e163-4120.jpg" alt="众信金融加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4e163-4120.jpg" alt="众信金融加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6631047/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bc7d5-6692.jpg" alt="梦立方众筹平台加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bc7d5-6692.jpg" alt="梦立方众筹平台加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6631046/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/63a19-6695.jpg" alt="5SING众筹加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/63a19-6695.jpg" alt="5SING众筹加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6631045/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/dbb4f-4522.jpg" alt="众筹网加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dbb4f-4522.jpg" alt="众筹网加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6631044/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8487a-6285.jpg" alt="淘宝众筹加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8487a-6285.jpg" alt="淘宝众筹加盟" /></a>
                                         </li>
                                         <li>
                                             <a href="http://www.jmw.com.cn/xm6631043/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f98f1-9884.jpg" alt="青橘众筹加盟" /></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f98f1-9884.jpg" alt="青橘众筹加盟" /></a>
                                         </li>
                                     </ul>
                                 </div>

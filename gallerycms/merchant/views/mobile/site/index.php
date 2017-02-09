@@ -83,13 +83,13 @@ _MEIQIA('withoutBtn', true);
             .inquire_tele ul li a {text-align: center; width: 50%; display: inline-block; font-size: 0.95rem;}
             .inquire_tele ul .a1{ border-right: 1px solid #e8e8e8; box-sizing: border-box; color: #cdcdcd;}
             .inquire_tele ul .a2 { color: #4283e4;}
-            .icon_tel_sex3{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
-            .icon_tel_sex4{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
+            .icon_tel_sex3{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
+            .icon_tel_sex4{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
         </style>
                     <div class="jiaM_tele clear"> 
             <p class="fl"><span class="same fl">加盟电话：</span><span class="toggle_shu1">0312-8593****</span><span class="toggle_shu2" style="display:none;">
             <a class='fl' onclick='addTelForWap(137829,1,"0312-8593111")'>0312-8593111</a>              </span></p>
-            <p class="fl chaKan" onclick="check_is_login2(137829,1,2,27,'晨阳水漆');return false;"><i class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a04f5-1567.png" alt="" /></i>查看</p>
+            <p class="fl chaKan" onclick="check_is_login2(137829,1,2,27,'晨阳水漆');return false;"><i class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a04f5-1567.png" alt="" /></i>查看</p>
         </div>
                     <form action="" method="post" id="see_tel">
         <div class="inquire_tele"> 
@@ -133,7 +133,7 @@ _MEIQIA('withoutBtn', true);
     <div class="wen_p wrap zp_dongT clear">
         <h2 class="fl" style="border-bottom:none;"><a style="font-size: 16px;color:#e44b46;" >加盟动态</a></h2>
         <a class="fr" style="color:#000000; margin-right:15px;">【中国加盟网独家活动】</a>
-        <i><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2f89f-9942.gif" alt=""></i>
+        <i><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2f89f-9942.gif" alt=""></i>
     </div>
     <ul class="diJia clear"> 
         <li class="fl" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#n_content').val('我想咨询晨阳水漆加盟费用最低多少钱？');$('#origin').val(5);"><i class="icon icon7"></i><a>询加盟底价</a></li>
@@ -154,21 +154,21 @@ _MEIQIA('withoutBtn', true);
         <div class="xiangmujieshao" name="xiangmujieshao" id="xiangmujieshao">
                     <div class="xiangmujieshao-title">
             <h2 class="fl"><a href="http://m.jmw.com.cn/xm137829/xiangmujieshao/">晨阳水漆项目介绍</a></h2>
-                            <a class="fr jiameng-more show_content1" href="javascript:;" style="display: block;color: #b0b0b0;font-size: 10px;line-height: 39px;">展开更多加盟信息<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png"></a>
-            <a class="fr jiameng-more hide_content1"  href="javascript:;"  style="display: none;color: #b0b0b0;font-size: 10px;line-height: 39px;">收起<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41a26-4399.png"></a>
+                            <a class="fr jiameng-more show_content1" href="javascript:;" style="display: block;color: #b0b0b0;font-size: 10px;line-height: 39px;">展开更多加盟信息<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png"></a>
+            <a class="fr jiameng-more hide_content1"  href="javascript:;"  style="display: none;color: #b0b0b0;font-size: 10px;line-height: 39px;">收起<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41a26-4399.png"></a>
                         </div>
                     <div class="xiangmujieshao-article basic1" id="directory" style="display: block;padding-bottom:20px;color: #333333;font-size: 13px;overflow: hidden;max-height: 730px;width:100%;">
         <p>&nbsp;&nbsp;&nbsp;&nbsp;晨阳水漆加盟简介<br />
 <br />
 河北<a href="http://www.jmw.com.cn/xm137829/" target="_blank">晨阳</span></a>工贸集团有限公司乃集水漆生产、电子商务、家政保洁、建材贸易及工程施工为一体的现代化集团公司，地处京津石经济金三角腹地徐水晨阳大街，占地面积15万平米，总资产数十亿元。晨阳集团年产具有国际领先水平的各种环保节能水性漆12.5万吨，是全国全水漆生产企业，是国家863计划&ldquo;风电叶片防护涂料&rdquo;项目承担者，是河北省重点企业、地方财政的支柱性企业，河北省&ldquo;三年大变样&rdquo;重点工程推广示范单位，国家&ldquo;既有建筑节能改造&rdquo;工程示范单位，是全国唯一水性涂料院士工作站承建单位，河北省企业技术中心及河北省水性涂料工程技术研究中心依托单位，与北京化工大学联合建立水性涂料&ldquo;院士工作站&rdquo;，是中国推行水性化涂装的发起人。</span></span></span></p>
 <p>&nbsp;</p>
-<p style="text-align: center;"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ec98-5416.jpg" /></span></span></span><br />
+<p style="text-align: center;"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9ec98-5416.jpg" /></span></span></span><br />
 &nbsp;</p>
 <p>公司主要产品有：水性建筑漆、&ldquo;漆伴侣&rdquo;（高档腻子）、水性工业漆、水性木器漆、水性柳编漆、水性树脂等几大系列上百个品种。产品通过中国环境标志产品认证、中国船级社认证、欧盟SGS、德国TUV环保检测认证、CCCF中国消防产品质量认证、CTC中国建材认证等。公司通过ISO9001国际质量管理体系认证、GB/T28001职业健康安全管理体系认证。</span></span></span><br />
 &nbsp;</p>
 <p><a href="http://www.jmw.com.cn/xm137829/" target="_blank">水漆系列</span></a>产品以水为稀释剂，无毒无味，不燃不爆，并且具有节约能源、杜绝污染、降低有害排放等特点，是国家十二&middot;五规划中重点支持和鼓励类产业。水漆取代油漆是人类生存需要、科学技术发展的必然趋势。产品市场覆盖机械制造、五金家电、汽车行业、建筑行业、家具家居及铸造、桥梁、船舶、集装箱、铁路等应用领域。我公司拥有发明专利30余项，产品技术居于国际领先水平。</span></span></span></p>
 <p>&nbsp;</span></span></span></p>
-<p style="text-align: center;"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8ae9b-5595.jpg" /></span></span></span></p>
+<p style="text-align: center;"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8ae9b-5595.jpg" /></span></span></span></p>
 <p><br />
 晨阳集团热心支持社会公益事业，多次参加国内各项公益活动，捐资助教，扶贫助学，是河北省和谐企业的典范和代表。<br />
 <br />
@@ -191,13 +191,13 @@ _MEIQIA('withoutBtn', true);
 <br />
 河北<a href="http://www.jmw.com.cn/xm137829/" target="_blank"><span style="background-color: rgb(255, 240, 245);">晨阳</span></a>工贸集团有限公司乃集水漆生产、电子商务、家政保洁、建材贸易及工程施工为一体的现代化集团公司，地处京津石经济金三角腹地徐水晨阳大街，占地面积15万平米，总资产数十亿元。晨阳集团年产具有国际领先水平的各种环保节能水性漆12.5万吨，是全国全水漆生产企业，是国家863计划&ldquo;风电叶片防护涂料&rdquo;项目承担者，是河北省重点企业、地方财政的支柱性企业，河北省&ldquo;三年大变样&rdquo;重点工程推广示范单位，国家&ldquo;既有建筑节能改造&rdquo;工程示范单位，是全国唯一水性涂料院士工作站承建单位，河北省企业技术中心及河北省水性涂料工程技术研究中心依托单位，与北京化工大学联合建立水性涂料&ldquo;院士工作站&rdquo;，是中国推行水性化涂装的发起人。</span></span></span></p>
 <p>&nbsp;</p>
-<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ec98-5416.jpg" /></span></span></span><br />
+<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9ec98-5416.jpg" /></span></span></span><br />
 &nbsp;</p>
 <p><span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;">公司主要产品有：水性建筑漆、&ldquo;漆伴侣&rdquo;（高档腻子）、水性工业漆、水性木器漆、水性柳编漆、水性树脂等几大系列上百个品种。产品通过中国环境标志产品认证、中国船级社认证、欧盟SGS、德国TUV环保检测认证、CCCF中国消防产品质量认证、CTC中国建材认证等。公司通过ISO9001国际质量管理体系认证、GB/T28001职业健康安全管理体系认证。</span></span></span><br />
 &nbsp;</p>
 <p><span style="font-family: 宋体;"><span style="color: rgb(0, 0, 0);"><span style=";"><a href="http://www.jmw.com.cn/xm137829/" target="_blank"><span style="background-color: rgb(255, 240, 245);">水漆系列</span></a>产品以水为稀释剂，无毒无味，不燃不爆，并且具有节约能源、杜绝污染、降低有害排放等特点，是国家十二&middot;五规划中重点支持和鼓励类产业。水漆取代油漆是人类生存需要、科学技术发展的必然趋势。产品市场覆盖机械制造、五金家电、汽车行业、建筑行业、家具家居及铸造、桥梁、船舶、集装箱、铁路等应用领域。我公司拥有发明专利30余项，产品技术居于国际领先水平。</span></span></span></p>
 <p><span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;">&nbsp;</span></span></span></p>
-<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8ae9b-5595.jpg" /></span></span></span></p>
+<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8ae9b-5595.jpg" /></span></span></span></p>
 <p><br />
 <span style="color: rgb(0, 0, 0);"><span style=";"><span style="font-family: 宋体;">晨阳集团热心支持社会公益事业，多次参加国内各项公益活动，捐资助教，扶贫助学，是河北省和谐企业的典范和代表。<br />
 <br />
@@ -221,8 +221,8 @@ _MEIQIA('withoutBtn', true);
 
                     <div class="xiangmujieshao-title">
             <h2 class="fl"><a href="http://m.jmw.com.cn/xm137829/jiamengfeiyong/">晨阳水漆加盟费用</a></h2>
-                            <a class="fr jiameng-more show_content" style="display: block;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">展开更多加盟信息<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png"></a>
-            <a class="fr jiameng-more hide_content" style="display: none;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">收起<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41a26-4399.png"></a>
+                            <a class="fr jiameng-more show_content" style="display: block;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">展开更多加盟信息<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png"></a>
+            <a class="fr jiameng-more hide_content" style="display: none;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">收起<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41a26-4399.png"></a>
                         </div>
         
         <ul class="jiamengfeiyong-explainin basic" style="display: block;">
@@ -321,8 +321,8 @@ _MEIQIA('withoutBtn', true);
     <div class="jiamengyoushi" name="jiamengyoushi" id="jiamengyoushi">
             <div class="xiangmujieshao-title">
         <h2 class="fl"><a href="http://m.jmw.com.cn/xm137829/youshizhichi/">晨阳水漆加盟优势</a></h2>
-                    <a class="fr jiameng-more show_content" style="display: block;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">展开更多加盟信息<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png"></a>
-        <a class="fr jiameng-more hide_content" style="display: none;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">收起<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41a26-4399.png"></a>
+                    <a class="fr jiameng-more show_content" style="display: block;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">展开更多加盟信息<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png"></a>
+        <a class="fr jiameng-more hide_content" style="display: none;color: #b0b0b0;font-size: 10px;line-height: 39px;" href="javascript:;">收起<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41a26-4399.png"></a>
                 </div>
             <ul class="basic pres clear" style="display: block;">
             <li><p>
@@ -372,7 +372,7 @@ _MEIQIA('withoutBtn', true);
 <div class="jiamengdianpu" name="jiamengdianpu" id="jiamengdianpu" style="border-bottom:1px solid #E8EAEE; ">
             <div class="xiangmujieshao-title">
         <h2 class="fl"><a href="http://m.jmw.com.cn/xm137829/jiamengdian/" title="晨阳水漆加盟">晨阳水漆加盟店铺</a></h2>
-        <a class="fr" href="http://m.jmw.com.cn/xm137829/jiamengdian/">展开更多加盟信息<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png"></a>
+        <a class="fr" href="http://m.jmw.com.cn/xm137829/jiamengdian/">展开更多加盟信息<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png"></a>
     </div> 
          
     <ul class="jiamengfeiyong-explainin basic">
@@ -395,7 +395,7 @@ _MEIQIA('withoutBtn', true);
     <ul class="zaixianzixun-example">
                 <li>
             <dl class="mass-1 fl">
-                <dt><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/79506-4799.jpg" alt=""></dt>
+                <dt><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/79506-4799.jpg" alt=""></dt>
                 <dt style="margin-bottom: 6px;">
             鲍先生                  </dt>
                 <dt>网页版</dt>
@@ -404,7 +404,7 @@ _MEIQIA('withoutBtn', true);
                 <i></i>
                 <li class="mass-2-1">
                     IP：121.17.120.*                        <span class="fr">留言时间:2017-01-17 15:43:09</span>
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"/>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"/>
                                         </li>
                 <li class="mass-2-2">
                     资金看项目                  </li>
@@ -412,7 +412,7 @@ _MEIQIA('withoutBtn', true);
         </li>
                 <li>
             <dl class="mass-1 fl">
-                <dt><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" alt=""></dt>
+                <dt><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5448b-6171.jpg" alt=""></dt>
                 <dt style="margin-bottom: 6px;">
             吴正军                  </dt>
                 <dt>网页版</dt>
@@ -421,7 +421,7 @@ _MEIQIA('withoutBtn', true);
                 <i></i>
                 <li class="mass-2-1">
                     IP：180.174.146.*                       <span class="fr">留言时间:2017-01-17 15:11:13</span>
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"/>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"/>
                                         </li>
                 <li class="mass-2-2">
                     ·我想详细了解此项目的加盟流程，请与我联系！                 </li>
@@ -429,7 +429,7 @@ _MEIQIA('withoutBtn', true);
         </li>
                 <li>
             <dl class="mass-1 fl">
-                <dt><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" alt=""></dt>
+                <dt><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5448b-6171.jpg" alt=""></dt>
                 <dt style="margin-bottom: 6px;">
             陆前锋                  </dt>
                 <dt>网页版</dt>
@@ -438,7 +438,7 @@ _MEIQIA('withoutBtn', true);
                 <i></i>
                 <li class="mass-2-1">
                     IP：58.40.195.*                     <span class="fr">留言时间:2017-01-16 15:19:31</span>
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"/>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"/>
                                         </li>
                 <li class="mass-2-2">
                     ·我想详细了解此项目的加盟流程，请与我联系！                 </li>
@@ -446,7 +446,7 @@ _MEIQIA('withoutBtn', true);
         </li>
                 <li>
             <dl class="mass-1 fl">
-                <dt><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6989f-5450.jpg" alt=""></dt>
+                <dt><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6989f-5450.jpg" alt=""></dt>
                 <dt style="margin-bottom: 6px;">
             李总                    </dt>
                 <dt>手机版</dt>
@@ -597,8 +597,8 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
     }
 </script>
 <style>
-.icon_sex5{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }
-.icon_sex6{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }
+.icon_sex5{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }
+.icon_sex6{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }
 
 </style>    <!--我要咨询项目 end-->
 <!-- 官网活动  start-->
@@ -608,7 +608,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
         <a class="hongBao_l fl" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#n_content').val('我想咨询晨阳水漆加盟项目，并领取开店礼包！');$('#origin').val(7);" style="margin-right:10px;widht:47%">
 
             <dl class="clear"> 
-                <dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/45ce1-7696.png" alt="" /></dt>
+                <dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/45ce1-7696.png" alt="" /></dt>
                 <dd class="fl">
                     <p>开新店 领礼包</p>
                     <p><span>价值</span>  <span>￥</span>880</p>
@@ -618,7 +618,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
         </a>
         <a class="hongBao_l fr" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#n_content').val('我想咨询晨阳水漆加盟项目，并领取开店礼包！');$('#origin').val(7);">
             <dl class="clear"> 
-                <dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/45ce1-7696.png" alt="" /></dt>
+                <dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/45ce1-7696.png" alt="" /></dt>
                 <dd class="fl">
                     <p>开新店 领礼包</p>
                     <p><span>价值</span>  <span>￥</span>1880</p>
@@ -673,12 +673,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                         <dl class="fl">
                     <a href="http://m.jmw.com.cn/xm137829/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg" alt="" />
                             <p class="p1">晨阳水漆加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>5~30</em>万</span>
                             </p>
@@ -689,12 +689,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                  <dl class="fr">
                     <a href="http://m.jmw.com.cn/xm87619/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9ae0f-5385.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9ae0f-5385.jpg" alt="" />
                             <p class="p1">防水博士加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>5~10</em>万</span>
                             </p>
@@ -704,12 +704,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                                     <dl class="fl">
                     <a href="http://m.jmw.com.cn/xm72966/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1511b-3381.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/1511b-3381.jpg" alt="" />
                             <p class="p1">泰诗尔壁膜加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>1~10</em>万</span>
                             </p>
@@ -720,12 +720,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                  <dl class="fr">
                     <a href="http://m.jmw.com.cn/xm144347/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/df0f3-6345.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/df0f3-6345.jpg" alt="" />
                             <p class="p1">涂艺宝涂料加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>5~20</em>万</span>
                             </p>
@@ -735,12 +735,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                                     <dl class="fl">
                     <a href="http://m.jmw.com.cn/xm79341/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d564b-1823.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d564b-1823.jpg" alt="" />
                             <p class="p1">樱花涂料加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>3~10</em>万</span>
                             </p>
@@ -751,12 +751,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                  <dl class="fr">
                     <a href="http://m.jmw.com.cn/xm61213/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e8e61-6500.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e8e61-6500.jpg" alt="" />
                             <p class="p1">多乐士墙面漆加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>1~10</em>万</span>
                             </p>
@@ -766,12 +766,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                                     <dl class="fl">
                     <a href="http://m.jmw.com.cn/xm41954/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/82d17-3869.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/82d17-3869.jpg" alt="" />
                             <p class="p1">立邦加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>10~20</em>万</span>
                             </p>
@@ -782,12 +782,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                  <dl class="fr">
                     <a href="http://m.jmw.com.cn/xm20631/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0835b-1151.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0835b-1151.jpg" alt="" />
                             <p class="p1">科天水性漆加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>1~10</em>万</span>
                             </p>
@@ -797,12 +797,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                                     <dl class="fl">
                     <a href="http://m.jmw.com.cn/xm149696/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5f9c9-6781.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5f9c9-6781.jpg" alt="" />
                             <p class="p1">杜威漆加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>1~10</em>万</span>
                             </p>
@@ -813,12 +813,12 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                  <dl class="fr">
                     <a href="http://m.jmw.com.cn/xm74334/">
                         <dt>
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d1d46-4833.jpg" alt="" />
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d1d46-4833.jpg" alt="" />
                             <p class="p1">久居香漆加盟火爆招商</p>
                         </dt>
                         <dd> 
                             <p class="p2 clear">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                                 <span class="fl span_money">投资金额:</span>
                                 <span><em>1~10</em>万</span>
                             </p>
@@ -828,7 +828,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                         </div>
     <style>
     .more-icon {
-            background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png") no-repeat scroll 0 0 / 12px auto;
+            background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png") no-repeat scroll 0 0 / 12px auto;
             display: inline-block;
             height: 6px;
             margin-left: 8px;
@@ -886,7 +886,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                                                            <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" />
+                                                                            <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" />
                                                                             </a>
                                 </dt>
                                 <dd>
@@ -900,13 +900,13 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             晨阳水漆后，觉得这个品牌挺不错的，整体感觉不错，很想加盟这个品牌。                              </div>
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
-                                  <a href="javascript:;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                  <a href="javascript:;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                   <em></em>
                                   <span onclick="javascript:;" >
                                   我也要点评晨阳水漆加盟                                      </span>
                                 </p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="18780" onclick="hits(this);">
-                                <a href="javascript:;" class="zan_a_18780"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                <a href="javascript:;" class="zan_a_18780"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_18780">2</em>
                                     <span>赞一下</span>
                                 </p>
@@ -918,7 +918,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                                                            <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" />
+                                                                            <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" />
                                                                             </a>
                                 </dt>
                                 <dd>
@@ -932,13 +932,13 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             晨阳水漆了解后觉得品牌整体还不错，打算加盟这个品牌                              </div>
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
-                                  <a href="javascript:;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                  <a href="javascript:;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                   <em></em>
                                   <span onclick="javascript:;" >
                                   我也要点评晨阳水漆加盟                                      </span>
                                 </p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="18705" onclick="hits(this);">
-                                <a href="javascript:;" class="zan_a_18705"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                <a href="javascript:;" class="zan_a_18705"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_18705">0</em>
                                     <span>赞一下</span>
                                 </p>
@@ -950,7 +950,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                                                            <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" />
+                                                                            <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" />
                                                                             </a>
                                 </dt>
                                 <dd>
@@ -964,13 +964,13 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             觉得晨阳水漆有一定的品质，加盟政策了解了一下，迟迟力度还行，想加盟。                                </div>
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
-                                  <a href="javascript:;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                  <a href="javascript:;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                   <em></em>
                                   <span onclick="javascript:;" >
                                   我也要点评晨阳水漆加盟                                      </span>
                                 </p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="17758" onclick="hits(this);">
-                                <a href="javascript:;" class="zan_a_17758"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                <a href="javascript:;" class="zan_a_17758"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_17758">0</em>
                                     <span>赞一下</span>
                                 </p>
@@ -982,7 +982,7 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                                                            <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" />
+                                                                            <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" />
                                                                             </a>
                                 </dt>
                                 <dd>
@@ -996,13 +996,13 @@ $('#MFoot_fromurl').val(MFoot_fromurl);
                             晨阳水漆，在中国加盟网了解后，通过电话咨询了对方，觉得这个品牌总体感觉还是挺不错...                             </div>
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
-                                  <a href="javascript:;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                  <a href="javascript:;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                   <em></em>
                                   <span onclick="javascript:;" >
                                   我也要点评晨阳水漆加盟                                      </span>
                                 </p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="17632" onclick="hits(this);">
-                                <a href="javascript:;" class="zan_a_17632"><img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                <a href="javascript:;" class="zan_a_17632"><img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_17632">0</em>
                                     <span>赞一下</span>
                                 </p>
@@ -1119,7 +1119,7 @@ function hits(obj){
     <h2 class="wrap">中国加盟网创业指导</h2>
     <div class="zhiDao wrap clear"> 
         <dl class="fl">
-            <dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b995b-1996.png"/></dt>
+            <dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b995b-1996.png"/></dt>
             <dd class="fl">
                 <p class="p1">创业顾问-杨老师</p>
                 <p class="p2">4000500555转70001</p>
@@ -1131,7 +1131,7 @@ function hits(obj){
     </div>
     <div class="zhiDao wrap clear"> 
         <dl class="fl">
-            <dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e5ae2-3504.png"/></dt>
+            <dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e5ae2-3504.png"/></dt>
             <dd class="fl">
                 <p class="p1">创业顾问-苏老师</p>
                 <p class="p2">4000500555转70002</p>
@@ -1143,7 +1143,7 @@ function hits(obj){
     </div>
     <div class="zhiDao wrap clear" style="border-bottom:none;"> 
         <dl class="fl">
-            <dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/295c8-2055.png"/></dt>
+            <dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/295c8-2055.png"/></dt>
             <dd class="fl">
                 <p class="p1">创业顾问-秦老师</p>
                 <p class="p2">4000500555转70003</p>
@@ -1604,8 +1604,8 @@ function checkMessageInfo_new_kf(obj){
 }
 </script>
 <style>
-.icon_sex3{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
-.icon_sex4{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
+.icon_sex3{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
+.icon_sex4{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; }
 
 .kf-all{
 display: none;
@@ -1779,7 +1779,7 @@ function see_tel(obj){
 }
 </script>
 
-<a class="returntop" href="#top" style="display: none;"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41560-7162.png"></a>
+<a class="returntop" href="#top" style="display: none;"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
 <script>
     $(document).scroll(function() {
         var top = $(document).scrollTop();
@@ -2132,8 +2132,8 @@ function message_check_zx(obj){
 }
 </script>
    <!--<ul class="xm_footer">
-            <li class="xm_ico1 fl"><a href="javascript:;" onclick="addTelForWap(137829,1,'4000500555,95542');"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/dddd7-9769.png">免费通话</a></li>
-            <li class="xm_ico2 fl"><a onclick="$('.black-all').show();$('#n_content').val('请问晨阳水漆企业电话是多少？');$('#origin').val(9);"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/dcf8d-7090.png"><span>索要企业电话</span></a></li>
+            <li class="xm_ico1 fl"><a href="javascript:;" onclick="addTelForWap(137829,1,'4000500555,95542');"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/dddd7-9769.png">免费通话</a></li>
+            <li class="xm_ico2 fl"><a onclick="$('.black-all').show();$('#n_content').val('请问晨阳水漆企业电话是多少？');$('#origin').val(9);"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/dcf8d-7090.png"><span>索要企业电话</span></a></li>
     <li class="xm_ico3 fl"><a onclick="$('.tm_bg').show()&amp;&amp;$('.J-extent').show();$('#zj_origin').val('1');$('#contents').val('请问投资晨阳水漆所需要的费用有哪些?');"><span>在线咨询</span></a></li>
 </ul>-->
 <!-- 项目页底部定位 stop -->
@@ -2159,13 +2159,13 @@ line-height: 66px;
 }
 .xm_footer .xm_ico3 a{color: #ffffff;font-size: 0.8em;line-height: 48px;}
 .xm_footer .xm_ico1 img,.xm_footer .xm_ico2 img{width: 15px;height: 15px;display: block;position: absolute;top:6px;left:50%;margin-left: -7.5px;}
-.icon_sex1{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;}
-.icon_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;}
-.icon_liu_sex2{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }
+.icon_sex1{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;}
+.icon_sex2{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; margin-top: 20px!important;}
+.icon_liu_sex2{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }
 
 </style>
 <!-- 标项页讯加盟低价 -->
-<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css" />
+<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css" />
 <div class="gray_mask" style="display:none;"></div>
 <div class="Pline_consult" style="display:none;"id="Pline_consult"> 
 <form action="" method="post" id="form1">
@@ -2325,14 +2325,14 @@ function check_Standard(obj){
     .Pline_consultL ul .a1{ border-right:1px solid #e8e8e8; box-sizing:border-box; color:#cdcdcd; }
     .Pline_consultL ul .a2{ color:#4283e4; }
 </style>
-<script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/webcall.js"></script>
-<script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/iscroll.js"></script>
+<script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/webcall.js"></script>
+<script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/iscroll.js"></script>
     <ul class="I_speak clear"> 
-    <li class="fl li_left" onclick="$('.Pline_consultL').show();$('.gray_mask').show();"><p>我要<br />留言</p><i><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2de72-9761.png" alt="" /></i></li>
+    <li class="fl li_left" onclick="$('.Pline_consultL').show();$('.gray_mask').show();"><p>我要<br />留言</p><i><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2de72-9761.png" alt="" /></i></li>
     <li class="fl li_center"><input type="text" name="phone" id="si_mobel" value="输入您的电话:138******10" onfocus="if(this.value=='输入您的电话:138******10'){this.value=''}" onblur="if(this.value==''){this.value='输入您的电话:138******10'}" maxlength="11"/></li>
     <li class="fl li_right"  onclick="si_Webcall();return false;">
         <dl class="clear">
-            <dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/00698-5306.png" alt="" /></dt>
+            <dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/00698-5306.png" alt="" /></dt>
             <dd class="fl">在线<br />咨询</dd>
             <input type="hidden" name="tid" id="si_tid" value="137829">
             <input type="hidden" name="cname" id="si_cname" value="晨阳水漆">

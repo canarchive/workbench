@@ -188,7 +188,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
             <div class=" ask_shopping_box">
                 <a class="clickstream_tag" href="http://mall.to8to.com/temai/12585.html" data-ptag="1_3_4_13" target="_blank" title="Mlily/梦百合 释梦清氧记忆绵床垫  托玛琳内芯带您感受大自然的清新">
-                    <img alt="Mlily/梦百合 释梦清氧记忆绵床垫  托玛琳内芯带您感受大自然的清新" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ca064-2200.jpg" style="width: 180px;height: 180px;"></a>
+                    <img alt="Mlily/梦百合 释梦清氧记忆绵床垫  托玛琳内芯带您感受大自然的清新" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ca064-2200.jpg" style="width: 180px;height: 180px;"></a>
                 <div class="price_list">
                     <a class="f_c_003 lh20 clickstream_tag" data-ptag="1_3_4_13" href="http://mall.to8to.com/temai/12585.html" title="Mlily/梦百合 释梦清氧记忆绵床垫  托玛琳内芯带您感受大自然的清新" target="_blank">Mlily/梦百合 释梦清氧记忆绵床垫 托玛琳内芯带您感受大自然的清新</a>
                     <em class="big_em">￥
@@ -199,7 +199,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                     </em>
                 </div>
                 <a class="clickstream_tag" href="http://mall.to8to.com/temai/17752.html" data-ptag="1_3_4_14" target="_blank" title="卡贝  毛巾架太空铝卫生间折叠置物架浴巾架 浴室卫浴五金挂件套装">
-                    <img alt="卡贝  毛巾架太空铝卫生间折叠置物架浴巾架 浴室卫浴五金挂件套装" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/f1ee7-8184.jpg" style="width: 180px;height: 180px;"></a>
+                    <img alt="卡贝  毛巾架太空铝卫生间折叠置物架浴巾架 浴室卫浴五金挂件套装" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/f1ee7-8184.jpg" style="width: 180px;height: 180px;"></a>
                 <div class="price_list">
                     <a class="f_c_003 lh20 clickstream_tag" data-ptag="1_3_4_14" href="http://mall.to8to.com/temai/17752.html" title="卡贝  毛巾架太空铝卫生间折叠置物架浴巾架 浴室卫浴五金挂件套装" target="_blank">卡贝 毛巾架太空铝卫生间折叠置物架浴巾架 浴室卫浴五金挂件套装</a>
                     <em class="big_em">￥
@@ -210,7 +210,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                     </em>
                 </div>
                 <a class="clickstream_tag" href="http://mall.to8to.com/temai/16727.html" data-ptag="1_3_4_15" target="_blank" title="安尼熊/ANNE HOME 邦尼尔弹簧床垫 双面使用设计 AN-T-B23">
-                    <img alt="安尼熊/ANNE HOME 邦尼尔弹簧床垫 双面使用设计 AN-T-B23" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/93cd1-7378.jpg" style="width: 180px;height: 180px;"></a>
+                    <img alt="安尼熊/ANNE HOME 邦尼尔弹簧床垫 双面使用设计 AN-T-B23" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/93cd1-7378.jpg" style="width: 180px;height: 180px;"></a>
                 <div class="price_list">
                     <a class="f_c_003 lh20 clickstream_tag" data-ptag="1_3_4_15" href="http://mall.to8to.com/temai/16727.html" title="安尼熊/ANNE HOME 邦尼尔弹簧床垫 双面使用设计 AN-T-B23" target="_blank">安尼熊/ANNE HOME 邦尼尔弹簧床垫 双面使用设计 AN-T-B23</a>
                     <em class="big_em">￥
@@ -238,7 +238,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                     <h2>精华问答</h2></div>
                 <div class="sec_bd">
                     <a href="http://www.to8to.com/ask/k2948974.html" class="seca_bdl" target="_blank">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/1c040-7792.jpg" alt="必不可少的“年味儿”  家家户户都少不了它！" width="379" height="298">
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/1c040-7792.jpg" alt="必不可少的“年味儿”  家家户户都少不了它！" width="379" height="298">
                         <span class="seca_bdl_info ect">必不可少的“年味儿” 家家户户都少不了它！</span>
                         <span class="ie_bg"></span>
                     </a>
@@ -281,7 +281,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                     <ul class="clear">
                         <li>
                             <a href="http://www.to8to.com/ask/topic_xiaohuxingjingzhizhuangxiu" target="_blank" class="secb_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/d5a45-3835.jpg" alt="小户型精致装修" width="155" height="107"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/d5a45-3835.jpg" alt="小户型精致装修" width="155" height="107"></a>
                             <div class="secb_info">
                                 <a href="http://www.to8to.com/ask/topic_xiaohuxingjingzhizhuangxiu" target="_blank" class="ect">小户型精致装修</a>
                                 <div class="secb_info_scan">
@@ -290,7 +290,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         </li>
                         <li>
                             <a href="http://www.to8to.com/ask/topic_jiajuqigjie" target="_blank" class="secb_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/c81d6-2485.jpg" alt="居家清洁锦囊" width="155" height="107"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/c81d6-2485.jpg" alt="居家清洁锦囊" width="155" height="107"></a>
                             <div class="secb_info">
                                 <a href="http://www.to8to.com/ask/topic_jiajuqigjie" target="_blank" class="ect">居家清洁锦囊</a>
                                 <div class="secb_info_scan">
@@ -299,7 +299,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         </li>
                         <li>
                             <a href="http://www.to8to.com/ask/topic_lanrenyanghua" target="_blank" class="secb_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/1cd8a-8691.jpg" alt="懒人养花有妙招" width="155" height="107"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/1cd8a-8691.jpg" alt="懒人养花有妙招" width="155" height="107"></a>
                             <div class="secb_info">
                                 <a href="http://www.to8to.com/ask/topic_lanrenyanghua" target="_blank" class="ect">懒人养花有妙招</a>
                                 <div class="secb_info_scan">
@@ -308,7 +308,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         </li>
                         <li>
                             <a href="http://www.to8to.com/ask/topic_zhuangxiuwuranweihaiyujiejue" target="_blank" class="secb_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ca97c-4367.jpg" alt="装修污染危害解决" width="155" height="107"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ca97c-4367.jpg" alt="装修污染危害解决" width="155" height="107"></a>
                             <div class="secb_info">
                                 <a href="http://www.to8to.com/ask/topic_zhuangxiuwuranweihaiyujiejue" target="_blank" class="ect">装修污染危害解决</a>
                                 <div class="secb_info_scan">
@@ -554,7 +554,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         <li>
                             <span class="rank_num">1</span>
                             <a href="http://wh.to8to.com/zs/866339/" rel="nofollow" target="_blank" class="rank_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/bfeda-6201.jpg" alt="皇氏装饰" width="55" height="55"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/bfeda-6201.jpg" alt="皇氏装饰" width="55" height="55"></a>
                             <div class="rank_name">
                                 <a href="http://wh.to8to.com/zs/866339/" rel="nofollow" target="_blank">皇氏装饰</a>
                                 <p>回答数：2206</p>
@@ -563,7 +563,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         <li>
                             <span class="rank_num">2</span>
                             <a href="http://suzhou.to8to.com/zs/874756/" rel="nofollow" target="_blank" class="rank_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/01ada-7096.jpg" alt="金翅鸟装饰" width="55" height="55"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/01ada-7096.jpg" alt="金翅鸟装饰" width="55" height="55"></a>
                             <div class="rank_name">
                                 <a href="http://suzhou.to8to.com/zs/874756/" rel="nofollow" target="_blank">金翅鸟装饰</a>
                                 <p>回答数：1067</p>
@@ -572,7 +572,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         <li>
                             <span class="rank_num">3</span>
                             <a href="http://nj.to8to.com/zs/1407677/" rel="nofollow" target="_blank" class="rank_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/87756-5979.jpg" alt="焦点装饰" width="55" height="55"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/87756-5979.jpg" alt="焦点装饰" width="55" height="55"></a>
                             <div class="rank_name">
                                 <a href="http://nj.to8to.com/zs/1407677/" rel="nofollow" target="_blank">焦点装饰</a>
                                 <p>回答数：811</p>
@@ -581,7 +581,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         <li>
                             <span class="rank_num">4</span>
                             <a href="http://cd.to8to.com/zs/1547147/" rel="nofollow" target="_blank" class="rank_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/a1f76-4542.jpg" alt="柯演装饰" width="55" height="55"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/a1f76-4542.jpg" alt="柯演装饰" width="55" height="55"></a>
                             <div class="rank_name">
                                 <a href="http://cd.to8to.com/zs/1547147/" rel="nofollow" target="_blank">柯演装饰</a>
                                 <p>回答数：615</p>
@@ -590,7 +590,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
                         <li>
                             <span class="rank_num">5</span>
                             <a href="http://nj.to8to.com/zs/1144060/" rel="nofollow" target="_blank" class="rank_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/f77fb-5591.jpg" alt="列岛装饰" width="55" height="55"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/f77fb-5591.jpg" alt="列岛装饰" width="55" height="55"></a>
                             <div class="rank_name">
                                 <a href="http://nj.to8to.com/zs/1144060/" rel="nofollow" target="_blank">列岛装饰</a>
                                 <p>回答数：502</p>
@@ -601,7 +601,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
             <div class="ask_side_opa">
                 <a id="autourl" href="http://mall.to8to.com/search?keyword=%E9%9B%85%E6%A3%89 " hidefocus="" target="_blank" rel="nofollow">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
             </div>
             <div class="ask_side spceil">
                 <div class="side_hd">最新标签</div>

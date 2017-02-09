@@ -48,19 +48,19 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
                 <div class="slogan_title"></div>
                 <ul class="mission_vision">
                     <li class="fl">
-                        <i><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/f7fe4-5302.jpg" alt="土巴兔的使命" /></i>
+                        <i><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/f7fe4-5302.jpg" alt="土巴兔的使命" /></i>
                         <span>土巴兔的使命</span>
                         <p>让天下没有烦心的装修</p>
                     </li>
                     <li class="fr">
-                        <i><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/d7a70-1679.jpg" alt="土巴兔的愿景" /></i>
+                        <i><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/d7a70-1679.jpg" alt="土巴兔的愿景" /></i>
                         <span>土巴兔的愿景</span>
                         <p>成为全球家居装修领域的领导者</p>
                     </li>
                 </ul>
                 <div class="to8to_creed">
                     <span class="to8to_creed_pic">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/04d24-4968.jpg" alt="土巴兔信条" />
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/04d24-4968.jpg" alt="土巴兔信条" />
                     </span>
                     <div class="to8to_creed_text">
                         <h5>土巴兔的信条</h5>

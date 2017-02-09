@@ -11,7 +11,7 @@
             <ul>
                 <li>
                     <a href="http://www.jmw.com.cn/xm137829/" target="_blank" title="晨阳水漆加盟">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e5a72-3187.jpg" alt="晨阳水漆加盟">
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e5a72-3187.jpg" alt="晨阳水漆加盟">
                         <span class='op'></span>
                         <p class='imgLa'>明星代言/风险共担</p></a>
                     <div>
@@ -24,11 +24,11 @@
                     </div>
                     <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                         <a href="http://www.jmw.com.cn/xm137829/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="晨阳水漆加盟">晨阳水漆加盟</a></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="晨阳水漆加盟">晨阳水漆加盟</a></span>
                 </li>
                 <li>
                     <a href="http://search.jmw.com.cn/jmw_user/sxyj/" target="_blank" title="舒鑫E家环保墙面漆加盟">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0fb08-1258.jpg" alt="舒鑫E家环保墙面漆">
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0fb08-1258.jpg" alt="舒鑫E家环保墙面漆">
                         <span class='op'></span>
                         <p class='imgLa'>实地选址/低门槛合作</p></a>
                     <div>
@@ -41,11 +41,11 @@
                     </div>
                     <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                         <a href="http://search.jmw.com.cn/jmw_user/sxyj/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="舒鑫E家环保墙面漆加盟">舒鑫E家环保墙面漆加盟</a></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="舒鑫E家环保墙面漆加盟">舒鑫E家环保墙面漆加盟</a></span>
                 </li>
                 <li>
                     <a href="http://www.jmw.com.cn/xm76445/" target="_blank" title="澳普利发门窗加盟">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f491a-2987.jpg" alt="澳普利发门窗加盟">
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f491a-2987.jpg" alt="澳普利发门窗加盟">
                         <span class='op'></span>
                         <p class='imgLa'>整店输出/刚需市场</p></a>
                     <div>
@@ -58,11 +58,11 @@
                     </div>
                     <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                         <a href="http://www.jmw.com.cn/xm76445/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="澳普利发门窗加盟">澳普利发门窗加盟</a></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="澳普利发门窗加盟">澳普利发门窗加盟</a></span>
                 </li>
                 <li style='margin-right:0px;'>
                     <a href="http://search.jmw.com.cn/jmw_user/rsdgy/" target="_blank" title="荣事达管业加盟">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b5ca0-2188.jpg" alt="荣事达管业加盟">
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b5ca0-2188.jpg" alt="荣事达管业加盟">
                         <span class='op'></span>
                         <p class='imgLa'>口碑好盈利快/简单操作</p></a>
                     <div>
@@ -75,7 +75,7 @@
                     </div>
                     <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                         <a href="http://search.jmw.com.cn/jmw_user/rsdgy/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="荣事达管业加盟">荣事达管业加盟</a></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="荣事达管业加盟">荣事达管业加盟</a></span>
                 </li>
             </ul>
         </div>

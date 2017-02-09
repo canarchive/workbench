@@ -60,8 +60,8 @@
             })</script>
         <a class="fr phone" href="javascript:;" style="position: relative;z-index: 100;">朋友帮我看项目
             <div style="position:absolute;z-index:500;right:-25px;background:#fff;border:2px solid #d5d5d5;display: none;padding: 10px;top:23px;" class="w-erwei">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4acd8-7348.png">
-                <img style="margin-left:6px;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c7753-5805.png" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4acd8-7348.png">
+                <img style="margin-left:6px;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c7753-5805.png" />
                 <!--span style="color: rgb(223, 0, 0);font-size: 14px; line-height: 32px;width:152px;">扫一扫，移动端浏览</span-->
                 <!--div style="color:#DF0000;line-height:32px;font-size:16px;">手机二维码</div--></div></a>
     </div>

@@ -450,9 +450,9 @@
                     <span class="red_rr" style="display:none;"></span>
                 </li>
                 <p class="zhanKAI" style="position:absolute; right:0; bottom:8px; *right:-100px; *bottom:27px; ">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bc32c-7742.png" alt="" /></p>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bc32c-7742.png" alt="" /></p>
                 <p class="shouQI" style="position:absolute; right:0; bottom:7px; *right:-100px; *bottom:8px; display:none;">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fc0c6-5378.png" alt="" /></p>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fc0c6-5378.png" alt="" /></p>
             </ul>
         </div>
         <div class="channelOne clearfix" style="border-bottom: medium none;">

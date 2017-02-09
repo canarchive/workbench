@@ -1,7 +1,7 @@
 <div class="Pfind_money" id="click_Pfind1" style="display:none; ">
     <p class="p_title1 clearfix">
         <span class="fr" onclick="$('#click_Pfind1').hide();$('.gray_mask').hide();$('#button_click').attr('onclick','return checkForm($(this))');">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1b5cd-8225.png" alt="" /></span>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1b5cd-8225.png" alt="" /></span>
     </p>
     <div class="Pfind_money2">
         <form action="" method="post" id="form">

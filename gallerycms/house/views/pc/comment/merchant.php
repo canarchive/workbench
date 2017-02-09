@@ -4,7 +4,7 @@
         <div class="comment">
             <div class="star clearfix">
                 <!--综合评分 左 B-->
-                <style>.star_left p .x1{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -80px; } .star_left p .x2{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -60px; } .star_left p .x3{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -40px; } .star_left p .x4{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -20px; } .star_left p .x5{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px 0px; }</style>
+                <style>.star_left p .x1{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -80px; } .star_left p .x2{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -60px; } .star_left p .x3{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -40px; } .star_left p .x4{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px -20px; } .star_left p .x5{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: left; height: 20px; width: 128px; background-position:-1px 0px; }</style>
                 <div class="fl star_left">
                     <h3>综合平均分</h3>
                     <p class="clearfix">
@@ -99,8 +99,8 @@
                             });
                         })</script>
                     <!--我要点评五角星-star-->
-                    <link href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/e8ba4-6744.css" rel="stylesheet" type="text/css" />
-                    <style>.gradeRank_big{float:left;width:118px;height:20px;margin:0 10px 0 0;overflow:hidden;background-image:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png);background-position:-1px -100px;background-repeat:no-repeat;} .gradeRank_big.b_star0{background-position:-1px -151px;} .gradeRank_big.b_star1{background-position:-1px -121px;} .gradeRank_big.b_star2{background-position:-1px -91px;} .gradeRank_big.b_star3{background-position:-1px -61px;} .gradeRank_big.b_star4{background-position:-1px -31px;} .gradeRank_big.b_star5{background-position:-1px -1px;} .gradeBox{height:20px;line-height:20px;margin:15px 0;overflow:hidden;} .gradeBox li a.choose_star{background-image:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png);background-repeat:no-repeat;} .gradeBox li a.clrs{background-image:none;} .gradeBox li a.hover_star{background-image:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/3fa98-1808.png);background-repeat:no-repeat;} .gradeBox li a.one_star{width:20px;z-index:5;background-position: -1px -80px;} .gradeBox li a.two_star{width:45px;z-index:4;background-position: -1px -60px;} .gradeBox li a.three_star{width:66px;z-index:3;background-position: -1px -40px;} .gradeBox li a.four_star{width:93px;z-index:2;background-position: -1px -20px;} .gradeBox li a.five_star{width:118px;z-index:1;background-position: -1px 0px;}</style>
+                    <link href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/e8ba4-6744.css" rel="stylesheet" type="text/css" />
+                    <style>.gradeRank_big{float:left;width:118px;height:20px;margin:0 10px 0 0;overflow:hidden;background-image:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png);background-position:-1px -100px;background-repeat:no-repeat;} .gradeRank_big.b_star0{background-position:-1px -151px;} .gradeRank_big.b_star1{background-position:-1px -121px;} .gradeRank_big.b_star2{background-position:-1px -91px;} .gradeRank_big.b_star3{background-position:-1px -61px;} .gradeRank_big.b_star4{background-position:-1px -31px;} .gradeRank_big.b_star5{background-position:-1px -1px;} .gradeBox{height:20px;line-height:20px;margin:15px 0;overflow:hidden;} .gradeBox li a.choose_star{background-image:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png);background-repeat:no-repeat;} .gradeBox li a.clrs{background-image:none;} .gradeBox li a.hover_star{background-image:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3fa98-1808.png);background-repeat:no-repeat;} .gradeBox li a.one_star{width:20px;z-index:5;background-position: -1px -80px;} .gradeBox li a.two_star{width:45px;z-index:4;background-position: -1px -60px;} .gradeBox li a.three_star{width:66px;z-index:3;background-position: -1px -40px;} .gradeBox li a.four_star{width:93px;z-index:2;background-position: -1px -20px;} .gradeBox li a.five_star{width:118px;z-index:1;background-position: -1px 0px;}</style>
                     <div class="gradeBox">
                         <ul class="gradeRank_big">
                             <li>
@@ -179,51 +179,51 @@
                             <ul class="expression_list">
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[晕]" title="晕" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[强]" title="强" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[握手]" title="握手" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                 </li>
                                 <li show_dom_id="dom_show" len="300" name="com_text" onclick="insertFaceFun($(this));return false;">
                                     <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                 </li>
                             </ul>
                             <script type="text/javascript">$(function() {
@@ -305,7 +305,7 @@
                 </div>
                 <!--我要点评end--></div>
             <!--点评列表star-->
-            <style>.formSubmit_btn{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/32916-9047.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; color: #fff; cursor: pointer; position:absolute; top:0; right:0; z-index: 10; font-family: "微软雅黑"; font-size: 16px; height: 30px; line-height: 28px; overflow: hidden; width: 100px; } .my_feel1{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -57px; } .my_feel2{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -42px; } .my_feel3{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -27px; } .my_feel4{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -15px; } .my_feel5{ background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px 0px; }</style>
+            <style>.formSubmit_btn{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/32916-9047.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; color: #fff; cursor: pointer; position:absolute; top:0; right:0; z-index: 10; font-family: "微软雅黑"; font-size: 16px; height: 30px; line-height: 28px; overflow: hidden; width: 100px; } .my_feel1{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -57px; } .my_feel2{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -42px; } .my_feel3{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -27px; } .my_feel4{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px -15px; } .my_feel5{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0403f-8739.png") repeat scroll 0 0 rgba(0, 0, 0, 0); display: inline-block; height: 12px; margin-top: 6px; overflow: hidden; width: 80px; background-position:-1px 0px; }</style>
             <script>//回复
                 var replystatus = true;
                 function reply(obj) {
@@ -457,7 +457,7 @@
             <a name="anchor18780"></a>
             <div class="join clearfix">
                 <a name="anchor18780"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -494,51 +494,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18780" len="200" show_dom_id="show_dom18780" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -546,7 +546,7 @@
                                 <i id="show_dom18780">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="18780" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -557,7 +557,7 @@
             <a name="anchor18705"></a>
             <div class="join clearfix">
                 <a name="anchor18705"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -594,51 +594,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text18705" len="200" show_dom_id="show_dom18705" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -646,7 +646,7 @@
                                 <i id="show_dom18705">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="18705" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -657,7 +657,7 @@
             <a name="anchor17758"></a>
             <div class="join clearfix">
                 <a name="anchor17758"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -694,51 +694,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17758" len="200" show_dom_id="show_dom17758" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -746,7 +746,7 @@
                                 <i id="show_dom17758">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="17758" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -757,7 +757,7 @@
             <a name="anchor17632"></a>
             <div class="join clearfix">
                 <a name="anchor17632"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -794,51 +794,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17632" len="200" show_dom_id="show_dom17632" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -846,7 +846,7 @@
                                 <i id="show_dom17632">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="17632" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -857,7 +857,7 @@
             <a name="anchor17319"></a>
             <div class="join clearfix">
                 <a name="anchor17319"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -895,51 +895,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17319" len="200" show_dom_id="show_dom17319" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -947,7 +947,7 @@
                                 <i id="show_dom17319">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="17319" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -958,7 +958,7 @@
             <a name="anchor17242"></a>
             <div class="join clearfix">
                 <a name="anchor17242"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -994,51 +994,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text17242" len="200" show_dom_id="show_dom17242" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1046,7 +1046,7 @@
                                 <i id="show_dom17242">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="17242" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1094,51 +1094,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16554" len="200" show_dom_id="show_dom16554" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1146,7 +1146,7 @@
                                 <i id="show_dom16554">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="16554" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1195,51 +1195,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text16401" len="200" show_dom_id="show_dom16401" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1247,7 +1247,7 @@
                                 <i id="show_dom16401">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="16401" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1258,7 +1258,7 @@
             <a name="anchor15576"></a>
             <div class="join clearfix">
                 <a name="anchor15576"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1295,51 +1295,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15576" len="200" show_dom_id="show_dom15576" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1347,7 +1347,7 @@
                                 <i id="show_dom15576">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="15576" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1358,7 +1358,7 @@
             <a name="anchor15019"></a>
             <div class="join clearfix">
                 <a name="anchor15019"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1395,51 +1395,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text15019" len="200" show_dom_id="show_dom15019" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1447,7 +1447,7 @@
                                 <i id="show_dom15019">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="15019" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1458,7 +1458,7 @@
             <a name="anchor14432"></a>
             <div class="join clearfix">
                 <a name="anchor14432"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1495,51 +1495,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text14432" len="200" show_dom_id="show_dom14432" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1547,7 +1547,7 @@
                                 <i id="show_dom14432">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="14432" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1558,7 +1558,7 @@
             <a name="anchor13708"></a>
             <div class="join clearfix">
                 <a name="anchor13708"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1595,51 +1595,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text13708" len="200" show_dom_id="show_dom13708" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1647,7 +1647,7 @@
                                 <i id="show_dom13708">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="13708" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1658,7 +1658,7 @@
             <a name="anchor12932"></a>
             <div class="join clearfix">
                 <a name="anchor12932"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1696,51 +1696,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12932" len="200" show_dom_id="show_dom12932" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1748,7 +1748,7 @@
                                 <i id="show_dom12932">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="12932" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1759,7 +1759,7 @@
             <a name="anchor12593"></a>
             <div class="join clearfix">
                 <a name="anchor12593"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1797,51 +1797,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12593" len="200" show_dom_id="show_dom12593" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1849,7 +1849,7 @@
                                 <i id="show_dom12593">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="12593" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1860,7 +1860,7 @@
             <a name="anchor12267"></a>
             <div class="join clearfix">
                 <a name="anchor12267"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1897,51 +1897,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12267" len="200" show_dom_id="show_dom12267" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -1949,7 +1949,7 @@
                                 <i id="show_dom12267">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="12267" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -1960,7 +1960,7 @@
             <a name="anchor12237"></a>
             <div class="join clearfix">
                 <a name="anchor12237"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -1997,51 +1997,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12237" len="200" show_dom_id="show_dom12237" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -2049,7 +2049,7 @@
                                 <i id="show_dom12237">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="12237" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -2060,7 +2060,7 @@
             <a name="anchor12074"></a>
             <div class="join clearfix">
                 <a name="anchor12074"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -2095,51 +2095,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text12074" len="200" show_dom_id="show_dom12074" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -2147,7 +2147,7 @@
                                 <i id="show_dom12074">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="12074" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -2158,7 +2158,7 @@
             <a name="anchor10939"></a>
             <div class="join clearfix">
                 <a name="anchor10939"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -2193,51 +2193,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text10939" len="200" show_dom_id="show_dom10939" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -2245,7 +2245,7 @@
                                 <i id="show_dom10939">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="10939" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -2256,7 +2256,7 @@
             <a name="anchor9978"></a>
             <div class="join clearfix">
                 <a name="anchor9978"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -2294,51 +2294,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9978" len="200" show_dom_id="show_dom9978" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -2346,7 +2346,7 @@
                                 <i id="show_dom9978">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="9978" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();
@@ -2357,7 +2357,7 @@
             <a name="anchor9816"></a>
             <div class="join clearfix">
                 <a name="anchor9816"></a>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" class="peo" width="69" height="69" />
                 <div class="join_box">
                     <div class="join_eva clearfix">
                         <span class="span_red fl">意向加盟者</span>
@@ -2393,51 +2393,51 @@
                                 <ul class="expression_list">
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[惊讶]" title="惊讶" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5f8ca-2856.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5f8ca-2856.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[奋斗]" title="奋斗" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56dad-8472.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56dad-8472.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[鼓掌]" title="鼓掌" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3849b-8717.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3849b-8717.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[微笑]" title="微笑" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4d2e-2671.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4d2e-2671.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[可怜]" title="可怜" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8dc80-7102.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8dc80-7102.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[亲亲]" title="亲亲" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/06916-5101.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/06916-5101.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[晕]" title="晕" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/22fe0-5589.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/22fe0-5589.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[抱拳]" title="抱拳" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/66c5f-1067.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/66c5f-1067.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[玫瑰]" title="玫瑰" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/396b3-7968.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/396b3-7968.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[强]" title="强" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5847c-6093.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5847c-6093.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[握手]" title="握手" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cf139-9034.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cf139-9034.gif" alt="" /></a>
                                     </li>
                                     <li name="com_text9816" len="200" show_dom_id="show_dom9816" onclick="insertFaceFun($(this));return false;">
                                         <a ico-val="[爱心]" title="爱心" href="javascript:;">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3efbe-4656.gif" alt="" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3efbe-4656.gif" alt="" /></a>
                                     </li>
                                 </ul>
                             </span>
@@ -2445,7 +2445,7 @@
                                 <i id="show_dom9816">200</i>个字符</span>
                             <input class="formSubmit_btn" name="" style="line-height:28px;" type="button" value="回复" tid="9816" onclick="javascript:reply($(this));return false;" /></div>
                         <!---回复框开始 ---->
-                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
+                        <style>.reply_content dl dt img{ display:inline-block; vertical-align:middle;} .reply_content dl dt span{ display:inline-block; vertical-align:middle;} .viewMore_list span{ display:block; text-align:center;} .viewMore_list span a{ display:inline-block; height:18px; line-height:18px;} .viewMore_list span a.click_viewMore{ padding:0 30px; color:#36C; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c61fb-6285.gif) 108px 6px no-repeat;} .viewMore_list span a.click_fold{ padding:0 20px; color:#666; background:url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1aa8b-5590.gif) 50px 6px no-repeat; border-left:1px dashed #ccc;} .viewMore_list span a:hover{ color:#F00;}</style>
                         <script type="text/javascript">function click_fold(show_reply_more_id) {
                                 $('.click_fold').fadeOut();
                                 $("#show_reply_more_" + show_reply_more_id).hide();

@@ -6,25 +6,25 @@
                 <a style="color:#df0303;">
                     <i class="zong_icon i1"></i>7*13小时免费直拨 4000-500-555</a>
                 <p class="pa pic_phone">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e63c2-3831.png" alt="" /></p>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e63c2-3831.png" alt="" /></p>
             </li>
             <li class="li_mobile">
                 <a>
                     <i class="zong_icon i2"></i>手机版</a>
                 <p class="pa pic_mobile">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/753f1-2256.png" alt="" /></p>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/753f1-2256.png" alt="" /></p>
             </li>
             <li class="li_weiXin li_weiXin2">
                 <a>
                     <i class="zong_icon i3"></i>微信</a>
                 <p class="pa pic_two_wei1">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7df11-4449.png" alt="" /></p>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7df11-4449.png" alt="" /></p>
             </li>
             <li class="li_weibo li_weiXin2">
                 <a>
                     <i class="zong_icon i4"></i>微博</a>
                 <p class="pa pic_two_wei2">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4f186-9756.png" alt="" /></p>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4f186-9756.png" alt="" /></p>
             </li>
             <li class="ttbar_navs">
                 <div class="dt">
@@ -393,4 +393,4 @@
         </ul>
     </div>
 </div>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/newloginstatus.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/newloginstatus.js"></script>

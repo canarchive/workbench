@@ -1,7 +1,7 @@
 <div class="logo wrapper clearfix">
     <div class="logo_left fl clearfix">
         <a target="_blank" href="http://www.jmw.com.cn">
-            <img title="中国加盟网" width="133" height="34" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a0ad-7533.jpg"></a>
+            <img title="中国加盟网" width="133" height="34" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a0ad-7533.jpg"></a>
         <div style="border-left:1px solid #cdcdcd;float:left;color:#444;margin-top:20px;padding-left:14px;overflow:hidden;width: 220px;text-overflow: ellipsis;white-space: nowrap;">
             <h1 title="如何加盟晨阳水漆" style="font:20px '微软雅黑';font-weight:bold;color:#444;">如何加盟晨阳水漆</h1>
             <span title="晨阳水漆加盟点评" style="font:12px '微软雅黑';color:#999999; font-weight:normal;">晨阳水漆加盟点评</span></div>
@@ -148,7 +148,7 @@
                 <input type="hidden" name="money" id="mid" value="">
                 <input type="text" autocomplete="off" searchautocomplete="true" onblur="bonblu()" onfocus="aonfo()" value="请添加关键字" name="keyword" id="keyword_fenci" class="inp_1">
                 <input type="submit" value="搜索一下" class="inp_2" style="text-decoration:none;">
-                <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/jquery.oncheck.js" type="text/javascript"></script>
+                <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery.oncheck.js" type="text/javascript"></script>
                 <script>$(function() {
                         $(".inp_2").mouseover(function() {
                             $(this).attr("style", "text-decoration:underline;");
@@ -201,10 +201,10 @@
                 }</script>
         </div>
     </div>
-    <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/af28d-4814.css">
-    <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/jquery-ui.js"></script>
-    <!--<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/6d681-4893.css">-->
+    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/af28d-4814.css">
+    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/6d681-4893.css">-->
     <script>$(function() {
             $.ajax();
             var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];

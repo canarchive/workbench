@@ -8,19 +8,19 @@
     <div class="people_talk_list_box">
         <ul class="people_talk_list">
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/fd349-1011.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/db657-4833.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/fd349-1011.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/db657-4833.jpg" width="118" height="118" /></li>
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/adf16-5226.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/8295a-5769.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/adf16-5226.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/8295a-5769.jpg" width="118" height="118" /></li>
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/0c115-8948.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/7755a-4811.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/0c115-8948.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/7755a-4811.jpg" width="118" height="118" /></li>
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/485ff-4894.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/12c8c-9264.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/485ff-4894.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/12c8c-9264.jpg" width="118" height="118" /></li>
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/29757-1493.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/b5736-8998.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/29757-1493.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/b5736-8998.jpg" width="118" height="118" /></li>
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/53069-4123.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/724c6-2766.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/53069-4123.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/724c6-2766.jpg" width="118" height="118" /></li>
             <li>
-                <img data-src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/dafd9-4430.jpg" alt="" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/4f952-9766.jpg" width="118" height="118" /></li>
+                <img data-src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/dafd9-4430.jpg" alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/4f952-9766.jpg" width="118" height="118" /></li>
         </ul>
     </div>
 </div>

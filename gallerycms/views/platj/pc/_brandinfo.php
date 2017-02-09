@@ -1,7 +1,7 @@
 <div class="shop wrapper">
     <div class="fl shop_l">
         <a href="#2">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" width="113" height="87" alt="晨阳水漆加盟" /></a>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f3dc5-2512.jpg" width="113" height="87" alt="晨阳水漆加盟" /></a>
     </div>
     <div class="fl shop_r">
         <h2>晨阳水漆网友点评</h2>

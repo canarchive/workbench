@@ -22,7 +22,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
     <div class="tuwen-mix bgfff">
         <div class="mask-layer2 zp-mask-layer2"></div>
         <a class="tuwen-item clearfix" href="/baojia/644868.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">雷捷时代广场130平米新古典风格装修报价别墅</p>
@@ -37,7 +37,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644867.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">桃花苑120平米中式风格装修报价别墅</p>
@@ -52,7 +52,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644866.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">万年花城110平米美式风格装修报价普通住宅</p>
@@ -67,7 +67,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644865.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">对视70平米地中海风格装修报价小户型</p>
@@ -82,7 +82,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644864.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">漷县镇商业广场住宅小区200平米田园风格装修报价别墅</p>
@@ -97,7 +97,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644863.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">五矿万科·如园(如园作品壹号)190平米东南亚风格装修报价普通住宅</p>
@@ -112,7 +112,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644862.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">华凯花园180平米新古典风格装修报价别墅</p>
@@ -127,7 +127,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644861.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">西路时代大厦160平米美式风格装修报价普通住宅</p>
@@ -142,7 +142,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644860.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">国展家园140平米混搭风格装修报价别墅</p>
@@ -157,7 +157,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
             </div>
         </a>
         <a class="tuwen-item clearfix" href="/baojia/644859.html">
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
                     <span class="f14 mycom-ellipsis line2">酷特区130平米现代风格装修报价别墅</p>

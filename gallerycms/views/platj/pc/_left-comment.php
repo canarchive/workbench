@@ -8,7 +8,7 @@
             <div id="message_div" class="message_every clearfix">
                 <dl class="fl">
                     <dt>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/79506-4799.jpg" width="51" height="51" alt="" /></dt>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/79506-4799.jpg" width="51" height="51" alt="" /></dt>
                     <dd>鲍先生</dd></dl>
                 <ul class="tent fl">
                     <li class="sanjiao"></li>
@@ -20,7 +20,7 @@
                             <li class="From">网页版</li>
                             <li class="time">留言时间:
                                 <span>2017-01-17 15:43:09
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
                         </ul>
                     </li>
                     <li class="want">资金看项目</li></ul>
@@ -28,7 +28,7 @@
             <div id="message_div" class="message_every clearfix">
                 <dl class="fl">
                     <dt>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" width="51" height="51" alt="" /></dt>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5448b-6171.jpg" width="51" height="51" alt="" /></dt>
                     <dd>吴正军</dd></dl>
                 <ul class="tent fl">
                     <li class="sanjiao"></li>
@@ -40,7 +40,7 @@
                             <li class="From">网页版</li>
                             <li class="time">留言时间:
                                 <span>2017-01-17 15:11:13
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
                         </ul>
                     </li>
                     <li class="want">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
@@ -48,7 +48,7 @@
             <div id="message_div" class="message_every clearfix">
                 <dl class="fl">
                     <dt>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5448b-6171.jpg" width="51" height="51" alt="" /></dt>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5448b-6171.jpg" width="51" height="51" alt="" /></dt>
                     <dd>陆前锋</dd></dl>
                 <ul class="tent fl">
                     <li class="sanjiao"></li>
@@ -60,7 +60,7 @@
                             <li class="From">网页版</li>
                             <li class="time">留言时间:
                                 <span>2017-01-16 15:19:31
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
                         </ul>
                     </li>
                     <li class="want">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
@@ -68,7 +68,7 @@
             <div id="message_div" class="message_every clearfix">
                 <dl class="fl">
                     <dt>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6989f-5450.jpg" width="51" height="51" alt="" /></dt>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6989f-5450.jpg" width="51" height="51" alt="" /></dt>
                     <dd>李总</dd></dl>
                 <ul class="tent fl">
                     <li class="sanjiao"></li>

@@ -49,9 +49,9 @@
             <p style="width: 270px; height: 80px; overflow: hidden; margin-top: 9px; position:relative;">
                 <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0; overflow:hidden;">
                     <a href="http://zch.jmw.com.cn/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="第九届中国品牌加盟投资博览会">第九届中国品牌加盟投资博览会</a></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="第九届中国品牌加盟投资博览会">第九届中国品牌加盟投资博览会</a></span>
                 <a href="http://zch.jmw.com.cn/" title="第十届中国品牌加盟投资博览会">
-                    <img alt="第十届中国品牌加盟投资博览会" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e7260-4000.jpg"></a>
+                    <img alt="第十届中国品牌加盟投资博览会" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e7260-4000.jpg"></a>
             </p>
         </div>
         <div class='joinItem fl'>
@@ -126,7 +126,7 @@
                                 <dl class="fl">
                                     <dt class="pr">
                                         <a href="http://www.jmw.com.cn/xm79341/" target="_blank" title="樱花涂料加盟">
-                                            <img class="hoverimg" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2896f-4920.jpg" alt="樱花涂料加盟" /></a>
+                                            <img class="hoverimg" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2896f-4920.jpg" alt="樱花涂料加盟" /></a>
                                         <p class="p_black pa"></p>
                                         <div class="p_black2 pa clear">
                                             <p class="fl p1 f14">
@@ -134,7 +134,7 @@
                                             <p class="fr p_iCan p_iCan2 f12" onclick="message_check('79341','30-1','热门行业的樱花涂料项目很不错，我想加盟，请尽快联系我！！！');">我要加盟</p></div>
                                         <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                                             <a href="http://www.jmw.com.cn/xm79341/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="樱花涂料加盟">樱花涂料加盟</a></span>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="樱花涂料加盟">樱花涂料加盟</a></span>
                                     </dt>
                                     <dd class="clear">
                                         <a href="http://www.jmw.com.cn/xm79341/" title="樱花涂料加盟" class="fl" target="_blank">樱花涂料加盟</a>
@@ -147,7 +147,7 @@
                                 <dl class="fl">
                                     <dt class="pr">
                                         <a href="http://www.jmw.com.cn/xm36467/" target="_blank" title="苏仕佳五金加盟">
-                                            <img class="hoverimg" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/56b6c-6543.jpg" alt="苏仕佳五金加盟" /></a>
+                                            <img class="hoverimg" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/56b6c-6543.jpg" alt="苏仕佳五金加盟" /></a>
                                         <p class="p_black pa"></p>
                                         <div class="p_black2 pa clear">
                                             <p class="fl p1 f14">
@@ -155,7 +155,7 @@
                                             <p class="fr p_iCan p_iCan2 f12" onclick="message_check('36467','30-1','热门行业的苏仕佳五金项目很不错，我想加盟，请尽快联系我！！！');">我要加盟</p></div>
                                         <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                                             <a href="http://www.jmw.com.cn/xm36467/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="苏仕佳五金加盟">苏仕佳五金加盟</a></span>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="苏仕佳五金加盟">苏仕佳五金加盟</a></span>
                                     </dt>
                                     <dd class="clear">
                                         <a href="http://www.jmw.com.cn/xm36467/" title="苏仕佳五金加盟" class="fl" target="_blank">苏仕佳五金加盟</a>
@@ -168,7 +168,7 @@
                                 <dl class="fl">
                                     <dt class="pr">
                                         <a href="http://search.jmw.com.cn/jmw_user/tnmy/" target="_blank" title="钛能门业加盟">
-                                            <img class="hoverimg" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4bfd0-2111.jpg" alt="钛能门业加盟" /></a>
+                                            <img class="hoverimg" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4bfd0-2111.jpg" alt="钛能门业加盟" /></a>
                                         <p class="p_black pa"></p>
                                         <div class="p_black2 pa clear">
                                             <p class="fl p1 f14">
@@ -176,7 +176,7 @@
                                             <p class="fr p_iCan p_iCan2 f12" onclick="message_check('6675488','30-1','热门行业的钛能门业项目很不错，我想加盟，请尽快联系我！！！');">我要加盟</p></div>
                                         <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                                             <a href="http://search.jmw.com.cn/jmw_user/tnmy/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="钛能门业加盟">钛能门业加盟</a></span>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="钛能门业加盟">钛能门业加盟</a></span>
                                     </dt>
                                     <dd class="clear">
                                         <a href="http://search.jmw.com.cn/jmw_user/tnmy/" title="钛能门业加盟" class="fl" target="_blank">钛能门业加盟</a>
@@ -189,7 +189,7 @@
                                 <dl class="fl">
                                     <dt class="pr">
                                         <a href="http://www.jmw.com.cn/xm137829/" target="_blank" title="晨阳水漆加盟">
-                                            <img class="hoverimg" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12ab4-6223.jpg" alt="晨阳水漆加盟" /></a>
+                                            <img class="hoverimg" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/12ab4-6223.jpg" alt="晨阳水漆加盟" /></a>
                                         <p class="p_black pa"></p>
                                         <div class="p_black2 pa clear">
                                             <p class="fl p1 f14">
@@ -197,7 +197,7 @@
                                             <p class="fr p_iCan p_iCan2 f12" onclick="message_check('137829','30-1','热门行业的晨阳水漆项目很不错，我想加盟，请尽快联系我！！！');">我要加盟</p></div>
                                         <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                                             <a href="http://www.jmw.com.cn/xm137829/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="晨阳水漆加盟">晨阳水漆加盟</a></span>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="晨阳水漆加盟">晨阳水漆加盟</a></span>
                                     </dt>
                                     <dd class="clear">
                                         <a href="http://www.jmw.com.cn/xm137829/" title="晨阳水漆加盟" class="fl" target="_blank">晨阳水漆加盟</a>
@@ -210,7 +210,7 @@
                                 <dl class="fl">
                                     <dt class="pr">
                                         <a href="http://www.jmw.com.cn/xm6594594/" target="_blank" title="忆江南锦缎泥加盟">
-                                            <img class="hoverimg" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f5718-4081.jpg" alt="忆江南锦缎泥加盟" /></a>
+                                            <img class="hoverimg" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f5718-4081.jpg" alt="忆江南锦缎泥加盟" /></a>
                                         <p class="p_black pa"></p>
                                         <div class="p_black2 pa clear">
                                             <p class="fl p1 f14">
@@ -218,7 +218,7 @@
                                             <p class="fr p_iCan p_iCan2 f12" onclick="message_check('6594594','30-1','热门行业的忆江南锦缎泥项目很不错，我想加盟，请尽快联系我！！！');">我要加盟</p></div>
                                         <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                                             <a href="http://www.jmw.com.cn/xm6594594/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="忆江南锦缎泥加盟">忆江南锦缎泥加盟</a></span>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="忆江南锦缎泥加盟">忆江南锦缎泥加盟</a></span>
                                     </dt>
                                     <dd class="clear">
                                         <a href="http://www.jmw.com.cn/xm6594594/" title="忆江南锦缎泥加盟" class="fl" target="_blank">忆江南锦缎泥加盟</a>
@@ -231,7 +231,7 @@
                                 <dl class="fl">
                                     <dt class="pr">
                                         <a href="http://www.jmw.com.cn/xm6572154/" target="_blank" title="欧克斯门窗加盟">
-                                            <img class="hoverimg" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/34bb8-7370.jpg" alt="欧克斯门窗加盟" /></a>
+                                            <img class="hoverimg" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/34bb8-7370.jpg" alt="欧克斯门窗加盟" /></a>
                                         <p class="p_black pa"></p>
                                         <div class="p_black2 pa clear">
                                             <p class="fl p1 f14">
@@ -239,7 +239,7 @@
                                             <p class="fr p_iCan p_iCan2 f12" onclick="message_check('6572154','30-1','热门行业的欧克斯门窗项目很不错，我想加盟，请尽快联系我！！！');">我要加盟</p></div>
                                         <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
                                             <a href="http://www.jmw.com.cn/xm6572154/">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="欧克斯门窗加盟">欧克斯门窗加盟</a></span>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="欧克斯门窗加盟">欧克斯门窗加盟</a></span>
                                     </dt>
                                     <dd class="clear">
                                         <a href="http://www.jmw.com.cn/xm6572154/" title="欧克斯门窗加盟" class="fl" target="_blank">欧克斯门窗加盟</a>
@@ -256,9 +256,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm60883' title='吉象地板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/d4877-4204.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d4877-4204.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="吉象地板加盟">吉象地板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="吉象地板加盟">吉象地板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -276,9 +276,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6649734' title='鹦鹉地板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/4e0e7-7383.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4e0e7-7383.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="鹦鹉地板加盟">鹦鹉地板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="鹦鹉地板加盟">鹦鹉地板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -296,9 +296,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm93846' title='米乐居地板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/8e795-9991.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8e795-9991.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="米乐居地板加盟">米乐居地板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="米乐居地板加盟">米乐居地板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -316,9 +316,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6586983' title='大森林地板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/54aab-4690.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/54aab-4690.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="大森林地板加盟">大森林地板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="大森林地板加盟">大森林地板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -336,9 +336,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm60913' title='世友地板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/41fa5-7250.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/41fa5-7250.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="世友地板加盟">世友地板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="世友地板加盟">世友地板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -356,9 +356,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6597631' title='安心强化地板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/29456-1938.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/29456-1938.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="安心强化地板加盟">安心强化地板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="安心强化地板加盟">安心强化地板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -380,9 +380,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587311' title='百年天天木门加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/b2dff-3478.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b2dff-3478.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="百年天天木门加盟">百年天天木门加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="百年天天木门加盟">百年天天木门加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -400,9 +400,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6593334' title='欧百利门业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/017e7-3378.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/017e7-3378.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="欧百利门业加盟">欧百利门业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="欧百利门业加盟">欧百利门业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -420,9 +420,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm210432' title='卡诺亚衣柜加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/11253-4616.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/11253-4616.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卡诺亚衣柜加盟">卡诺亚衣柜加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卡诺亚衣柜加盟">卡诺亚衣柜加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -440,9 +440,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm96566' title='逸家窗业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/19b63-8019.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/19b63-8019.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="逸家窗业加盟">逸家窗业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="逸家窗业加盟">逸家窗业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -460,9 +460,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6593317' title='九木王门业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/e0ca8-6269.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e0ca8-6269.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="九木王门业加盟">九木王门业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="九木王门业加盟">九木王门业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -480,9 +480,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6608199' title='六福门业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/874fe-9044.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/874fe-9044.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="六福门业加盟">六福门业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="六福门业加盟">六福门业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -504,9 +504,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm68917' title='正辉照明加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/743c7-7509.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/743c7-7509.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="正辉照明加盟">正辉照明加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="正辉照明加盟">正辉照明加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -524,9 +524,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm145828' title='双羊灯饰加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/78160-1167.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/78160-1167.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="双羊灯饰加盟">双羊灯饰加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="双羊灯饰加盟">双羊灯饰加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -544,9 +544,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6600874' title='银雨灯饰加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/9aec9-6817.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9aec9-6817.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="银雨灯饰加盟">银雨灯饰加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="银雨灯饰加盟">银雨灯饰加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -564,9 +564,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6601187' title='南科灯饰加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/bf019-5632.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bf019-5632.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="南科灯饰加盟">南科灯饰加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="南科灯饰加盟">南科灯饰加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -584,9 +584,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6623174' title='杨发灯饰加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/5ae18-4397.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5ae18-4397.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="杨发灯饰加盟">杨发灯饰加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="杨发灯饰加盟">杨发灯饰加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -604,9 +604,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6591452' title='牧羊人灯饰加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/23053-4335.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/23053-4335.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="牧羊人灯饰加盟">牧羊人灯饰加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="牧羊人灯饰加盟">牧羊人灯饰加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -628,9 +628,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587699' title='海之源硅藻泥加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/fd1d6-7525.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fd1d6-7525.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="海之源硅藻泥加盟">海之源硅藻泥加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="海之源硅藻泥加盟">海之源硅藻泥加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -648,9 +648,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm142210' title='华茵绿洲漆加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/ddd2b-7517.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ddd2b-7517.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="华茵绿洲漆加盟">华茵绿洲漆加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="华茵绿洲漆加盟">华茵绿洲漆加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -668,9 +668,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6583732' title='百花油漆加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/ca87d-1027.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ca87d-1027.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="百花油漆加盟">百花油漆加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="百花油漆加盟">百花油漆加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -688,9 +688,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577784' title='来威漆加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/c3685-4220.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c3685-4220.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="来威漆加盟">来威漆加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="来威漆加盟">来威漆加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -708,9 +708,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577759' title='中远远杨漆加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/8561b-2039.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8561b-2039.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="中远远杨漆加盟">中远远杨漆加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="中远远杨漆加盟">中远远杨漆加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -728,9 +728,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm82045' title='美国钻石漆加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/1f76f-6312.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1f76f-6312.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="美国钻石漆加盟">美国钻石漆加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="美国钻石漆加盟">美国钻石漆加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -752,9 +752,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587500' title='日丰管业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/dc5f9-4105.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/dc5f9-4105.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="日丰管业加盟">日丰管业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="日丰管业加盟">日丰管业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -772,9 +772,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587529' title='公元管业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/452c0-7754.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/452c0-7754.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="公元管业加盟">公元管业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="公元管业加盟">公元管业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -792,9 +792,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm41949' title='箭牌卫浴加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/1b461-3967.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1b461-3967.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="箭牌卫浴加盟">箭牌卫浴加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="箭牌卫浴加盟">箭牌卫浴加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -812,9 +812,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587511' title='联塑管业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/e4d01-2672.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e4d01-2672.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="联塑管业加盟">联塑管业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="联塑管业加盟">联塑管业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -832,9 +832,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587505' title='金德管业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/acb3b-7738.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/acb3b-7738.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="金德管业加盟">金德管业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="金德管业加盟">金德管业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -852,9 +852,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587517' title='德标管业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/407d2-5177.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/407d2-5177.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="德标管业加盟">德标管业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="德标管业加盟">德标管业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -876,9 +876,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm65043' title='格莱美墙纸加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/b02a1-4347.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b02a1-4347.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="格莱美墙纸加盟">格莱美墙纸加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="格莱美墙纸加盟">格莱美墙纸加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -896,9 +896,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm202558' title='意大利罗马壁纸墙纸加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/410f3-1943.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/410f3-1943.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="意大利罗马壁纸墙纸加盟">意大利罗马壁纸墙纸加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="意大利罗马壁纸墙纸加盟">意大利罗马壁纸墙纸加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -916,9 +916,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577885' title='卜卜树竹纤维墙衣加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/3e5b8-2561.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3e5b8-2561.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卜卜树竹纤维墙衣加盟">卜卜树竹纤维墙衣加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卜卜树竹纤维墙衣加盟">卜卜树竹纤维墙衣加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -936,9 +936,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577610' title='北台壁纸加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/20ad7-4338.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/20ad7-4338.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="北台壁纸加盟">北台壁纸加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="北台壁纸加盟">北台壁纸加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -956,9 +956,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577599' title='卡尔玛壁纸加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/15547-5633.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/15547-5633.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卡尔玛壁纸加盟">卡尔玛壁纸加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卡尔玛壁纸加盟">卡尔玛壁纸加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -976,9 +976,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm122435' title='乐嘉壁纸加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/31f5c-8812.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/31f5c-8812.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="乐嘉壁纸加盟">乐嘉壁纸加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="乐嘉壁纸加盟">乐嘉壁纸加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1000,9 +1000,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6593844' title='喜之来瓷砖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/83903-5277.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/83903-5277.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="喜之来瓷砖加盟">喜之来瓷砖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="喜之来瓷砖加盟">喜之来瓷砖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1020,9 +1020,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6583855' title='卓远瓷砖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/7e10c-8111.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7e10c-8111.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卓远瓷砖加盟">卓远瓷砖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="卓远瓷砖加盟">卓远瓷砖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1040,9 +1040,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6597648' title='东龙瓷砖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/994d4-2190.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/994d4-2190.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="东龙瓷砖加盟">东龙瓷砖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="东龙瓷砖加盟">东龙瓷砖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1060,9 +1060,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587352' title='万利仿古砖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/7baf9-8893.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7baf9-8893.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="万利仿古砖加盟">万利仿古砖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="万利仿古砖加盟">万利仿古砖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1080,9 +1080,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6584947' title='青苹果瓷砖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/e2d4b-6130.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e2d4b-6130.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="青苹果瓷砖加盟">青苹果瓷砖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="青苹果瓷砖加盟">青苹果瓷砖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1100,9 +1100,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6601122' title='君磊石材加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/75580-7459.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/75580-7459.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="君磊石材加盟">君磊石材加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="君磊石材加盟">君磊石材加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1124,9 +1124,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm89569' title='云间地暖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/93529-7938.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/93529-7938.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="云间地暖加盟">云间地暖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="云间地暖加盟">云间地暖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1144,9 +1144,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6590833' title='冬日阳光地暖加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/7325e-3639.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7325e-3639.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="冬日阳光地暖加盟">冬日阳光地暖加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="冬日阳光地暖加盟">冬日阳光地暖加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1164,9 +1164,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577884' title='夏贝加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a687-7626.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3a687-7626.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="夏贝加盟">夏贝加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="夏贝加盟">夏贝加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1184,9 +1184,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm91076' title='小松鼠加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/18006-4755.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/18006-4755.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="小松鼠加盟">小松鼠加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="小松鼠加盟">小松鼠加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1204,9 +1204,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577862' title='利羽加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/359cb-8272.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/359cb-8272.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="利羽加盟">利羽加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="利羽加盟">利羽加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1224,9 +1224,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577887' title='威廉斯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/b1046-2023.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b1046-2023.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="威廉斯加盟">威廉斯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="威廉斯加盟">威廉斯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1248,9 +1248,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577471' title='维尼斯亚楼梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/d1c6c-8091.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d1c6c-8091.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="维尼斯亚楼梯加盟">维尼斯亚楼梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="维尼斯亚楼梯加盟">维尼斯亚楼梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1268,9 +1268,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577458' title='希尔登楼梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/37f9c-5798.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/37f9c-5798.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="希尔登楼梯加盟">希尔登楼梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="希尔登楼梯加盟">希尔登楼梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1288,9 +1288,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6583677' title='瓦格纳楼梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/783a8-8541.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/783a8-8541.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="瓦格纳楼梯加盟">瓦格纳楼梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="瓦格纳楼梯加盟">瓦格纳楼梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1308,9 +1308,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577474' title='顺奥楼梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/0b685-8118.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0b685-8118.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="顺奥楼梯加盟">顺奥楼梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="顺奥楼梯加盟">顺奥楼梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1328,9 +1328,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6577482' title='赛古楼梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/2286d-9018.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2286d-9018.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="赛古楼梯加盟">赛古楼梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="赛古楼梯加盟">赛古楼梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1348,9 +1348,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6623947' title='唯艺楼梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/42237-9581.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/42237-9581.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="唯艺楼梯加盟">唯艺楼梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="唯艺楼梯加盟">唯艺楼梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1372,9 +1372,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6597198' title='格林雅防火板加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/c6b17-4431.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c6b17-4431.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="格林雅防火板加盟">格林雅防火板加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="格林雅防火板加盟">格林雅防火板加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1392,9 +1392,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587633' title='康力电梯加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/29900-3124.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/29900-3124.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="康力电梯加盟">康力电梯加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="康力电梯加盟">康力电梯加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1412,9 +1412,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6591108' title='建王防水加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/25412-7335.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/25412-7335.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="建王防水加盟">建王防水加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="建王防水加盟">建王防水加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1432,9 +1432,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6596880' title='众音门锁加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/2ccf2-7398.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2ccf2-7398.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="众音门锁加盟">众音门锁加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="众音门锁加盟">众音门锁加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1452,9 +1452,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6601179' title='南龙管业加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/0d03a-4796.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0d03a-4796.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="南龙管业加盟">南龙管业加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="南龙管业加盟">南龙管业加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1472,9 +1472,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6587646' title='宝龙地产加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/95e9d-5074.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/95e9d-5074.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="宝龙地产加盟">宝龙地产加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="宝龙地产加盟">宝龙地产加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1496,9 +1496,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6625364' title='天泽装饰加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/81808-2576.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/81808-2576.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="天泽装饰加盟">天泽装饰加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="天泽装饰加盟">天泽装饰加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1516,9 +1516,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6625251' title='香港帝诺加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/e7f7f-8144.gif' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e7f7f-8144.gif' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="香港帝诺加盟">香港帝诺加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="香港帝诺加盟">香港帝诺加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1536,9 +1536,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6625132' title='美博・时空加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/b4811-6017.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b4811-6017.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="美博・时空加盟">美博・时空加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="美博・时空加盟">美博・时空加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1556,9 +1556,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6625517' title='绿之林硅藻泥加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/f51a5-4137.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f51a5-4137.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="绿之林硅藻泥加盟">绿之林硅藻泥加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="绿之林硅藻泥加盟">绿之林硅藻泥加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1576,9 +1576,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6625299' title='肯森进口水管加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/4b891-2483.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4b891-2483.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="肯森进口水管加盟">肯森进口水管加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="肯森进口水管加盟">肯森进口水管加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>
@@ -1596,9 +1596,9 @@
                                 <dl class='fl'>
                                     <dt class='pr'>
                                         <a style="position:relative; display:block;" href='http://www.jmw.com.cn/xm6625178' title='联塑商城加盟' target='_blank'>
-                                            <img class="hoverimg" src='http://60.205.145.0/filesys/spider/pages/asset/platj/img/99a6f-1650.jpg' alt='' />
+                                            <img class="hoverimg" src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/99a6f-1650.jpg' alt='' />
                                             <span id="advert" style="height: 13px;width: 24px;position: absolute;top: 0;right: 0; overflow:hidden;">
-                                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="联塑商城加盟">联塑商城加盟</span></a>
+                                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="联塑商城加盟">联塑商城加盟</span></a>
                                         <p class='p_black pa'></p>
                                         <div class='p_black2 pa clear'>
                                             <p class='fl p1 f14'>

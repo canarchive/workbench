@@ -1,3 +1,6 @@
+<?php
+$footerNavs = $this->context->footerNavs;
+?>
 <div class="footer" id="footerHeight">
     <?php if (isset($showFooterTop) && $showFooterTop) { ?>
     <div class="footer_top">
@@ -40,7 +43,7 @@
                 <dl>
                     <dt>关注我们</dt>
                     <dd>
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/76706-2783.jpg" alt="" class="att-code"></dd>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/76706-2783.jpg" alt="" class="att-code"></dd>
                 </dl>
             </div>
             <div class="ftc_right">
@@ -57,29 +60,17 @@
             <div class="fbc_menu">
                 <ul>
                     <li>
-                        <a hidefocus="" href="/desc.html" target="_blank" rel="nofollow">关于我们</a>
+                        <a hidefocus="" href="<?= $footerNavs[$navKey]['url']; ?>" rel="nofollow"><?= $footerNavs[$navKey]['name']; ?></a>
                         <span></span>
                     </li>
-                    <li>
-                        <a hidefocus="" href="/contactus.html" target="_blank" rel="nofollow">联系我们</a>
-                        <span></span>
-                    </li>
-                    <li>
-                        <a hidefocus="" href="/friendlink.php" target="_blank" rel="nofollow">友情链接</a>
-                        <span></span>
-                    </li>
-                    <li>
-                        <a hidefocus="" href="/guestbook.php" target="_blank" rel="nofollow">意见反馈</a>
-                        <span></span>
-                    </li>
-                    <li>
-                        <a hidefocus="" href="/statement.html" target="_blank" rel="nofollow">法律声明</a></li>
+                    <?php } ?>
                 </ul>
             </div>
-            <div class="fbc_copyright">免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。</div>
-            <div class="fbc_copyright"><?= Yii::$app->params['siteCopyRightInfo']; ?></div>
+            <div class="fbc_copyright"><?= $footerNavs['disclaimer']; ?></div>
+            <div class="fbc_copyright"><?= $footerNavs['copyRight']; ?></div>
             <div class="fbc_icp">中国装修网
-                <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow"><?= Yii::$app->params['siteIcpInfo']; ?></a></div>
+                <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow"><?= $footerNavs['icpInfo']; ?></a>
+            </div>
         </div>
     </div>
 </div>

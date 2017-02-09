@@ -4,7 +4,7 @@
         <style type="text/css">.daoJishi{ position:relative; } .time{ position:absolute; top:15px; font-size:14px;} .day{ right:205px; display:inline-block; width:26px; height:19px; line-height:19px; background:#fff; text-align:center; top:13px;} .hour{ right:163px; } .minute{ right:116px; } .second{ right:68px; }</style>
         <div class="daoJishi wrap_mar">
             <a href="http://zch.jmw.com.cn/" title="第十届展会预告加盟" target="_blank">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/874f3-8658.jpg" alt="第十届展会预告加盟" /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/874f3-8658.jpg" alt="第十届展会预告加盟" /></a>
             <span class="day time"></span>
             <span class="hour time"></span>
             <span class="minute time"></span>

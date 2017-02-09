@@ -17,20 +17,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="欧克斯门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm6572154/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5d427-9238.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5d427-9238.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="欧克斯门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm6572154/">欧克斯门窗</a>
                         <a style="display:none;" href="javascript:;" id="_6572154">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_6572154">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_6572154">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_6572154">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -50,20 +50,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="钛能门业加盟" target="_blank" href="http://www.jmw.com.cn/xm6675488/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e20fe-9405.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e20fe-9405.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="钛能门业加盟" target="_blank" href="http://www.jmw.com.cn/xm6675488/">钛能门业</a>
                         <a style="display:none;" href="javascript:;" id="_6675488">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_6675488">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_6675488">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_6675488">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -83,20 +83,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="澳普利发门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm76445/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/25eca-9629.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/25eca-9629.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="澳普利发门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm76445/">澳普利发门窗</a>
                         <a style="display:none;" href="javascript:;" id="_76445">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_76445">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_76445">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_76445">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -116,20 +116,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="大运豪门加盟" target="_blank" href="http://www.jmw.com.cn/xm162516/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fcc74-3296.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fcc74-3296.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="大运豪门加盟" target="_blank" href="http://www.jmw.com.cn/xm162516/">大运豪门</a>
                         <a style="display:none;" href="javascript:;" id="_162516">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_162516">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_162516">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_162516">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -149,20 +149,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="瑞盾门业加盟" target="_blank" href="http://www.jmw.com.cn/xm158982/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9c345-1241.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9c345-1241.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="瑞盾门业加盟" target="_blank" href="http://www.jmw.com.cn/xm158982/">瑞盾门业</a>
                         <a style="display:none;" href="javascript:;" id="_158982">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_158982">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_158982">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_158982">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -182,20 +182,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="鑫万佳木门加盟" target="_blank" href="http://www.jmw.com.cn/xm156327/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/48046-2956.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/48046-2956.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="鑫万佳木门加盟" target="_blank" href="http://www.jmw.com.cn/xm156327/">鑫万佳木门</a>
                         <a style="display:none;" href="javascript:;" id="_156327">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_156327">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_156327">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_156327">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -215,20 +215,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="华尔门加盟" target="_blank" href="http://www.jmw.com.cn/xm154503/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/634be-2862.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/634be-2862.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="华尔门加盟" target="_blank" href="http://www.jmw.com.cn/xm154503/">华尔门</a>
                         <a style="display:none;" href="javascript:;" id="_154503">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_154503">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_154503">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_154503">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -248,20 +248,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="天籁木门加盟" target="_blank" href="http://www.jmw.com.cn/xm154122/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/74102-2050.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/74102-2050.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="天籁木门加盟" target="_blank" href="http://www.jmw.com.cn/xm154122/">天籁木门</a>
                         <a style="display:none;" href="javascript:;" id="_154122">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_154122">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_154122">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_154122">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -281,20 +281,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="云狮木门加盟" target="_blank" href="http://www.jmw.com.cn/xm153318/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8ec4a-4105.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8ec4a-4105.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="云狮木门加盟" target="_blank" href="http://www.jmw.com.cn/xm153318/">云狮木门</a>
                         <a style="display:none;" href="javascript:;" id="_153318">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_153318">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_153318">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_153318">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -314,20 +314,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="哥得加盟" target="_blank" href="http://www.jmw.com.cn/xm153208/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35f6f-1598.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/35f6f-1598.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="哥得加盟" target="_blank" href="http://www.jmw.com.cn/xm153208/">哥得</a>
                         <a style="display:none;" href="javascript:;" id="_153208">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_153208">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_153208">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_153208">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -347,20 +347,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="格尔美木门加盟" target="_blank" href="http://www.jmw.com.cn/xm152331/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ba38e-3885.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/ba38e-3885.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="格尔美木门加盟" target="_blank" href="http://www.jmw.com.cn/xm152331/">格尔美木门</a>
                         <a style="display:none;" href="javascript:;" id="_152331">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_152331">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_152331">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_152331">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -380,20 +380,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="精武门加盟" target="_blank" href="http://www.jmw.com.cn/xm152052/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/979b0-6008.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/979b0-6008.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="精武门加盟" target="_blank" href="http://www.jmw.com.cn/xm152052/">精武门</a>
                         <a style="display:none;" href="javascript:;" id="_152052">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_152052">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_152052">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_152052">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -413,20 +413,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="尚佰木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151701/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f97f7-2720.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f97f7-2720.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="尚佰木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151701/">尚佰木门</a>
                         <a style="display:none;" href="javascript:;" id="_151701">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_151701">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_151701">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_151701">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -446,20 +446,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="嘉品木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151645/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/aae17-1938.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/aae17-1938.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="嘉品木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151645/">嘉品木门</a>
                         <a style="display:none;" href="javascript:;" id="_151645">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_151645">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_151645">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_151645">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -479,20 +479,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="泰亨木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151521/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/af669-6253.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/af669-6253.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="泰亨木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151521/">泰亨木门</a>
                         <a style="display:none;" href="javascript:;" id="_151521">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_151521">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_151521">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_151521">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -512,20 +512,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="思佳木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151377/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/870f4-4332.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/870f4-4332.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="思佳木门加盟" target="_blank" href="http://www.jmw.com.cn/xm151377/">思佳木门</a>
                         <a style="display:none;" href="javascript:;" id="_151377">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_151377">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_151377">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_151377">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -545,20 +545,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="欧雅斯木门加盟" target="_blank" href="http://www.jmw.com.cn/xm146857/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bfc6c-1002.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bfc6c-1002.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="欧雅斯木门加盟" target="_blank" href="http://www.jmw.com.cn/xm146857/">欧雅斯木门</a>
                         <a style="display:none;" href="javascript:;" id="_146857">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_146857">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_146857">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_146857">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -576,20 +576,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="九狮木门家居加盟" target="_blank" href="http://www.jmw.com.cn/xm144137/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ff3b-5018.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9ff3b-5018.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="九狮木门家居加盟" target="_blank" href="http://www.jmw.com.cn/xm144137/">九狮木门家居</a>
                         <a style="display:none;" href="javascript:;" id="_144137">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_144137">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_144137">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_144137">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -607,20 +607,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="时丹利门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm143717/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f6258-2075.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f6258-2075.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="时丹利门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm143717/">时丹利门窗</a>
                         <a style="display:none;" href="javascript:;" id="_143717">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_143717">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_143717">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_143717">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -638,20 +638,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="菲尼斯门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm143712/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d6434-4094.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d6434-4094.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="菲尼斯门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm143712/">菲尼斯门窗</a>
                         <a style="display:none;" href="javascript:;" id="_143712">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_143712">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_143712">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_143712">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -669,20 +669,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="斯朗格门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm143671/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0658c-8833.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0658c-8833.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="斯朗格门窗加盟" target="_blank" href="http://www.jmw.com.cn/xm143671/">斯朗格门窗</a>
                         <a style="display:none;" href="javascript:;" id="_143671">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_143671">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_143671">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_143671">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -700,20 +700,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="好万家名门加盟" target="_blank" href="http://www.jmw.com.cn/xm143451/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/230a2-5393.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/230a2-5393.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="好万家名门加盟" target="_blank" href="http://www.jmw.com.cn/xm143451/">好万家名门</a>
                         <a style="display:none;" href="javascript:;" id="_143451">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_143451">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_143451">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_143451">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -731,20 +731,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="伊凡木门加盟" target="_blank" href="http://www.jmw.com.cn/xm142505/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3637c-4482.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3637c-4482.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="伊凡木门加盟" target="_blank" href="http://www.jmw.com.cn/xm142505/">伊凡木门</a>
                         <a style="display:none;" href="javascript:;" id="_142505">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_142505">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_142505">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_142505">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -762,20 +762,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="梦天木门加盟" target="_blank" href="http://www.jmw.com.cn/xm140626/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/10248-1666.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/10248-1666.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="梦天木门加盟" target="_blank" href="http://www.jmw.com.cn/xm140626/">梦天木门</a>
                         <a style="display:none;" href="javascript:;" id="_140626">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_140626">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_140626">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_140626">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -793,20 +793,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="王朝木门加盟" target="_blank" href="http://www.jmw.com.cn/xm140594/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/31d12-6336.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/31d12-6336.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="王朝木门加盟" target="_blank" href="http://www.jmw.com.cn/xm140594/">王朝木门</a>
                         <a style="display:none;" href="javascript:;" id="_140594">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_140594">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_140594">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_140594">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -824,20 +824,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="三峰加盟" target="_blank" href="http://www.jmw.com.cn/xm140506/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fd86c-2225.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fd86c-2225.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="三峰加盟" target="_blank" href="http://www.jmw.com.cn/xm140506/">三峰</a>
                         <a style="display:none;" href="javascript:;" id="_140506">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_140506">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_140506">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_140506">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -855,20 +855,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="伯艺木门加盟" target="_blank" href="http://www.jmw.com.cn/xm137998/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/44093-6044.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/44093-6044.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="伯艺木门加盟" target="_blank" href="http://www.jmw.com.cn/xm137998/">伯艺木门</a>
                         <a style="display:none;" href="javascript:;" id="_137998">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_137998">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_137998">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_137998">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -886,20 +886,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="麦仕威加盟" target="_blank" href="http://www.jmw.com.cn/xm134330/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e409a-5574.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e409a-5574.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="麦仕威加盟" target="_blank" href="http://www.jmw.com.cn/xm134330/">麦仕威</a>
                         <a style="display:none;" href="javascript:;" id="_134330">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_134330">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_134330">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_134330">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -917,20 +917,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="北京楷模木门加盟" target="_blank" href="http://www.jmw.com.cn/xm129687/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/cce0f-3753.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/cce0f-3753.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="北京楷模木门加盟" target="_blank" href="http://www.jmw.com.cn/xm129687/">北京楷模木门</a>
                         <a style="display:none;" href="javascript:;" id="_129687">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_129687">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_129687">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_129687">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">
@@ -948,20 +948,20 @@
                 <dl class="dl_none">
                     <dt>
                         <a title="坤宁防盗窗加盟" target="_blank" href="http://www.jmw.com.cn/xm122932/">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/587d0-5484.jpg" width="204" height="155" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/587d0-5484.jpg" width="204" height="155" /></a>
                         <span></span>
                         <i>实景图片</i>
                     </dt>
                     <dd class="dd1">
                         <a title="坤宁防盗窗加盟" target="_blank" href="http://www.jmw.com.cn/xm122932/">坤宁防盗窗</a>
                         <a style="display:none;" href="javascript:;" id="_122932">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                         <a style="display:none;" href="javascript:;" id="jin_122932">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="zuan_122932">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                         <a style="display:none;" href="javascript:;" id="svip1_122932">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>
                     </dd>
                     <dd class="dd2">
                         <span class="favorablep">

@@ -13,7 +13,7 @@
                 <i class="iconfont f30"></i>
                 <br>App</a>
             <span class="down">下载</span>
-            <!-- <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/dd854-8425.png" class="down" alt=""> --></li>
+            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/dd854-8425.png" class="down" alt=""> --></li>
         <li>
             <a href="http://m.17house.com/feedback.php?action=wechat" rel="nofollow">
                 <i class="iconfont f30"></i>
@@ -35,9 +35,9 @@
         <a href="http://m.17house.com/ditu/index.html">网站地图</a></p>
 </footer>
 <!--页脚 end-->
-<script data-main="http://s1.17house.com/mznbj/js/decorationMain.js" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/js/require.js"></script>
-<!--<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/js/1.8.3.js"></script>-->
-<script data-main="http://s1.17house.com/mznbj/js/decorationMain.js?v=2016053101" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/js/require.js"></script>
+<script data-main="http://s1.17house.com/mznbj/js/decorationMain.js" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/js/require.js"></script>
+<!--<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/js/1.8.3.js"></script>-->
+<script data-main="http://s1.17house.com/mznbj/js/decorationMain.js?v=2016053101" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/js/require.js"></script>
 <script>//    window.onload = function() {
     //        zhu1();
     //    };
@@ -77,7 +77,7 @@
     var google_remarketing_only = true;
     /* ]]> */
     </script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/js/conversion.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/js/conversion.js"></script>
 <noscript>
     <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/990831494/?value=0&amp;guid=ON&amp;script=0" /></div>

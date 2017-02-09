@@ -10,17 +10,17 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/platj/pc/_pic-js', [])
 <!--head-->
 <div class="topToolbar" id="testDiv"></div>
 <input type="hidden" id="projectId" value="" />
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/loginstatus.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/loginstatus.js"></script>
 <p class="clr"></p>
 <!--business-->
 <?= $this->render('@gallerycms/views/platj/pc/_pic-toplist'); ?>
 <div class="J-head-adver clearfix wrapper">
     <a title="能力风暴机器人加盟加盟" class="fl" ad_need_click="true" ad_id="460" href="http://search.jmw.com.cn/jmw_user/nlfb/" target="_blank">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5e2ae-4318.gif" width='270' height='60' /></a>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5e2ae-4318.gif" width='270' height='60' /></a>
     <a title="赛维干洗加盟加盟" class="fl a-adver" ad_need_click="true" ad_id="464" href="http://search.jmw.com.cn/jmw_user/swgx/" target="_blank">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6cb77-1388.gif" width='435' height='60' /></a>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6cb77-1388.gif" width='435' height='60' /></a>
     <a title="玛玛洛可加盟" class="fr" ad_need_click="true" ad_id="463" href="http://search.jmw.com.cn/jmw_user/mmlk/" target="_blank">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/679e5-2833.gif" width='270' height='60' /></a>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/679e5-2833.gif" width='270' height='60' /></a>
 </div>
 <style type="text/css">.J-head-adver{ margin-bottom: 10px;} .J-head-adver a{ display: block;} .J-head-adver .a-adver{ margin-left: 7.5px; _display: inline;}</style>
 <?= $this->render('@gallerycms/views/platj/pc/_pic-logo'); ?>
@@ -56,7 +56,7 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/platj/pc/_pic-js', [])
 <?php echo $this->render('@gallerycms/views/platj/pc/_pic-bottom-related'); ?>
 <!--about end-->
 <!-- 友情链接开始 -->
-<style type="text/css">.J-link{ width: 990px; margin: 0 auto; padding-bottom: 24px; border-bottom: 1px solid #eee;} .J-link-tit{ font-size: 16px; line-height: 28px; color: #4c4c4c; padding-bottom: 10px; padding-top: 20px;} .J-link-list li{ float: left; width: 127.7px; height: 24px; line-height: 24px;} .J-link-list li a{ color: #808080; display: inline-block; position: relative;} .J-link-list li a:hover{ background: #e53c01; color: #fff;} .span-left{ display: block; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/02205-1419.png) no-repeat 0 0; width: 11px; height: 24px; position: absolute; top: 0; left: -11px; z-index: 10;} .span-right{ display: block; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/02205-1419.png) no-repeat -11px 0; width: 11px; height: 24px; position: absolute; top: 0; right: -11px; z-index: 10;}</style>
+<style type="text/css">.J-link{ width: 990px; margin: 0 auto; padding-bottom: 24px; border-bottom: 1px solid #eee;} .J-link-tit{ font-size: 16px; line-height: 28px; color: #4c4c4c; padding-bottom: 10px; padding-top: 20px;} .J-link-list li{ float: left; width: 127.7px; height: 24px; line-height: 24px;} .J-link-list li a{ color: #808080; display: inline-block; position: relative;} .J-link-list li a:hover{ background: #e53c01; color: #fff;} .span-left{ display: block; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/02205-1419.png) no-repeat 0 0; width: 11px; height: 24px; position: absolute; top: 0; left: -11px; z-index: 10;} .span-right{ display: block; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/02205-1419.png) no-repeat -11px 0; width: 11px; height: 24px; position: absolute; top: 0; right: -11px; z-index: 10;}</style>
 <!-- 友情链接结束 -->
 <!--footer begin-->
 <?= $this->render('@gallerycms/views/platj/pc/_pic-footer'); ?>

@@ -1,20 +1,20 @@
 <!--[if lt IE 9]>
-    <script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/jquery-1.9.1.min.js"></script>
+    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/jquery-1.9.1.min.js"></script>
 <![endif]-->
 <!--[if gte IE 9]>
-    <script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/jquery-1.10.2.min.js"></script>
+    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/jquery-1.10.2.min.js"></script>
 <![endif]-->
 <!--[if !IE]><!-->
-    <script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/jquery-1.10.2.min.js"></script>
+    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/jquery-1.10.2.min.js"></script>
 <!--<![endif]-->
 <script type="text/javascript">var jq = jQuery.noConflict();
     document.domain = 'to8to.com';</script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/plat8rsas.js" type="text/javascript"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/common_new.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/globalprovinces.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/tender.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/common_tender_pop.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/xgt_index.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/plat8rsas.js" type="text/javascript"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/common_new.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/globalprovinces.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/tender.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/common_tender_pop.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/xgt_index.js"></script>
 <script type='text/javascript'>var _vds = _vds || [];
     window._vds = _vds; (function() {
         _vds.push(['setAccountId', 'a9627bb6762b7352']);

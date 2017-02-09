@@ -97,9 +97,9 @@
                     }
                 });
             });</script>
-        <link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/429bc-5654.css">
-        <script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/jquery-ui.js"></script>
-        <!--<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/6d681-4893.css">-->
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/429bc-5654.css">
+        <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-ui.js"></script>
+        <!--<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/6d681-4893.css">-->
         <script>$(function() {
                 var seaerch_brand = ["晨阳水漆"];
                 var se_index = Math.floor((Math.random() * seaerch_brand.length));

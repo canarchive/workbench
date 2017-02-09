@@ -8,15 +8,15 @@
         <meta name="applicable-device" content="mobile">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="apple-touch-icon-precomposed" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/a5e18-1039.png" />
+        <link rel="apple-touch-icon-precomposed" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/a5e18-1039.png" />
                                     <link rel="canonical" href="http://xiaoguotu.to8to.com/c10042454.html"/>
-                        <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/9c07e-2206.css" />
-<link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/3fb14-5999.css" />
-<link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/d7d65-1939.css" />
-<link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/d5893-1579.css" />
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/jquery.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/componentsh5.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/componentsh5.js"></script>
+                        <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/css/9c07e-2206.css" />
+<link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/css/3fb14-5999.css" />
+<link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/css/d7d65-1939.css" />
+<link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/css/d5893-1579.css" />
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/componentsh5.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/componentsh5.js"></script>
 <title>欧式精致奢华二居室装修效果图_土巴兔装修效果图</title>
                     <meta name="keywords" content="欧式精致奢华二居室装修效果图,欧式精致奢华二居室装修效果图设计,欧式精致奢华二居室装修效果图装修图片,欧式精致奢华二居室装修效果图整套装修案例">
                             <meta name="description" content="整套装修案例专区，提供2016年国内外最新流行的成套欧式精致奢华二居室装修效果图_土巴兔装修效果图，每日更新高达数百套欧式精致奢华二居室装修效果图_土巴兔装修效果图经典设计案例， 值得一看哦！">
@@ -60,7 +60,7 @@
     top: 0;
 }
 .icon-tbt {
-  background: url('http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/10d63-8906.png') no-repeat;
+  background: url('<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/10d63-8906.png') no-repeat;
   background-size: 187.5px 1087px;
   background-position: -128px -1068px;
   display: inline-block;
@@ -131,7 +131,7 @@
     display: block;
     width: 21px;
     height: 25px;
-    background:url(http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/3503c-7033.png) no-repeat -92.5px -300px;
+    background:url(<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/3503c-7033.png) no-repeat -92.5px -300px;
     background-size:187.5px 1087px;
 }
 </style>
@@ -337,7 +337,7 @@
 
     }
     .shade-xg-bg{
-        background: url(http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/3595f-5768.png) no-repeat;
+        background: url(<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/3595f-5768.png) no-repeat;
         z-index: 999;
         display: inline-block;
         width: 240px;
@@ -366,7 +366,7 @@
         height: 36px;
         bottom: -1px;
         left: 45%;
-        background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/3503c-7033.png") no-repeat -262px -504px;
+        background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/3503c-7033.png") no-repeat -262px -504px;
     }
 </style>
 <section id="xgtDetailPage">
@@ -398,7 +398,7 @@
     <div class="xgt-save-notice-cover"></div>
     <div class="xgt-save-notice-img-box">
         <div class="xgt-save-notice-txt">长按图片可以进行保存哦</div>
-        <div class="xgt-save-notice-img"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/542aa-7953.png" width="34px"/></div>
+        <div class="xgt-save-notice-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/542aa-7953.png" width="34px"/></div>
     </div>
 
     <!--<section class="app-ad">
@@ -473,7 +473,7 @@
                                     '<img src="'+imgVisibleSrc+'" alt="">'+
                                 '</div>'+
                                 '<div class="pop-body-text">'+
-                                    '<img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/09518-8933.png">'+
+                                    '<img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/09518-8933.png">'+
                                     '<p>——已妥妥给你准备更多——</p>'+
                                     '<p class="pop-huxing"><span>'+thistext+'</span>美图</p>'+
                                 '</div>'+
@@ -541,15 +541,15 @@
         });
     })()
 </script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/plat8rsas.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/zbcommon.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/plat8rsas.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/zbcommon.js"></script>
 <div style="display:none">
-    <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/5aaf0-1267.jpg'  alt='欧式精致奢华二居室装修效果图' />
-    <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/1aef6-8466.jpg'  alt='欧式精致奢华卧室装修效果图' />
-    <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/37d4d-8972.jpg'  alt='欧式精致奢华餐厅装修效果图' />
-    <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/aac84-9748.jpg'  alt='欧式精致奢华电视背景墙装修效果图' />
-    <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/336f2-1586.jpg'  alt='欧式精致奢华过道装修效果图' />
-    <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/ceb38-4961.jpg'  alt='欧式精致奢华客厅设计效果图' />
+    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/5aaf0-1267.jpg'  alt='欧式精致奢华二居室装修效果图' />
+    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/1aef6-8466.jpg'  alt='欧式精致奢华卧室装修效果图' />
+    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/37d4d-8972.jpg'  alt='欧式精致奢华餐厅装修效果图' />
+    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/aac84-9748.jpg'  alt='欧式精致奢华电视背景墙装修效果图' />
+    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/336f2-1586.jpg'  alt='欧式精致奢华过道装修效果图' />
+    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/ceb38-4961.jpg'  alt='欧式精致奢华客厅设计效果图' />
 </div>
 
 <script>
@@ -635,13 +635,13 @@
                 $('head').find('meta[name=viewport]').attr('content', 'initial-scale=1.0,user-scalable=no,maximum-scale=1');
             }
         </script>
-    <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/provincesselect.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/compricepop.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/xgtdetail-list.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/common.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/seostatis.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
+    <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/provincesselect.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/compricepop.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/xgtdetail-list.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/seostatis.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
 </body>
 </html>
 

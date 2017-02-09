@@ -1,3 +1,6 @@
+<?php
+$footerNavs = $this->context->footerNavs;
+?>
 <div class="com-foot clearfix">
     <!-- row1 -->
     <div class="foot-main foot-row1 clearfix cWhite">
@@ -87,31 +90,20 @@
     <div class="foot-main foot-row3 clearfix mt20">
         <div class="row3-l clearfix">
             <p class="links cJGray">
-                <a href="http://about.17house.com/newabout_index.php" target="_blank" rel="nofollow">关于一起装修网</a>
-                <a href="http://tuan.17house.com/" target="_blank" rel="nofollow">团购活动</a>
-                <a href="http://www.17house.com/news/qita-meitibaodao/" target="_blank" rel="nofollow">媒体报道</a>
-                <a href="http://about.17house.com/newabout_hzdw.php" target="_blank" rel="nofollow">合作单位</a>
-                <a href="http://about.17house.com/newabout_link.php" target="_blank">友情链接</a>
-                <a href="http://about.17house.com/newabout_zhaopin.php" target="_blank" rel="nofollow">诚聘英才</a>
-                <a class="last" href="http://about.17house.com/newabout_contact.php" target="_blank" rel="nofollow">联系我们</a></p>
+                <?php foreach (['desc', 'friendlink', 'guestbook', 'contactus', 'statement'] as $navKey) { ?>
+                <a href="<?= $footerNavs[$navKey]['url']; ?>" rel="nofollow"><?= $footerNavs[$navKey]['name']; ?></a>
+                <?php } ?>
+            </p>
             <p class="mt5 cDGray">
-                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002478" target="_blank" rel="nofollow" title="京公网安备 11010102002478号">京公网安备 11010102002478号</a>
-                <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow" title="京ICP备10039249号">京ICP备10039249号</a>
-                <a href="https://tsm.miit.gov.cn" target="_blank" rel="nofollow" title="京ICP证120045号">京ICP证120045号</a>
+                <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow" title="<?= $footerNavs['icpInfo']; ?>"><?= $footerNavs['icpInfo']; ?></a>
                 <span>|</span>
-                <span>Coptyright&nbsp;&copy;&nbsp;2009-2015&nbsp;17house.com,All&nbsp;rights&nbsp;reserved.</span></p>
+                <span><?= $footerNavs['copyRight']; ?></span>
+            </p>
         </div>
         <div class="r">
             <a href="http://www.bj.cyberpolice.cn/" target="_blank" rel="nofollow">
                 <span class="sprite-foot sp-f-c1"></span>
             </a>
-            <a href="https://ss.knet.cn/verifyseal.dll?sn=e13042611010040380lij9000000&trustKey=dn&trustValue=17house.com" target="_blank" rel="nofollow">
-                <span class="sprite-foot sp-f-c2"></span>
-            </a>
         </div>
     </div>
-    <!-- copyright --></div>
-<!-- 页脚 start -->
-<!--商务通-->
-<script language="javascript" src="http://dkt.zoosnet.net/JS/LsJS.aspx?siteid=DKT85079174&amp;float=1&amp;lng=cn"></script>
-<script language="javascript" src="http://dkt.zoosnet.net/js/JS3.aspx?a=a"></script>
+</div>

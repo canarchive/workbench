@@ -47,31 +47,31 @@
                 <ul class="51buypic" style="height:325px;">
                     <li>
                         <a href="http://www.cbd-china.com" target="_blank" title="2017年建博会加盟" style="display:block; height:325px;" ad_need_click="true" ad_id="21579">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d5fa1-6867.jpg" alt="2017年建博会12.1" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d5fa1-6867.jpg" alt="2017年建博会12.1" /></a>
                         <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
                             <a href="http://www.cbd-china.com">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="2017年建博会12.1">2017年建博会加盟</a></span>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="2017年建博会12.1">2017年建博会加盟</a></span>
                     </li>
                     <li>
                         <a href="http://www.jmw.com.cn/xm6562900/" target="_blank" title="室美伦精品墙饰汇加盟" style="display:block; height:325px;" ad_need_click="true" ad_id="23650">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3df9b-6035.jpg" alt="室美伦精品墙饰汇" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3df9b-6035.jpg" alt="室美伦精品墙饰汇" /></a>
                         <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
                             <a href="http://www.jmw.com.cn/xm6562900/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="室美伦精品墙饰汇">室美伦精品墙饰汇加盟</a></span>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="室美伦精品墙饰汇">室美伦精品墙饰汇加盟</a></span>
                     </li>
                     <li>
                         <a href="http://search.jmw.com.cn/jmw_user/dedb/" target="_blank" title="德尔地板加盟" style="display:block; height:325px;" ad_need_click="true" ad_id="23701">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/68533-1612.jpg" alt="德尔地板加盟10.12" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/68533-1612.jpg" alt="德尔地板加盟10.12" /></a>
                         <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
                             <a href="http://search.jmw.com.cn/jmw_user/dedb/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="德尔地板加盟10.12">德尔地板加盟</a></span>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="德尔地板加盟10.12">德尔地板加盟</a></span>
                     </li>
                     <li>
                         <a href="http://search.jmw.com.cn/jmw_user/tnmy/" target="_blank" title="钛能门业加盟" style="display:block; height:325px;" ad_need_click="true" ad_id="26513">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/54870-8832.jpg" alt="钛能门业加盟" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/54870-8832.jpg" alt="钛能门业加盟" /></a>
                         <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
                             <a href="http://search.jmw.com.cn/jmw_user/tnmy/">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="钛能门业加盟">钛能门业加盟</a></span>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt="钛能门业加盟">钛能门业加盟</a></span>
                     </li>
                 </ul>
                 <div class="num">
@@ -98,7 +98,7 @@
                             <span>风险共担</span>
                             <p class="p_look f12">查看详情&nbsp;></p></dd>
                         <dt class="fl">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d3d15-6367.jpg" alt="空间美贝壳粉生态涂料加盟" /></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d3d15-6367.jpg" alt="空间美贝壳粉生态涂料加盟" /></dt>
                     </dl>
                 </a>
                 <a href="http://www.jmw.com.cn/xm6572154/" class="" title="欧克斯门窗招商" target="_blank">
@@ -108,7 +108,7 @@
                             <span>低门槛合作</span>
                             <p class="p_look f12">查看详情&nbsp;></p></dd>
                         <dt class="fl">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/eabfe-5234.jpg" alt="欧克斯门窗加盟" /></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/eabfe-5234.jpg" alt="欧克斯门窗加盟" /></dt>
                     </dl>
                 </a>
                 <a href="http://www.jmw.com.cn/xm158545/" class="" style='padding:0' title="舒鑫e家招商" target="_blank">
@@ -118,7 +118,7 @@
                             <span>免保证金</span>
                             <p class="p_look f12">查看详情&nbsp;></p></dd>
                         <dt class="fl">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/503a5-9998.jpg" alt="舒鑫e家加盟" /></dt>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/503a5-9998.jpg" alt="舒鑫e家加盟" /></dt>
                     </dl>
                 </a>
             </div>

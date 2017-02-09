@@ -1,7 +1,7 @@
     <div class="fr cont_right">
         <div class='chick_box'>
             <div class="chick clearfix">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8fc7b-4017.jpg" width="45" height="45" alt="" />
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8fc7b-4017.jpg" width="45" height="45" alt="" />
                 <ul>
                     <li>核实专员：
                         <span>吴彤彤</span></li>
@@ -49,7 +49,7 @@
                     <font class="p_red"></font></li>
                 <li class="li2 clearfix">
                     <span class="fl span1">
-                        <image src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1a0eb-2516.png"></span>
+                        <image src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1a0eb-2516.png"></span>
                     <span class="fr span2">2015 - 10 - 30</span></li>
                 <li class="li3">晨阳水漆后，觉得这个品牌挺不错的，整体感觉不错，很想加盟这个...</li></ul>
             <ul class="dianPing_ul">
@@ -59,7 +59,7 @@
                     <font class="p_red"></font></li>
                 <li class="li2 clearfix">
                     <span class="fl span1">
-                        <image src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1a0eb-2516.png"></span>
+                        <image src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1a0eb-2516.png"></span>
                     <span class="fr span2">2015 - 10 - 29</span></li>
                 <li class="li3">晨阳水漆了解后觉得品牌整体还不错，打算加盟这个品牌</li></ul>
             <ul class="dianPing_ul">
@@ -69,7 +69,7 @@
                     <font class="p_red"></font></li>
                 <li class="li2 clearfix">
                     <span class="fl span1">
-                        <image src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1a0eb-2516.png"></span>
+                        <image src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1a0eb-2516.png"></span>
                     <span class="fr span2">2015 - 09 - 28</span></li>
                 <li class="li3">觉得晨阳水漆有一定的品质，加盟政策了解了一下，迟迟力度还行，...</li></ul>
         </div>
@@ -82,7 +82,7 @@
         <span type="text" id="time_h"style="position:absolute;_position:absolute;top:64px;left:66px;_top:64px;_left:70px; border:none;text-decoration:none;_text-decoration:none;font-weight:bold;color:#EDDE00"></span>
         <span type="text" id="time_m" style="position:absolute;_position:absolute;top:64px;left:124px;_top:64px;_left:129px; border:none;text-decoration:none;_text-decoration:none;font-weight:bold;color:#EDDE00"></span>
         <span type="text" id="time_s"style="position:absolute;_position:absolute;top:64px;left:170px;_top:64px;_left:176px; border:none;text-decoration:none;_text-decoration:none;font-weight:bold;color:#EDDE00"></span>-->
-        <!--<img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fab84-3418.jpg" style="width:230px;height:90px;border:none;"></a>
+        <!--<img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fab84-3418.jpg" style="width:230px;height:90px;border:none;"></a>
         </div>
         <!--<script>
         //展会计时器
@@ -200,12 +200,12 @@
             <div class="recommend_title">
                 <span>加盟品牌推荐</span></div>
             <div class="recommend_cont">
-                <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/683ed-3544.css" />
+                <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/683ed-3544.css" />
                 <div class="recommend_child">
                     <div class="clearfix re_childTop">
                         <div class="fl">
                             <a href="http://www.jmw.com.cn/xm6649630/" target="_blank">
-                                <img title="东时便当加盟" width="113" height="87" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7e954-2138.jpg"></a>
+                                <img title="东时便当加盟" width="113" height="87" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7e954-2138.jpg"></a>
                         </div>
                         <ul class="fl">
                             <li class="li_libj">
@@ -236,7 +236,7 @@
                     <div class="clearfix re_childTop">
                         <div class="fl">
                             <a href="http://www.jmw.com.cn/xm6673056/" target="_blank">
-                                <img title="学习星加盟" width="113" height="87" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d7faf-5904.jpg"></a>
+                                <img title="学习星加盟" width="113" height="87" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d7faf-5904.jpg"></a>
                         </div>
                         <ul class="fl">
                             <li class="li_libj">
@@ -267,7 +267,7 @@
                     <div class="clearfix re_childTop">
                         <div class="fl">
                             <a href="http://www.jmw.com.cn/xm86635/" target="_blank">
-                                <img title="爱贝国际少儿英语加盟" width="113" height="87" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/85e42-8962.jpg"></a>
+                                <img title="爱贝国际少儿英语加盟" width="113" height="87" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/85e42-8962.jpg"></a>
                         </div>
                         <ul class="fl">
                             <li class="li_libj">
@@ -298,7 +298,7 @@
                     <div class="clearfix re_childTop">
                         <div class="fl">
                             <a href="http://www.jmw.com.cn/xm6572151/" target="_blank">
-                                <img title="爱代驾加盟" width="113" height="87" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9fda6-9920.jpg"></a>
+                                <img title="爱代驾加盟" width="113" height="87" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9fda6-9920.jpg"></a>
                         </div>
                         <ul class="fl">
                             <li class="li_libj">
@@ -329,7 +329,7 @@
                     <div class="clearfix re_childTop">
                         <div class="fl">
                             <a href="http://www.jmw.com.cn/xm6578773/" target="_blank">
-                                <img title="kiumi韩式美食屋加盟" width="113" height="87" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b87a7-1869.jpg"></a>
+                                <img title="kiumi韩式美食屋加盟" width="113" height="87" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b87a7-1869.jpg"></a>
                         </div>
                         <ul class="fl">
                             <li class="li_libj">
@@ -360,7 +360,7 @@
                     <div class="clearfix re_childTop">
                         <div class="fl">
                             <a href="http://www.jmw.com.cn/xm143208/" target="_blank">
-                                <img title="例格女装加盟" width="113" height="87" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4511f-3650.jpg"></a>
+                                <img title="例格女装加盟" width="113" height="87" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4511f-3650.jpg"></a>
                         </div>
                         <ul class="fl">
                             <li class="li_libj">
@@ -424,7 +424,7 @@
                 <!--<div name="show_hide" style="display: none;" id="show_hide">
                 <iframe frameborder="0" class="secIframe"></iframe>
                 <div id="sec_from">
-                <div class="secfrom_1"><a onclick="closeBg();" href="javascript:;"><img width="26" height="26" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1b5cd-8225.png"></a></div>
+                <div class="secfrom_1"><a onclick="closeBg();" href="javascript:;"><img width="26" height="26" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1b5cd-8225.png"></a></div>
                 <div class="secfrom_2">
                 <form action="http://liuyan.jmw.com.cn/message/messageProjectQuick.php" name="UbbFm" id="postFrom" method="post" onsubmit="return onClickMessInfoNew();">
                 <input type="hidden" name="lasturl_quick" id="lasturl_quick" />
@@ -453,7 +453,7 @@
                 </div>
                 </div>-->
                 <!--加盟品牌推广 start--->
-                <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/35fe8-8296.css" />
+                <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/35fe8-8296.css" />
                 <div class="Pfind_money" id="pFind12" style="display:none; ">
                     <form action="" name="UbbFm" id="postFrom" method="post">
                         <input type="hidden" name="lasturl_quick" id="lasturl_quick" />
@@ -461,19 +461,19 @@
                         <input type="hidden" name="project_message_origin" id="origin_quick" class="origin_quick_check" />
                         <p class="p_title1 clearfix">
                             <span class="fr" onclick="$('#pFind12').hide();$('.gray_mask').hide();">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1b5cd-8225.png" alt="" /></span>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1b5cd-8225.png" alt="" /></span>
                         </p>
                         <div class="Pfind_money2">
                             <p class="p_title4 clearfix">
                                 <span>留言内容</span>
                                 <span class="fr hover_SJ" onmouseout="$('#tj_secMsg').hide();" onmouseover="$('#tj_secMsg').show();">快捷留言</span></p>
-                            <style type="text/css">.secMsg { width: 360px; position: absolute; z-index: 1008; background: #fff; left: 238px; top: 113px; } .secMsg .msgIframe { width: 360px; height: 228px; position: absolute; left: 0; top: 0; z-index: -1; opacity: 0;} .sq_form .secMsg p { height: 35px; line-height: 35px; padding: 0 10px; margin: 0; overflow: hidden; color: #fff; } .secMsg p strong { float: left;} .secMsg p a { float: right; width: 13px; height: 13px; margin-top: 7px; outline: none;} .sq_form .secMsg ul { padding:5px 10px; } .secMsg ul li { height: 25px; line-height: 25px; padding-left: 11px; overflow: hidden; white-space: nowrap; border-bottom: 1px dashed #ccc; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/90cc8-9801.jpg) no-repeat 3px center;}</style>
+                            <style type="text/css">.secMsg { width: 360px; position: absolute; z-index: 1008; background: #fff; left: 238px; top: 113px; } .secMsg .msgIframe { width: 360px; height: 228px; position: absolute; left: 0; top: 0; z-index: -1; opacity: 0;} .sq_form .secMsg p { height: 35px; line-height: 35px; padding: 0 10px; margin: 0; overflow: hidden; color: #fff; } .secMsg p strong { float: left;} .secMsg p a { float: right; width: 13px; height: 13px; margin-top: 7px; outline: none;} .sq_form .secMsg ul { padding:5px 10px; } .secMsg ul li { height: 25px; line-height: 25px; padding-left: 11px; overflow: hidden; white-space: nowrap; border-bottom: 1px dashed #ccc; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/90cc8-9801.jpg) no-repeat 3px center;}</style>
                             <div class="secMsg" id="tj_secMsg" style="display: none; left:273px; top:78px;" onmouseout="$('#tj_secMsg').hide();" onmouseover="$('#tj_secMsg').show();">
                                 <iframe class="msgIframe" frameborder="0"></iframe>
                                 <p style="background:#e93c00;">
                                     <strong>您可以根据意向选择下列[快捷留言]</strong>
                                     <a style="margin-top:7px;" target="_self" href="javascript:;" onclick="$('.secMsg').hide();">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3bb8b-4720.gif"></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3bb8b-4720.gif"></a>
                                 </p>
                                 <ul style="border:1px solid #e93c00;">
                                     <li>
@@ -513,22 +513,22 @@
         </div>
         <div class="advertisement">
             <a title="巴比酷" ad_need_click="true" ad_id="435" href="http://www.jmw.com.cn/xm6624475/" target="_blank">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4fa1e-9972.gif" width='230' height='90' /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4fa1e-9972.gif" width='230' height='90' /></a>
             <a title="寻鱼私烤招商加盟" ad_need_click="true" ad_id="436" href="http://search.jmw.com.cn/jmw_user/xunyu/" target="_blank">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/551e2-8821.gif" width='230' height='90' /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/551e2-8821.gif" width='230' height='90' /></a>
             <a title="千叶珠宝" ad_need_click="true" ad_id="437" href="http://www.jmw.com.cn/xm6584328/" target="_blank">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/20ee2-9171.gif" width='230' height='90' /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/20ee2-9171.gif" width='230' height='90' /></a>
             <a title="勾馋麻辣烫" ad_need_click="true" ad_id="451" href="http://search.jmw.com.cn/jmw_user/gcmlt/" target="_blank">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1c6c6-2025.gif" width='230' height='90' /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1c6c6-2025.gif" width='230' height='90' /></a>
         </div>
     </div>
-    <script language="javascript" type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/webcall.js"></script>
+    <script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/webcall.js"></script>
     <!-- 400点击回拨 -->
     <div class="gray_mask" style="display: none;"></div>
     <div class="Pfind_money" id="click_Pfind4" style="display:none; ">
         <p class="p_title1 clearfix">
             <span class="fr" onclick="$('#click_Pfind4').hide();$('.gray_mask').hide();">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1b5cd-8225.png" alt="" /></span>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1b5cd-8225.png" alt="" /></span>
         </p>
         <div class="Pfind_money2">
             <p class="p_title2">晨阳水漆全国免费咨询热线</p>

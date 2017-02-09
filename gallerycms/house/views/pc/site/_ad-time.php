@@ -4,7 +4,7 @@
         <span style="position:absolute;_position:absolute;top:22px;right:155px;_top:22px;_right:172px; border:none;text-decoration:none;_text-decoration:none;font-weight:bold;color:#EDDE00;font-size:14px;" id="time_h" type="text">00</span>
         <span style="position:absolute;_position:absolute;top:22px;right:110px;_top:22px;_right:130px; border:none;text-decoration:none;_text-decoration:none;font-weight:bold;color:#EDDE00;font-size:14px;" id="time_m" type="text">46</span>
         <span style="position:absolute;_position:absolute;top:22px;right:62px;_top:22px;_right:90px; border:none;text-decoration:none;_text-decoration:none;font-weight:bold;color:#EDDE00;font-size:14px;" id="time_s" type="text">18</span>   
-        <img style="width:1200px;height:80px;border:none;" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/bfd87-2174.jpg"></a>
+        <img style="width:1200px;height:80px;border:none;" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/bfd87-2174.jpg"></a>
         </div>
         <style>
         span[type='text']{height: 28px; margin: 5px 0;padding: 5px;width: 30px;background-color: transparent;_background-color: transparent;}

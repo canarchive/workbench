@@ -24,24 +24,24 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
     <div id="share-msg" class="bdsharebuttonbox bdshare-button-style0-32">
         <ul class="clearfix">
             <li data-cmd="sqq">
-                <img data-cmd="sqq" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/2f434-4058.png">
+                <img data-cmd="sqq" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/2f434-4058.png">
                 <p data-cmd="sqq">QQ</p></li>
             <li data-cmd="qzone">
-                <img data-cmd="qzone" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/87c8a-7345.png">
+                <img data-cmd="qzone" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/87c8a-7345.png">
                 <p data-cmd="qzone">空间</p></li>
             <li data-cmd="tsina">
-                <img data-cmd="tsina" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/fe879-1757.png">
+                <img data-cmd="tsina" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/fe879-1757.png">
                 <p>微博</p>
             </li>
             <li data-cmd="renren">
-                <img data-cmd="renren" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/3b993-8854.png">
+                <img data-cmd="renren" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/3b993-8854.png">
                 <p>人人</p>
             </li>
         </ul>
         <div class="share-msg-btn">取消</div></div>
     <!-- 标题栏 end -->
     <div class="concl-banner">
-        <img class="img100" src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/5aab6-3943.jpg">
+        <img class="img100" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/5aab6-3943.jpg">
         <div class="con-wrap">
             <div class="ban-tit">
                 <h1 style="font-size:1.8rem;">北京雷捷时代广场130㎡新古典风格装修报价</h1></div>
@@ -291,7 +291,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
         <div class="taocan">
             <div class="txt-box">
                 <a href="http://m.beijing.17zhuangxiu.com/zhengzhuang/">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/46b7d-5779.jpg" alt="677元/平米整装套餐" class="img34">
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/46b7d-5779.jpg" alt="677元/平米整装套餐" class="img34">
                     <div class="tao-txt">
                         <p class="p1 text-right  f18 ellipsis ">
                             <span class="first-letter cBRed">6</span>
@@ -313,7 +313,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
         <div class="taocan ">
             <div class="txt-box">
                 <a href="http://m.beijing.17zhuangxiu.com/zhucai/">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat1/m/img/7af79-8304.jpg" alt="377元/平米主材套餐" class="img34" style="margin-top:0; margin-bottom: 5%;">
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7af79-8304.jpg" alt="377元/平米主材套餐" class="img34" style="margin-top:0; margin-bottom: 5%;">
                     <div class="tao-txt">
                         <p class="p1 text-right  f18 ellipsis">
                             <span class="first-letter cBRed">3</span>

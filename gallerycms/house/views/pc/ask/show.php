@@ -44,7 +44,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
     <div class="container clear" style="position: relative;">
         <!--右侧浮动广告位-->
         <div class="col2_1">
-            <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/css/b808b-9585.css">
+            <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/css/b808b-9585.css">
             <div class="quoted-outside">
                 <div class="quoted-budgetimg"></div>
                 <span class="border-right"></span>
@@ -189,7 +189,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                             <div class="result-contain">
                                 <p class="result-head">装修怕上当？问问靠谱的人</p>
                                 <div class="left">
-                                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/fb13b-5113.gif" class="kfn-p">
+                                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/fb13b-5113.gif" class="kfn-p">
                                     <em></em>
                                     <p class="kfname kfname-new-name">
                                         <span class="kfn-city">深圳</span>装修顾问
@@ -208,7 +208,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 </form>
             </div>
             <style type="text/css">.budget-price b{ width: auto !important; }</style>
-            <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/best_decorate_day.js"></script>
+            <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/best_decorate_day.js"></script>
             <script>//初始化页面根据ip接口得到的城市 展示对应微信小号
                 jq(document).ready(function() {
                     city_from_ip(function(cityFromIp) {
@@ -383,14 +383,14 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 </div>
                 <i class="ico_green_ask"></i>
                 <a href="" rel="nofollow" target="_blank" class="hot-hb-redian" style="position: absolute;right: 50px;top: 15px;">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/77a4f-4217.jpg" alt="" width="90" height="106"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/77a4f-4217.jpg" alt="" width="90" height="106"></a>
             </div>
             <div class="ask_qustion best_answer ask_answer_li">
                 <div class="title title2" id='zj' value=''>最佳答案</div>
                 <ul class="clear">
                     <li class="hover">
                         <a href="http://bbs.to8to.com/space-uid-7250784.html" rel="nofollow" target="_blank" class="company_img">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/68e46-2900.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/68e46-2900.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                         <div class="company_detail">
                             <a href="http://bbs.to8to.com/space-uid-7250784.html" rel="nofollow" target="_blank" class="company_name">a959373283
                                 <i class="ask_ico_score"></i>
@@ -405,7 +405,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                             <ul class="ask_answer_tip clear">
                                 <li>
                                     <a href="http://bbs.to8to.com/space-uid-7250784.html" rel="nofollow" target="_blank" class="company_img">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/68e46-2900.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/68e46-2900.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                                     <div class="company_detail">
                                         <span class="company_name">a959373283</span>
                                         <div class="company_case">等级&nbsp;
@@ -453,7 +453,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                     <ul class="clear">
                         <li>
                             <a href="http://wh.to8to.com/zs/866339/" rel="nofollow" target="_blank" class="company_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/bfeda-6201.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/bfeda-6201.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                             <div class="company_detail">
                                 <a href="http://wh.to8to.com/zs/866339/" target="_blank" class="company_name">武汉皇氏装饰设计工程有限公司</a>
                                 <div class="company_case">回答数：
@@ -466,7 +466,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                                 <ul class="ask_answer_tip clear">
                                     <li>
                                         <a href="http://wh.to8to.com/zs/866339/" rel="nofollow" target="_blank" class="company_img">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/bfeda-6201.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/bfeda-6201.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                                         <div class="company_detail">
                                             <span class="company_name">武汉皇氏装饰设计工程有限公司</span>
                                             <div class="company_case">等级&nbsp;
@@ -543,7 +543,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                     <ul class="clear">
                         <li>
                             <a href="http://bbs.to8to.com/space-uid-6195688.html" rel="nofollow" target="_blank" class="company_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/80cf9-4738.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/80cf9-4738.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                             <div class="company_detail">
                                 <a href="http://bbs.to8to.com/space-uid-6195688.html" rel="nofollow" target="_blank" class="company_name">21深蓝_3296</a>
                                 <div class="company_case">回答数：
@@ -556,7 +556,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                                 <ul class="ask_answer_tip clear">
                                     <li>
                                         <a href="http://bbs.to8to.com/space-uid-6195688.html" rel="nofollow" target="_blank" class="company_img">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/80cf9-4738.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/80cf9-4738.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                                         <div class="company_detail">
                                             <span class="company_name">21深蓝_3296</span>
                                             <div class="company_case">等级&nbsp;
@@ -621,7 +621,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                     <ul class="clear">
                         <li>
                             <a href="http://bbs.to8to.com/space-uid-6946165.html" rel="nofollow" target="_blank" class="company_img">
-                                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/c04a9-6251.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/c04a9-6251.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                             <div class="company_detail">
                                 <a href="http://bbs.to8to.com/space-uid-6946165.html" rel="nofollow" target="_blank" class="company_name">米甲大傻烂</a>
                                 <div class="company_case">回答数：
@@ -634,7 +634,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                                 <ul class="ask_answer_tip clear">
                                     <li>
                                         <a href="http://bbs.to8to.com/space-uid-6946165.html" rel="nofollow" target="_blank" class="company_img">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/c04a9-6251.jpg" rel="nofollow" alt="" width="54" height="54"></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/c04a9-6251.jpg" rel="nofollow" alt="" width="54" height="54"></a>
                                         <div class="company_detail">
                                             <span class="company_name">米甲大傻烂</span>
                                             <div class="company_case">等级&nbsp;
@@ -702,7 +702,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 <input type='hidden' id='isanswer' value=''>
                 <input type='hidden' id='ask_userid' value='[866339,6195688,6946165]'>
                 <input type='hidden' id='answeraccept' value='1'></form>
-            <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/ask.js"></script>
+            <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/ask.js"></script>
             <script type="text/javascript">var ids = '17694292' + ',';
                 getaskcommits(17694292, 7250784);
                 getaskcommits(17685660, 866339);
@@ -711,8 +711,8 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 ids += '17670766' + ',';
                 getaskcommits(17676375, 6946165);
                 ids += '17676375' + ',';</script>
-            <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/globalprovinces.js" xmlns="http://www.w3.org/1999/html"></script>
-            <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/css/67379-7523.css">
+            <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/globalprovinces.js" xmlns="http://www.w3.org/1999/html"></script>
+            <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/css/67379-7523.css">
             <div id='HotArea' style='display: block;'></div>
             <div class="question_list_box">
                 <div class="title title2">相关问题</div>
@@ -762,7 +762,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 </div>
             </div>
             <!--<div class="question_list_box">-->
-            <!--<div class="title title2"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/38297-4100.png">&nbsp;热门回答</div>-->
+            <!--<div class="title title2"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/38297-4100.png">&nbsp;热门回答</div>-->
             <!--<div class="question_list">-->
             <!--<ul>-->
             <!--<li>-->
@@ -847,13 +847,13 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 <div class="side_bd side_list">
                     <div class="need_case">
                         <a href="javascript:;" target="_blank" id="erweima01">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/91fff-7993.jpg" alt="">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/91fff-7993.jpg" alt="">
                             <p>脑子进水造成的12大装修遗憾，你流泪了吗？</p>
                         </a>
                     </div>
                     <div class="need_case mar-20">
                         <a href="javascript:;" target="_blank" id="erweima02">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/3c41d-7973.jpg" alt="">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/3c41d-7973.jpg" alt="">
                             <p>冬季养生必备神器焖烧杯，集齐6种食材即可领取。</p>
                         </a>
                     </div>
@@ -861,11 +861,11 @@ $this->params['bodyClass'] = 'class="narrow_980"';
             </div>
             <div class="float" style="margin-bottom: 20px;">
                 <a class="clickstream_tag" data-ptag="1_3_4_20" href="http://mall.to8to.com/temai/22771.html?skuid=78420" hidefocus="" target="_blank" rel="nofollow">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/d9f0a-2922.jpg" width="240" height="240" alt="风魔方烟灶套餐"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/d9f0a-2922.jpg" width="240" height="240" alt="风魔方烟灶套餐"></a>
             </div>
             <div class="ask_side_opa">
                 <a id="autourl" href="http://mall.to8to.com/search?keyword=%E9%9B%85%E6%A3%89 " hidefocus="" target="_blank" rel="nofollow">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
             </div>
         </div>
         <script type='text/javascript'>var href = jq('#HotArea a').attr('href');
@@ -876,7 +876,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
             //右侧新增热门推荐
             var ewmhtml = '<div class="ewm-msg-layout">\
 <div class="ewm-msg-box clear">\
-<div class="wem-img"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/e8cd2-1545.png"></div>\
+<div class="wem-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/e8cd2-1545.png"></div>\
 <div class="ewm-msg-text"><p>微信扫一扫</p><p>关注<em>土巴兔装修家居</em>公众号</p><p>发送<em>rm01</em>阅读</p></div>\
 <i class="ico-ewm-remov"></i>\
 </div>\
@@ -890,7 +890,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 jq('.ewm-msg-layout').remove();
             }) var ewmhtml01 = '<div class="ewm-msg-layout">\
 <div class="ewm-msg-box clear">\
-<div class="wem-img"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/373c5-5471.png"></div>\
+<div class="wem-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/373c5-5471.png"></div>\
 <div class="ewm-msg-text"><p>微信扫一扫</p><p>关注<em>土巴兔装修家居</em>公众号</p><p>发送<em>rm02</em>阅读</p></div>\
 <i class="ico-ewm-remov"></i>\
 </div>\
@@ -951,7 +951,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
     </div>
 </div>
 <!--左侧分享互动-->
-<style type="text/css">.left-article-nav { position: fixed; z-index: 7000; top: 324px; left: 50%; margin-left: -548px; } .left-article-nav .left-article-list{ width: 50px; } .left-article-nav .left-article-list a{ width: 48px; height: 48px; display: block; text-align: center; border: 1px solid #e8e8e8 !important; background: #fff; overflow: hidden; position: relative; margin: 0 0 -1px 0 !important; padding: 0 !important; } .left-article-nav .left-article-list .bd-sqz,.left-article-nav .left-article-list .bd-swb{ z-index: 9999; opacity: 0; filter:alpha(opacity=0); } .left-article-nav .left-article-list i{ display: block; text-align: center; margin: 0 auto; z-index: 7002; position: absolute; } .left-article-nav .article-nav-weixin i{ background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5d8ab-9124.png"); _background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff275-1316.gif"); width: 25px; height: 25px; left: 0; margin: 12px 0 0 12px; background-position: -2px -1px; } .left-article-nav .article-nav-qqkongjian i{ background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5d8ab-9124.png"); _background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff275-1316.gif"); width: 29px; height: 29px; left: 0; margin: 11px 0 0 10px; background-position: -1px -31px; } .left-article-nav .article-nav-sina i{ background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5d8ab-9124.png"); _background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff275-1316.gif"); width: 30px; height: 24px; left: 0; margin: 10px 0 0 10px; background-position: -1px -64px; } .left-article-nav .article-nav-tdc i{ background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5d8ab-9124.png"); _background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff275-1316.gif"); width: 24px; height: 24px; left: 0; margin: 12px 0 0 12px; background-position: -1px -96px; } .left-article-nav .article-nav-weixin i.on { background-position: -32px -1px } .left-article-nav .article-nav-qqkongjian i.on{ background-position: -32px -31px; } .left-article-nav .article-nav-sina i.on{ background-position: -39px -63px; } .left-article-nav .article-nav-tdc i.on{ background-position: -32px -96px; } .left-article-nav .article-nav-bg { display: block; background-color: #01af63; width: 0; height: 0; margin: 0 auto; position: relative; z-index: 7001; vertical-align: middle; margin-top: 50%; } /*二维码*/ .to8to-tdc{ position: absolute; top: 0; right: -135px; border: 1px solid #e8e8e8; background-color: #fff; display: none; } .to8to-tdc-wx { position: absolute; top: 0; right: -135px; border: 1px solid #e8e8e8; background-color: #fff; display: none; } .left-article-nav .bord-bot { border-bottom: 1px dashed #cecece; width: 125px; } .left-article-nav .app-tdc{ width: 125px; } .left-article-nav .weixin-tdc{ width: 125px; } .weixin-tdc img{ width: 96px; height: 96px; margin: 0 auto; padding: 15px 14px 0 14px; } .to8to-tdc p,.to8to-tdc-wx p { text-align: center; color: #ff5400; font-weight: bold; margin: 3px 0 11px 0; } .app-tdc img{ width: 96px; height: 96px; margin: 0 auto; padding: 15px 14px 0 14px; } .to8to-tdc-iconwx { position: absolute; background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5d8ab-9124.png") no-repeat -2px -208px; _background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff275-1316.gif") no-repeat -2px -208px; width: 6px; height: 12px; left: -6px; top: 20px; } .to8to-tdc-icon{ position: absolute; background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/5d8ab-9124.png") no-repeat -2px -208px; _background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff275-1316.gif") no-repeat -2px -208px; width: 6px; height: 12px; left: -6px; top: 165px; } .qzone-div{ width: 48px; height: 49px; border-left: 1px solid #e8e8e8 !important; border-right: 1px solid #e8e8e8 !important; border-bottom: 1px solid #e8e8e8 !important; position: absolute; top: 50px; left: 0; background-color: #fff; } .tsina-div{ width: 48px; height: 50px; border-left: 1px solid #e8e8e8 !important; border-right: 1px solid #e8e8e8 !important; position: absolute; top: 100px; left: 0; background-color: #fff; } /*.qwer{*/ /*zoom: 1;*/ /*}*/ /*.qwer a{*/ /*float: left;*/ /*line-height: 32px;*/ /*cursor: pointer;*/ /*color: #3a8ceb;*/ /*}*/ /*.qwer a:hover{*/ /*opacity: .8;*/ /*filter:alpha(opacity=80);*/ /*}*/</style>
+<style type="text/css">.left-article-nav { position: fixed; z-index: 7000; top: 324px; left: 50%; margin-left: -548px; } .left-article-nav .left-article-list{ width: 50px; } .left-article-nav .left-article-list a{ width: 48px; height: 48px; display: block; text-align: center; border: 1px solid #e8e8e8 !important; background: #fff; overflow: hidden; position: relative; margin: 0 0 -1px 0 !important; padding: 0 !important; } .left-article-nav .left-article-list .bd-sqz,.left-article-nav .left-article-list .bd-swb{ z-index: 9999; opacity: 0; filter:alpha(opacity=0); } .left-article-nav .left-article-list i{ display: block; text-align: center; margin: 0 auto; z-index: 7002; position: absolute; } .left-article-nav .article-nav-weixin i{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5d8ab-9124.png"); _background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff275-1316.gif"); width: 25px; height: 25px; left: 0; margin: 12px 0 0 12px; background-position: -2px -1px; } .left-article-nav .article-nav-qqkongjian i{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5d8ab-9124.png"); _background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff275-1316.gif"); width: 29px; height: 29px; left: 0; margin: 11px 0 0 10px; background-position: -1px -31px; } .left-article-nav .article-nav-sina i{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5d8ab-9124.png"); _background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff275-1316.gif"); width: 30px; height: 24px; left: 0; margin: 10px 0 0 10px; background-position: -1px -64px; } .left-article-nav .article-nav-tdc i{ background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5d8ab-9124.png"); _background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff275-1316.gif"); width: 24px; height: 24px; left: 0; margin: 12px 0 0 12px; background-position: -1px -96px; } .left-article-nav .article-nav-weixin i.on { background-position: -32px -1px } .left-article-nav .article-nav-qqkongjian i.on{ background-position: -32px -31px; } .left-article-nav .article-nav-sina i.on{ background-position: -39px -63px; } .left-article-nav .article-nav-tdc i.on{ background-position: -32px -96px; } .left-article-nav .article-nav-bg { display: block; background-color: #01af63; width: 0; height: 0; margin: 0 auto; position: relative; z-index: 7001; vertical-align: middle; margin-top: 50%; } /*二维码*/ .to8to-tdc{ position: absolute; top: 0; right: -135px; border: 1px solid #e8e8e8; background-color: #fff; display: none; } .to8to-tdc-wx { position: absolute; top: 0; right: -135px; border: 1px solid #e8e8e8; background-color: #fff; display: none; } .left-article-nav .bord-bot { border-bottom: 1px dashed #cecece; width: 125px; } .left-article-nav .app-tdc{ width: 125px; } .left-article-nav .weixin-tdc{ width: 125px; } .weixin-tdc img{ width: 96px; height: 96px; margin: 0 auto; padding: 15px 14px 0 14px; } .to8to-tdc p,.to8to-tdc-wx p { text-align: center; color: #ff5400; font-weight: bold; margin: 3px 0 11px 0; } .app-tdc img{ width: 96px; height: 96px; margin: 0 auto; padding: 15px 14px 0 14px; } .to8to-tdc-iconwx { position: absolute; background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5d8ab-9124.png") no-repeat -2px -208px; _background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff275-1316.gif") no-repeat -2px -208px; width: 6px; height: 12px; left: -6px; top: 20px; } .to8to-tdc-icon{ position: absolute; background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5d8ab-9124.png") no-repeat -2px -208px; _background: url("<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff275-1316.gif") no-repeat -2px -208px; width: 6px; height: 12px; left: -6px; top: 165px; } .qzone-div{ width: 48px; height: 49px; border-left: 1px solid #e8e8e8 !important; border-right: 1px solid #e8e8e8 !important; border-bottom: 1px solid #e8e8e8 !important; position: absolute; top: 50px; left: 0; background-color: #fff; } .tsina-div{ width: 48px; height: 50px; border-left: 1px solid #e8e8e8 !important; border-right: 1px solid #e8e8e8 !important; position: absolute; top: 100px; left: 0; background-color: #fff; } /*.qwer{*/ /*zoom: 1;*/ /*}*/ /*.qwer a{*/ /*float: left;*/ /*line-height: 32px;*/ /*cursor: pointer;*/ /*color: #3a8ceb;*/ /*}*/ /*.qwer a:hover{*/ /*opacity: .8;*/ /*filter:alpha(opacity=80);*/ /*}*/</style>
 <div class="left-article-nav">
     <div class="left-article-list bdsharebuttonbox" data-tag="share_1">
         <a href="javascript:void(0);" class='article-nav-weixin'>
@@ -961,8 +961,8 @@ $this->params['bodyClass'] = 'class="narrow_980"';
         </a>
         <div class="to8to-tdc-wx">
             <div class="weixin-tdc">
-                <!--<img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/8cd06-3630.jpg">-->
-                <img style="width:40px;height:40px;padding: 43px 42px 28px 42px;" src='http://60.205.145.0/filesys/spider/pages/asset/plat8/img/0d521-5115.gif' run='0' alt="" />
+                <!--<img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/8cd06-3630.jpg">-->
+                <img style="width:40px;height:40px;padding: 43px 42px 28px 42px;" src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/0d521-5115.gif' run='0' alt="" />
                 <p>扫一扫分享至朋友圈</p>
             </div>
             <div class="to8to-tdc-iconwx"></div>
@@ -988,11 +988,11 @@ $this->params['bodyClass'] = 'class="narrow_980"';
         </a>
         <div class="to8to-tdc">
             <div class="weixin-tdc bord-bot">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/4b206-1893.png">
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/4b206-1893.png">
                 <p>一万套装修案例</p>
             </div>
             <div class="app-tdc">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/6a84c-5757.png">
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/6a84c-5757.png">
                 <p>土巴兔APP</p>
             </div>
             <div class="to8to-tdc-icon"></div>

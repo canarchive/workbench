@@ -2,7 +2,7 @@
 <!--底部 开始-->
 <div class="footer">
     <div class="hot">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/625fa-9983.gif"></div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/625fa-9983.gif"></div>
     <p>
         <a href="http://about.jmw.com.cn" target="_blank">关于我们</a>|
         <a href="http://about.jmw.com.cn/PhotoList_1.shtml" target="_blank">公司相册</a>|
@@ -19,7 +19,7 @@
     <br />Copyright&copy;2004-2016 JMW.COM.CN. All Rights Reserved 天创时代 版权所有
     <br />
     <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006020700545" target="_blank">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b5e07-1754.jpg" /></a>京ICP证：040787号 京公海网安备案编号:1101084667
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b5e07-1754.jpg" /></a>京ICP证：040787号 京公海网安备案编号:1101084667
     <br /></div>
 <!--底部 结束-->
 <!--footer end-->
@@ -50,7 +50,7 @@
 <a href="#2"></a></div>
 <div class="contrast_tips_cont">
 <dl>
-<dt><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1f658-4102.png"></dt>
+<dt><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/1f658-4102.png"></dt>
 <dd>最多只能选择 3 个项目进行对比</dd></dl>
 </div> 
 </div>-->
@@ -60,7 +60,7 @@
     <div id="sec_from">
         <div class="secfrom_1">
             <a href="javascript:;" onclick="closeBg();return false;">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4440e-5334.jpg" width="14" height="14" style="display:inline-block;" /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4440e-5334.jpg" width="14" height="14" style="display:inline-block;" /></a>
             <!--a href="http://jmw.com.cn/zhuanti/shengdian/" style="color: rgb(255, 0, 0); position: absolute; left:112px; top: 16px; text-align: left;">第七届中国（国际）品牌加盟投资博览会于2014年12月<br>20日至21日隆重召开，点击可参与抽奖活动！</a--></div>
         <div class="secfrom_2">
             <form method="post" action="">
@@ -88,14 +88,14 @@
                     <input type="hidden" name="searchQuick_lasturl" id="searchQuick_lasturl" />
                     <input type="hidden" name="searchQuick_fromurl" id="searchQuick_fromurl" />
                     <p class="btn">
-                        <input type="image" id="searchQuick" onclick="return onClickMessInfo($(this));" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/0aea7-7483.jpg" width="88" height="26" /></p>
+                        <input type="image" id="searchQuick" onclick="return onClickMessInfo($(this));" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/0aea7-7483.jpg" width="88" height="26" /></p>
                 </div>
                 <!--快捷留言 start-->
                 <div class="secMsg" id="secly_1" style="display:none;" onmouseout="jQuery('#secly_1').hide();" onmouseover="jQuery('#secly_1').show();">
                     <p>
                         <strong>您可以根据意向选择下列[快捷留言]</strong>
                         <a href="javascript:;" onclick="javascript:jQuery('.secMsg').hide();">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3bb8b-4720.gif" /></a>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3bb8b-4720.gif" /></a>
                     </p>
                     <ul>
                         <li>
@@ -150,7 +150,7 @@
     </div>
     <div class="advice-4">
         <span>温馨提示：</span>提供您的联系方式，加盟顾问会及时与您联系！</div></div>
-<style type="text/css">.advice_hotline{ position: fixed !important; left: 50%; top: 50%; margin-left: -203.5px !important; margin-top: -219.5px; z-index: 8000; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/30f72-8080.png) no-repeat; width: 407px; height: 439px; overflow: hidden; padding: 5px; display: none;} .advice-1{ height: 67px; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/15c25-5270.png) no-repeat 34px 12px; width: 270px; text-align: center; padding-left: 105px; padding-top: 13px;} .advice-1 p{ font-size: 17px; color: #fff; line-height: 25px;} .advice-1 strong{ display: block; font-size: 24px; color: #fff;} .advice-2{ height: 46px;} .advice-2 span{ float: left; font-size: 14px; color: #fff; padding-left: 25px; line-height: 48px;} .advice-2 a{ float: right; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/49e17-5551.gif) no-repeat; width: 12px; height: 11px; margin-top: 17px; margin-right: 16px;} .advice-3{ height: 260px;} .advice-3-tips{ font-size: 14px; color: #999; height: 24px; line-height: 24px; text-align: left; float: left; width: 407px; text-indent: 26px; margin-top: 22px; margin-bottom: 14px;} .advice-3-tips span{ color: #444;} .advice-3 p{ margin-bottom: 10px; padding-left: 26px;} .advice-3 p span{ display: inline-block; vertical-align: middle; font-size: 14px; color: #444; padding-right: 7px;} .advice-3 p .s_tes{ vertical-align: middle; width: 168px; height: 18px; line-height: 18px; padding: 5px 3px; color: #333; border: 1px solid #e8e8e8;} .advice-3-bot input{ width: 149px; height: 42px; line-height: 40px; overflow: hidden; background: url(http://60.205.145.0/filesys/spider/pages/asset/platj/img/90902-5195.png) no-repeat; color: #fff; border: none; text-align: center; font-size: 18px; cursor: pointer; margin-left: 93px; margin-top: 2px;} .advice-3 p span.sexi{ padding-left: 5px; padding-right: 2px;} .sexi input{ vertical-align: middle;} .sexi label{ display: inline-block; vertical-align: middle;} .advice-4{ color: #999; height: 53px; line-height: 53px; overflow: hidden; padding-left: 32px;} .advice-4 span{ color: #126ebc;}</style>
+<style type="text/css">.advice_hotline{ position: fixed !important; left: 50%; top: 50%; margin-left: -203.5px !important; margin-top: -219.5px; z-index: 8000; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/30f72-8080.png) no-repeat; width: 407px; height: 439px; overflow: hidden; padding: 5px; display: none;} .advice-1{ height: 67px; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/15c25-5270.png) no-repeat 34px 12px; width: 270px; text-align: center; padding-left: 105px; padding-top: 13px;} .advice-1 p{ font-size: 17px; color: #fff; line-height: 25px;} .advice-1 strong{ display: block; font-size: 24px; color: #fff;} .advice-2{ height: 46px;} .advice-2 span{ float: left; font-size: 14px; color: #fff; padding-left: 25px; line-height: 48px;} .advice-2 a{ float: right; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/49e17-5551.gif) no-repeat; width: 12px; height: 11px; margin-top: 17px; margin-right: 16px;} .advice-3{ height: 260px;} .advice-3-tips{ font-size: 14px; color: #999; height: 24px; line-height: 24px; text-align: left; float: left; width: 407px; text-indent: 26px; margin-top: 22px; margin-bottom: 14px;} .advice-3-tips span{ color: #444;} .advice-3 p{ margin-bottom: 10px; padding-left: 26px;} .advice-3 p span{ display: inline-block; vertical-align: middle; font-size: 14px; color: #444; padding-right: 7px;} .advice-3 p .s_tes{ vertical-align: middle; width: 168px; height: 18px; line-height: 18px; padding: 5px 3px; color: #333; border: 1px solid #e8e8e8;} .advice-3-bot input{ width: 149px; height: 42px; line-height: 40px; overflow: hidden; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/90902-5195.png) no-repeat; color: #fff; border: none; text-align: center; font-size: 18px; cursor: pointer; margin-left: 93px; margin-top: 2px;} .advice-3 p span.sexi{ padding-left: 5px; padding-right: 2px;} .sexi input{ vertical-align: middle;} .sexi label{ display: inline-block; vertical-align: middle;} .advice-4{ color: #999; height: 53px; line-height: 53px; overflow: hidden; padding-left: 32px;} .advice-4 span{ color: #126ebc;}</style>
 <script type="text/javascript">$(function() {
         $("div.free").click(function() {
             $(".advice_hotline").show();
@@ -234,7 +234,7 @@
                                     <p>
                                         <strong>您可以根据意向选择下列[快捷留言]</strong>
                                         <a href="javascript:;" onclick="jQuery('#secly_0000').hide();">
-                                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3bb8b-4720.gif" /></a>
+                                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3bb8b-4720.gif" /></a>
                                     </p>
                                     <ul id="messageUl" class='clearfix'>
                                         <li>
@@ -430,9 +430,9 @@
 <iframe id="bgIframe" class="bgIframe" frameborder="0"></iframe>
 <div id="bgDiv" class="bgDiv"></div>
 <!--背景遮罩层 结束-->
-<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/af28d-4814.css">
-<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/jquery-ui.js"></script>
-<!--<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/css/6d681-4893.css">-->
+<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/af28d-4814.css">
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-ui.js"></script>
+<!--<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/6d681-4893.css">-->
 <script>$(function() {
         $.ajax();
         var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
@@ -449,6 +449,6 @@
     });</script>
 <div style="display:none;">
     <!--综合页360统计代码-->
-    <!--<script src='http://60.205.145.0/filesys/spider/pages/asset/platj/js/c.js' language='JavaScript'></script>
+    <!--<script src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/c.js' language='JavaScript'></script>
     <script src='http://pw.cnzz.com/tongji_360.php?id=1256636396&pid=e360&l=2' language='JavaScript' charset='gb2312'></script> -->
     <!--综合页360统计代码end--></div>

@@ -29,13 +29,13 @@ use gallerycms\components\LinkPager;
                 <dd class="dd1">
                     <a href="/sample/show-<?= $info['id']; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>
                     <!--<a rel="nofollow" style="display:none;" href="javascript:;" id="_<?= $info['id']; ?>">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/87843-2527.png" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                     <a rel="nofollow" style="display:none;" href="javascript:;" id="jin_6572154">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7423a-9439.gif" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/7423a-9439.gif" /></a>
                     <a rel="nofollow" style="display:none;" href="javascript:;" id="zuan_6572154">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/04588-9953.gif" /></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/04588-9953.gif" /></a>
                     <a rel="nofollow" style="display:none;" href="javascript:;" id="svip1_6572154">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/a4128-7451.gif" /></a>-->
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/a4128-7451.gif" /></a>-->
                 </dd>
                 <!--<dd class="dd2">
                     <span class="favorablep">

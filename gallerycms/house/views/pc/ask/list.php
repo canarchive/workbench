@@ -6,7 +6,7 @@ use gallerycms\components\LinkPager;
 
 $this->params['bodyClass'] = 'class="narrow_980"';
 ?>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/ask.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/ask.js"></script>
 <div class="ask_class">
     <?= $this->render('_breadnav'); ?>
     <div class="container clear">
@@ -30,8 +30,8 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 </ul>
             </div>
             <div class="pages"><?= LinkPager::widget(['pagination' => $pages, 'activePageCssClass' => 'current']); ?></div>
-            <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/globalprovinces.js" xmlns="http://www.w3.org/1999/html"></script>
-            <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/css/67379-7523.css">
+            <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/globalprovinces.js" xmlns="http://www.w3.org/1999/html"></script>
+            <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/css/67379-7523.css">
             <div id='HotArea' style='display: block;'></div>
         </div>
         <div class="col2_2">
@@ -73,13 +73,13 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 <div class="side_bd side_list">
                     <div class="need_case">
                         <a href="javascript:;" target="_blank" id="erweima01">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/91fff-7993.jpg" alt="">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/91fff-7993.jpg" alt="">
                             <p>脑子进水造成的12大装修遗憾，你流泪了吗？</p>
                         </a>
                     </div>
                     <div class="need_case mar-20">
                         <a href="javascript:;" target="_blank" id="erweima02">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/3c41d-7973.jpg" alt="">
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/3c41d-7973.jpg" alt="">
                             <p>为什么我家装修完看起来这么&quot;廉价&quot;？</p>
                         </a>
                     </div>
@@ -87,7 +87,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
             </div>
             <div class="ask_side_opa">
                 <a id="autourl" href="http://mall.to8to.com/temai/zt539" hidefocus="" target="_blank" rel="nofollow">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
             </div>
             <div class="ask_side spceil">
                 <div class="side_hd">最新标签</div>
@@ -122,7 +122,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
             //右侧新增热门推荐
             var ewmhtml = '<div class="ewm-msg-layout">\
 <div class="ewm-msg-box clear">\
-<div class="wem-img"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/e8cd2-1545.png"></div>\
+<div class="wem-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/e8cd2-1545.png"></div>\
 <div class="ewm-msg-text"><p>微信扫一扫</p><p>关注<em>土巴兔装修家居</em>公众号</p><p>发送<em>rm01</em>阅读</p></div>\
 <i class="ico-ewm-remov"></i>\
 </div>\
@@ -136,7 +136,7 @@ $this->params['bodyClass'] = 'class="narrow_980"';
                 jq('.ewm-msg-layout').remove();
             }); var ewmhtml01 = '<div class="ewm-msg-layout">\
 <div class="ewm-msg-box clear">\
-<div class="wem-img"><img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/img/373c5-5471.png"></div>\
+<div class="wem-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/373c5-5471.png"></div>\
 <div class="ewm-msg-text"><p>微信扫一扫</p><p>关注<em>土巴兔装修家居</em>公众号</p><p>发送<em>rm02</em>阅读</p></div>\
 <i class="ico-ewm-remov"></i>\
 </div>\

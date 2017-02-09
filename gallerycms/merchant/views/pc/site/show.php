@@ -21,7 +21,7 @@
             <span style="color: rgb(0, 0, 0);">
                 <span style="font-size: 14px;">
                     <span style="font-family: 宋体;">
-                        <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ec98-5416.jpg"></span>
+                        <img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/9ec98-5416.jpg"></span>
                 </span>
             </span>
             <br>&nbsp;</p>
@@ -55,7 +55,7 @@
             <span style="color: rgb(0, 0, 0);">
                 <span style="font-size: 14px;">
                     <span style="font-family: 宋体;">
-                        <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8ae9b-5595.jpg"></span>
+                        <img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8ae9b-5595.jpg"></span>
                 </span>
             </span>
         </p>
