@@ -12,6 +12,7 @@ class BaseController extends Controller
     public $clientType;
     public $layout = '@gallerycms/views/main-pc';
     public $currentCityCode;
+    public $currentCityName;
 
     public function init()
     {
@@ -32,6 +33,7 @@ class BaseController extends Controller
 		$this->pcMappingUrl = '/';
 		$this->mobileMappingUrl = '/';
         $this->currentCityCode = Yii::$app->params['currentCompany']['code'];
+        $this->currentCityName = Yii::$app->params['currentCompany']['name'];
     }
 
     protected function _initMerchant($page = 'index')
@@ -71,4 +73,40 @@ class BaseController extends Controller
 
 		return $datas;
 	}
+
+    public function getNavDatas()
+    {
+        $datas = [
+            'index' => [
+                'url' => '/',
+                'name' => '首页',
+            ],
+            'index-city' => [
+                'url' => '/' . Yii::$app->params['currentCompany']['code'] . '/',
+                'name' => '首页',
+            ],
+            'ask' => [
+                'url' => '/ask/', 
+                'name' => '装修问答'
+            ],
+            'merchant' => [
+                'url' => '/' . Yii::$app->params['currentCompany']['code'] . '/merchant/',
+                'name' => Yii::$app->params['currentCompany']['name'] . '装修公司',
+            ],
+            'quote' => [
+                'url' => '/' . Yii::$app->params['currentCompany']['code'] . '/quote/',
+                'name' => Yii::$app->params['currentCompany']['name'] . '装修报价',
+            ],
+            'sample' => [
+                'url' => '/sample',
+                'name' => '效果图',
+            ],
+            'office' => [
+                'url' => 'http://www.weinaya.com',
+                'name' => '商家系统',
+            ],
+        ];
+
+        return $datas;
+    }
 }

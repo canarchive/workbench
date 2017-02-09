@@ -71,7 +71,7 @@ class LinkPager extends LinkPagerBase
         if ($disabled) {
             Html::addCssClass($options, $this->disabledPageCssClass);
 
-            return Html::tag('span', $label);
+            return Html::tag('span', $label, $linkOptions);
         }
 
         return Html::a($label, $this->pagination->createUrl($page), $linkOptions);

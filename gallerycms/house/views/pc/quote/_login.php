@@ -6,7 +6,7 @@
                 <!--<div class="LBC_left">
                 <h2>用户登录</h2>
                 <div>
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/plat1/img/20ede-3736.jpg" alt="登录-二维码" width="158px" height="158px">
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/img/20ede-3736.jpg" alt="登录-二维码" width="158px" height="158px">
                 <p>微信扫码&nbsp;快速登录</p>
                 <p><i>?</i>使用帮助</p>
                 </div>
@@ -57,7 +57,7 @@
                 <!-- <div class="LBC_left">
                 <h2>用户登录</h2>
                 <div>
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/plat1/img/da2be-4036.jpg" alt="登录-二维码" width="158px" height="158px">
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/img/da2be-4036.jpg" alt="登录-二维码" width="158px" height="158px">
                 <p>微信扫码&nbsp;快速登录</p>
                 <p><i>?</i>使用帮助</p>
                 </div>

@@ -79,16 +79,16 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/quote/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/<city_code:\w+>/quote<tag:_[a-z_\-]+><page:_[0-9]+>',
     		'route'	=> '/house/quote/index',
-    		'defaults' => ['page' => 1, 'tag' => ''],
+    		'defaults' => ['page' => '_1', 'tag' => '_'],
         ],
     ],
     'quote-show' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/quote-<code\d+>',
+            'pattern' => '/<city_code:\w+>/quote-show-<id:\d+>',
     		'route'	=> '/house/quote/show',
         ],
     ],

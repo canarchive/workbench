@@ -77,7 +77,7 @@
             <p>已合作商家意见反馈：胡经理13716578678</p>
         </li>
         <li class="last">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/plat1/img/11895-1943.png" alt="微信二维码" width="80px" height="80px">
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/img/11895-1943.png" alt="微信二维码" width="80px" height="80px">
             <p class="weixin">
                 <span>扫描二维码</span>
                 <span>关注官方微信</span></p>

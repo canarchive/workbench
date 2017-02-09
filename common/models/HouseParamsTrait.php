@@ -41,16 +41,16 @@ trait HouseParamsTrait
         $datas = [
             'simple' => '简约',
             'modern' => '现代',
-            'EN' => '欧式',
-            'CN' => '中式',
+            'en' => '欧式',
+            'cn' => '中式',
             'rural' => '田园',
             'mediterranean' => '地中海',
-            'US' => '美式',
+            'us' => '美式',
             'mashup' => '混搭',
             'family' => '宜家',
-            'simple-EN' => '简欧',
-            'new-classics' => '新古典',
-            'SE-asia' => '东南亚',
+            'simpleen' => '简欧',
+            'newclassics' => '新古典',
+            'seasia' => '东南亚',
         ];
 
         return $datas;
@@ -59,18 +59,12 @@ trait HouseParamsTrait
     public function getAreaInfos()
     {
         $datas = [
-			'30' => '30㎡',
-			'40' => '40㎡',
-			'50' => '50㎡',
-			'60' => '60㎡',
-			'70' => '70㎡',
-			'80' => '80㎡',
-			'90' => '90㎡',
-			'100' => '100㎡',
-			'110' => '110㎡',
-			'120' => '120㎡',
-			'130' => '130㎡以上',
-        
+			'one' => '60㎡以下',
+			'two' => '61-80㎡',
+			'three' => '81-100㎡',
+			'four' => '101-120㎡',
+			'five' => '121-160㎡',
+			'six' => '160㎡以上',
         ];
         return $datas;
     }
