@@ -8,6 +8,7 @@ use gallerycms\merchant\models\Merchant;
 use gallerycms\merchant\models\Realcase;
 use gallerycms\merchant\models\Working;
 use gallerycms\house\models\Sample;
+use gallerycms\house\models\AskQuestion;
 
 class SiteController extends HouseController
 {
@@ -19,6 +20,7 @@ class SiteController extends HouseController
 			'realcaseInfos' => $this->getRealcaseInfos($where),
 			'workingInfos' => $this->getWorkingInfos($where),
 			'sampleInfos' => $this->getSampleInfos(),
+            'askInfos' => $this->getAskInfos($where),
 		];
 		$this->getTdkInfos('site-index');
 
@@ -29,20 +31,6 @@ class SiteController extends HouseController
 	{
 		$this->getTdkInfos('site-select-city');
 		return $this->render('select-city');
-	}
-
-	public function actionMap()
-	{
-		$datas = $this->getMapInfos();
-		$this->getTdkInfos('site-map');
-		return $this->render('sitemap', $datas);
-	}
-
-	public function actionMapMore()
-	{
-		$datas = $this->getMapMoreInfos();
-		$this->getTdkInfos('site-map-more');
-		return $this->render('sitemap-more', $datas);
 	}
 
 	protected function getSampleInfos()
@@ -73,40 +61,10 @@ class SiteController extends HouseController
 		return $infos;
 	}
 
-	protected function getMapInfos()
-	{
-		$modelSample = new Sample();
-		$modelRegion = new RegionCounty();
-		$datas = [
-			'houseSortInfos' => $modelSample->houseSortInfos,
-			'regionInfos' => $modelRegion->getMapInfos(),
-			'modelSample' => $modelSample,
-		];
-
-		return $datas;
-	}
-
-	protected function getMapMoreInfos()
-	{
-		$companyInfo = Yii::$app->params['currentCompany'];
-		$parentId = $companyInfo['region_code'];
-		$modelRegion = new RegionCounty();
-		$datas = [
-			'infos' => $modelRegion->getMapMoreInfos($parentId),
-			'companyInfo' => $companyInfo,
-		];
-
-		return $datas;
-	}
-
-	public function actionTest()
-	{
-		//echo $this->id;
-		//echo $this->action->id;
-		$owner = new \merchant\house\models\Owner();
-		$infos = $owner->getInfos(['company_id' => 1]);
-		print_r($infos);
-		$tdkInfo = $this->getTdkInfos('site-index');
-		print_r($tdkInfo);
-	}
+    protected function getAskInfos($where)
+    {
+        $model = new AskQuestion();
+        $infos = $model->getIndexInfos($where);
+        return $infos;
+    }
 }

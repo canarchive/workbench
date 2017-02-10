@@ -5,6 +5,7 @@ use Yii;
 use yii\helpers\Url;
 use yii\web\ForbiddenHttpException;
 use gallerycms\merchant\models\Merchant;
+use gallerycms\house\models\Friendlink;
 
 class BaseController extends Controller
 {
@@ -139,5 +140,12 @@ class BaseController extends Controller
         ];
 
         return $datas;
+    }
+
+    public function getFriendLinkInfos($where = [])
+    {
+        $model = new Friendlink();
+        $infos = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->limit(100)->asArray()->all();
+        return $infos;
     }
 }

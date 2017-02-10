@@ -158,10 +158,4 @@ class AskSort extends GallerycmsModel
 
         return $info;
     }
-
-    public function isDirect($code)
-    {
-        $directCodes = ['110000', '120000', '310000', '500000'];
-        return in_array($code, $directCodes);
-    }
 }

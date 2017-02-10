@@ -97,13 +97,33 @@ class AskQuestion extends GallerycmsModel
 
 	public function getInfos($where, $limit = 100)
 	{
-		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
+		$infos = $this->find()->select('id, name, sort, created_at')->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
-			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+			//$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 			//$info['style'] = $info->styleInfos[$info->style];
 		}
 
         //$cache->set($keyCache, $infos);
 		return $infos;
 	}		
+
+    public function getIndexInfos($where)
+    {
+        $keyCache = 'index-ask-question';
+        $infos = $this->_getCacheDatas($keyCache);
+        if ($infos) {
+            //return $infos;
+        }
+
+		$sortInfos = ArrayHelper::map(AskSort::find()->all(), 'code', 'name');
+        $sorts = ['lastest', 'scmc', 'cyjb', 'jjsh', 'djzm', 'rzcp', 'esfzx', 'wyjjzx', 'csypzx', 'rzsj', 'zxgs'];
+        $infos = [];
+        foreach ($sorts as $sort) {
+            $where = $sort == 'lastest' ? ['status' => 0] : ['sort' => $sort, 'status' => 0];
+            $infos[$sort]['name'] = $sort == 'lastest' ? '最新提问' : $sortInfos[$sort];
+            $infos[$sort]['infos'] = $this->getInfos($where, 20);
+        }
+
+        return $this->_setCacheDatas($keyCache, $infos);
+    }
 }

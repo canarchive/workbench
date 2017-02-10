@@ -7,34 +7,34 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 $this->params['jsStr'] = $this->render('_js-header', []);
 ?>
 <!-- 顶部 -->
-<?= $this->render('_top'); ?>
-<?= $this->render('_ad-nav'); ?>
-<?= $this->render('_logo'); ?>
-<?= $this->render('_nav'); ?>
+<?php echo $this->render('_top'); ?>
+<?php echo $this->render('_ad-nav'); ?>
+<?php echo $this->render('_logo'); ?>
+<?php echo $this->render('_nav'); ?>
 <!-- banner -->
-<?= $this->render('_banner'); ?>
+<?php echo $this->render('_banner'); ?>
 <!-- main -->
 <div class='allcontant'>
-    <?php echo $this->render('_content-1'); ?>
-    <?php echo $this->render('_content-2'); ?>
-    <?php echo $this->render('_content-3'); ?>
-    <?php echo $this->render('_content-4'); ?>
+    <?php //echo $this->render('_content-1'); ?>
+    <?php //echo $this->render('_content-2'); ?>
+    <?php //echo $this->render('_content-3'); ?>
+    <?php //echo $this->render('_content-4'); ?>
 </div>
 </div>
-<?= $this->render('_quote'); ?>
+<?php echo $this->render('_quote'); ?>
 <div class="main">
     <div class="wrap_mar">
         <?php echo $this->render('_ad-ask'); ?>
         <?php //echo $this->render('_ad-time'); ?>
-        <?php echo $this->render('_ask-pic'); ?>
-        <?= $this->render('_ask'); ?>
+        <?php //echo $this->render('_ask-pic'); ?>
+        <?php echo $this->render('_ask', ['infos' => $askInfos]); ?>
     </div>
 </div>
 <!-- 友情链接 -->
-<?= $this->render('_friendlink'); ?>
+<?= $this->render('_friendlink', ['fInfos' => $this->context->friendlinkInfos]); ?>
 <!-- 我们能为投资加盟提供什么? -->
-<?= $this->render('_ourservice'); ?>
+<?php //echo $this->render('_ourservice'); ?>
 <!-- footer -->
 <?= $this->render('@gallerycms/views/platj/pc/_footer-base'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/trade.js"></script>
-<div style="display:none;">欢迎访问中国加盟网!!!</div></body>
+<div style="display:none;">欢迎访问<?= Yii::$app->params['siteName']; ?>!!!</div></body>

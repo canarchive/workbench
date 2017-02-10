@@ -1,6 +1,14 @@
 <div class='allSeek wrap_mar'>
     <div class='seekHead clear'>
         <div class='seekHeadR fr'>
+            <!-- <ul class="yd_m42 fr"> 
+            <li class="fl li1">成交播报:</li>
+            <marquee scrollamount="3" scrolldelay="0" loop="infinite" direction="left" behavior="scroll" onmouseout="this.start();" onmouseover="this.stop();"  class="fr marqueeUP2">
+            <ul class="gundong_bar sel_lt" id="cjbb">
+            <li><a href="http://dl.jmw.com.cn/qydl/17528961_0.shtml">热烈祝贺兰州张总与宁夏陈总成功签约<span style="color: rgb(255,0,0)"欧克斯门窗</span>特此祝贺！并预祝生意兴隆！</a></li>
+            <li><a href="http://www.jc.jmw.com.cn/jiancaipinpaidongtai/17525824.html">热烈祝贺广西平南林先生<span style="color: rgb(255,0,0)">加盟防水博士</span>特此祝贺！并预祝生意兴隆！</a></li></ul>
+            </marquee>
+            </ul> -->
             <ul class="yd_m42 fr">
                 <li class="fl li1">成交播报:</li>
                 <div id="bOdemo" class="qimo8 fl">
@@ -23,8 +31,7 @@
             </ul>
         </div>
         <div class='seekHeadL fl'>
-            <a style="color:#000;" href="http://search.jmw.com.cn/i24/" title="加盟资讯推荐">加盟资讯推荐</a>
-        </div>
+            <a style="color:#000;" href="http://search.jmw.com.cn/i24/" title="加盟资讯推荐">加盟资讯推荐</a></div>
     </div>
     <div class='seekContent'>
         <ul>

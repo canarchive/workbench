@@ -16,6 +16,24 @@ class TmpController extends GallerycmsController
         $this->$action();
     }   
 
+    protected function uQuestion()
+    {
+        $sorts = AskSort::find()->indexBy('code')->asArray()->all();
+        $sql = '';
+        $i = 0;
+        foreach ($sorts as $sort => $sortInfo) {
+            if ($sortInfo['parent_code'] == '') {
+                continue;
+            }
+            $sortParent = $sorts[$sortInfo['parent_code']]['name'];
+            $sortName = $sortInfo['name'];
+            $sql .= "{$i}--UPDATE `wc_ask_question` SET `sort` = '{$sort}' WHERE `sort_parent` = '{$sortParent}' AND `sort` = '{$sortName}'<br />";
+            $i++;
+        }
+        echo $sql;
+        //print_r($sorts);exit();
+    }
+
     protected function updateSort()
     {   
         $model = new AskQuestion();
