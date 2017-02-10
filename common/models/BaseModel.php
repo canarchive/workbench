@@ -231,4 +231,32 @@ class BaseModel extends ActiveRecord
         $cache->set($key, $datas);
         return $datas;
     }
+
+    protected function _formatImgForShow($datas)
+    {
+        $infos = [];
+        $fields = [
+            'xgtid' => ['f' => 'info_id'],
+            'coid' => 0,
+            'zid' => '',
+            'sid' => 0,
+            'pid' => 0,
+            's' => ['f' => 'url'],
+            'w' => '1120',
+            'h' => '2124',
+            't' => '',
+            'aid' => ['f' => 'id'],
+            'id' => 0,
+            'n' => '',
+        ];
+        foreach ($datas as $data) {
+            $info = [];
+            foreach ($fields as $key => $k) {
+                $info[$key] = isset($k['f']) ? $data[$k['f']] : $k;
+            }
+
+            $infos[]['l'] = $info;
+        }
+        return $infos;
+    }
 }
