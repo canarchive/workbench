@@ -217,4 +217,18 @@ class BaseModel extends ActiveRecord
 		$str .= "?x-oss-process=image/resize,m_fill,w_{$width},h_{$height},limit_0/auto-orient,0/quality,q_90";
 		return $str;
 	}
+
+    protected function _getCacheDatas($key)
+    {
+        $cache = Yii::$app->cache;
+        $datas = $cache->get($key);
+        return $datas;
+    }
+
+    protected function _setCacheDatas($key, $datas)
+    {
+        $cache = Yii::$app->cache;
+        $cache->set($key, $datas);
+        return $datas;
+    }
 }
