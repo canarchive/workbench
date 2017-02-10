@@ -261,4 +261,8 @@ class Merchant extends MerchantModel
 	    Working::deleteAll("merchant_id = {$this->id}");
 	    MerchantComment::deleteAll("merchant_id = {$this->id}");
 	}
+
+    public function getIndexInfos($where)
+    {
+    }
 }

@@ -137,6 +137,7 @@ class BaseController extends Controller
             'disclaimer' => '免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。',
             'copyRight' => Yii::$app->params['siteCopyRightInfo'],
             'icpInfo' => Yii::$app->params['siteIcpInfo'],
+            'hotline' => Yii::$app->params['siteHotline'],
         ];
 
         return $datas;

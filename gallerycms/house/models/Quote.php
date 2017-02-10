@@ -180,4 +180,30 @@ class Quote extends GallerycmsModel
     {
         return 'id,name,created_at,status';
     }
+
+    public function getIndexInfos($where)
+    {
+        $keyCache = 'index-ask-quote';
+        $infos = $this->_getCacheDatas($keyCache);
+        if ($infos) {
+            //return $infos;
+        }
+
+        $infos = [
+            'lastest' => ['name' => '最新'],
+            'hot' => ['name' => '热点报价'],
+            'news' => ['name' => '特殊报价'], 
+            'code' => ['name' => '靠谱报价'], 
+        ];
+        $where = [];
+        $datas = $this->getInfos($where, 100);
+        foreach ($infos as $sort => & $info) {
+            //$where = $sort == 'lastest' ? ['status' => 0] : ['sort' => $sort, 'status' => 0];
+            //$infos[$sort]['infos'] = $this->getInfos($where, 20);
+            $num = $sort == 'lastest' ? 10 : 4;
+            $info['infos'] = array_splice($datas, 0, $num);//$this->getInfos($where, 20);
+        }
+
+        return $this->_setCacheDatas($keyCache, $infos);
+    }
 }

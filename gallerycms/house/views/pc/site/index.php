@@ -15,19 +15,19 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <?php echo $this->render('_banner'); ?>
 <!-- main -->
 <div class='allcontant'>
-    <?php //echo $this->render('_content-1'); ?>
-    <?php //echo $this->render('_content-2'); ?>
-    <?php //echo $this->render('_content-3'); ?>
-    <?php //echo $this->render('_content-4'); ?>
+    <?php echo $this->render('_content-1', ['infos' => $realcaseInfos]); ?>
+    <?php echo $this->render('_content-2', ['infos' => $sampleInfos]); ?>
+    <?php echo $this->render('_content-3', ['infos' => $workingInfos]); ?>
+    <?php echo $this->render('_content-4', ['infos' => $merchantInfos]); ?>
 </div>
 </div>
-<?php echo $this->render('_quote'); ?>
+<?php //echo $this->render('_quote', ['infos' => $quoteInfos]); ?>
 <div class="main">
     <div class="wrap_mar">
-        <?php echo $this->render('_ad-ask'); ?>
+        <?php //echo $this->render('_ad-ask'); ?>
         <?php //echo $this->render('_ad-time'); ?>
         <?php //echo $this->render('_ask-pic'); ?>
-        <?php echo $this->render('_ask', ['infos' => $askInfos]); ?>
+        <?php //echo $this->render('_ask', ['infos' => $askInfos]); ?>
     </div>
 </div>
 <!-- 友情链接 -->

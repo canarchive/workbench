@@ -122,10 +122,13 @@ class Sample extends GallerycmsModel
             $pictureInfos[] = [ 
                 'url' => $url,
                 'name' => $attachment['filename'],
+                'info_id' => $attachment['info_id'],
+                'id' => $attachment['id'],
+                
                 'description' => $attachment['description'],
             ];  
         }    
-        $info->picture = $pictureInfos;
+        $info->picture = $this->_formatImgForShow($pictureInfos);
 
 		return $info;
 	}

@@ -227,8 +227,8 @@
             </li>
             <li style='margin-right:0px'>
                 <div class='seekContentTop'>
-                    <div class='seekContentTopL fl seekContentTopRed'>
-                        <a class='seekContentTopBl'>谁在找建材项目</a></div>
+                    <div class='seekContentTopL fl seekContentTopRed '>
+                        <a href='http://www.jc.jmw.com.cn/jcjmkx/' class='seekContentTopBl' title="建材加盟快讯">加盟快讯</a></div>
                     <div class='seekContentTopR fl'>
                         <a>最新意向建材品牌</a>
                     </div>

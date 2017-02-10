@@ -9,6 +9,7 @@ use gallerycms\merchant\models\Realcase;
 use gallerycms\merchant\models\Working;
 use gallerycms\house\models\Sample;
 use gallerycms\house\models\AskQuestion;
+use gallerycms\house\models\Quote;
 
 class SiteController extends HouseController
 {
@@ -20,6 +21,7 @@ class SiteController extends HouseController
 			'realcaseInfos' => $this->getRealcaseInfos($where),
 			'workingInfos' => $this->getWorkingInfos($where),
 			'sampleInfos' => $this->getSampleInfos(),
+            'quoteInfos' => $this->getQuoteInfos($where),
             'askInfos' => $this->getAskInfos($where),
 		];
 		$this->getTdkInfos('site-index');
@@ -43,7 +45,7 @@ class SiteController extends HouseController
 	protected function getMerchantInfos($where)
 	{
 		$model = new Merchant();
-		$infos = $model->getInfos($where);
+		$infos = $model->getIndexInfos($where);
 		return $infos;
 	}
 
@@ -60,6 +62,15 @@ class SiteController extends HouseController
 		$infos = $model->getInfos($where);
 		return $infos;
 	}
+
+    protected function getQuoteInfos($where)
+    {
+        $model = new Quote();
+        $infos = $model->getIndexInfos($where);
+        //print_r($infos);exit();
+        return $infos;
+
+    }
 
     protected function getAskInfos($where)
     {

@@ -52,7 +52,7 @@ class SampleController extends HouseController
 	public function actionShow()
 	{
         $id = \Yii::$app->getRequest()->get('id');
-        /*$model = new Sample();
+        $model = new Sample();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
             return $this->redirect('/')->send();
@@ -64,19 +64,15 @@ class SampleController extends HouseController
 				continue;
 			}
 			$tagKeyInfo = $info[$tagKey];
-			if ($tagKey == 'area') {
-				$tagKeyInfo = ceil($tagKeyInfo / 10) * 10;
-				$tagKeyInfo = $tagKeyInfo > 130 ? 130 : $tagKeyInfo;
-			}
 			$str = $tagValue['values'][$tagKeyInfo];
 			$tagStr .= $str;
 			$info[$tagKey] = $str;
 		}
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-        $this->getTdkInfos('sample-show', $dataTdk);*/
+        $this->getTdkInfos('sample-show', $dataTdk);
 		$datas = [
-			'info' => [],//$info,
+			'info' => $info,
 		];
 		return $this->render('show', $datas);
 	}
