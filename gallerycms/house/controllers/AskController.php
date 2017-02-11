@@ -66,6 +66,27 @@ class AskController extends HouseController
 	{
         $id = Yii::$app->getRequest()->get('id');
         $model = new AskQuestion();
+		$info = $model->getInfo($id);
+		if (empty($info)) {
+            throw new NotFoundHttpException('NO found');
+		}
+
+        $tagInfos = $this->_checkTag($info['sort']);
+
+        //$description = str_replace(' ', '', $info['description']);
+        $description = StringHelper::truncate(strip_tags($info['description']), 200, '');
+		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $info['tags'], '{{DESCRIPTION}}' => $description];
+		$this->getTdkInfos('info-show', $dataTdk);
+
+        $infos = $model->getInfos(['category_id' => $tagInfos['ids']], 6);
+		$datas = [
+			'info' => $info,
+            'tagInfos' => $tagInfos,
+            'infos' => $infos,
+		];
+		return $this->render('show', $datas);
+        $id = Yii::$app->getRequest()->get('id');
+        $model = new AskQuestion();
         $this->getTdkInfos('sample-show', $dataTdk);
 		$datas = [
 			'info' => $info,

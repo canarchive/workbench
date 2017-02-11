@@ -59,6 +59,7 @@ $footerNavs = $this->context->footerNavs;
         <div class="footer_bottom_container">
             <div class="fbc_menu">
                 <ul>
+                    <?php foreach (['desc', 'friendlink', 'guestbook', 'contactus', 'statement'] as $navKey) { ?>
                     <li>
                         <a hidefocus="" href="<?= $footerNavs[$navKey]['url']; ?>" rel="nofollow"><?= $footerNavs[$navKey]['name']; ?></a>
                         <span></span>

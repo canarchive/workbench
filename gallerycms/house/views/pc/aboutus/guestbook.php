@@ -2,9 +2,10 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$cssFiles = ['9840e-60152', 'd6be2-6277', 'a61f-3180', 'e6610-7846'];
+$cssFiles = ['9840e-6015', 'd6be2-6277', 'e6610-7846', '2a61f-3180'];
+//$cssFiles = ['3cdab-6033', '355e9-6276', 'e6610-7846'];
 $jsFiles = ['jquery-1.10.2.min', 'plat8rsas', 'tender', 'common', 'common_new_forold'];
-$this->params['cssStr'] = $this->render('../_css-aboutus', ['cssFiles' => $cssFiles]);
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
 $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
 <div class="global_wrap" id='gloWrap'>

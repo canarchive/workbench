@@ -1,10 +1,10 @@
 <div class='content clear'>
     <div class="recommend clear">
         <h2 class="fl">
-            <a href="<?= '/' . $this->context->currentCityCode . '/realcase'; ?>" title="装修实景案例" class="moreL"><em>装修实景案例</em></a>
+            <a href="<?= '/' . $this->context->currentCityCode . '/realcase'; ?>" title="热门设计案例" class="moreL"><em>热门设计案例</em></a>
         </h2>
         <a href="<?= '/' . $this->context->currentCityCode . '/realcase'; ?>" title="装修实景案例" class="more">
-            <em>更多装修实景案例&nbsp;></em></a>
+            <em>更多热门设计案例&nbsp;></em></a>
     </div>
     <div class="recommendTable clear">
         <ul>
@@ -17,7 +17,7 @@
                 <div>
                     <p class='describe'><?= $info['name']; ?></p>
                     <p class='describeMo'>
-                        <button onclick="message_check('137829','26-1','热门行业的晨阳水漆项目很不错，我想加盟，请尽快联系我！');">我要咨询</button>
+                        <button onclick="message_check('137829','26-1','热门行业的晨阳水漆项目很不错，我想加盟，请尽快联系我！');">免费设计</button>
                         <span class='describeHo' style='color:#e9000a'>￥</span><?= $info['ownerInfo']['decoration_price']; ?>
                         <span class='describeHo' style='color:#e9000a'>万</span>
                         <span class='describeHo'><?= $info['ownerInfo']['decoration_type']; ?></span></p>

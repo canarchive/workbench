@@ -71,7 +71,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/ask-<code\d+>',
+    		'pattern' => '/ask-<id:\d+>',
     		'route'	=> '/house/ask/show',
         ],
     ],

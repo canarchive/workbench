@@ -77,7 +77,7 @@ class AskQuestion extends GallerycmsModel
 
 	public function getInfo($id)
 	{
-		$info = static::find()->where(['id' => $id])->one();//->toArray();
+		$info = self::find()->where(['id' => $id])->one();//->toArray();
 		if (empty($info)) {
 			return $info;
 		}

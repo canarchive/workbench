@@ -15,25 +15,25 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <?php echo $this->render('_banner'); ?>
 <!-- main -->
 <div class='allcontant'>
+    <?php echo $this->render('_content-4', ['infos' => $merchantInfos]); ?>
     <?php echo $this->render('_content-1', ['infos' => $realcaseInfos]); ?>
     <?php echo $this->render('_content-2', ['infos' => $sampleInfos]); ?>
     <?php echo $this->render('_content-3', ['infos' => $workingInfos]); ?>
-    <?php echo $this->render('_content-4', ['infos' => $merchantInfos]); ?>
 </div>
 </div>
-<?php //echo $this->render('_quote', ['infos' => $quoteInfos]); ?>
+<?php echo $this->render('_quote', ['infos' => $quoteInfos]); ?>
 <div class="main">
     <div class="wrap_mar">
-        <?php //echo $this->render('_ad-ask'); ?>
-        <?php //echo $this->render('_ad-time'); ?>
-        <?php //echo $this->render('_ask-pic'); ?>
-        <?php //echo $this->render('_ask', ['infos' => $askInfos]); ?>
+        <?php echo $this->render('_ad-ask'); ?>
+        <?php echo $this->render('_ad-time'); ?>
+        <?php echo $this->render('_ask-pic'); ?>
+        <?php echo $this->render('_ask', ['infos' => $askInfos]); ?>
     </div>
 </div>
 <!-- 友情链接 -->
 <?= $this->render('_friendlink', ['fInfos' => $this->context->friendlinkInfos]); ?>
 <!-- 我们能为投资加盟提供什么? -->
-<?php //echo $this->render('_ourservice'); ?>
+<?php echo $this->render('_ourservice'); ?>
 <!-- footer -->
 <?= $this->render('@gallerycms/views/platj/pc/_footer-base'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/trade.js"></script>
