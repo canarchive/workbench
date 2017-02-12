@@ -2,6 +2,38 @@
 
 INSERT INTO `ws_page` 
     (`site_code`, `code`, `name`, `name_source`, `url`, `is_mobile`, `created_at`, `description`, `isbak`) VALUES 
+    ('flower', 'index-home', '首页', '首页', 'http://flowerplus.cn/', '0', '20170205', '', 0),
+    ('flower', '', '', '', '', '0', '20170205', '', 0),
+
+    ('flower', 'ask-after', '售后咨询', '售后咨询', 'http://t.flowerplus.cn/front_ticket/add_ticket', '1', '20170205', '', 0),
+    ('flower', 'ask-no', '售前咨询', '售前咨询', 'http://t.flowerplus.cn/front_ticket/pay_front', '1', '20170205', '', 0),
+    ('flower', 'ask-send', '查看物流', '查看物流', 'http://t.flowerplus.cn/kd', '1', '20170205', '', 0),
+    ('flower', 'ask', '咨询', '咨询', 'http://t.flowerplus.cn/front_ticket/ticket_list?ticket_type=10', '1', '20170205', '', 0),
+    ('flower', 'ccoupon', '兑换码', '兑换码', 'http://t.flowerplus.cn/dh', '1', '20170205', '', 0),
+    ('flower', 'coupon', '优惠券', '优惠券', 'http://t.flowerplus.cn/my/coupons', '1', '20170205', '', 0),
+    ('flower', 'gift', '礼物清单', '礼物清单', 'http://t.flowerplus.cn/my/orders/?status=100', '1', '20170205', '', 0),
+    ('flower', 'groupon', '团购清单', '团购清单', 'http://t.flowerplus.cn/my/mygroup', '1', '20170205', '', 0),
+    ('flower', 'guestbook', '留言', '留言', 'http://t.flowerplus.cn/help/feedback', '1', '20170205', '', 0),
+    ('flower', 'index-home', '首页', '首页', 'http://t.flowerplus.cn/', '1', '20170205', '', 0),
+    ('flower', 'my-code-coupon', '兑换码', '兑换码', 'http://t.flowerplus.cn/wx_cs/get_my_code_convert', '1', '20170205', '', 0),
+    ('flower', 'my-code-order', '下线订单', '下线订单', 'http://t.flowerplus.cn/wx_cs/get_my_orders_orders', '1', '20170205', '', 0),
+    ('flower', 'my-code', '我的二维码', '我的二维码', 'http://t.flowerplus.cn/wx_cs/my_code', '1', '20170205', '', 0),
+    ('flower', 'order-topay', '订单-待付款', '订单-待付款', 'http://t.flowerplus.cn/my/orders/?status=1', '1', '20170205', '', 0),
+    ('flower', 'order-service', '订单-服务中', '订单-服务中', 'http://t.flowerplus.cn/my/orders/?status=2', '1', '20170205', '', 0),
+    ('flower', 'order-show-service', '订单详情-服务中', '订单详情-服务中', 'http://t.flowerplus.cn/my/orderdetail/?id=3052333', '1', '20170205', '', 0),
+    ('flower', 'order-show-finish', '订单详情-完成', '订单详情-完成', 'http://t.flowerplus.cn/my/orderdetail/?id=2338978', '1', '20170205', '', 0),
+    ('flower', 'pay-1', '付款-1', '付款-1', 'http://t.flowerplus.cn/my/orderdetail/?id=3087759', '1', '20170205', '', 0),
+    ('flower', 'score', '积分', '积分', 'http://t.flowerplus.cn/my/jifen', '1', '20170205', '', 0),
+    ('flower', 'show-activity', '特色商品', '情人节', 'http://static2.flowerplus.cn/f1172', '1', '20170205', '', 0),
+    ('flower', 'show-common', '商品详情', '普通商品', 'http://static2.flowerplus.cn/f1098', '1', '20170205', '', 0),
+    ('flower', 'show-ext', '附加商品', '花剪', 'http://static2.flowerplus.cn/f2', '1', '20170205', '', 0),
+    ('flower', 'signin-mobile', '手机号登录', '手机号登录', 'http://t.flowerplus.cn/uclogin/loginmob', '1', '20170205', '', 0),
+    ('flower', 'signin-wechat', '二维码登录', '手机号登录', 'http://t.flowerplus.cn/uclogin/loginqr', '1', '20170205', '', 0),
+    ('flower', '', '', '', '', '1', '20170205', '', 0),
+    ('flower', '', '', '', '', '1', '20170205', '', 0),
+
+
+
     ('djh', 'index-home', '首页', '武汉首页', 'http://www.dajianhui.com/', '0', '20170126', '', 0),
     ('djh', 'index-zz', '分站首页', '首页-郑州', 'http://zz.dajianhui.com/z-index.shtml', '0', '20170126', '', 0),
     ('djh', 'list-activity', '活动列表', '活动专区', 'http://www.dajianhui.com/hd.shtml', '0', '20170126', '', 0),

@@ -16,8 +16,8 @@ return [
         'code' => 'groupon',
         'name' => '大件会',
     ],
-    'rose' => [
-        'code' => 'flower',
-        'name' => 'ROSE',
+    'flower' => [
+        'code' => 'mflower',
+        'name' => 'FLOWER',
     ],
 ];
