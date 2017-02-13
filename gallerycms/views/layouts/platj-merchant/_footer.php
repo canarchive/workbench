@@ -60,7 +60,7 @@
     <div class="popWrap_sub" id="popWrap_sub"></div>
     <div class="popBox" id="popBox">
         <!--未登录提示 begin-->
-        <iframe id="hidLoginDiv" name="hidLoginDiv" style="display:none;" src="http://person.jmw.com.cn/iframeLogin.php?url=http://www.jmw.com.cn/xm137829/wangyoudianping/" width="634" scrolling="no" height="393" frameborder="0"></iframe>
+        <iframe id="hidLoginDiv" name="hidLoginDiv" style="display:none;" src="" width="634" scrolling="no" height="393" frameborder="0"></iframe>
         <!--未登录提示 end-->
         <!--关注状态 begin-->
         <div class="attState" id="hidAttentionDiv">
@@ -325,7 +325,7 @@
 <input type="hidden" name="domain_seat" id="domain_seat" value="8-5-" />
 <style>.footer a { margin: 0 10px; }</style>
 <!--底部 开始-->
-<?= $this->render('_footer-base'); ?>
+<?= $this->render('@gallerycms/views/platj/pc/_footer-base'); ?>
 <!--图片查看器容器-->
 <div id="box" style="display:none;"></div>
 <div id="showAlbumImgs"></div>

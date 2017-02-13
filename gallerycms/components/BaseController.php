@@ -37,7 +37,7 @@ class BaseController extends Controller
         $this->currentCityName = Yii::$app->params['currentCompany']['name'];
     }
 
-    protected function _initMerchant($page = 'index')
+    protected function _initMerchant($page = 'merchant-index')
     {
         $code = Yii::$app->request->get('mcode');
         if (empty($code)) {
