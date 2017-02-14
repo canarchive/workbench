@@ -1,14 +1,15 @@
 <!-- logo -->
 <div class="zong_logo wrap_mar clear">
-    <a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>">
-        <div class="logo_left zong_icon fl"></div>
+    <a href="http://jmw.com.cn" title="中国加盟网">
+        <div class="logo_left zong_icon fl">
+            <!-- <div id='mydiv'></div> --></div>
     </a>
-    <!--<div class='logo_leftMm'>
+    <div class='logo_leftMm'>
         <a href="" title="建材加盟" target="_self">
-            <h1 class='logo_leftMmTop'></h1></a>
-        <a href="" title="[]" target="_self">
-            <h1 class='logo_leftMmBottom'>[]</h1></a>
-    </div>-->
+            <h1 class='logo_leftMmTop'>建材加盟</h1></a>
+        <a href="" title="[建材加盟项目]" target="_self">
+            <h1 class='logo_leftMmBottom'>[建材加盟项目]</h1></a>
+    </div>
     <div class="logo_center fl">
         <div class="logo_find clear">
             <div class="logo_select f14 pr fl">行业
@@ -18,6 +19,62 @@
                         <a href="http://search.jmw.com.cn/i2/" title="美食加盟" target="_blank">美食</a></li>
                     <li>
                         <a href="http://search.jmw.com.cn/i11/" title="教育加盟" target="_blank">教育</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i13/" title="幼儿加盟" target="_blank">幼儿</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i1/" title="服装加盟" target="_blank">服装</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i4/" title="干洗加盟" target="_blank">干洗</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i3/" title="美容加盟" target="_blank">美容</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i147/" title="酒店加盟" target="_blank">酒店</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i24/" title="建材加盟" target="_blank">建材</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i17/" title="环保加盟" target="_blank">环保</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i16/" title="家居加盟" target="_blank">家居</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i23/" title="汽车加盟" target="_blank">汽车</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i211/" title="金融加盟" target="_blank">金融</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i21/" title="珠宝加盟" target="_blank">珠宝</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i7/" title="饰品加盟" target="_blank">饰品</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i5/" title="精品加盟" target="_blank">精品</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i232/" title="娱乐加盟" target="_blank">娱乐</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i196/" title="酒水加盟" target="_blank">酒水</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i15/" title="零售加盟" target="_blank">零售</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i22/" title="家纺加盟" target="_blank">家纺</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i234/" title="食品加盟" target="_blank">食品</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i230/" title="服务加盟" target="_blank">服务</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i233/" title="健身加盟" target="_blank">健身</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i223/" title="超市加盟" target="_blank">超市</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i245/" title="宠物店加盟" target="_blank">宠物店</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i19/" title="五金加盟" target="_blank">五金</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i235/" title="家电加盟" target="_blank">家电</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i236/" title="数码加盟" target="_blank">数码</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/" title="微商加盟" target="_blank">微商</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/i231/" title="新行业加盟" target="_blank">新行业</a></li>
+                    <li>
+                        <a href="http://search.jmw.com.cn/" title="众筹加盟" target="_blank">众筹</a></li>
                 </ul>
             </div>
             <input type="text" i="" name="keyword" value="" class="fl text fontW" id="keyword_fenci" onfocus="if(this.value==$(this).attr('i')){this.value='';}" onblur="if(this.value==''){this.value=$(this).attr('i');}" />

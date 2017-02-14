@@ -13,7 +13,7 @@ $this->params['jsStr'] = $this->render('platj-pic/_pic-js', []);
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/loginstatus.js"></script>
 <p class="clr"></p>
 <!--business-->
-<?php //echo $this->render('platj-pic/_pic-toplist'); ?>
+<?= $this->render('platj-pic/_pic-toplist'); ?>
 <div class="J-head-adver clearfix wrapper">
     <a title="能力风暴机器人加盟加盟" class="fl" ad_need_click="true" ad_id="460" href="http://search.jmw.com.cn/jmw_user/nlfb/" target="_blank">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5e2ae-4318.gif" width='270' height='60' /></a>
