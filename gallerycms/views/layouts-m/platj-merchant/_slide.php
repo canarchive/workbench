@@ -25,11 +25,11 @@
     <h1 style="position:absolute;bottom:22px;color:#fff;z-index:988;padding: 0 3%;">晨阳水漆加盟</h1>
     <a href="http://m.jmw.com.cn/xm137829/pinpaituku/" class="many_pic"><span>共48张</span></a>
 </div>
- <script>
-   //获得slider插件对象
-   var gallery = mui('.mui-slider');
-   gallery.slider({
-       interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
-   });
-   </script>
+<script>
+//获得slider插件对象
+var gallery = mui('.mui-slider');
+gallery.slider({
+    interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+});
+</script>
 <!--图片轮播 end--> 

@@ -12,7 +12,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['m', '3g', 'wap'],
         'data' => [
             'pattern' => '/sj-<mcode:\w+>', 
-            'route' => '/merchant/mobile-site/index', 
+            'route' => '/merchant/site/index', 
             'suffix' => '/'
         ],
     ],

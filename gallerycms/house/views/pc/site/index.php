@@ -35,6 +35,6 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <!-- 我们能为投资加盟提供什么? -->
 <?php echo $this->render('_ourservice'); ?>
 <!-- footer -->
-<?= $this->render('@gallerycms/views/platj/pc/_footer-base'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj/_footer-base'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/trade.js"></script>
 <div style="display:none;">欢迎访问<?= Yii::$app->params['siteName']; ?>!!!</div></body>
