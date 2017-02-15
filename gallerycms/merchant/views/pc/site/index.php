@@ -26,11 +26,11 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <!--加盟网LOGO+搜索框-->
 <?= $this->render('@gallerycms/views/layouts/platj/_logo'); ?>
 <!--导航-->
-<?= $this->render('@gallerycms/views/layouts/platj/_nav'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj-merchant/_nav'); ?>
 <!-----------PC公共短信验证 start-------------->
 <?= $this->render('@gallerycms/views/layouts/platj/_topvalid'); ?>
 <!--面包屑-->
-<?= $this->render('@gallerycms/views/layouts/platj/_breadnav'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj-merchant/_breadnav'); ?>
 <!--brand information-->
 <div class="brand wrapper">
     <div class="brand_title clearfix">

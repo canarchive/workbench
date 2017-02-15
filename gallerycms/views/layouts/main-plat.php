@@ -9,12 +9,12 @@ $this->params['jsStr'] = $this->render('platj-merchant/_js', []);
 <?php $this->beginContent('@gallerycms/views/main-pc.php'); ?>
 
 <!--head-->
-<div class="topToolbar" id="testDiv"></div>
+<?= $this->render('platj/_top'); ?>
 <input type="hidden" id="projectId" value="137829" />
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/loginstatus.js"></script>
 <p class="clr"></p>
 <!--行业列-->
-<?php echo $this->render('@gallerycms/views/layouts/platj/_toplist'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts/platj/_toplist'); ?>
 <!--广告图-->
 <div class="advertis clearfix wrapper">
     <a title="" class="fl" ad_need_click="true" ad_id="432" href="/" target="_blank">
@@ -27,13 +27,13 @@ $this->params['jsStr'] = $this->render('platj-merchant/_js', []);
 <!--加盟网LOGO+搜索框-->
 <?= $this->render('@gallerycms/views/layouts/platj/_logo'); ?>
 <!--导航-->
-<?= $this->render('@gallerycms/views/layouts/platj/_nav'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj-merchant/_nav'); ?>
 <!-----------PC公共短信验证 start-------------->
 <?= $this->render('@gallerycms/views/layouts/platj/_topvalid'); ?>
 <!--面包屑-->
-<?= $this->render('@gallerycms/views/layouts/platj/_breadnav'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj-merchant/_breadnav'); ?>
 <!--brand information-->
-<?= $this->render('@gallerycms/views/layouts/platj/_brandinfo'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj-merchant/_brandinfo'); ?>
 <!--在线咨询 屏幕中间 E-->
 <?= $this->render('@gallerycms/views/layouts/platj/_middlevalid'); ?>
 <!--content-->

@@ -12,7 +12,7 @@ class SiteController extends MerchantController
 
 	public function actionIndex()
 	{
-        $datas = $this->_initMerchant();
+        $this->mDatas = $datas = $this->_initMerchant();
 		$dataTdk = ['{{INFONAME}}' => $datas['info']['name']];
 		$this->getTdkInfos('merchant-index', $dataTdk);
         $qModel = new Quote();
@@ -28,7 +28,7 @@ class SiteController extends MerchantController
 
 	public function actionShow()
 	{
-        $datas = $this->_initMerchant('merchant-show');
+        $this->mDatas = $datas = $this->_initMerchant('merchant-show');
 		$dataTdk = ['{{INFONAME}}' => $datas['info']['name']];
 		$this->getTdkInfos('merchant-show', $dataTdk);
 

@@ -14,6 +14,7 @@ class BaseController extends Controller
     public $layout = '@gallerycms/views/main-pc';
     public $currentCityCode;
     public $currentCityName;
+    public $mDatas;
 
     public function init()
     {

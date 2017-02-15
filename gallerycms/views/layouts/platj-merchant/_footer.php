@@ -325,7 +325,7 @@
 <input type="hidden" name="domain_seat" id="domain_seat" value="8-5-" />
 <style>.footer a { margin: 0 10px; }</style>
 <!--底部 开始-->
-<?= $this->render('@gallerycms/views/platj/pc/_footer-base'); ?>
+<?= $this->render('@gallerycms/views/layouts/platj/_footer-base'); ?>
 <!--图片查看器容器-->
 <div id="box" style="display:none;"></div>
 <div id="showAlbumImgs"></div>

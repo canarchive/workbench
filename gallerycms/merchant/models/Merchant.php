@@ -168,7 +168,7 @@ class Merchant extends MerchantModel
 		$info['picture'] = $info->getAttachmentUrl($info['picture']);
 		//$info['companyInfo'] = Company::findOne(['code' => $info['city_code']])->toArray();
 		$domain = Yii::$app->params['baseDomain'];
-		$url = "http://{$info->city_code}.{$domain}/sj-{$info->id}.html";
+		$url = $info->getInfoUrl();//"http://{$info->city_code}.{$domain}/sj-{$info->id}.html";
 		$info['nameUrl'] = "<a href='{$url}' target='_blank'>{$info->name}</a>";
 		$info['score'] = empty($info['score']) ? 98 : $info['score'];
 
@@ -261,6 +261,13 @@ class Merchant extends MerchantModel
 	    Working::deleteAll("merchant_id = {$this->id}");
 	    MerchantComment::deleteAll("merchant_id = {$this->id}");
 	}
+
+    public function getInfoUrl()
+    {
+		$domain = Yii::$app->params['baseDomain'];
+		$url = "http://jz-{$this->code}.{$domain}/show.html";
+        return $url;
+    }
 
     public function getIndexInfos($where)
     {

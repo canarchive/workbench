@@ -8,7 +8,7 @@ $this->params['jsStr'] = $this->render('platj-pic/_pic-js', []);
 ?>
 <?php $this->beginContent('@gallerycms/views/main-pc.php'); ?>
 <!--head-->
-<?= $this->render('platj-pic/_pic-top'); ?>
+<?= $this->render('platj/_top'); ?>
 <input type="hidden" id="projectId" value="" />
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/loginstatus.js"></script>
 <p class="clr"></p>
