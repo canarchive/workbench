@@ -16,7 +16,7 @@ $info = $this->context->mDatas['info'];
     </div>
     <div class="home_right fr clearfix">
         <ul class="clearfix fl">
-            <li>实景案例：
+            <!--<li>实景案例：
                 <u><?= $info['num_realcase']; ?></u>个</li>
             <li><span></span></li>
             <li>直播工地：
@@ -27,7 +27,7 @@ $info = $this->context->mDatas['info'];
             <li><span></span></li>
             <li>服务业主数：
                 <u><?= $info['num_owner']; ?></u>个</li>
-            <li><span></span></li>
+            <li><span></span></li>-->
             <li>评论数：
                 <u><?= $info['num_comment']; ?></u>条</li>
             <li><span></span></li>
