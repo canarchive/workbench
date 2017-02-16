@@ -17,8 +17,16 @@ class Article extends GallerycmsModel
         return [
             [['name', 'category_id'], 'required'],
             [['orderlist', 'thumb', 'status'], 'default', 'value' => 0],
-			[['description', 'content', 'keywords', 'url', 'editor', 'copyfrom', 'template'], 'safe'],
+			[['description', 'content', 'tags', 'editor'], 'safe'],
         ];
+    }
+
+    public function behaviors()
+    {
+        $behaviors = [
+            $this->timestampBehaviorComponent,
+        ];
+        return $behaviors;
     }
 
     public function attributeLabels()
@@ -28,14 +36,11 @@ class Article extends GallerycmsModel
             'category_id' => '栏目ID',
             'name' => '标题',
             'thumb' => '缩略图',
-            'keywords' => '关键字',
+            'tags' => '关键字',
             'description' => '描述',
-            'url' => '访问地址',
             'orderlist' => '排序',
             'editor' => '编辑',
-            'copyfrom' => '来源',
             'content' => '内容',
-            'template' => '使用模板',
             'created_at' => '录入时间',
             'updated_at' => '更新时间',
             'status' => '状态',
@@ -110,7 +115,8 @@ class Article extends GallerycmsModel
         }
 
         foreach ($cDatas as $catdir => $info) {
-            $cDatas[$catdir]['subInfos'] = $this->getInfos([], 7);
+            //$cDatas[$catdir]['subInfos'] = $this->getInfos([], 7);
+            $cDatas[$catdir]['subInfos'] = array_splice($infos, 0, 7);//$this->getInfos([], 7);
             //$cDatas[$catdir]['subInfos'] = $this->getInfos(['category_id' => $info['id']], 7);
         }
 

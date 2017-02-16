@@ -5,10 +5,10 @@ $detailViewParams = [
     'model' => $model,
     'attributes' => [
 		'id',
-		[
+		/*[
 			'attribute' => 'category_id',
 			'value' => $model->categoryInfos[$model->category_id],
-		],
+        ],*/
 		[
 			'format' => 'raw',
 			'attribute' => 'thumb',
@@ -17,7 +17,7 @@ $detailViewParams = [
 		[
 			'format' => 'raw',
 			'attribute' => 'name',
-			'value' => '<a href="' . Yii::getAlias('@gallerycmsurl') . Url::to(['/site/show', 'id' => $model->id]) . '" target="_blank">' . $model->name . '</a>',
+			'value' => '<a href="' . Yii::getAlias('@gallerycmsurl') . '/info/' . $model['id'] . '.html' . '" target="_blank">' . $model->name . '</a>',
 		],
 		[
 			'attribute' => 'status',

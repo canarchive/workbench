@@ -33,7 +33,7 @@ $this->params['formPositionName'] = $view;
                         <li>媒介合作邮箱：<a href="mailto:co-medium@weinaya.com">co-medium@weinaya.com</a></li>
                         <div class="clear"></div>
                     </ul>
-                    <div class="map" id="mapContainer"></div>
+                    <!--<div class="map" id="mapContainer"></div>-->
                 </div>
             </div>
         </div>
