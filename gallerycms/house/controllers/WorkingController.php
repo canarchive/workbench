@@ -33,7 +33,7 @@ class WorkingController extends HouseController
         $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('realcase-index', $dataTdk);
+		$this->getTdkInfos('working-index', $dataTdk);
 		return $this->render('merchant', $datas);
     }
 

@@ -70,9 +70,9 @@ return [
 		'pc-url' => '/statement.html',
 		//'mobile-url' => '/info-aboutus.html',
     ],
-	'aboutus-question' => [
+	/*'aboutus-question' => [
 		'name' => '常见问题',
 		//'pc-url' => '/question.html',
 		'mobile-url' => '/question.html',
-    ],
+    ],*/
 ];

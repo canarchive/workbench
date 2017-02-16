@@ -29,7 +29,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'data' => [
             'suffix' => '/',
     		'pattern' => '/<city_code:\w+>/<mcode:\w+>/working/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
-    		'route'	=> '/house/working/index',
+    		'route'	=> '/house/working/merchant',
     		'defaults' => ['page' => 1, 'tag' => ''],
         ],
     ],

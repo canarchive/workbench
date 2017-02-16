@@ -6,6 +6,8 @@ use yii\helpers\Url;
 use yii\web\ForbiddenHttpException;
 use gallerycms\merchant\models\Merchant;
 use gallerycms\house\models\Friendlink;
+use gallerycms\house\models\AskQuestion;
+use gallerycms\house\models\Quote;
 
 class BaseController extends Controller
 {
@@ -51,6 +53,14 @@ class BaseController extends Controller
         if ($page != 'merchant-index') {
             $this->layout = '@gallerycms/views/layouts/main-plat';
         }
+        $qModel = new Quote();
+        $aModel = new AskQuestion();
+        $mModel = new Merchant();
+        $datas['quoteInfos'] = $qModel->getInfos([], 10);
+        $datas['askInfos'] = $aModel->getInfos([], 10);
+        $datas['merchantInfos'] = $mModel->getInfos([], 10);
+        $datas['merchantRelateInfos'] = $mModel->getInfos([], 10);
+        $this->mDatas = $datas;
 
         return $datas;
     }

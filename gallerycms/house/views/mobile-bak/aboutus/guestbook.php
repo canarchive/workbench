@@ -1,24 +1,24 @@
 <?php
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
-
-$cssFiles = ['aa3c7-7171'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
-$this->params['jsStr'] = $this->render('_js-header');
+$this->params['cssFiles'] = [
+    'askbase-m-feedback',
+];
+$this->params['jsFiles'] = [
+    'askbase-m-jquery.min', 'askbase-m-componentsh5',
+];
 ?>
-
-<?php echo $this->render('@gallerycms/views/layouts-m/plat8/_header'); ?>
 <!--body onselectstart="return false" -->
 <style type="text/css">.rslides { position: relative; list-style: none; overflow: hidden; width: 100%; padding: 0; margin: 0; } .rslides li { -webkit-backface-visibility: hidden; position: absolute; display: none; width: 100%; left: 0; top: 0; } .rslides li:first-child { position: relative; display: block; float: left; } .rslides img { display: block; height: auto; float: left; width: 100%; border: 0; }</style>
 <div class="ad-top">
     <ul class="rslides">
         <li>
             <a href="/index/sem/from/201">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/be20c-5915.png" width="320px" /></a>
+                <img src="//img.to8to.com/wap/ad-index-sem.png?v=222" width="320px" /></a>
         </li>
         <li>
             <a href="javascript:;" onclick="m_to8to.download('zxgj')">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/eab11-8537.jpg" width="320px" /></a>
+                <img src="//img.to8to.com/wap/ad-index-city-top.jpg" width="320px" /></a>
         </li>
     </ul>
 </div>
@@ -28,12 +28,12 @@ $this->params['jsStr'] = $this->render('_js-header');
         });
     });</script>
 <div class="header">
-    <a href="/nj">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/0558b-4654.png" class="logo-img" width="56"></a>
+    <a href="/sz">
+        <img src="//img.to8to.com/wap/logo.png" class="logo-img" width="56"></a>
     <span class="logo-node"></span>
     <span class="logo-name">互联网装修领导者</span>
     <a href="/city/index">
-        <span class="city">南京</span></a>
+        <span class="city">深圳</span></a>
 </div>
 <div class="search">
     <input type="text" name="searchwords" value="搜索装修疑难，如：装修费用" onfocus="searchFocus()" onblur="searchBlur()" class="search-box" onkeydown="toSearch(this)">
@@ -109,7 +109,7 @@ $this->params['jsStr'] = $this->render('_js-header');
         }
         return false;
     }</script>
-<form action="/feedback/post/city/nj" method="post">
+<form action="/feedback/post/city/sz" method="post">
     <h3>选择意见</h3>
     <div class="feedback_select">
         <select name="select_val">
@@ -161,33 +161,33 @@ $this->params['jsStr'] = $this->render('_js-header');
 </div>
 <div class="nav_arrow_box">
     <div class="nav_box">
-        <a class="nav_box_line" href="/nj">
+        <a class="nav_box_line" href="/sz">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/c4f77-6180.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-index-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">首页</div></a>
         <a class="nav_box_line" href="/xiaoguotu/">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/8003a-3852.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-xiaoguotu-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">效果图</div></a>
-        <a class="nav_box_line" href="/nj/company/">
+        <a class="nav_box_line" href="/sz/company/">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/64fe8-7935.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-company-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">找公司</div></a>
-        <a class="nav_box_line" href="/nj/zb/index2.html">
+        <a class="nav_box_line" href="/sz/zb/index2.html">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/dbc4a-8372.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-zb-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">申请免费设计</div></a>
         <a class="nav_box_line" href="/company/zxb.php#point=2_3_1_2">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/2abd7-3103.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-zxb-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">装修保障</div></a>
         <a class="nav_box_line" href="/yezhu/zxlc.html">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/f5144-4374.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-zxzs-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">学装修</div></a>
         <a class="nav_box_line" href="tel:4006900288">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/6037d-3329.png" height="18px" /></div>
+                <img src="//img.to8to.com/wap/nav-sem-small-icon.png" height="18px" /></div>
             <div class="nav_box_line_txt">400电话咨询</div></a>
     </div>
 </div>
@@ -244,9 +244,88 @@ $this->params['jsStr'] = $this->render('_js-header');
         var url = '/about/feedback.php';
         window.location.href = url;
     }</script>
-<?= $this->render('_footer-js'); ?>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/common.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/seostatis.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
+<script>(function() {
+        /**
+         * 输入状态下隐藏导航栏
+         */
+        function initInputSelectFocus() {
+            var dom_arr = document.querySelectorAll('input[type="text"]');
+            var sel_arr = document.querySelectorAll('select');
+            var txt_arr = document.querySelectorAll('textarea');
+            var dom_len = dom_arr.length;
+            var sel_len = sel_arr.length;
+            var txt_len = txt_arr.length;
+            if (sel_len > 0) {
+                for (var i = 0; i < sel_len; i++) {
+                    var _i = dom_len + i;
+                    dom_arr[_i] = sel_arr[i];
+                }
+                dom_len += sel_len;
+            }
+            if (txt_len > 0) {
+                for (var i = 0; i < txt_len; i++) {
+                    var _i = dom_len + i;
+                    dom_arr[_i] = txt_arr[i];
+                }
+                dom_len += txt_len;
+            }
+            if (dom_len > 0) {
+                var fix_dom = document.querySelector('.footer-fix');
+                var screen_dom = document.querySelector('.screen');
+                for (var i = 0; i < dom_len; i++) {
+                    if (!dom_arr[i]) {
+                        continue;
+                    }
+                    dom_arr[i].addEventListener('focus',
+                    function() {
+                        fix_dom && fix_dom.style && (fix_dom.style.display = 'none');
+                        if (screen_dom) {
+                            screen_dom.style.display = 'none';
+                        }
+                    },
+                    false);
+                    dom_arr[i].addEventListener('blur',
+                    function() {
+                        fix_dom && fix_dom.style && (fix_dom.style.display = 'block');
+                    },
+                    false);
+                }
+            }
+        }
+        initInputSelectFocus();
+    })();</script>
+<script>var browser = {
+        versions: function() {
+            var u = navigator.userAgent,
+            app = navigator.appVersion;
+            return { //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1,
+                //IE内核
+                presto: u.indexOf('Presto') > -1,
+                //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1,
+                //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+                //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/),
+                //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1,
+                //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1,
+                //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        } ()
+    };
+    if (browser.versions.iPad) {
+        $('head').find('meta[name=viewport]').attr('content', 'initial-scale=1.0,user-scalable=no,maximum-scale=1');
+    }</script>
+<script type="text/javascript" src="//static.to8to.com/wap//js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="//static.to8to.com/wap//js/common.min.js"></script>
+<script type="text/javascript" src="//static.to8to.com/wap//js/seoStatis.min.js"></script>
+<script type="text/javascript" src="//static.to8to.com/count/2a19dc2ac1471a7470fe7187a5537960_2.js?v=201612291631"></script>
+<script type="text/javascript" src="//static.to8to.com/wap//js/v2/h5AppDownload_sourcecharge.min.js?v=201611181238"></script>

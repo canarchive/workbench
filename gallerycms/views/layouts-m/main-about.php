@@ -1,9 +1,8 @@
 <?php
 use yii\helpers\Url;
 
-$this->params['bodyClass'] = 'class="narrow_980"';
 ?>
-<?php $this->beginContent('@gallerycms/views/main-pc.php'); ?>
+<?php $this->beginContent('@gallerycms/views/main-mobile.php'); ?>
 <?= $content; ?>
 <script>
 var browser = {
@@ -37,5 +36,4 @@ if (browser.versions.iPad) {
     $('head').find('meta[name=viewport]').attr('content', 'initial-scale=1.0,user-scalable=no,maximum-scale=1');
 }
 </script>
-<?= $this->render('@gallerycms/house/views/mobile/_footer-to'); ?>
 <?php $this->endContent(); ?>
