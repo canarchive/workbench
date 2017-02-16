@@ -50,8 +50,12 @@ class BaseController extends Controller
         if (empty($datas)) {
             throw new ForbiddenHttpException('信息不存在');
         }
-        if ($page != 'merchant-index') {
-            $this->layout = '@gallerycms/views/layouts/main-plat';
+        if ($this->isMobile) {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            if ($page != 'merchant-index') {
+                $this->layout = '@gallerycms/views/layouts/main-plat';
+            }
         }
         $qModel = new Quote();
         $aModel = new AskQuestion();

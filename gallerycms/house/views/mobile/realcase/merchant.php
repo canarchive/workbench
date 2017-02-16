@@ -1,131 +1,30 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<?php
+use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 
-<head>
-<meta charset="UTF-8">
-<title>【晨阳水漆】晨阳水漆加盟怎么样_如何加盟晨阳水漆_晨阳水漆加盟介绍- 中国加盟网手机端</title>
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta name="keywords" content="晨阳水漆加盟项目介绍，晨阳水漆加盟流程，晨阳水漆企业介绍，晨阳水漆加盟产品，怎么加盟晨阳水漆，如何加盟晨阳水漆 " />
-<meta name="description" content="手机中国加盟网为您提供真实的晨阳水漆加盟项目的详细介绍，指导您如何加盟晨阳水漆，告诉您晨阳水漆加盟怎么样，帮您整理晨阳水漆加盟流程，展示晨阳水漆加盟的优势，中国加盟网手机端帮您选择加盟项目,助您创业成功!" />
-<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/95055-5881.css" />
-<link rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/35df6-9609.css" />
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/getattentioncountbyajax.js"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/public.js" type="text/javascript"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/platj_util.js" type="text/javascript"></script>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/addpageview.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/js/tongji.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/tongji_m.js"></script>
-</head>
-<script>function goBack() {
-    javascript: history.back();
-}</script>
-
-<body>
-<!-- app下载 start -->
-<!--<div class="top_header clear">
-<a href="javascript:;" class="close" onclick="$('.top_header').hide();">
-<font>×</font></a>
-<span></span>
-<div class="text"><p style="color:#f95e00;line-height: 28px; margin-left:1.2rem;">下载中国加盟网APP</p></div>
-<a href="javaScript:;"  class="wy_download" id="downLoad" onClick="func()"><i></i>下载客户端</a></div>-->
-<div class="top-header">
-    <a class="close fl" onclick="$('.top-header').hide();"></a>
-    <img class="top-log fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6f271-8932.png">
-    <ul class="top-wenzi fl">
-        <li style="font-size: 0.75em;color:#333;line-height: 1.2rem;">下载中国加盟网APP</li>
-        <li style="font-size: 0.625em;color:#c7c7c7;">随时随地轻松找项目</li></ul>
-    <a href="javaScript:;" class="top-download fr" id="downLoad" onClick="func()">马上下载</a></div>
-<!-- app下载 end -->
-<script type="text/javascript">function func() {
-        var u = navigator.userAgent,
-        app = navigator.appVersion;
-        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-        if (isAndroid == true) {
-            document.getElementById("downLoad").href = "http://m.jmw.com.cn/app/android/中国加盟网.apk";
-        } else if (isiOS == true) {
-            document.getElementById("downLoad").href = "https://appsto.re/cn/ukd68.i";
-        } else {
-            alert("请在手机端下载app");
-        }
-    }</script>
-<style>.top-header{height:35px;width: 94%;padding: 10px 3%;background: #ffffff;position: relative;} .top-header .close{display:block;margin-right: 9px; height:14px;width: 14px;margin-top: 10px;background: url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0ac58-3198.png") no-repeat;background-size: 100%;} .top-header .top-log{width: 36px;height: 36px;margin-right: 6px;} .top-header .top-download{display: block; background: #E44B46;color: #ffffff;width: 70px;height: 23px;border-radius: 10px;text-align: center;line-height: 22px;margin-top: 7px;font-size: 0.75em;}</style>
-<!-- <section class="download">
-<a href="javaScript:;"  style="float:none; display:inline-block;" id="downLoad" onClick="func()">
-中国加盟网
-<strong style="font-weight:bold;">APP</strong>
-下载
-<i></i>
-</a>
-</section>
-<script type="text/javascript">
-function func(){
-var u = navigator.userAgent, app = navigator.appVersion;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-if  (isAndroid == true){
-document.getElementById("downLoad").href="http://m.jmw.com.cn/app/android/中国加盟网.apk";
-}else if (isiOS == true){
-document.getElementById("downLoad").href="https://appsto.re/cn/ukd68.i";
-}else{
-alert("请在手机端下载app");
-}
-}
-</script>  
-<style>
-.download {
-background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/cdcc1-5344.png") repeat-x scroll 0 0;
-height: 25px;
-padding-top: 5px;
-text-align: center;
-width: 100%;
-}
-.download a {
-background: #ffd800 none repeat scroll 0 0;
-border-radius: 12px;
-box-shadow: 0 2px 0 0 #a75625;
-color: #e44b46;
-cursor: pointer;
-font-size: 0.75em;
-height: 20px;
-line-height: 20px;
-margin-right: 3%;
-overflow: hidden;
-padding: 0 28px 0 10px;
-position: relative;
-}
-.download a i {
-background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9597c-6592.png") no-repeat scroll 0 0 / 13px 13px;
-display: block;
-height: 13px;
-position: absolute;
-right: 9px;
-top: 2px;
-width: 13px;
-z-index: 10;
-}
-</style>-->
-<!-- app下载 -->
+$cssFiles = ['95055-5881', '35df6-9609', 'c3a8c-8745'];
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'platj/m']);
+$this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_js-header-1');
+?>
+<?php echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <header class="b_header">
     <div class="wrap">
         <div class="fl header_1">
             <a href="javascript:;" onclick="goBack()" title="" class="icon icon1"></a>
         </div>
-        <h2 style="width:86%;text-align:center;float:left;font-size:1.2rem;color:#fff;">晨阳水漆项目介绍</h2>
+        <h2 style="width:86%;text-align:center;float:left;font-size:1.2rem;color:#fff;">晨阳水漆品牌图库</h2>
         <div class="fr header_2">
-            <!-- <a href="" title="" class="icon icon3"></a> -->
             <a href="http://m.jmw.com.cn/seek.php" title="" class="icon icon2"></a>
         </div>
     </div>
 </header>
-<!-- 官网 -->
+<!-- 晨阳水漆官网 -->
 <section class="guanWang2">
     <dl class="clear">
         <dt class="fl">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" alt="" /></dt>
+            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" alt="晨阳水漆加盟" title="晨阳水漆加盟" /></dt>
         <dd class="fl">
-            <h2>晨阳水漆项目介绍</h2>
+            <h2>晨阳水漆品牌图库</h2>
             <p>
                 <a href="http://m.jmw.com.cn" title="中国加盟网">中国加盟网</a>
                 <i>></i>
@@ -135,118 +34,247 @@ z-index: 10;
                 <i>></i>
                 <a href="http://m.jmw.com.cn/xm137829/" title="晨阳水漆">晨阳水漆</a>
                 <i>></i>
-                <a href="" title="晨阳水漆项目介绍">晨阳水漆项目介绍</a></p>
+                <a href="http://m.jmw.com.cn/xm137829/pinpaituku/" title="晨阳水漆品牌图库">晨阳水漆品牌图库</a></p>
         </dd>
     </dl>
 </section>
-<!-- 项目介绍 -->
-<section class="introduce" style="line-height:20px">
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;晨阳水漆加盟简介
-                    <br />
-                    <br />河北
-                    <a href="http://www.jmw.com.cn/xm137829/" target="_blank">
-                        <span style="background-color: rgb(255, 240, 245);">晨阳</span></a>工贸集团有限公司乃集水漆生产、电子商务、家政保洁、建材贸易及工程施工为一体的现代化集团公司，地处京津石经济金三角腹地徐水晨阳大街，占地面积15万平米，总资产数十亿元。晨阳集团年产具有国际领先水平的各种环保节能水性漆12.5万吨，是全国全水漆生产企业，是国家863计划&ldquo;风电叶片防护涂料&rdquo;项目承担者，是河北省重点企业、地方财政的支柱性企业，河北省&ldquo;三年大变样&rdquo;重点工程推广示范单位，国家&ldquo;既有建筑节能改造&rdquo;工程示范单位，是全国唯一水性涂料院士工作站承建单位，河北省企业技术中心及河北省水性涂料工程技术研究中心依托单位，与北京化工大学联合建立水性涂料&ldquo;院士工作站&rdquo;，是中国推行水性化涂装的发起人。</span>
-            </span>
-        </span>
-    </p>
-    <p>&nbsp;</p>
-    <p style="text-align: center;">
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">
-                    <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/9ec98-5416.jpg" /></span>
-            </span>
-        </span>
-        <br />&nbsp;</p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">公司主要产品有：水性建筑漆、&ldquo;漆伴侣&rdquo;（高档腻子）、水性工业漆、水性木器漆、水性柳编漆、水性树脂等几大系列上百个品种。产品通过中国环境标志产品认证、中国船级社认证、欧盟SGS、德国TUV环保检测认证、CCCF中国消防产品质量认证、CTC中国建材认证等。公司通过ISO9001国际质量管理体系认证、GB/T28001职业健康安全管理体系认证。</span></span>
-        </span>
-        <br />&nbsp;</p>
-    <p>
-        <span style="font-family: 宋体;">
-            <span style="color: rgb(0, 0, 0);">
-                <span style=";">
-                    <a href="http://www.jmw.com.cn/xm137829/" target="_blank">
-                        <span style="background-color: rgb(255, 240, 245);">水漆系列</span></a>产品以水为稀释剂，无毒无味，不燃不爆，并且具有节约能源、杜绝污染、降低有害排放等特点，是国家十二&middot;五规划中重点支持和鼓励类产业。水漆取代油漆是人类生存需要、科学技术发展的必然趋势。产品市场覆盖机械制造、五金家电、汽车行业、建筑行业、家具家居及铸造、桥梁、船舶、集装箱、铁路等应用领域。我公司拥有发明专利30余项，产品技术居于国际领先水平。</span>
-            </span>
-        </span>
-    </p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">&nbsp;</span></span>
-        </span>
-    </p>
-    <p style="text-align: center;">
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">
-                    <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8ae9b-5595.jpg" /></span>
-            </span>
-        </span>
-    </p>
-    <p>
-        <br />
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">晨阳集团热心支持社会公益事业，多次参加国内各项公益活动，捐资助教，扶贫助学，是河北省和谐企业的典范和代表。
-                    <br />
-                    <br />
-                    <a href="http://www.jmw.com.cn/xm137829/" target="_blank">
-                        <span style="background-color: rgb(255, 240, 245);">晨阳</span></a>集团的企业宗旨是引领中国涂装行业、优化地球生态环境、保护人类身心健康。晨阳人，期待与您携手，共同发展，共同担当起振兴民族水漆未来的大业，为改善、建立并保持一个宜居的生态环境，为人类的健康繁衍生生不息而努力。</span>
-            </span>
-        </span>
-    </p>
-    <p>
-        <br />
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">
-                    <strong>招商基本条件：</strong></span>
-            </span>
-        </span>
-    </p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">1、经销商应具有强烈的创业精神，并有在水性漆行业发展的强烈愿望与拓展热情；</span></span>
-        </span>
-    </p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">2、经销商须认同&quot;
-                    <a href="http://www.jmw.com.cn/xm137829/" target="_blank">
-                        <span style="background-color: rgb(255, 240, 245);">晨阳</span></a>&quot;品牌的发展理念和市场运营模式，面对自己的区域市场，应用清晰的规划目标与发展策略；</span>
-            </span>
-        </span>
-    </p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">3、经销商需有固定、合法的经营场所，并能提供该营业场所的使用权证明及有效地营业执照；</span></span>
-        </span>
-    </p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">4、经销商应有一支高效的团队专门负责此项目的运营，营业场所的面积应能满足经营规格的需要；</span></span>
-        </span>
-    </p>
-    <p>
-        <span style="color: rgb(0, 0, 0);">
-            <span style=";">
-                <span style="font-family: 宋体;">5、经销商须具备相应的销售经验及投资实力。</span></span>
-        </span>
-        <br />&nbsp;</p></section>
+<!-- 图库 start-->
+<div id="thumbs">
+    <section class="picture_sect">
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" alt="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/4634b-4708.jpg" alt="晨阳水漆加盟 晨阳   然采丝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/004c6-4388.jpg" alt="晨阳水漆加盟 晨阳   然采丽   水性内墙漆" title="晨阳水漆加盟 晨阳   然采加   水性内墙底漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/29be4-6543.jpg" alt="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/d0559-9249.jpg" alt="晨阳水漆加盟 晨阳    然采贝   水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7d5b7-1645.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/7d5b7-1645.jpg" alt="晨阳水漆加盟 晨阳    天然净味抗碱底漆    水性内墙漆" title="晨阳水漆加盟 晨阳   然采尼   水性内墙漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae8d3-3278.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ae8d3-3278.jpg" alt="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a09f-9807.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/8a09f-9807.jpg" alt="晨阳水漆加盟 晨阳   天然净味抗甲醛   水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12b86-5439.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/12b86-5439.jpg" alt="晨阳水漆加盟 晨阳   天然净味荷 叶  水性内墙漆" title="晨阳水漆加盟 晨阳   天然净味竹炭   水性内墙漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee63a-3128.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ee63a-3128.jpg" alt="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2be98-4293.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2be98-4293.jpg" alt="晨阳水漆加盟 晨阳  居美加  水性内墙底漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5bbd8-9815.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5bbd8-9815.jpg" alt="晨阳水漆加盟 晨阳  居美仕  水性内墙漆" title="晨阳水漆加盟 晨阳  天然净味防霉  水性内墙漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35cf0-8630.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/35cf0-8630.jpg" alt="晨阳水漆加盟 晨阳   居美清   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/778c7-6383.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/778c7-6383.jpg" alt="晨阳水漆加盟 晨阳   居美净   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72c23-3918.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/72c23-3918.jpg" alt="晨阳水漆加盟 晨阳   居美易   水性内墙漆" title="晨阳水漆加盟 晨阳   居美清   水性内墙漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1d533-3965.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/1d533-3965.jpg" alt="晨阳水漆加盟 晨阳  水性地坪底漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2d1b3-3867.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/2d1b3-3867.jpg" alt="晨阳水漆加盟 晨阳  水性地坪面漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de9fa-1503.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/de9fa-1503.jpg" alt="晨阳水漆加盟 晨阳   水性罩光工业漆" title="晨阳水漆加盟 晨阳  水性地坪底漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac18e-8966.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/ac18e-8966.jpg" alt="晨阳水漆加盟 晨阳   水性银粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47995-6687.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/47995-6687.jpg" alt="晨阳水漆加盟 晨阳  水性金粉工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c9fb9-5650.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c9fb9-5650.jpg" alt="晨阳水漆加盟 晨阳   水性调和漆工业漆" title="晨阳水漆加盟 晨阳   水性银粉工业漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2159e-5106.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2159e-5106.jpg" alt="晨阳水漆加盟 晨阳   水性磁漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7e24c-1899.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/7e24c-1899.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构工业漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1c3f8-1531.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/1c3f8-1531.jpg" alt="晨阳水漆加盟 晨阳  水性钢结构专用漆" title="晨阳水漆加盟 晨阳   水性磁漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/346f7-4715.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/346f7-4715.jpg" alt="晨阳水漆加盟 晨阳  水性装饰工业漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8d158-8404.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8d158-8404.jpg" alt="晨阳水漆加盟 晨阳   水性高级外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/077f2-2612.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/077f2-2612.jpg" alt="晨阳水漆加盟 晨阳   碧丽团   水性外墙漆" title="晨阳水漆加盟 晨阳  水性装饰工业漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b745b-8341.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b745b-8341.jpg" alt="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/151a8-8495.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/151a8-8495.jpg" alt="晨阳水漆加盟 晨阳   碧丽阳   水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8321a-5349.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8321a-5349.jpg" alt="晨阳水漆加盟 晨阳  碧丽晨  水性外墙漆" title="晨阳水漆加盟 晨阳   碧丽吉    水性外墙漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/900fe-8241.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/900fe-8241.jpg" alt="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aee56-7403.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aee56-7403.jpg" alt="晨阳水漆加盟 晨阳   欧得若   水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8e1aa-8654.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/8e1aa-8654.jpg" alt="晨阳水漆加盟 晨阳   清晨之源  水性多功能漆" title="晨阳水漆加盟 晨阳  碧丽宝  水性外墙漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/47e6a-8084.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/47e6a-8084.jpg" alt="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/093fa-4006.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/093fa-4006.jpg" alt="晨阳水漆加盟 晨阳  海之吻  水性多功能漆" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3fdf7-1433.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3fdf7-1433.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用  擦色宝" title="晨阳水漆加盟 晨阳   水性聚氨酯  多功能漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3207d-3312.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3207d-3312.jpg" alt="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9008-2992.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9008-2992.jpg" alt="晨阳水漆加盟 晨阳   水性木器漆专用腻子" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b0ac2-8557.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b0ac2-8557.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣2代  水性木器漆" title="晨阳水漆加盟 晨阳  格丽斯  水性木器漆专用" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ea752-8364.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ea752-8364.jpg" alt="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b6ed0-7478.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b6ed0-7478.jpg" alt="晨阳水漆加盟 晨阳沐雅文   水性木器封闭底漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e071c-1603.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e071c-1603.jpg" alt="晨阳水漆加盟 防腐漆" title="晨阳水漆加盟 晨阳  沐雅欣  水性木器漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ec89-7791.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ec89-7791.jpg" alt="晨阳水漆加盟 防锈漆" title="晨阳水漆加盟 防锈漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/961a1-3558.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/961a1-3558.jpg" alt="晨阳水漆加盟 沐雅欣" title="晨阳水漆加盟 防锈漆" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/28680-9550.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/28680-9550.jpg" alt="晨阳水漆加盟 沐雅静" title="晨阳水漆加盟 防锈漆" /></a>
+            </li>
+        </ul>
+        <ul class="clear">
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5740a-9622.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5740a-9622.jpg" alt="晨阳水漆加盟 碧丽吉" title="晨阳水漆加盟 碧丽吉" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3482e-4568.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/3482e-4568.jpg" alt="晨阳水漆加盟 居美仕中档" title="晨阳水漆加盟 碧丽吉" /></a>
+            </li>
+            <li>
+                <a href="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a31b-7372.jpg">
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/3a31b-7372.jpg" alt="晨阳水漆加盟 居美仕" title="晨阳水漆加盟 碧丽吉" /></a>
+            </li>
+        </ul>
+    </section>
+</div>
+<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/touchtouch.jquery.js"></script>
+<script>$(function() {
+        $('#thumbs a').touchTouch();
+    });</script>
+<!-- 图库 end-->
 <!--在线咨询列表 start-->
 <!--在线咨询列表 end-->
-<!-- 我要咨询加盟项目 -->
+<!--我要咨询项目 start-->
 <div class="zaixianzixun ziXun">
     <div class="wen_p clear">
         <div class="fl" style="border-bottom:none; color:#e44b46;line-height:50px;">
@@ -452,37 +480,38 @@ z-index: 10;
 
     }</script>
 <style>.icon_sex5{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
-<!-- 相关信息项目 -->
+<!--我要咨询项目 end-->
+<!-- 晨阳水漆相关信息项目 -->
+<!-- 廖排骨相关信息项目 -->
 <section class="ziXun">
     <h2 class="wrap">晨阳水漆相关项目信息</h2>
     <div class="xiangMu_ul wrap clear">
         <ul class="fl">
             <li>
-                <a href="http://m.jmw.com.cn/xm137829/jiamengfeiyong/" title="晨阳水漆项目费用">晨阳...项目费用</a></li>
+                <a href="http://m.jmw.com.cn/xm137829/xiangmujieshao/" title="晨阳水漆项目介绍">晨阳...项目介绍</a></li>
             <li>
-                <a href="http://m.jmw.com.cn/xm137829/liuyan/" title="晨阳水漆在线咨询">晨阳...在线咨询</a></li>
+                <a href="http://m.jmw.com.cn/xm137829/jiamengfeiyong/ " title="晨阳水漆加盟费用">晨阳...加盟费用</a></li>
             <li>
-                <a href="http://m.jmw.com.cn/xm137829/" title="晨阳水漆官方网站">晨阳...官方网站</a></li>
+                <a href="http://m.jmw.com.cn/xm137829/youshizhichi/" title="晨阳水漆加盟优势">晨阳...加盟优势</a></li>
         </ul>
         <ul class="fl" style="margin-left:5%;">
             <li>
-                <a href="http://m.jmw.com.cn/xm137829/youshizhichi/" title="晨阳水漆加盟优势">晨阳...加盟优势</a></li>
+                <a href="http://m.jmw.com.cn/xm137829/jiamengdian/" title="晨阳水漆加盟店铺">晨阳...加盟店铺</a></li>
+            <li>
+                <a href="http://m.jmw.com.cn/xm137829/liuyan/" title="晨阳水漆在线咨询">晨阳...在线咨询</a></li>
             <li>
                 <a href="http://m.jmw.com.cn/xm137829/wangyoudianping/" title="晨阳水漆网友点评">晨阳...网友点评</a></li>
-            <li>
-                <a href="http://m.jmw.com.cn/xm137829/pinpaituku/" title="晨阳水漆品牌图库">晨阳...品牌图库</a></li>
         </ul>
         <ul class="fr">
             <li>
-                <a href="http://m.jmw.com.cn/xm137829/jiamengdian/" title="晨阳水漆加盟店铺">晨阳...加盟店铺</a></li>
-            <li>
                 <a href="http://m.jmw.com.cn/xm137829/zixun/" title="晨阳水漆加盟资讯">晨阳...加盟资讯</a></li>
+            <li>
+                <a href="http://m.jmw.com.cn/xm137829/" title="晨阳水漆官方网站">晨阳...官方网站</a></li>
             <li>
                 <a href="http://m.jmw.com.cn/xm137829/bbs/" title="晨阳水漆创业问答">晨阳...创业问答</a></li>
         </ul>
     </div>
 </section>
-<!-- footer -->
 <!-----留言次数限制 start------>
 <!-----留言次数限制 end------>
 <!-- 项目页底部定位 start -->

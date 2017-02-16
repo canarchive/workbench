@@ -8,18 +8,18 @@
         <meta name="applicable-device" content="mobile">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="apple-touch-icon-precomposed" href="//img.to8to.com/wap/v2/iphone_to8to.png" />
-        <link rel="canonical" href="http://xiaoguotu.to8to.com/c10043626.html" />
-        <link rel="stylesheet" type="text/css" href="//static.to8to.com/css/wap/v2/common.min.css?v=201611211048" />
-        <link rel="stylesheet" type="text/css" href="//static.to8to.com/assets/wap//common/widgets/provincesSelect/provincesSelect.css" />
-        <link rel="stylesheet" type="text/css" href="//static.to8to.com/css/wap/xgt_detail.css?20161124" />
-        <link rel="stylesheet" type="text/css" href="//static.to8to.com/assets/wap//common/widgets/compricePop/compricePop.css" />
-        <script type="text/javascript" src="/assets/a7921300/jquery.min.js"></script>
-        <script type="text/javascript" src="//static.to8to.com/assets/wap//common/libs/componentsh5.js?v=201611190948"></script>
-        <script type="text/javascript" src="//static.to8to.com/assets/wap//common/libs/componentsh5.js?v=201612291631"></script>
-        <title>简约风格温馨格调二居室欣赏图_土巴兔装修效果图</title>
-        <meta name="keywords" content="简约风格温馨格调二居室欣赏图,简约风格温馨格调二居室欣赏图设计,简约风格温馨格调二居室欣赏图装修图片,简约风格温馨格调二居室欣赏图整套装修案例">
-        <meta name="description" content="整套装修案例专区，提供2016年国内外最新流行的成套简约风格温馨格调二居室欣赏图_土巴兔装修效果图，每日更新高达数百套简约风格温馨格调二居室欣赏图_土巴兔装修效果图经典设计案例， 值得一看哦！">
+        <link rel="apple-touch-icon-precomposed" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/a5e18-1039.png" />
+        <link rel="canonical" href="http://xiaoguotu.to8to.com/c10042454.html" />
+        <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/9c07e-2206.css" />
+        <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/3fb14-5999.css" />
+        <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/d7d65-1939.css" />
+        <link rel="stylesheet" type="text/css" href="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/css/d5893-1579.css" />
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/jquery.min.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/componentsh5.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/componentsh5.js"></script>
+        <title>欧式精致奢华二居室装修效果图_土巴兔装修效果图</title>
+        <meta name="keywords" content="欧式精致奢华二居室装修效果图,欧式精致奢华二居室装修效果图设计,欧式精致奢华二居室装修效果图装修图片,欧式精致奢华二居室装修效果图整套装修案例">
+        <meta name="description" content="整套装修案例专区，提供2016年国内外最新流行的成套欧式精致奢华二居室装修效果图_土巴兔装修效果图，每日更新高达数百套欧式精致奢华二居室装修效果图_土巴兔装修效果图经典设计案例， 值得一看哦！">
         <meta name="baidu-tc-cerfication" content="9274856d02c844acb72208b513f468ff" />
         <script>var _hmt = _hmt || []; (function() {
                 var hm = document.createElement("script");
@@ -43,7 +43,7 @@
     
     <body>
         <!--body onselectstart="return false" -->
-        <style>.bodymargintop{ margin-top:44px; } #dt-hd.navstyle2{ padding: 0; position: fixed; z-index: 39; width: 100%; top: 0; } .icon-tbt { background: url('//img.to8to.com/wap/icon-se174a62dfa.png') no-repeat; background-size: 187.5px 1087px; background-position: -128px -1068px; display: inline-block; height: 21px; width: 62px; margin-top: 11px; margin-left: 27px; } .back-home-page a b { vertical-align: 5px; display: inline-block; padding-left: 4px; font-size:14px; } #back { width: 10px; height: 10px; border-top: 2px solid #7c7c7c; border-left: 2px solid #7c7c7c; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); display: block; position: absolute; left: 15px; top: 16px; z-index: 10; } .navigation{ height:34px!important; background-position: -60px -296px!important; top: 7px!important; } .dn{ display: none; } #dt-hd-nav .dn{ display:none; } .loadapp-dt-hd{ position:relative; top:3px; z-index:10; width: 60px; height: 36px; } .loadapp-dt-hd .loadapp-text{ position:absolute; left:6px; z-index:2; width: 60px; height: 36px; } .loadapp-dt-hd .loadapp-icon{ position:relative; float:right; background-color: #fff; z-index:3; width: 62px; height: 25px; } .loadapp-dt-hd .loadapp-text p{ font-size:12px; line-height:12px; color:#5ACC9A; text-align:center; } .loadapp-dt-hd .loadapp-icon em{ display: block; width: 21px; height: 25px; background:url(//img.to8to.com/wap/v2/icon-se174a62dfa.png?20161116) no-repeat -92.5px -300px; background-size:187.5px 1087px; }</style>
+        <style>.bodymargintop{ margin-top:44px; } #dt-hd.navstyle2{ padding: 0; position: fixed; z-index: 39; width: 100%; top: 0; } .icon-tbt { background: url('http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/10d63-8906.png') no-repeat; background-size: 187.5px 1087px; background-position: -128px -1068px; display: inline-block; height: 21px; width: 62px; margin-top: 11px; margin-left: 27px; } .back-home-page a b { vertical-align: 5px; display: inline-block; padding-left: 4px; font-size:14px; } #back { width: 10px; height: 10px; border-top: 2px solid #7c7c7c; border-left: 2px solid #7c7c7c; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); display: block; position: absolute; left: 15px; top: 16px; z-index: 10; } .navigation{ height:34px!important; background-position: -60px -296px!important; top: 7px!important; } .dn{ display: none; } #dt-hd-nav .dn{ display:none; } .loadapp-dt-hd{ position:relative; top:3px; z-index:10; width: 60px; height: 36px; } .loadapp-dt-hd .loadapp-text{ position:absolute; left:6px; z-index:2; width: 60px; height: 36px; } .loadapp-dt-hd .loadapp-icon{ position:relative; float:right; background-color: #fff; z-index:3; width: 62px; height: 25px; } .loadapp-dt-hd .loadapp-text p{ font-size:12px; line-height:12px; color:#5ACC9A; text-align:center; } .loadapp-dt-hd .loadapp-icon em{ display: block; width: 21px; height: 25px; background:url(http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/3503c-7033.png) no-repeat -92.5px -300px; background-size:187.5px 1087px; }</style>
         <!-- 0级 -->
         <!--二级-->
         <!--效果图详情页-->
@@ -62,7 +62,7 @@
                         'success': function(data) {
                             if (data) {
                                 if (document.getElementById("rebackUrl")) {
-                                    var rebackUrl = "";
+                                    var rebackUrl = "/xiaoguotu/tuce/?xgt=xgt";
                                     if (rebackUrl == '') {
                                         var rebackUrl = (data.rebackUrl != undefined) ? data.rebackUrl: '/xiaoguotu';
                                     }
@@ -232,7 +232,7 @@
                     }
                 }
             });</script>
-        <style>.login-heads-frame span{display:none} .shade-layer{ position: fixed; left: 0px; top: 0px; z-index: 99; text-align: center; bottom: 0px; right: 0px; display: block; background-color: rgba(0, 0, 0, 0.543); } .shade-xg-bg{ background: url(http://img.to8to.com/wap/v2/xgt/aaa.png) no-repeat; z-index: 999; display: inline-block; width: 240px; height: 154px; position: absolute; background-size: 239px 154px; left: 50%; bottom: 71px; margin-left: -120px; } .shade-xg-bg map area{ width: 114px; height: 32px; display: block; position: absolute; top: 78px; right: 25px; border-radius: 5px; } .overlay-btn-ok em{ position: absolute; display: block; width: 36px; height: 36px; bottom: -1px; left: 45%; background: url("http://img.to8to.com/wap/v2/icon-se174a62dfa.png?20161119") no-repeat -262px -504px; }</style>
+        <style>.login-heads-frame span{display:none} .shade-layer{ position: fixed; left: 0px; top: 0px; z-index: 99; text-align: center; bottom: 0px; right: 0px; display: block; background-color: rgba(0, 0, 0, 0.543); } .shade-xg-bg{ background: url(http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/3595f-5768.png) no-repeat; z-index: 999; display: inline-block; width: 240px; height: 154px; position: absolute; background-size: 239px 154px; left: 50%; bottom: 71px; margin-left: -120px; } .shade-xg-bg map area{ width: 114px; height: 32px; display: block; position: absolute; top: 78px; right: 25px; border-radius: 5px; } .overlay-btn-ok em{ position: absolute; display: block; width: 36px; height: 36px; bottom: -1px; left: 45%; background: url("http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/3503c-7033.png") no-repeat -262px -504px; }</style>
         <section id="xgtDetailPage">
             <section class="xgt-detail-wrap">
                 <div class="swiper-container">
@@ -258,7 +258,7 @@
             <div class="xgt-save-notice-img-box">
                 <div class="xgt-save-notice-txt">长按图片可以进行保存哦</div>
                 <div class="xgt-save-notice-img">
-                    <img src="//img.to8to.com/wap/xgt-detail-finger.png" width="34px" /></div>
+                    <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/542aa-7953.png" width="34px" /></div>
             </div>
             <!--<section class="app-ad">
             <div class="app-ad-wrap">
@@ -318,7 +318,7 @@
                     var imgVisibleSrc = $('.swiper-slide-active').find('img').attr('src'),
                     thistext = $('.atag').find('a').eq(1).text(),
                     common = Components.simplepop(),
-                    poploadstr = '<div class="pop-mainbody">' + '<div class="pop-body-img">' + '<img src="' + imgVisibleSrc + '" alt="">' + '</div>' + '<div class="pop-body-text">' + '<img src="http://img.to8to.com/wap/v2/pop_backimg.png?20161119">' + '<p>——已妥妥给你准备更多——</p>' + '<p class="pop-huxing"><span>' + thistext + '</span>美图</p>' + '</div>' + '<a class="pop-button" href="/apps?mxgtdi=2_2_10_1212&mxgtda=2_2_10_1213">' + '<p>马上打开土巴兔APP</p>' + '<em></em>' + '</a>' + '</div>';
+                    poploadstr = '<div class="pop-mainbody">' + '<div class="pop-body-img">' + '<img src="' + imgVisibleSrc + '" alt="">' + '</div>' + '<div class="pop-body-text">' + '<img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/09518-8933.png">' + '<p>——已妥妥给你准备更多——</p>' + '<p class="pop-huxing"><span>' + thistext + '</span>美图</p>' + '</div>' + '<a class="pop-button" href="/apps?mxgtdi=2_2_10_1212&mxgtda=2_2_10_1213">' + '<p>马上打开土巴兔APP</p>' + '<em></em>' + '</a>' + '</div>';
                     common();
                     // 曝光弹窗
                     (typeof clickStream !== 'undefined') && clickStream.getCvParams('2_2_10_1210');
@@ -384,155 +384,155 @@
                     }
                 });
             })()</script>
-        <script src="http://static.to8to.com/gb_js/to8torsas.js?v=1473407210"></script>
-        <script src="http://static.to8to.com/gb_js/h5/zbcommon.js"></script>
+        <script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/js/plat8rsas.js"></script>
+        <script src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/zbcommon.js"></script>
         <div style="display:none">
-            <img src='http://pic.to8to.com/case/1701/15/20170115_da3cabd9b86a5dcef4e5ipr3apezb9hl.jpg' alt='简约风格温馨格调二居室欣赏图' />
-            <img src='http://pic.to8to.com/case/1701/15/20170115_9cf93809aca5a858d8a7dzn07jcmr6jz.jpg' alt='简约风格温馨格调阳台欣赏图' />
-            <img src='http://pic.to8to.com/case/1701/15/20170115_d8824e87089f22da3e21pm19tlol5fd2.jpg' alt='简约风格温馨格调卧室欣赏图' />
-            <img src='http://pic.to8to.com/case/1701/15/20170115_733599e7feeb2aa1d571r8rht42emvwi.jpg' alt='简约风格温馨格调厨房欣赏图' />
-            <img src='http://pic.to8to.com/case/1701/15/20170115_f5deb78b51c973d3de8578nutxddd3fn.jpg' alt='简约风格温馨格调小卧室欣赏图' />
-            <img src='http://pic.to8to.com/case/1701/15/20170115_d666c785b9da765d501fffjh14ks8c6r.jpg' alt='简约风格温馨格调楼梯欣赏图' /></div>
+            <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/5aaf0-1267.jpg' alt='欧式精致奢华二居室装修效果图' />
+            <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/1aef6-8466.jpg' alt='欧式精致奢华卧室装修效果图' />
+            <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/37d4d-8972.jpg' alt='欧式精致奢华餐厅装修效果图' />
+            <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/aac84-9748.jpg' alt='欧式精致奢华电视背景墙装修效果图' />
+            <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/336f2-1586.jpg' alt='欧式精致奢华过道装修效果图' />
+            <img src='http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/ceb38-4961.jpg' alt='欧式精致奢华客厅设计效果图' /></div>
         <script>var param = {
                 'detail_data': [{
-                    "pid": "606115",
+                    "pid": "566645",
                     "hxid": "2",
-                    "styleid": "13",
+                    "styleid": "2",
                     "zoneid": "14",
                     "partid": "0",
-                    "oldcid": "10043626",
-                    "oldaid": "10545907",
-                    "filename": "http:\/\/pic.to8to.com\/case\/1701\/15\/20170115_da3cabd9b86a5dcef4e5ipr3apezb9hl.jpg",
+                    "oldcid": "10042454",
+                    "oldaid": "10506520",
+                    "filename": "http:\/\/pic.to8to.com\/case\/1611\/01\/20161101_68691369da65cbd8dd12d5va7rvns1b7.jpg",
                     "issmall": "1",
                     "caseid": "0",
-                    "title": "\u7b80\u7ea6\u98ce\u683c\u6e29\u99a8\u683c\u8c03\u4e8c\u5c45\u5ba4\u6b23\u8d4f\u56fe",
+                    "title": "\u6b27\u5f0f\u7cbe\u81f4\u5962\u534e\u4e8c\u5c45\u5ba4\u88c5\u4fee\u6548\u679c\u56fe",
                     "source": "0",
-                    "width": "1280",
-                    "height": "960",
-                    "edittime": "1484465100",
-                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1701\/15\/20170115_da3cabd9b86a5dcef4e5ipr3apezb9hl_r.jpg",
-                    "size": [100, 75],
-                    "style": "\u7b80\u7ea6",
+                    "width": "860",
+                    "height": "690",
+                    "edittime": "1477979400",
+                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1611\/01\/20161101_68691369da65cbd8dd12d5va7rvns1b7_r.jpg",
+                    "size": [100, 80],
+                    "style": "\u6b27\u5f0f",
                     "huxi": "\u4e8c\u5c45",
                     "part": -1,
                     "zone": -1
                 },
                 {
-                    "pid": "606113",
+                    "pid": "566642",
                     "hxid": "0",
-                    "styleid": "13",
-                    "zoneid": "6",
+                    "styleid": "2",
+                    "zoneid": "2",
                     "partid": "0",
-                    "oldcid": "10043626",
-                    "oldaid": "10545905",
-                    "filename": "http:\/\/pic.to8to.com\/case\/1701\/15\/20170115_9cf93809aca5a858d8a7dzn07jcmr6jz.jpg",
+                    "oldcid": "10042454",
+                    "oldaid": "10506517",
+                    "filename": "http:\/\/pic.to8to.com\/case\/1611\/01\/20161101_c3373d21d3ced586acf5cz59guogbzjj.jpg",
+                    "issmall": "1",
+                    "caseid": "566641",
+                    "title": "\u6b27\u5f0f\u7cbe\u81f4\u5962\u534e\u5367\u5ba4\u88c5\u4fee\u6548\u679c\u56fe",
+                    "source": "0",
+                    "width": "859",
+                    "height": "690",
+                    "edittime": "1477979400",
+                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1611\/01\/20161101_c3373d21d3ced586acf5cz59guogbzjj_r.jpg",
+                    "size": [100, 80],
+                    "style": "\u6b27\u5f0f",
+                    "huxi": -1,
+                    "part": -1,
+                    "zone": "\u5367\u5ba4"
+                },
+                {
+                    "pid": "566643",
+                    "hxid": "0",
+                    "styleid": "2",
+                    "zoneid": "3",
+                    "partid": "0",
+                    "oldcid": "10042454",
+                    "oldaid": "10506518",
+                    "filename": "http:\/\/pic.to8to.com\/case\/1611\/01\/20161101_d775810e4e766b8698690kcsfg6wwx6r.jpg",
+                    "issmall": "1",
+                    "caseid": "566641",
+                    "title": "\u6b27\u5f0f\u7cbe\u81f4\u5962\u534e\u9910\u5385\u88c5\u4fee\u6548\u679c\u56fe",
+                    "source": "0",
+                    "width": "544",
+                    "height": "690",
+                    "edittime": "1477979400",
+                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1611\/01\/20161101_d775810e4e766b8698690kcsfg6wwx6r_r.jpg",
+                    "size": [100, 126],
+                    "style": "\u6b27\u5f0f",
+                    "huxi": -1,
+                    "part": -1,
+                    "zone": "\u9910\u5385"
+                },
+                {
+                    "pid": "566644",
+                    "hxid": "0",
+                    "styleid": "2",
+                    "zoneid": "14",
+                    "partid": "336",
+                    "oldcid": "10042454",
+                    "oldaid": "10506519",
+                    "filename": "http:\/\/pic.to8to.com\/case\/1611\/01\/20161101_8e748549710e5a417ea7ocegqo7y4xek.jpg",
+                    "issmall": "1",
+                    "caseid": "566641",
+                    "title": "\u6b27\u5f0f\u7cbe\u81f4\u5962\u534e\u7535\u89c6\u80cc\u666f\u5899\u88c5\u4fee\u6548\u679c\u56fe",
+                    "source": "0",
+                    "width": "867",
+                    "height": "690",
+                    "edittime": "1477979400",
+                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1611\/01\/20161101_8e748549710e5a417ea7ocegqo7y4xek_r.jpg",
+                    "size": [100, 79],
+                    "style": "\u6b27\u5f0f",
+                    "huxi": -1,
+                    "part": "\u80cc\u666f\u5899",
+                    "zone": -1
+                },
+                {
+                    "pid": "566641",
+                    "hxid": "0",
+                    "styleid": "2",
+                    "zoneid": "9",
+                    "partid": "0",
+                    "oldcid": "10042454",
+                    "oldaid": "10506516",
+                    "filename": "http:\/\/pic.to8to.com\/case\/1611\/01\/20161101_a47a9769b543378c7a48o08ndfs0bvqi.jpg",
                     "issmall": "1",
                     "caseid": "1",
-                    "title": "\u7b80\u7ea6\u98ce\u683c\u6e29\u99a8\u683c\u8c03\u9633\u53f0\u6b23\u8d4f\u56fe",
+                    "title": "\u6b27\u5f0f\u7cbe\u81f4\u5962\u534e\u8fc7\u9053\u88c5\u4fee\u6548\u679c\u56fe",
                     "source": "0",
-                    "width": "1900",
-                    "height": "1267",
-                    "edittime": "1484465100",
-                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1701\/15\/20170115_9cf93809aca5a858d8a7dzn07jcmr6jz_r.jpg",
-                    "size": [100, 66],
-                    "style": "\u7b80\u7ea6",
+                    "width": "861",
+                    "height": "690",
+                    "edittime": "1477979400",
+                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1611\/01\/20161101_a47a9769b543378c7a48o08ndfs0bvqi_r.jpg",
+                    "size": [100, 80],
+                    "style": "\u6b27\u5f0f",
                     "huxi": -1,
                     "part": -1,
-                    "zone": "\u9633\u53f0"
+                    "zone": "\u8fc7\u9053"
                 },
                 {
-                    "pid": "606114",
+                    "pid": "566646",
                     "hxid": "0",
-                    "styleid": "13",
-                    "zoneid": "2",
+                    "styleid": "2",
+                    "zoneid": "1",
                     "partid": "0",
-                    "oldcid": "10043626",
-                    "oldaid": "10545906",
-                    "filename": "http:\/\/pic.to8to.com\/case\/1701\/15\/20170115_d8824e87089f22da3e21pm19tlol5fd2.jpg",
+                    "oldcid": "10042454",
+                    "oldaid": "10506521",
+                    "filename": "http:\/\/pic.to8to.com\/case\/1611\/01\/20161101_27efccb08042137998cfgkw8ty1qh1mp.jpg",
                     "issmall": "1",
-                    "caseid": "606113",
-                    "title": "\u7b80\u7ea6\u98ce\u683c\u6e29\u99a8\u683c\u8c03\u5367\u5ba4\u6b23\u8d4f\u56fe",
+                    "caseid": "566641",
+                    "title": "\u6b27\u5f0f\u7cbe\u81f4\u5962\u534e\u5ba2\u5385\u8bbe\u8ba1\u6548\u679c\u56fe",
                     "source": "0",
-                    "width": "1800",
-                    "height": "1201",
-                    "edittime": "1484465154",
-                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1701\/15\/20170115_d8824e87089f22da3e21pm19tlol5fd2_r.jpg",
-                    "size": [100, 66],
-                    "style": "\u7b80\u7ea6",
+                    "width": "874",
+                    "height": "690",
+                    "edittime": "1477979400",
+                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1611\/01\/20161101_27efccb08042137998cfgkw8ty1qh1mp_r.jpg",
+                    "size": [100, 78],
+                    "style": "\u6b27\u5f0f",
                     "huxi": -1,
                     "part": -1,
-                    "zone": "\u5367\u5ba4"
-                },
-                {
-                    "pid": "606116",
-                    "hxid": "0",
-                    "styleid": "13",
-                    "zoneid": "4",
-                    "partid": "0",
-                    "oldcid": "10043626",
-                    "oldaid": "10545908",
-                    "filename": "http:\/\/pic.to8to.com\/case\/1701\/15\/20170115_733599e7feeb2aa1d571r8rht42emvwi.jpg",
-                    "issmall": "1",
-                    "caseid": "606113",
-                    "title": "\u7b80\u7ea6\u98ce\u683c\u6e29\u99a8\u683c\u8c03\u53a8\u623f\u6b23\u8d4f\u56fe",
-                    "source": "0",
-                    "width": "1280",
-                    "height": "960",
-                    "edittime": "1484465100",
-                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1701\/15\/20170115_733599e7feeb2aa1d571r8rht42emvwi_r.jpg",
-                    "size": [100, 75],
-                    "style": "\u7b80\u7ea6",
-                    "huxi": -1,
-                    "part": -1,
-                    "zone": "\u53a8\u623f"
-                },
-                {
-                    "pid": "606117",
-                    "hxid": "0",
-                    "styleid": "13",
-                    "zoneid": "2",
-                    "partid": "0",
-                    "oldcid": "10043626",
-                    "oldaid": "10545909",
-                    "filename": "http:\/\/pic.to8to.com\/case\/1701\/15\/20170115_f5deb78b51c973d3de8578nutxddd3fn.jpg",
-                    "issmall": "1",
-                    "caseid": "606113",
-                    "title": "\u7b80\u7ea6\u98ce\u683c\u6e29\u99a8\u683c\u8c03\u5c0f\u5367\u5ba4\u6b23\u8d4f\u56fe",
-                    "source": "0",
-                    "width": "1280",
-                    "height": "960",
-                    "edittime": "1484465100",
-                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1701\/15\/20170115_f5deb78b51c973d3de8578nutxddd3fn_r.jpg",
-                    "size": [100, 75],
-                    "style": "\u7b80\u7ea6",
-                    "huxi": -1,
-                    "part": -1,
-                    "zone": "\u5367\u5ba4"
-                },
-                {
-                    "pid": "606118",
-                    "hxid": "0",
-                    "styleid": "13",
-                    "zoneid": "14",
-                    "partid": "18",
-                    "oldcid": "10043626",
-                    "oldaid": "10545910",
-                    "filename": "http:\/\/pic.to8to.com\/case\/1701\/15\/20170115_d666c785b9da765d501fffjh14ks8c6r.jpg",
-                    "issmall": "1",
-                    "caseid": "606113",
-                    "title": "\u7b80\u7ea6\u98ce\u683c\u6e29\u99a8\u683c\u8c03\u697c\u68af\u6b23\u8d4f\u56fe",
-                    "source": "0",
-                    "width": "1280",
-                    "height": "960",
-                    "edittime": "1484465100",
-                    "thumb": "http:\/\/pic.to8to.com\/smallcase\/1701\/15\/20170115_d666c785b9da765d501fffjh14ks8c6r_r.jpg",
-                    "size": [100, 75],
-                    "style": "\u7b80\u7ea6",
-                    "huxi": -1,
-                    "part": "\u697c\u68af",
-                    "zone": -1
+                    "zone": "\u5ba2\u5385"
                 }],
-                'dataurl': '/xiaoguotu/getDetailData-3-13-0',
+                'dataurl': '/xiaoguotu/getDetailData-0-0-0',
                 'data_type': 'c'
             };
             if (location.hash == "#from=app") {
@@ -618,13 +618,13 @@
             if (browser.versions.iPad) {
                 $('head').find('meta[name=viewport]').attr('content', 'initial-scale=1.0,user-scalable=no,maximum-scale=1');
             }</script>
-        <script type="text/javascript" src="//static.to8to.com/assets/wap//common/widgets/provincesSelect/provincesSelect.js?v=20161019"></script>
-        <script type="text/javascript" src="//static.to8to.com/assets/wap//common/widgets/compricePop/compricePop.js?v=20161108"></script>
-        <script type="text/javascript" src="//static.to8to.com/wap//js/v2/xgtdetail-list.min.js?v=20161119"></script>
-        <script type="text/javascript" src="//static.to8to.com/wap//js/common.min.js?v=201612291631"></script>
-        <script type="text/javascript" src="//static.to8to.com/wap//js/seoStatis.min.js"></script>
-        <script type="text/javascript" src="//static.to8to.com/count/2a19dc2ac1471a7470fe7187a5537960_2.js?v=201612291631"></script>
-        <script type="text/javascript" src="//static.to8to.com/wap//js/v2/h5AppDownload_sourcecharge.min.js?v=201611181238"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/provincesselect.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/compricepop.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/xgtdetail-list.min.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/common.min.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/seostatis.min.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
+        <script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
     </body>
 
 </html>

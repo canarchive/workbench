@@ -11,7 +11,12 @@ class RealcaseController extends HouseController
 {
 	public function actionIndex()
 	{
-        $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        if ($this->isMobile) {
+            //$this->layout = false;//'@gallerycms/views/layouts/main-plat-pic';
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        }
         $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
         $datas = $this->_getInfos($where);
 
