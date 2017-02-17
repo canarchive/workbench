@@ -7,3 +7,6 @@
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/mui.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/tongji.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/tongji_m.js"></script>
+<script>function goBack() {
+    javascript: history.back();
+}</script>
