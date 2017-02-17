@@ -158,7 +158,8 @@ function message_check_code(obj) {
             }
         });
     }
-} (function(m, ei, q, i, a, j, s) {
+} 
+(function(m, ei, q, i, a, j, s) {
     m[a] = m[a] ||
     function() { (m[a].a = m[a].a || []).push(arguments)
     };
