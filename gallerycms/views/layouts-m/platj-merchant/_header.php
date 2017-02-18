@@ -14,7 +14,7 @@
 <section class="guanWang2">
     <dl class="clear">
         <dt class="fl">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f3dc5-2512.jpg" alt="" /></dt>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f3dc5-2512.jpg" alt="" /></dt>
         <dd class="fl">
             <h2>晨阳水漆项目介绍</h2>
             <p>

@@ -1,4 +1,4 @@
-<link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/235a4-6274.css">
+<link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/235a4-6274.css">
 <div class="Pline_consult" id="Pline_Message" style="display:none;">
     <script>function Auto_trigger() {
             var curCount = 60;
@@ -129,7 +129,7 @@
     }</script>
 <?php echo $this->render('_check'); ?>
 <a class="returntop" href="#top" style="display: none;">
-    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41560-7162.png"></a>
+    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
 <script>$(document).scroll(function() {
         var top = $(document).scrollTop();
         if (top == 0) {

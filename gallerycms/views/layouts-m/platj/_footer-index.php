@@ -1,5 +1,5 @@
 <!-- 首页底部 start -->
-<link type="text/css" rel="stylesheet" href="http://60.205.145.0/filesys/spider/pages/asset/platj/m/css/be233-6823.css">
+<link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/be233-6823.css">
 <div class="copyright">
     <p class="copy-1">
         <a href="http://m.jmw.com.cn/">回到首页</a>
@@ -15,7 +15,7 @@
         <i>
         </i>
         <a style="width:56px; height:12px;" href="javascript:;" onclick="gotoPC()">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/97186-8985.png"></a>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/97186-8985.png"></a>
         <script>function gotoPC() {
                 window.location.href = 'http://pc.jc.jmw.com.cn';
             }</script>

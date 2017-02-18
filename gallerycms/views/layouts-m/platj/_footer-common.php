@@ -5,7 +5,7 @@
         $('#MCeng_fromurl_1').val(MCeng_fromurl);
     });</script>
 <script>var is_login = "unlogin";</script>
-<style>.zp_icon{background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/a9b13-8560.png') no-repeat;display:inline-block;background-size:100px 100px;vertical-align:middle;} .zp_icon1{ background-position:-26px 0; width:16px; height:16px; } .zp_icon2{ background-position:-27px -24px; width:16px; height:16px; } .zp_icon3{ background-position:-27px -48px; width:18px; height:16px; } .zp_icon4{ background-position:-27px -84px; width:16px; height:16px; } .fixed_footer .doing{color:#e7625d;} .fixed_footer a.doing .zp_icon1{background-position:0 0;width:16px;height:16px;} .fixed_footer a.doing .zp_icon2{background-position:0 -24px;width:16px;height:16px;} .fixed_footer a.doing .zp_icon3{background-position:0 -48px;width:18px;height:16px;} .fixed_footer a.doing .zp_icon4{background-position:0 -84px;width:16px;height:16px;} .fixed_footer{ width:100%; height:49px; } .fixed_footer a{ width:25%; height:49px; float:left; text-align:center; font-size:0.75rem; display:block; color:#999; } .fixed_footer a i{ margin:8px auto 5px;} .more_box{ width:110px; border:1px solid #e0e1e5; border-radius:3px; position:absolute; right:10px; bottom:49px; background:#fff; display:none; } .more_box a{ display:block; height:40px; line-height:40px; border-bottom:1px solid #e0e1e5; color:#999999; font-size:0.75rem; padding-left:15px; } .more_box span{ display:block; width:11px; height:6px; position:absolute; right:25px; bottom:-6px; z-index:1000; } .more_box a i{ display:block; width:16px; height:16px; margin-top:12px; float:left; margin-right:8px; } .more_box .li2 i{ height:17px; } .gray_mask{ background:rgba(0,0,0,.7); position:fixed; top:0; left:0; width:100%; height:100%; z-index:990; display:none; } .fixed_service{ width:75%; position:absolute; right:12.5%; bottom:60px; z-index:996; display:none; } .fixed_service .p_top{ height:30px; } .fixed_service .p_top span{ display:inline-block; width:14px; height:14px; float:right; margin-top:8px; } .fixed_service .fixed_sanJiao{ display:block; width:15px; height:8px; position:absolute; right:31%; bottom:-5px; } .fixed_service2{ border-radius:6px; background:#fff; border:1px solid #e0e1e5; } .fixed_service2 .ul1{ width:87%; margin:auto; padding:10px 0 0px 0; font-size:0.75rem; } .fixed_service2 .ul1 li{ padding:14px 8px; border:1px solid #b9b9b9; border-radius:5px; position:relative; margin-bottom:10px; line-height:20px; } .fixed_service2 .ul1 li span{ display:block; width:6px; height:10px; } .fixed_service2 .ul1 .li1{ background:#fa9895; color:#fff; } .fixed_service2 .ul1 .li2{ background:#fff; } .fixed_service2 .ul1 .li1 .span1{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul1 .li2 .span2{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul2{ background:#f8f8f8; padding:15px 6.5% 0px; border-radius:6px; } .fixed_service2 .ul2 li{ line-height:30px; margin-bottom:10px; } .fixed_service2 .ul2 span{ width:16%; font-size:0.8rem; float:left; } .fixed_service2 .ul2 input{ color:#cecece;height:30px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; padding-left:6px; box-sizing:border-box; } .fixed_service2 .ul2 textarea{ height:60px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; color:#cecece; padding:10px 7px; box-sizing:border-box; } .fixed_service2 .ul2 .button{background: #e44b46; height: 32px; border: none;color: #fff;margin-left: 16%; width: 83%;display: block;border-radius: 3px;text-align: center;line-height: 30px;} .p_jmw{ line-height:90px; color:#e3e3e3; text-align:center;}</style>
+<style>.zp_icon{background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a9b13-8560.png') no-repeat;display:inline-block;background-size:100px 100px;vertical-align:middle;} .zp_icon1{ background-position:-26px 0; width:16px; height:16px; } .zp_icon2{ background-position:-27px -24px; width:16px; height:16px; } .zp_icon3{ background-position:-27px -48px; width:18px; height:16px; } .zp_icon4{ background-position:-27px -84px; width:16px; height:16px; } .fixed_footer .doing{color:#e7625d;} .fixed_footer a.doing .zp_icon1{background-position:0 0;width:16px;height:16px;} .fixed_footer a.doing .zp_icon2{background-position:0 -24px;width:16px;height:16px;} .fixed_footer a.doing .zp_icon3{background-position:0 -48px;width:18px;height:16px;} .fixed_footer a.doing .zp_icon4{background-position:0 -84px;width:16px;height:16px;} .fixed_footer{ width:100%; height:49px; } .fixed_footer a{ width:25%; height:49px; float:left; text-align:center; font-size:0.75rem; display:block; color:#999; } .fixed_footer a i{ margin:8px auto 5px;} .more_box{ width:110px; border:1px solid #e0e1e5; border-radius:3px; position:absolute; right:10px; bottom:49px; background:#fff; display:none; } .more_box a{ display:block; height:40px; line-height:40px; border-bottom:1px solid #e0e1e5; color:#999999; font-size:0.75rem; padding-left:15px; } .more_box span{ display:block; width:11px; height:6px; position:absolute; right:25px; bottom:-6px; z-index:1000; } .more_box a i{ display:block; width:16px; height:16px; margin-top:12px; float:left; margin-right:8px; } .more_box .li2 i{ height:17px; } .gray_mask{ background:rgba(0,0,0,.7); position:fixed; top:0; left:0; width:100%; height:100%; z-index:990; display:none; } .fixed_service{ width:75%; position:absolute; right:12.5%; bottom:60px; z-index:996; display:none; } .fixed_service .p_top{ height:30px; } .fixed_service .p_top span{ display:inline-block; width:14px; height:14px; float:right; margin-top:8px; } .fixed_service .fixed_sanJiao{ display:block; width:15px; height:8px; position:absolute; right:31%; bottom:-5px; } .fixed_service2{ border-radius:6px; background:#fff; border:1px solid #e0e1e5; } .fixed_service2 .ul1{ width:87%; margin:auto; padding:10px 0 0px 0; font-size:0.75rem; } .fixed_service2 .ul1 li{ padding:14px 8px; border:1px solid #b9b9b9; border-radius:5px; position:relative; margin-bottom:10px; line-height:20px; } .fixed_service2 .ul1 li span{ display:block; width:6px; height:10px; } .fixed_service2 .ul1 .li1{ background:#fa9895; color:#fff; } .fixed_service2 .ul1 .li2{ background:#fff; } .fixed_service2 .ul1 .li1 .span1{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul1 .li2 .span2{ position:absolute; left:-6px; top:12px; } .fixed_service2 .ul2{ background:#f8f8f8; padding:15px 6.5% 0px; border-radius:6px; } .fixed_service2 .ul2 li{ line-height:30px; margin-bottom:10px; } .fixed_service2 .ul2 span{ width:16%; font-size:0.8rem; float:left; } .fixed_service2 .ul2 input{ color:#cecece;height:30px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; padding-left:6px; box-sizing:border-box; } .fixed_service2 .ul2 textarea{ height:60px; width:83%; float:left; border-radius:3px; border:1px solid #b9b9b9; color:#cecece; padding:10px 7px; box-sizing:border-box; } .fixed_service2 .ul2 .button{background: #e44b46; height: 32px; border: none;color: #fff;margin-left: 16%; width: 83%;display: block;border-radius: 3px;text-align: center;line-height: 30px;} .p_jmw{ line-height:90px; color:#e3e3e3; text-align:center;}</style>
 <div class="gray_mask"></div>
 <div style="width:100%; height:49px; border-top:1px solid #e0e1e5; background:#fff; position:fixed; bottom:0; left:0; z-index:999;">
     <div class="fixed_footer clear">
@@ -25,35 +25,35 @@
     <div class="more_box" id="more_box">
         <a href="http://bbs.jmw.com.cn/" class="li1">
             <i>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5061c-8123.png" alt="" /></i>论坛</a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5061c-8123.png" alt="" /></i>论坛</a>
         <a href="http://m.jmw.com.cn/usercenter/footprint.php" class="li2">
             <i>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/edf77-6051.png" alt="" /></i>足迹</a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/edf77-6051.png" alt="" /></i>足迹</a>
         <a href="http://m.jmw.com.cn/usercenter/grzx.php" class="li3" style="border-bottom:none;">
             <i>
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bce2b-5485.png" alt="" /></i>个人中心</a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bce2b-5485.png" alt="" /></i>个人中心</a>
         <span>
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fb6dd-1992.png" alt="" /></span>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fb6dd-1992.png" alt="" /></span>
     </div>
     <!-- 客服论坛 -->
     <div class="fixed_service" id="fixed_service">
         <form action="" method="post" id="m_footer">
             <p class="clear p_top" id="fixedp_top">
                 <span>
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d1c4a-6203.png" alt="" /></span>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d1c4a-6203.png" alt="" /></span>
             </p>
             <div class="fixed_service2">
                 <ul class="ul1">
                     <li class="li1">
                         <p>您好,欢迎光临中国加盟网</p>
                         <span class="span1">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/266e0-2266.png" alt="" /></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/266e0-2266.png" alt="" /></span>
                     </li>
                     <li class="li2">
                         <p>请问有什么需要咨询的？</p>
                         <p>您可以先留下联系方式，我们稍后会联系您。</p>
                         <span class="span2">
-                            <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/6b222-5826.png" alt="" /></span>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6b222-5826.png" alt="" /></span>
                     </li>
                 </ul>
                 <ul class="ul2">
@@ -76,7 +76,7 @@
             <input type="hidden" name="MFoot_fromurl" id="MCeng_fromurl_1" />
             <input type="hidden" name="message_num" id="message_num_m" value="1" />
             <span class="fixed_sanJiao">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/2e025-6056.png" alt="" /></span>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/2e025-6056.png" alt="" /></span>
         </form>
     </div>
 </div>

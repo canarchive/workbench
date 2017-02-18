@@ -5,7 +5,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6562900/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d801b-7524.jpg" title="室美伦加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d801b-7524.jpg" title="室美伦加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6562900" />已申请加盟:
@@ -52,7 +52,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6589649/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/da670-7504.jpg" title="空间美贝壳粉生态涂料加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/da670-7504.jpg" title="空间美贝壳粉生态涂料加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6589649" />已申请加盟:
@@ -99,7 +99,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm158545/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/09426-2080.jpg" title="舒鑫e家加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/09426-2080.jpg" title="舒鑫e家加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="158545" />已申请加盟:
@@ -146,7 +146,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm137829/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/b0c59-2746.jpg" title="晨阳水漆加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0c59-2746.jpg" title="晨阳水漆加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="137829" />已申请加盟:
@@ -192,7 +192,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6572154/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/5d427-9238.jpg" title="欧克斯门窗加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5d427-9238.jpg" title="欧克斯门窗加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6572154" />已申请加盟:
@@ -239,7 +239,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm58277/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0a3ba-4625.jpg" title="德尔地板加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0a3ba-4625.jpg" title="德尔地板加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="58277" />已申请加盟:
@@ -285,7 +285,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm79341/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d564b-1823.jpg" title="樱花涂料加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d564b-1823.jpg" title="樱花涂料加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="79341" />已申请加盟:
@@ -331,7 +331,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6675488/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/e20fe-9405.jpg" title="钛能门业加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e20fe-9405.jpg" title="钛能门业加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6675488" />已申请加盟:
@@ -378,7 +378,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6594594/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/f5718-4081.jpg" title="忆江南锦缎泥加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/f5718-4081.jpg" title="忆江南锦缎泥加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6594594" />已申请加盟:
@@ -425,7 +425,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6593563/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/44465-1091.jpg" title="VOTO沃土加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/44465-1091.jpg" title="VOTO沃土加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6593563" />已申请加盟:
@@ -471,7 +471,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6581027/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/d3164-3737.jpg" title="荣事达管业加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d3164-3737.jpg" title="荣事达管业加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6581027" />已申请加盟:
@@ -518,7 +518,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm76445/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/25eca-9629.jpg" title="澳普利发门窗加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/25eca-9629.jpg" title="澳普利发门窗加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="76445" />已申请加盟:
@@ -564,7 +564,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm63088/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bfef6-9900.jpg" title="纤之韵-墙衣加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bfef6-9900.jpg" title="纤之韵-墙衣加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="63088" />已申请加盟:
@@ -611,7 +611,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm60837/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5c527-8907.jpg" title="法恩莎瓷砖加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5c527-8907.jpg" title="法恩莎瓷砖加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="60837" />已申请加盟:
@@ -657,7 +657,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm6582517/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/9eff6-4305.jpg" title="定荣家加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/9eff6-4305.jpg" title="定荣家加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="6582517" />已申请加盟:
@@ -703,7 +703,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm164402/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/106df-9843.jpg" title="普罗巴克加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/106df-9843.jpg" title="普罗巴克加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="164402" />已申请加盟:
@@ -748,7 +748,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm163471/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/aca0e-6603.jpg" title="福科斯加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/aca0e-6603.jpg" title="福科斯加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="163471" />已申请加盟:
@@ -794,7 +794,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm163460/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/c5300-2778.jpg" title="领航卫士加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c5300-2778.jpg" title="领航卫士加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="163460" />已申请加盟:
@@ -841,7 +841,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm163456/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0cf0a-5228.jpg" title="泰科安防加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0cf0a-5228.jpg" title="泰科安防加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="163456" />已申请加盟:
@@ -888,7 +888,7 @@
             <dl>
                 <dt>
                     <a href="http://m.jmw.com.cn/xm162516/">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/fcc74-3296.jpg" title="大运豪门加盟"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/fcc74-3296.jpg" title="大运豪门加盟"></a>
                 </dt>
                 <dd>
                     <input type="hidden" class="ajaxGetNumById" value="162516" />已申请加盟:

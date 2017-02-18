@@ -129,4 +129,4 @@
         }
 
     }</script>
-<style>.icon_sex5{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
+<style>.icon_sex5{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; } .icon_sex6{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:11px 6px 0 0; }</style>
