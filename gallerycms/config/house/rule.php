@@ -41,14 +41,14 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => '.html'
         ],
     ],
-    'ask-index' => [
+    /*'ask-index' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'pattern' => '/ask', 
             'route' => '/house/ask/index', 
             'suffix' => '/'
         ],
-    ],
+    ],*/
     'ask-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [

@@ -15,7 +15,11 @@ class AskController extends HouseController
     {
         parent::init();
 
-        $this->layout = 'main-ask';
+        if ($this->isMobile) {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = 'main-ask';
+        }
     }
 
     public function actionTag()
@@ -71,7 +75,7 @@ class AskController extends HouseController
             throw new NotFoundHttpException('NO found');
 		}
 
-        $tagInfos = $this->_checkTag($info['sort']);
+        $tagInfos = $this->_checkSort($info['sort']);
 
         //$description = str_replace(' ', '', $info['description']);
         $description = StringHelper::truncate(strip_tags($info['description']), 200, '');
@@ -100,7 +104,7 @@ class AskController extends HouseController
         $sortInfos = AskSort::find()->indexBy('code')->asArray()->all();
         $cInfo = isset($sortInfos[$code]) ? $sortInfos[$code] : [];
         if (empty($cInfo)) {
-            throw new NotFoundHttpException('NO found');
+            //throw new NotFoundHttpException('NO found');
         }
         $parentCode = $cInfo['parent_code'];
         $pInfo = $parentCode == '' ? [] : $sortInfos[$parentCode];

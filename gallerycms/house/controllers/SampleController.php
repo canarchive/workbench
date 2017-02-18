@@ -18,7 +18,11 @@ class SampleController extends HouseController
 		if ($tagInfos === false) {
             throw new NotFoundHttpException('页面不存在');
 		}
-        $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        if ($this->isMobile) {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        }
 
 		$page = Yii::$app->request->get('page');
 		//$infos = $model->getInfos([]);

@@ -15,15 +15,15 @@ return [
 		'pc-url' => '/sample-1.html',
 		'mobile-url' => '/sample-1.html',
     ],
-    'ask-index' => [
+    /*'ask-index' => [
 		'name' => '问答首页',
 		'pc-url' => '/ask/',
 		'mobile-url' => '/ask/',
-    ],
+    ],*/
     'ask-list' => [
 		'name' => '问答列表',
-		'pc-url' => '/ask/lm/',
-		'mobile-url' => '/ask/lm/',
+		'pc-url' => '/ask/lm-gzsj/',
+		'mobile-url' => '/ask/lm-gzsj/',
     ],
     'ask-show' => [
 		'name' => '问答详情',

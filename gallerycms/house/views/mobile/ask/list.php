@@ -3,7 +3,7 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['dfc20-7370', '9c07e-2206'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
 $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
 ?>
 <?= $this->render('_header'); ?>
