@@ -1,58 +1,23 @@
+<?php
+$info = $this->context->mDatas['info']; 
+?>
 <div class="logo wrapper clearfix">
     <div class="logo_left fl clearfix">
-        <a target="_blank" href="http://www.jmw.com.cn">
-            <img title="中国加盟网" width="133" height="34" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a0ad-7533.jpg"></a>
+        <a title="<?= Yii::$app->params['siteNameBase']; ?>" href="/">
+            <img title="<?= Yii::$app->params['siteNameBase']; ?>" width="133" height="34" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a0ad-7533.jpg"></a>
         <div style="border-left:1px solid #cdcdcd;float:left;color:#444;margin-top:20px;padding-left:14px;overflow:hidden;width: 220px;text-overflow: ellipsis;white-space: nowrap;">
-            <h1 title="如何加盟晨阳水漆" style="font:20px '微软雅黑';font-weight:bold;color:#444;">如何加盟晨阳水漆</h1>
-            <span title="晨阳水漆加盟点评" style="font:12px '微软雅黑';color:#999999; font-weight:normal;">晨阳水漆加盟点评</span></div>
+            <h1 title="<?= $info['name']; ?>" style="font:20px '微软雅黑';font-weight:bold;color:#444;"><?= $info['name']; ?>装饰公司</h1>
+            <span title="<?= $info['name']; ?>装饰公司点评" style="font:12px '微软雅黑';color:#999999; font-weight:normal;"><?= $info['name']; ?>装饰公司点评</span>
+        </div>
     </div>
     <div class="logo_right fr">
         <div class="content1_top clearfix">
-            <div class="fl join">
-                <span id="sid1s_show" href="javascript:;" target="_self">选择行业</span>
+            <div class="fl join" style="display:none;">
+                <span id="sid1s_show" href="javascript:;" target="_self"></span>
                 <div class="menu_child" style="display:none;">
-                    <a target="_self" class="hangy" href="javascript:;" onclick="changesid1svalue('--选择行业--','');">--选择行业--</a>
+                    <a target="_self" class="hangy" href="javascript:;" onclick="changesid1svalue('--选择--','');">--选择--</a>
                     <ul class="clearfix">
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('美食',2);">美食</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('服装',1);">服装</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('教育',11);">教育</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('家纺',22);">家纺</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('家居',16);">家居</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('幼儿',13);">幼儿</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('珠宝',21);">珠宝</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('饰品',7);">饰品</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('建材',24);">建材</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('美容',3);">美容</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('干洗',4);">干洗</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('酒水',196);">酒水</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('汽车',23);">汽车</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('环保',17);">环保</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('酒店',5,147);">酒店</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('英语',11,48);">英语</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('火锅',2,25);">火锅</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('早教',13,57);">早教</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('零售',15);">零售</a></li>
-                        <li>
-                            <a target="_self" href="javascript:;" onclick="changesid1svalue('精品',5);">精品</a></li>
+                        <li><a target="_self" href="javascript:;" onclick="changesid1svalue('',2);"></a></li><li>
                     </ul>
                 </div>
                 <script>function changesid2svalue(cid) {
@@ -68,22 +33,15 @@
                     }</script>
             </div>
             <div class="fl money">
-                <span id="mid_show" href="javascript:;" target="_self">选择金额</span>
+                <span id="mid_show" href="javascript:;" target="_self">装饰公司</span>
                 <div class="money_child" style="display:none;">
-                    <a class="hangy" href="javascript:;" target="_self" onclick="changemidvalue('--选择金额--','');">--选择金额--</a>
                     <ul class="clearfix">
                         <li>
-                            <a href="javascript:;" target="_self" onclick="changemidvalue('1万元以下','0,1');">1万元以下</a></li>
+                            <a href="javascript:;" target="_self" onclick="changemidvalue('装饰公司','0,1');">装饰公司</a></li>
                         <li>
-                            <a href="javascript:;" target="_self" onclick="changemidvalue('1~~10万元','1,10');">1~~10万元</a></li>
+                            <a href="javascript:;" target="_self" onclick="changemidvalue('装修问答','0,1');">装修问答</a></li>
                         <li>
-                            <a href="javascript:;" target="_self" onclick="changemidvalue('10~~20万元','10,20');">10~~20万元</a></li>
-                        <li>
-                            <a href="javascript:;" target="_self" onclick="changemidvalue('20~~50万元','20,50');">20~~50万元</a></li>
-                        <li>
-                            <a href="javascript:;" target="_self" onclick="changemidvalue('50~~100万元','50,100');">50~~100万元</a></li>
-                        <li>
-                            <a href="javascript:;" target="_self" onclick="changemidvalue('100万元以上','100,999999');">100万元以上</a></li>
+                            <a href="javascript:;" target="_self" onclick="changemidvalue('装修报价','100,999999');">装修报价</a></li>
                     </ul>
                 </div>
                 <script type="text/javascript">function changemidvalue(sname, id) {
@@ -221,6 +179,5 @@
             });
         });</script>
     <div style="display:none;">
-        <!--综合页360统计代码-->
-        <!--综合页360统计代码end--></div>
+    </div>
 </div>

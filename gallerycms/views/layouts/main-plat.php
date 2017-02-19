@@ -5,12 +5,13 @@ use yii\bootstrap\ActiveForm;
 $cssFiles = ['0e165-7624', 'd6112-7354', '683ed-3544'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'platj']);
 $this->params['jsStr'] = $this->render('platj-merchant/_js', []);
+$info = $this->context->mDatas['info'];
 ?>
 <?php $this->beginContent('@gallerycms/views/main-pc.php'); ?>
 
 <!--head-->
 <?= $this->render('platj/_top'); ?>
-<input type="hidden" id="projectId" value="137829" />
+<input type="hidden" id="projectId" value="<?= $info['id']; ?>" />
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/loginstatus.js"></script>
 <p class="clr"></p>
 <!--行业列-->

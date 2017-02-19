@@ -8,7 +8,7 @@ $info = $this->context->mDatas['info'];
                 <a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>">首页</a></li>
             <li><span></span></li>
             <li>
-                <a title="<?= $this->context->currentCityName; ?>装修公司" href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>"></a><?= $this->context->currentCityName; ?>装修公司</li>
+                <a title="<?= $this->context->currentCityName; ?>装修公司" href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>"><?= $this->context->currentCityName; ?>装修公司</a></li>
             <li><span></span></li>
             <li>
                 <a href="<?= $info['infoUrl']; ?>"><strong><?= $info['name']; ?></strong></a></li>
