@@ -19,5 +19,6 @@ return [
     'siteJoinusTel' => '18888888888',
     'siteCustomServiceQQ' => '1313113',
     'siteName' => 'siteName',
+    'siteSlogan' => '装修就找兔班长',
     'siteNameBase' => 'site',
 ];

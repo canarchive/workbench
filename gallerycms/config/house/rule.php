@@ -88,7 +88,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-            'pattern' => '/<city_code:\w+>/quote-show-<id:\d+>',
+            'pattern' => '/<city_code:\w+>/quote_show_<id:\d+>',
     		'route'	=> '/house/quote/show',
         ],
     ],

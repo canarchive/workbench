@@ -3,9 +3,7 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['25195-6919', '167a4-9368', '859bc-4030', '00ce0-6662', '73eaa-5273'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
-$this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
-$this->params['bodyClass'] = 'class="narrow_1220"';
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat1/m']);
 ?>
 <?= $this->render('_header'); ?>
 <!--主导航（默认隐藏） start-->
@@ -14,8 +12,7 @@ $this->params['bodyClass'] = 'class="narrow_1220"';
 <div class="container" data-page="budget-info-list">
     <div class="bar-nav cMdGray clearfix">
         <i class="iconfont icone620 l"></i>
-        <strong class="title">北京装修报价</strong></div>
-    <!-- 标题栏 end -->
+        <strong class="title"><?= $this->context->currentCityName; ?>装修报价</strong></div>
     <!-- 分类筛选-->
     <?= $this->render('_sort'); ?>
     <!-- 图文混排（左侧图片，右侧文字） start -->

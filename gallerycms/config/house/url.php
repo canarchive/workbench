@@ -32,13 +32,13 @@ return [
     ],
     'quote-list' => [
 		'name' => '报价列表',
-		'pc-url' => '/quote/',
-		'mobile-url' => '/quote/',
+		'pc-url' => '/beijing/quote/',
+		'mobile-url' => '/beijing/quote/',
     ],
     'quote-show' => [
 		'name' => '报价详情',
-		'pc-url' => '/quote-1.html',
-		'mobile-url' => '/quote-1.html',
+		'pc-url' => '/beijing/quote_show_1.html',
+		'mobile-url' => '/beijing/quote_show_1.html',
     ],
 	'aboutus-desc' => [
 		'name' => '关于我们',

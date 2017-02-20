@@ -3,9 +3,8 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['25195-6919', '167a4-9368', '859bc-4030', '00ce0-6662', '73eaa-5273'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
-$this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
-$this->params['bodyClass'] = 'class="narrow_1220"';
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat1/m']);
+//$this->params['jsStr'] = $this->render('_js-header');
 ?>
 <!--页头 start-->
 <?= $this->render('_header'); ?>
