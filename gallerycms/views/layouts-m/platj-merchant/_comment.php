@@ -1,65 +1,29 @@
+<?php 
+$info = $this->context->mDatas['info'];
+?>
 <div class="zaixianzixun ziXun">
     <div class="wen_p clear">
         <div class="fl" style="border-bottom:none; color:#e44b46;line-height:50px;">
-            <a href="http://m.jmw.com.cn/xm137829/liuyan/" style="color:#e44b46;font-size: 16px; ">晨阳水漆在线咨询</a></div>
+            <a href="<?= "/{$info['city_code']}/{$info['code']}/comment/"; ?>" style="color:#e44b46;font-size: 16px; " title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></div>
         <span class="fr">
-            <span style="color:red;">2936</span>人已成功加盟</span></div>
+            已服务<span style="color:red;"><?= $info['num_owner']; ?></span>业主</span></div>
     <ul class="zaixianzixun-example">
+        <?php foreach ($cInfos as $cInfo) { ?>
         <li>
             <dl class="mass-1 fl">
                 <dt>
                     <img src="http://image1.jmw.com.cn/logo/kf/0/3.jpg" alt=""></dt>
-                <dt style="margin-bottom: 6px;">高先生</dt>
-                <dt>网页版</dt></dl>
+                <dt style="margin-bottom: 6px;"><?= $cInfo['ownerInfo']['name']; ?></dt>
+                <dt>评分:<?= $cInfo['score']; ?></dt></dl>
             <ul class="mass-2 fr">
                 <i>
                 </i>
-                <li class="mass-2-1">IP：123.11.61.*
-                    <span class="fr">留言时间:2017-02-15 11:14:15</span>
+                <li class="mass-2-1">IP：<?= $info['ip']; ?>
+                    <span class="fr">评论时间: <?= date('Y-m-d H:i:s', $cInfo['created_at']); ?></span>
                     <img src="http://image1.jmw.com.cn/newSearchPage/images/message_new.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"></li>
-                <li class="mass-2-2">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
+                    <li class="mass-2-2"><?= $cInfo['content']; ?></li></ul>
         </li>
-        <li>
-            <dl class="mass-1 fl">
-                <dt>
-                    <img src="http://image1.jmw.com.cn/logo/kf/0/2.jpg" alt=""></dt>
-                <dt style="margin-bottom: 6px;">许先生</dt>
-                <dt>网页版|河南</dt></dl>
-            <ul class="mass-2 fr">
-                <i>
-                </i>
-                <li class="mass-2-1">IP：202.102.224.*
-                    <span class="fr">留言时间:2017-02-15 10:55:38</span>
-                    <img src="http://image1.jmw.com.cn/newSearchPage/images/message_new.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"></li>
-                <li class="mass-2-2">此项目很好，请尽快联系我详谈。</li></ul>
-        </li>
-        <li>
-            <dl class="mass-1 fl">
-                <dt>
-                    <img src="http://image1.jmw.com.cn/logo/message_user/default.jpg" alt=""></dt>
-                <dt style="margin-bottom: 6px;">李圣贤</dt>
-                <dt>手机版</dt></dl>
-            <ul class="mass-2 fr">
-                <i>
-                </i>
-                <li class="mass-2-1">IP：123.119.224.*
-                    <span class="fr">留言时间:2017-02-14 22:58:48</span>
-                    <img src="http://image1.jmw.com.cn/newSearchPage/images/message_new.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"></li>
-                <li class="mass-2-2">请问投资晨阳水漆所需要的费用有哪些？</li></ul>
-        </li>
-        <li>
-            <dl class="mass-1 fl">
-                <dt>
-                    <img src="http://image1.jmw.com.cn/logo/kf/0/3.jpg" alt=""></dt>
-                <dt style="margin-bottom: 6px;">邹先生</dt>
-                <dt>网页版</dt></dl>
-            <ul class="mass-2 fr">
-                <i>
-                </i>
-                <li class="mass-2-1">IP：171.35.35.*
-                    <span class="fr">留言时间:2017-02-14 15:42:31</span></li>
-                <li class="mass-2-2">·我想详细了解此项目的加盟流程，请与我联系！</li></ul>
-        </li>
+        <?php } ?>
     </ul>
 </div>
 <script>
