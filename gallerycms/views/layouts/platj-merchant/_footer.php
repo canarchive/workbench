@@ -102,20 +102,7 @@
                                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3bb8b-4720.gif" /></a>
                                     </p>
                                     <ul id="messageUl" class='clearfix'>
-                                        <li>
-                                            <a href="javascript:;">此项目很好，请尽快联系我详谈。</a></li>
-                                        <li>
-                                            <a href="javascript:;">请问我所在的地区有此项目加盟商了吗？</a></li>
-                                        <li>
-                                            <a href="javascript:;">我已留下了邮箱，请将此项目详细资料发邮件给我。</a></li>
-                                        <li>
-                                            <a href="javascript:;">我想详细了解此项目的加盟流程，请与我联系。</a></li>
-                                        <li>
-                                            <a href="javascript:;">做为此项目的代理加盟商能得到哪些支持？</a></li>
-                                        <li>
-                                            <a href="javascript:;">请问投资此项目所需要的费用有哪些？</a></li>
-                                        <li class="noLine">
-                                            <a href="javascript:;">我想加盟此项目，请电话联系我。</a></li>
+                                    <?php echo $this->render('@gallerycms/views/layouts/platj/_guestbook-quick'); ?>
                                     </ul>
                                 </div>
                                 <!--快捷留言 end--></div>

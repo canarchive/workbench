@@ -9,28 +9,28 @@ $cInfos = $this->context->mDatas['commentInfos'];
             <u>查看更多</u>&gt;&gt;</a>
     </div>
     <div class="message" id="message_main">
-        <?php foreach ($cInfos as $info) { ?>
+        <?php $i = 0; foreach ($cInfos as $cInfo) { if ($i > 10) {break;} ?>
         <div id="message_div" class="message_every clearfix">
             <dl class="fl">
                 <dt>
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/79506-4799.jpg" width="51" height="51" alt="" /></dt>
-                <dd><?= $info['ownerInfo']['name']; ?></dd></dl>
+                <dd><?= $cInfo['ownerInfo']['name']; ?></dd></dl>
             <ul class="tent fl">
                 <li class="sanjiao"></li>
                 <li class="from">
                     <ul class="clearfix">
                         <li class="ip">IP：
-                            <span><?= $info['ip']; ?></span></li>
+                            <span><?= $cInfo['ip']; ?></span></li>
                         <li class="From"></li>
-                        <li class="From">评分:<?= $info['totalScore']; ?></li>
+                        <li class="From">评分:<?= $cInfo['totalScore']; ?></li>
                         <li class="time">评论时间:
-                        <span><?= date('Y-m-d H:i:s', $info['created_at']); ?>
+                        <span><?= date('Y-m-d H:i:s', $cInfo['created_at']); ?>
                                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/c91dc-9102.gif" style='display:inline-block' /></span></li>
                     </ul>
                 </li>
-                <li class="want"><?= $info['content']; ?></li></ul>
+                <li class="want"><?= $cInfo['content']; ?></li></ul>
         </div>
-        <?php } ?>
+        <?php $i++; } ?>
     </div>
 </div>
 <script>

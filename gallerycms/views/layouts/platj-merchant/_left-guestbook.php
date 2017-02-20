@@ -24,22 +24,7 @@
                                             <u>快捷留言</u>]</span>
                                     </p>
                                     <ul>
-                                        <li>
-                                            <a href="javascript:;" title="晨阳水漆项目很好，请尽快联系我详谈。">晨阳水漆项目很好，请尽快联系我详谈。</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="请问我所在的地区有晨阳水漆加盟商了吗？">请问我所在的地区有晨阳水漆加盟商了吗？</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="留下邮箱，请将晨阳水漆详细资料邮件给我。">留下邮箱，请将晨阳水漆详细资料邮件给我。</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="想了解晨阳水漆的加盟流程，请与我联系！">想了解晨阳水漆的加盟流程，请与我联系！</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="做为晨阳水漆的代理加盟商能得到哪些支持？">做为晨阳水漆的代理加盟商能得到哪些支持？</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="请问投资晨阳水漆所需要的费用有哪些？">请问投资晨阳水漆所需要的费用有哪些？</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="我想加盟晨阳水漆，请电话联系我。">我想加盟晨阳水漆，请电话联系我。</a></li>
-                                        <li>
-                                            <a href="javascript:;" title="晨阳水漆加盟，有什么优惠吗？">晨阳水漆加盟，有什么优惠吗？</a></li>
+                                    <?php echo $this->render('@gallerycms/views/layouts/platj/_guestbook-quick'); ?>
                                     </ul>
                                     <span class="quick_bg"></span>
                                 </div>

@@ -18,68 +18,31 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
                 <ul class="core_list">
                     <li class="one_core">
                         <div class="core_text">
-                            <p><strong>客户第一：</strong>将客户利益置于战略核心，推动行业阳光、透明</p>
+                            <p><strong>客户第一：</strong>客户就是上帝，解决客户实际问题是我们的职责</p>
                         </div>
                     </li>
                     <li class="two_core">
                         <div class="core_text more_text">
-                            <p><strong>简单可信：</strong>简单相处，直面地提出自己的观点，欣喜坦诚的看待任何意见</p>
+                            <p><strong>简单可信：</strong>扁平化管理，人人平等，努力创造价值</p>
                         </div>
                     </li>
                     <li class="three_core">
                         <div class="core_text">
-                            <p><strong>激情进取：</strong>执着投入，永不言败</p>
+                            <p><strong>激情进取：</strong>执着投入，不骄不躁，有志者事竟成</p>
                         </div>
                     </li>
                     <li class="four_core">
                         <div class="core_text">
-                            <p><strong>主动协作：</strong>共享共担，平凡人做非凡事</p>
+                            <p><strong>主动协作：</strong>共享共担，独当一面，团结互助</p>
                         </div>
                     </li>
                     <li class="five_core">
                         <div class="core_text">
-                            <p><strong>快速有效：</strong>拥抱变化，动如脱兔，突破性解决问题</p>
+                            <p><strong>快速有效：</strong>快速响应，动如脱兔，突破性解决问题</p>
                         </div>
                     </li>
                 </ul>
-                <div class="about_center_title">
-                    <h5 class="noBold">土巴兔的口号<span>Our Slogan</span></h5>
-                </div>
-                <div class="slogan_title"></div>
-                <ul class="mission_vision">
-                    <li class="fl">
-                        <i><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/f7fe4-5302.jpg" alt="土巴兔的使命" /></i>
-                        <span>土巴兔的使命</span>
-                        <p>让天下没有烦心的装修</p>
-                    </li>
-                    <li class="fr">
-                        <i><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/d7a70-1679.jpg" alt="土巴兔的愿景" /></i>
-                        <span>土巴兔的愿景</span>
-                        <p>成为全球家居装修领域的领导者</p>
-                    </li>
-                </ul>
-                <div class="to8to_creed">
-                    <span class="to8to_creed_pic">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/04d24-4968.jpg" alt="土巴兔信条" />
-                    </span>
-                    <div class="to8to_creed_text">
-                        <h5>土巴兔的信条</h5>
-                        <strong>第一信条：</strong>
-                        <p>We are Tubatu</p>
-                        <strong>机会信条：</strong>
-                        <p>存在的问题就是机会</p>
-                        <strong>牛人信条：</strong>
-                        <p>不怕别人比我们牛，就怕牛人比我们更努力</p>
-                        <strong>相处信条：</strong>
-                        <p>学习比我强的人，帮助没我强的人</p>
-                        <strong>用人信条：</strong>
-                        <p>优秀人才最优惠，平庸之人最昂贵</p>
-                        <strong>管理信条：</strong>
-                        <p>对下支援，对上支持</p>
-                        <strong>营销信条：</strong>
-                        <p>不是单纯为了利益营销，而是为真心帮助他人</p>
-                    </div>
-                </div>
+                <?php //echo $this->render('_culture-ext'); ?>
             </div>
         </div>
     </div>

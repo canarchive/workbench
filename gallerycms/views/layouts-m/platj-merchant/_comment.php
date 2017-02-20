@@ -1,5 +1,6 @@
 <?php 
 $info = $this->context->mDatas['info'];
+$cInfos = $this->context->mDatas['commentInfos'];
 ?>
 <div class="zaixianzixun ziXun">
     <div class="wen_p clear">
@@ -14,11 +15,11 @@ $info = $this->context->mDatas['info'];
                 <dt>
                     <img src="http://image1.jmw.com.cn/logo/kf/0/3.jpg" alt=""></dt>
                 <dt style="margin-bottom: 6px;"><?= $cInfo['ownerInfo']['name']; ?></dt>
-                <dt>评分:<?= $cInfo['score']; ?></dt></dl>
+                <dt>评分:<?= $cInfo['totalScore']; ?></dt></dl>
             <ul class="mass-2 fr">
                 <i>
                 </i>
-                <li class="mass-2-1">IP：<?= $info['ip']; ?>
+                <li class="mass-2-1">IP：<?= $cInfo['ip']; ?>
                     <span class="fr">评论时间: <?= date('Y-m-d H:i:s', $cInfo['created_at']); ?></span>
                     <img src="http://image1.jmw.com.cn/newSearchPage/images/message_new.gif" class="fr" style="width:22px; height:9px;position:absolute;bottom:2px;right:4px;"></li>
                     <li class="mass-2-2"><?= $cInfo['content']; ?></li></ul>
