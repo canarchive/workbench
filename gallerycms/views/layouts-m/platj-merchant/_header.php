@@ -12,6 +12,7 @@ $info = $this->context->mDatas['info'];
         </div>
     </div>
 </header>
+<?php if (!isset($showHeaderBase)) { ?>
 <!-- 官网 -->
 <section class="guanWang2">
     <dl class="clear">
@@ -29,3 +30,4 @@ $info = $this->context->mDatas['info'];
         </dd>
     </dl>
 </section>
+<?php } ?>

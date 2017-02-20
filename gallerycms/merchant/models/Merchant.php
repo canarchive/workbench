@@ -223,7 +223,9 @@ class Merchant extends MerchantModel
 	public function getDesignerInfos()
 	{
 		$model = new Designer();
-		$infos = $model->getInfos(['merchant_id' => $this->id]);
+		//$infos = $model->getInfos(['merchant_id' => $this->id]);
+		$infos = $model->getInfos([]);
+        //print_r($infos);exit();
 
 		return $infos;
 	}
