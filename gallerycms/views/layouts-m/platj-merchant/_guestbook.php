@@ -42,7 +42,7 @@
         $('#label5 i').toggleClass('icon_sex6');
         $('#label6 i').removeClass('icon_sex6');
         $('#gender').val('0');
-    }) $('#label6').click(function() {
+    }); $('#label6').click(function() {
         $('#label6 i').toggleClass('icon_sex6');
         $('#label5 i').removeClass('icon_sex6');
         $('#gender').val('1');

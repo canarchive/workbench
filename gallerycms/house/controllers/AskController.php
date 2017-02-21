@@ -80,10 +80,13 @@ class AskController extends HouseController
 
         //$description = str_replace(' ', '', $info['description']);
         $description = StringHelper::truncate(strip_tags($info['description']), 200, '');
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $info['tags'], '{{DESCRIPTION}}' => $description];
+        $tagStr = !empty($tagInfos['pInfo']) ? $tagInfos['pInfo']['name'] . ',' : '';
+        $tagStr .= !empty($tagInfos['cInfo']) ? $tagInfos['cInfo']['name'] . ',' : '';
+        $tagStr = rtrim($tagStr, ',');
+		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr, '{{DESCRIPTION}}' => $description];
 		$this->getTdkInfos('info-show', $dataTdk);
 
-        $infos = $model->getInfos(['category_id' => $tagInfos['ids']], 6);
+        $infos = $model->getInfos(['sort' => $tagInfos['code']], 6);
 		$datas = [
 			'info' => $info,
             'tagInfos' => $tagInfos,

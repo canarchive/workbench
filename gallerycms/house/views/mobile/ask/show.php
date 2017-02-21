@@ -3,7 +3,7 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['dfc20-7370', 'ac6a6-5327', '492e1-6548', '205c9-1932', '9f77a-4233', '9c07e-2206', 'dfc20-7370', '9c07e-2206'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
+$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
 $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
 ?>
 <?= $this->render('_header-show'); ?>
@@ -65,7 +65,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         $('#alertOveryLayer').remove();
                     },
                     300);
-                }) return false;
+                }); return false;
             }
         });</script>
     <script>$('.zxask-search-wrap').find('p').remove().end().height(65);</script>
@@ -823,7 +823,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             cityHold_data = city; //
         }
     })(slide_start_high);</script>
-<script type="text/javascript" src="http:<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common_cityfromip.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common_cityfromip.js"></script>
 <script>getCityFromIp(callback);
     function callback(cityFromIp) {
         //根据Ip自动弹微信小号弹窗

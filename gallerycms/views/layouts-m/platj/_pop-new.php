@@ -44,7 +44,7 @@
         $('#label1 i').toggleClass('icon_sex2');
         $('#label2 i').removeClass('icon_sex2');
         $('#sex').val('0');
-    }) $('#label2').click(function() {
+    }); $('#label2').click(function() {
         $('#label2 i').toggleClass('icon_sex2');
         $('#label1 i').removeClass('icon_sex2');
         $('#sex').val('1');

@@ -61,7 +61,7 @@
         $('#man i').toggleClass('icon_liu_sex2');
         $('#woman i').removeClass('icon_liu_sex2');
         $('#liu_sex').val('0');
-    }) $('#woman').click(function() {
+    }); $('#woman').click(function() {
         $('#woman i').toggleClass('icon_liu_sex2');
         $('#man i').removeClass('icon_liu_sex2');
         $('#liu_sex').val('1');

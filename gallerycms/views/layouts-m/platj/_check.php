@@ -115,7 +115,7 @@ return false;
 <script>$('.span_close').click(function() {
         $('.safeTishiW').hide();
         $("#loading-mask").hide();
-    }) $('.button_sure').click(function() {
+    }); $('.button_sure').click(function() {
         $('.safeTishiW').hide();
         $("#loading-mask").hide();
     })</script>
