@@ -4,6 +4,7 @@ namespace gallerycms\house\controllers;
 
 use Yii;
 use yii\web\NotFoundHttpException;
+use yii\helpers\StringHelper;
 use gallerycms\components\HouseController;
 use gallerycms\house\models\Ask;
 use gallerycms\house\models\AskQuestion;
@@ -106,6 +107,7 @@ class AskController extends HouseController
         if (empty($cInfo)) {
             //throw new NotFoundHttpException('NO found');
         }
+        
         $parentCode = $cInfo['parent_code'];
         $pInfo = $parentCode == '' ? [] : $sortInfos[$parentCode];
         $subInfos = [];

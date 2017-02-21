@@ -22,12 +22,13 @@ class TmpController extends GallerycmsController
         $sql = '';
         $i = 0;
         foreach ($sorts as $sort => $sortInfo) {
+            $sortName = $sortInfo['name'];
             if ($sortInfo['parent_code'] == '') {
+                $sql .= "UPDATE `wc_ask_question` SET `sort_parent` = '{$sort}' WHERE `sort_parent` = '{$sortName}'<br />";
                 continue;
             }
-            $sortParent = $sorts[$sortInfo['parent_code']]['name'];
-            $sortName = $sortInfo['name'];
-            $sql .= "{$i}--UPDATE `wc_ask_question` SET `sort` = '{$sort}' WHERE `sort_parent` = '{$sortParent}' AND `sort` = '{$sortName}'<br />";
+            /*$sortParent = $sorts[$sortInfo['parent_code']]['name'];
+            $sql .= "{$i}--UPDATE `wc_ask_question` SET `sort` = '{$sort}' WHERE `sort_parent` = '{$sortParent}' AND `sort` = '{$sortName}'<br />";*/
             $i++;
         }
         echo $sql;

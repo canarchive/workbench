@@ -34,3 +34,4 @@
         </div>
     </div>
 </section>
+<div class="detail-ask clearfix mt30 pb30"></div>

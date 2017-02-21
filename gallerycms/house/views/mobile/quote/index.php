@@ -196,6 +196,4 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
         <a href="">第1页</a></div>
 </div>
 <!-- 分页 end --></div>
-<!-- 正文 end -->
-<!--页脚 start-->
 <?= $this->render('_footer'); ?>

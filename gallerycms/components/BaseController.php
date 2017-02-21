@@ -114,7 +114,7 @@ class BaseController extends Controller
                 'name' => Yii::$app->params['currentCompany']['name'] . '装修报价',
             ],
             'sample' => [
-                'url' => '/sample',
+                'url' => '/sample/',
                 'name' => '效果图',
             ],
             'office' => [

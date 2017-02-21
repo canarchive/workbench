@@ -828,7 +828,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
         //页面滑动监控
         $(window).scroll(function() {
             height_control();
-        }) $('.cc-box-style').scroll(function() {
+        }); $('.cc-box-style').scroll(function() {
             height_control();
         })
         //滑动控制

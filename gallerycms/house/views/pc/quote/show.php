@@ -19,7 +19,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
     <div class="main">
         <div class="top-share clearfix">
             <div class="wrap">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/house/plat1/img/95d6d-2970.jpg" class="share-icon">
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/img/95d6d-2970.jpg" class="share-icon">
                 <span class="share-txt">分享：</span>
                 <div class="bdsharebuttonbox l" data-tag="share_1">
                     <a class="bds_tsina" data-cmd="tsina" title="新浪微博"></a>
@@ -1105,9 +1105,9 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
         <!-- 简装修表格 end --></div>
 </section>
 <?php echo $this->render('_show-charge'); ?>
-<?php //echo $this->render('_show-sample'); ?>
-<?= $this->render('_show-related'); ?>
-<?= $this->render('_show-pop'); ?>
+<?php echo $this->render('_show-sample'); ?>
+<?php echo $this->render('_show-related'); ?>
+<?php echo $this->render('_show-pop'); ?>
 <?php //echo $this->render('_right_sao'); ?>
 <!-- 页脚 start -->
 <?php echo $this->render('_footer'); ?>

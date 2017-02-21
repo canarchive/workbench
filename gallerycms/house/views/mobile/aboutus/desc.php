@@ -33,12 +33,13 @@ $this->params['jsStr'] = $this->render('_js-header');
             <span style="background-color:transparent;font-size:14px">　　土巴兔致力于让天下没有烦心的装修。为实现这个使命，全体土巴兔人不断努力，推动装修、</span>
             <a href="http://m.to8to.com/jiaju/jiancai/" target="">建材</a>
             <span style="background-color:transparent;font-size:14px">、家居市场的规范化，改变着数百万家庭的装修方式和置家理念，为用户创造出色的互联网装修体验。作为互联网装修领导者，土巴兔将通过O2O的模式，为传统装修及家居领域带来新的变革，不断为用户创造价值，引领行业发展。&quot;</span></p>
+
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
             <span style="background-color:transparent;font-size:14px">&nbsp;</span></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　装修就上土巴兔!</span></p>
+            <span style="background-color:transparent;font-size:14px">　　<?= Yii::$app->params['siteSlogan']; ?></span></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　公司地址：深圳市南山区高新园科研路9号比克科技大厦10楼</span></p>
+            <span style="background-color:transparent;font-size:14px">　　公司地址：<?= Yii::$app->params['siteAddressInfo']; ?></span></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
             <span style="background-color:transparent;font-size:14px">　　联系电话：0755-86086800</span></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
@@ -46,16 +47,16 @@ $this->params['jsStr'] = $this->render('_js-header');
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
             <span style="background-color:transparent;font-size:14px">　　邮箱地址：marketing@corp.to8to.com</span></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　全国统一客服电话：400-6900-288</span></p>
+            <span style="background-color:transparent;font-size:14px">　　全国统一客服电话：<?= Yii::$app->params['siteHotline']; ?></span></p>
         <p style="line-height:1.75em;">
             <br /></p>
     </div>
 </article>
 <section class="zx-wtg-wrap" style='margin:0 10px 0 10px;'>
     <i class="zx-wtg-logo"></i>
-    <h2>关注土巴兔微信，领装修大礼包</h2>
+    <h2>关注<?= Yii::$app->params['siteNameBase']; ?>微信，领装修大礼包</h2>
     <p>打开微信，关注微信号：
-        <em>to8to282</em></p>
+    <em><?= Yii::$app->params['siteWechat']; ?></em></p>
 </section>
 <!--分享-->
 <script>if (!window.jQuery || !window.$) {

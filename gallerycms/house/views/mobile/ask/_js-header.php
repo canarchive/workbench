@@ -1,5 +1,6 @@
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/componentsh5.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/askbj.js"></script>
 <script>var _hmt = _hmt || []; (function() {
         var hm = document.createElement("script");
         hm.src = "//hm.baidu.com/hm.js?dbdd94468cf0ef471455c47f380f58d2";
