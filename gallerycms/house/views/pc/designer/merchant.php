@@ -1,5 +1,4 @@
 <?php
-
 use gallerycms\components\LinkPager;
 ?>
 <!--imgs begin-->
@@ -22,7 +21,7 @@ use gallerycms\components\LinkPager;
                 <?php $i = 0; foreach ($designerInfos['infos'] as $info) { ?>
                 <li <?php if ($i % 4 == 3) { echo ' class="current9"'; } ?>>
                     <a href="<?= $info['id']; ?>">
-                        <img src="<?= $info['thumb']; ?>" width="170" height="128" alt="<?= $info['name']; ?>" title="<?= $info['name']; ?>" /></a>
+                        <img src="<?= $info['photo']; ?>" width="170" height="128" alt="<?= $info['name']; ?>" title="<?= $info['name']; ?>" /></a>
                         <div class="black_bd" title="<?= $info['name']; ?>" style="cursor:pointer"><?= $info['name']; ?></div>
                 </li>
                 <?php $i++; } ?>

@@ -30,7 +30,9 @@ class RealcaseController extends HouseController
     public function actionMerchant()
     {
         $datas = $this->_initMerchant('merchant-show');
-        $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+
+        //$where = ['merchant_id' => $datas['info']['id']];
+        $where = [];
         $infos = $this->_getInfos($where);
 
         $datas['realcaseInfos'] = $infos;

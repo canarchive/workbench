@@ -85,7 +85,6 @@ class BaseController extends Controller
             'commentInfos' => $info->getCommentInfos(),
 			'ownerInfos' => $info->getOwnerInfos(),
         ];
-		//print_r($datas);exit();
 
 		return $datas;
 	}

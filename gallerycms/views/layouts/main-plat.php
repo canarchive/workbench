@@ -41,7 +41,7 @@ $info = $this->context->mDatas['info'];
 <div class="content wrapper clearfix">
     <div class="fl cont_left">
         <?= $content; ?>
-        <?php if (isset($this->noCommentList)) { echo $this->render('platj-merchant/_left-comment'); } ?>
+        <?php if (!isset($this->params['noCommentList'])) { echo $this->render('platj-merchant/_left-comment'); } ?>
         <?= $this->render('platj-merchant/_left-guestbook'); ?>
     </div>
     <!---右-->

@@ -106,4 +106,12 @@ class Designer extends MerchantModel
 		$infos = $this->_getMerchantInfos(['is_joined' => 1]);
 		return $infos;
 	}
+
+	protected function _formatInfos($infos)
+	{
+		foreach ($infos as $key => & $info) {
+			$info['photo'] = $info->getAttachmentUrl($info['photo']);
+		}
+		return $infos;
+	}
 }

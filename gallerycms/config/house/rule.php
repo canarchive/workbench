@@ -143,7 +143,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     		'route'	=> '/house/realcase/show',
         ],
     ],
-    'designer-list' => [
+    /*'designer-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
@@ -151,16 +151,16 @@ return \gallerycms\components\RuleFormat::formatRule([
     		'route'	=> '/house/designer/index',
     		'defaults' => ['page' => 1, 'tag' => ''],
         ],
-    ],
-    'designer-show' => [
+    ],*/
+    /*'designer-show' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
     		'pattern' => '/<city_code:\w+>/designer-<id:\d+>',
     		'route'	=> '/house/designer/show',
         ],
-    ],
-    'comment-list' => [
+    ],*/
+    /*'comment-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
@@ -168,5 +168,5 @@ return \gallerycms\components\RuleFormat::formatRule([
     		'route'	=> '/house/comment/index',
     		'defaults' => ['page' => 1, 'tag' => ''],
         ],
-    ],
+    ],*/
 ]);

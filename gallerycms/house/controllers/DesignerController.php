@@ -25,9 +25,9 @@ class DesignerController extends HouseController
     public function actionMerchant()
     {
         $datas = $this->_initMerchant('merchant-show');
-        $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        //$where = ['merchant_id' => $datas['info']['id']];
+        $where = [];
         $infos = $this->_getInfos($where);
-
         $datas['designerInfos'] = $infos;
 
         $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
@@ -43,7 +43,7 @@ class DesignerController extends HouseController
 
 		$page = Yii::$app->request->get('page');
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 1]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
 		$datas = [
 			'page' => $page,
 			'infos' => $infos['infos'],

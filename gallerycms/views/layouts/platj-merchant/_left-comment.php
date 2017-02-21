@@ -19,8 +19,8 @@ $cInfos = $this->context->mDatas['commentInfos'];
                 <li class="sanjiao"></li>
                 <li class="from">
                     <ul class="clearfix">
-                        <li class="ip">IP：
-                            <span><?= $cInfo['ip']; ?></span></li>
+                        <li class="ip">阶段：
+                            <span><?= $cInfo['status']; ?></span></li>
                         <li class="From"></li>
                         <li class="From">评分:<?= $cInfo['totalScore']; ?></li>
                         <li class="time">评论时间:
