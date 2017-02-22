@@ -17,11 +17,6 @@ class AskQuestion extends GallerycmsModel
         return '{{%ask_question}}';
     }
 
-    public static function getDb()
-    {
-        return \Yii::$app->dbAsk;
-    }	
-
     /**
      * @inheritdoc
      */

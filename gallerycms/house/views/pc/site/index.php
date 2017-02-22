@@ -32,8 +32,7 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 </div>
 <!-- 友情链接 -->
 <?= $this->render('_friendlink', ['fInfos' => $this->context->friendlinkInfos]); ?>
-<!-- 我们能为投资加盟提供什么? -->
-<?php echo $this->render('_ourservice'); ?>
+<?php //echo $this->render('_ourservice'); ?>
 <!-- footer -->
 <?= $this->render('@gallerycms/views/layouts/platj/_footer-base'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/trade.js"></script>

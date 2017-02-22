@@ -15,16 +15,17 @@ class SiteController extends HouseController
 {
 	public function actionIndex()
 	{
-		$where = ['city_code' => Yii::$app->params['currentCompany']['code'], 'status' => 1];
+		$where = ['city_code' => $this->currentCityCode, 'status' => 1];
 		$datas = [
-			'merchantInfos' => $this->getMerchantInfos($where),
-			'realcaseInfos' => $this->getRealcaseInfos($where),
-			'workingInfos' => $this->getWorkingInfos($where),
-			'sampleInfos' => $this->getSampleInfos(),
-            'quoteInfos' => $this->getQuoteInfos($where),
-            'askInfos' => $this->getAskInfos($where),
+			'merchantInfos' => $this->getMerchantInfos($where, 18),
+			'realcaseInfos' => $this->getRealcaseInfos($where, 12),
+			'workingInfos' => $this->getWorkingInfos($where, 12),
+			'sampleInfos' => $this->getSampleInfos([], 12),
+            'quoteInfos' => $this->getQuoteInfos($where, 100),
+            'askInfos' => $this->getAskInfos($where, 100),
 		];
 		$this->getTdkInfos('site-index');
+        //var_dump($datas['merchantInfos']);exit();
 
 		return $this->render('index', $datas);
 	}
@@ -45,7 +46,7 @@ class SiteController extends HouseController
 	protected function getMerchantInfos($where)
 	{
 		$model = new Merchant();
-		$infos = $model->getIndexInfos($where);
+		$infos = $model->getInfos($where);
 		return $infos;
 	}
 

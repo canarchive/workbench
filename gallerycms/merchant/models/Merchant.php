@@ -10,7 +10,6 @@ class Merchant extends MerchantModel
 {
     use MerchantTrait;
 	//public $companyInfo;
-	public $is_joined_change;
 	public $aptitude;
 	public $nameUrl;
     
@@ -41,7 +40,7 @@ class Merchant extends MerchantModel
         return [
             [['name', 'city_code'], 'required'],
 			[['logo', 'picture'], 'integer'],
-			[['is_joined', 'logo', 'picture', 'category_id', 'status', 'num_owner', 'num_realcase', 'num_working', 'score', 'praise'], 'default', 'value' => '0'],
+			[['logo', 'picture', 'category_id', 'status', 'num_owner', 'num_realcase', 'num_working', 'score', 'praise'], 'default', 'value' => '0'],
 			[['aptitude', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
         ];
     }
@@ -81,15 +80,6 @@ class Merchant extends MerchantModel
         ];
     }
 
-	protected function getIsJoinedInfos()
-	{
-		$datas = [
-			'0' => '未合作',
-			'1' => '合作',
-		];
-		return $datas;
-	}	
-
 	protected function getStatusInfos()
 	{
 		$datas = [
@@ -112,24 +102,16 @@ class Merchant extends MerchantModel
 	}	
 	public function beforeSave($insert)
 	{
-		$this->is_joined_change = $this->is_joined != $this->getOldAttribute('is_joined');
 		return true;
 	}
 
 	public function afterSave($insert, $changedAttributes)
 	{
-		echo 'oooooo';
-		print_r($changedAttributes);
-		print_r($this->getDirtyAttributes());
         parent::afterSave($insert, $changedAttributes);
 
 		$fields = ['logo', 'picture'];
 		$this->_updateSingleAttachment('merchant', $fields);
 		$this->_updateMulAttachment('merchant', 'aptitude');
-		//if (!$insert && $this->is_joined != $this->getOldAttribute('is_joined')) {
-		if (!$insert && $this->is_joined_change) {
-			$this->updateJoined();
-		}
 
 		return true;
 	}	
@@ -247,15 +229,6 @@ class Merchant extends MerchantModel
 		return $infos;
 	}
 
-	public function updateJoined()
-	{
-	    Designer::updateAll(['is_joined' => $this->is_joined], "merchant_id = {$this->id}");
-	    Owner::updateAll(['is_joined' => $this->is_joined], "merchant_id = {$this->id}");
-	    Realcase::updateAll(['is_joined' => $this->is_joined], "merchant_id = {$this->id}");
-	    Working::updateAll(['is_joined' => $this->is_joined], "merchant_id = {$this->id}");
-	    MerchantComment::updateAll(['is_joined' => $this->is_joined], "merchant_id = {$this->id}");
-	}
-
 	public function deleteSubInfos()
 	{
 	    Designer::deleteAll("merchant_id = {$this->id}");
@@ -270,9 +243,5 @@ class Merchant extends MerchantModel
 		$domain = Yii::$app->params['baseDomain'];
 		$url = "http://sj-{$this->code}.{$domain}/";
         return $url;
-    }
-
-    public function getIndexInfos($where)
-    {
     }
 }
