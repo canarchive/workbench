@@ -13,9 +13,10 @@ class WorkingController extends HouseController
 	{
         $this->layout = '@gallerycms/views/layouts/main-plat-pic';
         $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
-        $datas = $this->_getInfos($where);
+        $datas = $this->_commonDatas();
+        $datas['infos'] = $this->_getInfos($where);
 
-        $pageStr = $datas['page'] > 1 ? "_第{$datas['page']}页-" : '-';
+        $pageStr = $datas['infos']['page'] > 1 ? "_第{$datas['infos']['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('realcase-index', $dataTdk);
@@ -25,10 +26,11 @@ class WorkingController extends HouseController
     public function actionMerchant()
     {
         $datas = $this->_initMerchant('merchant-show');
-        $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        //$where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $where = [];
         $infos = $this->_getInfos($where);
 
-        $datas['realcaseInfos'] = $infos;
+        $datas['workingInfos'] = $infos;
 
         $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
 
@@ -43,7 +45,7 @@ class WorkingController extends HouseController
 
 		$page = Yii::$app->request->get('page');
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 1]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
 		$datas = [
 			'page' => $page,
 			'infos' => $infos['infos'],

@@ -50,7 +50,7 @@ class RealcaseController extends HouseController
 
 		$page = Yii::$app->request->get('page');
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 1]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
 		$datas = [
 			'page' => $page,
 			'infos' => $infos['infos'],

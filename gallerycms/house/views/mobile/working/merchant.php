@@ -8,7 +8,7 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-mercha
 ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_header'); ?>
-<?php echo $this->render('_content-merchant'); ?>
+<?php echo $this->render('_content-merchant', ['infos' => $workingInfos]); ?>
 <!--我要咨询项目 start-->
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_guestbook'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_merchant'); ?>

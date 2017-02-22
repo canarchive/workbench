@@ -57,6 +57,13 @@ class BaseController extends Controller
                 $this->layout = '@gallerycms/views/layouts/main-plat';
             }
         }
+        $datas = array_merge($datas, $this->_commonDatas());
+        $this->mDatas = $datas;
+        return $datas;
+    }
+
+    protected function _commonDatas()
+    {
         $qModel = new Quote();
         $aModel = new AskQuestion();
         $mModel = new Merchant();
@@ -65,7 +72,6 @@ class BaseController extends Controller
         $datas['merchantInfos'] = $mModel->getInfos([], 10);
         $datas['merchantRelateInfos'] = $mModel->getInfos([], 10);
         $this->mDatas = $datas;
-
         return $datas;
     }
 

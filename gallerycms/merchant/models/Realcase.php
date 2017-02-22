@@ -176,4 +176,12 @@ class Realcase extends MerchantModel
 
 		return $url;
 	}
+
+	protected function _formatInfos($infos)
+	{
+		foreach ($infos as $key => & $info) {
+			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+		}
+		return $infos;
+	}
 }

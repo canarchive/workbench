@@ -9,11 +9,11 @@ use gallerycms\components\LinkPager;
     <div class="pic_title clearfix">
         <ul class="clearfix tab_ul">
             <li class='a_red'>
-                <a target="_blank" href="http://www.jmw.com.cn/xm137829/pinpaituku/">全部图片</a></li>
+                <a rel="nofollow" href="javascript:void(0);"><?= $info['name'] . '-直播工地'; ?></a></li>
+            <!--<li class="gray_line ">
+                <a href="/"></a></li>
             <li class="gray_line ">
-                <a target="_blank" href="http://www.jmw.com.cn/xm137829/dianmiantupian/">店面图片</a></li>
-            <li class="gray_line ">
-                <a target="_blank" href="http://www.jmw.com.cn/xm137829/chanpintupian/">产品图片</a></li>
+                <a href="/"></a></li>-->
         </ul>
     </div>
     <div id="gallery" class="vadio">
