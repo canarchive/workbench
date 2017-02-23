@@ -11,8 +11,12 @@ class WorkingController extends HouseController
 {
 	public function actionIndex()
 	{
-        $this->layout = '@gallerycms/views/layouts/main-plat-pic';
-        $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        if ($this->isMobile) {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = '@gallerycms/views/layouts/main-plat-pic';
+        }
+        $where = ['city_code' => $this->currentCityCode];
         $datas = $this->_commonDatas();
         $datas['infos'] = $this->_getInfos($where);
 

@@ -34,6 +34,7 @@ class MerchantController extends MerchantControllerBase
 			'merchantSortInfos' => $merchantSortInfos,
 			'model' => $model,
 		];
+        $datas = array_merge($datas, $this->_commonDatas());
 		$tagStr = '';
 		foreach ($tagInfos as $tagKey => $tagValue) {
 			if (empty($tagValue)) {

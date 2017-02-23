@@ -12,15 +12,15 @@ class RealcaseController extends HouseController
 	public function actionIndex()
 	{
         if ($this->isMobile) {
-            //$this->layout = false;//'@gallerycms/views/layouts/main-plat-pic';
             $this->layout = '@gallerycms/views/main-mobile';
         } else {
             $this->layout = '@gallerycms/views/layouts/main-plat-pic';
         }
-        $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
-        $datas = $this->_getInfos($where);
+        $where = ['city_code' => $this->currentCityCode];
+        $datas = $this->_commonDatas();
+        $datas['infos'] = $this->_getInfos($where);
 
-        $pageStr = $datas['page'] > 1 ? "_第{$datas['page']}页-" : '-';
+        $pageStr = $datas['infos']['page'] > 1 ? "_第{$datas['infos']['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('realcase-index', $dataTdk);

@@ -13,7 +13,8 @@ class DesignerController extends HouseController
 	{
         $this->layout = '@gallerycms/views/layouts/main-plat-pic';
         $where = ['city_code' => 'bj'];//Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
-        $datas = $this->_getInfos($where);
+        $datas = $this->_commonDatas();
+        $datas['infos'] = $this->_getInfos($where);
 
         $pageStr = $datas['page'] > 1 ? "_第{$datas['page']}页-" : '-';
 

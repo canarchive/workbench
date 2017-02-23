@@ -47,7 +47,7 @@ $info = $this->context->mDatas['info'];
     <!-- 找资金 找场地 找装修 找优惠 合伙开店 找委托弹框 start-->
     <?= $this->render('_pop'); ?>
     <!-- 在线咨询弹框 start-->
-    <?php //echo $this->render('_ask'); ?>
+    <?php echo $this->render('_ask'); ?>
 </div>
 <!-- 热搜品牌排行榜 start -->
 <?= $this->render('_hotinfo', ['merchantInfos' => $merchantInfos, 'askInfos' => $askInfos, 'quoteInfos' => $quoteInfos]); ?>
