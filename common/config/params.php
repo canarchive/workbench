@@ -18,8 +18,8 @@ return [
     'siteAddressInfo' => '北京市昌平区科星西路106号(国风美唐综合楼)2号楼407室',
     'siteJoinusTel' => '18888888888',
     'siteCustomServiceQQ' => '1313113',
-    'siteName' => 'siteName',
+    'siteName' => '兔班长',
     'siteSlogan' => '装修就找兔班长',
     'siteNameBase' => 'site',
-    'siteWechat' => 'jjjcq',
+    'siteWechat' => '兔班长装修平台',
 ];

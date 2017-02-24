@@ -25,8 +25,8 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <div class="main">
     <div class="wrap_mar">
         <?php echo $this->render('_ad-ask'); ?>
-        <?php echo $this->render('_ad-time'); ?>
-        <?php echo $this->render('_ask-pic'); ?>
+        <?php //echo $this->render('_ad-time'); ?>
+        <?php //echo $this->render('_ask-pic'); ?>
         <?php echo $this->render('_ask', ['infos' => $askInfos]); ?>
     </div>
 </div>

@@ -1,5 +1,13 @@
 <?php
 return \gallerycms\components\RuleFormat::formatRule([
+    'select-city' => [
+        'hosts' => ['base'],
+        'data' => [
+            'pattern' => '/index', 
+            'route' => '/house/site/select-city', 
+            'suffix' => '.html'
+        ],
+    ],
     'index' => [
         'hosts' => ['base'],
         'data' => [

@@ -1,15 +1,17 @@
 <div class="zong_topbar clear">
     <div class="wrap_mar f12 clear">
-        <div id="testDiv">
+        <div id="">
             <ul class="fl topbar_left">
                 <li class="fl">
-                    <a href="/" target="_blank">首页</a></li>
+                    <a href="/">首页</a></li>
                 <li class="fl">
-                    <a href="/" target="_blank">装修公司</a></li>
+                <a href="/<?= $this->context->currentCityCode; ?>/" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName; ?>装修公司</a></li>
                 <li class="fl">
-                    <a rel="nofollow" href="javascript:void(0);" class="denglu" style="margin-right:0;"><?= $this->context->currentCityName; ?></a>
-                    <em>|</em>
-                    <a href="" target="_blank" style="color:#df0303;">选择城市</a></li>
+                    <a href="/" target="_blank" style="color:#df0303;">选择城市</a><em>|</em>
+                    <?php foreach (Yii::$app->params['companyInfos'] as $cInfo) { ?>
+                    <a href="/<?= $cInfo['code']; ?>/" class="denglu" style="margin-right:0;<?php if ($this->context->currentCityCode == $cInfo['code']) { echo 'color:#df0303;'; } ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
+                    <?php } ?>
+                </li>
             </ul>
         </div>
         <ul class="topbar_right fr">

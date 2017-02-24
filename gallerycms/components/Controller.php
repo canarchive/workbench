@@ -25,12 +25,14 @@ class Controller extends CommonController
             'keyword' => Yii::$app->params['seoKeyword'],
             'description' => Yii::$app->params['seoDescription'],
         ];
-        $infos = $this->_getTdkInfos();
+        $infos = require(Yii::getAlias('@gallerycms') . '/config/house/tdk.php');
+        $infosExt = require(Yii::getAlias('@gallerycms') . '/config/merchant/tdk.php');
+        $infos = array_merge($infos, $infosExt);
         $info = isset($infos[$index]) ? $infos[$index] : $default;
 
         $placeholder = array_merge(
             [
-                //'{{CITYNAME}}',
+                '{{CITYNAME}}',
                 '{{SITENAME}}',
                 '{{BASETITLE}}',
                 '{{BASEKEYWORD}}',
@@ -39,7 +41,7 @@ class Controller extends CommonController
         );
         $replace = array_merge(
             [
-                //Yii::$app->params['currentCompany']['name'],
+                Yii::$app->params['currentCompany']['name'],
                 Yii::$app->params['siteName'],
                 $default['title'],
                 $default['keyword'],

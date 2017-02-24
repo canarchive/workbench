@@ -32,6 +32,7 @@ class SiteController extends HouseController
 
 	public function actionSelectCity()
 	{
+        $this->layout = 'main-about';
 		$this->getTdkInfos('site-select-city');
 		return $this->render('select-city');
 	}

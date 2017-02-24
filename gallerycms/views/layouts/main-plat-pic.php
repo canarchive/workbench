@@ -28,7 +28,7 @@ $this->params['jsStr'] = $this->render('platj-pic/_pic-js', []);
 <label for="tags">Tags: </label>
 <input id="tags"></div>  -->
 <!--hot begin-->
-<div class="top_ind clearfix">
+<!--<div class="top_ind clearfix">
     <div class="fl clearfix top_ind_lt">
         <span class="fl">17年度热门行业：</span>
         <div class="fl top_list">
@@ -46,7 +46,7 @@ $this->params['jsStr'] = $this->render('platj-pic/_pic-js', []);
         <i>|</i>
         <span>在线投资人数：
             <em>3417</em>人</span></div>
-</div>
+</div>-->
 <?= $content; ?>
 <?php echo $this->render('platj-pic/_pic-bottom-js'); ?>
 <!--pic-->

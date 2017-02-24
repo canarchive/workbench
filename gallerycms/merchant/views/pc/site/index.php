@@ -43,6 +43,8 @@ $info = $this->context->mDatas['info'];
     <!--content-->
     <div class="content wrapper clearfix">
     <?= $this->render('_content'); ?>
+    <?php //echo $this->render('_right'); ?>
+    <?= $this->render('@gallerycms/views/layouts/platj-merchant/_right'); ?>
     </div>
     <!-- 找资金 找场地 找装修 找优惠 合伙开店 找委托弹框 start-->
     <?= $this->render('_pop'); ?>
