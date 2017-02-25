@@ -21,7 +21,17 @@ class TmpController extends GallerycmsController
         $sorts = AskSort::find()->indexBy('code')->asArray()->all();
         $sql = '';
         $i = 0;
+        $infos = [];
         foreach ($sorts as $sort => $sortInfo) {
+            $infos[$sort] = [
+                'parent' => isset($sorts[$sortInfo['parent_code']]) ? $sorts[$sortInfo['parent_code']]['name'] : '',
+                'name' => $sortInfo['name'],
+                'title' => '',
+                'keyword' => '',
+                'description' => '',
+            ];
+            continue;
+
             $sortName = $sortInfo['name'];
             if ($sortInfo['parent_code'] == '') {
                 $sql .= "UPDATE `wc_ask_question` SET `sort_parent` = '{$sort}' WHERE `sort_parent` = '{$sortName}'<br />";
@@ -31,7 +41,8 @@ class TmpController extends GallerycmsController
             $sql .= "{$i}--UPDATE `wc_ask_question` SET `sort` = '{$sort}' WHERE `sort_parent` = '{$sortParent}' AND `sort` = '{$sortName}'<br />";*/
             $i++;
         }
-        echo $sql;
+        var_export($infos);
+        //echo $sql;
         //print_r($sorts);exit();
     }
 

@@ -5,7 +5,6 @@ namespace gallerycms\merchant\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\models\MerchantModel;
-use spread\models\CustomService;
 
 /**
  * This is the model class for table "merchant".
@@ -123,7 +122,6 @@ class Realcase extends MerchantModel
 	{
 		$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 
-		$serviceModel = new CustomService();
 		$pictureDesign = $this->getAttachmentModel()->findOne($info['picture_design']);
 		if (!empty($pictureDesign)) {
 			$info['picture_design'] = $pictureDesign->getUrl();
@@ -135,7 +133,7 @@ class Realcase extends MerchantModel
 
         $condition = [ 
             'info_table' => 'realcase',
-            'info_field' => 'design_sketch',
+            //'info_field' => 'design_sketch',
             //'info_field' => 'picture',
             'info_id' => $info->id,
             'in_use' => 1,
@@ -147,10 +145,12 @@ class Realcase extends MerchantModel
             $designSketchInfos[] = [ 
                 'url' => $url,
                 'name' => $attachment['filename'],
+                'info_id' => $attachment['info_id'],
+                'id' => $attachment['id'],
                 'description' => $attachment['description'],
             ];  
         }    
-        $info->design_sketch = $designSketchInfos;
+        $info->design_sketch = $this->_formatImgForShow($designSketchInfos);
 
 		return $info;
 	}

@@ -23,7 +23,7 @@ class WorkingController extends HouseController
         $pageStr = $datas['infos']['page'] > 1 ? "_第{$datas['infos']['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('realcase-index', $dataTdk);
+		$this->getTdkInfos('working-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
 
@@ -38,7 +38,7 @@ class WorkingController extends HouseController
 
         $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
 
-		$dataTdk = ['{{PAGESTR}}' => $pageStr];
+		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name']];
 		$this->getTdkInfos('merchant-working', $dataTdk);
 		return $this->render('merchant', $datas);
     }
@@ -63,7 +63,7 @@ class WorkingController extends HouseController
 	public function actionShow()
 	{
         $id = \Yii::$app->getRequest()->get('id');
-        /*$model = new Working();
+        $model = new Working();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
             return $this->redirect('/')->send();
@@ -82,12 +82,12 @@ class WorkingController extends HouseController
 			$str = $tagValue['values'][$tagKeyInfo];
 			$tagStr .= $str;
 			$info[$tagKey] = $str;
-		}
+        }
 
-        $dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];*/
+        $dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
         $this->getTdkInfos('merchant-working-show', $dataTdk);
 		$datas = [
-			'info' => [],//$info,
+			'info' => $info,
 		];
 		return $this->render('show', $datas);
 	}

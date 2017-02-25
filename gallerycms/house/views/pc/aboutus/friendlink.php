@@ -21,14 +21,14 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
             <div class="new_link">
                 <p class="new_code_p">文字链接：
                     <em><?= Yii::$app->params['siteNameBase']; ?>装修网</em>链接地址：
-                    <a target="_blank" href="http://www.to8to.com">http://www.to8to.com</a></p>
+                    <a target="_blank" href="<?= Yii::getAlias('@gallerycmsurl'); ?>"><?= Yii::getAlias('@gallerycmsurl'); ?></a></p>
                 <p class="pic_link_p">
                     <span>图片链接：</span>
                     <img src="http://img.to8to.com/front_end/pic/about_us_flink.png?v=1456423494" style=" vertical-align:top;" />
                     <span style="margin-left:111px;">链接示例：</span>
                     <textarea readonly="readonly">
-                        <a title="更专业的装修门户和设计师社区" href="http://www.to8to.com" target="_blank">
-                            <img src="http://www.to8to.com/img/logo/logo.gif" alt="更专业的装修门户和设计师社区"></a>
+                        <a title="更专业的装修门户和设计师社区" href="<?= Yii::getAlias('@gallerycmsurl'); ?>" target="_blank">
+                            <img src="<?= Yii::getAlias('@gallerycmsurl'); ?>/img/logo/logo.gif" alt="更专业的装修门户和设计师社区"></a>
                     </textarea>
                 </p>
             </div>

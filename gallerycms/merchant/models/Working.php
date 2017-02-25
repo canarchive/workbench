@@ -22,6 +22,7 @@ class Working extends MerchantModel
 	public $cement;
 	public $paint;
 	public $finish;
+    public $picture;
 
     
     /**
@@ -141,6 +142,27 @@ class Working extends MerchantModel
 		//echo $info->owner_id;exit();
 		$ownerInfo = $info->ownerInfo;
 		$info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
+
+        $condition = [ 
+            'info_table' => 'working',
+            //'info_field' => 'design_sketch',
+            //'info_field' => 'picture',
+            'info_id' => $info->id,
+            'in_use' => 1,
+        ];  
+        $infos = $this->getAttachmentModel()->find()->where($condition)->orderBy(['orderlist' => SORT_DESC])->all();
+        $pictureInfos = []; 
+        foreach ($infos as $attachment) {
+            $url = $attachment->getUrl();
+            $pictureInfos[] = [ 
+                'url' => $url,
+                'name' => $attachment['filename'],
+                'info_id' => $attachment['info_id'],
+                'id' => $attachment['id'],
+                'description' => $attachment['description'],
+            ];  
+        }    
+        $info->picture = $this->_formatImgForShow($pictureInfos);
 
 		return $info;
 	}

@@ -12,8 +12,8 @@ return [
     ],
     'sample-show' => [
 		'name' => '案例详情',
-		'pc-url' => '/sample-1.html',
-		'mobile-url' => '/sample-1.html',
+		'pc-url' => '/sample_show_1.html',
+		'mobile-url' => '/sample_show_1.html',
     ],
     /*'ask-index' => [
 		'name' => '问答首页',
@@ -62,7 +62,7 @@ return [
     ],
 	'aboutus-friendlink' => [
 		'name' => '友情链接',
-		'pc-url' => '/guestbook.html',
+		'pc-url' => '/friendlink.html',
 		//'mobile-url' => '/info-aboutus.html',
     ],
 	'aboutus-statement' => [

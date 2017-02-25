@@ -124,7 +124,6 @@ class Sample extends GallerycmsModel
                 'name' => $attachment['filename'],
                 'info_id' => $attachment['info_id'],
                 'id' => $attachment['id'],
-                
                 'description' => $attachment['description'],
             ];  
         }    

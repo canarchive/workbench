@@ -22,8 +22,8 @@ return [
     ],
     'realcase-show' => [
 		'name' => '实景详情',
-		'pc-url' => '/beijing/realcase-1.html',
-		'mobile-url' => '/beijing/realcase-1.html',
+		'pc-url' => '/beijing/realcase_show_1.html',
+		'mobile-url' => '/beijing/realcase_show_1.html',
     ],
     'working-list' => [
 		'name' => '工地列表',

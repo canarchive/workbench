@@ -6,7 +6,7 @@ use gallerycms\components\LinkPager;
 <div class="fl sel_left">
     <div class="sel_l_tit">
         <ul class="sorts fl clearfix">
-            <li class="li_li1 li_se"><a href="/sample/" title="效果图">效果图</a></li>
+        <li class="li_li1 li_se"><a href="<?= "/{$this->context->currentCityCode}/working/"; ?>" title="<?= $this->context->currentCityName . '工地'; ?>"><?= $this->context->currentCityName . '工地'; ?></a></li>
         </ul>
         <!--<ul class="styles fr clearfix">
             <li class="sy1 ">

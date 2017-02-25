@@ -147,7 +147,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/<city_code:\w+>/realcase-<id:\d+>',
+    		'pattern' => '/<city_code:\w+>/realcase_show_<id:\d+>',
     		'route'	=> '/house/realcase/show',
         ],
     ],

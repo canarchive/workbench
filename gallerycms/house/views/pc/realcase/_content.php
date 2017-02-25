@@ -6,7 +6,7 @@ use gallerycms\components\LinkPager;
 <div class="fl sel_left">
     <div class="sel_l_tit">
         <ul class="sorts fl clearfix">
-            <li class="li_li1 li_se"><a href="/sample/" title="效果图">效果图</a></li>
+            <li class="li_li1 li_se"><a href="<?= "/{$this->context->currentCityCode}/realcase/"; ?>" title="<?= $this->context->currentCityName . '实景案例'; ?>"><?= $this->context->currentCityName . '实景案例'; ?></a></li>
         </ul>
         <!--<ul class="styles fr clearfix">
             <li class="sy1 ">
@@ -21,13 +21,13 @@ use gallerycms\components\LinkPager;
             <input type="hidden" class="ajaxGetNumById" value="<?= $info['id']; ?>" />
             <dl class="dl_none">
                 <dt>
-                    <a href="/sample/show-<?= $info['id']; ?>" title="<?= $info['name']; ?>">
+                    <a href="<?= "/{$this->context->currentCityCode}/realcase_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
 						<img src="<?= $info['thumb']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" />
                     </a>
                     <!--<span></span><i>实景图片</i>-->
                 </dt>
                 <dd class="dd1">
-                    <a href="/sample/show-<?= $info['id']; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>
+                    <a href="<?= "/{$this->context->currentCityCode}/realcase_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>
                     <!--<a rel="nofollow" style="display:none;" href="javascript:;" id="_<?= $info['id']; ?>">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                     <a rel="nofollow" style="display:none;" href="javascript:;" id="jin_6572154">
