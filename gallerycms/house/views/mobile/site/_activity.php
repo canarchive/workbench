@@ -17,13 +17,13 @@
 <!--倒计时-->
 <div id="time">
     <div class="left1">
-        <a href="https://weidian.com/?userid=214234322">
+        <a href="/">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c013e-1969.png" /></a>
     </div>
     <div class="right1">
-        <a href="http://m.jmw.com.cn/xm6584312/">
+        <a href="/">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c32ce-1221.png" /></a>
-        <a href="http://m.jmw.com.cn/xm155795/">
+        <a href="/">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/30cf2-2627.png" /></a>
     </div>
 </div>

@@ -227,7 +227,7 @@ class Sample extends GallerycmsModel
 
     protected function _getSelect()
     {
-        return 'id,name,thumb,created_at,status';
+        return 'id,name,thumb,created_at,status,style,house_type,area_real';
     }
 
 	protected function _formatInfos($infos)

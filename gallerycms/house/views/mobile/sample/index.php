@@ -10,8 +10,7 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_j
 <?php //echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_header'); ?>
 <?php echo $this->render('_sort', ['houseSortInfos' => $houseSortInfos, 'tagInfos' => $tagInfos, 'model' => $model]); ?>
-<!-- 行业站品牌 start -->
-<?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_content'); ?>
+<?php echo $this->render('_content', ['infos' => $infos, 'pages' => $pages]); ?>
 <!-- 公共底部 start -->
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer-index'); ?>
 <!-- 底部通栏 -->

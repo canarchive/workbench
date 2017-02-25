@@ -10,7 +10,7 @@ foreach ($houseSortInfos as $sortKey => $sortInfo) {
     <style type="text/css">.tend-1{ overflow:hidden; } .tend_li7 { position: absolute; background: #e0e0e0; width: 1px; height: 20px; left: 33%; top: 30%; } .tend-1 li a span{ text-indent:5px; } .tend-1 li a span i{ background:none;} .tend-1 li i.sanJiao{ -webkit-transition: all 0.1s ease 0s; transition: all 0.1s ease 0s; } #J-captain-4 .captain-1{ width:100%; } #J-captain-4 .captain-1 li{ width:50%; box-sizing:border-box; float:left; } #J-captain-4 .captain-1 li a span{ background:none;}</style>
     <ul class="tend-1 clearfix" id="hot">
         <li class="tend_li1" id="tend_li1" style="width:25%;">
-            <a href="javascript:;" onclick="change(this)">
+            <a href="javascript:;">
             <span><?= $titles['house_type']; ?><i class="sanJiao"></i></span>
             </a>
         </li>

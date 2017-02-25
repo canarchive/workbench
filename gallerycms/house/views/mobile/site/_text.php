@@ -1,13 +1,13 @@
 <!--文字滚动-->
 <div id="MoveTex">
-    <span>
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/892ab-4068.png"></span>
+    <span><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/892ab-4068.png"></span>
     <div class="main">
         <div class="text">
             <div id="newP">
                 <div class="timeM">
                     <b id="p1-span">01.</b>
-                    <b id="p2-span">21</b></div>
+                    <b id="p2-span">21</b>
+                </div>
             </div>
             <!--滚动-->
             <div id="scrollDiv">
@@ -20,6 +20,6 @@
                     </ul>
                 </div>
             </div>
-            <!--滚动--></div>
+        </div>
     </div>
 </div>
