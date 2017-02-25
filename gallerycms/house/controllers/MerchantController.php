@@ -46,7 +46,7 @@ class MerchantController extends MerchantControllerBase
         $pageStr = $page > 1 ? "_第{$page}页-" : '-';
 
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('sample-index', $dataTdk);
+		$this->getTdkInfos('merchant-index', $dataTdk);
 		return $this->render('index', $datas);
 	}
 }

@@ -230,4 +230,12 @@ class Sample extends GallerycmsModel
     {
         return 'id,name,thumb,created_at,status';
     }
+
+	protected function _formatInfos($infos)
+	{
+		foreach ($infos as $key => & $info) {
+			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+		}
+		return $infos;
+	}
 }

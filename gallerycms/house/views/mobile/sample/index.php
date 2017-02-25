@@ -7,9 +7,9 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_js-header');
 ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_top-style'); ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_header'); ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_sort'); ?>
+<?php echo $this->render('_sort', ['houseSortInfos' => $houseSortInfos, 'tagInfos' => $tagInfos, 'model' => $model]); ?>
 <!-- 行业站品牌 start -->
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_content'); ?>
 <!-- 公共底部 start -->

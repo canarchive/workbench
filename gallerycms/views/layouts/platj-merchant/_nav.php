@@ -1,6 +1,7 @@
 <?php
 $info = $this->context->mDatas['info'];
 $currentNav = isset($this->params['currentNav']) ? $this->params['currentNav'] : 'index';
+$baseUrl = Yii::getAlias('@gallerycmsurl');
 ?>
 <script>var is_login = "unlogin";</script>
 <div class="nav wrapper clearfix">
@@ -8,15 +9,15 @@ $currentNav = isset($this->params['currentNav']) ? $this->params['currentNav'] :
         <li>
             <a <?php if ($currentNav == 'index') { echo 'class="current2"'; } ?> href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?>首页</a></li>
         <li>
-            <a <?php if ($currentNav == 'desc') { echo 'class="current2"'; } ?> href="<?= "/{$info['city_code']}/showsj_{$info['code']}.html"; ?>" title="<?= $info['name']; ?>介绍"><?= $info['name']; ?>介绍</a></li>
+            <a <?php if ($currentNav == 'desc') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/showsj_{$info['code']}.html"; ?>" title="<?= $info['name']; ?>介绍"><?= $info['name']; ?>介绍</a></li>
         <li>
-            <a <?php if ($currentNav == 'realcase') { echo 'class="current2"'; } ?> href="<?= "/{$info['city_code']}/{$info['code']}/realcase/"; ?>" title="<?= $info['name']; ?>实景案例"><?= $info['name']; ?>实景案例</a></li>
+            <a <?php if ($currentNav == 'realcase') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/realcase/"; ?>" title="<?= $info['name']; ?>实景案例"><?= $info['name']; ?>实景案例</a></li>
         <li>
-            <a <?php if ($currentNav == 'working') { echo 'class="current2"'; } ?> href="<?= "/{$info['city_code']}/{$info['code']}/working/"; ?>" title="<?= $info['name']; ?>工地"><?= $info['name']; ?>工地</a></li>
+            <a <?php if ($currentNav == 'working') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/working/"; ?>" title="<?= $info['name']; ?>工地"><?= $info['name']; ?>工地</a></li>
         <li>
-            <a <?php if ($currentNav == 'designer') { echo 'class="current2"'; } ?> href="<?= "/{$info['city_code']}/{$info['code']}/designer/"; ?>" title="<?= $info['name']; ?>设计师"><?= $info['name']; ?>设计师</a></li>
+            <a <?php if ($currentNav == 'designer') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/designer/"; ?>" title="<?= $info['name']; ?>设计师"><?= $info['name']; ?>设计师</a></li>
         <li>
-            <a <?php if ($currentNav == 'comment') { echo 'class="current2"'; } ?> href="<?= "/{$info['city_code']}/{$info['code']}/comment/"; ?>" title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></li>
+            <a <?php if ($currentNav == 'comment') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/comment/"; ?>" title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></li>
         <script type="text/javascript">jQuery(document).ready(function() {
                 $.ajax({
                     type: "get",

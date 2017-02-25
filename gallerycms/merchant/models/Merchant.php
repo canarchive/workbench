@@ -244,4 +244,12 @@ class Merchant extends MerchantModel
 		$url = "http://sj-{$this->code}.{$domain}/";
         return $url;
     }
+
+	protected function _formatInfos($infos)
+	{
+		foreach ($infos as $key => & $info) {
+			$info['logo'] = $info->getAttachmentUrl($info['logo']);
+		}
+		return $infos;
+	}
 }

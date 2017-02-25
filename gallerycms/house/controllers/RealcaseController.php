@@ -23,7 +23,7 @@ class RealcaseController extends HouseController
         $pageStr = $datas['infos']['page'] > 1 ? "_第{$datas['infos']['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('realcase-index', $dataTdk);
+		$this->getTdkInfos('merchant-realcase', $dataTdk);
 		return $this->render('index', $datas);
 	}
 
@@ -85,8 +85,8 @@ class RealcaseController extends HouseController
 			$info[$tagKey] = $str;
 		}
 
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-        $this->getTdkInfos('sample-show', $dataTdk);*/
+        $dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];*/
+        $this->getTdkInfos('merchant-realcase-show', $dataTdk);
 		$datas = [
 			'info' => [],//$info,
 		];

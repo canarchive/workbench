@@ -28,7 +28,7 @@ class SampleController extends HouseController
 		//$infos = $model->getInfos([]);
         $where = [];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 30]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 18]);
 		$datas = [
 			'tag' => $tag,
 			'page' => $page,

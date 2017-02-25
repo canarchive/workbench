@@ -39,7 +39,7 @@ class WorkingController extends HouseController
         $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('working-index', $dataTdk);
+		$this->getTdkInfos('merchant-working', $dataTdk);
 		return $this->render('merchant', $datas);
     }
 
@@ -84,8 +84,8 @@ class WorkingController extends HouseController
 			$info[$tagKey] = $str;
 		}
 
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-        $this->getTdkInfos('sample-show', $dataTdk);*/
+        $dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];*/
+        $this->getTdkInfos('merchant-working-show', $dataTdk);
 		$datas = [
 			'info' => [],//$info,
 		];

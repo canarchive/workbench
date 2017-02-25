@@ -23,8 +23,8 @@
             <ul>
                 <li>
                     <em></em>
-                    <label id="current_city"><?= Yii::$app->params['currentCompany']['name']; ?></label>
-                    <a href="/change-city.html" rel="nofollow">[切换]</a></li>
+                    <label id=""><?= Yii::$app->params['currentCompany']['name']; ?></label>
+                    <a href="/index.html" rel="nofollow">[切换]</a></li>
             </ul>
         </div>
     </div>
