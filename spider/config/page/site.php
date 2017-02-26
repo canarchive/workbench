@@ -20,4 +20,12 @@ return [
         'code' => 'mflower',
         'name' => 'FLOWER',
     ],
+    'juran' => [
+        'code' => 'spreadjr',
+        'name' => '居然',
+    ],
+    'jizhu' => [
+        'code' => 'spreadjz',
+        'name' => '极装吉住',
+    ],
 ];

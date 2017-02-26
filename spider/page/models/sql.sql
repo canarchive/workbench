@@ -2,6 +2,18 @@
 
 INSERT INTO `ws_page` 
     (`site_code`, `code`, `name`, `name_source`, `url`, `is_mobile`, `created_at`, `description`, `isbak`) VALUES 
+    ('juran', 'jrdp', '居然大牌汇', '推广页', 'http://lohohd.juran.com.cn/juran/event/170222hd/index.html?pcbd_1937', '0', '20170205', '', 0),
+
+    ('juran', 'snzb', '十年质保', '推广页', 'http://lohohd.juran.com.cn/juran/event/170217/index.html?bd_1951', '1', '20170205', '', 0),
+    ('juran', 'jrdph', '居然大牌会', '推广页', 'http://lohohd.juran.com.cn/juran/event/170223hd/index.html?from=singlemessage&isappinstalled=0', '1', '20170205', '', 0),
+    ('juran', 'jrzs', '居然装饰', '推广页', 'http://www.juranliwu.com/imptwg/a/index.html?bd_614', '1', '20170205', '', 0),
+
+    ('jizhu', 'zxtk', '极装全额退', '推广页', 'http://www.jzjz.com/pc/activity.html', '0', '20170205', '', 0),
+    ('jizhu', 'jzbj', '极装报价', '推广页', 'http://m.jzjz.com/custom/20160811/mobile', '1', '20170205', '', 0),
+    ('jizhu', 'zxtkm', '极装全额退', '推广页', 'http://m.jzjz.com/mobile/activity.html', '1', '20170205', '', 0),
+
+    ('juran', 'spread', '推广页', '推广页', 'http://www.juranliwu.com/juran/event/161013/index.html', '0', '20170205', '', 0),
+
     ('flower', 'index-home', '首页', '首页', 'http://flowerplus.cn/', '0', '20170205', '', 0),
     ('flower', '', '', '', '', '0', '20170205', '', 0),
 

@@ -7,7 +7,7 @@ use spider\models\SpiderAbstract;
 
 class AbstractModel extends SpiderAbstract
 {
-    protected $validExtNames = ['js', 'css', 'png', 'jpg', 'gif', 'ico', 'jpeg'];
+    protected $validExtNames = ['js', 'css', 'png', 'jpg', 'gif', 'ico', 'jpeg', 'eot', 'ttf', 'woff', 'svg', 'cur'];
     public $urlInfo;
 
     protected function formatFile($urlRemote)
@@ -55,7 +55,7 @@ class AbstractModel extends SpiderAbstract
         if (substr($url, 0, 1) != '.' || substr($url, 0, 2) == './') {
             $url = $urlPre . $url;
             //echo "<a href='{$url}' target='_blank'>{$url}</a>--{$urlBase}==<a href='{$this->url}' target='_blank'>{$this->url}</a><br />";
-            return $urlPre . $url;
+            return $url;
         }
         for ($i = 0; substr($url, 0, 3) == '../'; $i++) {
             $urlPre = dirname($urlPre);
