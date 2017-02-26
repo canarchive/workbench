@@ -8,16 +8,16 @@ $this->params['bodyClass'] = 'class="narrow_980"';
 ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/ask.js"></script>
 <div class="ask_class">
-    <?= $this->render('_breadnav'); ?>
+    <?= $this->render('_breadnav', ['sortInfos' => $sortInfos]); ?>
     <div class="container clear">
-        <?= $this->render('_nav'); ?>
+        <?= $this->render('_nav', $sortInfos); ?>
         <div class="col2_1">
             <div class="question_list">
                 <ul>
                     <?php foreach ($infos as $info) { ?>
                     <li>
                         <div class="question_hd">
-                            <a href="/ask-<?= $info['id']; ?>.html" target="_blank" class="ect">[客厅]<?= $info['name']; ?></a>
+                            <a href="/ask-<?= $info['id']; ?>.html" target="_blank" class="ect">[<?= $sortInfos['sortInfos'][$info['sort']]['name']; ?>]<?= $info['name']; ?></a>
                         </div>
                         <div class="question_bd ect"><?= $info['description']; ?></div>
                         <div class="question_ft clear">

@@ -61,7 +61,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/ask/lm-<sort:[a-z]+><page:_[0-9]+>',
+    		'pattern' => '/ask/lm_<sort:[a-z]+><page:_[0-9]+>',
     		'route'	=> '/house/ask/list',
     		'defaults' => ['page' => '_1'],
         ],

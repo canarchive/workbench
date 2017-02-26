@@ -48,7 +48,7 @@ class AskController extends HouseController
         $sortInfos = $this->_checkSort($sort);
 
         $where = ['status' => 1, 'sort' => $sortInfos['codes']];
-        $where = ['sort_parent' => '装修材料'];
+        $where = ['sort' => $sortInfos['codes']];
 		$model = new AskQuestion();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 20, 'pagePreStr' => '_']);
@@ -113,22 +113,27 @@ class AskController extends HouseController
         
         $parentCode = $cInfo['parent_code'];
         $pInfo = $parentCode == '' ? [] : $sortInfos[$parentCode];
-        $subInfos = [];
-        if ($parentCode == '') {
-            foreach ($sortInfos as $sortInfo) {
-                if ($sortInfo['parent_code'] == $parentCode) {
-                    $subInfos[$sortInfo['code']] = $sortInfo;
+        $levelInfos = [];
+        foreach ($sortInfos as $sCode => $sortInfo) {
+            if ($sortInfo['parent_code'] == '') {
+                $levelInfos[$sCode] = isset($levelInfos[$sCode]) ? $levelInfos[$sCode] : $sortInfo;
+            } else {
+                $pCode = $sortInfo['parent_code'];
+                if (!isset($levelInfos[$pCode])) {
+                    $levelInfos[$pCode] = $sortInfos[$pCode];
                 }
+                $levelInfos[$sortInfo['parent_code']]['subInfos'][$sCode] = $sortInfo;
             }
         }
+        //print_r($levelInfos);exit();
 
-        $codes = $parentCode = '' ? array_keys($subInfos) : [$code];
+        $codes = $code == '' ? array_keys($levelInfos) : ($parentCode == '' ? array_keys($levelInfos[$code]['subInfos']) : [$code]);
         $return = [
             'code' => $code, 
             'cInfo' => $cInfo,
             'parentCode' => $parentCode,
             'pInfo' => $pInfo,
-            'subInfos' => $subInfos,
+            'levelInfos' => $levelInfos,
             'codes' => $codes,
             'sortInfos' => $sortInfos,
         ];
