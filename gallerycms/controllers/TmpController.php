@@ -46,8 +46,10 @@ class TmpController extends GallerycmsController
 		$timeBase = time();
 		foreach ($siteCodes as $siteCode) {
 			foreach ($sortInfos as $sort => $name) {
-				//if ($sort != 'sqq') { continue;}
-				if ($sort != 'smobile') { continue;}
+                //if ($sort != 'sqq') { continue;}
+			    //if ($sort != 'smobile') { continue;}
+			    //if ($sort != 'svisitor') { continue;}
+			    if ($sort != 'market') { continue;}
 			$time = $timeBase - 86400 * 0 - rand(10000, 18000) + 3600 * 3;
 			echo date('Y-m-d H:i:s', $time); echo '<br />';
                 $sql .= "UPDATE `wc_article` SET `status` = 1, `created_at` = {$time}, `updated_at` = {$time} WHERE `sort` = '{$sort}' AND `site_code`= '{$siteCode}' AND `status` = 0 LIMIT 1; \n";

@@ -9,7 +9,7 @@ $this->params['jsFiles'] = [
 ];
 $this->params['formPosition'] = 'index';
 $this->params['formPositionName'] = 'index';
-$this->params['friendlinkInfos'] = $this->context->friendlinkInfos;
+//$this->params['friendlinkInfos'] = $this->context->friendlinkInfos;
 ?>
 <div class="main">
     <?= $this->render('_banner'); ?>

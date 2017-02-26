@@ -59,6 +59,7 @@ return [
             'site/logout',
             'site/error',
             'backend-upload/*',
+			'gallerycms/cmsad/article/upload',
             'debug/*',
         ]
     ],

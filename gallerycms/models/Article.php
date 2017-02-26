@@ -114,6 +114,7 @@ class Article extends GallerycmsModel
             $cDatas[$catdir]['id'] = $ids;
         }
 
+		$infos = $this->getInfos([], 28);
         foreach ($cDatas as $catdir => $info) {
             //$cDatas[$catdir]['subInfos'] = $this->getInfos([], 7);
             $cDatas[$catdir]['subInfos'] = array_splice($infos, 0, 7);//$this->getInfos([], 7);
