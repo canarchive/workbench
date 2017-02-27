@@ -4,20 +4,21 @@
             <span class="hcc_logo">
                 <a href="/" class="logo" id="logourl"><?= Yii::$app->params['siteNameBase']; ?>装修网</a>
             </span>
-            <form id="searchform" action="http://www.to8to.com/company/" method="get">
+            <form id="searchform">
                 <div class="header_search">
                     <div class="header_select">
                         <a href="javascript:void(0)" class="header_select_sort">
                             <span><em>装修公司</em><b></b></span>
                         </a>
                         <ul>
+                            <li><a href="javascript:void(0)">装修公司</a></li>
                             <li><a href="javascript:void(0)">装修问答</a></li>
                             <li><a href="javascript:void(0)">装修报价</a></li>
                         </ul>
                     </div>
                     <input type="text" class="header_search_input" name="keyword">
                     <em class="header_search_input_text">装修公司</em>
-                    <input type="submit" class="header_search_submit" value="搜 索">
+                    <input class="header_search_submit" onclick="searchOpt();" value="搜 索">
                 </div>
             </form>
             <!-- banner区域[[ -->
@@ -41,3 +42,8 @@
         </div>
     </div>
 </div>
+<script>
+function searchOp()
+{
+}
+</script>

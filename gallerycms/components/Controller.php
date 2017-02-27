@@ -18,17 +18,19 @@ class Controller extends CommonController
         $this->_initAsset();
     }
 
-    public function getTdkInfos($index, $datas = [])
+    public function getTdkInfos($index, $datas = [], $info = [])
     {
         $default = [
             'title' => Yii::$app->params['seoTitle'],
             'keyword' => Yii::$app->params['seoKeyword'],
             'description' => Yii::$app->params['seoDescription'],
         ];
-        $infos = require(Yii::getAlias('@gallerycms') . '/config/house/tdk.php');
-        $infosExt = require(Yii::getAlias('@gallerycms') . '/config/merchant/tdk.php');
-        $infos = array_merge($infos, $infosExt);
-        $info = isset($infos[$index]) ? $infos[$index] : $default;
+        if (empty($info)) {
+            $infos = require(Yii::getAlias('@gallerycms') . '/config/house/tdk.php');
+            $infosExt = require(Yii::getAlias('@gallerycms') . '/config/merchant/tdk.php');
+            $infos = array_merge($infos, $infosExt);
+            $info = isset($infos[$index]) ? $infos[$index] : $default;
+        }
 
         $placeholder = array_merge(
             [

@@ -1,5 +1,13 @@
 <?php
 return \gallerycms\components\RuleFormat::formatRule([
+    'search' => [
+        'hosts' => ['base', 'm', '3g', 'wap', 'merchant'],
+        'data' => [
+            'pattern' => '/search', 
+            'route' => '/house/search/index', 
+            'suffix' => '.html'
+        ],
+    ],
     'select-city' => [
         'hosts' => ['base'],
         'data' => [
@@ -70,7 +78,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/ask/<tag:\d+>_<page:[0-9]+>',
+    		'pattern' => '/ask/<tag:\d+><page:_[0-9]+>',
     		'route'	=> '/house/ask/taglist',
     		'defaults' => ['page' => '_1'],
         ],

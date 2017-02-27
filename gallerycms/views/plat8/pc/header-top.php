@@ -24,7 +24,8 @@
                 <li>
                     <em></em>
                     <label id=""><?= Yii::$app->params['currentCompany']['name']; ?></label>
-                    <a href="/index.html" rel="nofollow">[切换]</a></li>
+                    <!--<a href="/index.html" rel="nofollow">[切换]</a>-->
+                </li>
             </ul>
         </div>
     </div>

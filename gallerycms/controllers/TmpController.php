@@ -7,6 +7,7 @@ use Overtrue\Pinyin\Pinyin;
 use gallerycms\components\Controller as GallerycmsController;
 use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\AskSort;
+use gallerycms\house\models\AskTag;
 
 class TmpController extends GallerycmsController
 {
@@ -15,6 +16,49 @@ class TmpController extends GallerycmsController
         $action = Yii::$app->request->get('action');
         $this->$action();
     }   
+
+    public function asktag()
+    {
+        /*$model = new AskTag();
+        $sqlFile = '/tmp/ask/tag.sql';
+        $sql = file_get_contents($sqlFile);
+        $sortInfos = $model->db->createCommand($sql)->execute();
+        exit();*/
+        $file = '/tmp/ask/ptci.txt';
+        $askTag = new AskTag();
+        $datas = file($file);
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+        echo count($datas), '<br />';
+
+        $sqlFile = '/tmp/ask/tag.sql';
+        $i = 0;
+        foreach ($datas as $data) {
+            $info = explode("\t", $data);
+            $name = str_replace("'", '"', trim(trim($info[0]), '"'));
+            $t = str_replace("'", '"', trim(trim($info[1]), '"'));
+            $k = str_replace("'", '"', trim(trim($info[2]), '"'));
+            $d = str_replace("'", '"', trim(trim($info[3]), '"')); 
+            $sqlStr = "INSERT INTO `wc_ask_tag` (`name`, `meta_title`, `meta_keyword`, `meta_description`) VALUES('{$name}', '{$t}', '{$k}', '{$d}');\n";
+            file_put_contents($sqlFile, $sqlStr, FILE_APPEND);
+            $i++;
+        }
+        echo $i;
+    }
+
+    public function utdk()
+    {
+        return ;
+        $askSort = new AskSort();
+        $datas = require Yii::getAlias('@gallerycms/config/house/ask-tdk.php');
+        foreach ($datas as $code => $data) {
+            $info = $askSort->find()->where(['code' => $code])->one();
+            $info->meta_title = $data['title'];
+            $info->meta_keyword = $data['keyword'];
+            $info->meta_description = $data['description'];
+            $info->update(false);
+        }
+    }
 
     protected function uQuestion()
     {

@@ -9,6 +9,7 @@ use gallerycms\components\HouseController;
 use gallerycms\house\models\Ask;
 use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\AskSort;
+use gallerycms\house\models\AskTag;
 
 class AskController extends HouseController
 {
@@ -30,6 +31,42 @@ class AskController extends HouseController
 
     public function actionTaglist()
     {
+		$page = ltrim(Yii::$app->request->get('page'));
+
+        $tag = intval(Yii::$app->request->get('tag'));
+        $tagInfo = false;
+        if ($tag > 0) {
+            $tagModel = new AskTag;
+            $tagInfo = $tagModel->find()->where($tag)->one();
+            $keyword = $tagInfo ? $tagInfo['name'] : '';
+        } else {
+            $keyword = strip_tags(Yii::$app->request->get('keyword'));
+        }
+        $where = [];//['status' => 1];
+        $andWhere = ['like', 'name', $keyword];
+		$model = new AskQuestion();
+        $orderBy = ['created_at' => SORT_DESC];
+		$infos = $model->getInfosByPage(['where' => $where, 'andWhere' => $andWhere, 'orderBy' => $orderBy, 'pageSize' => 20, 'pagePreStr' => '_']);
+		$datas = [
+            'keyword' => $keyword,
+			'page' => $page,
+			'model' => $model,
+			'infos' => $infos['infos'],
+            'pages' => $infos['pages'],
+            'sortInfos' => ['sortInfos' => AskSort::find()->indexBy('code')->asArray()->all()],
+		];
+		$pageStr = $page > 1 ? "第{$page}页-" : '';
+
+        $sortStr = isset($sortInfos['cInfo']['name']) ? $sortInfos['cInfo']['name'] : '兔班长问答列表';
+		$dataTdk = ['{{SORTSTR}}' => $keyword, '{{PAGESTR}}' => $pageStr];
+        $tdkInfo = [];
+        if ($tagInfo) {
+            $tdkInfo['title'] = $tagInfo['meta_title'];
+            $tdkInfo['keyword'] = $tagInfo['meta_keyword'];
+            $tdkInfo['desription'] = $tagInfo['meta_description'];
+        }
+		$this->getTdkInfos('ask-taglist', $dataTdk, $tdkInfo);
+		return $this->render('taglist', $datas);
     }
 
 	public function actionIndex()

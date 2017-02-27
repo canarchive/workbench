@@ -22,13 +22,13 @@ return [
     ],*/
     'ask-list' => [
 		'name' => '问答列表',
-		'pc-url' => '/ask/lm-gzsj/',
-		'mobile-url' => '/ask/lm-gzsj/',
+		'pc-url' => '/ask/lm_gzsj/',
+		'mobile-url' => '/ask/lm_gzsj/',
     ],
     'ask-show' => [
 		'name' => '问答详情',
-		'pc-url' => '/ask-1.html',
-		'mobile-url' => '/ask-1.html',
+		'pc-url' => '/askshow_1.html',
+		'mobile-url' => '/askshow_1.html',
     ],
     'quote-list' => [
 		'name' => '报价列表',
