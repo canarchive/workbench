@@ -12,6 +12,7 @@ class BaseModel extends ActiveRecord
 {
     use ModelAttachmentTrait;
     use ModelLevelTrait;
+    use PHPExcelTrait;
 
     protected function getTimestampBehaviorComponent($createField = 'created_at', $updateField = 'updated_at')
     {
@@ -183,8 +184,15 @@ class BaseModel extends ActiveRecord
 		$groupBy = isset($params['groupBy']) && !empty($params['groupBy']) ? $params['groupBy'] : null;
 
         $data = $this->find()->select($this->_getSelect())->where($where);
+        if (isset($params['andWhere'])) {
+            $data = $data->andWhere($params['andWhere']);
+        }
+
         $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
         $data = $this->find()->select($selectStr)->where($where);
+        if (isset($params['andWhere'])) {
+            $data = $data->andWhere($params['andWhere']);
+        }
 		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
 		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
         $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
