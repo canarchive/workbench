@@ -53,7 +53,7 @@ $this->params['jsStr'] = $this->render('platj-pic/_pic-js', []);
 <?php echo $this->render('platj-pic/_pic-valid'); ?>
 <?php echo $this->render('platj-pic/_pic-bottom-ad'); ?>
 <!--about begin-->
-<?php echo $this->render('platj-pic/_pic-bottom-related'); ?>
+<?php //echo $this->render('platj-pic/_pic-bottom-related'); ?>
 <!--about end-->
 <!-- 友情链接开始 -->
 <style type="text/css">.J-link{ width: 990px; margin: 0 auto; padding-bottom: 24px; border-bottom: 1px solid #eee;} .J-link-tit{ font-size: 16px; line-height: 28px; color: #4c4c4c; padding-bottom: 10px; padding-top: 20px;} .J-link-list li{ float: left; width: 127.7px; height: 24px; line-height: 24px;} .J-link-list li a{ color: #808080; display: inline-block; position: relative;} .J-link-list li a:hover{ background: #e53c01; color: #fff;} .span-left{ display: block; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/02205-1419.png) no-repeat 0 0; width: 11px; height: 24px; position: absolute; top: 0; left: -11px; z-index: 10;} .span-right{ display: block; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/02205-1419.png) no-repeat -11px 0; width: 11px; height: 24px; position: absolute; top: 0; right: -11px; z-index: 10;}</style>

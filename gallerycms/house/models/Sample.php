@@ -13,7 +13,7 @@ class Sample extends GallerycmsModel
 		'h' => 'house_type', 
 		's' => 'style', 
 		'a' => 'area', 
-		'c' => 'color'
+		//'c' => 'color'
 	];
     
     /**
@@ -159,10 +159,10 @@ class Sample extends GallerycmsModel
 				'name' => '面积',
 			    'values' => $this->areaInfos,
 			],
-			'color' => [
+			/*'color' => [
 				'name' => '色系',
 			    'values' => $this->colorInfos,
-		    ],
+            ],*/
 		];
 		return $datas;
 	}

@@ -8,48 +8,39 @@ $this->params['jsStr'] = $this->render('_js-header');
 ?>
 
 <?php echo $this->render('@gallerycms/views/layouts-m/plat8/_header'); ?>
+<style>
+.shareto-wrap h2 {
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+</style>
+
 <article>
     <header>
-        <h1><?= Yii::$app->params['siteNameBase']; ?>装修网：装修就上<?= Yii::$app->params['siteNameBase']; ?></h1>
-        <span><a href="/news/pinpai/">品牌风向</a>|</span>
-        <time>2015-08-31</time><span>| 点击次数：593451</span>
+        <br /><br />
+        <h1><?= Yii::$app->params['siteNameBase']; ?>装修网：装修就找<?= Yii::$app->params['siteNameBase']; ?></h1>
+        <!--<span><a href="/news/pinpai/">品牌风向</a>|</span><time>2015-08-31</time><span>| 点击次数：593451</span>-->
     </header>
     <div class="details">
         <p style="text-align:center;line-height:1.75em;margin-top:10px;">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/6b375-9554.jpg" title="土巴兔logo" alt="网页端RGB_1.jpg" border="0" hspace="0" vspace="0" /></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　土巴兔</span>
-            <a href="http://m.to8to.com/" target="">装修网</a>
-            <span style="background-color:transparent;font-size:14px">由深圳市彬讯科技有限公司创办于2008年7月，总部位于深圳市南山区科技园，是第三方报告(艾瑞数据、百度指数)双项排名靠前的</span>
-            <a href="http://m.to8to.com/" target="">装修</a>
-            <span style="background-color:transparent;font-size:14px">网站。</span></p>
+            <span style="background-color:transparent;font-size:14px"><?= Yii::$app->params['siteNameBase']; ?></span>
+            <a href="/" target="">装修网</a>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　自创办以来，土巴兔始终秉承“用心服务用户来赢得口碑和利益”的经营理念，并始终处于高速而稳健的发展态势。截止目前，土巴兔已开通250个城市分站，汇聚全国7万多家正规</span>
-            <a href="http://m.to8to.com/company/" target="">装修公司</a>
-            <span style="background-color:transparent;font-size:14px">、95万名
-                <a href="http://m.to8to.com/baike/1140" target="">室内设计</a>师，</span>
-            <span style="background-color:transparent">已成立北京、上海、广州、武汉、长沙、南宁等27家分公司，拥有员工3000余人。2015年，土巴兔获得了58同城、红杉资本、经纬创投等机构的C轮2亿美金投资。</span></p>
+        由北京兔班长科技有限公司斥巨资打造的兔班长装修网（<a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>">www.tubanzhang.com</a>)是中国最具权威的装修建材行业平台，目前已在全国近百个大中城市开设分站，在超过110个一二线设立分支机构，入驻装饰企业超过10万家，帮助逾十万企业成功转型电子商务。
+        </p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　土巴兔致力于让天下没有烦心的装修。为实现这个使命，全体土巴兔人不断努力，推动装修、</span>
-            <a href="http://m.to8to.com/jiaju/jiancai/" target="">建材</a>
-            <span style="background-color:transparent;font-size:14px">、家居市场的规范化，改变着数百万家庭的装修方式和置家理念，为用户创造出色的互联网装修体验。作为互联网装修领导者，土巴兔将通过O2O的模式，为传统装修及家居领域带来新的变革，不断为用户创造价值，引领行业发展。&quot;</span></p>
-
+        从2016年成立至今，兔班长网建立了完善的装饰企业品牌推广、形象维护体系，致力于扩大装饰企业在互联网的影响力，为企业带来高速的来自于互联网的产值增长，进而推动企业整体发展，有效地结合线上线下的影响力，最终为企业成功融入互联网时代的浪潮做出最强力的支持。
+        </p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">&nbsp;</span></p>
+        做中国最专业的家装门户，需要的是时间，对于兔班长人来说，敬业，职业，专业，用心，不断地提升自我，为客户提供优质的服务，帮助客户选择最优的装修公司，解决客户在家装中遇到的难题，是其发展过程中永远的话题。
+        </p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　<?= Yii::$app->params['siteSlogan']; ?></span></p>
-        <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　公司地址：<?= Yii::$app->params['siteAddressInfo']; ?></span></p>
-        <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　联系电话：0755-86086800</span></p>
-        <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　传真号码：0755-86086811</span></p>
-        <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　邮箱地址：marketing@corp.to8to.com</span></p>
-        <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-            <span style="background-color:transparent;font-size:14px">　　全国统一客服电话：<?= Yii::$app->params['siteHotline']; ?></span></p>
-        <p style="line-height:1.75em;">
-            <br /></p>
+        “创新、速度、合作、共赢”是兔班长人的宗旨，兔班长正在不断努力突破，打造一个互赢的家装平台。
+        </p>
     </div>
 </article>
 <section class="zx-wtg-wrap" style='margin:0 10px 0 10px;'>
