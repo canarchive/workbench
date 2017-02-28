@@ -1,5 +1,4 @@
 <!-- 首页底部 start -->
-<link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/be233-6823.css">
 <div class="copyright">
     <p class="copy-1">
         <a href="http://m.jmw.com.cn/">回到首页</a>
@@ -37,4 +36,3 @@
         }
     }</script>
 <!-- 首页底部 end -->
-<div style="height:65px;"></div>

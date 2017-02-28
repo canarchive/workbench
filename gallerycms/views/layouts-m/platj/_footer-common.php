@@ -9,32 +9,35 @@
 <div class="gray_mask"></div>
 <div style="width:100%; height:49px; border-top:1px solid #e0e1e5; background:#fff; position:fixed; bottom:0; left:0; z-index:999;">
     <div class="fixed_footer clear">
-        <a href="http://m.jmw.com.cn/">
+        <a href="/">
             <i class="zp_icon zp_icon1"></i>
             <br />首页</a>
-        <a href="http://m.jmw.com.cn/so/">
-            <i class="zp_icon zp_icon2"></i>
-            <br />找项目</a>
-        <a id="dl_line">
+        <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>">
+            <i class="zp_icon zp_icon2"></i><br />装修公司</a>
+        <a id="dl_line" href="/ask/" title="<?= $this->context->currentCityName . '装修问答'; ?>">
             <i class="zp_icon zp_icon3"></i>
-            <br />客服在线</a>
-        <a id="dl_more">
+            <br /><?= $this->context->currentCityName . '装修问答'; ?></a>
+        <!--<a id="dl_line" href="/ask/" title="<?= $this->context->currentCityName . '装修问答'; ?>">
+            <i class="zp_icon zp_icon3"></i>
+            <br /><?= $this->context->currentCityName . '装修问答'; ?></a>-->
+        <!--<a id="dl_more">
             <i class="zp_icon zp_icon4"></i>
-            <br />更多</a></div>
+            <br />更多</a>-->
+    </div>
     <!-- 更多弹框 -->
-    <div class="more_box" id="more_box">
+    <!--<div class="more_box" id="more_box">
         <a href="http://bbs.jmw.com.cn/" class="li1">
             <i>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5061c-8123.png" alt="" /></i>论坛</a>
-        <a href="http://m.jmw.com.cn/usercenter/footprint.php" class="li2">
+        <a href="/usercenter/footprint.php" class="li2">
             <i>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/edf77-6051.png" alt="" /></i>足迹</a>
-        <a href="http://m.jmw.com.cn/usercenter/grzx.php" class="li3" style="border-bottom:none;">
+        <a href="/usercenter/grzx.php" class="li3" style="border-bottom:none;">
             <i>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bce2b-5485.png" alt="" /></i>个人中心</a>
         <span>
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fb6dd-1992.png" alt="" /></span>
-    </div>
+    </div>-->
     <!-- 客服论坛 -->
     <div class="fixed_service" id="fixed_service">
         <form action="" method="post" id="m_footer">

@@ -54,7 +54,10 @@ $info = $this->context->mDatas['info'];
 <!-- 热搜品牌排行榜 start -->
 <?= $this->render('_hotinfo', ['merchantInfos' => $merchantInfos, 'askInfos' => $askInfos, 'quoteInfos' => $quoteInfos]); ?>
 <!-- 选项卡 加盟怎么样 -->
-<?= $this->render('_how', ['infos' => $merchantRelateInfos]); ?>
+<?php //echo $this->render('_how', ['infos' => $merchantRelateInfos]); ?>
+<div class="p_howLiao wrapper" style="margin-top:-8px;">
+    <ul class="ul_nav clearfix"></ul>
+</div>
 <script type="text/javascript">
 $(function() {
     $('.p_howLiao > .ul_nav > .li_hover').click(function() {

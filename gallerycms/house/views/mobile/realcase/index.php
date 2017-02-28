@@ -7,13 +7,12 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_js-header');
 ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_top-style'); ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_header'); ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_sort'); ?>
-<!-- 行业站品牌 start -->
-<?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_content'); ?>
+<?php echo $this->render('_content', ['infos' => $infos['infos'], 'pages' => $infos['pages']]); ?>
 <!-- 公共底部 start -->
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer-index'); ?>
+<link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/be233-6823.css">
+<div style="height:65px;"></div>
 <!-- 底部通栏 -->
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer-common'); ?>
 <!-- 公共短信验证 -->

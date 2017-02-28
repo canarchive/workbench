@@ -46,7 +46,7 @@ return [
     ],
 
     // 装修公司首页 http://sj-jz.cmshouse.alyee.com/
-    'merchant-indexshow' => [
+    'merchant-showindex' => [
         'title' => '【{{INFONAME}}】_{{INFONAME}}报价_{{INFONAME}}网站_{{INFONAME}}怎么样-兔班长装修网',
         'keyword' => '{{INFONAME}},{{INFONAME}}报价,{{INFONAME}}网站, {{INFONAME}}怎么样',
         'description' => '{{INFONAME}}汇聚{{INFONAME}}价格、图片、资讯等最新信息。为您提供{{INFONAME}}的发展历程！作为{{INFONAME}}网站，还展示了相关问答，给购买者传递最具性价比！{{INFONAME}}怎么样、功能好不好用的用户反馈信息，为消费者提供有价值参考。',

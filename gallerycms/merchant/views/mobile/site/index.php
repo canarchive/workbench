@@ -36,16 +36,4 @@ $info = $this->context->mDatas['info'];
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_merchant'); ?>
 
 <?php //echo $this->render('_footer-ext'); ?>
-<!-- 公共底部 start -->
-<footer class="copyRight">
-    <p class="copy-1">
-        <a href='<?= "/{$info['city_code']}/"; ?>'>回到首页</a><i></i>
-        <a href='/desc.html' rel="nofollow">关于我们</a><i></i>
-        <a href='http://m.jmw.com.cn/usercenter/register.php'>注册</a>
-        <i></i>
-        <a href='http://m.jmw.com.cn/usercenter/login.php'>登录</a></p>
-    <p class="copy-2">
-        <span><?= Yii::$app->params['siteIcpInfo']; ?></span>
-    </p>
-</footer>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer'); ?>
