@@ -5,7 +5,7 @@
         <a class="hongBao_l fl" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#n_content').val('我想咨询晨阳水漆加盟项目，并领取开店礼包！');$('#origin').val(7);" style="margin-right:10px;widht:47%">
             <dl class="clear">
                 <dt class="fl">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/45ce1-7696.png" alt="" /></dt>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/45ce1-7696.png" alt="" /></dt>
                 <dd class="fl">
                     <p>开新店 领礼包</p>
                     <p>
@@ -16,7 +16,7 @@
         <a class="hongBao_l fr" onclick="$('#Pline_consult').show();$('.gray_mask').show();$('#n_content').val('我想咨询晨阳水漆加盟项目，并领取开店礼包！');$('#origin').val(7);">
             <dl class="clear">
                 <dt class="fl">
-                    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/45ce1-7696.png" alt="" /></dt>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/45ce1-7696.png" alt="" /></dt>
                 <dd class="fl">
                     <p>开新店 领礼包</p>
                     <p>

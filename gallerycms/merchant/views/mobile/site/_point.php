@@ -3,7 +3,7 @@
 <h2 class="wrap">中国加盟网创业指导</h2>
 <div class="zhiDao wrap clear"> 
 <dl class="fl">
-<dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/b995b-1996.png"/></dt>
+<dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/b995b-1996.png"/></dt>
 <dd class="fl">
 <p class="p1">创业顾问-杨老师</p>
 <p class="p2">4000500555转70001</p></dd>
@@ -13,7 +13,7 @@
 </div>
 <div class="zhiDao wrap clear"> 
 <dl class="fl">
-<dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/e5ae2-3504.png"/></dt>
+<dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e5ae2-3504.png"/></dt>
 <dd class="fl">
 <p class="p1">创业顾问-苏老师</p>
 <p class="p2">4000500555转70002</p></dd>
@@ -23,7 +23,7 @@
 </div>
 <div class="zhiDao wrap clear" style="border-bottom:none;"> 
 <dl class="fl">
-<dt class="fl"><img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/295c8-2055.png"/></dt>
+<dt class="fl"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/295c8-2055.png"/></dt>
 <dd class="fl">
 <p class="p1">创业顾问-秦老师</p>
 <p class="p2">4000500555转70003</p></dd>

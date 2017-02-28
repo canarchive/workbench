@@ -10,7 +10,7 @@
         <?php if ($i % 3 != 2) { echo '</ul>'; } ?>
     </section>
 </div>
-<script src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/js/touchtouch.jquery.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/touchtouch.jquery.js"></script>
 <script>$(function() {
         $('#thumbs a').touchTouch();
     });</script>

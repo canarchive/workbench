@@ -12,11 +12,11 @@ $this->params['jsStr'] = $this->render('_js-header');
     <ul class="rslides">
         <li>
             <a href="/index/sem/from/201">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/be20c-5915.png" width="320px" /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/be20c-5915.png" width="320px" /></a>
         </li>
         <li>
             <a href="javascript:;" onclick="m_to8to.download('zxgj')">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/eab11-8537.jpg" width="320px" /></a>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/eab11-8537.jpg" width="320px" /></a>
         </li>
     </ul>
 </div>
@@ -27,7 +27,7 @@ $this->params['jsStr'] = $this->render('_js-header');
     });</script>
 <div class="header">
     <a href="/nj">
-        <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/0558b-4654.png" class="logo-img" width="56"></a>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/0558b-4654.png" class="logo-img" width="56"></a>
     <span class="logo-node"></span>
     <span class="logo-name">互联网装修领导者</span>
     <a href="/city/index">
@@ -161,31 +161,31 @@ $this->params['jsStr'] = $this->render('_js-header');
     <div class="nav_box">
         <a class="nav_box_line" href="/nj">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/c4f77-6180.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/c4f77-6180.png" height="18px" /></div>
             <div class="nav_box_line_txt">首页</div></a>
         <a class="nav_box_line" href="/xiaoguotu/">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/8003a-3852.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/8003a-3852.png" height="18px" /></div>
             <div class="nav_box_line_txt">效果图</div></a>
         <a class="nav_box_line" href="/nj/company/">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/64fe8-7935.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/64fe8-7935.png" height="18px" /></div>
             <div class="nav_box_line_txt">找公司</div></a>
         <a class="nav_box_line" href="/nj/zb/index2.html">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/dbc4a-8372.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/dbc4a-8372.png" height="18px" /></div>
             <div class="nav_box_line_txt">申请免费设计</div></a>
         <a class="nav_box_line" href="/company/zxb.php#point=2_3_1_2">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/2abd7-3103.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/2abd7-3103.png" height="18px" /></div>
             <div class="nav_box_line_txt">装修保障</div></a>
         <a class="nav_box_line" href="/yezhu/zxlc.html">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/f5144-4374.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/f5144-4374.png" height="18px" /></div>
             <div class="nav_box_line_txt">学装修</div></a>
         <a class="nav_box_line" href="tel:4006900288">
             <div class="nav_box_line_icon">
-                <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/6037d-3329.png" height="18px" /></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/6037d-3329.png" height="18px" /></div>
             <div class="nav_box_line_txt">400电话咨询</div></a>
     </div>
 </div>
@@ -322,11 +322,11 @@ $this->params['jsStr'] = $this->render('_js-header');
     if (browser.versions.iPad) {
         $('head').find('meta[name=viewport]').attr('content', 'initial-scale=1.0,user-scalable=no,maximum-scale=1');
     }</script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/responsiveslides.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/common.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/seostatis.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/seostatis.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
 </body>
 
 </html>

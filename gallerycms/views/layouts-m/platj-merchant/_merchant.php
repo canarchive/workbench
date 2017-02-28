@@ -14,7 +14,7 @@ $mInfos = $this->context->mDatas['merchantInfos'];
                     <p class="p1"><?= $info['name']; ?></p></dt>
                 <!--<dd>
                     <p class="p2 clear">
-                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/73ee7-8473.png" alt="" class="fl img1" />
                         <span class="fl span_money">投资金额:</span>
                         <span>
                             <em>5~30</em>万</span></p>
@@ -23,7 +23,7 @@ $mInfos = $this->context->mDatas['merchantInfos'];
         </dl>
         <?php $i++; } ?>
     </div>
-    <style>.more-icon { background: rgba(0, 0, 0, 0) url("http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/5b596-3112.png") no-repeat scroll 0 0 / 12px auto; display: inline-block; height: 6px; margin-left: 8px; width: 12px; }</style>
+    <style>.more-icon { background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png") no-repeat scroll 0 0 / 12px auto; display: inline-block; height: 6px; margin-left: 8px; width: 12px; }</style>
     <a href="<?= "/{$info['city_code']}/merchant/"; ?>" title="查看更多装饰公司" style="font-size:12px;color:#62c77b;text-align: center;width: 100%;display:block; height:40px; line-height:40px; margin:auto;">查看更多装饰公司
         <i class="more-icon" id="more_jiameng"></i></a>
 </section>

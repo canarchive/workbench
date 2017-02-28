@@ -15,7 +15,7 @@
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                        <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" /></a>
+                                        <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" /></a>
                                 </dt>
                                 <dd>
                                     <em class="fl">
@@ -28,12 +28,12 @@
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
                                     <a href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                     <em></em>
                                     <span onclick="javascript:;">我也要点评晨阳水漆加盟</span></p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="18780" onclick="hits(this);">
                                     <a href="javascript:;" class="zan_a_18780">
-                                        <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                        <img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_18780">2</em>
                                     <span>赞一下</span></p>
                             </div>
@@ -44,7 +44,7 @@
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                        <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" /></a>
+                                        <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" /></a>
                                 </dt>
                                 <dd>
                                     <em class="fl">
@@ -57,12 +57,12 @@
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
                                     <a href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                     <em></em>
                                     <span onclick="javascript:;">我也要点评晨阳水漆加盟</span></p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="18705" onclick="hits(this);">
                                     <a href="javascript:;" class="zan_a_18705">
-                                        <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                        <img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_18705">0</em>
                                     <span>赞一下</span></p>
                             </div>
@@ -73,7 +73,7 @@
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                        <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" /></a>
+                                        <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" /></a>
                                 </dt>
                                 <dd>
                                     <em class="fl">
@@ -86,12 +86,12 @@
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
                                     <a href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                     <em></em>
                                     <span onclick="javascript:;">我也要点评晨阳水漆加盟</span></p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="17758" onclick="hits(this);">
                                     <a href="javascript:;" class="zan_a_17758">
-                                        <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                        <img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_17758">0</em>
                                     <span>赞一下</span></p>
                             </div>
@@ -102,7 +102,7 @@
                             <dl class="pingjia_dl clear">
                                 <dt>
                                     <a href="javascript:;">
-                                        <img class="fl" src="http://60.205.145.0/filesys/spider/pages/asset/platj/img/6ca70-5407.jpg" alt="" /></a>
+                                        <img class="fl" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6ca70-5407.jpg" alt="" /></a>
                                 </dt>
                                 <dd>
                                     <em class="fl">
@@ -115,12 +115,12 @@
                             <div class="pingjia_2 clear">
                                 <p class="fl" onclick="location.href='http://m.jmw.com.cn/m_scoreAction.php?pid=137829'" style="cursor:pointer">
                                     <a href="javascript:;">
-                                        <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/0c91b-9852.png" alt=""></a>
+                                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/0c91b-9852.png" alt=""></a>
                                     <em></em>
                                     <span onclick="javascript:;">我也要点评晨阳水漆加盟</span></p>
                                 <p class="fr" style="margin-right:12px;" target_id="137829" set="up" sid="17632" onclick="hits(this);">
                                     <a href="javascript:;" class="zan_a_17632">
-                                        <img alt="" src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
+                                        <img alt="" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/bc4bc-3022.png" style="width:16px; height:15px;"></a>
                                     <em id="count_zan_17632">0</em>
                                     <span>赞一下</span></p>
                             </div>

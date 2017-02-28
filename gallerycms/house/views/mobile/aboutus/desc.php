@@ -16,7 +16,7 @@ $this->params['jsStr'] = $this->render('_js-header');
     </header>
     <div class="details">
         <p style="text-align:center;line-height:1.75em;margin-top:10px;">
-            <img src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/img/6b375-9554.jpg" title="土巴兔logo" alt="网页端RGB_1.jpg" border="0" hspace="0" vspace="0" /></p>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/6b375-9554.jpg" title="土巴兔logo" alt="网页端RGB_1.jpg" border="0" hspace="0" vspace="0" /></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
             <span style="background-color:transparent;font-size:14px">　　土巴兔</span>
             <a href="http://m.to8to.com/" target="">装修网</a>
@@ -74,9 +74,9 @@ $this->params['jsStr'] = $this->render('_js-header');
 <?php //echo $this->render('_recommend'); ?>
 <?= $this->render('@gallerycms/views/layouts-m/plat8/_footer'); ?>
 <?= $this->render('_js-footer'); ?>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/share.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/share2.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/common.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/seostatis.min.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
-<script type="text/javascript" src="http://60.205.145.0/filesys/spider/pages/asset/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/share.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/share2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/seostatis.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/2a19dc2ac1471a7470fe7187a5537960_2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/h5appdownload_sourcecharge.min.js"></script>

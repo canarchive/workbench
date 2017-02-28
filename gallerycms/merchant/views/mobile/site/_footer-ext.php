@@ -136,7 +136,7 @@
 
         }
     }</script>
-<style>.icon_sex3{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; } .icon_sex4{ background:url('http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; } .kf-all{ display: none; width: 100%; height: 100%; background: rgba(0,0,0,.5); position: fixed; z-index: 1000; top:0; left:0; } .kf{ width: 270px; height: 334px; border-radius: 20px; background: #ffffff; position: absolute; top:50%; left:50%; margin-top: -167px; margin-left: -135px; } .kf-title{ width: 100%; text-align: center; height: 37px; line-height: 37px; border-bottom: 1px solid #E8E8E8; font-size: 17px; color: #333333; } .kf-name{ height: 33px; width: 100%; line-height: 33px; border-bottom: 1px solid #E8E8E8; } .kf-liuyan,.kf-name label{ margin-left: 21px; margin-right: 6px; } .kf-name input{ height: 23px; width: 180px; border: none; color:#999; } .kf-liuyan{ height: 51px; margin-top: 15px; } .kf-liuyan textarea { margin-top: -4px; vertical-align: middle; width: 170px; height: 50px; line-height: 20px; color: #999; border: none; font-size: 0.6875rem; font-family: "Microsoft YaHei"; } .kf-button{ border-top: 1px solid #E8E8E8; } .kf-button a{ display: block; float: left; width: 134px; color: #347AE2; line-height: 40px; text-align: center; }</style>
+<style>.icon_sex3{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/ff93c-8791.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; } .icon_sex4{ background:url('<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/fe50e-9848.png') no-repeat center; width:13px; height:13px; background-size:13px 13px; margin:16px 6px 0 0; } .kf-all{ display: none; width: 100%; height: 100%; background: rgba(0,0,0,.5); position: fixed; z-index: 1000; top:0; left:0; } .kf{ width: 270px; height: 334px; border-radius: 20px; background: #ffffff; position: absolute; top:50%; left:50%; margin-top: -167px; margin-left: -135px; } .kf-title{ width: 100%; text-align: center; height: 37px; line-height: 37px; border-bottom: 1px solid #E8E8E8; font-size: 17px; color: #333333; } .kf-name{ height: 33px; width: 100%; line-height: 33px; border-bottom: 1px solid #E8E8E8; } .kf-liuyan,.kf-name label{ margin-left: 21px; margin-right: 6px; } .kf-name input{ height: 23px; width: 180px; border: none; color:#999; } .kf-liuyan{ height: 51px; margin-top: 15px; } .kf-liuyan textarea { margin-top: -4px; vertical-align: middle; width: 170px; height: 50px; line-height: 20px; color: #999; border: none; font-size: 0.6875rem; font-family: "Microsoft YaHei"; } .kf-button{ border-top: 1px solid #E8E8E8; } .kf-button a{ display: block; float: left; width: 134px; color: #347AE2; line-height: 40px; text-align: center; }</style>
 <script>$('#tel_label3').click(function() {
         $('#tel_label3 i').toggleClass('icon_tel_sex4');
         $('#teo_label4 i').removeClass('icon_tel_sex4');
@@ -241,7 +241,7 @@
         }
     }</script>
 <a class="returntop" href="#top" style="display: none;">
-    <img src="http://60.205.145.0/filesys/spider/pages/asset/platj/m/img/41560-7162.png"></a>
+    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
 <script>$(document).scroll(function() {
         var top = $(document).scrollTop();
         if (top == 0) {
