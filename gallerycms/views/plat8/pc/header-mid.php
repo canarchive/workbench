@@ -16,7 +16,8 @@
                             <li><a href="javascript:void(0)">装修报价</a></li>
                         </ul>
                     </div>
-                    <input type="text" class="header_search_input" name="keyword">
+                    <input type="text" class="header_search_input" id="keyword" name="keyword">
+                    <input type="hidden" id="search_sort" value="merchant">
                     <em class="header_search_input_text">装修公司</em>
                     <input class="header_search_submit" onclick="searchOpt();" value="搜 索">
                 </div>
@@ -42,8 +43,3 @@
         </div>
     </div>
 </div>
-<script>
-function searchOp()
-{
-}
-</script>

@@ -13,8 +13,8 @@ class SearchController extends HouseController
 	public function actionIndex()
 	{
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-		$keyword = Yii::$app->request->get('keyword');
-        $searchSort = Yii::$app->request->get('search_sort');
+		$keyword = Yii::$app->request->post('keyword');
+        $searchSort = Yii::$app->request->post('search_sort');
         $searchSorts = ['merchant', 'ask', 'quote'];
         if (empty($searchSort) || !in_array($searchSort, $searchSorts)) {
             return ['status' => 400, 'message' => '信息有误，请重新操作'];

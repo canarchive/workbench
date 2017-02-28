@@ -5,6 +5,7 @@ namespace gallerycms\house\controllers;
 use Yii;
 use yii\helpers\Url;
 use gallerycms\components\HouseController;
+use gallerycms\house\models\Guestbook;
 
 class AboutusController extends HouseController
 {
@@ -37,4 +38,19 @@ class AboutusController extends HouseController
 		$this->getTdkInfos('aboutus-' . $view);
 		return $this->render($view, $datas);
 	}
+
+    public function actionRecord()
+    {
+		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        if (!Yii::$app->request->isPost) {
+            //return ['status' => 400, 'message' => '操作异常，请您重新提交'];
+        }
+
+        $model = new Guestbook();
+        //$model->load(Yii::$app->request->get(), '');
+        $model->load(Yii::$app->request->post(), '');
+
+        $return = $model->doSubmitInfo();
+        return $return;
+    }
 }

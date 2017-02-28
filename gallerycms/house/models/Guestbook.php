@@ -16,10 +16,7 @@ class Guestbook extends GallerycmsModel
         return [
             ['mobile', 'filter', 'filter' => 'trim'],
             ['content', 'filter', 'filter' => 'strip_tags'],
-            [['mobile', 'company_name'], 'required'],
-            ['mobile', 'common\validators\MobileValidator'],
-			['email', 'email'],
-            [['contact', 'content', 'gender', 'city'], 'safe'],
+            [['content'], 'required'],
         ];
     }
 
@@ -34,7 +31,6 @@ class Guestbook extends GallerycmsModel
     public function doSubmitInfo()
     {
         if ($this->validate()) {
-            $this->city = $this->city == '-' ? '' : $this->city;
             $this->insert();
             return ['status' => 200, 'message' => 'OK'];
         }

@@ -24,12 +24,9 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
                     <a target="_blank" href="<?= Yii::getAlias('@gallerycmsurl'); ?>"><?= Yii::getAlias('@gallerycmsurl'); ?></a></p>
                 <p class="pic_link_p">
                     <span>图片链接：</span>
-                    <img src="http://img.to8to.com/front_end/pic/about_us_flink.png?v=1456423494" style=" vertical-align:top;" />
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/logo_about.png" style=" vertical-align:top;" />
                     <span style="margin-left:111px;">链接示例：</span>
-                    <textarea readonly="readonly">
-                        <a title="更专业的装修门户和设计师社区" href="<?= Yii::getAlias('@gallerycmsurl'); ?>" target="_blank">
-                            <img src="<?= Yii::getAlias('@gallerycmsurl'); ?>/img/logo/logo.gif" alt="更专业的装修门户和设计师社区"></a>
-                    </textarea>
+                    <textarea readonly="readonly"><a title="更专业的装修门户和设计师社区" href="<?= Yii::getAlias('@gallerycmsurl'); ?>" target="_blank"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/logo_about.png" alt="更专业的装修门户和设计师社区"></a></textarea>
                 </p>
             </div>
             <p class="new_link_p">关于合作
@@ -44,7 +41,7 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
                     <br/>“首页”友情链接，网站Google PageRank PR值不低于5，世界排名不低于5W名，搜索引擎快照更新正常，收录不低于5000页。</p>
                 <p class="new_p2">
                     <strong>联系方式：</strong>
-                    <br/>友链QQ:895278840,装修咨询QQ:4006900282
+                    <br/>友链QQ:<?= Yii::$app->params['siteFriendlinkQQ']; ?>,装修咨询QQ:<?= Yii::$app->params['siteCustomServiceQQ']; ?>
                     <br>[如您有疑问或其它合作方式，欢迎致电，共同商榷。]</p></div>
         </div>
     </div>

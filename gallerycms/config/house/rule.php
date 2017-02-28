@@ -24,6 +24,14 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => ''
         ],
     ],
+    'record' => [
+        'hosts' => ['base'],
+        'data' => [
+            'pattern' => '/record', 
+            'route' => '/house/aboutus/record', 
+            'suffix' => '.html'
+        ],
+    ],
     'aboutus' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
@@ -87,7 +95,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/ask-<id:\d+>',
+    		'pattern' => '/askshow_<id:\d+>',
     		'route'	=> '/house/ask/show',
         ],
     ],

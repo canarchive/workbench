@@ -29,39 +29,63 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
             </div>
         </div>
     </div>
-    <script type="text/javascript">function checkForm(obj) {
-            if (obj.fb.value == '' || obj.fb.value == '我们非常重视您的建议，请在这里填写告诉我们') {
-                obj.fb.focus();
-                alert('请输入您的建议！');
-                return false;
-            }
-        }
-        var fb = document.getElementById('fb');
-        fb.onblur = function() {
-            feedback = fb.value;
-            if (feedback == '') {
-                fb.value = '我们非常重视您的建议，请在这里填写告诉我们';
-            }
-        }
-        fb.onfocus = function() {
-            feedback = fb.value;
-            if (feedback == '我们非常重视您的建议，请在这里填写告诉我们') {
-                fb.value = '';
-            }
-        }
+<script type="text/javascript">
+function checkForm(obj) {
+    if (obj.fb.value == '' || obj.fb.value == '我们非常重视您的建议，请在这里填写告诉我们') {
+        obj.fb.focus();
+        alert('请输入您的建议！');
+        return false;
+    }
 
-        var email = document.getElementById('text');
-        email.onblur = function() {
-            emailAddress = email.value;
-            if (emailAddress == '') {
-                email.value = '请填写您的手机号码';
+    var data = {
+        'content': obj.fb.value,
+        'mobile': obj.text.value,
+        '_csrf': jq('#_csrf').val()
+    };
+    console.log(data);
+    jq.ajax({
+        type: "POST",
+        url: "/record.html",
+        data: data,
+        success:function(result){
+            if(result.status == 200) {
+                alert('非常感谢您的建议！');
+                window.location.href = '<?= Yii::getAlias('@gallerycmsurl'); ?>';
+            } else {
+                alert(result.message);
             }
+            return false;
         }
-        email.onfocus = function() {
-            emailAddress = email.value;
-            if (emailAddress == '请填写您的手机号码') {
-                email.value = '';
-            }
-        }</script>
+    });
+    return false;
+}
+var fb = document.getElementById('fb');
+fb.onblur = function() {
+    feedback = fb.value;
+    if (feedback == '') {
+        fb.value = '我们非常重视您的建议，请在这里填写告诉我们';
+    }
+}
+fb.onfocus = function() {
+    feedback = fb.value;
+    if (feedback == '我们非常重视您的建议，请在这里填写告诉我们') {
+        fb.value = '';
+    }
+}
+
+var email = document.getElementById('text');
+email.onblur = function() {
+    emailAddress = email.value;
+    if (emailAddress == '') {
+        email.value = '请填写您的手机号码';
+    }
+}
+email.onfocus = function() {
+    emailAddress = email.value;
+    if (emailAddress == '请填写您的手机号码') {
+        email.value = '';
+    }
+}
+</script>
     <div id="small_window"></div>
 </div>

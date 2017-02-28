@@ -17,26 +17,25 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
             </div>
             <div class="contact_type">
                 <strong>客服中心（技术支持，投诉，建议）：</strong>
-                <p>法律顾问：甘永辉律师，系中华全国律师协会会员。（律师执业证号：19020411007959）</p>
-                <p>全国统一客服电话：4006-900-288（服务时间：8:00 - 22:30）</p>
-                <p>版权投诉联系：zxcq@corp.to8to.com</p>
+                <!--<p>法律顾问：。（律师执业证号：）</p>-->
+                <p>7X24小时客服电话：<?= Yii::$app->params['siteHotline']; ?></p>
+                <p>版权投诉联系：tousu@weinaya.com</p>
                 <div class="contact_hot_line">
                     <div class="hot_line_left">
                         <p>如果您是网站、渠道，想洽谈资源置换、市场合作。请联系：</p>
                         <p>
-                            <i class="mail_ico"></i>邮箱：marketing@corp.to8to.com</p>
+                            <i class="mail_ico"></i>邮箱：<a href="mailto:kehu@weinaya.com">kehu@weinaya.com</a></p>
                     </div>
                     <div class="hot_line_right">
                         <p>如果您想在<?= Yii::$app->params['siteNameBase']; ?>投放广告或获得精准业务。请联系：</p>
                         <p>
-                            <i class="mail_ico"></i>邮箱：ad@corp.to8to.com</p>
-                        <i class="hot_line_circle">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5a70a-2667.png" /></i>
+                            <i class="mail_ico"></i>邮箱：<a href="mailto:co-product@weinaya.com">co-product@weinaya.com</a></p>
+                        <!--<i class="hot_line_circle"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/5a70a-2667.png" /></i>-->
                     </div>
                     <div class="hot_line_left" style="margin-top:10px;">
                         <p>如果您是媒体，想沟通采访及报道事宜。请联系：</p>
                         <p>
-                            <i class="mail_ico"></i>邮箱：PRMedia@corp.to8to.com</p>
+                            <i class="mail_ico"></i>邮箱：<a href="mailto:co-medium@weinaya.com">co-medium@weinaya.com</a></p>
                     </div>
                 </div>
             </div>
