@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 $cssFiles = isset($this->params['cssFiles']) ? $this->params['cssFiles'] : [];
 $jsFiles = isset($this->params['jsFiles']) ? $this->params['jsFiles'] : [];
@@ -69,6 +70,7 @@ $jsFooterFiles = isset($this->params['jsFooterFiles']) ? $this->params['jsFooter
 <?=  isset($this->params['footerJsStr']) ? $this->params['footerJsStr'] : ''; ?>
 <input type="hidden" id="position" value="<?= $this->context->pagePosition; ?>" />
 <input type="hidden" id="position_name" value="<?= $this->context->pagePositionName; ?>" />
+<?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none"></div>
 </body>
 </html>
