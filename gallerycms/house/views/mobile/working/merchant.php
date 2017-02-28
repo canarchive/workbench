@@ -6,7 +6,7 @@ $cssFiles = ['95055-5881', '35df6-9609', 'c3a8c-8745'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'platj/m']);
 $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-merchant/_js-header-1');
 ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_header'); ?>
 <?php echo $this->render('_content-merchant', ['infos' => $workingInfos]); ?>
 <!--我要咨询项目 start-->

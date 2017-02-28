@@ -23,7 +23,7 @@ class SiteController extends MerchantController
 	{
         $datas = $this->_initMerchant('merchant-show');
 		$dataTdk = ['{{INFONAME}}' => $datas['info']['name']];
-		$this->getTdkInfos('merchant-showindex', $dataTdk);
+		$this->getTdkInfos('merchant-desc', $dataTdk);
 
 		return $this->render('show', $datas);
 	}

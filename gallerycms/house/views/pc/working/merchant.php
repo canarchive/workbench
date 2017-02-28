@@ -1,6 +1,6 @@
 <?php
-
 use gallerycms\components\LinkPager;
+$this->params['currentNav'] = 'working';
 ?>
 <!--imgs begin-->
 <!--图片查看器-->
