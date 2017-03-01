@@ -6,20 +6,20 @@
                 <span class="nav_arrow_right"></span>
             </li>
             <li class="has_arrow">
-                <a href="/ask/" title="<?= $this->context->currentCityName . '装修问答'; ?>"><?= $this->context->currentCityName . '装修问答'; ?></a>
+                <a href="/ask_lm_gzsj/" title="<?= $this->context->currentCityName . '装修问答'; ?>"><?= $this->context->currentCityName . '装修问答'; ?></a>
                 <span class="nav_arrow_right"></span>
             </li>
             <?php if (!isset($isTag)) { ?>
             <?php if (!empty($sortInfos['pInfo'])) { ?>
             <li class="has_arrow">
-            <a href="<?= "/ask/lm_{$sortInfos['pInfo']['code']}/"; ?>"><?= $sortInfos['pInfo']['name']; ?></a>
+            <a href="<?= "/ask_lm_{$sortInfos['pInfo']['code']}/"; ?>"><?= $sortInfos['pInfo']['name']; ?></a>
                 <span class="nav_arrow_right"></span>
             </li>
             <?php } ?>
             <li><?= $sortInfos['cInfo']['name']; ?></li>
             <?php } else { ?>
             <li class="has_arrow">
-                <a href="/ask/tag.html" title="问答标签">标签</a>
+                <a href="/ask_tag.html" title="问答标签">标签</a>
                 <span class="nav_arrow_right"></span>
             </li>
             <li><?= $tagNavStr; ?></li>

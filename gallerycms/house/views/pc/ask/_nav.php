@@ -6,14 +6,14 @@ $subInfos = $parentCode == '' ? $levelInfos[$code]['subInfos'] : $levelInfos[$pa
         <ul class="clear">
             <?php foreach ($levelInfos as $pCode => $pInfo) { ?>
             <li <?php if ($pCode == $code || $parentCode == $pCode) { echo 'class="on"'; } ?>>
-            <a href="<?= "/ask/lm_{$pCode}/"; ?>"><?= $pInfo['name']; ?></a></li>
+            <a href="<?= "/ask_lm_{$pCode}/"; ?>"><?= $pInfo['name']; ?></a></li>
             <?php } ?>
         </ul>
     </div>
     <div class="mod_tab_bd">
         <div class="mod_tab_bditem">
             <?php foreach ($subInfos as $sCode => $sortInfo) { ?>
-            <a href="<?= "/ask/lm_{$sCode}/"; ?>" class="class_lnk <?php if ($sCode == $code) { echo 'class_lnk_on'; } ?>"><?= $sortInfo['name']; ?></a>
+            <a href="<?= "/ask_lm_{$sCode}/"; ?>" class="class_lnk <?php if ($sCode == $code) { echo 'class_lnk_on'; } ?>"><?= $sortInfo['name']; ?></a>
             <?php } ?>
         </div>
     </div>

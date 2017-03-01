@@ -9,6 +9,11 @@ class AskQuestion extends GallerycmsModel
 {
     use HouseTrait;
     
+    public static function getDb()
+    {
+        return \Yii::$app->dbAsk;
+    }	
+
     /**
      * @inheritdoc
      */

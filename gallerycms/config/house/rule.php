@@ -60,7 +60,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'ask-tag' => [
         'hosts' => ['base'],//, 'm', '3g', 'wap'],
         'data' => [
-            'pattern' => '/ask/tag', 
+            'pattern' => '/ask_tag', 
             'route' => '/house/ask/tag', 
             'suffix' => '.html'
         ],
@@ -77,7 +77,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/ask/lm_<sort:[a-z]+><page:_[0-9]+>',
+    		'pattern' => '/ask_lm_<sort:[a-z]+><page:_[0-9]+>',
     		'route'	=> '/house/ask/list',
     		'defaults' => ['page' => '_1'],
         ],
@@ -86,7 +86,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/ask/<tag:\d+><page:_[0-9]+>',
+    		'pattern' => '/ask_tag_<tag:\d+><page:_[0-9]+>',
     		'route'	=> '/house/ask/taglist',
     		'defaults' => ['page' => '_1'],
         ],

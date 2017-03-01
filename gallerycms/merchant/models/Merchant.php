@@ -215,8 +215,8 @@ class Merchant extends MerchantModel
 	public function getCommentInfos()
 	{
 		$model = new MerchantComment();
-		//$infos = $model->getInfos(['merchant_id' => $this->id]);
-		$infos = $model->getInfos([], 30);
+		$infos = $model->getInfos(['merchant_id' => $this->id], 30);
+		//$infos = $model->getInfos([], 30);
 
 		return $infos;
 	}

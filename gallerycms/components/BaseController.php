@@ -67,10 +67,11 @@ class BaseController extends Controller
         $qModel = new Quote();
         $aModel = new AskQuestion();
         $mModel = new Merchant();
-        $datas['quoteInfos'] = $qModel->getInfos([], 10);
-        $datas['askInfos'] = $aModel->getInfos([], 10);
-        $datas['merchantInfos'] = $mModel->getInfos([], 10);
-        $datas['merchantRelateInfos'] = $mModel->getInfos([], 10);
+        $where = ['status' => 1, 'city_code' => $this->currentCityCode];
+        $datas['quoteInfos'] = $qModel->getInfos($where, 20);
+        $datas['askInfos'] = $aModel->getInfos([], 20);
+        $datas['merchantInfos'] = $mModel->getInfos($where, 20);
+        $datas['merchantRelateInfos'] = $mModel->getInfos(['status' => 1], 20);
         $this->mDatas = $datas;
         return $datas;
     }

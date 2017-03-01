@@ -8,16 +8,16 @@ use yii\helpers\Url;
         <div class="channelOne clearfix" style="padding:0px 0 5px 12px;<?php if ($sortKey == 'color') { echo 'border-bottom: medium none;'; } ?>">
 		    <em><?= $sortInfo['name']; ?></em>
             <div style="float:left;">
-                <a href="http://search.jmw.com.cn/">不限</a>
-                <span style="display:none;" class="red_ll"></span>
-                <span style="display:none;" class="red_rr"></span>
+                <a href="/sample/">不限</a>
+                <span <?php if (!empty($tagInfos[$sortKey])) { echo 'style="display:none;"'; } ?> class="red_ll"></span>
+                <span <?php if (!empty($tagInfos[$sortKey])) { echo 'style="display:none;"'; } ?> class="red_rr"></span>
             </div>
             <ul class="clearfix" style="width:760px">
-				<?php foreach ($sortInfo['values'] as $key => $value) { $tag = $model->createTag($tagInfos, [$sortKey => $key]); ?>
+				<?php foreach ($sortInfo['values'] as $key => $value) { $tag = $model->createTag([], [$sortKey => $key]); ?>
                 <li <?php if ($key == $tagInfos[$sortKey]) { echo 'class="a_se"'; } ?>>
 					<a href="<?= Url::to(['/house/sample/index', 'page' => 1, 'tag' => $tag]); ?>" data-<?= str_replace('_', '', $sortKey); ?>="<?= $key; ?>" ><?= $value; ?></a>
-                    <span style="display:none;" class="red_ll"></span>
-                    <span style="display:none;" class="red_rr"></span>
+                    <span style="display:<?php if ($key != $tagInfos[$sortKey]) { echo 'none;'; } ?>" class="red_ll"></span>
+                    <span style="display:<?php if ($key != $tagInfos[$sortKey]) { echo 'none;'; } ?>" class="red_rr"></span>
                 </li>
 				<?php } ?>
             </ul>

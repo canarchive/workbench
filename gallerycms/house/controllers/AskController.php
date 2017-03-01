@@ -10,6 +10,7 @@ use gallerycms\house\models\Ask;
 use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\AskSort;
 use gallerycms\house\models\AskTag;
+use gallerycms\merchant\models\Merchant;
 
 class AskController extends HouseController
 {
@@ -47,6 +48,7 @@ class AskController extends HouseController
 		$model = new AskQuestion();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'andWhere' => $andWhere, 'orderBy' => $orderBy, 'pageSize' => 20, 'pagePreStr' => '_']);
+
 		$datas = [
             'keyword' => $keyword,
 			'page' => $page,
@@ -54,6 +56,8 @@ class AskController extends HouseController
 			'infos' => $infos['infos'],
             'pages' => $infos['pages'],
             'sortInfos' => ['sortInfos' => AskSort::find()->indexBy('code')->asArray()->all()],
+            'merchantInfos' => $this->_getMerchantInfos(),
+            'tagInfos' => $this->_getTagInfos(),
 		];
 		$pageStr = $page > 1 ? "第{$page}页-" : '';
 
@@ -95,12 +99,18 @@ class AskController extends HouseController
             'sortInfos' => $sortInfos,
 			'infos' => $infos['infos'],
             'pages' => $infos['pages'],
+            'merchantInfos' => $this->_getMerchantInfos(),
+            'tagInfos' => $this->_getTagInfos(),
 		];
-		$pageStr = $page > 1 ? "第{$page}页-" : '';
+        $page = str_replace('_', '', $page);
+		$pageStr = $page > 1 ? "_第{$page}页" : '';
 
         $sortStr = isset($sortInfos['cInfo']['name']) ? $sortInfos['cInfo']['name'] : '兔班长问答列表';
-		$dataTdk = ['{{sortSTR}}' => $sortStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('info-index', $dataTdk);
+		$dataTdk = ['{{SORTSTR}}' => $sortStr, '{{PAGESTR}}' => $pageStr];
+            $tdkInfo['title'] = $sortInfos['cInfo']['meta_title'];
+            $tdkInfo['keyword'] = $sortInfos['cInfo']['meta_keyword'];
+            $tdkInfo['desription'] = $sortInfos['cInfo']['meta_description'];
+		$this->getTdkInfos('ask-list', $dataTdk, $tdkInfo);
 		return $this->render('list', $datas);
 	}
 
@@ -113,21 +123,23 @@ class AskController extends HouseController
             throw new NotFoundHttpException('NO found');
 		}
 
-        $tagInfos = $this->_checkSort($info['sort']);
+        $sortInfos = $this->_checkSort($info['sort']);
 
         //$description = str_replace(' ', '', $info['description']);
         $description = StringHelper::truncate(strip_tags($info['description']), 200, '');
-        $tagStr = !empty($tagInfos['pInfo']) ? $tagInfos['pInfo']['name'] . ',' : '';
-        $tagStr .= !empty($tagInfos['cInfo']) ? $tagInfos['cInfo']['name'] . ',' : '';
+        $tagStr = !empty($sortInfos['pInfo']) ? $sortInfos['pInfo']['name'] . ',' : '';
+        $tagStr .= !empty($sortInfos['cInfo']) ? $sortInfos['cInfo']['name'] . ',' : '';
         $tagStr = rtrim($tagStr, ',');
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr, '{{DESCRIPTION}}' => $description];
 		$this->getTdkInfos('info-show', $dataTdk);
 
-        $infos = $model->getInfos(['sort' => $tagInfos['code']], 6);
+        $infos = $model->getInfos(['sort' => $sortInfos['code']], 6);
 		$datas = [
 			'info' => $info,
-            'tagInfos' => $tagInfos,
+            'sortInfos' => $sortInfos,
             'infos' => $infos,
+            'merchantInfos' => $this->_getMerchantInfos(),
+            'tagInfos' => $this->_getTagInfos(),
 		];
 		return $this->render('show', $datas);
         $id = Yii::$app->getRequest()->get('id');
@@ -175,5 +187,21 @@ class AskController extends HouseController
             'sortInfos' => $sortInfos,
         ];
         return $return;
+    }
+
+    protected function _getMerchantInfos()
+    {
+        $mModel = new Merchant();
+        $where = ['status' => 1, 'city_code' => $this->currentCityCode];
+        $datas = $mModel->getInfos($where, 8);
+        return $datas;
+
+    }
+
+    protected function _getTagInfos()
+    {
+        $model = new AskTag();
+        $infos = $model->find()->orderBy(['id' => SORT_DESC])->limit(40)->all();
+        return $infos;
     }
 }

@@ -26,7 +26,13 @@ class SampleController extends HouseController
 
 		$page = Yii::$app->request->get('page');
 		//$infos = $model->getInfos([]);
-        $where = [];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $where = [];
+        foreach ($tagInfos as $field => $value) {
+            if (empty($value)) {
+                continue;
+            }
+            $where[$field] = $value;
+        }
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 15]);
 		$datas = [
@@ -50,7 +56,8 @@ class SampleController extends HouseController
         $pageStr = $page > 1 ? "_第{$page}页-" : '-';
 
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('sample-index', $dataTdk);
+        $tdkIndex = empty($tag) ? 'sample-index' : 'sample-tag';
+		$this->getTdkInfos($tdkIndex, $dataTdk);
 		return $this->render('index', $datas);
 	}
 

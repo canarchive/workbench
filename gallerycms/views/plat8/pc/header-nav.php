@@ -11,19 +11,19 @@
                 <a class="nav_fzlink" href="/sample/">装修问答</a><b></b>
             </li>
             <li class="has_secondMenu ">
-                <a href="/ask/">
-                    <em class="menu_arrow"></em>
-                    <span>装修问答</span></a>
-                <dl>
+                <a href="/ask_gzsj">
+                    <!--<em class="menu_arrow"></em>-->
+                    <span>装修问答</span>
+                </a>
+                <!--<dl>
                     <dd>
                         <a href="/ask/">装修日记</a>
                         <a href="/ask/">装修日记</a>
                         <a href="/ask/">装修日记</a>
                         <a class="nav_fzlink" id="nevzwjurl" href="http://www.to8to.com/zwj/">找我家</a>
                     </dd>
-                </dl>
-                <b>
-                </b>
+                </dl>-->
+                <b></b>
             </li>
             <!--<li class="has_hotIcon ">
                 <a class="nav_fzlink" href="http://www.to8to.com/zb/">设计与报价</a>
@@ -33,7 +33,7 @@
                 <a class="nav_fzlink" href="/<?= Yii::$app->params['currentCompany']['code']; ?>/merchant/">装修公司</a><b></b>
             </li>
             <li class="has_homeIcon">
-                <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>/quote/">装修报价</a><b></b>
+                <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>_quote/">装修报价</a><b></b>
             </li>
         </ul>
         <?php if (isset($showRightNav) && ($showRightNav)) { ?>
