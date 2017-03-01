@@ -16,7 +16,18 @@
                 <span class="nav_arrow_right"></span>
             </li>
             <?php } ?>
+
+            <?php if (isset($infoName)) { ?>
+            <li class="has_arrow">
+            <a href="<?= "/ask_lm_{$sortInfos['cInfo']['code']}/"; ?>"><?= $sortInfos['cInfo']['name']; ?></a>
+                <span class="nav_arrow_right"></span>
+            </li>
+            <li><?= $infoName; ?></li>
+            <?php } else {?>
             <li><?= $sortInfos['cInfo']['name']; ?></li>
+            <?php } ?>
+
+
             <?php } else { ?>
             <li class="has_arrow">
                 <a href="/ask_tag.html" title="问答标签">标签</a>

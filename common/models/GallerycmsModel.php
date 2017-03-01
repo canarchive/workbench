@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use gallerycms\house\models\Member;
+
 class GallerycmsModel extends BaseModel
 {
     use HouseParamsTrait;
@@ -37,4 +39,21 @@ class GallerycmsModel extends BaseModel
 		$datas = $this->getLevelInfos($infos, 'id', 'parent_id', 'name', 0);
 		return $datas;
 	}	
+
+    public function getMemberInfo($info, $type)
+    {
+        $id = $info['user_id'];
+        if (empty($id)) {
+            $id = rand(1, 226542);
+            $member = Member::findOne($id);
+            $info->user_id = $id;
+            $info->update(false);
+            $numField = 'num_' . $type;
+            $member->$numField = $member->$numField + 1;
+            $member->update(false);
+            return $member;
+        }
+
+        return Member::findOne($id);
+    }
 }

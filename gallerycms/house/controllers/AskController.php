@@ -8,6 +8,7 @@ use yii\helpers\StringHelper;
 use gallerycms\components\HouseController;
 use gallerycms\house\models\Ask;
 use gallerycms\house\models\AskQuestion;
+use gallerycms\house\models\AskAnswer;
 use gallerycms\house\models\AskSort;
 use gallerycms\house\models\AskTag;
 use gallerycms\merchant\models\Merchant;
@@ -133,6 +134,10 @@ class AskController extends HouseController
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr, '{{DESCRIPTION}}' => $description];
 		$this->getTdkInfos('info-show', $dataTdk);
 
+        $info['memberInfo'] = $info->getMemberInfo($info, 'ask');
+        $aModel = new AskAnswer();
+        $answerInfos = $aModel->getInfos(['question_id' => $info['id']]);
+        //print_r($answerInfos);exit();
         $infos = $model->getInfos(['sort' => $sortInfos['code']], 6);
 		$datas = [
 			'info' => $info,
@@ -140,13 +145,6 @@ class AskController extends HouseController
             'infos' => $infos,
             'merchantInfos' => $this->_getMerchantInfos(),
             'tagInfos' => $this->_getTagInfos(),
-		];
-		return $this->render('show', $datas);
-        $id = Yii::$app->getRequest()->get('id');
-        $model = new AskQuestion();
-        $this->getTdkInfos('sample-show', $dataTdk);
-		$datas = [
-			'info' => $info,
             'answerInfos' => $answerInfos,
 		];
 		return $this->render('show', $datas);
@@ -193,7 +191,7 @@ class AskController extends HouseController
     {
         $mModel = new Merchant();
         $where = ['status' => 1, 'city_code' => $this->currentCityCode];
-        $datas = $mModel->getInfos($where, 8);
+        $datas = $mModel->getInfos($where, 5);
         return $datas;
 
     }

@@ -8,6 +8,7 @@ use common\models\GallerycmsModel;
 class AskQuestion extends GallerycmsModel
 {
     use HouseTrait;
+    public $memberInfo;
     
     public static function getDb()
     {
@@ -90,14 +91,14 @@ class AskQuestion extends GallerycmsModel
 
 	protected function _formatInfo($info)
 	{
-		$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+		//$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 
 		return $info;
 	}
 
 	public function getInfos($where, $limit = 100)
 	{
-		$infos = $this->find()->select('id, name, sort, created_at')->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
+		$infos = $this->find()->select('id, name, sort, num_answer, created_at')->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
 			//$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 			//$info['style'] = $info->styleInfos[$info->style];

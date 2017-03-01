@@ -8,13 +8,19 @@ use common\models\GallerycmsModel;
 class AskAnswer extends GallerycmsModel
 {
     use HouseTrait;
+    public $memberInfo;
+    
+    public static function getDb()
+    {
+        return \Yii::$app->dbAsk;
+    }	
     
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%ask_question}}';
+        return '{{%ask_answer}}';
     }
 
     /**
@@ -60,16 +66,6 @@ class AskAnswer extends GallerycmsModel
 		return $datas;
 	}	
 
-	public function afterSave($insert, $changedAttributes)
-	{
-        parent::afterSave($insert, $changedAttributes);
-
-		$fields = ['thumb'];
-		$this->_updateSingleAttachment('house_sample', $fields);
-
-		return true;
-	}	
-
 	public function getInfo($id)
 	{
 		$info = static::find()->where(['id' => $id])->one();//->toArray();
@@ -90,15 +86,20 @@ class AskAnswer extends GallerycmsModel
 		return $info;
 	}
 
-	public function getInfos($where, $limit = 100)
+	public function getInfos($where, $limit = 50)
 	{
-		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
-		foreach ($infos as $key => & $info) {
-			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
-			//$info['style'] = $info->styleInfos[$info->style];
+		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
+        $datas = ['infos' => []];
+		foreach ($infos as $key => $info) {
+            $info['memberInfo'] = $this->getMemberInfo($info, 'answer');
+            if ($info['is_best']) {
+                $datas['best'] = $info;
+            } else {
+                $datas['infos'][] = $info;
+            }
 		}
 
         //$cache->set($keyCache, $infos);
-		return $infos;
+		return $datas;
 	}		
 }
