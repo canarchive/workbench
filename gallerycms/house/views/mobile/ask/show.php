@@ -6,77 +6,20 @@ $cssFiles = ['dfc20-7370', 'ac6a6-5327', '492e1-6548', '205c9-1932', '9f77a-4233
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
 $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]);
 ?>
-<?= $this->render('_header-show'); ?>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/askbj.js"></script>
+<?= $this->render('_header'); ?>
 <style type='text/css'>pre { white-space: pre-wrap; word-wrap: break-word; } /* 新增热点 */ .zxask-detail-box h2 .hot-img{ height: 55px; width: 50px; display: inline-block; position: fixed; right: 20px; top: 190px; z-index: 5; }</style>
 <section class="zxask-detail-wrap" style="margin-top:45px">
-    <style>.zxask-search-wrap form{ margin-top:14px; height:36px; } .zxask-search-wrap .input-append{ border:none; } .zxask-search-wrap .input-append input{ position: relative; z-index: 2; width:80%; border: 1px solid #0baf4d; -webkit-border-radius: 4px; -o-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; padding-right:36px; } .icon-search{ display: block; position:absolute; z-index: 2; right:22%; top:10px; width:23px; height:22px; background: url(<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/c84eb-1512.png) no-repeat -60px -1014px; } .icon-search-input{ background-position-y:-1045px; } .zxask-search-wrap .input-append .add-on{ width:17%; -webkit-border-radius: 4px; -o-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }</style>
-    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/hammer.min.js" type="text/javascript"></script>
-    <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/componentsh5.js" type="text/javascript"></script>
-    <div class="zxask-search-wrap">
-        <form action="">
-            <div class="input-append">
-                <input id="askSearchKey" type="search" placeholder="输入您的装修问题">
-                <i id="askSearchBtn" class="icon-search" data-url="/ask/search.php?act=2&amp;keyword="></i>
-                <a id='ask_entrydetail' class="add-on" href="http://m.to8to.com/ask/ask_question.php">提问</a></div>
-        </form>
-        <p>已有
-            <em>&nbsp;5090045</em>&nbsp;位业主得到满意答案</p></div>
-    <script>$('#askSearchKey').on('keyup keydown',
-        function() {
-            if ($(this).val().length <= 30) {
-                if ($(this).val().length > 0) {
-                    $('.icon-search').addClass('icon-search-input');
-                } else {
-                    $('.icon-search').removeClass('icon-search-input');
-                }
-            } else {
-                $(this).val($(this).val().substr(0, 30));
-            }
-        });
-        // 输入框聚焦时遮盖提问
-        $('#askSearchKey').on('focus',
-        function() {
-            $('#askSearchKey').animate({
-                width: '100%'
-            });
-            $('#askSearchBtn').animate({
-                right: '2%'
-            });
-        });
-        // 输入款失焦时缩回
-        $('#askSearchKey').on('blur',
-        function() {
-            $('#askSearchKey').animate({
-                width: '80%'
-            });
-            $('#askSearchBtn').animate({
-                right: '22%'
-            });
-        });
-        var clickAskDetail = new Hammer(document.getElementById('ask_entrydetail'));
-        clickAskDetail.on('tap',
-        function() {
-            if (getCookie('askQuestionTenMin') === '1') {
-                window.Components.simplepop();
-                $('#alertOveryLayer').css('z-index', '101').show().find('.overlay-bd').html('您操作太频繁，请十分钟后再提问');
-                $('body').on('touchstart', '.overlay-btn-ok',
-                function() {
-                    setTimeout(function() {
-                        $('#alertOveryLayer').remove();
-                    },
-                    300);
-                }); return false;
-            }
-        });</script>
+    <?= $this->render('_search'); ?>
     <script>$('.zxask-search-wrap').find('p').remove().end().height(65);</script>
     <div class="zxask-detail-inner-wrap">
         <div class="zxask-detail-box zxask-question-content">
             <i class="icon-zxask-question"></i>
-            <h2 class="zxask-detail-title">2016装修材料报价多少
+            <h2 class="zxask-detail-title"><?= $info['name']; ?>
                 <a href="http://m.to8to.com/wxhuodong/initinfo/type/7/to8to_from/wechat_hd/utm_pos/xgz/" rel="nofollow" target="_blank" class="hot-img">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/e0127-4121.jpg" alt=""></a></h2>
             <div class="zxask-detail-link clearfix">
-                <time>2016-06-26</time>
+                <time><?= date('Y-m-d', $info['created_at']); ?></time>
                 <a href='http://m.to8to.com/ask'>问答</a>&gt;
                 <a href="/ask/more-h5i5">装饰材料</a>&gt;
                 <a href="/ask/more-h5s10i5">其他</a></div>
@@ -295,117 +238,8 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
     });</script>
 <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/css/b6c9e-6532.css" />
 <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/css/c103d-8382.css" />
-<style>/*20150724*/ .whan-ad { background: rgba(0, 0, 0, 0.7); height: 53px; position: fixed; bottom: 0; width: 100%; padding-left: 105px; z-index: 101; } .whan-ad div { position: relative; } .whan-ad div .wh-tx1 { position: absolute; margin-left: -86px; margin-top: -55px; width: 70px; } .whan-ad div h1 { font-size: 17px; color: #ffe400; font-family: "Arial" , "Microsoft YaHei"; margin-top: 10px; margin-bottom: 2px; letter-spacing: 3px; } .whan-ad div h2 { font-size: 13px; color: #fff; margin-top: 5px; letter-spacing: 1px; } .whan-ad div h3 { background: #ffe400; width: 36%; height: 32px; font-size: 14px; border-radius: 4px; position: absolute; right: 16px; top: -1px; color: #fff; text-align: center; line-height: 32px; } .whan-ad div h3 a{ color:#000;} /*以下是浮框下新增发标框样式 -------------------start bottom: 427px;*/ .zxd-form { padding: 12px 15px 22px 15px; background: transparent; } .zxd-form div { position: relative; background: #fff; border: solid 1px #e1e1e1; border-radius: 6px; margin: 10px 0; overflow: hidden; } .zxd-form div span { position: absolute; right: 15px; top: 16px; color: #333; } .zxd-form div.download-arrow:after { content: ''; width: 0; height: 0; border-style: solid; border-color: #999 transparent transparent transparent; border-width: 6px; font-size: 0; position: absolute; top: 23px; right: 18px; } .zxd-form div input { -webkit-appearance: none; outline: none; padding-left: 10px; display: inline-block; } .zxd-form div input[type='button'] { height: 50px; width: 100%; } .zxd-form div input[type='text'], .zxd-form div input[type='tel'],.zxd-form div input[type='number'] { display: block; height: 50px; border: none; text-align: left; width: 100%; } .zxd-form div label { position: relative; } .zxd-form div span { vertical-align: 6px; } .jiting { height: 50px; } .jiting label { float: left; width: 25%; } .jiting label select { background-color: #fff; -webkit-appearance: none; height: 50px; border: none; width: 100%; outline: none; margin-left: 3%; } .jiting label:after { content: ''; width: 0; height: 0; border-style: solid; border-color: #999 transparent transparent transparent; border-width: 6px; font-size: 0; position: absolute; top: 23px; right: 12px; } .jiting label:before { content: ''; position: absolute; right: 4px; top: 12px; border-right: solid 1px #e3e3e3; height: 26px; z-index: 10; } .jiting label:last-of-type::before { content: ''; position: absolute; right: 4px; top: 12px; border-right: solid 1px #e3e3e3; height: 26px; z-index: 10; display: none; } .jiting input { width: 50%; float: left; } .jiting input:nth-of-type(1) { height: 30px !important; margin-top: 10px; border-right: solid 1px #e3e3e3 !important; } .jishi { height: 50px; } .jishi label { float: left; width: 33%; } .jishi label select { -webkit-appearance: none; background-color: #fff; height: 50px; border: none; width: 100%; outline: none; margin-left: 3%; } .jishi label:after { content: ''; width: 0; height: 0; border-style: solid; border-color: #999 transparent transparent transparent; border-width: 6px; font-size: 0; position: absolute; top: 23px; right: 18px; } .jishi label:nth-of-type(1)::before { content: ''; position: absolute; right: 4px; top: 12px; border-right: solid 1px #e3e3e3; height: 26px; z-index: 10; } .jishi label:nth-of-type(2)::before { content: ''; position: absolute; right: 4px; top: 12px; border-right: solid 1px #e3e3e3; height: 26px; z-index: 10; } .jishi input { width: 33.2%; float: left; } .zxd-form-tip { font-size: 12px; color: #e54a4a; margin: 10px 0; display: none; } #ask-form-submit,#ask-submit-again { border: none; font-size: 17px; color: #fff; background-color: #f79c33; border-radius: 6px; -webkit-appearance: none; margin-top: 10px; height: 44px; width: 100%; text-align: center; outline: none; } #ask-form-submit.active ,#ask-submit-again.active{ background: #fff; color: #666; border: solid #e3e3e3 1px; } #area { background-color: #fff; text-align: left; border: none; -webkit-appearance: none; } .zxd-form .touch-input2 label { position: absolute; right: 15px; top: 16px; color: #333; } .ask-oarea-remind { color: #999; font-size: 13px; } .zxd-form .touch-input2 label { position: absolute; right: 15px; top: 16px; color: #333; } .zxd-form div.download-arrow1:after{ content: ''; width: 10px; height: 10px; font-size: 0; position: absolute; top: 20px; right: 18px; border-top: 1px solid #999; border-right: 1px solid #999; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); } #froms #area { background-color: #fff; text-align: left; border: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; } .whan-ad div .dialog-827img{ position: absolute; right: 27px; top: 45px; width: 36px; margin-top: -49px; transition: all 0.5s; -webkit-transition: all 0.5s; } .whan-ad div .dialog-827img-up{ -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); } /*结果页*/ .dialog-ask-fruit{ padding: 10px 20px 22px 20px; } .ask-fruit-cue p{ color: #666; font-size: 12px; line-height: 17px; position: relative; padding-left: 6px; } .ask-fruit-cue p:last-of-type{ color: #ff5e26; margin-top: 2px; } .ask-fruit-cue p span{ font-size: 12px; position: absolute; left: 0; top: 2px; } .ask-fruit-data ul{ border-width: 1px 0 0 1px; border-style: solid; border-color: #c7c7c7; overflow: hidden; } .ask-fruit-data ul li{ border-width: 0 1px 1px 0; border-style: solid; border-color: #c7c7c7; height: 41px; width: 50%; padding: 0 5%; float: right; } .ask-fruit-data ul li span{ font-size: 14px; color: #666; font-weight: bold; text-align: left; float: left; line-height: 40px; } .ask-fruit-data ul li em{ font-size: 14px; color: #ff5e26; float: right; text-align: right; height: 40px; line-height: 40px; } .ask-fruit-data p{ text-align: center; font-size: 12px; color: #333; margin: 7px 0 10px 0; } .ask-fruit-data p em{ text-align: center; font-size: 32px; color: #ff5e26; position: relative; } .ask-fruit-title .fruit-title-p{ font-size: 17px; color: #000; text-align: center; position: relative; } .fruit-title-p .dashed-b-left:after{ content: ''; position: absolute; top: 9px; left: 0%; border-top: 1px dotted #ff5e26; width: 15% } .fruit-title-p .dashed-b-left:before{ content: ''; position: absolute; top: 7px; left: 15%; width: 5px; height: 5px; background-color: #ff5e26; transform:rotate(45deg); -ms-transform:rotate(45deg);/*IE9*/ -moz-transform:rotate(45deg);/*Firefox*/ -webkit-transform:rotate(45deg);/*Safari and Chrome*/ margin-left: 2px; } .fruit-title-p .dashed-b-right:after{ content: ''; position: absolute; top: 9px; right: 0%; border-top: 1px dotted #ff5e26; width: 15% } .fruit-title-p .dashed-b-right:before{ content: ''; position: absolute; top: 7px; right: 15%; width: 5px; height: 5px; background-color: #ff5e26; transform:rotate(45deg); -ms-transform:rotate(45deg);/*IE9*/ -moz-transform:rotate(45deg);/*Firefox*/
-    -webkit-transform:rotate(45deg);/*Safari and Chrome*/ margin-right: 2px; } #ask-submit-again{ margin-top: 10px; } .shade-click{ height: 53px; position: absolute; top: -45px; width: 100%; left: -105px; } .whan-ad div h2 .span-ff6c40{ font-size: 14px; color: #ff6c40; font-weight: bold; } /*增加优先级*/ .area-select-box{ z-index: 1112; } /*以下是发标框位置样式*/ .whan-ad-ask .fabiaoqu-ask{ position: absolute; top: 53px; width: 100%; background-color: #fff; left: 0; height: 334px; } /*ios下虚拟键盘bug*/ .cc-box-style{ position: absolute; top: 45px; bottom: 0; overflow-y: scroll; -webkit-overflow-scrolling: touch; width: 100%; } /**/ /*.big-margin{ margin-top: 0; } */ /* 微信小号引导banner */ .banner-wx-new-ask { display: none; } .banner-wx-new { position: fixed; bottom: 0; left: 0; padding: 0 15px; z-index: 103; width: 100%; padding: 5px 12px; background: rgba(51, 51,51, 0.85); color: #fff; } .banner-wx-new-img { display: inline-block; width: 25%; text-align: center; vertical-align: middle; } .banner-wx-new-img img { width: 103px; height: 80px; } .banner-wx-new-text { display: inline-block; width: 75%; line-height: 21px; padding-left: 7px; vertical-align: middle; font-size: 14px; } .banner-wx-new-text p { color: #fff; } .banner-wx-new-text-name { color: #34c083; } .banner-wx-new-text-number { color: #e57e04; } .banner-wx-new-text-ha { color: #e57e04; } body{ -webkit-user-select:text !important; user-select:text !important; } .banner-wx-new-text{ -webkit-user-select:none !important; user-select:none !important; } #banner-wx-new-text-ha{ -webkit-user-select:text !important; user-select:text !important; } .banner-wx-new-text-tip { color: #e57e04; } @media screen and (max-width: 365px){ .banner-wx-new-text { font-size: 12px; } } @media screen and (max-width: 380px){ .banner-wx-new-img img { height: 66px; } } @media screen and (min-width: 390px) and (max-width: 400px){ .banner-wx-new-img img { height: 72px; } } /* 微信小号引导banner 按钮*/ .banner-wx-new-text-btn { width: 0.83rem; vertical-align: middle; } .weixin-pop-wx3-btn-ask { display: inline-block; padding: 2px 5px; border-radius: 5px; margin-left: 5px; vertical-align: baseline; font-size: 12px; background-color: #22cc77; } .weixin-pop-wx3-btn-text-ask { display: inline-block; color: #fff; padding-left: 5px; } .weixin-pop-wx3-btn-icon { width: 14px; height: 12px; vertical-align: sub; } /* 按钮放大动效 */ @-webkit-keyframes pulse-btn { 0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 10% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 20% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 30% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 40% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 50% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 60% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 70% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 80% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 90% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } } @-moz-keyframes pulse-btn { 0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 10% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 20% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 30% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 40% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 50% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 60% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 70% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 80% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 90% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } } @keyframes pulse-btn { 0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 10% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 20% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 30% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 40% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 50% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 60% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 70% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 80% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } 90% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); } 100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } } .pulse-btn { -webkit-animation: pulse-btn 5s infinite; -moz-animation: pulse-btn 5s infinite; animation: pulse-btn 5s infinite; } @media screen and (max-width: 330px){ .banner-wx-new-img img { height: 60px; } .weixin-pop-wx3-btn-ask { margin-left: 3px; padding: 2px 3px; } } @media screen and (max-width: 380px){ .weixin-pop-wx3-btn-text-ask { padding-left: 0; } } /* 微信小号弹窗 */ .banner-wx-new-pop { position: fixed; top: 0; width: 100%; height: 100%; z-index: 103; background-color: rgba(51,51,51,0.6); } .banner-wx-new-pop-box { width: 206px; height: 96px; background-color: #fff; position: absolute; left: 50%; top: 50%; margin-left: -103px; margin-top: -48px; text-align: center; } .banner-wx-new-pop-box-tip { height: 50%; padding-top: 15px; font-size: 14px; margin-left: 0; } .banner-wx-new-pop-box-tip img { width: 22px; height: 31px; margin-left: 2px; vertical-align: text-top; margin-top: -4px; } .banner-wx-new-pop-box-num { height: 50%; padding-top: 15px; background-color: #25c875; color: #fff; font-size: 20px; } .new-result-box { -webkit-user-select: none !important; user-select:none !important; } .banner-wx-new-pop-box { -webkit-user-select: text !important; user-select:text !important; } .banner-wx-new-pop-box-tip { -webkit-user-select: none !important; user-select:none !important; } body #banner-wx-new-pop-box-num { -webkit-user-select: text !important; user-select:text !important; } .banner-wx-new-pop-box-close { position: absolute; right: -1px; top: -50px; width: 28px; padding-top: 4px; height: 28px; border: 1px solid #fff; border-radius: 50%; color: #fff; font-size: 18px; } /* 微信小号弹窗 */ /* 深圳报价结果态 */ .whan-ad div.new-result { display: none; width: 375px; height: 334px; position: absolute; top: 53px; width: 100%; padding: 20px; background-color: #f8f8f8; left: 0; } .new-result-box { border: 1px solid #e3e3e3; border-radius: 5px; padding: 15px; background-color: #fff; } .whan-ad div.new-result-wx { position:
-    absolute; width: 116px; bottom: 36px; padding-bottom: 33px; text-align: center; left: 170px; } .whan-ad div.new-result-head { width: 190px; background-color: #fff; position: absolute; left: 50%; margin-left: -95px; top: -23px; text-align: center; } .new-result-head:before { display: block; content: ' '; width: 12px; height: 23px; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/76777-2404.png'); position: absolute; left: -5px; top: 10px; } .new-result-head:after { display: block; content: ' '; width: 12px; height: 23px; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/76777-2404.png'); position: absolute; right: -5px; top: 10px; } .new-result-content-service-tip { position: absolute; width: 110px; height: 26px; bottom: -18px; left: -11px; color: #333; text-align: center; padding-top: 4px; font-size: 12px; } .new-result-head-title { font-size: 14px; font-weight: bold; line-height: 44px; } .new-result-title { font-size: 15px; font-weight: bold; text-align: center; height: 30px; line-height: 30px; } .new-result-attention { font-size: 12px; color: #ff5e26; text-align: center; height: 43px; line-height: 15px; } .new-result-content { height: 147px; width: 100%; padding-top: 10px; border: 1px solid #f79c33; } .whan-ad div.new-result-content-service { width: 100px; height: 90px; position: absolute; top: 50%; margin-top: -61px; left: 0.23rem; } .whan-ad div.new-result-content-service-name { position: absolute; width: 129px; height: 26px; bottom: -13px; left: -20px; background: url('<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/5461f-8001.png') no-repeat 0 0; background-size: 100% 100%; color: #fff; text-align: center; padding-top: 8px; font-size: 12px; } .new-result-content-service-arrow { position: absolute; right: -0.35rem; bottom: 50%; width: 23px; margin-bottom: -7px; height: 13px; } .new-result-wx-btn-icon { width: 21px; height: 16px; } .new-result-wx-num { display: block; color: #ff5e26; font-weight: bold; line-height: 23px; } body #new-result-wx-num { -webkit-user-select:text !important; user-select:text !important; } .whan-ad div.new-result-wx-btn { position: absolute; width: 143px; left: -26px; padding: 7px; bottom: -6px; border-radius: 5px; background-color: #25c875; } .new-result-head-tip { font-size: 16px; } .new-result-wx-btn-text { color: #fff; padding-left: 6px; font-size: 12px; } .new-result-account { background-color: #fff; text-align: center; padding: 13px; margin-top: 12px; border:1px solid #e3e3e3; border-radius: 5px; color: #333; } .banner-wx-pop { display: none; position: fixed; top: 0; width: 100%; height: 100%; z-index: 103; background-color: rgba(51,51,51,0.6); } .banner-wx-pop-box { width: 206px; height: 96px; background-color: #fff; position: absolute; left: 50%; top: 50%; margin-left: -103px; margin-top: -48px; text-align: center; } .banner-wx-pop-box-tip { height: 50%; padding-top: 15px; font-size: 14px; margin-left: -7px; } .banner-wx-pop-box-tip img { width: 19px; height: 27px; margin-left: 2px; } .banner-wx-pop-box-num { height: 50%; padding-top: 15px; background-color: #25c875; color: #fff; font-size: 20px; } .new-result-box { -webkit-user-select: none !important; user-select:none !important; } .banner-wx-pop-box { -webkit-user-select: text !important; user-select:text !important; } .banner-wx-pop-box-tip { -webkit-user-select: none !important; user-select:none !important; } body #banner-wx-pop-box-num { -webkit-user-select: text !important; user-select:text !important; } .banner-wx-pop-box-close { position: absolute; right: -1px; top: -39px; width: 28px; padding-top: 4px; height: 28px; border: 1px solid #fff; border-radius: 50%; color: #fff; font-size: 18px; } .new-result-content-service-head { margin-top: 12px; margin-left: -13px; } @media screen and (max-width: 325px){ .whan-ad div.new-result { padding: 14px; } .new-result-title { font-size: 13px; } .whan-ad div.new-result-content-service { width: 90px; height: 78px; margin-top: -45px; left: 0.2rem; } .whan-ad div.new-result-content-service-name { width: 108px; left: -11px; bottom: -7px; font-size: 0.1rem; } .whan-ad div.new-result-wx { width: 100px; left: 150px; padding-bottom: 28px; bottom: 39px; } .whan-ad div.new-result-wx-btn { width: 125px; left: -26px; padding: 5px 1px; } .new-result-wx-btn-text { padding-left: 0; } .new-result-content-service-arrow { right: -0.3rem; } .new-result-content-service-head { margin-left: -10px; margin-top: -2px; } } @media screen and (min-width: 400px){ .whan-ad div.new-result-content-service { height: 86px; left: 0.4rem; } .whan-ad div.new-result-wx { left: 204px; bottom: 40px; } .banner-wx-new-text { padding-left: 20px; } .whan-ad div.new-result-content-service-name { left: -17px; font-size: 12px; } .new-result-content-service-tip { left: -8px; } .banner-wx-new-img img { height: 75px; } .new-result-content-service-head { margin-left: -10px; margin-top: 6px; } } /* 深圳报价结果态 */</style>
-</div>
-<section class="whan-ad whan-ad-ask whan-ad-h70">
-    <div>
-        <img class='wh-tx1' src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/6a588-4936.png" />
-        <h1>装修该花多少钱?</h1>
-        <h2>
-            <span class="span-ff6c40">10秒</span>获取免费报价</h2>
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/2bbe0-3158.png" class="dialog-827img dialog-827img-up"></div>
-    <div id="fabiaoqu-ask" class="fabiaoqu-ask">
-        <form id="froms" class="zxd-form">
-            <div class="download-arrow1">
-                <input type="hidden" name="ptag" value="2_1_1_2">
-                <input type="text" id="slide_area" placeholder="请选择您的所在城市"></div>
-            <div class="touch-input2">
-                <input type="number" name="oarea" id="areaInput" placeholder="请输入您的房屋面积">
-                <label for="areaInput">m&sup2</label></div>
-            <div class="jiting clearfix" id="jiting">
-                <label>
-                    <select name="" id="secshi" class="needsclick">
-                        <option value="1">1&nbsp;室</option>
-                        <option value="2">2&nbsp;室</option>
-                        <option value="3">3&nbsp;室</option>
-                        <option value="4">4&nbsp;室</option>
-                        <option value="5">5&nbsp;室</option>
-                        <option value="6">6&nbsp;室</option></select>
-                </label>
-                <label>
-                    <select name="" id="secting" class="needsclick">
-                        <option value="1">1&nbsp;厅</option>
-                        <option value="2">2&nbsp;厅</option>
-                        <option value="3">3&nbsp;厅</option>
-                        <option value="4">4&nbsp;厅</option>
-                        <option value="5">5&nbsp;厅</option>
-                        <option value="6">6&nbsp;厅</option></select>
-                </label>
-                <label>
-                    <select name="" id="secchu" class="needsclick">
-                        <option value="1">1&nbsp;厨</option>
-                        <option value="2">2&nbsp;厨</option>
-                        <option value="3">3&nbsp;厨</option>
-                        <option value="4">4&nbsp;厨</option>
-                        <option value="5">5&nbsp;厨</option>
-                        <option value="6">6&nbsp;厨</option></select>
-                </label>
-                <label style='float: right;'>
-                    <select name="" id="secyangtai" class="needsclick">
-                        <option value="1">1&nbsp;阳台</option>
-                        <option value="2">2&nbsp;阳台</option>
-                        <option value="3">3&nbsp;阳台</option>
-                        <option value="4">4&nbsp;阳台</option>
-                        <option value="5">5&nbsp;阳台</option>
-                        <option value="6">6&nbsp;阳台</option></select>
-                </label>
-            </div>
-            <div style="margin: 10px  0 0 0;">
-                <input type="tel" id="newPhone" name="phone" placeholder="输入手机号，短信接收详细报价清单"></div>
-            <input id="ask-form-submit" class="ptag-set" type="button" dataptag="2_3_9_957" value="立即计算"></form>
-    </div>
-    <div id="new-result" class="new-result">
-        <div class="new-result-box">
-            <h4 class="new-result-title">报价短信已发送到您的手机，请注意查收！</h4>
-            <p class="new-result-attention holiday-text">*稍后装修管家将回电您，免费提供装修咨询服务</p>
-            <div class="new-result-content">
-                <div class="new-result-head">
-                    <h5 class="new-result-head-title">装修怕上当？问问靠谱的人</h5></div>
-                <div class="new-result-content-service">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/bbb05-2766.gif" class="new-result-content-service-head" alt="客服">
-                    <div class="new-result-content-service-name">装修顾问-馨馨</div>
-                    <div class="new-result-content-service-tip">四年装修行业经验</div>
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/c606e-5816.png" alt="" class="new-result-content-service-arrow"></div>
-                <div class="new-result-wx">
-                    <span class="new-result-wx-name">微信号：</span>
-                    <span class="new-result-wx-num" id="new-result-wx-num">13302974452</span>
-                    <div class="new-result-wx-btn pulse-btn">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/de4b7-9740.png" alt="" class="new-result-wx-btn-icon">
-                        <span class="new-result-wx-btn-text" id="new-result-wx-btn-text">点击加微信好友</span></div>
-                </div>
-            </div>
-        </div>
-        <div class="new-result-account" id="new-result-account">重新计算</div></div>
-    <div class="shade-click"></div>
-</section>
-<!-- 微信小号banner优化动效 -->
-<div class="banner-wx-new banner-wx-new-ask banner-wx-new-index" id="banner-wx-new-init">
-    <div class="banner-wx-new-img">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/63eba-9163.gif" alt="微信小号"></div>
-    <div class="banner-wx-new-text">
-        <p>添加“
-            <span class="banner-wx-new-text-name">深圳装修顾问 馨馨</span>”为好友
-            <br/>随时咨询户型设计 装修报价等疑问</p>
-        <p>
-            <span class="banner-wx-new-text-number">微信号：
-                <span class="banner-wx-new-text-ha" id="banner-wx-new-text-ha">13302974452</span>
-                <span class="weixin-pop-wx3-btn-ask pulse-btn">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/de4b7-9740.png" alt="" class="weixin-pop-wx3-btn-icon" />
-                    <span class="weixin-pop-wx3-btn-text weixin-pop-wx3-btn-text-ask">点击加微信</span></span>
-            </span>
-        </p>
-    </div>
-</div>
-<!-- 微信小号banner优化动效 --></div>
-<div class="banner-wx-pop" id="banner-wx-pop">
-    <div class="banner-wx-pop-box">
-        <p class="banner-wx-pop-box-tip">长按微信号复制
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/a59a3-5947.gif" alt=""></p>
-        <p class="banner-wx-pop-box-num" id="banner-wx-pop-box-num">13302974452</p>
-        <span class="banner-wx-pop-box-close">X</span></div>
-</div>
+<?php //echo $this->render('_signup'); ?>
+<?php //echo $this->render('_weichat'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/plat8rsas.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/zbcommon.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/cookie.js"></script>
@@ -890,103 +724,8 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
         }
         //根据Ip自动内嵌紧贴头部的微信小号弹窗
     }</script>
-<div class="pg-ft">
-    <ul class="terminal-nav">
-        <li>
-            <a class="active" href="javascript:void(0)">触屏版</a></li>
-        <li>
-            <span class="i-sep"></span>
-            <a href="http://www.to8to.com/">电脑版</a></li>
-        <li>
-            <span class="i-sep"></span>
-            <a href="http://m.to8to.com/news/article/106823.html">关于我们</a>
-            <span class="i-sep"></span>
-        </li>
-        <li>
-            <a href="http://m.to8to.com/question.html">常见问题</a></li>
-    </ul>
-    <div class="company-info">手机土巴兔：
-        <a href="http://m.to8to.com">m.to8to.com</a>&nbsp;粤ICP备08125558号</div></div>
-<script>(function() {
-        /**
-         * 输入状态下隐藏导航栏
-         */
-        function initInputSelectFocus() {
-            var dom_arr = document.querySelectorAll('input[type="text"]');
-            var sel_arr = document.querySelectorAll('select');
-            var txt_arr = document.querySelectorAll('textarea');
-            var dom_len = dom_arr.length;
-            var sel_len = sel_arr.length;
-            var txt_len = txt_arr.length;
-            if (sel_len > 0) {
-                for (var i = 0; i < sel_len; i++) {
-                    var _i = dom_len + i;
-                    dom_arr[_i] = sel_arr[i];
-                }
-                dom_len += sel_len;
-            }
-            if (txt_len > 0) {
-                for (var i = 0; i < txt_len; i++) {
-                    var _i = dom_len + i;
-                    dom_arr[_i] = txt_arr[i];
-                }
-                dom_len += txt_len;
-            }
-            if (dom_len > 0) {
-                var fix_dom = document.querySelector('.footer-fix');
-                var screen_dom = document.querySelector('.screen');
-                for (var i = 0; i < dom_len; i++) {
-                    if (!dom_arr[i]) {
-                        continue;
-                    }
-                    dom_arr[i].addEventListener('focus',
-                    function() {
-                        fix_dom && fix_dom.style && (fix_dom.style.display = 'none');
-                        if (screen_dom) {
-                            screen_dom.style.display = 'none';
-                        }
-                    },
-                    false);
-                    dom_arr[i].addEventListener('blur',
-                    function() {
-                        fix_dom && fix_dom.style && (fix_dom.style.display = 'block');
-                    },
-                    false);
-                }
-            }
-        }
-        initInputSelectFocus();
-    })();</script>
-<script>var browser = {
-        versions: function() {
-            var u = navigator.userAgent,
-            app = navigator.appVersion;
-            return { //移动终端浏览器版本信息
-                trident: u.indexOf('Trident') > -1,
-                //IE内核
-                presto: u.indexOf('Presto') > -1,
-                //opera内核
-                webKit: u.indexOf('AppleWebKit') > -1,
-                //苹果、谷歌内核
-                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
-                //火狐内核
-                mobile: !!u.match(/AppleWebKit.*Mobile.*/),
-                //是否为移动终端
-                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-                //ios终端
-                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
-                //android终端或uc浏览器
-                iPhone: u.indexOf('iPhone') > -1,
-                //是否为iPhone或者QQHD浏览器
-                iPad: u.indexOf('iPad') > -1,
-                //是否iPad
-                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
-            };
-        } ()
-    };
-    if (browser.versions.iPad) {
-        $('head').find('meta[name=viewport]').attr('content', 'initial-scale=1.0,user-scalable=no,maximum-scale=1');
-    }</script>
+<?= $this->render('@gallerycms/views/layouts-m/plat8/_footer'); ?>
+<?= $this->render('@gallerycms/views/layouts-m/plat8/_js-footer'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/zxask.min.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/globalprovinces.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common.min.js"></script>

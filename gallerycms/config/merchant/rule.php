@@ -11,7 +11,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'mobile-index' => [
         'hosts' => ['m', '3g', 'wap'],
         'data' => [
-            'pattern' => '/sj-<mcode:\w+>', 
+            'pattern' => '/sj_<mcode:\w+>', 
             'route' => '/merchant/site/index', 
             'suffix' => '/'
         ],
@@ -19,7 +19,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'merchant-show' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
-            'pattern' => '/<city_code:\w+>/showsj_<mcode:\w+>', 
+            'pattern' => '/<city_code:\w+>_showsj_<mcode:\w+>', 
             'route' => '/merchant/site/show', 
             'suffix' => '.html'
         ],
@@ -28,36 +28,36 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/working/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_working<page:_[0-9]+>',
     		'route'	=> '/house/working/merchant',
-    		'defaults' => ['page' => 1, 'tag' => ''],
+            'defaults' => ['page' => '_1'],
         ],
     ],
     'realcase-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/realcase/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_realcase<page:_[0-9]+>',
     		'route'	=> '/house/realcase/merchant',
-    		'defaults' => ['page' => 1, 'tag' => ''],
+    		'defaults' => ['page' => '_1'],
         ],
     ],
     'designer-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/designer/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_designer<page:_[0-9]+>',
     		'route'	=> '/house/designer/merchant',
-    		'defaults' => ['page' => 1, 'tag' => ''],
+    		'defaults' => ['page' => '_1'],
         ],
     ],
     'comment-list' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>/<mcode:\w+>/comment/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_comment<page:_[0-9]+>',
     		'route'	=> '/house/comment/merchant',
-    		'defaults' => ['page' => 1, 'tag' => ''],
+    		'defaults' => ['page' => '_1'],
         ],
     ],
 ]);

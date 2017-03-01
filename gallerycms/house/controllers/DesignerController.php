@@ -44,7 +44,7 @@ class DesignerController extends HouseController
 
 		$page = Yii::$app->request->get('page');
         $orderBy = ['created_at' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12, 'pagePreStr' => '_']);
 		$datas = [
 			'page' => $page,
 			'infos' => $infos['infos'],

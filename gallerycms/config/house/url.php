@@ -22,8 +22,8 @@ return [
     ],*/
     'ask-list' => [
 		'name' => '问答列表',
-		'pc-url' => '/ask/lm_gzsj/',
-		'mobile-url' => '/ask/lm_gzsj/',
+		'pc-url' => '/ask_lm_gzsj/',
+		'mobile-url' => '/ask_lm_gzsj/',
     ],
     'ask-show' => [
 		'name' => '问答详情',

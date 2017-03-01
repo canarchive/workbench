@@ -4,7 +4,7 @@ use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['07e93-6450', 'd560a-7187', '9c07e-2206'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
-$this->params['jsStr'] = $this->render('_js-header');
+$this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/plat8/_js-header');
 ?>
 
 <?php echo $this->render('@gallerycms/views/layouts-m/plat8/_header'); ?>
@@ -64,7 +64,7 @@ $this->params['jsStr'] = $this->render('_js-header');
     });</script>
 <?php //echo $this->render('_recommend'); ?>
 <?= $this->render('@gallerycms/views/layouts-m/plat8/_footer'); ?>
-<?= $this->render('_js-footer'); ?>
+<?= $this->render('@gallerycms/views/layouts-m/plat8/_js-footer'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/share.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/share2.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common.min.js"></script>

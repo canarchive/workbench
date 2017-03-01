@@ -3,11 +3,11 @@
 <!-- 0级 -->
 <!--二级-->
 <header id="dt-hd" class="navstyle2">
-    <a class="zxzs-set" dataptag="2_3_10_487" href="//m.to8to.com/bj">
+    <a class="zxzs-set" dataptag="2_3_10_487" href="/">
         <i id="back"></i>
     </a>
     <h1 class="back-home-page">
-        <a class="zxzs-set" dataptag="2_3_10_487" href="//m.to8to.com/bj">
+        <a class="zxzs-set" dataptag="2_3_10_487" href="/">
             <span class="icon-tbt"></span>
             <b>首页</b>
         </a>
@@ -38,7 +38,7 @@
             });
         });</script>
     <!--右边导航按钮-->
-    <nav id="dt-hd-nav">
+    <!--<nav id="dt-hd-nav">
         <i class="icon-dt-hd navigation dn" id="add_nav_hovers"></i>
         <a href="/apps?headiptag=2_7_18_1177&headaptag=2_7_18_1178" data-ptag="2_7_18_1176" class="dn">
             <div class="loadapp-dt-hd">
@@ -51,68 +51,8 @@
                 </div>
             </div>
         </a>
-    </nav>
-    <div id="dt-hd-navs-wrap" class="hide">
-        <ul class="dt-hd-navs">
-            <li>
-                <a class="goIndex" href="//m.to8to.com">
-                    <i class="icon-navf0"></i>
-                    <p>首页</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_1" href="/xiaoguotu">
-                    <i class="icon-navf1"></i>
-                    <p>效果图</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_2" href="/yezhu/zxbj.php?from=144">
-                    <i class="icon-navf2">
-                        <em>免费</em></i>
-                    <p>装修报价</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_3" href="//m.to8to.com/tuiguang/mfsj/index.html?ptag=2_1_1_3">
-                    <i class="icon-navf3">
-                        <em>免费</em></i>
-                    <p>户型设计</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point city-update-left" data-point="2_1_1_6" href="/company/">
-                    <i class="icon-navf4"></i>
-                    <p>找公司</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_4" href="/company/zxb.php">
-                    <i class="icon-navf6">
-                        <em>免费</em></i>
-                    <p>装修保</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_5" href="/gonglve/">
-                    <i class="icon-navf5"></i>
-                    <p>学装修</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_7" href="/mall/">
-                    <i class="icon-navf8"></i>
-                    <p>品牌特卖</p>
-                </a>
-            </li>
-            <li>
-                <a class="click-point" data-point="2_1_1_8" href="/news/">
-                    <i class="icon-navf9"></i>
-                    <p>资讯</p>
-                </a>
-            </li>
-        </ul>
-    </div>
+    </nav>-->
+    <?php //echo $this->render('_nav'); ?>
     <!--页码-->
     <span class="img-count"></span>
 </header>

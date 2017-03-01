@@ -34,6 +34,7 @@ class AskController extends HouseController
     public function actionTaglist()
     {
 		$page = ltrim(Yii::$app->request->get('page'));
+        $page = str_replace('_', '', $page);
 
         $tag = intval(Yii::$app->request->get('tag'));
         $tagInfo = false;
@@ -86,6 +87,7 @@ class AskController extends HouseController
     public function actionList()
     {
 		$page = ltrim(Yii::$app->request->get('page'));
+        $page = str_replace('_', '', $page);
         $sort = ltrim(Yii::$app->request->get('sort'));
         $sortInfos = $this->_checkSort($sort);
 

@@ -1,6 +1,7 @@
 <?php
 
 use gallerycms\components\LinkPager;
+$this->params['currentNav'] = 'realcase';
 ?>
 <!--imgs begin-->
 <!--图片查看器-->

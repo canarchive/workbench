@@ -4,7 +4,7 @@ use yii\bootstrap\ActiveForm;
 
 $cssFiles = ['aa3c7-7171'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
-$this->params['jsStr'] = $this->render('_js-header');
+$this->render('@gallerycms/views/layouts-m/plat8/_js-header');
 ?>
 <?php //echo $this->render('_banner'); ?>
 <div class="header">
@@ -54,7 +54,7 @@ $this->params['jsStr'] = $this->render('_js-header');
 </ul>
 <div class="footer">手机<?= Yii::$app->params['siteNameBase']; ?>：<?= Yii::getAlias('@m.gallerycmsurl'); ?> <?= Yii::$app->params['siteIcpInfo']; ?></div>
 <?php //echo $this->render('_footer-nav'); ?>
-<?= $this->render('_js-footer'); ?>
+<?= $this->render('@gallerycms/views/layouts-m/plat8/_js-footer'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/responsiveslides.min.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/common.min.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/seostatis.min.js"></script>
