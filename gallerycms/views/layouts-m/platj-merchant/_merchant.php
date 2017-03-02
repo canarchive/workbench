@@ -24,6 +24,6 @@ $mInfos = $this->context->mDatas['merchantInfos'];
         <?php $i++; } ?>
     </div>
     <style>.more-icon { background: rgba(0, 0, 0, 0) url("<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/5b596-3112.png") no-repeat scroll 0 0 / 12px auto; display: inline-block; height: 6px; margin-left: 8px; width: 12px; }</style>
-    <a href="<?= "/{$info['city_code']}/merchant/"; ?>" title="查看更多装饰公司" style="font-size:12px;color:#62c77b;text-align: center;width: 100%;display:block; height:40px; line-height:40px; margin:auto;">查看更多装饰公司
+    <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="查看更多装饰公司" style="font-size:12px;color:#62c77b;text-align: center;width: 100%;display:block; height:40px; line-height:40px; margin:auto;">查看更多装饰公司
         <i class="more-icon" id="more_jiameng"></i></a>
 </section>

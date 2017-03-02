@@ -21,7 +21,7 @@ use gallerycms\components\LinkPager;
             <input type="hidden" class="ajaxGetNumById" value="<?= $info['id']; ?>" />
             <dl class="dl_none">
                 <dt>
-                    <a href="<?= "/{$this->context->currentCityCode}/realcase_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+                    <a href="<?= "/{$this->context->currentCityCode}/realcaseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
 						<img src="<?= $info['thumb']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" />
                     </a>
                     <!--<span></span><i>实景图片</i>-->

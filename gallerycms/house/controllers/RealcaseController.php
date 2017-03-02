@@ -20,7 +20,9 @@ class RealcaseController extends HouseController
         $datas = $this->_commonDatas();
         $datas['infos'] = $this->_getInfos($where);
 
-        $pageStr = $datas['infos']['page'] > 1 ? "_第{$datas['infos']['page']}页-" : '-';
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('realcase-index', $dataTdk);
@@ -37,7 +39,9 @@ class RealcaseController extends HouseController
 
         $datas['realcaseInfos'] = $infos;
 
-        $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name']];
 		$this->getTdkInfos('merchant-realcase', $dataTdk);

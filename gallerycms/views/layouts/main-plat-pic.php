@@ -15,11 +15,11 @@ $this->params['jsStr'] = $this->render('platj-pic/_pic-js', []);
 <!--business-->
 <?php //echo $this->render('platj-pic/_pic-toplist'); ?>
 <div class="J-head-adver clearfix wrapper">
-    <a title="能力风暴机器人加盟加盟" class="fl" ad_need_click="true" ad_id="460" href="http://search.jmw.com.cn/jmw_user/nlfb/" target="_blank">
+    <a title="" class="fl" ad_need_click="true" ad_id="460" href="javascript: void(0);">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/5e2ae-4318.gif" width='270' height='60' /></a>
-    <a title="赛维干洗加盟加盟" class="fl a-adver" ad_need_click="true" ad_id="464" href="http://search.jmw.com.cn/jmw_user/swgx/" target="_blank">
+    <a title="" class="fl a-adver" ad_need_click="true" ad_id="464" href="javascript: void(0);">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/6cb77-1388.gif" width='435' height='60' /></a>
-    <a title="玛玛洛可加盟" class="fr" ad_need_click="true" ad_id="463" href="http://search.jmw.com.cn/jmw_user/mmlk/" target="_blank">
+    <a title="" class="fr" ad_need_click="true" ad_id="463" href="javascript: void(0);">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/679e5-2833.gif" width='270' height='60' /></a>
 </div>
 <style type="text/css">.J-head-adver{ margin-bottom: 10px;} .J-head-adver a{ display: block;} .J-head-adver .a-adver{ margin-left: 7.5px; _display: inline;}</style>

@@ -57,6 +57,10 @@ class BaseController extends Controller
                 $this->layout = '@gallerycms/views/layouts/main-plat';
             }
         }
+        Yii::$app->params['currentCompanyInfo'] = $datas['info'];
+        $this->currentCityCode = $datas['info']['city_code'];
+        $this->currentCityName = Yii::$app->params['companyInfos'][$datas['info']['city_code']]['name'];
+        
         $datas = array_merge($datas, $this->_commonDatas());
         $this->mDatas = $datas;
         return $datas;

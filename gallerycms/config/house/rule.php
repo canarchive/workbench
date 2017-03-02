@@ -146,7 +146,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/<city_code:[a-z]+>_workingshow_<id:\d+>',
+    		'pattern' => '/<city_code:[a-z]+>/workingshow_<id:\d+>',
     		'route'	=> '/house/working/show',
         ],
     ],
@@ -163,7 +163,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/<city_code:[a-z]+>/realcase_show_<id:\d+>',
+    		'pattern' => '/<city_code:[a-z]+>/realcaseshow_<id:\d+>',
     		'route'	=> '/house/realcase/show',
         ],
     ],

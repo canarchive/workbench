@@ -2,13 +2,13 @@
 return [
     'merchant-index' => [
 		'name' => '商家首页',
-		'pc-url' => 'http://sj_jz.{{DOMAIN}}/',
-		'mobile-url' => '/sj_jz/',
+		'pc-url' => 'http://sj_kln.{{DOMAIN}}/',
+		'mobile-url' => '/sj_kln/',
     ],
     'merchant-list' =>  [
 		'name' => '商家列表',
-		'pc-url' => '/beijing_merchant/',
-		'mobile-url' => '/beijing_merchant/',
+		'pc-url' => '/beijing/merchant/',
+		'mobile-url' => '/beijing/merchant/',
     ],
     'realcase-list' => [
 		'name' => '实景列表',
@@ -17,8 +17,8 @@ return [
     ],
     'merchant-realcase' => [
 		'name' => '商家实景列表',
-		'pc-url' => '/beijing/jz_realcase/',
-		'mobile-url' => '/beijing/jz_realcase/',
+		'pc-url' => '/beijing/kln_realcase/',
+		'mobile-url' => '/beijing/kln_realcase/',
     ],
     'realcase-show' => [
 		'name' => '实景详情',
@@ -32,13 +32,13 @@ return [
     ],
     'merchant-working' => [
 		'name' => '商家工地',
-		'pc-url' => '/beijing/jz_working/',
-		'mobile-url' => '/beijing/jz_working/',
+		'pc-url' => '/beijing/kln_working/',
+		'mobile-url' => '/beijing/kln_working/',
     ],
     'working-show' => [
 		'name' => '工地详情',
-		'pc-url' => '/beijing_workingshow_1.html',
-		'mobile-url' => '/beijing_workingshow_1.html',
+		'pc-url' => '/beijing/workingshow_1.html',
+		'mobile-url' => '/beijing/workingshow_1.html',
     ],
     /*'designer-list' => [
 		'name' => '设计师列表',
@@ -47,8 +47,8 @@ return [
     ],*/
     'merchant-designer' => [
 		'name' => '商家设计师',
-		'pc-url' => '/beijing_jz_designer/',
-		'mobile-url' => '/beijing_jz_designer/',
+		'pc-url' => '/beijing/kln_designer/',
+		'mobile-url' => '/beijing/kln_designer/',
     ],
     /*'comment-list' => [
 		'name' => '点评列表',
@@ -57,12 +57,12 @@ return [
     ],*/
     'merchant-comment' => [
 		'name' => '商家点评',
-		'pc-url' => '/beijing_jz_comment/',
-		'mobile-url' => '/beijing_jz_comment/',
+		'pc-url' => '/beijing/kln_comment/',
+		'mobile-url' => '/beijing/kln_comment/',
     ],
     'merchant-info' => [
 		'name' => '商家信息',
-		'pc-url' => '/beijing_showsj_jz.html',
-		'mobile-url' => '/beijing_showsj_jz.html',
+		'pc-url' => '/beijing/showsj_kln.html',
+		'mobile-url' => '/beijing/showsj_kln.html',
     ],
 ];

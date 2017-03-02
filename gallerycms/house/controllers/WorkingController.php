@@ -20,7 +20,9 @@ class WorkingController extends HouseController
         $datas = $this->_commonDatas();
         $datas['infos'] = $this->_getInfos($where);
 
-        $pageStr = $datas['infos']['page'] > 1 ? "_第{$datas['infos']['page']}页-" : '-';
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('working-index', $dataTdk);
@@ -29,6 +31,8 @@ class WorkingController extends HouseController
 
     public function actionMerchant()
     {
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
         $datas = $this->_initMerchant('merchant-show');
         //$where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
         $where = [];
@@ -36,7 +40,7 @@ class WorkingController extends HouseController
 
         $datas['workingInfos'] = $infos;
 
-        $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name']];
 		$this->getTdkInfos('merchant-working', $dataTdk);

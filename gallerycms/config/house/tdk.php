@@ -100,13 +100,13 @@ return [
 
     // 实景案例列表 http://cmshouse.alyee.com/beijing/realcase/
     'realcase-index' => [
-        'title' => '{{CITYNAME}}装修效果图_{{CITYNAME}}装修户型图_{{CITYNAME}}装修案例欣赏-兔班长装修网',
+        'title' => '{{CITYNAME}}装修效果图_{{CITYNAME}}装修户型图_{{CITYNAME}}装修案例欣赏{{PAGESTR}}-兔班长装修网',
         'keyword' => '{{CITYNAME}}装修效果图,{{CITYNAME}}装修户型图,{{CITYNAME}}装修案例',
         'description' => '{{CITYNAME}}装修效果图大全：为广大装修业主分享更多{{CITYNAME}}装修效果图,{{CITYNAME}}装修户型图,{{CITYNAME}}装修案例，帮您找到属于您自己喜欢的装修风格作品。',
     ],
     // 商家实景案例列表 http://cmshouse.alyee.com/beijing/jz/realcase/
     'merchant-realcase' => [
-        'title' => '{{INFONAME}}装修案例_{{INFONAME}}装修实景图-兔班长装修平台',
+        'title' => '{{INFONAME}}装修案例_{{INFONAME}}装修实景图{{PAGESTR}}-兔班长装修平台',
         'keyword' => '{{INFONAME}}装修案例，{{INFONAME}}装修实景图',
         'description' => '{{INFONAME}}装修案例大全：为广大装修业主分享更多{{INFONAME}}装修案例与{{INFONAME}}装修实景图，帮您找到属于您自己喜欢的装修案例实景图作品。',
     ],
@@ -119,13 +119,13 @@ return [
 
     // 工地列表 http://cmshouse.alyee.com/beijing/working/
     'working-index' => [
-        'title' => '{{CITYNAME}}工地案例欣赏_{{CITYNAME}}工地装修案例汇总-兔班长装修网',
+        'title' => '{{CITYNAME}}工地案例欣赏_{{CITYNAME}}工地装修案例汇总{{PAGESTR}}-兔班长装修网',
         'keyword' => '{{CITYNAME}}工地案例,{{CITYNAME}}工地装修案例',
         'description' => '兔班长装修网{{CITYNAME}}工地案例频道为您提供{{CITYNAME}}工地案例欣赏，{{CITYNAME}}工地装修案例汇总。',
     ],
     // 商家工地列表 http://cmshouse.alyee.com/beijing/jz/working/
     'merchant-working' => [
-        'title' => '{{INFONAME}}工地案例欣赏_工地案例汇总-兔班长装修网',
+        'title' => '{{INFONAME}}工地案例欣赏_工地案例汇总{{PAGESTR}}-兔班长装修网',
         'keyword' => '{{INFONAME}}在建工地,{{INFONAME}}在建工地案例',
         'description' => '兔班长装修网{{INFONAME}}在建工地案例汇总，为您提供众多{{INFONAME}}工地案例。',
     ],
