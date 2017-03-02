@@ -2,8 +2,7 @@
     <div class="wrap_mar f12 clear">
         <div id="">
             <ul class="fl topbar_left">
-                <li class="fl">
-                    <a href="/">首页</a></li>
+                <li class="fl"><a href="/">首页</a></li>
                 <li class="fl">
                 <a href="/<?= $this->context->currentCityCode; ?>/" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName; ?>装修公司</a></li>
                 <li class="fl">

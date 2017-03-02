@@ -241,7 +241,7 @@ class Merchant extends MerchantModel
     public function getInfoUrl()
     {
 		$domain = Yii::$app->params['baseDomain'];
-		$url = "http://sj-{$this->code}.{$domain}/";
+		$url = "http://sj_{$this->code}.{$domain}/";
         return $url;
     }
 

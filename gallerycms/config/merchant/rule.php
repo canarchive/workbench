@@ -19,7 +19,7 @@ return \gallerycms\components\RuleFormat::formatRule([
     'merchant-show' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
-            'pattern' => '/<city_code:\w+>_showsj_<mcode:\w+>', 
+            'pattern' => '/<city_code:[a-z]+>_showsj_<mcode:\w+>', 
             'route' => '/merchant/site/show', 
             'suffix' => '.html'
         ],
@@ -28,7 +28,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_working<page:_[0-9]+>',
+    		'pattern' => '/<city_code:[a-z]+>_<mcode:\w+>_working<page:_[0-9]+>',
     		'route'	=> '/house/working/merchant',
             'defaults' => ['page' => '_1'],
         ],
@@ -37,7 +37,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_realcase<page:_[0-9]+>',
+    		'pattern' => '/<city_code:[a-z]+>_<mcode:\w+>_realcase<page:_[0-9]+>',
     		'route'	=> '/house/realcase/merchant',
     		'defaults' => ['page' => '_1'],
         ],
@@ -46,7 +46,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_designer<page:_[0-9]+>',
+    		'pattern' => '/<city_code:[a-z]+>_<mcode:\w+>_designer<page:_[0-9]+>',
     		'route'	=> '/house/designer/merchant',
     		'defaults' => ['page' => '_1'],
         ],
@@ -55,7 +55,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:\w+>_<mcode:\w+>_comment<page:_[0-9]+>',
+    		'pattern' => '/<city_code:[a-z]+>_<mcode:\w+>_comment<page:_[0-9]+>',
     		'route'	=> '/house/comment/merchant',
     		'defaults' => ['page' => '_1'],
         ],

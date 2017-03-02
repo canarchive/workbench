@@ -11,13 +11,12 @@
     </div>-->
     <div class="logo_center fl">
         <div class="logo_find clear">
-            <div class="logo_select f14 pr fl">行业
+            <div class="logo_select f14 pr fl">装修公司
                 <i class="zong_icon i7"></i>
                 <ul class="pa xiala_box dis_n" style="height:235px;">
-                    <li>
-                        <a href="http://search.jmw.com.cn/i2/" title="美食加盟" target="_blank">美食</a></li>
-                    <li>
-                        <a href="http://search.jmw.com.cn/i11/" title="教育加盟" target="_blank">教育</a></li>
+                    <li><a href="/" title="装修公司">装修公司</a></li>
+                    <li><a href="/" title="装修问答">装修问答</a></li>
+                    <li><a href="/" title="装修报价">装修报价</a></li>
                 </ul>
             </div>
             <input type="text" i="" name="keyword" value="" class="fl text fontW" id="keyword_fenci" onfocus="if(this.value==$(this).attr('i')){this.value='';}" onblur="if(this.value==''){this.value=$(this).attr('i');}" />
@@ -28,8 +27,7 @@
                     //window.location.href="http://search.jmw.com.cn/"; 
                     window.open("http://search.jmw.com.cn/");
                 } else {
-                    //window.location.href="http://search.jmw.com.cn/newSearch/newList.php?keyword="+encodeURIComponent(keyword); 
-                    window.open("http://search.jmw.com.cn/newSearch/newList.php?keyword=" + encodeURIComponent(keyword) + "");
+                    window.open("/search.html?keyword=" + encodeURIComponent(keyword) + "");
                 }
             }
             $(function() {
@@ -44,7 +42,7 @@
         <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-ui.js"></script>
         <!--<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/6d681-4893.css">-->
         <script>$(function() {
-                var seaerch_brand = ["晨阳水漆"];
+                var seaerch_brand = [""];
                 var se_index = Math.floor((Math.random() * seaerch_brand.length));
                 $('#keyword_fenci').val(seaerch_brand[se_index]);
                 $('#keyword_fenci').attr('i', seaerch_brand[se_index]);
@@ -64,41 +62,36 @@
             });</script>
         <ul class="f12">
             <li>
-                <a href="http://www.jmw.com.cn/xm60837/" title="法恩莎瓷砖加盟" target="_blank">法恩莎瓷砖</a></li>
+                <a href="/" title="局部装修">局部装修</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="http://www.jmw.com.cn/xm158545/" title="舒鑫e家加盟" target="_blank">舒鑫e家</a></li>
+                <a href="/" title="田园">田园</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="http://www.jmw.com.cn/xm101706/" title="健康苹果漆加盟" target="_blank">健康苹果漆</a></li>
+                <a href="/" title="普通住宅">普通住宅</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="http://www.jmw.com.cn/xm6594594/" title="忆江南锦缎泥加盟" target="_blank">忆江南锦缎泥</a></li>
+                <a href="/" title="新古典">新古典</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="http://www.jmw.com.cn/xm58277/" title="德尔地板加盟" target="_blank">德尔地板</a></li>
+                <a href="/" title="混搭">混搭</a></li>
         </ul>
     </div>
     <ul class="fr f12 logo_paihang">
         <li>
-            <a href="http://top.jmw.com.cn/" target="_blank" title="排行榜">
+            <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>">
                 <i class="zong_icon i8"></i>
             </a>
-            <a href="http://top.jmw.com.cn/" target="_blank" title="排行榜">排行榜</a></li>
+            <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= '装修公司'; ?></a></li>
         <li>
-            <a href="http://search.jmw.com.cn/i24/" target="_blank" title="项目搜索">
+            <a href="<?= "/ask_lm_gzsj/"; ?>" title="<?= $this->context->currentCityName . '装修问答'; ?>">
                 <i class="zong_icon i9"></i>
             </a>
-            <a href="http://search.jmw.com.cn/i24/" target="_blank" title="项目搜索">项目搜索</a></li>
+            <a href="<?= "/ask_lm_gzsj/"; ?>" title="<?= $this->context->currentCityName . '装修问答'; ?>"><?= '装修问答'; ?></a></li>
         <li>
-            <a href="http://search.jmw.com.cn/ppjm/index.html" target="_blank" title="品牌大全">
+            <a href="<?= "/{$this->context->currentCityCode}/quote/"; ?>" title="<?= $this->context->currentCityName . '装修报价'; ?>">
                 <i class="zong_icon i10"></i>
             </a>
-            <a href="http://search.jmw.com.cn/ppjm/index.html" target="_blank" title="品牌大全">品牌大全</a></li>
-        <li>
-            <a href="http://bbs.jmw.com.cn/portal.php" target="_blank" title="创业论坛">
-                <i class="zong_icon i11"></i>
-            </a>
-            <a href="http://bbs.jmw.com.cn/portal.php" target="_blank" title="创业论坛">创业论坛</a></li>
+            <a href="<?= "/{$this->context->currentCityCode}/quote/"; ?>" title="<?= $this->context->currentCityName . '装修报价'; ?>"><?= '装修报价'; ?></a></li>
     </ul>
 </div>
