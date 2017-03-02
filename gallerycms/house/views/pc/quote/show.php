@@ -67,12 +67,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             </ul>
         </div>
     </div>
-    <div class="zztc" style="display:none;">
-        <p class="main">
-            <span class="tc-title f18 fB">有两款装修套餐报价更加合算</span>
-            <a href="http://beijing.17zhuangxiu.com/zhucai/" class="tc-677" rel="nofollow" target="_blank">377元/㎡主材套餐</a>
-            <a href="http://beijing.17zhuangxiu.com/zhengzhuang/" class="tc-377" rel="nofollow" target="_blank">677元/㎡整装套餐</a></p>
-    </div>
 </section>
 <!-- 精装简装套餐 end -->
 <!-- 装修明细 start -->
@@ -125,71 +119,21 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             <div class="aa-area-detail clearfix">
                 <!-- 主卧 start -->
                 <h3 class="f14 mt30">
+                    <span>
                     <i class="icon bedroom"></i>
                     <span class="f24">主卧</span>
                     <span class="cDGray fN ml5">面积：
                         <span class="cBRed mr5">28</span>单项合计金额：
                         <span class="cBRed">¥6958</span></span>
+                    </span>
+                    <span>
+                    <i class="icon bedroom"></i>
+                    <span class="f24">主卧</span>
+                    <span class="cDGray fN ml5">面积：
+                        <span class="cBRed mr5">28</span>单项合计金额：
+                        <span class="cBRed">¥6958</span></span>
+                    </span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>70</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>70</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>70</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>70</td>
-                            <td>30</td>
-                            <td class="tl">都芳钻石系列、多乐士至尊五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="5">顶面</td>
-                            <td>铲除顶面腻子层</td>
-                            <td>28</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>28</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>28</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>28</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td>石膏板吊顶</td>
-                            <td>1</td>
-                            <td>195</td>
-                            <td class="tl">轻钢龙骨石膏板回型吊顶，带反光灯带。龙牌石膏板。</td></tr>
-                    </tbody>
-                </table>
                 <!-- 主卧 end -->
                 <!-- 主卧 start -->
                 <h3 class="f14 mt30">
@@ -199,67 +143,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">19</span>单项合计金额：
                         <span class="cBRed">¥4720</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>47</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>47</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>47</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>47</td>
-                            <td>30</td>
-                            <td class="tl">都芳钻石系列、多乐士至尊五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="5">顶面</td>
-                            <td>铲除顶面腻子层</td>
-                            <td>19</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>19</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>19</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>19</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td>石膏板吊顶</td>
-                            <td>1</td>
-                            <td>195</td>
-                            <td class="tl">轻钢龙骨石膏板回型吊顶，带反光灯带。龙牌石膏板。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon guest-bedroom"></i>
                     <span class="f24">客卧</span>
@@ -267,67 +150,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">37</span>单项合计金额：
                         <span class="cBRed">¥9193</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>92</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>92</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>92</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>92</td>
-                            <td>30</td>
-                            <td class="tl">都芳钻石系列、多乐士至尊五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="5">顶面</td>
-                            <td>铲除顶面腻子层</td>
-                            <td>37</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>37</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>37</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>37</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td>石膏板吊顶</td>
-                            <td>1</td>
-                            <td>195</td>
-                            <td class="tl">轻钢龙骨石膏板回型吊顶，带反光灯带。龙牌石膏板。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon guest-room"></i>
                     <span class="f24">客厅</span>
@@ -335,72 +157,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">19</span>单项合计金额：
                         <span class="cBRed">¥7554</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>47</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>47</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>47</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>47</td>
-                            <td>30</td>
-                            <td class="tl">都芳钻石系列、多乐士至尊五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="6">顶面</td>
-                            <td>石膏线</td>
-                            <td>15</td>
-                            <td>29</td>
-                            <td class="tl">泰丽雅石膏大花线（15cm），快粘粉粘贴。直线型石膏线。</td></tr>
-                        <tr>
-                            <td>铲除顶面腻子层</td>
-                            <td>19</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>19</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>19</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>19</td>
-                            <td>30</td>
-                            <td class="tl">都芳钻石系列、多乐士至尊五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td>石膏板吊异形顶</td>
-                            <td>9</td>
-                            <td>245</td>
-                            <td class="tl">轻钢龙骨吊弧形顶，带反光灯带。龙牌石膏板</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon balcony"></i>
                     <span class="f24">阳台</span>
@@ -408,48 +164,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">9</span>单项合计金额：
                         <span class="cBRed">¥1876</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">墙面</td>
-                            <td>墙面刮腻子</td>
-                            <td>18</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>18</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="2">顶面</td>
-                            <td>顶面刮腻子</td>
-                            <td>9</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>9</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="1">地面</td>
-                            <td>铺贴地砖</td>
-                            <td>9</td>
-                            <td>54</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon kitchen"></i>
                     <span class="f24">厨房</span>
@@ -457,47 +171,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">6</span>单项合计金额：
                         <span class="cBRed">¥2236</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">墙面</td>
-                            <td>铺贴墙砖</td>
-                            <td>24</td>
-                            <td>55</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>墙面防水处理</td>
-                            <td>1</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，墙面清理干净平整；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                        <tr>
-                            <td rowspan="3">顶面</td>
-                            <td>铺贴地砖</td>
-                            <td>6</td>
-                            <td>54</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>铺贴贴过门石</td>
-                            <td>1</td>
-                            <td>47</td>
-                            <td class="tl">人工及沙子水泥铺贴</td></tr>
-                        <tr>
-                            <td>地面防水处理</td>
-                            <td>6</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，地面清理干净；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon toilet"></i>
                     <span class="f24">卫生间</span>
@@ -505,58 +178,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">12</span>单项合计金额：
                         <span class="cBRed">¥4473</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">墙面</td>
-                            <td>铺贴墙砖</td>
-                            <td>48</td>
-                            <td>55</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>墙面防水处理</td>
-                            <td>3</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，墙面清理干净平整；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                        <tr>
-                            <td rowspan="3">地面</td>
-                            <td>铺贴地砖</td>
-                            <td>12</td>
-                            <td>54</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>铺贴贴过门石</td>
-                            <td>1</td>
-                            <td>47</td>
-                            <td class="tl">人工及沙子水泥铺贴</td></tr>
-                        <tr>
-                            <td>地面防水处理</td>
-                            <td>12</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，地面清理干净；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                        <tr>
-                            <td rowspan="2">安装</td>
-                            <td>地漏及安装</td>
-                            <td>2</td>
-                            <td>122</td>
-                            <td class="tl">潜水艇不锈钢地漏及人工费用</td></tr>
-                        <tr>
-                            <td>五金配件安装安装（毛巾杆、浴巾架等）</td>
-                            <td>1</td>
-                            <td>89</td>
-                            <td class="tl">（浴配件自购：毛巾杆、浴巾架，马桶杯架等），安装</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon balcony"></i>
                     <span class="f24">其它</span>
@@ -564,58 +185,9 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5"></span>单项合计金额：
                         <span class="cBRed">¥2533</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="7">其它</td>
-                            <td>包立管</td>
-                            <td>1</td>
-                            <td>350</td>
-                            <td class="tl">轻体砖包立管。（325水泥，沙子抹平）</td></tr>
-                        <tr>
-                            <td>灯具安装</td>
-                            <td>1</td>
-                            <td>255</td>
-                            <td class="tl">人工费用；水晶灯或高档灯具不包含。此价格为2居室价格，每增加一居室增加50元。</td></tr>
-                        <tr>
-                            <td>人工开孔费（空调等）</td>
-                            <td>4</td>
-                            <td>102</td>
-                            <td class="tl">人工机械打洞(按实计算)</td></tr>
-                        <tr>
-                            <td>工程管理费</td>
-                            <td>1</td>
-                            <td>1000</td>
-                            <td class="tl">通常为工程总造价的3%-5%。</td></tr>
-                        <tr>
-                            <td>材料搬运费</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td class="tl">不含甲方自购材料，将乙方所购材料搬运至施工地点</td></tr>
-                        <tr>
-                            <td>垃圾清运费</td>
-                            <td>1</td>
-                            <td>300</td>
-                            <td class="tl">清运到物业指定地点。外运费用350-500每车。</td></tr>
-                        <tr>
-                            <td>开关面板安装</td>
-                            <td>1</td>
-                            <td>220</td>
-                            <td class="tl">人工费用；此价格为2居室价格，每增加一居室增加50元。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <span class="r mt20">
+                <!--<span class="r mt20">
                     <a href="javascript:window.print();" class="btn btn-print mr10">打印</a>
-                    <a href="detail.php?action=excel&flag=1&area=130&shi=6" class="btn btn-down">下载</a></span>
+                    <a href="/" class="btn btn-down">下载</a></span>-->
             </div>
         </div>
         <!-- 精装修表格 end -->
@@ -635,62 +207,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">28</span>单项合计金额：
                         <span class="cBRed">¥6713</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>70</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>70</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>70</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>70</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="4">顶面</td>
-                            <td>铲除顶面腻子层</td>
-                            <td>28</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>28</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>28</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>28</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon s-bedroom"></i>
                     <span class="f24">次卧</span>
@@ -698,62 +214,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">19</span>单项合计金额：
                         <span class="cBRed">¥4553</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>47</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>47</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>47</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>47</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="4">顶面</td>
-                            <td>铲除顶面腻子层</td>
-                            <td>19</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>19</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>19</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>19</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon guest-bedroom"></i>
                     <span class="f24">客卧</span>
@@ -761,62 +221,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">37</span>单项合计金额：
                         <span class="cBRed">¥8869</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>92</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>92</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>92</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>92</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="4">顶面</td>
-                            <td>铲除顶面腻子层</td>
-                            <td>37</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>37</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>37</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>37</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon guest-room"></i>
                     <span class="f24">客厅</span>
@@ -824,67 +228,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">19</span>单项合计金额：
                         <span class="cBRed">¥4826</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4">墙面</td>
-                            <td>铲除墙面腻子层</td>
-                            <td>47</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>墙面处理</td>
-                            <td>47</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>墙面刮腻子</td>
-                            <td>47</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>47</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="5">顶面</td>
-                            <td>石膏线</td>
-                            <td>15</td>
-                            <td>18</td>
-                            <td class="tl">泰丽雅石膏素线（10cm以内），快粘粉粘贴。直线型石膏线。若顶面需要吊顶单算费用，直线型或平顶单价130-180元每平米/延米不等，弧形等异形费用较高。</td></tr>
-                        <tr>
-                            <td>铲除顶面腻子层</td>
-                            <td>19</td>
-                            <td>10</td>
-                            <td class="tl">清水腻子，人工费用，装袋堆放指定地点；耐水腻子增加6元每平方</td></tr>
-                        <tr>
-                            <td>顶面处理</td>
-                            <td>19</td>
-                            <td>7</td>
-                            <td class="tl">滚涂美巢界面剂（QG500）</td></tr>
-                        <tr>
-                            <td>顶面刮腻子</td>
-                            <td>19</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>19</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon balcony"></i>
                     <span class="f24">阳台</span>
@@ -892,48 +235,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">9</span>单项合计金额：
                         <span class="cBRed">¥1876</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">墙面</td>
-                            <td>墙面刮腻子</td>
-                            <td>18</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>墙面刷乳胶漆</td>
-                            <td>18</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="2">顶面</td>
-                            <td>顶面刮腻子</td>
-                            <td>9</td>
-                            <td>25</td>
-                            <td class="tl">墙面批刮内墙腻子2遍使用美巢800易刮平。（若原基面平整度误差超过115㎜时需找平，费用另计20元每平方）</td></tr>
-                        <tr>
-                            <td>顶面刷乳胶漆</td>
-                            <td>9</td>
-                            <td>26.5</td>
-                            <td class="tl">立邦金牌竹炭净味五合一，人工打磨墙面，滚涂墙面乳胶漆滚刷底漆一遍，滚刷面漆两遍，滚筒,砂皮,刷把，纱布等</td></tr>
-                        <tr>
-                            <td rowspan="1">地面</td>
-                            <td>铺贴地砖</td>
-                            <td>9</td>
-                            <td>54</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon kitchen"></i>
                     <span class="f24">厨房</span>
@@ -941,47 +242,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">6</span>单项合计金额：
                         <span class="cBRed">¥2236</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">墙面</td>
-                            <td>铺贴墙砖</td>
-                            <td>24</td>
-                            <td>55</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>墙面防水处理</td>
-                            <td>1</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，墙面清理干净平整；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                        <tr>
-                            <td rowspan="3">顶面</td>
-                            <td>铺贴地砖</td>
-                            <td>6</td>
-                            <td>54</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>铺贴贴过门石</td>
-                            <td>1</td>
-                            <td>47</td>
-                            <td class="tl">人工及沙子水泥铺贴</td></tr>
-                        <tr>
-                            <td>地面防水处理</td>
-                            <td>6</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，地面清理干净；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon toilet"></i>
                     <span class="f24">卫生间</span>
@@ -989,58 +249,6 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5">12</span>单项合计金额：
                         <span class="cBRed">¥4473</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">墙面</td>
-                            <td>铺贴墙砖</td>
-                            <td>48</td>
-                            <td>55</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>墙面防水处理</td>
-                            <td>3</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，墙面清理干净平整；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                        <tr>
-                            <td rowspan="3">地面</td>
-                            <td>铺贴地砖</td>
-                            <td>12</td>
-                            <td>54</td>
-                            <td class="tl">人工辅料费用包含勾缝；正铺，如异形铺贴费用会增加（菱形，斜铺，马赛克等）；强度32.5R普通硅酸盐水泥。（钻牌/金隅/海螺水泥）；水泥，沙子，胶，勾缝剂。</td></tr>
-                        <tr>
-                            <td>铺贴贴过门石</td>
-                            <td>1</td>
-                            <td>47</td>
-                            <td class="tl">人工及沙子水泥铺贴</td></tr>
-                        <tr>
-                            <td>地面防水处理</td>
-                            <td>12</td>
-                            <td>76</td>
-                            <td class="tl">东方雨虹防水，地面清理干净；做24小时闭水实验，按涂刷实际面积计算工程量。</td></tr>
-                        <tr>
-                            <td rowspan="2">安装</td>
-                            <td>地漏及安装</td>
-                            <td>2</td>
-                            <td>122</td>
-                            <td class="tl">潜水艇不锈钢地漏及人工费用</td></tr>
-                        <tr>
-                            <td>五金配件安装安装（毛巾杆、浴巾架等）</td>
-                            <td>1</td>
-                            <td>89</td>
-                            <td class="tl">（浴配件自购：毛巾杆、浴巾架，马桶杯架等），安装</td></tr>
-                    </tbody>
-                </table>
-                <!-- 主卧 end -->
-                <!-- 主卧 start -->
                 <h3 class="f14 mt30">
                     <i class="icon balcony"></i>
                     <span class="f24">其它</span>
@@ -1048,64 +256,16 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                         <span class="cBRed mr5"></span>单项合计金额：
                         <span class="cBRed">¥2533</span></span>
                 </h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="th1">工程项目</th>
-                            <th class="th2">项目明细</th>
-                            <th class="th3">施工数量</th>
-                            <th class="th4">单价</th>
-                            <th class="th5">工艺标准及材料说明(不含拆除及水电工程费用)</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="7">其它</td>
-                            <td>包立管</td>
-                            <td>1</td>
-                            <td>350</td>
-                            <td class="tl">轻体砖包立管。（325水泥，沙子抹平）</td></tr>
-                        <tr>
-                            <td>灯具安装</td>
-                            <td>1</td>
-                            <td>255</td>
-                            <td class="tl">人工费用；水晶灯或高档灯具不包含。此价格为2居室价格，每增加一居室增加50元。</td></tr>
-                        <tr>
-                            <td>人工开孔费（空调等）</td>
-                            <td>4</td>
-                            <td>102</td>
-                            <td class="tl">人工机械打洞(按实计算)</td></tr>
-                        <tr>
-                            <td>工程管理费</td>
-                            <td>1</td>
-                            <td>1000</td>
-                            <td class="tl">通常为工程总造价的3%-5%。</td></tr>
-                        <tr>
-                            <td>材料搬运费</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td class="tl">不含甲方自购材料，将乙方所购材料搬运至施工地点</td></tr>
-                        <tr>
-                            <td>垃圾清运费</td>
-                            <td>1</td>
-                            <td>300</td>
-                            <td class="tl">清运到物业指定地点。外运费用350-500每车。</td></tr>
-                        <tr>
-                            <td>开关面板安装</td>
-                            <td>1</td>
-                            <td>220</td>
-                            <td class="tl">人工费用；此价格为2居室价格，每增加一居室增加50元。</td></tr>
-                    </tbody>
-                </table>
                 <!-- 主卧 end -->
-                <span class="r mt20">
+                <!--<span class="r mt20">
                     <a href="javascript:window.print();" class="btn btn-print mr10">打印</a>
-                    <a href="detail.php?action=excel&flag=1&area=130&shi=6" class="btn btn-down">下载</a></span>
+                    <a href="detail.php?action=excel&flag=1&area=130&shi=6" class="btn btn-down">下载</a></span>-->
             </div>
         </div>
         <!-- 简装修表格 end --></div>
 </section>
-<?php echo $this->render('_show-charge'); ?>
-<?php echo $this->render('_show-sample'); ?>
+<?php //echo $this->render('_show-charge'); ?>
+<?php //echo $this->render('_show-sample'); ?>
 <?php echo $this->render('_show-related'); ?>
 <?php echo $this->render('_show-pop'); ?>
 <?php //echo $this->render('_right_sao'); ?>

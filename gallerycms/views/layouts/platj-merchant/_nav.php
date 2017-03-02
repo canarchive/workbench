@@ -11,11 +11,11 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <li>
             <a <?php if ($currentNav == 'desc') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/showsj_{$info['code']}.html"; ?>" title="<?= $info['name']; ?>介绍"><?= $info['name']; ?>介绍</a></li>
         <li>
-            <a <?php if ($currentNav == 'realcase') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/realcase/"; ?>" title="<?= $info['name']; ?>实景案例"><?= $info['name']; ?>实景案例</a></li>
+            <a <?php if ($currentNav == 'realcase') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_realcase/"; ?>" title="<?= $info['name']; ?>实景案例"><?= $info['name']; ?>实景案例</a></li>
         <li>
-            <a <?php if ($currentNav == 'working') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/working/"; ?>" title="<?= $info['name']; ?>工地"><?= $info['name']; ?>工地</a></li>
+            <a <?php if ($currentNav == 'working') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_working/"; ?>" title="<?= $info['name']; ?>工地"><?= $info['name']; ?>工地</a></li>
         <li>
-            <a <?php if ($currentNav == 'designer') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/designer/"; ?>" title="<?= $info['name']; ?>设计师"><?= $info['name']; ?>设计师</a></li>
+            <a <?php if ($currentNav == 'designer') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_designer/"; ?>" title="<?= $info['name']; ?>设计师"><?= $info['name']; ?>设计师</a></li>
         <li>
             <a <?php if ($currentNav == 'comment') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_comment/"; ?>" title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></li>
         <script type="text/javascript">jQuery(document).ready(function() {

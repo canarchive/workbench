@@ -29,7 +29,13 @@ class QuoteController extends HouseController
 
 		$page = Yii::$app->request->get('page');
 		//$infos = $model->getInfos([]);
-        $where = [];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $where = [];
+        foreach ($tagInfos as $field => $value) {
+            if (empty($value)) {
+                continue;
+            }
+            $where[$field] = $value;
+        }
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12, 'pagePreStr' => '_']);
 		$datas = [
@@ -49,11 +55,13 @@ class QuoteController extends HouseController
 			}
 			$tagStr .= $quoteSortInfos[$tagKey]['values'][$tagValue];
 		}
-		//$tagStr = rtrim($tagStr, '-');
-        $pageStr = $page > 1 ? "_第{$page}页-" : '-';
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('quote-index', $dataTdk);
+        $tdkIndex = empty($tagStr) ? 'quote-list' : 'quote-list-sort';
+		$this->getTdkInfos($tdkIndex, $dataTdk);
 		return $this->render('index', $datas);
 	}
 

@@ -8,6 +8,7 @@ use common\models\GallerycmsModel;
 class Quote extends GallerycmsModel
 {
     use HouseTrait;
+    public $name;
 	public $tagHeaders = [
 		'h' => 'house_type', 
 		's' => 'style', 
@@ -178,7 +179,7 @@ class Quote extends GallerycmsModel
 
     protected function _getSelect()
     {
-        return 'id,name,created_at,status';
+        return 'id,community_name, district, house_type,style,area_real,area,created_at,status';
     }
 
     public function getIndexInfos($where)
@@ -206,4 +207,13 @@ class Quote extends GallerycmsModel
 
         return $this->_setCacheDatas($keyCache, $infos);
     }
+
+	protected function _formatInfos($infos)
+	{
+        foreach ($infos as & $info) {
+            $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
+        }
+        //print_r($infos);
+		return $infos;
+	}
 }

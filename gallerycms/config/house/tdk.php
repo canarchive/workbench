@@ -81,21 +81,21 @@ return [
 
     // 报价列表 http://cmshouse.alyee.com/beijing/quote/
     'quote-list' => [
-        'title' => '2017{{CITYNAME}}装修报价单_{{CITYNAME}}装修预算表_{{CITYNAME}}装修到底需要多少钱-兔班长装修网',
+        'title' => '2017{{CITYNAME}}装修报价单_{{CITYNAME}}装修预算表_{{CITYNAME}}装修到底需要多少钱{{PAGESTR}}-兔班长装修网',
         'keyword' => '2017{{CITYNAME}}装修报价单,{{CITYNAME}}装修预算表,{{CITYNAME}}装修需要多少钱',
         'description' => '兔班长装修网装修报价频道为您收集整理了大量2017{{CITYNAME}}装修报价单，{{CITYNAME}}装修预算表，{{CITYNAME}}装修到底需要多少钱，让您家装修更省钱！',
     ],
     // 报价类别 http://cmshouse.alyee.com/beijing/quote_h_two-s_simple/
     'quote-list-sort' => [
-        'title' => '2017{{CITYNAME}}{{TAGSTR}}装修报价单_{{CITYNAME}}{{TAGSTR}}装修预算表_{{CITYNAME}}{{TAGSTR}}装修需要多少钱-兔班长装修网',
+        'title' => '2017{{CITYNAME}}{{TAGSTR}}装修报价单_{{CITYNAME}}{{TAGSTR}}装修预算表_{{CITYNAME}}{{TAGSTR}}装修需要多少钱{{PAGESTR}}-兔班长装修网',
         'keyword' => '2017{{CITYNAME}}{{TAGSTR}}装修报价单,{{CITYNAME}}{{TAGSTR}}装修预算表,{{CITYNAME}}{{TAGSTR}}装修需要多少钱',
         'description' => '兔班长装修网装修报价频道为您收集整理了大量2017{{CITYNAME}}{{TAGSTR}}装修报价单，{{CITYNAME}}{{TAGSTR}}装修预算表，{{CITYNAME}}{{TAGSTR}}装修需要多少钱，让您家装修更省钱！',
     ],
     // 报价内容 http://cmshouse.alyee.com/beijing/quote_show_1.html
     'quote-show' => [
-         'title' => '{城市+楼盘+面积+户型+风格}装修报价表,多少钱,装修预算清单-兔班长装修网',
-         'keyword' => '{城市+楼盘+面积+户型+风格}装修报价表,{城市+楼盘+面积+户型+风格}装修多少钱,{城市+楼盘+面积+户型+风格}装修预算清单',
-         'description' => '一兔班长装修网通过装修智能报价工具为您估算{城市+楼盘+面积+户型+风格}装修报价表，{城市+楼盘+面积+户型+风格}装修多少钱，{城市+楼盘+面积+户型+风格}装修预算清单，让您家的装修更透明更放心。',
+         'title' => '{{CITYNAME}}{{INFONAME}}装修报价表,多少钱,装修预算清单-兔班长装修网',
+         'keyword' => '{{CITYNAME}}{{INFONAME}}装修报价表,{{CITYNAME}}{{INFONAME}}装修多少钱,{{CITYNAME}}{{INFONAME}}装修预算清单',
+         'description' => '一兔班长装修网通过装修智能报价工具为您估算{{CITYNAME}}{{INFONAME}}装修报价表，{{CITYNAME}}{{INFONAME}}装修多少钱，{{CITYNAME}}{{INFONAME}}装修预算清单，让您家的装修更透明更放心。',
     ],
 
     // 实景案例列表 http://cmshouse.alyee.com/beijing/realcase/

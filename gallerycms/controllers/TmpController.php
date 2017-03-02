@@ -9,6 +9,9 @@ use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\AskSort;
 use gallerycms\house\models\AskTag;
 use gallerycms\merchant\models\Merchant;
+use gallerycms\house\models\Quote;
+use gallerycms\house\models\CommunityBase;
+use common\models\Quote as QuoteTool;
 
 class TmpController extends GallerycmsController
 {
@@ -16,7 +19,80 @@ class TmpController extends GallerycmsController
     {   
         $action = Yii::$app->request->get('action');
         $this->$action();
-    }   
+    }
+
+    public function quote()
+    {
+        $model = new Quote();
+        $sInfos = $model->styleInfos;
+        $hInfos = $model->houseTypeInfos;
+        $bInfos = $model->budgetInfos;
+
+        $quote = new QuoteTool();
+        $r = $quote->getResult(123);
+        //print_r($r);
+        $cModel = new CommunityBase();
+        $cInfos = $cModel->find()->select('name,district')->where(['city_name' => '北京'])->limit(10)->all();
+        foreach ($cInfos as $cInfo) {
+            foreach ($sInfos as $sKey => $sValue) {
+                foreach ($hInfos as $hKey => $hValue) {
+                    for ($areaReal = 40; $areaReal <= 300; $areaReal++) {
+                        $area = '';
+                        if ($areaReal <= 60) {
+                            $area = 'one';
+                        } elseif ($areaReal > 60 && $areaReal <= 80) {
+                            $area = 'two';
+                        } elseif ($areaReal > 80 && $areaReal <= 100) {
+                            $area = 'three';
+                        } elseif ($areaReal > 100 && $areaReal <= 120) {
+                            $area = 'four';
+                        } elseif ($areaReal > 120 && $areaReal <= 160) {
+                            $area = 'five';
+                        } elseif ($areaReal > 160) {
+                            $area = 'six';
+                        }
+
+                        $data = [
+                            'city_code' => 'beijing',
+                            'district' => $cInfo['district'],
+                            'community_name' => $cInfo['name'],
+                            'owner_name' => '',
+                            'house_type' => $hKey,
+                            'style' => $sKey,
+                            'area_real' => $areaReal,
+                            'area' => $area,
+                        ];
+                        $new = new Quote($data);
+                        $new->insert(false);
+                    }
+                }
+            }
+        }
+
+        print_r($cInfos);
+    }
+
+    public function community()
+    {
+        $file = '/tmp/quote/house.txt';
+        $datas = file($file);
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+        echo count($datas), '<br />';
+
+        $sqlFile = '/tmp/quote/tag.sql';
+        $i = 0;
+        foreach ($datas as $data) {
+            $info = explode("\t", $data);
+            $city_name = str_replace("'", '"', trim(trim($info[0]), '"'));
+            $name = str_replace("'", '"', trim(trim($info[1]), '"'));
+            $district = str_replace("'", '"', trim(trim($info[2]), '"'));
+            $sqlStr = "INSERT INTO `wc_community_base` (`city_name`, `name`, `district`) VALUES('{$city_name}', '{$name}', '{$district}');\n";
+            file_put_contents($sqlFile, $sqlStr, FILE_APPEND);
+            $i++;
+        }
+        echo $i;
+    }
 
     public function dispatch()
     {

@@ -21,13 +21,13 @@ use gallerycms\components\LinkPager;
             <input type="hidden" class="ajaxGetNumById" value="<?= $info['id']; ?>" />
             <dl class="dl_none">
                 <dt>
-                    <a href="/sample/show-<?= $info['id']; ?>" title="<?= $info['name']; ?>">
+                    <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>">
 						<img src="<?= $info['logo']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" />
                     </a>
                     <!--<span></span><i>实景图片</i>-->
                 </dt>
                 <dd class="dd1">
-                    <a href="/sample/show-<?= $info['id']; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>
+                    <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>
                     <!--<a rel="nofollow" style="display:none;" href="javascript:;" id="_<?= $info['id']; ?>">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                     <a rel="nofollow" style="display:none;" href="javascript:;" id="jin_6572154">

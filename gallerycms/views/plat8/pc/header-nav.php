@@ -7,11 +7,8 @@
             <li class="">
                 <a class="nav_fzlink" href="/sample/">效果图</a><b></b>
             </li>
-            <li class="">
-                <a class="nav_fzlink" href="/sample/">装修问答</a><b></b>
-            </li>
             <li class="has_secondMenu ">
-                <a href="/ask_gzsj">
+                <a href="/ask_lm_gzsj/">
                     <!--<em class="menu_arrow"></em>-->
                     <span>装修问答</span>
                 </a>
@@ -33,12 +30,12 @@
                 <a class="nav_fzlink" href="/<?= Yii::$app->params['currentCompany']['code']; ?>/merchant/">装修公司</a><b></b>
             </li>
             <li class="has_homeIcon">
-                <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>_quote/">装修报价</a><b></b>
+                <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>/quote/">装修报价</a><b></b>
             </li>
         </ul>
         <?php if (isset($showRightNav) && ($showRightNav)) { ?>
         <div class="q_code">
-            <a href="http://www.to8to.com/apps/" class="q_code_applnk" rel="nofollow">
+            <a href="/" class="q_code_applnk" rel="nofollow">
                 <div class="slider_container">
                     <div class="clear">
                         <div class="to8to_headgif">

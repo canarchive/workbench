@@ -3,7 +3,7 @@ $info = $this->context->mDatas['info'];
 ?>
 <div class="logo wrapper clearfix">
     <div class="logo_left fl clearfix">
-        <a title="<?= Yii::$app->params['siteNameBase']; ?>" href="/">
+        <a title="<?= Yii::$app->params['siteNameBase']; ?>" href="<?= Yii::getAlias('@gallerycmsurl'); ?>">
             <img title="<?= Yii::$app->params['siteNameBase']; ?>" width="133" height="34" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8a0ad-7533.jpg"></a>
         <div style="border-left:1px solid #cdcdcd;float:left;color:#444;margin-top:20px;padding-left:14px;overflow:hidden;width: 220px;text-overflow: ellipsis;white-space: nowrap;">
             <h1 title="<?= $info['name']; ?>" style="font:20px '微软雅黑';font-weight:bold;color:#444;"><?= $info['name']; ?>装饰公司</h1>
