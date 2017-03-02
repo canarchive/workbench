@@ -112,7 +112,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-            'pattern' => '/<city_code:[a-z]+>/quote_show_<id:\d+>',
+            'pattern' => '/<city_code:[a-z]+>/quoteshow_<id:\d+>',
     		'route'	=> '/house/quote/show',
         ],
     ],
@@ -128,7 +128,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-            'pattern' => '/<city_code:[a-z]+>_merchant/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+            'pattern' => '/<city_code:[a-z]+>/merchant/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
     		'route'	=> '/house/merchant/index',
     		'defaults' => ['page' => 1, 'tag' => ''],
         ],
@@ -137,9 +137,9 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '/',
-    		'pattern' => '/<city_code:[a-z]+>/working/<tag:[a-zA-Z_\-]+>/<page:[0-9]+>',
+    		'pattern' => '/<city_code:[a-z]+>/working<page:_[0-9]+>',
     		'route'	=> '/house/working/index',
-    		'defaults' => ['page' => 1, 'tag' => ''],
+    		'defaults' => ['page' => '_1'],
         ],
     ],
     'working-show' => [

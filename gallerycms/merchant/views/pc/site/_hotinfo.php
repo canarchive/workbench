@@ -18,7 +18,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <?php $i = 1; foreach ($askInfos as $info) { $elemClass = $i <= 3 ? 'red' : 'gray'; ?>
         <li class="clearfix">
             <span class="span_left span_<?= $elemClass; ?>"><?= $i; ?></span>
-            <a href="<?= "/ask_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 10, '...'); ?></a>
+            <a href="<?= "/askshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 10, '...'); ?></a>
             <span class="fr span2" onclick="check_box('152544','21-1','<?= $info['name']; ?>')">免费咨询</span></li>
         <?php $i++; } ?>
     </ul>
@@ -27,7 +27,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <?php $i = 1; foreach ($quoteInfos as $info) { $elemClass = $i <= 3 ? 'red' : 'gray'; ?>
         <li class="clearfix">
             <span class="span_left span_<?= $elemClass; ?>"><?= $i; ?></span>
-            <a href="<?= "/{$info['city_code']}/quote_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+            <a href="<?= "/{$info['city_code']}/quoteshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
             <span class="fr span2" onclick="check_box('152544','21-1','<?= $info['name']; ?>')">免费报价</span></li>
         <?php $i++; } ?>
     </ul>

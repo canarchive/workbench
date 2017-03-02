@@ -11,7 +11,7 @@ $qInfos = $this->context->mDatas['quoteInfos'];
     <ul class="dianPing_ul">
         <li class="li1">
             <font class="p_red">
-                <a href="<?= "/{$info['city_code']}/quote_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a></font>获取报价
+                <a href="<?= "/{$info['city_code']}/quoteshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a></font>获取报价
             <font class="p_red"></font></li>
         <li class="li2 clearfix">
             <span class="fl span1">

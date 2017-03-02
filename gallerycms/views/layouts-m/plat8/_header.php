@@ -7,7 +7,7 @@
         <i id="back"></i>
     </a>
     <h1 class="back-home-page">
-        <a class="zxzs-set" dataptag="2_3_10_487" href="/">
+        <a class="zxzs-set" dataptag="2_3_10_487" href="<?= "/{$this->context->currentCityCode}/"; ?>">
             <span class="icon-tbt"></span>
             <b>首页</b>
         </a>

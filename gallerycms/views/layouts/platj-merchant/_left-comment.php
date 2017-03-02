@@ -5,7 +5,7 @@ $cInfos = $this->context->mDatas['commentInfos'];
 <div class="nineth">
     <div class="nineth_title clearfix">
         <span class="zixun_h3"><?= $info['name']; ?>评价</span>
-        <a target="_blank" href="<?= "/{$info['city_code']}/{$info['code']}/comment/"; ?>" title="<?= $info['name']; ?>评价">
+        <a target="_blank" href="<?= "/{$info['city_code']}/{$info['code']}_comment/"; ?>" title="<?= $info['name']; ?>评价">
             <u>查看更多</u>&gt;&gt;</a>
     </div>
     <div class="message" id="message_main">

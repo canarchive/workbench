@@ -2,11 +2,11 @@
 <div class="ad-top">
     <ul class="rslides">
         <li>
-            <a href="/">
+            <a href="<?= "/{$this->context->currentCityCode}/"; ?>">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/be20c-5915.png" width="320px" /></a>
         </li>
         <li>
-            <a href="/">
+            <a href="<?= "/{$this->context->currentCityCode}/"; ?>">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/eab11-8537.jpg" width="320px" /></a>
         </li>
     </ul>

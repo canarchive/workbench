@@ -8,7 +8,7 @@ $quoteInfos = $this->context->mDatas['quoteInfos'];
             <?php $i = 1; foreach ($quoteInfos as $info) { ?>
             <li>
                 <p class="p-list1">
-                    <span class="attb"><a href="<?= "/{$info['city_code']}/quote_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a></span>
+                    <span class="attb"><a href="<?= "/{$info['city_code']}/quoteshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a></span>
                 </p>
             </li>
             <?php } ?>

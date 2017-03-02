@@ -10,7 +10,7 @@ $info = $this->context->mDatas['info'];
                 <i class="section1_2">&gt;</i>
                 <a class="section1_2" href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName; ?>装饰公司"><?= $this->context->currentCityName; ?>装饰公司</a>
                 <i class="section1_2">&gt;</i>
-                <a class="section1_2" href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                <a class="section1_2" href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
             </span>
         </div>
         <p class="zhaoshang" style="color:#fff;"><?= $info['name']; ?></p>

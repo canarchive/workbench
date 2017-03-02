@@ -28,9 +28,9 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/plat8/_js-he
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/6b375-9554.jpg" title="土巴兔logo" alt="网页端RGB_1.jpg" border="0" hspace="0" vspace="0" /></p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
             <span style="background-color:transparent;font-size:14px"><?= Yii::$app->params['siteNameBase']; ?></span>
-            <a href="/" target="">装修网</a>
+            <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">装修网</a>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-        由北京兔班长科技有限公司斥巨资打造的兔班长装修网（<a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>">www.tubanzhang.com</a>)是中国最具权威的装修建材行业平台，目前已在全国近百个大中城市开设分站，在超过110个一二线设立分支机构，入驻装饰企业超过10万家，帮助逾十万企业成功转型电子商务。
+        由北京兔班长科技有限公司斥巨资打造的兔班长装修网（<a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">www.tubanzhang.com</a>)是中国最具权威的装修建材行业平台，目前已在全国近百个大中城市开设分站，在超过110个一二线设立分支机构，入驻装饰企业超过10万家，帮助逾十万企业成功转型电子商务。
         </p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
         从2016年成立至今，兔班长网建立了完善的装饰企业品牌推广、形象维护体系，致力于扩大装饰企业在互联网的影响力，为企业带来高速的来自于互联网的产值增长，进而推动企业整体发展，有效地结合线上线下的影响力，最终为企业成功融入互联网时代的浪潮做出最强力的支持。

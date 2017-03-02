@@ -3,11 +3,11 @@
 <!-- 0级 -->
 <!--二级-->
 <header id="dt-hd" class="navstyle2">
-    <a class="zxzs-set" dataptag="2_3_10_487" href="/">
+    <a class="zxzs-set" dataptag="2_3_10_487" href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">
         <i id="back"></i>
     </a>
     <h1 class="back-home-page">
-        <a class="zxzs-set" dataptag="2_3_10_487" href="/">
+        <a class="zxzs-set" dataptag="2_3_10_487" href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">
             <span class="icon-tbt"></span>
             <b>首页</b>
         </a>

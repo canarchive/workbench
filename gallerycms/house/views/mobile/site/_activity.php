@@ -17,13 +17,13 @@
 <!--倒计时-->
 <div id="time">
     <div class="left1">
-        <a href="/">
+        <a href="<?= "/{$this->context->currentCityCode}/"; ?>">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c013e-1969.png" /></a>
     </div>
     <div class="right1">
-        <a href="/">
+        <a href="<?= "/{$this->context->currentCityCode}/"; ?>">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/c32ce-1221.png" /></a>
-        <a href="/">
+        <a href="<?= "/{$this->context->currentCityCode}/"; ?>">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/30cf2-2627.png" /></a>
     </div>
 </div>

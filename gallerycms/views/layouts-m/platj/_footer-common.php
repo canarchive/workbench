@@ -9,7 +9,7 @@
 <div class="gray_mask"></div>
 <div style="width:100%; height:49px; border-top:1px solid #e0e1e5; background:#fff; position:fixed; bottom:0; left:0; z-index:999;">
     <div class="fixed_footer clear">
-        <a href="/">
+        <a href="<?= "/{$this->context->currentCityCode}/"; ?>">
             <i class="zp_icon zp_icon1"></i>
             <br />首页</a>
         <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>">

@@ -8,7 +8,7 @@ $mInfos = $this->context->mDatas['merchantInfos'];
     <div class="wrap youLike clear">
         <?php $i = 0; foreach ($mInfos as $info) { $classElem = $i % 2 == 0 ? 'fl' : 'fr'; ?>
         <dl class="<?= $classElem; ?>">
-            <a href="<?= $info['infoUrl']; ?>">
+            <a href="<?= "/sj_{$info['code']}/"; ?>">
                 <dt>
                     <img src="<?= $info['logo']; ?>" alt="<?= $info['name']; ?>" />
                     <p class="p1"><?= $info['name']; ?></p></dt>

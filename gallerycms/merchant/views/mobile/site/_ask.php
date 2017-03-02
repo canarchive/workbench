@@ -12,7 +12,7 @@ $aInfos = $this->context->mDatas['askInfos'];
     <ul class="wrap answer" style="padding-bottom:7px;">
         <?php $i = 1; foreach ($aInfos as $aInfo) { if ($i > 10) { break; } ?>
         <li class="clearfix li1" style="height:48px;line-height:48px;">
-            <a style="color:#333;" href="<?= "/ask_show_{$aInfo['id']}.html"; ?>" title="<?= $aInfo['name']; ?>"><?= $aInfo['name']; ?></a>
+            <a style="color:#333;" href="<?= "/askshow_{$aInfo['id']}.html"; ?>" title="<?= $aInfo['name']; ?>"><?= $aInfo['name']; ?></a>
             <span class="fr"><?= date('Y-m-d', $aInfo['created_at']); ?></span></li>
         <?php $i++; } ?>
 </section>

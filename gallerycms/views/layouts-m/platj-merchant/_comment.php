@@ -5,7 +5,7 @@ $cInfos = $this->context->mDatas['commentInfos'];
 <div class="zaixianzixun ziXun">
     <div class="wen_p clear">
         <div class="fl" style="border-bottom:none; color:#e44b46;line-height:50px;">
-            <a href="<?= "/{$info['city_code']}/{$info['code']}/comment/"; ?>" style="color:#e44b46;font-size: 16px; " title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></div>
+            <a href="<?= "/{$info['city_code']}/{$info['code']}_comment/"; ?>" style="color:#e44b46;font-size: 16px; " title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></div>
         <span class="fr">
             已服务<span style="color:red;"><?= $info['num_owner']; ?></span>业主</span></div>
     <ul class="zaixianzixun-example">

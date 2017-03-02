@@ -1,15 +1,15 @@
 <footer class="cGray" style="display:none;">
     <ul class="version f12 clearfix">
         <li class="active">
-            <a href="" class="cOrange" rel="nofollow">
+            <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">>
                 <i class="iconfont f26 cOrange"></i>
                 <br>触屏版</a></li>
         <li>
-            <a href="/" rel="nofollow">
+            <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">>
                 <i class="iconfont f30"></i>
                 <br>电脑版</a></li>
         <li>
-            <a href="/" rel="nofollow">
+            <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">>
                 <i class="iconfont f30"></i>
                 <br>App</a>
             <span class="down">下载</span>

@@ -17,7 +17,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <li>
             <a <?php if ($currentNav == 'designer') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/designer/"; ?>" title="<?= $info['name']; ?>设计师"><?= $info['name']; ?>设计师</a></li>
         <li>
-            <a <?php if ($currentNav == 'comment') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/comment/"; ?>" title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></li>
+            <a <?php if ($currentNav == 'comment') { echo 'class="current2"'; } ?> href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_comment/"; ?>" title="<?= $info['name']; ?>业主点评"><?= $info['name']; ?>业主点评</a></li>
         <script type="text/javascript">jQuery(document).ready(function() {
                 $.ajax({
                     type: "get",

@@ -22,13 +22,13 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
             <div class="offer-plist-item clearfix">
                 <div class="txtbox">
                     <p class="p1">
-                        <a href="/<?= $this->context->currentCityCode . '/quote_show_' . $info['id'] . '.html'; ?>" class="a1" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                        <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>" class="a1" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
                         <span class="graytag"><?= $info['house_type']; ?></span></p>
                     <p class="p2">半包装修价格：
                     <span class="cOrange mr20">¥ <?= $info['price_part']; ?></span>全包装修价格：
                     <span class="cOrange">¥ <?= $info['price_full']; ?></span></p>
                 </div>
-                <a href="/<?= $this->context->currentCityCode . '/quote_show_' . $info['id'] . '.html'; ?>" class="ata">查看TA的方案</a></div>
+                <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>" class="ata">查看TA的方案</a></div>
             <?php } ?>
             <!-- 右侧列表 end -->
             <!-- 分页 start -->

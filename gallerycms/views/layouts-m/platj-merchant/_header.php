@@ -25,7 +25,7 @@ $info = $this->context->mDatas['info'];
                 <i>></i>
                 <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName; ?>装饰公司"><?= $this->context->currentCityName; ?>装饰公司</a>
                 <i>></i>
-                <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                <a href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
             </p>
         </dd>
     </dl>
