@@ -8,8 +8,8 @@ trait MerchantTrait
 {
 	public $tagHeaders = [
 		'b' => 'budget', 
-		'd' => 'decoration_sort', 
 		's' => 'style', 
+		'd' => 'decoration_sort', 
 		'r' => 'region', 
 	];
 

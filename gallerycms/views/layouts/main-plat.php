@@ -18,10 +18,10 @@ $info = $this->context->mDatas['info'];
 <?php //echo $this->render('@gallerycms/views/layouts/platj/_toplist'); ?>
 <!--广告图-->
 <div class="advertis clearfix wrapper">
-    <a title="" class="fl" ad_need_click="true" ad_id="432" href="/" target="_blank">
+    <a title="" class="fl" ad_need_click="true" ad_id="432" href="javascript:void(0);">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/19d11-1599.gif" width='714' height='60' />
     </a>
-    <a title="" class="fr" ad_need_click="true" ad_id="433" href="/" target="_blank">
+    <a title="" class="fr" ad_need_click="true" ad_id="433" href="javascript: void(0);">
         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4e047-3593.gif" width='266' height='60' />
     </a>
 </div>

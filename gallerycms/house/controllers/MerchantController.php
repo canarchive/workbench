@@ -31,10 +31,15 @@ class MerchantController extends MerchantControllerBase
             }
             $where = array_merge($where, [['like', $tField, $tValue]]);
         }
+        $keyword = strip_tags(Yii::$app->request->get('keyword', ''));
+        if (!empty($keyword)) {
+            $where = array_merge($where, [['like', 'name', $keyword]]);
+        }
         //print_r($where);exit();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 18]);
 		$datas = [
+            'keyword' => $keyword,
 			'tag' => $tag,
 			'page' => $page,
 			'infos' => $infos['infos'],
@@ -45,17 +50,22 @@ class MerchantController extends MerchantControllerBase
 		];
         $datas = array_merge($datas, $this->_commonDatas());
 		$tagStr = '';
+        $tdkIndex = 'merchant-index';
 		foreach ($tagInfos as $tagKey => $tagValue) {
 			if (empty($tagValue)) {
 				continue;
 			}
+            $tdkIndex = $tdkIndex == 'merchant-index' ? 'merchant-index-' . $tagKey : 'merchant-index-full';
 			$tagStr .= $merchantSortInfos[$tagKey]['values'][$tagValue];
 		}
-		//$tagStr = rtrim($tagStr, '-');
-        $pageStr = $page > 1 ? "_第{$page}页-" : '-';
+
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
-		$this->getTdkInfos('merchant-index', $dataTdk);
+        //echo $tdkIndex;exit();
+		$this->getTdkInfos($tdkIndex, $dataTdk);
 		return $this->render('index', $datas);
 	}
 }

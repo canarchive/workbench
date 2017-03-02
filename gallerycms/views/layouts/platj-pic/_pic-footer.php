@@ -404,7 +404,7 @@
 <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/af28d-4814.css">
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/jquery-ui.js"></script>
 <!--<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/css/6d681-4893.css">-->
-<script>$(function() {
+<script>/*$(function() {
         $.ajax();
         var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
         $("#keyword_fenci").autocomplete({
@@ -417,7 +417,7 @@
                 // 该对象具有label和value属性，以及其它自定义(如果有的话)的属性
             }
         });
-    });</script>
+    });*/</script>
 <div style="display:none;">
     <!--综合页360统计代码-->
     <!--<script src='<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/c.js' language='JavaScript'></script>

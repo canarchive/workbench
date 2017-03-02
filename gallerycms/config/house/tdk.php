@@ -21,28 +21,28 @@ return [
         'description' => '一起装修网网罗了{{CITYNAME}}十大装修公司排名，{{CITYNAME}}家装公司大全，{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司推荐，让您快速找到最适合自己的装修公司。',
     ],
     // 找装修公司交叉搜索： {类别}：
-    'merchant-index-sort' => [
-        'title' => '{{CITYNAME}}{类型}装修公司_{{CITYNAME}}{类型}装饰公司哪家好_{{CITYNAME}}{类型}家装设计公司报价-兔班长装修网',
-        'keyword' => '{{CITYNAME}}{类型}装修公司,{{CITYNAME}}{类型}装饰公司哪家好,{{CITYNAME}}{类型}家装设计公司报价',
-        'description' => '兔班长装修网为您提供{{CITYNAME}}{类型}装修公司，{{CITYNAME}}{类型}装饰公司哪家好，{{CITYNAME}}{类型}家装设计公司报价等信息供业主选择。',
+    'merchant-index-decoration_sort' => [
+        'title' => '{{CITYNAME}}{{TAGSTR}}装修公司_{{CITYNAME}}{{TAGSTR}}装饰公司哪家好_{{CITYNAME}}{{TAGSTR}}家装设计公司报价{{PAGESTR}}-兔班长装修网',
+        'keyword' => '{{CITYNAME}}{{TAGSTR}}装修公司,{{CITYNAME}}{{TAGSTR}}装饰公司哪家好,{{CITYNAME}}{{TAGSTR}}家装设计公司报价',
+        'description' => '兔班长装修网为您提供{{CITYNAME}}{{TAGSTR}}装修公司，{{CITYNAME}}{{TAGSTR}}装饰公司哪家好，{{CITYNAME}}{{TAGSTR}}家装设计公司报价等信息供业主选择。',
     ],
     // 找装修公司交叉搜索： {风格}：   
     'merchant-index-style' => [
-        'title' => '{{CITYNAME}}{风格}装修效果图_{{CITYNAME}}{风格}装修设计公司-兔班长装修网',
-        'keyword' => '{{CITYNAME}}{风格}装修效果图,{{CITYNAME}}{风格}装修设计公司',
-        'description' => '兔班长装修网为您提供{{CITYNAME}}{风格}装修效果图，{{CITYNAME}}{风格}装修设计公司等信息供业主选择。',
+        'title' => '{{CITYNAME}}{{TAGSTR}}装修效果图_{{CITYNAME}}{{TAGSTR}}装修设计公司{{PAGESTR}}-兔班长装修网',
+        'keyword' => '{{CITYNAME}}{{TAGSTR}}装修效果图,{{CITYNAME}}{{TAGSTR}}装修设计公司',
+        'description' => '兔班长装修网为您提供{{CITYNAME}}{{TAGSTR}}装修效果图，{{CITYNAME}}{{TAGSTR}}装修设计公司等信息供业主选择。',
     ],
     // 找装修公司交叉搜索：{价位}：
     'merchant-index-price' => [
-        'title' => '{{CITYNAME}}{价位}装修设计_{{CITYNAME}}{价位}房屋装修报价-兔班长装修网',
-        'keyword' => '{{CITYNAME}}{价位}装修设计,{{CITYNAME}}{价位}房屋装修报价',
-        'description' => '兔班长装修网为您提供{{CITYNAME}}{价位}装修设计，{{CITYNAME}}{价位}房屋装修报价等信息供业主选择。',
+        'title' => '{{CITYNAME}}{{TAGSTR}}装修设计_{{CITYNAME}}{{TAGSTR}}房屋装修报价{{PAGESTR}}-兔班长装修网',
+        'keyword' => '{{CITYNAME}}{{TAGSTR}}装修设计,{{CITYNAME}}{{TAGSTR}}房屋装修报价',
+        'description' => '兔班长装修网为您提供{{CITYNAME}}{{TAGSTR}}装修设计，{{CITYNAME}}{{TAGSTR}}房屋装修报价等信息供业主选择。',
     ],
-    // 找装修公司交叉搜索：{类别}{风格}{价位}：（位置定好的）
+    // 找装修公司交叉搜索：{类别}{风格}{{TAGSTR}}：（位置定好的）
     'merchant-index-full' => [
-        'title' => '{{CITYNAME}}{价位}{风格}{类别}装修公司哪家好_{{CITYNAME}}{价位}{风格}{类别}装饰公司排名-兔班长装修网',
-        'keyword' => '{{CITYNAME}}{价位}{风格}{类别}装修公司哪家好,{{CITYNAME}}{价位}{风格}{类别}装饰公司排名',
-        'description' => '兔班长装修网为您提供{{CITYNAME}}{价位}{风格}{类别}装修公司哪家好，{{CITYNAME}}{价位}{风格}{类别}装饰公司排名等信息供业主选择。',
+        'title' => '{{CITYNAME}}{{TAGSTR}}装修公司哪家好_{{CITYNAME}}{{TAGSTR}}装饰公司排名{{PAGESTR}}-兔班长装修网',
+        'keyword' => '{{CITYNAME}}{{TAGSTR}}装修公司哪家好,{{CITYNAME}}{{TAGSTR}}装饰公司排名',
+        'description' => '兔班长装修网为您提供{{CITYNAME}}{{TAGSTR}}装修公司哪家好，{{CITYNAME}}{{TAGSTR}}装饰公司排名等信息供业主选择。',
     ],
 
     // 装修公司首页 http://sj-jz.cmshouse.alyee.com/

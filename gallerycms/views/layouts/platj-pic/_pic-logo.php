@@ -12,25 +12,26 @@ $topTitle = isset($this->params['topTitle']) ? $this->params['topTitle'] : '';
     <script>function goSub() {
             var keyword = $("#keyword_fenci").val();
             if (keyword == '请输入您想找的装修公司名称' || keyword.replace(/\s/g, "") == '') {
-                window.location.href = "http://search.jmw.com.cn/";
+                window.location.href = "/";
             } else {
                 window.location.href = "/search.html?keyword=" + encodeURIComponent(keyword);
             }
         }
-        $(function() {
+        /*$(function() {
             $('#keyword_fenci').bind('keypress',
             function(event) {
                 if (event.keyCode == "13") {
                     goSub();
                 }
             });
-        });</script>
+        });*/</script>
     <div class="advertis clearfix fr">
         <div class="sheet clearfix">
             <input type="hidden" id="showType" name="showType" value="2" />
-            <input type="hidden" id="searcy_type" name="searcy_type" value="" />
-            <input type="text" autocomplete="off" searchautocomplete="true" onblur="if(this.value==''){this.value='请输入您想找的装修公司名称';}" onfocus="if(this.value=='请输入您想找的装修公司名称'){this.value='';}" value="请输入您想找的装修公司名称" name="keyword" id="keyword_fenci" class="inp_1" />
-            <input onclick="goSub()" type="button" value="搜装修公司" class="inp_2" style="text-decoration:none;" /></div>
+            <input type="hidden" id="search_type" name="searcy_type" value="merchant" />
+            <input type="hidden" id="search_sort" name="searcy_sort" value="merchant" />
+            <input type="text" autocomplete="off" searchautocomplete="false" onblur="if(this.value==''){this.value='请输入您想找的装修公司名称';}" onfocus="if(this.value=='请输入您想找的装修公司名称'){this.value='';}" value="请输入您想找的装修公司名称" name="keyword" id="keyword_fenci" class="inp_1" />
+            <input onclick="searchOptj();" type="button" value="搜装修公司" class="inp_2" style="text-decoration:none;" /></div>
         <div class="hot_sear">
             <ul class="hot_sear_list clearfix">
             <li>

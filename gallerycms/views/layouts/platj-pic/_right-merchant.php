@@ -2,7 +2,7 @@
 $mInfos = $this->context->mDatas['merchantInfos'];
 ?>
 <div class="new_send">
-    <h2 id="red_title">热门装饰公司</h2>
+    <h2 id="red_title">热门装修公司</h2>
     <div class="ca1_slide">
         <div class="slider-wrapper slider-wrapper2">
             <div class="slider-bg slider-bg2">

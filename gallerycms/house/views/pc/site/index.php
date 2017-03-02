@@ -12,7 +12,7 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <?php echo $this->render('_logo'); ?>
 <?php echo $this->render('_nav'); ?>
 <!-- banner -->
-<?php echo $this->render('_banner'); ?>
+<?php echo $this->render('_banner', ['mInfos' => $merchantInfos]); ?>
 <!-- main -->
 <div class='allcontant'>
     <?php echo $this->render('_content-4', ['infos' => $merchantInfos]); ?>

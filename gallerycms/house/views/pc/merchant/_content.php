@@ -6,14 +6,13 @@ use gallerycms\components\LinkPager;
 <div class="fl sel_left">
     <div class="sel_l_tit">
         <ul class="sorts fl clearfix">
-            <li class="li_li1 li_se"><a href="/sample/" title="效果图">效果图</a></li>
+        <li class="li_li1 li_se"><a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName . '装修公司'; ?></a></li>
         </ul>
-        <!--<ul class="styles fr clearfix">
-            <li class="sy1 ">
-                <a href="/sample/">列表</a></li>
-            <li class="sy2 sy_se">
-                <a href="/sample/">图表</a></li>
-        </ul>-->
+        <?php if (!empty($keyword)) { ?>
+        <ul class="styles fr clearfix">
+            <li class="sy1 "><a>跟<b><?= $keyword; ?></b>相关的装修公司<b><?= count($infos); ?></b>个</a></li>
+        </ul>
+        <?php } ?>
     </div>
     <div class="sel_chart">
         <div class="chart_list clearfix">

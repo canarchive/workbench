@@ -8,7 +8,7 @@ $info = $this->context->mDatas['info'];
         </div>
         <h2 style="width:86%;text-align:center;float:left;font-size:1.2rem;color:#fff;"><?= $info['name_full']; ?></h2>
         <div class="fr header_2">
-            <a href="<?= "/{$info['city_code']}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装饰公司'; ?>" class="icon icon2"></a>
+            <a href="<?= "/{$info['city_code']}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>" class="icon icon2"></a>
         </div>
     </div>
 </header>
@@ -23,7 +23,7 @@ $info = $this->context->mDatas['info'];
             <p>
                 <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= $this->context->currentCityName; ?>"><?= $this->context->currentCityName; ?></a>
                 <i>></i>
-                <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName; ?>装饰公司"><?= $this->context->currentCityName; ?>装饰公司</a>
+                <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName; ?>装修公司"><?= $this->context->currentCityName; ?>装修公司</a>
                 <i>></i>
                 <a href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
             </p>

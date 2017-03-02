@@ -93,7 +93,7 @@ class Quote extends GallerycmsModel
 	{
 		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
-			//$info['style'] = $info->styleInfos[$info->style];
+            $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
 		}
 
         //$cache->set($keyCache, $infos);
