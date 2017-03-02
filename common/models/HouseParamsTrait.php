@@ -100,7 +100,7 @@ trait HouseParamsTrait
 			'five' => '12-18万',
 			'six' => '18-30万',
 			'seven' => '30-100万',
-			'eight' => '100万以上',
+			//'eight' => '100万以上',
 		];
 
 		return $datas;

@@ -22,7 +22,16 @@ class MerchantController extends MerchantControllerBase
 
 		$page = Yii::$app->request->get('page');
 		//$infos = $model->getInfos([]);
-        $where = ['city_code' => Yii::$app->params['currentCompany']['code']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        $where = [
+            'and', ['=' , 'city_code', Yii::$app->params['currentCompany']['code']]
+        ];
+        foreach ($tagInfos as $tField => $tValue) {
+            if (empty($tValue)) {
+                continue;
+            }
+            $where = array_merge($where, [['like', $tField, $tValue]]);
+        }
+        //print_r($where);exit();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 18]);
 		$datas = [

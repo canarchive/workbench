@@ -138,7 +138,7 @@ return [
 
     // 商家设计师 http://cmshouse.alyee.com/beijing/jz/designer/
     'merchant-designer' => [
-        'title' => '{{INFONAME}}设计师_{{INFONAME}}设计师团队_{{INFONAME}}设计师作品-兔班长装修网',
+        'title' => '{{INFONAME}}设计师_{{INFONAME}}设计师团队_{{INFONAME}}设计师作品{{PAGESTR}}-兔班长装修网',
         'keyword' => '{{INFONAME}}设计师,{{INFONAME}}设计师团队,{{INFONAME}}设计师作品',
         'description' => '兔班长装修网{{INFONAME}}设计师作品欣赏，{{INFONAME}}设计师团队，{{INFONAME}}设计师推荐，为您提供众多优秀设计师。',
     ],

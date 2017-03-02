@@ -31,7 +31,9 @@ class DesignerController extends HouseController
         $infos = $this->_getInfos($where);
         $datas['designerInfos'] = $infos;
 
-        $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
+        $page = Yii::$app->request->get('page');
+        $page = str_replace('_', '', $page);
+        $pageStr = $page > 1 ? "_第{$page}页" : '';
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name']];
 		$this->getTdkInfos('merchant-designer', $dataTdk);
