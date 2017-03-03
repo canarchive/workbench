@@ -161,8 +161,9 @@ class Realcase extends MerchantModel
 		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
 		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
+			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
+		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
-			//$info['ownerInfo'] = $ownerModel->getInfo($info['owner_id']);
 		}
 
         //$cache->set($keyCache, $infos);
@@ -179,7 +180,10 @@ class Realcase extends MerchantModel
 
 	protected function _formatInfos($infos)
 	{
+		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
+			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
+		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 		}
 		return $infos;

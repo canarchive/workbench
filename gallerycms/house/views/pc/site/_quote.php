@@ -7,20 +7,18 @@ $picDatas = [
 ?>
 <div class='allSeek wrap_mar'>
     <div class='seekHead clear'>
-        <div class='seekHeadR fr'>
+        <!--<div class='seekHeadR fr'>
             <ul class="yd_m42 fr">
-                <li class="fl li1">成交播报:</li>
+                <li class="fl li1"></li>
                 <div id="bOdemo" class="qimo8 fl">
                     <div class="qimo fl">
                         <div id="bOdemo1">
                             <ul>
                                 <ul class="gundong_bar sel_lt" id="cjbb">
                                     <li>
-                                        <a href="http://dl.jmw.com.cn/qydl/17528961_0.shtml">热烈祝贺兰州张总与宁夏陈总成功签约
-                                            <span style="color: rgb(255,0,0)" 欧克斯门窗</span>特此祝贺！并预祝生意兴隆！</a></li>
+                                        <a href="">
+                                            <span style="color: rgb(255,0,0)"></span></a></li>
                                     <li>
-                                        <a href="http://www.jc.jmw.com.cn/jiancaipinpaidongtai/17525824.html">热烈祝贺广西平南林先生
-                                            <span style="color: rgb(255,0,0)">加盟防水博士</span>特此祝贺！并预祝生意兴隆！</a></li>
                                 </ul>
                             </ul>
                         </div>
@@ -28,7 +26,7 @@ $picDatas = [
                     </div>
                 </div>
             </ul>
-        </div>
+        </div>-->
         <div class='seekHeadL fl'>
             <a style="color:#000;" href="/<?= $this->context->currentCityCode; ?>/quote/" title="<?= $this->context->currentCityName; ?>家装报价"><?= $this->context->currentCityName; ?>家装报价</a>
         </div>
@@ -50,7 +48,7 @@ $picDatas = [
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>
-                        <a href="/<?= $this->context->currentCityCode . '/quote-show-' . $fInfo['id'] . '.html'; ?>" title="<?= $fInfo['name']; ?>" class='oneLine'><?= $fInfo['name']; ?></a>
+                        <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $fInfo['id'] . '.html'; ?>" title="<?= $fInfo['name']; ?>" class='oneLine'><?= $fInfo['name']; ?></a>
                             <p class='twoLine'><?= $fInfo['name']; ?></p>
                         </div>
                     </div>
@@ -59,7 +57,7 @@ $picDatas = [
                             <?php foreach ($sInfos as $info) { ?>
                             <li>
                                 <span>1662人查看</span>
-                                <a href="/<?= $this->context->currentCityCode . '/quote-show-' . $fInfo['id'] . '.html'; ?>" title="<?= $fInfo['name']; ?>"><?= $fInfo['name']; ?></a>
+                                <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $fInfo['id'] . '.html'; ?>" title="<?= $fInfo['name']; ?>"><?= $fInfo['name']; ?></a>
                             </li>
                             <?php } ?>
                         </ul>
@@ -79,7 +77,7 @@ $picDatas = [
                             <?php foreach ($infos['lastest']['infos'] as $info) { ?>
                             <div class='seekContentMiddle  seekContentZhaoMS clear'>
                                 <?= date('Y-m-d H:i:s', $info['created_at']); ?><span><?= $info['name']; ?></span>获取了报价信息
-                                [<a href='<?= '/' . $this->context->currentCityCode . '/quote-show-' . $info['id'] . '.html'; ?>' target='_blank'>详情</a>]
+                                [<a href='<?= '/' . $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>' target='_blank'>详情</a>]
                             </div>
                             <?php } ?>
                         </div>
@@ -92,7 +90,7 @@ $picDatas = [
                             <?php foreach ($infos['lastest']['infos'] as $info) { ?>
                             <div class='seekContentMiddle  seekContentZhaoMS clear'>
                                 <?= date('Y-m-d H:i:s', $info['created_at']); ?><span><?= $info['name']; ?></span>获取了报价信息
-                                [<a href='<?= '/' . $this->context->currentCityCode . '/quote-show-' . $info['id'] . '.html'; ?>' target='_blank'>详情</a>]
+                                [<a href='<?= '/' . $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>' target='_blank'>详情</a>]
                             </div>
                             <?php } ?>
                         <div id='seekContentZhaoBoxzdemoTwo'></div>

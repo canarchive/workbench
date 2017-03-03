@@ -174,7 +174,8 @@ class Working extends MerchantModel
 		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
-			//$info['ownerInfo'] = $ownerModel->getInfo($info['owner_id']);
+			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
+		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 			$info['status'] = isset($info->statusInfos[$info->status]) ? $info->statusInfos[$info->status] : $info->status;
 		}
 
@@ -198,8 +199,11 @@ class Working extends MerchantModel
 
 	protected function _formatInfos($infos)
 	{
+		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
+			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
+		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 		}
 		return $infos;
 	}

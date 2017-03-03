@@ -112,7 +112,7 @@ class BaseController extends Controller
                 'name' => '首页',
             ],
             'ask' => [
-                'url' => '/ask/', 
+                'url' => '/ask_lm_gzsj/', 
                 'name' => '装修问答'
             ],
             'merchant' => [

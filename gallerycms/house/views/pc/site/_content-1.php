@@ -1,16 +1,16 @@
 <div class='content clear'>
     <div class="recommend clear">
         <h2 class="fl">
-            <a href="<?= '/' . $this->context->currentCityCode . '/realcase'; ?>" title="热门设计案例" class="moreL"><em>热门设计案例</em></a>
+            <a href="<?= '/' . $this->context->currentCityCode . '/realcase/'; ?>" title="热门设计案例" class="moreL"><em>热门设计案例</em></a>
         </h2>
-        <a href="<?= '/' . $this->context->currentCityCode . '/realcase'; ?>" title="装修实景案例" class="more">
+        <a href="<?= '/' . $this->context->currentCityCode . '/realcase/'; ?>" title="装修实景案例" class="more">
             <em>更多热门设计案例&nbsp;></em></a>
     </div>
     <div class="recommendTable clear">
         <ul>
             <?php $i = 0; foreach ($infos as $info) { if ($i > 3) { continue; }?>
             <li <?php if ($i % 4 == 3) { echo 'style="margin-right:0px;"'; } ?>>
-                <a href="<?= '/' . $this->context->currentCityCode . '/realcase-show-' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">
+                <a href="<?= '/' . $this->context->currentCityCode . '/realcaseshow_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">
                     <img src="<?= $info->resizePic('thumb', 380, 244); ?>" alt="<?= $info['name']; ?>">
                     <span class='op'></span>
                     <p class='imgLa'><?= $info['name']; ?></p></a>
