@@ -35,7 +35,7 @@ class DesignerController extends HouseController
         $page = str_replace('_', '', $page);
         $pageStr = $page > 1 ? "_第{$page}页" : '';
 
-		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name']];
+		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name_full']];
 		$this->getTdkInfos('merchant-designer', $dataTdk);
 		return $this->render('merchant', $datas);
     }

@@ -45,7 +45,7 @@ $info = $this->context->mDatas['info'];
     <div class="detail_btnChild">
         <ul class="clearfix">
             <li class="li3">
-                <a href="javascript:;" hideFocus="true" title="快速获得加盟资料" onclick="onClickBBSInfoNew_pc('项目id号6673056','学习星','','7','2'); return false; ">索要资料</a></li>
+                <a rel="nofollow" href="javascript:;" hideFocus="true" title="快速获得加盟资料" onclick="onClickBBSInfoNew_pc('项目id号6673056','学习星','','7','2'); return false; ">索要资料</a></li>
             <li class="li4">
                 <a rel="nofollow" style="cursor:pointer" onclick="qqdynamic(137829,4006122505)" id="clickqq">QQ咨询</a></li>
             <!--<li class="li5">

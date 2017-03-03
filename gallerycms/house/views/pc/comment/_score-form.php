@@ -96,7 +96,8 @@
                     function checkInsertLength(obj) {
                         var insert_id = obj.attr('id');
                         var show_dom_id = obj.attr('show_dom_id');
-                        var insert_num = obj.attr('insert_num') var checklen = checkLength(insert_id, show_dom_id, insert_num);
+                        var insert_num = obj.attr('insert_num');
+                        var checklen = checkLength(insert_id, show_dom_id, insert_num);
                         //if(!checklen){alert('输入长度不能超过'+insert_num+'字！');}
                     }
                     function loginShow() {

@@ -32,3 +32,4 @@
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/addpageview.js"></script>
 <!-- 新加百度商桥代码-->
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/newbaidushangqi.js" type="text/javascript"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/newshangqiao.js" type="text/javascript"></script>

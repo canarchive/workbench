@@ -1,7 +1,7 @@
 <?php
-
 use gallerycms\components\LinkPager;
 $this->params['currentNav'] = 'realcase';
+$baseUrl = Yii::getAlias('@gallerycmsurl');
 ?>
 <!--imgs begin-->
 <!--图片查看器-->
@@ -10,7 +10,7 @@ $this->params['currentNav'] = 'realcase';
     <div class="pic_title clearfix">
         <ul class="clearfix tab_ul">
             <li class='a_red'>
-                <a rel="nofollow" href="javascript:void(0);"><?= $info['name'] . '-实景案例'; ?></a></li>
+                <a rel="nofollow" href="javascript:void(0);"><?= $info['name_full'] . '-实景案例'; ?></a></li>
             <!--<li class="gray_line ">
                 <a href="/"></a></li>
             <li class="gray_line ">
@@ -22,7 +22,7 @@ $this->params['currentNav'] = 'realcase';
             <ul class="clearfix">
                 <?php $i = 0; foreach ($realcaseInfos['infos'] as $info) { ?>
                 <li <?php if ($i % 4 == 3) { echo ' class="current9"'; } ?>>
-                    <a href="<?= $info['id']; ?>">
+                    <a href="<?= $info['id']; ?>" onclick="alert('ss'); ">
                         <img src="<?= $info['thumb']; ?>" width="170" height="128" alt="<?= $info['name']; ?>" title="<?= $info['name']; ?>" /></a>
                         <div class="black_bd" title="<?= $info['name']; ?>" style="cursor:pointer"><?= $info['name']; ?></div>
                 </li>

@@ -5,13 +5,13 @@
         <div class="daoJishi wrap_mar">
             <a href="/" title="" target="_blank">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/874f3-8658.jpg" alt="第十届展会预告加盟" /></a>
-            <span class="day time"></span>
+            <!--<span class="day time"></span>
             <span class="hour time"></span>
             <span class="minute time"></span>
-            <span class="second time"></span>
+            <span class="second time"></span>-->
         </div>
     </div>
-    <script>setInterval(show_time, 1000);
+    <script>//setInterval(show_time, 1000);
         function show_time() {
             var time_start = new Date().getTime(); //设定当前时间
             var time_end = new Date("2017/4/29 00:00:00").getTime(); //设定目标时间

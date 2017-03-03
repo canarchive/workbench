@@ -49,4 +49,5 @@ $info = $this->context->mDatas['info'];
 </div>
 <!--footer-->
 <?= $this->render('platj-merchant/_footer'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts/platj/_pop-merchant'); ?>
 <?php $this->endContent(); ?>

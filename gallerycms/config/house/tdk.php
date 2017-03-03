@@ -47,7 +47,7 @@ return [
 
     // 装修公司首页 http://sj-jz.cmshouse.alyee.com/
     'merchant-showindex' => [
-        'title' => '【{{INFONAME}}】_{{INFONAME}}报价_{{INFONAME}}网站_{{INFONAME}}怎么样-兔班长装修网',
+        'title' => '【{{INFONAME}}】_{{INFONAME}}报价_{{INFONAME}}怎么样-兔班长装修网',
         'keyword' => '{{INFONAME}},{{INFONAME}}报价,{{INFONAME}}网站, {{INFONAME}}怎么样',
         'description' => '{{INFONAME}}汇聚{{INFONAME}}价格、图片、资讯等最新信息。为您提供{{INFONAME}}的发展历程！作为{{INFONAME}}网站，还展示了相关问答，给购买者传递最具性价比！{{INFONAME}}怎么样、功能好不好用的用户反馈信息，为消费者提供有价值参考。',
     ],
@@ -55,9 +55,9 @@ return [
 
     // 效果图列表 http://cmshouse.alyee.com/sample/
     'sample-index' => [
-        'title' => '装修效果图_装修风格_装修样板间_家装设计案例{{PAGESTR}}-【兔班长装修平台】',
+        'title' => '装修效果图_装修风格_装修样板间_家装设计案例{{PAGESTR}}-【兔班长装修网】',
         'keyword' => '装修案例,装修风格,装修效果图,装修样板间',
-        'description' => '【兔班长装修平台】装修图片频道为您提供装修案例风格,家装实景图片欣赏,包括客厅、卧室、厨房、书房、阳台、电视墙、卫生间等系列室内装修设计图片。',
+        'description' => '【兔班长装修网】装修图片频道为您提供装修案例风格,家装实景图片欣赏,包括客厅、卧室、厨房、书房、阳台、电视墙、卫生间等系列室内装修设计图片。',
     ],
     // 效果图列表 //http://cmshouse.alyee.com/sample/h_one/ {变量}：户型 &风格}&面积& 预算
     'sample-tag' => [
@@ -106,15 +106,15 @@ return [
     ],
     // 商家实景案例列表 http://cmshouse.alyee.com/beijing/jz/realcase/
     'merchant-realcase' => [
-        'title' => '{{INFONAME}}装修案例_{{INFONAME}}装修实景图{{PAGESTR}}-兔班长装修平台',
+        'title' => '{{INFONAME}}装修案例_{{INFONAME}}装修实景图{{PAGESTR}}-兔班长装修网',
         'keyword' => '{{INFONAME}}装修案例，{{INFONAME}}装修实景图',
         'description' => '{{INFONAME}}装修案例大全：为广大装修业主分享更多{{INFONAME}}装修案例与{{INFONAME}}装修实景图，帮您找到属于您自己喜欢的装修案例实景图作品。',
     ],
     // 实景内容 http://cmshouse.alyee.com/beijing/realcase-1.html
     'realcase-show' => [
-        'title' => '{{CITYNAME}}{小区+面积+风格/户型}装修案例图/户型图/样板间-兔班长装修平台',
-        'keyword' => '{{CITYNAME}}{小区+面积+风格/户型}装修案例图,{{CITYNAME}}{小区+面积+风格/户型}户型图,{{CITYNAME}}{小区+面积+风格/户型}装修样板间',
-        'description' => '{{INFONAME}}工地案例大全：为广大装修业主分享更多{{CITYNAME}}{小区+面积+风格/户型}装修案例图，{{CITYNAME}}{小区+面积+风格/户型}户型图，{{CITYNAME}}{小区+面积+风格/户型}装修样板间，帮您找到属于您自己喜欢的装修风格。',
+        'title' => '{{CITYNAME}}{{INFONAME}}装修案例图/户型图/样板间-兔班长装修网',
+        'keyword' => '{{CITYNAME}}{{INFONAME}}装修案例图,{{CITYNAME}}{{INFONAME}}户型图,{{CITYNAME}}{{INFONAME}}装修样板间',
+        'description' => '{{INFONAME}}工地案例大全：为广大装修业主分享更多{{CITYNAME}}{{INFONAME}}装修案例图，{{CITYNAME}}{{INFONAME}}户型图，{{CITYNAME}}{{INFONAME}}装修样板间，帮您找到属于您自己喜欢的装修风格。',
     ],
 
     // 工地列表 http://cmshouse.alyee.com/beijing/working/
@@ -131,7 +131,7 @@ return [
     ],
     // 工地内容 http://cmshouse.alyee.com/beijing/working-1.html
     'working-show' => [
-        'title' => '{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图_{{INFONAME}}-兔班长装修平台',
+        'title' => '{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图_{{INFONAME}}-兔班长装修网',
         'keyword' => '{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图,{{CITYNAME}}{小区+面积+风格/户型+报价}装修设计图',
         'description' => '{{INFONAME}}工地案例大全：为广大装修业主分享更多{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图，{{CITYNAME}}{小区+面积+风格/户型+报价}装修设计图，帮您找到属于您自己喜欢的装修风格。',
     ],
@@ -152,7 +152,7 @@ return [
     'merchant-desc' => [
         'title' => '{{INFONAME}}简介_{{INFONAME}}品牌介绍-兔班长装修网',
         'keyword' => '{{INFONAME}}简介,{{INFONAME}}品牌介绍',
-        'description' => '{公司简介，没有的话调用公司名称}',
+        'description' => '{{INFONAME}},{{DESCRIPTION}}',
     ],
 
 	'aboutus-desc' => [

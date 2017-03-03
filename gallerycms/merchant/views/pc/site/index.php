@@ -74,3 +74,4 @@ $(function() {
 </script>
 <!--footer-->
 <?= $this->render('@gallerycms/views/layouts/platj-merchant/_footer'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts/platj/_pop-merchant'); ?>

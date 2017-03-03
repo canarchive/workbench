@@ -5,7 +5,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
 ?>
 <div class="third">
     <div class="first_title clearfix">
-        <h4 class="gai" style="padding-top: 12px;"><?= $info['name'] . '实景案例'; ?>(<?= $info['num_realcase']; ?>)</h4>
+        <h4 class="gai" style="padding-top: 12px;"><?= $info['name_full'] . '实景案例'; ?>(<?= $info['num_realcase']; ?>)</h4>
         <ul class="clearfix">
             <li>
                 <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/working/"; ?>" title="<?= $info['name'] . '工地'; ?>">直播工地(<?= $info['num_working']; ?></a></li>
@@ -16,13 +16,13 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
     </div>
     <div class="pic_detail clearfix">
         <?php $rInfo = array_pop($rInfos); ?>
-        <a class="sideL" href="<?= "/{$info['city_code']}/realcase/show_{$rInfo['id']}.html"; ?>">
+        <a class="sideL" href="<?= "{$baseUrl}/{$info['city_code']}/realcaseshow_{$rInfo['id']}.html"; ?>">
             <img src="<?= $rInfo['thumb']; ?>" width="360" height="276" alt="" />
             <span class="big_white" title="<?= $rInfo['name']; ?>"></span>
         </a>
         <div class="sideR clearfix">
             <?php $i = 0; foreach ($rInfos as $rInfo) { if ($i > 3) { break; } ?>
-            <a href="<?= "/{$info['city_code']}/realcase/show_{$rInfo['id']}.html"; ?>">
+            <a href="<?= "{$baseUrl}/{$info['city_code']}/realcaseshow_{$rInfo['id']}.html"; ?>">
                 <img src="<?= $rInfo['thumb']; ?>" width="170" height="128" alt="" />
                 <span class="small_white" title="<?= $rInfo['name']; ?>"></span>
             </a>

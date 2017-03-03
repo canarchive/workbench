@@ -34,6 +34,8 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <?= $this->render('_friendlink', ['fInfos' => $this->context->friendlinkInfos]); ?>
 <?php //echo $this->render('_ourservice'); ?>
 <!-- footer -->
-<?= $this->render('@gallerycms/views/layouts/platj/_footer-base'); ?>
+<?php echo $this->render('@gallerycms/views/layouts/platj/_footer-base'); ?>
+<?php echo $this->render('@gallerycms/views/layouts/platj/_pop'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts/platj/_pop-2'); ?>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/trade.js"></script>
 <div style="display:none;">欢迎访问<?= Yii::$app->params['siteName']; ?>!!!</div></body>

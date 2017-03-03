@@ -5,13 +5,13 @@ $info = $this->context->mDatas['info'];
     <div class="home_left fl">
         <ul class="clearfix">
             <li class="current3">
-                <a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>">首页</a></li>
+                <a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteName']; ?></a></li>
             <li><span></span></li>
             <li>
                 <a title="<?= $this->context->currentCityName; ?>装修公司" href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>"><?= $this->context->currentCityName; ?>装修公司</a></li>
             <li><span></span></li>
             <li>
-                <a href="<?= $info['infoUrl']; ?>"><strong><?= $info['name']; ?></strong></a></li>
+                <a href="<?= $info['infoUrl']; ?>"><strong><?= $info['name_full']; ?></strong></a></li>
         </ul>
     </div>
     <div class="home_right fr clearfix">

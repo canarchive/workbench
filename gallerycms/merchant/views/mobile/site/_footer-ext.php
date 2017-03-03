@@ -262,5 +262,5 @@
             }
         })
     })</script>
-<!--<a onclick="_MEIQIA._SHOWPANEL()" href="javascript:;" style="display: block; position:fixed; right:-8px; top:56%; padding-top: 14px; padding-left: 13px; z-index:9999; box-sizing: border-box;width:57px; height:57px; border-radius:50%; color: rgb(255, 255, 255);font-size: 14px; background-color: rgb(255, 70, 55);">在线
-    <br />咨询</a>-->
+<a onclick="_MEIQIA._SHOWPANEL()" href="javascript:;" style="display: block; position:fixed; right:-8px; top:56%; padding-top: 14px; padding-left: 13px; z-index:9999; box-sizing: border-box;width:57px; height:57px; border-radius:50%; color: rgb(255, 255, 255);font-size: 14px; background-color: rgb(255, 70, 55);">在线
+    <br />咨询</a>

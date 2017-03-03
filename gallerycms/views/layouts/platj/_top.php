@@ -15,6 +15,12 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
                 <li class="ShowMore" id="ShowMore2">
                     <i class="ico11"></i>
                     <a href="<?= "{$baseUrl}/{$this->context->currentCityCode}/merchant/"; ?>">找商家</a></li>
+                <li class="fl">
+                    <a href="/" target="_blank" style="color:#df0303;">选择城市</a><em>|</em></li>
+                    <?php foreach (Yii::$app->params['companyInfos'] as $cInfo) { ?>
+                    <a href="/<?= $cInfo['code']; ?>/" class="denglu" style="margin-right:0;<?php if ($this->context->currentCityCode == $cInfo['code']) { echo 'color:#df0303;'; } ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
+                    <?php } ?>
+                </li>
             </ul>
             <div class="phone_kuang" style="display:none;background:rgba(0,0,0,.4); padding:6px 0;width:384px; border-radius:3px; position:absolute; top:30px; left:415px;">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/erweima_02_12.png" alt="" style=" margin-left:6px; cursor:pointer;"></div>

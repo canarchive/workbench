@@ -5,20 +5,20 @@
     <div class="clear banWrap wrap_mar">
         <ul class="banWrap_left pr fl">
             <li class="item">
-                <h3><a>基于类别找装修公司</a></h3>
+                <h3><a>擅长类型</a></h3>
                 <span class="banWrapA">
                 <?php foreach (['solo' => '小户型', 'villa' => '别墅', 'part' => '局部装修'] as $mKey => $mValue) { ?>
-                    <a style="color: #999;font-size: 14px;height: 24px;line-height: 24px;" href="<?= "/{$this->context->currentCityCode}/merchant/b_{$mKey}/"; ?>" title="<?= $mValue; ?>"><?= $mValue; ?></a>&nbsp;&nbsp;
+                    <a style="color: #999;font-size: 14px;height: 24px;line-height: 24px;" href="<?= "/{$this->context->currentCityCode}/merchant/d_{$mKey}/"; ?>" title="<?= $mValue; ?>"><?= $mValue; ?></a>&nbsp;&nbsp;
                 <?php } ?>
                 </span></li>
             <li class="item">
-                <h3><a>基于风格找装修公司</a></h3>
+                <h3><a>擅长风格</a></h3>
                 <span class="banWrapA">
                 <?php foreach (['simple' => '简约', 'modern' => '现代', 'simpleen' => '简欧', 'rural' => '田园', 'en' => '欧式'] as $mKey => $mValue) { ?>
-                    <a style="color: #999;font-size: 14px;height: 24px;line-height: 24px;" href="<?= "/{$this->context->currentCityCode}/merchant/b_{$mKey}/"; ?>" title="<?= $mValue; ?>"><?= $mValue; ?></a>&nbsp;&nbsp;
+                    <a style="color: #999;font-size: 14px;height: 24px;line-height: 24px;" href="<?= "/{$this->context->currentCityCode}/merchant/s_{$mKey}/"; ?>" title="<?= $mValue; ?>"><?= $mValue; ?></a>&nbsp;&nbsp;
                 <?php } ?>
             <li class="item">
-                <h3><a>基于价位找装修公司</a></h3>
+                <h3><a>承接价位</a></h3>
                 <span class="banWrapA">
                 <?php foreach (['four' => '8-12万', 'five' => '12-18万', 'six' => '18-30万'] as $mKey => $mValue) { ?>
                     <a style="color: #999;font-size: 14px;height: 24px;line-height: 24px;" href="<?= "/{$this->context->currentCityCode}/merchant/b_{$mKey}/"; ?>" title="<?= $mValue; ?>"><?= $mValue; ?></a>&nbsp;&nbsp;
@@ -27,7 +27,7 @@
             <li class="item">
                 <h3><a>装修问答</a></h3>
                 <span class="banWrapA">
-                <?php foreach (['jzsj' => '家装设计', 'jjcp' => '家居产品', 'jxcl' => '装修材料'] as $mKey => $mValue) { ?>
+                <?php foreach (['jzsj' => '家装设计', 'jjcp' => '家居产品', 'zxcl' => '装修材料'] as $mKey => $mValue) { ?>
                     <a style="color: #999;font-size: 14px;height: 24px;line-height: 24px;" href="<?= "/ask_lm_{$mKey}/"; ?>" title="<?= $mValue; ?>"><?= $mValue; ?></a>&nbsp;&nbsp;
                 <?php } ?>
                 </span></li>
