@@ -140,23 +140,23 @@ class BaseController extends Controller
     {
         $datas = [
             'desc' => [
-                'url' => '/desc.html',
+                'url' => Yii::getAlias('@gallerycmsurl') . '/desc.html',
                 'name' => '关于我们',
             ],
             'contactus' => [
-                'url' => '/contactus.html',
+                'url' => Yii::getAlias('@gallerycmsurl') . '/contactus.html',
                 'name' => '联系我们',
             ],
             'friendlink' => [
-                'url' => '/friendlink.html',
+                'url' => Yii::getAlias('@gallerycmsurl') . '/friendlink.html',
                 'name' => '友情链接',
             ],
             'guestbook' => [
-                'url' => '/guestbook.html',
+                'url' => Yii::getAlias('@gallerycmsurl') . '/guestbook.html',
                 'name' => '意见反馈',
             ],
             'statement' => [
-                'url' => '/statement.html',
+                'url' => Yii::getAlias('@gallerycmsurl') . '/statement.html',
                 'name' => '法律声明',
             ],
             'disclaimer' => '免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。',

@@ -16,9 +16,9 @@ $this->params['jsStr'] = $this->render('_js-header');
 <?php echo $this->render('_content', ['infos' => $merchantInfos]); ?>
 <?php //echo $this->render('_content2'); ?>
 <?php echo $this->render('_sorthot'); ?>
-<?php echo $this->render('_list'); ?>
-<?php echo $this->render('_tag'); ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer-index'); ?>
+<?php //echo $this->render('_list'); ?>
+<?php //echo $this->render('_tag'); ?>
+<?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer'); ?>
 <a class="returntop" href="#top" style="display: none;">
     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
 <script>$(document).scroll(function() {

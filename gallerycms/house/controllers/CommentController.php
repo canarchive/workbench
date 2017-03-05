@@ -32,7 +32,7 @@ class CommentController extends HouseController
 
         $pageStr = $infos['page'] > 1 ? "_第{$infos['page']}页-" : '-';
 
-		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name']];
+		$dataTdk = ['{{PAGESTR}}' => $pageStr, '{{INFONAME}}' => $datas['info']['name_full']];
 		$this->getTdkInfos('merchant-comment', $dataTdk);
 		return $this->render('merchant', $datas);
     }

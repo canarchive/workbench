@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
 foreach ($houseSortInfos as $sortKey => $sortInfo) {
-    $titles[$sortKey] = !empty($tagInfos[$sortKey]) ? $sortInfo['values'][$tagInfos[$sortKy]] : $sortInfo['name'];
+    $titles[$sortKey] = !empty($tagInfos[$sortKey]) ? $sortInfo['values'][$tagInfos[$sortKey]] : $sortInfo['name'];
 }
 //print_r($titles);exit();
 ?>
@@ -40,7 +40,7 @@ foreach ($houseSortInfos as $sortKey => $sortInfo) {
             <ul class="captain-1" id="captain-<?= $i; ?>">
 				<?php foreach ($sortInfo['values'] as $key => $value) { $tag = $model->createTag($tagInfos, [$sortKey => $key]); ?>
                 <li id="circle_2">
-                    <a href="<?= Url::to(['/house/sample/index', 'page' => 1, 'tag' => $tag]); ?>" title="<?= $value; ?>"><span><?= $value; ?></span></a>
+                    <a href="<?= "/sample/{$tag}/"; ?>" title="<?= $value; ?>"><span><?= $value; ?></span></a>
                 </li>
                 <?php } ?>
             </ul>

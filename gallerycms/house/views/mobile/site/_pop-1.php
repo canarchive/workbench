@@ -35,7 +35,7 @@
         var origin = origin;
         var message = message;
         if (origin == 12 || origin == 24 || origin == '12-1' || origin == '12-2') {
-            $('#P_title').html('在线咨询');
+            $('#P_title').html('免费设计');
         } else if (origin == 13 || origin == 25 || origin == '13-1' || origin == '13-2') {
             $('#P_title').html('询加盟底价');
         } else if (origin == 26) {

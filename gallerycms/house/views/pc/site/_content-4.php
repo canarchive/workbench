@@ -1,13 +1,17 @@
+<?php
+use yii\helpers\StringHelper;
+
+?>
 <div class='ItemAndList'>
     <div class='zhuanQu_right fr'>
         <h2 class="p_zhuanQ">
-            <span><?= $this->context->currentCityName; ?>装饰公司<em></em></span>
+            <span><?= $this->context->currentCityName; ?>装修公司<em></em></span>
         </h2>
         <ul class="ul_top">
             <?php $i = 1; foreach ($infos as $key => $info) { if ($i > 10) { break; } ?>
             <li class="clear">
                 <i class="zong_icon i41 <?php if ($i > 3) { echo 'ime'; } ?> fl" <?php if ($i < 4) { echo 'style="color:#fff;"'; } ?>><?= $i; ?></i>
-                <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>" class="fl"><?= $info['name']; ?></a>
+                <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>" class=""><?= StringHelper::truncate($info['name_full'], 14, '...'); ?></a>
                 <!--<span class="fr">6100</span>-->
             </li>
             <?php $i++; unset($infos[$key]); } ?>
@@ -26,14 +30,14 @@
                 </li>
             </ul>-->
             <div class='joinItemFl fl'>
-                <a style="color:#000;" href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装饰公司'; ?>"><?= $this->context->currentCityName . '装饰公司'; ?></a></div>
+                <a style="color:#000;" href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName . '装修公司'; ?></a></div>
         </div>
         <div class="zuiXin_list clear">
             <div class="foucebox">
                 <div class="hd">
                     <ul class="clear">
                         <li>重点推荐</li>
-                        <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="更多<?= $this->context->currentCityName . '装饰公司'; ?>">更多<?= $this->context->currentCityName . '装饰公司'; ?></a></ul>
+                        <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="更多<?= $this->context->currentCityName . '装修公司'; ?>">更多<?= $this->context->currentCityName . '装修公司'; ?></a></ul>
                 </div>
                 <div class="bd">
                     <div class="showDiv">
@@ -41,16 +45,16 @@
                             <?php $i = 1; foreach ($infos as $key => $info) { if ($i > 6) { break; } ?>
                             <dl class="fl">
                                 <dt class="pr">
-                                    <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>">
-                                        <img class="hoverimg" src="<?= $info['logo']; ?>" alt="<?= $info['name']; ?>" /></a>
+                                    <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>">
+                                        <img class="hoverimg" src="<?= $info['logo']; ?>" alt="<?= $info['name_full']; ?>" /></a>
                                     <p class="p_black pa"></p>
                                     <div class="p_black2 pa clear">
                                         <p class="fl p1 f14">
-                                            <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a></p>
+                                            <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>"><?= $info['name_full']; ?></a></p>
                                         <p class="fr p_iCan p_iCan2 f12" onclick="message_check('79341','30-1','我要设计');">免费设计</p></div>
                                 </dt>
                                 <dd class="clear">
-                                    <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                                    <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>"><?= $info['name_full']; ?></a>
                                     <!--<p class="fr p_money p_money2 f12">
                                         <span class="span2 fr">(不含房租)</span>
                                         <span class="span_red fr">

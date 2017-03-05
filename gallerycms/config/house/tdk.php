@@ -67,16 +67,16 @@ return [
     ],
     // 效果图内容 http://cmshouse.alyee.com/sample-1.html 案例没有简述就掉标题
     'sample-show' => [
-        'title' => '{案例标题}_{案例栏目}-兔班长装修网',
-        'keyword' => '{案例标题}',
-        'description' => '{案例简述}',
+        'title' => '{{INFONAME}}_{{TAGSTR}}-兔班长装修网',
+        'keyword' => '{{INFONAME}}',
+        'description' => '{{INFONAME}}',
     ],
 
     // 问答内容 http://cmshouse.alyee.com/ask-1.html
     'ask-show' => [
-        'title' => '{问答标题}_{问答栏目}_{问答标签}-兔班长装修网',
-        'keyword' => '{问答标题},{问答标签}',
-        'description' => '{问答简述或者第一条答案}',
+        'title' => '{{INFONAME}}_{{TAGSTR}}-兔班长装修网',
+        'keyword' => '{{INFONAME}},{{TAGSTR}}',
+        'description' => '{{DESCRIPTION}}',
     ],
 
     // 报价列表 http://cmshouse.alyee.com/beijing/quote/

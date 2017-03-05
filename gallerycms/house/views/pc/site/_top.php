@@ -2,11 +2,13 @@
     <div class="wrap_mar f12 clear">
         <div id="">
             <ul class="fl topbar_left">
-                <li class="fl"><a href="/">首页</a></li>
+                <li class="fl"><a href="/" title="<?= Yii::$app->params['siteName']; ?>"><?= Yii::$app->params['siteNameBase']; ?></a></li>
                 <li class="fl">
-                <a href="/<?= $this->context->currentCityCode; ?>/" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName; ?>装修公司</a></li>
+                    装修就上<?= Yii::$app->params['siteNameBase']; ?>
+                    <!--<a href="/<?= $this->context->currentCityCode; ?>/" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName; ?>装修公司</a>-->
+                </li>
                 <li class="fl">
-                    <a href="/" target="_blank" style="color:#df0303;">选择城市</a><em>|</em>
+                    <a href="/" target="_blank" style="color:#df0303;">&nbsp;&nbsp;选择城市</a><em>|</em>
                     <?php foreach (Yii::$app->params['companyInfos'] as $cInfo) { ?>
                     <a href="/<?= $cInfo['code']; ?>/" class="denglu" style="margin-right:0;<?php if ($this->context->currentCityCode == $cInfo['code']) { echo 'color:#df0303;'; } ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
                     <?php } ?>

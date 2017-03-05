@@ -45,9 +45,9 @@ use gallerycms\components\LinkPager;
                 <dd class="dd3">基本投资额：
                     <em>5万~10万</em></dd>-->
                 <dd class="dd4 clearfix">
-                    <input class="fl quick" type="button" value="在线咨询" onclick="onClickBBSInfoNew('6572154','欧克斯门窗','','16-9-1');return false;" />
+                    <input class="fl quick" type="button" value="免费设计" onclick="onClickBBSInfoNew('6572154','欧克斯门窗','','16-9-1');return false;" />
                     <div class="fl free" onclick="showStory('6572154','95155','欧克斯门窗')">
-                        <span>获取报价</span></div>
+                        <span>免费报价</span></div>
                 </dd>
             </dl>
             <?php } ?>

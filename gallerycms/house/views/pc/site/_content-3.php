@@ -1,9 +1,7 @@
 <div class='content clear new last'>
     <div class="recommend">
-        <h2 class="fl">
-            <a href="<?= '/' . $this->context->currentCityCode . '/working/'; ?>" title="工地直播" class="moreL"><em>工地直播</em></a>
-        </h2>
-        <a href="<?= '/' . $this->context->currentCityCode . '/working/'; ?>" title="工地直播" class="more">
+        <h2 class="fl"><?= $this->context->currentCityName . '工地直播'; ?></h2>
+        <a href="<?= '/' . $this->context->currentCityCode . '/working/'; ?>" title="<?= $this->context->currentCityName; ?>工地直播" class="more">
             <em>更多工地直播&nbsp;></em></a>
     </div>
     <div class="recommendTable">

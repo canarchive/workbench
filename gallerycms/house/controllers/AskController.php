@@ -70,6 +70,10 @@ class AskController extends HouseController
             $tdkInfo['title'] = $tagInfo['meta_title'];
             $tdkInfo['keyword'] = $tagInfo['meta_keyword'];
             $tdkInfo['desription'] = $tagInfo['meta_description'];
+        } else {
+            $tdkInfo['title'] = Yii::$app->params['siteName'];
+            $tdkInfo['keyword'] = '';
+            $tdkInfo['desription'] = '';
         }
 		$this->getTdkInfos('ask-taglist', $dataTdk, $tdkInfo);
 		return $this->render('taglist', $datas);
@@ -129,12 +133,9 @@ class AskController extends HouseController
         $sortInfos = $this->_checkSort($info['sort']);
 
         //$description = str_replace(' ', '', $info['description']);
-        $description = StringHelper::truncate(strip_tags($info['description']), 200, '');
         $tagStr = !empty($sortInfos['pInfo']) ? $sortInfos['pInfo']['name'] . ',' : '';
         $tagStr .= !empty($sortInfos['cInfo']) ? $sortInfos['cInfo']['name'] . ',' : '';
         $tagStr = rtrim($tagStr, ',');
-		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr, '{{DESCRIPTION}}' => $description];
-		$this->getTdkInfos('info-show', $dataTdk);
 
         $info['memberInfo'] = $info->getMemberInfo($info, 'ask');
         $aModel = new AskAnswer();
@@ -149,6 +150,12 @@ class AskController extends HouseController
             'tagInfos' => $this->_getTagInfos(),
             'answerInfos' => $answerInfos,
 		];
+
+        $description = StringHelper::truncate(strip_tags($info['description']), 200, '');
+        $description = empty($description) ? $info['name'] : $description;
+		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr, '{{DESCRIPTION}}' => $description];
+		$this->getTdkInfos('info-show', $dataTdk);
+		$this->getTdkInfos('ask-show', $dataTdk);
 		return $this->render('show', $datas);
 	}
 

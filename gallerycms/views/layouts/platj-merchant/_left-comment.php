@@ -1,11 +1,12 @@
 <?php
 $info = $this->context->mDatas['info'];
 $cInfos = $this->context->mDatas['commentInfos'];
+$baseUrl = Yii::getAlias('@gallerycmsurl');
 ?>
 <div class="nineth">
     <div class="nineth_title clearfix">
         <span class="zixun_h3"><?= $info['name_full']; ?>评价</span>
-        <a target="_blank" href="<?= "/{$info['city_code']}/{$info['code']}_comment/"; ?>" title="<?= $info['name_full']; ?>评价">
+        <a target="_blank" href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_comment/"; ?>" title="<?= $info['name_full']; ?>评价">
             <u>查看更多</u>&gt;&gt;</a>
     </div>
     <div class="message" id="message_main">

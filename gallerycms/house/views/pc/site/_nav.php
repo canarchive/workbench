@@ -7,8 +7,9 @@ $currentNav = isset($this->params['currentNav']) ? $this->params['currentNav'] :
     <div class="zong_nav_bg">
         <ul class="wrap_mar zong_nav clear" style="overflow:visible;">
             <?php foreach (['index', 'merchant', 'sample', 'ask', 'quote'] as $nav) { ?>
-            <li class="li1" <?php if ($nav == $currentNav) { echo 'style="width: 100px; background: #c80202;"'; } ?>><a href="<?= $navDatas[$nav]['url']; ?>" style="padding-left:16px;"><?= $navDatas[$nav]['name']; ?></a></li>
+            <li class="li1" <?php if ($nav == $currentNav) { echo 'style="width: 100px; background: #c80202;"'; } ?>><a href="<?= $navDatas[$nav]['url']; ?>" style="padding-left:16px;" title="<?= $navDatas[$nav]['name']; ?>"><?= $navDatas[$nav]['name']; ?></a></li>
             <?php } ?>
+            <li class="li1" <?php if ('working' == $currentNav) { echo 'style="width: 100px; background: #c80202;"'; } ?>><a href="<?= "/{$this->context->currentCityCode}/working/"; ?>" style="padding-left:16px;" title="<?= $this->context->currentCityName . '工地直播'; ?>"><?= $this->context->currentCityName . '工地直播'; ?></a></li>
             <div class="moreUl dis_n pa">
                 <ul class="clear"></ul>
             </div>

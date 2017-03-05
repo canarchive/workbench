@@ -90,52 +90,12 @@ var piccType = 3;
         <?php } ?>
         <strong ><?= $info['name']; ?></strong>
         <strong id="fine_n"><?= $info['name']; ?></strong>
-        <span class="wechatapp">
-            <div class="threeDshare">
-                <i>
-                </i>
-                <span>3D效果图</span>
-                <div class="threeDshare-boxing">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/063eb-6681.png" class="qrcode-3d">
-                    <div>下载土巴兔APP</div>
-                    <div class="g-orange">查看案例3D效果图</div>
-                    <span class="arr"></span>
-                </div>
-            </div>
-            <label class="left">
-                <i>
-                </i>
-                <span class='collect'>收藏到微信</span>
-                <span class="boximg" style="display:none;">
-                    <span class="sanjiao"></span>
-                    <span class="closeimg"></span>
-                    <span>扫码即获10000套效果图</span>
-                    <span class='img'></span>
-                    <span class="newtext">收藏到微信</span></span>
-            </label>
-            <label class="right">
-                <i>
-                </i>
-                <span class='phone' style="cursor:pointer;color:#f25618;" data_ptag="1_2_2_49">发送到手机</span></label>
-            <label class="finework-share">
-                <i class="share-ioc finework-share-share"></i>
-                <span class="share-font">分享</span>
-                <div class="share-link">
-                    <div class="bdsharebuttonbox" data-tag="share_1">
-                        <a href="#" class="bds_tsina ie-baidushare website-ioc website-tsina" data-cmd="tsina" title="新浪微博">新浪微博</a>
-                        <a href="#" class="bds_qzone ie-baidushare website-ioc website-qzone" data-cmd="qzone" title="QQ空间">QQ空间</a>
-                        <a href="#" class="bds_weixin ie-baidushare website-ioc website-weixin" data-cmd="weixin" title="微信">微信</a>
-                        <a href="#" class="bds_tqq ie-baidushare website-ioc website-tqq" data-cmd="tqq" title="腾讯微博">腾讯微博</a>
-                        <a href="#" class="bds_more ie-baidushare website-ioc share-more" data-cmd="more">更多···</a></div>
-                </div>
-                <span class="arrow1">◆</span>
-                <span class="arrow2">◆</span></label>
-        </span>
+        <?php //echo $this->render('@gallerycms/house/views/pc/_pi-share'); ?>
     </div>
 </div>
 <!-- 效果图内页Satrt -->
 <div style="display:none">
-    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ae2cc-5103.jpg" width="" height="" id="show_img" alt="大气时尚改造厨房设计图片" />
+    <img src="" width="" height="" id="show_img" alt="" />
     <div id='imgids'></div>
 </div>
 <!-- 效果图内页Satrt -->
@@ -218,11 +178,11 @@ var piccType = 3;
                                     </div>
                                     <div class="element">
                                         <input class="text" type="text" name="chkPhone">
-                                        <b>输入手机号码，获取报价结果</b>
+                                        <b>输入手机号码，免费报价结果</b>
                                     </div>
                                     <input type="hidden" name="dangci" value="jianzhuang">
                                     <div class="element">
-                                        <a class="submit-btn" href="javascript:void(0);" searchtage="">获取报价</a></div>
+                                        <a class="submit-btn" href="javascript:void(0);" searchtage="">免费报价</a></div>
                                     <!-- 装修日记及装修论坛的功能 -->
                                     <div class="element glideimg" style="display:none">
                                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/13e56-4858.png" alt=""></div>
@@ -287,29 +247,6 @@ var piccType = 3;
                     <a href="http://mall.to8to.com/cs/sz" hidefocus target="_blank" rel="nofollow">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/4282c-2273.jpg" width="245" height="100" alt="家居商城" /></a>
                 </div>
-                <!-- <div class="apply_form"> -->
-                <!-- <form action="" target="_blank" id="apply_form" onsubmit="return false;"> -->
-                <!-- <p class="right_title_20 txt_c">申请免费设计</p> -->
-                <!-- <p class="txt_c">优质装修公司免费帮您出方案</p> -->
-                <!-- <div class="row gray_4"> -->
-                <!-- <label></label> -->
-                <!-- <input type="text" value="您的称呼" class="input_text" id="name" />-->
-                <!-- </div> -->
-                <!-- <div class="err_msg"><i class="err_ico"></i><span>您的称呼不能为空</span></div> -->
-                <!-- <div class="row gray_4"> -->
-                <!-- <label class="phone"></label> -->
-                <!-- <input type="text" value="手机号码" class="input_text" id="phone" />-->
-                <!-- </div> -->
-                <!-- <div class="err_msg"><i class="err_ico"></i><span>请填写正确的手机号码</span></div> -->
-                <!-- <div class="area"> -->
-                <!-- <select class="adress" id="PUser_Shen" name="User_Shen" onChange="changeProvince('PUser_Shen','PUser_City','PUser_Town');"></select> -->
-                <!-- <select class="adress" id="PUser_City" name="User_City"></select> -->
-                <!-- <select class="adress" id="PUser_Town" name="User_Town"></select> -->
-                <!-- </div> -->
-                <!-- <div class="err_msg"><i class="err_ico"></i><span>请选择所属城市</span></div> -->
-                <!-- <input type="submit" value="" class="apply_btn tran" id="applyBtn" />-->
-                <!-- </form> -->
-                <!-- </div> -->
                 <div class="pic_author">
                     <h3>图片信息</h3>
                     <span>上传者：

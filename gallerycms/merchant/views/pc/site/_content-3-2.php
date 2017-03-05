@@ -8,11 +8,11 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <h4 class="gai" style="padding-top: 12px;"><?= $info['name_full'] . '实景案例'; ?>(<?= $info['num_realcase']; ?>)</h4>
         <ul class="clearfix">
             <li>
-                <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/working/"; ?>" title="<?= $info['name'] . '工地'; ?>">直播工地(<?= $info['num_working']; ?></a></li>
+                <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_working/"; ?>" title="<?= $info['name'] . '工地'; ?>">直播工地(<?= $info['num_working']; ?></a></li>
             <li>
-                <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/designer/"; ?>" title="<?= $info['name'] . '设计师'; ?>">设计师(<?= $info['num_designer']; ?></a></li>
+                <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_designer/"; ?>" title="<?= $info['name'] . '设计师'; ?>">设计师(<?= $info['num_designer']; ?></a></li>
         </ul>
-        <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}/realcase/"; ?>" title="<?= $info['name'] . '实景案例'; ?>"><u>查看更多</u>&gt;&gt;</a>
+        <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_realcase/"; ?>" title="<?= $info['name'] . '实景案例'; ?>"><u>查看更多</u>&gt;&gt;</a>
     </div>
     <div class="pic_detail clearfix">
         <?php $rInfo = array_pop($rInfos); ?>

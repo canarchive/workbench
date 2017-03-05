@@ -2,16 +2,17 @@
 use yii\helpers\StringHelper;
 $info = $this->context->mDatas['info'];
 $cInfos = $this->context->mDatas['commentInfos'];
+$baseUrl = Yii::getAlias('@gallerycmsurl');
 ?>
 <div class="p_dianPing">
     <p class="p_p_title clearfix">
         <span class="fl">最新点评</span>
-        <a href="<?= "/{$info['city_code']}/{$info['code']}_comment/"; ?>" class="fr">更多(<?= $info['num_comment']; ?>)>></a></p>
+        <a href="<?= "{$baseUrl}/{$info['city_code']}/{$info['code']}_comment/"; ?>" class="fr">更多(<?= $info['num_comment']; ?>)>></a></p>
     <?php $i = 0; foreach ($cInfos as $cInfo) { if ($i > 5) { continue; } ?>
     <ul class="dianPing_ul">
         <li class="li1">
             <font class="p_red">
-            <a style="color:red;" href="<?= "/{$info['infoUrl']}"; ?>"><?= $info['name']; ?></a></font>业主：<?= $cInfo['ownerInfo']['name']; ?>
+            <a style="color:red;" href="<?= "{$info['infoUrl']}"; ?>"><?= $info['name']; ?></a></font>业主：<?= $cInfo['ownerInfo']['name']; ?>
             <font class="p_red"></font></li>
         <li class="li2 clearfix">
             <span class="fl span1">

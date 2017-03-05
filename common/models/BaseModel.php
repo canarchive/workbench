@@ -251,7 +251,7 @@ class BaseModel extends ActiveRecord
             'pid' => 0,
             's' => ['f' => 'url'],
             'w' => '1120',
-            'h' => '2124',
+            'h' => '1320',
             't' => '',
             'aid' => ['f' => 'id'],
             'id' => 0,

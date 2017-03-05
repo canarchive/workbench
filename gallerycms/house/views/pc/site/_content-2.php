@@ -1,10 +1,9 @@
 <div class='content clear hot'>
     <div class="recommend">
         <h2 class="fl">
-            <a href="/sample/" title="装修效果图" class="moreL">
-                <em>装修效果图</em></a>
+             <em><?= $this->context->currentCityName; ?>装修效果图</em>
         </h2>
-        <a href="/sample/" title="装修效果图" class="more">
+        <a href="/sample/" title="<?= $this->context->currentCityName; ?>装修效果图" class="more">
             <em>更多装修效果图&nbsp;></em></a>
     </div>
     <div class="recommendTable">

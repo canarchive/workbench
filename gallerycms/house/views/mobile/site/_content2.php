@@ -31,7 +31,7 @@
                 </ul>
                 <div class="phone fr">
                     <a onclick="publish_mess('6588643','12','我想询问中宫格五天练字项目')" class="fr free">
-                        <span>在线咨询</span></a>
+                        <span>免费设计</span></a>
                     <a onclick="publish_mess('6588643','13','我想了解一下中宫格五天练字项目底价')" class="fr line">
                         <span>获取底价</span></a>
                 </div>
@@ -74,7 +74,7 @@
                 </ul>
                 <div class="phone fr">
                     <a onclick="publish_mess('6562900','12','我想询问室美伦项目')" class="fr free">
-                        <span>在线咨询</span></a>
+                        <span>免费设计</span></a>
                     <a onclick="publish_mess('6562900','13','我想了解一下室美伦项目底价')" class="fr line">
                         <span>获取底价</span></a>
                 </div>

@@ -1,9 +1,7 @@
 <div class='content clear'>
     <div class="recommend clear">
-        <h2 class="fl">
-            <a href="<?= '/' . $this->context->currentCityCode . '/realcase/'; ?>" title="热门设计案例" class="moreL"><em>热门设计案例</em></a>
-        </h2>
-        <a href="<?= '/' . $this->context->currentCityCode . '/realcase/'; ?>" title="装修实景案例" class="more">
+        <h2 class="fl"><em><?= $this->context->currentCityName; ?>设计案例</em></h2>
+        <a href="<?= '/' . $this->context->currentCityCode . '/realcase/'; ?>" title="<?= $this->context->currentCityName; ?>设计 案例" class="more">
             <em>更多热门设计案例&nbsp;></em></a>
     </div>
     <div class="recommendTable clear">
