@@ -41,7 +41,7 @@ class Merchant extends MerchantModel
             [['name', 'city_code'], 'required'],
 			[['logo', 'picture'], 'integer'],
 			[['logo', 'picture', 'category_id', 'status', 'num_owner', 'num_realcase', 'num_working', 'score', 'praise'], 'default', 'value' => '0'],
-			[['aptitude', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+			[['aptitude', 'decoration_sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
         ];
     }
 
@@ -56,7 +56,7 @@ class Merchant extends MerchantModel
             'breif' => '简介',
 			'company_id' => '所属公司',
 			'category_id' => '分类',
-			'sort' => '类别',
+			'decoration_sort' => '类别',
 			'orderlist' => '排序',
             'logo' => 'LOGO',
             'picture' => '描述配图',
@@ -90,7 +90,7 @@ class Merchant extends MerchantModel
 		return $datas;
 	}	
 
-	protected function getSortInfos()
+	/*protected function getDecorationSortInfos()
 	{
 		$datas = [
 			'focus' => '关注',
@@ -99,7 +99,8 @@ class Merchant extends MerchantModel
 			'deepco' => '深度合作',
 		];
 		return $datas;
-	}	
+    }*/
+
 	public function beforeSave($insert)
 	{
 		return true;

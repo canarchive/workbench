@@ -106,11 +106,10 @@ $gridViewParams = [
             'attribute' => 'num_comment',
             'value' => function($model) {
 				$cityCode = $model->city_code;
-                $is_joined = $model->is_joined;
 				$commentInfos = $model->commentInfos;
                 $menus = $this->context->menuInfos['menus'];
 				$listMenu = $menus['merchant_merchant-comment_listinfo'];
-				$opeStr = "<a href='{$listMenu['url']}?city_code={$cityCode}&is_joined={$is_joined}&owner_id={$model->id}'>{$model->num_comment}</a>";
+				$opeStr = "<a href='{$listMenu['url']}?city_code={$cityCode}&owner_id={$model->id}'>{$model->num_comment}</a>";
 				if (count($commentInfos) < 7) {
 					$menu = isset($menus['merchant_merchant-comment_add']) ? $menus['merchant_merchant-comment_add'] : [];
 					$opeStr .= empty($menu) ? '' : "--<a href='{$menu['url']}?owner_id={$model->id}'>添加</a><br />";

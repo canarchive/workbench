@@ -12,7 +12,7 @@ class Working extends WorkingModel
     public function rules()
     {
         return [
-            [['city_code', 'is_joined', 'merchant_id'], 'safe'],
+            [['city_code', 'merchant_id'], 'safe'],
         ];
     }
 
@@ -27,7 +27,6 @@ class Working extends WorkingModel
 
 		$query->andFilterWhere([
 			'city_code' => $this->city_code,
-			'is_joined' => $this->is_joined,
 			'merchant_id' => $this->merchant_id,
 		]);
 

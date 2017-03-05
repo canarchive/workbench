@@ -103,7 +103,7 @@ class Designer extends MerchantModel
 
 	public function getMerchantInfos()
 	{
-		$infos = $this->_getMerchantInfos(['is_joined' => 1]);
+		$infos = $this->_getMerchantInfos([]);
 		return $infos;
 	}
 

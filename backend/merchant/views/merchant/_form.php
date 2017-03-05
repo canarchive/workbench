@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
 use common\widgets\FileUploadUI;
-use merchant\models\Attachment;
+use gallerycms\merchant\models\Attachment;
 
 $attachmentModel = new Attachment();
 $logo = $attachmentModel->getFieldInfos('merchant', 'logo');
@@ -19,7 +19,7 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
 	<input type="hidden" name="city_code" value="<?= $this->context->companyInfo['code_short']; ?>" />
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'brief')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'sort')->dropDownList($model->sortInfos, ['prompt' => Yii::t('admin-common', 'Select Sort')]); ?>
+    <?= $form->field($model, 'decoration_sort')->dropDownList($model->decorationSortInfos, ['prompt' => Yii::t('admin-common', '')]); ?>
     <?= $form->field($model, 'logo')->hiddenInput(); ?>
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
@@ -82,7 +82,6 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
     ?> 
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => Yii::t('admin-common', 'Select Status')]); ?>
-    <?= $form->field($model, 'is_joined')->dropDownList($model->isJoinedInfos, ['prompt' => Yii::t('admin-common', 'Select Is joined')]); ?>
 
 	<?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

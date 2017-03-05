@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use common\widgets\FileUploadUI;
-use merchant\models\Attachment;
+use gallerycms\merchant\models\Attachment;
 
 $attachmentModel = new Attachment();
 $photo = $attachmentModel->getFieldInfos('designer', 'photo');

@@ -4,7 +4,7 @@ use yii\bootstrap\ActiveForm;
 use merchant\models\Category;
 use yii\helpers\Url;
 use common\widgets\FileUploadUI;
-use merchant\models\Attachment;
+use gallerycms\merchant\models\Attachment;
 
 $ownerInfo = $this->context->ownerInfo;
 $starElems = [

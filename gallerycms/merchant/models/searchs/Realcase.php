@@ -12,7 +12,7 @@ class Realcase extends RealcaseModel
     public function rules()
     {
         return [
-            [['city_code', 'is_joined', 'merchant_id'], 'safe'],
+            [['city_code', 'merchant_id'], 'safe'],
         ];
     }
 
@@ -29,7 +29,6 @@ class Realcase extends RealcaseModel
 		$query->andFilterWhere([
 			'city_code' => $this->city_code,
 			'status' => $this->status,
-			'is_joined' => $this->is_joined,
 			'merchant_id' => $this->merchant_id,
 		]);
 

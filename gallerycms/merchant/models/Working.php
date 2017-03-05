@@ -185,7 +185,7 @@ class Working extends MerchantModel
 
 	public function getMerchantInfos()
 	{
-		$infos = $this->getMerchantInfos(['is_joined' => 1]);
+		$infos = $this->getMerchantInfos([]);
 		return $infos;
 	}
 

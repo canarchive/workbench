@@ -12,7 +12,6 @@ trait MerchantInfoTrait
 	public $companyInfo;
 	public $merchantId;
 	public $ownerInfo;
-	public $is_joined;
 	public $owner_id;
 	public $merchant_id;
 
@@ -22,7 +21,6 @@ trait MerchantInfoTrait
 		$cityCode = Yii::$app->request->get('city_code', '');
 		$companyModel = new Company();
 		$this->companyInfo = $companyModel->getInfoByCodeShort($cityCode);
-		$this->is_joined = Yii::$app->request->get('is_joined');
 		$this->owner_id = Yii::$app->request->get('owner_id');
 		$this->merchant_id = Yii::$app->request->get('merchant_id');
 	}

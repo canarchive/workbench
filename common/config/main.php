@@ -16,7 +16,8 @@ return [
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
-                ['pattern' => '/gallerycms-upload/<table:\w+>/<field:\w+>', 'route' => '/gallerycms-upload/index', 'host' => Yii::getAlias('@gallerycmsurl')],
+                ['pattern' => '/gallerycms-upload/<table:\w+>/<field:\w+>', 'route' => '/house/gallerycms-upload/index', 'host' => Yii::getAlias('@gallerycmsurl')],
+                ['pattern' => '/merchant-upload/<table:\w+>/<field:\w+>', 'route' => '/merchant/merchant-upload/index', 'host' => Yii::getAlias('@gallerycmsurl')],
             ],
         ],
         'errorHandler' => [
