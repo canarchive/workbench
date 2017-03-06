@@ -21,10 +21,11 @@ $this->params['jsStr'] = $this->render('../ask/_js-header');
         }
         var popid = 0;
         function islogin(id) {
+            return false;
             var username = getCookie('username', true);
             if (!username) {
                 popid = id;
-                showPopWin('http://www.to8to.com/pop_login.php', 376, 263, null, false);
+                showPopWin('login', 376, 263, null, false);
                 return false;
             }
         }
@@ -93,8 +94,8 @@ $this->params['jsStr'] = $this->render('../ask/_js-header');
             var tcode = getCookie('tcode', true);
             if (tcode) {
                 var autourl = jq('#autourl').attr('href');
-                if (autourl.indexOf('.to8to.com/company') != -1) {
-                    autourl = autourl.replace(/http:\/\/www.to8to.com/ig, 'http://' + tcode + '.to8to.com');
+                if (autourl.indexOf('.com/company') != -1) {
+                    autourl = autourl.replace(/http:\/\/www.com/ig, 'http://' + tcode + '.com');
                     jq('#autourl').attr('href', autourl);
                 }
             }
@@ -110,7 +111,7 @@ $this->params['jsStr'] = $this->render('../ask/_js-header');
 </script>
 <script>
 /*if (!window.tender) {
-    jq.getScript('http://static.to8to.com/gb_js/tender.js?v=1464789987');
+    jq.getScript('http://static.com/gb_js/tender.js?v=1464789987');
 }*/
 </script>
     <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/css/1b975-9868.css" />

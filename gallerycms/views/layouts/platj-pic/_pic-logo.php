@@ -35,19 +35,19 @@ $topTitle = isset($this->params['topTitle']) ? $this->params['topTitle'] : '';
         <div class="hot_sear">
             <ul class="hot_sear_list clearfix">
             <li>
-                <a href="/" title="局部装修">局部装修</a></li>
+                <a href="<?= "/{$this->context->currentCityCode}/merchant/d_part/"; ?>" title="局部装修">局部装修</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="/" title="田园">田园</a></li>
+                <a href="<?= "/{$this->context->currentCityCode}/merchant/s_rural/"; ?>" title="田园">田园</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="/" title="普通住宅">普通住宅</a></li>
+                <a href="<?= "/{$this->context->currentCityCode}/merchant/d_common/"; ?>" title="普通住宅">普通住宅</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="/" title="新古典">新古典</a></li>
+                <a href="<?= "/{$this->context->currentCityCode}/merchant/s_newclassics/"; ?>" title="新古典">新古典</a></li>
             <li style="font-size:10px;">|</li>
             <li>
-                <a href="/" title="混搭">混搭</a></li>
+            <a href="<?= "/{$this->context->currentCityCode}/merchant/s_mashup/"; ?>" title="混搭">混搭</a></li>
             </ul>
         </div>
     </div>

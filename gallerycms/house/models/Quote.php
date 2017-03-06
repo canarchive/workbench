@@ -193,9 +193,9 @@ class Quote extends GallerycmsModel
 
         $infos = [
             'lastest' => ['name' => '最新'],
-            'hot' => ['name' => '热点报价'],
-            'news' => ['name' => '特殊报价'], 
-            'code' => ['name' => '靠谱报价'], 
+            'hot' => ['name' => '新房装修报价'],
+            'news' => ['name' => '老房装修报价'], 
+            'code' => ['name' => '二手房装修报价'], 
         ];
         $where = [];
         $datas = $this->getInfos($where, 100);

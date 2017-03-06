@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\StringHelper;
 
+$focusInfos = array_splice($infos, 0, 6);
 ?>
 <div class='ItemAndList'>
     <div class='zhuanQu_right fr'>
@@ -42,7 +43,7 @@ use yii\helpers\StringHelper;
                 <div class="bd">
                     <div class="showDiv">
                         <div class="canY_con1 clear">
-                            <?php $i = 1; foreach ($infos as $key => $info) { if ($i > 6) { break; } ?>
+                            <?php $i = 1; foreach ($focusInfos as $key => $info) { if ($i > 6) { break; } ?>
                             <dl class="fl">
                                 <dt class="pr">
                                     <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>">

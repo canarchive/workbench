@@ -24,7 +24,7 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[logo]',
-        'url' => ['/merchant-upload/index', 'table' => 'merchant', 'field' => 'logo', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'merchant', 'field' => 'logo', 'id' => $model->id],
 		'gallery' => true,
         'fieldOptions' => [
 			'isSingle' => $logo['isSingle'],
@@ -49,7 +49,7 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[picture]',
-        'url' => ['/merchant-upload/index', 'table' => 'merchant', 'field' => 'picture', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'merchant', 'field' => 'picture', 'id' => $model->id],
 		'gallery' => true,
         'fieldOptions' => [
 			'isSingle' => $picture['isSingle'],
@@ -66,7 +66,7 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[aptitude]',
-        'url' => ['/merchant-upload/index', 'table' => 'merchant', 'field' => 'aptitude', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'merchant', 'field' => 'aptitude', 'id' => $model->id],
         'gallery' => true,
         'fieldOptions' => [
             'isSingle' => $aptitude['isSingle'],

@@ -6,7 +6,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
 ?>
 <div class="heat">
     <div class="heat_title" style="margin-top:10px;">
-        <span>相关问答</span></div>
+        <span>推荐装修问答</span></div>
     <div class="heat_cont">
         <ul>
         <li class="clearfix">

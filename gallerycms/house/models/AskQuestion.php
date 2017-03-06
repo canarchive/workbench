@@ -117,7 +117,7 @@ class AskQuestion extends GallerycmsModel
         }
 
 		$sortInfos = ArrayHelper::map(AskSort::find()->all(), 'code', 'name');
-        $sorts = ['lastest', 'scmc', 'cyjb', 'jjsh', 'djzm', 'rzcp', 'esfzx', 'wyjjzx', 'csypzx', 'rzsj', 'zxgs'];
+        $sorts = ['lastest', 'esfzx', 'wyjjzx', 'csypzx', 'rzsj', 'zxgs', 'scmc', 'cyjb', 'jjsh', 'djzm', 'rzcp'];
         $infos = [];
         foreach ($sorts as $sort) {
             $where = $sort == 'lastest' ? ['status' => 0] : ['sort' => $sort, 'status' => 0];

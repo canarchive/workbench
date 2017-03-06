@@ -11,9 +11,9 @@
                             <span><em>装修公司</em><b></b></span>
                         </a>
                         <ul>
-                            <li><a href="javascript:void(0)">装修公司</a></li>
-                            <li><a href="javascript:void(0)">装修问答</a></li>
-                            <li><a href="javascript:void(0)">装修报价</a></li>
+                            <li><a href="javascript:void(0)" onclick="$('#search_sort').val('merchant');">装修公司</a></li>
+                            <li><a href="javascript:void(0)" onclick="$('#search_sort').val('ask');">装修问答</a></li>
+                            <!--<li><a href="javascript:void(0)">装修报价</a></li>-->
                         </ul>
                     </div>
                     <input type="text" class="header_search_input" id="keyword" name="keyword">

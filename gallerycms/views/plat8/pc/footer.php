@@ -12,22 +12,22 @@ $footerNavs = $this->context->footerNavs;
                 </ul>
                 <div class="ftclt_content  on">
                     <?php foreach ($this->params['tagInfos'] as $key => $tInfo) { ?>
-                    <a href="/ask_tag_<?= $tInfo['id']; ?>/" title="<?= $tInfo['name']; ?>"><?= $tInfo['name']; ?></a>
+                    <a href="/ask_<?= $tInfo['id']; ?>/" title="<?= $tInfo['name']; ?>"><?= $tInfo['name']; ?></a>
                     <?php } ?>
                 </div>
                 <!--<div class="ftclt_content "><a href=""></a></div>-->
                 <!--<a rel="nofollow" href="" target="_blank" class="join_link"><span></span>友链合作</a>-->
             </div>
-            <div class="ftc_center">
+            <!--<div class="ftc_center">
                 <dl>
                     <dt>关注我们</dt>
                     <dd>
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/76706-2783.jpg" alt="" class="att-code"></dd>
                 </dl>
-            </div>
+            </div>-->
             <div class="ftc_right">
                 <dl>
-                    <dt>下载土巴兔APP</dt>
+                    <dt>关注我们</dt>
                     <dd class="ask_qrMark"></dd>
                 </dl>
             </div>

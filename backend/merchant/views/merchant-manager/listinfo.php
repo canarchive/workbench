@@ -9,8 +9,8 @@ $gridViewParams = [
 			'format' => 'raw',
 			'attribute' => 'name',
             'value'=> function($model){
-				$domain = Yii::$app->params['baseDomain'];
-				$url = "http://{$model->code_short}.{$domain}";
+				$domain = Yii::getAlias('@gallerycmsurl');
+				$url = "{$domain}/{$model->code}/";
 				return "<a href='{$url}' target='_blank'>{$model->name}</a>";
             },
 		],
@@ -30,7 +30,7 @@ $gridViewParams = [
 				$menuCode = 'merchant_merchant_listinfo';
                 $opeStr = '';
                 if (isset($menus[$menuCode])) {
-                    $opeStr .= "<a href='{$menus[$menuCode]['url']}?city_code={$model->code_short}' target='_blank'>{$menus[$menuCode]['name']}</a><br />";
+                    $opeStr .= "<a href='{$menus[$menuCode]['url']}?city_code={$model->code}' target='_blank'>{$menus[$menuCode]['name']}</a><br />";
                 }
 				return $opeStr;
             },
@@ -43,7 +43,7 @@ $gridViewParams = [
 				$menuCode = 'merchant_merchant_add';
                 $opeStr = '';
                 if (isset($menus[$menuCode])) {
-                    $opeStr .= "<a href='{$menus[$menuCode]['url']}?city_code={$model->code_short}' target='_blank'>{$menus[$menuCode]['name']}</a><br />";
+                    $opeStr .= "<a href='{$menus[$menuCode]['url']}?city_code={$model->code}' target='_blank'>{$menus[$menuCode]['name']}</a><br />";
                 }
 				return $opeStr;
             },

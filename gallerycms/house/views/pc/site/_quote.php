@@ -27,9 +27,7 @@ $picDatas = [
                 </div>
             </ul>
         </div>-->
-        <div class='seekHeadL fl'>
-            <a style="color:#000;" href="/<?= $this->context->currentCityCode; ?>/quote/" title="<?= $this->context->currentCityName; ?>家装报价"><?= $this->context->currentCityName; ?>家装报价</a>
-        </div>
+        <div class='seekHeadL fl'><?= $this->context->currentCityName; ?>家装报价</div>
     </div>
     <div class='seekContent'>
         <ul>
@@ -37,7 +35,7 @@ $picDatas = [
             <li>
                 <div class='seekContentTop'>
                     <div class='seekContentTopL fl seekContentTopRed '>
-                        <a href='/<?= $this->context->currentCityCode; ?>/quote/' class='seekContentTopBl' title="<?= $info['name']; ?>"><?= $info['name']; ?></a></div>
+                        <a href='javascript:void(0);' rel="nofollow" class='seekContentTopBl' title="<?= $info['name']; ?>"><?= $info['name']; ?></a></div>
                 </div>
                 <?php $sInfos = $info['infos']; $fInfo = array_pop($sInfos); ?>
                 <div class='seekMiAndBo'>

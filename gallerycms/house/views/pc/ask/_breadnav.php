@@ -2,7 +2,7 @@
     <div class="global_pie_container">
         <ul>
             <li class="has_arrow">
-                <a href="/" title="<?= $this->context->currentCityName . '装修网'; ?>">首页</a>
+                <a href="/" title="<?= $this->context->currentCityName . '装修网'; ?>"><?= $this->context->currentCityName . '装修网'; ?></a>
                 <span class="nav_arrow_right"></span>
             </li>
             <li class="has_arrow">

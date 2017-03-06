@@ -53,7 +53,7 @@
         <div class="side_hd">最新标签</div>
         <div class="new_tag ">
             <?php $i = 0; foreach ($tagInfos as $key => $tInfo) { if ($i > 20) { break; }?>
-            <a href="/ask_tag_<?= $tInfo['id']; ?>/" title="<?= $tInfo['name']; ?>"><?= $tInfo['name']; ?></a>
+            <a href="/ask_<?= $tInfo['id']; ?>/" title="<?= $tInfo['name']; ?>"><?= $tInfo['name']; ?></a>
             <?php unset($tagInfos[$key]); $i++; } $this->params['tagInfos'] = $tagInfos; ?>
         </div>
     </div>
