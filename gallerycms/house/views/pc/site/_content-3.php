@@ -13,7 +13,7 @@
                     <span class='op'></span>
                 <a href="<?= '/' . $this->context->currentCityCode . '/workingshow_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">
                     <p class='imgLa ImgLaZi'><?= $info['name']; ?></p></a>
-                <button class='newButton' onclick="message_check('<?= $info['id']; ?>','28-1','<?= $info['name']; ?>');">预约参观</button>
+                <button class='newButton' onclick="message_check('<?= $info['id']; ?>','working', 'index', '预约参观', '');">预约参观</button>
             </li>
             <?php $i++; } ?>
         </ul>

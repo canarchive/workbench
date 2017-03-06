@@ -15,7 +15,7 @@
                 <div>
                     <p class='describe'><?= $info['name']; ?></p>
                     <p class='describeMo'>
-                        <button onclick="message_check('137829','26-1','热门行业的晨阳水漆项目很不错，我想加盟，请尽快联系我！');">免费设计</button>
+                        <button onclick="message_check('<?= $info['id']; ?>','realcase', 'index', '免费设计', '');">免费设计</button>
                         <span class='describeHo' style='color:#e9000a'>￥</span><?= $info['ownerInfo']['decoration_price']; ?>
                         <span class='describeHo' style='color:#e9000a'>万</span>
                         <span class='describeHo'><?= $info['ownerInfo']['decoration_type']; ?></span></p>

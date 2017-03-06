@@ -1,5 +1,13 @@
 <?php
 return \gallerycms\components\RuleFormat::formatRule([
+    'signup' => [
+        'hosts' => ['base', 'm', '3g', 'wap', 'merchant'],
+        'data' => [
+            'pattern' => '/signup', 
+            'route' => '/house/signup/index', 
+            'suffix' => '.html'
+        ],
+    ],
     'search' => [
         'hosts' => ['base', 'm', '3g', 'wap', 'merchant'],
         'data' => [

@@ -52,7 +52,7 @@ $focusInfos = array_splice($infos, 0, 6);
                                     <div class="p_black2 pa clear">
                                         <p class="fl p1 f14">
                                             <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>"><?= $info['name_full']; ?></a></p>
-                                        <p class="fr p_iCan p_iCan2 f12" onclick="message_check('79341','30-1','我要设计');">免费设计</p></div>
+                                            <p class="fr p_iCan p_iCan2 f12" onclick="message_check('<?= $info['id']; ?>','merchant', 'index-focus','免费设计', '');">免费设计</p></div>
                                 </dt>
                                 <dd class="clear">
                                     <a href="<?= $info['infoUrl']; ?>" title="<?= $info['name_full']; ?>"><?= $info['name_full']; ?></a>

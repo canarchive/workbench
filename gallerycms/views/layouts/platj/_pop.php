@@ -8,13 +8,14 @@ $(function() {
     $("#MCeng_lasturl_1").val(MCeng_lasturl);
     $("#MCeng_fromurl_1").val(MCeng_fromurl);
 });
-function message_check(target_id, origin, message) {
-    var target_id = target_id;
-    var origin = origin;
-    var message = message;
-    $("#target_id").val(target_id);
-    $("#p_origin").val(origin);
-    $("#p_message").val(message);
+function message_check(infoId, infoSort, infoPosition, formTitle, message) {
+    formTitle = !formTitle ? '免费设计' : formTitle;
+    $("#form_title").text(formTitle);
+    $("#button_title").val(formTitle);
+    $("#info_id").val(infoId);
+    $("#info_sort").val(infoSort);
+    $("#info_position").val(infoPosition);
+    //$("#p_message").val(message);
     $("#click_zongPfind1").show();
     $("#zong_gray").show();
 }
@@ -27,29 +28,30 @@ function message_check(target_id, origin, message) {
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/close_03.png" alt="" /></span>
         </p>
         <div class="zong_Pfind2">
-            <p class="p_title2">立即咨询</p>
+            <p class="p_title2" id="form_title">免费报价</p>
             <ul class="p_ul">
                 <li style="color:#666;">请您提供联系方式，以方便我们及时为您提供服务</li></ul>
             <div class="name_box">
                 <p>
                     <em class="em1">*</em>姓&nbsp;名：
-                    <input type="text" class="name" name="name" id="p_name" value="test" onfocus='if(this.value=="请输入姓名"){this.value=""}' onblur='if(this.value==""){this.value="请输入姓名"}' maxlength="6">性别：
+                    <input type="text" class="name" name="name" id="p_name" value="test" onfocus='if(this.value=="请输入姓名"){this.value=""}' onblur='if(this.value==""){this.value="请输入姓名"}' maxlength="6">
+                    <!--性别：
                     <label>
                         <input type="radio" class="a3" value="0" id="sexm" name="sex" checked>男</label>
                     <label>
-                        <input type="radio" class="a3" value="1" id="sexfm" name="sex">女</label></p>
+                        <input type="radio" class="a3" value="1" id="sexfm" name="sex">女</label></p>-->
                 <p>
                     <em class="em1">*</em>手&nbsp;机：
                     <input type="text" class="tel" name="phone" id="p_phone" onfocus='if(this.value=="请输入手机号"){this.value=""}' onblur='if(this.value==""){this.value="请输入手机号"}' value="13200000002" maxlength="11"></p>
                 <p>
-                    <input type="button" value="快联系我" class="btn" onclick="v9_check($(this));" /></p>
+                    <input type="button" value="快联系我" class="btn" id="button_title" onclick="v9_check($(this));" /></p>
             </div>
         </div>
         <input type="hidden" name="content" id="p_message" value="">
-        <input type="hidden" name="target_id" id="target_id" value="">
-        <input type="hidden" value="" name="origin" id="p_origin">
-        <input type="hidden" name="MFoot_lasturl" id="MCeng_lasturl_1" />
-        <input type="hidden" name="MFoot_fromurl" id="MCeng_fromurl_1" /></form>
+        <input type="hidden" name="info_id" id="info_id" value="">
+        <input type="hidden" name="info_sort" id="info_sort" value="">
+        <input type="hidden" name="info_position" id="info_position" value="">
+    </form>
 </div>
 <script>
 function v9_check(obj) {
@@ -58,20 +60,22 @@ function v9_check(obj) {
         return false;
     }
     var name = $("#p_name").val();
-    var message = $("#p_message").val();
-    var phone = $("#p_phone").val();
-    var sex = $('input[name="sex"]:checked').val();
-    var target_id = $("#target_id").val();
-    var origin = $("#p_origin").val();
+    var message = '';//$("#p_message").val();
+    var mobile = $("#p_phone").val();
+    //var sex = $('input[name="sex"]:checked').val();
+    var info_id = $("#info_id").val();
+    var info_sort = $("#info_sort").val();
+    var info_position = $("#info_position").val();
     var MCeng_lasturl_1 = $("#MCeng_lasturl_1").val();
     var MCeng_fromurl_1 = $("#MCeng_fromurl_1").val();
-    if (name == "") {
+    /*if (name == "") {
         alert("姓名不能为空！");
         return false;
-    } else if (phone == "") {
+    } else */
+    if (mobile == "") {
         alert("联系方式不能为空！");
         return false;
-    } else if (!phone.match(/^(13[0-9]|14[0-9]|15([0-9])|18([0-9])|17([0-9]))[0-9]{8}$/)) {
+    } else if (!mobile.match(/^(13[0-9]|14[0-9]|15([0-9])|18([0-9])|17([0-9]))[0-9]{8}$/)) {
         alert("请输入正确的手机号码！");
         return false;
     } else {
@@ -82,31 +86,33 @@ function v9_check(obj) {
         }
         window.setTimeout(show, 2000);
         $.ajax({
-            type: "get",
-            url: "http://liuyan.jmw.com.cn/message/v9_message_check.php",
-            dataType: "jsonp",
-            jsonp: "callback",
+            type: "post",
+            url: '/signup.html',
+            dataType: "json",
+            //jsonp: "callback",
             data: {
-                sex: sex,
                 name: name,
-                telephone: phone,
-                message: message,
-                target_id: target_id,
-                origin: origin,
-                MFoot_lasturl: MCeng_lasturl_1,
-                MFoot_fromurl: MCeng_fromurl_1
+                mobile: mobile,
+                info_id: info_id,
+                info_sort: info_sort, 
+                info_position: info_position,
+                page: $("#current_page").val(),
+                _csrf: $("#_csrf").val()
             },
             success: function(html) {
+                alert(html.status);
+                console.log(html);
                 obj.attr("message_pop_up", 0);
-                if (html.status == "login") {
+                if (html.status == 200) {
                     $("#click_zongPfind1").hide();
                     $("#zong_gray").hide();
-                    alert("留言成功！");
+                    alert("报名成功！");
                     window.location.reload();
-                } else if (html.status == "unlogin") {
+                } else {
+                    alert(html.message);
                     $("#click_zongPfind1").hide();
-                    $("#click_zongYZ").show();
-                    v9_Auto_trigger();
+                    //$("#click_zongYZ").show();
+                    //v9_Auto_trigger();
                     $("#first_message_id").val(html.id);
                     $("#first_telephone").val(phone);
                 }
