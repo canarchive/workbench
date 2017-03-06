@@ -80,18 +80,11 @@ class SignupForm extends Model
             return false;
         }
 
-        $conversionModel = new Conversion();
-        $conversionInfo = $conversionModel->successLog($dataBase);
         if ($this->area_input > 20 && $this->area_input < 500) {
             $this->quoteInfo = $this->_getQuoteInfo($this->area_input);
         }
 
-        $serviceModel = $userInfo->dealService($data);
-        $userInfo->updateAfterInsert($conversionInfo);
-        $data['service_code'] = $serviceModel->code;
-
-        $this->sendSms($data, $serviceModel->mobile);
-        $this->sendSmsService($data, $serviceModel);
+        $this->sendSms($data);
         return ['status' => 200, 'message' => 'OK', 'quoteInfo' => $this->quoteInfo];
     }
 

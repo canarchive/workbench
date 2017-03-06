@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
-foreach ($houseSortInfos as $sortKey => $sortInfo) {
-    $titles[$sortKey] = !empty($tagInfos[$sortKey]) ? $sortInfo['values'][$tagInfos[$sortKy]] : $sortInfo['name'];
+foreach ($merchantSortInfos as $sortKey => $sortInfo) {
+    $titles[$sortKey] = !empty($tagInfos[$sortKey]) ? $sortInfo['values'][$tagInfos[$sortKey]] : $sortInfo['name'];
 }
 //print_r($titles);exit();
 ?>
@@ -11,7 +11,7 @@ foreach ($houseSortInfos as $sortKey => $sortInfo) {
     <ul class="tend-1 clearfix" id="hot">
         <li class="tend_li1" id="tend_li1" style="width:25%;">
             <a href="javascript:;">
-            <span><?= $titles['house_type']; ?><i class="sanJiao"></i></span>
+            <span><?= $titles['decoration_sort']; ?><i class="sanJiao"></i></span>
             </a>
         </li>
         <li class="tend_li3" style="left:26%;"></li>
@@ -23,7 +23,7 @@ foreach ($houseSortInfos as $sortKey => $sortInfo) {
         <li class="tend_li5" style="right:24%;"></li>
         <li class="tend_li4" id="tend_li4" style="width:25%;">
             <a href="javascript:;">
-                <span><?= $titles['area']; ?><i class="sanJiao"></i></span>
+                <span><?= $titles['budget']; ?><i class="sanJiao"></i></span>
             </a>
         </li>
         <!--<li class="tend_li7" style="left:51%;"></li>
@@ -34,13 +34,13 @@ foreach ($houseSortInfos as $sortKey => $sortInfo) {
         </li>-->
     </ul>
     <!-- 加盟行业下拉 -->
-    <?php $i = 1; foreach ($houseSortInfos as $sortKey => $sortInfo) { ?>
+    <?php $i = 1; foreach ($merchantSortInfos as $sortKey => $sortInfo) { ?>
     <div class="J-captain" id="J-captain-<?= $i; ?>">
         <div class="captain_cont clearfix">
             <ul class="captain-1" id="captain-<?= $i; ?>">
 				<?php foreach ($sortInfo['values'] as $key => $value) { $tag = $model->createTag($tagInfos, [$sortKey => $key]); ?>
                 <li id="circle_2">
-                    <a href="<?= Url::to(['/house/sample/index', 'page' => 1, 'tag' => $tag]); ?>" title="<?= $value; ?>"><span><?= $value; ?></span></a>
+                    <a href="<?= "/{$this->context->currentCityCode}/merchant/{$tag}/"; ?>" title="<?= $value; ?>"><span><?= $value; ?></span></a>
                 </li>
                 <?php } ?>
             </ul>

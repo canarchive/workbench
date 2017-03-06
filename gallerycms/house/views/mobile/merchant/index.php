@@ -9,7 +9,7 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_j
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-pic/_top-style'); ?>
 <?php //echo $this->render('@gallerycms/views/layouts-m/platj/_topdown'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_header'); ?>
-<?php echo $this->render('_sort', ['houseSortInfos' => $houseSortInfos, 'tagInfos' => $tagInfos, 'model' => $model]); ?>
+<?php echo $this->render('_sort', ['merchantSortInfos' => $merchantSortInfos, 'tagInfos' => $tagInfos, 'model' => $model]); ?>
 <?php echo $this->render('_content', ['infos' => $infos, 'pages' => $pages]); ?>
 <!-- 公共底部 start -->
 <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/css/be233-6823.css">

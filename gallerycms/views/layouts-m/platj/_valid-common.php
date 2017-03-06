@@ -159,7 +159,7 @@ function message_check_code(obj) {
         });
     }
 } 
-(function(m, ei, q, i, a, j, s) {
+/*(function(m, ei, q, i, a, j, s) {
     m[a] = m[a] ||
     function() { (m[a].a = m[a].a || []).push(arguments)
     };
@@ -171,9 +171,9 @@ function message_check_code(obj) {
     s.parentNode.insertBefore(j, s);
 })(window, document, 'script', '//static.meiqia.com/dist/meiqia.js', '_MEIQIA');
 _MEIQIA('entId', 18836);
-_MEIQIA('withoutBtn', true);
+_MEIQIA('withoutBtn', true);*/
 </script>
-<div id="div" style="display: block; position:fixed; right:-8px; top:56%; padding-top: 15px; text-align:center; z-index:9999; box-sizing: border-box;width:57px; height:57px; border-radius:50%; color: rgb(255, 255, 255);font-size: 14px; background-color: rgb(255, 70, 55);">
+<!--<div id="div" style="display: block; position:fixed; right:-8px; top:56%; padding-top: 15px; text-align:center; z-index:9999; box-sizing: border-box;width:57px; height:57px; border-radius:50%; color: rgb(255, 255, 255);font-size: 14px; background-color: rgb(255, 70, 55);">
     <a id="widget" onclick="_MEIQIA._SHOWPANEL()" href="javascript:;" style="color:#fff;">在线
-        <br />咨询</a></div>
+        <br />咨询</a></div>-->
 <!-- 项目页底部定位 endd -->

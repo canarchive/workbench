@@ -1,5 +1,8 @@
+<?php
+$info = $this->context->mDatas['info'];
+?>
 <section class="ziXun" id="ljzx">
-    <div class="wrap" style="color:#e44b46; border-bottom:1px solid #e8eaee; line-height:50px;">我要咨询晨阳水漆加盟项目</div>
+    <div class="wrap" style="color:#e44b46; border-bottom:1px solid #e8eaee; line-height:50px;">找<?= $info['name']; ?>免费设计量房</div>
     <form action="" method="post" class="Iwant wrap" id="form_biao">
         <div class="clear">
             <p class="fl current6">
@@ -24,7 +27,7 @@
             <input name="phone" id="phonedbly" value="" maxlength="11" type="text"></p>
         <p class="liuY">
             <label>留言</label>
-            <input name="content" id="contentdbly" value="请问投资晨阳水漆所需要的费用有哪些?" type="text"></p>
+            <input name="content" id="contentdbly" value="" type="text"></p>
         <p class="current9">
             <a onclick="return checkMessageInfo_new_bx($(this));">提交留言</a></p>
         <style type="text/css">.tongShi{padding:14px 0 8px 0px;height:11px;line-height:9px;} .tongShi input{margin:2px 12px 0 0;} .tongShi p a{color:#e43c01;font-weight:bold; }</style>
@@ -54,17 +57,17 @@
         }
         var name = $("#namedbly").val();
         var content = $("#contentdbly").val();
-        var phone = $("#phonedbly").val();
-        var m_dirname = $("#m_dirname").val();
-        var target_id = $("#target_id").val();
-        var origin = $("#origin").val();
-        var gender = $("#gender").val();
-        var zhanhui = $("input[name='zhanhui']:checked").val();
-        if (zhanhui == undefined) {
-            zhanhui = 0;
-        }
-        var MFoot_lasturl = $("#MFoot_lasturl").val();
-        var MFoot_fromurl = $("#MFoot_fromurl").val();
+        var mobile = $("#phonedbly").val();
+        //var m_dirname = $("#m_dirname").val();
+        //var target_id = $("#target_id").val();
+        //var origin = $("#origin").val();
+        //var gender = $("#gender").val();
+        //var zhanhui = $("input[name='zhanhui']:checked").val();
+        //if (zhanhui == undefined) {
+            //zhanhui = 0;
+        //}
+        //var MFoot_lasturl = $("#MFoot_lasturl").val();
+        //var MFoot_fromurl = $("#MFoot_fromurl").val();
         var regexp = /^([a-zA-Z0-9]|[\u4e00-\u9fa5]|【){1}([a-zA-Z0-9]|\s|\n|-|,|\.|。|\！|!|，|\?|？|【|】|&mdash;|[\u4e00-\u9fa5]){2,199}$/;
 
         if (name == '' || name == '如 万先生') {
@@ -73,10 +76,10 @@
         } else if (!regexp.test(content)) {
             alert('留言格式不正确！');
             return false;
-        } else if (phone == '' || phone == '如 13111111111') {
+        } else if (mobile == '' || mobile == '如 13111111111') {
             alert('联系方式不能为空！');
             return false;
-        } else if (!phone.match(/^(13[0-9]|14[0-9]|15([0-9])|18([0-9])|17([0-9]))[0-9]{8}$/)) {
+        } else if (!mobile.match(/^(13[0-9]|14[0-9]|15([0-9])|18([0-9])|17([0-9]))[0-9]{8}$/)) {
             alert('请输入正确的手机号码！');
             return false;
         } else {
@@ -93,39 +96,46 @@
                 }*/
             //$('#form_biao').submit();
             obj.attr('checkMessageInfo_new', 1);
-            $.ajax({
-                type: 'get',
-                url: 'http://liuyan.jmw.com.cn/message/m_messageForMDBLY_temporary.php',
-                dataType: 'jsonp',
-                jsonp: 'callback',
-                data: {
-                    is_login: is_login,
-                    name: name,
-                    phone: phone,
-                    content: content,
-                    target_id: target_id,
-                    origin: origin,
-                    gender: gender,
-                    MFoot_fromurl: MFoot_fromurl,
-                    MFoot_lasturl: MFoot_lasturl,
-                    zhanhui: zhanhui
-                },
-                success: function(html) {
-                    obj.attr('checkMessageInfo_new', 0);
-                    if (html.status == 'login') {
-                        alert('留言成功！');
-                        window.location.reload();
-                    } else if (html.status == 'unlogin') {
-                        $('#first_message_id').val(html.id);
-                    }
+        $.ajax({
+            type: "post",
+            url: '/signup.html',
+            dataType: "json",
+            //jsonp: "callback",
+            data: {
+                name: name,
+                mobile: mobile,
+                info_id: '',
+                info_sort: '',
+                info_position: '',
+                page: $("#current_page").val(),
+                message: content,
+                _csrf: $("#_csrf").val()
+            },
+            success: function(html) {
+                console.log(html);
+                obj.attr("message_pop_up", 0);
+                if (html.status == 200) {
+                    $("#click_zongPfind1").hide();
+                    $("#zong_gray").hide();
+                    alert("报名成功！");
+                    window.location.reload();
+                } else {
+                    alert(html.message);
+                    //$("#click_zongPfind1").hide();
+                    //$("#click_zongYZ").show();
+                    //v9_Auto_trigger();
+                    $("#first_message_id").val(html.id);
+                    //$("#first_telephone").val(phone);
                 }
-            });
-            if (is_login == 'unlogin') {
+            }
+        });
+
+            /*if (is_login == 'unlogin') {
                 $('#Pline_Message').show();
                 $('.gray_mask').show();
                 $('#first_telephone').val(phone);
                 Auto_trigger();
-            }
+            }*/
         }
 
     }</script>

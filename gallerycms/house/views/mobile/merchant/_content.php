@@ -6,7 +6,7 @@
             <dl>
                 <dt>
                     <a href="/sample_show_<?= $info['id']; ?>.html" title="<?= $info['name']; ?>">
-						<img src="<?= $info['thumb']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" /></a>
+						<img src="<?= $info['logo']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" /></a>
                 </dt>
                 <!--<dd>
                     <input type="hidden" class="ajaxGetNumById" value="6562900" />已申请加盟:
@@ -19,13 +19,13 @@
                 <ul class="ul1 fl">
                     <a id="font" class="a1" href="/sample_show_<?= $info['id']; ?>.html" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
                     <a href="javascript:void(0);">
-                        <li>户型：<?= $info->houseTypeInfos[$info->house_type]; ?></li></a>
+                        <li>户型：<?= $info->decoration_sort; ?></li></a>
                     <?php if (!empty($info['style'])) { ?>
                     <a href="javascript:void(0);">
-                        <li>风格：<?= $info->styleInfos[$info->style]; ?></li></a>
+                        <li>风格：<?= $info->style; ?></li></a>
                     <?php } ?>
                     <a href="javascript:void(0);">
-                        <li>面积：<?= $info['area_real']; ?></li></a>
+                        <li>面积：<?= $info['budget']; ?></li></a>
                 </ul>
                 <div class="phone fr">
                 <a class="free" onclick="publish_mess('<?= $info['id']; ?>','sample','装修成这样')">

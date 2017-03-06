@@ -21,11 +21,11 @@ $info = $this->context->mDatas['info'];
         <dd class="fl">
             <h2><?= $info['name_full']; ?></h2>
             <p>
-                <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= $this->context->currentCityName; ?>"><?= $this->context->currentCityName; ?></a>
+                <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= $this->context->currentCityName; ?>"><?= Yii::$app->params['siteNameBase']; ?></a>
                 <i>></i>
                 <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName; ?>装修公司"><?= $this->context->currentCityName; ?>装修公司</a>
                 <i>></i>
-                <a href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                <a href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name_full']; ?>"><?= $info['name_full']; ?></a>
             </p>
         </dd>
     </dl>
