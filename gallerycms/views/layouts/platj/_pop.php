@@ -100,7 +100,6 @@ function v9_check(obj) {
                 _csrf: $("#_csrf").val()
             },
             success: function(html) {
-                alert(html.status);
                 console.log(html);
                 obj.attr("message_pop_up", 0);
                 if (html.status == 200) {

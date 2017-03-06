@@ -28,9 +28,9 @@
                         <li>面积：<?= $info['ownerInfo']['area']; ?></li></a>
                 </ul>
                 <div class="phone fr">
-                <a class="free" onclick="publish_mess('<?= $info['id']; ?>','sample','装修成这样')">
+                <a class="free" onclick="publish_mess('<?= $info['id']; ?>','working', 'working-list-design', '免费设计', '')">
                     <span>免费设计</span></a>
-                <a class="line" onclick="publish_mess('<?= $info['id']; ?>','sample','装修成这样多少钱')">
+                <a class="line" onclick="publish_mess('<?= $info['id']; ?>','working', 'working-list-quote', '免费报价', '')">
                     <span>免费报价</span></a>
                 </div>
             </div>

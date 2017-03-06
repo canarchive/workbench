@@ -10,39 +10,33 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
 <?= $this->render('_header'); ?>
 <style type='text/css'>pre { white-space: pre-wrap; word-wrap: break-word; } /* 新增热点 */ .zxask-detail-box h2 .hot-img{ height: 55px; width: 50px; display: inline-block; position: fixed; right: 20px; top: 190px; z-index: 5; }</style>
 <section class="zxask-detail-wrap" style="margin-top:45px">
-    <?= $this->render('_search'); ?>
+    <?php //echo $this->render('_search'); ?>
     <script>$('.zxask-search-wrap').find('p').remove().end().height(65);</script>
     <div class="zxask-detail-inner-wrap">
         <div class="zxask-detail-box zxask-question-content">
             <i class="icon-zxask-question"></i>
             <h2 class="zxask-detail-title"><?= $info['name']; ?>
-                <a href="http://m.to8to.com/wxhuodong/initinfo/type/7/to8to_from/wechat_hd/utm_pos/xgz/" rel="nofollow" target="_blank" class="hot-img">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/e0127-4121.jpg" alt=""></a></h2>
+                <!--<a href="" rel="nofollow" target="_blank" class="hot-img"><img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/e0127-4121.jpg" alt=""></a>-->
+            </h2>
             <div class="zxask-detail-link clearfix">
                 <time><?= date('Y-m-d', $info['created_at']); ?></time>
-                <a href='http://m.to8to.com/ask'>问答</a>&gt;
-                <a href="/ask/more-h5i5">装饰材料</a>&gt;
-                <a href="/ask/more-h5s10i5">其他</a></div>
+                <a href='<?= "/{$this->context->currentCityCode}/"; ?>' title="<?= $this->context->currentCityName . '装修网'; ?>"><?= $this->context->currentCityName . '装修网'; ?></a>&gt;
+                <a href="<?= "/ask_lm_{$sortInfos['pInfo']['code']}/"; ?>"><?= $sortInfos['pInfo']['name']; ?></a>&gt;
+                <a href="<?= "/ask_lm_{$sortInfos['cInfo']['code']}/"; ?>"><?= $sortInfos['cInfo']['name']; ?></a>
+            </div>
         </div>
+        <?php if (isset($answerInfos['best'])) { $aInfo = $answerInfos['best']; ?>
         <article class="user-question">
             <section style="display: none"></section>
             <section>
-                <h1>
-                    <span></span>土巴兔官方回答</h1>
+                <h1><span></span><?= $info['name'] . '最佳回答'; ?></h1>
                 <pre>
-                    <p style="line-height:1.75em;">土巴兔推出
-                        <a href="http://m.to8to.com/yezhu/zxbj.php?from=144#point=2_9_3_4" target="_self">
-                            <span style="color:#0070C0;">在线智能报价</span></a>系统，根据您的房屋面积，所在城市，给出最新、最精准的装修报价清单，为您做好装修预算提供参考!
-                        <br /></p>
-                    <p style="line-height:1.75em;text-align:center;">
-                        <a href="http://m.to8to.com/yezhu/zxbj.php?from=144#point=2_9_3_4" target="_self">
-                            <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/e4c71-1015.png" width="650" height="434" style="float:none;" title="在线智能报价" alt="在线智能报价" border="0" hspace="0" vspace="0" /></a>
-                        <br /></p>
+                <p style="line-height:1.75em;"><?= $aInfo['description']; ?></p>
                 </pre>
-                <footer>土巴兔
-                    <time>2016-06-26</time></footer>
+                <footer><?= $aInfo['memberInfo']['name']; ?><time><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></time></footer>
             </section>
         </article>
+        <?php } ?>
         <div class="zxask-answer-box answer_num_astrict">
             <h3 class="zxask-answer-title">其他答案</h3>
             <div>

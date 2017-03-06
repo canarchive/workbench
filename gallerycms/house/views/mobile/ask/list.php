@@ -9,7 +9,7 @@ echo $this->render('@gallerycms/views/layouts-m/plat8/_js-header');
 <?= $this->render('_header'); ?>
 <?= $this->render('_js-list'); ?>
 <section class="zxask-list-wrap">
-    <?= $this->render('_search'); ?>
+    <?php //echo $this->render('_search'); ?>
     <?= $this->render('_sort', $sortInfos); ?>
     <div id="overlay"></div>
     <div class="zxask-main-list">

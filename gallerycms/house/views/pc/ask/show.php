@@ -22,7 +22,7 @@ document.body.oncopy = function() {
                 <div class="ask_qustion_people mtb10" style="line-height: 32px;">提问者：
                     <b><?= $info['memberInfo']['name']; ?></b>
                     <!--<span>|</span>地点：
-                    <a href="http://chuxiong.to8to.com/" target="_blank" title="楚雄装修网">楚雄</a>
+                    <a href="/" target="_blank" title=""></a>
                     <span>|</span>浏览：
                     <b>36</b>-->
                     <span>|</span>时间：

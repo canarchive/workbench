@@ -36,9 +36,9 @@
                         <li>设计师：<?= $info['num_designer']; ?></li></a>
                 </ul>
                 <div class="phone fr">
-                <a class="fr free" onclick="publish_mess('<?= $info['id']; ?>','merchant','装修成这样')">
+                <a class="fr free" onclick="publish_mess('<?= $info['id']; ?>','merchant', 'index-merchant-design', '免费设计', '')">
                     <span>免费设计</span></a>
-                <a class="fr line" onclick="publish_mess('<?= $info['id']; ?>','merchant','装修成这样多少钱')">
+                <a class="fr line" onclick="publish_mess('<?= $info['id']; ?>','merchant', 'index-merchant-quote', '免费报价', '')">
                     <span>免费报价</span></a>
                 </div>
             </div>

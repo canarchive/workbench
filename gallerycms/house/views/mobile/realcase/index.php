@@ -15,5 +15,6 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_j
 <div style="height:65px;"></div>
 <!-- 底部通栏 -->
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer-common'); ?>
+<?php echo $this->render('@gallerycms/views/layouts-m/platj/_pop-1'); ?>
 <!-- 公共短信验证 -->
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer-bottom'); ?>
+<?php //echo $this->render('@gallerycms/views/layouts-m/platj/_footer-bottom'); ?>
