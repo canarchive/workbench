@@ -38,9 +38,10 @@
         <div class="wrap_top">
             <a class="icon1"></a>
             <div class="input-sea">
-                <input class="m_search" type="text" name="keyword" value="请输入关键字" style="color:#333;" id="keyword_fenci_m" onfocus="if($('#keyword_fenci_m').val() == '请输入关键字'){$('#keyword_fenci_m').val('');}" onblur="if($('#keyword_fenci_m').val() == ''){$('#keyword_fenci_m').val('请输入关键字');}">
+                <input class="m_search" type="text" name="keyword" value="搜装修公司" style="color:#333;" id="keywordInput" onfocus="if($('#keywordInput').val() == '搜装修公司'){$('#keywordInput').val('');}" onblur="if($('#keywordInput').val() == ''){$('#keywordInput').val('搜装修公司');}">
                 <a class="icon2"></a>
-                <a class="top-search" onclick="goSub()">搜索</a>
+                <input type="hidden" id="search_sort" value="merchant" />
+                <a class="top-search" onclick="searchOptjm()">搜索</a>
             </div>
         </div>
     </header>
@@ -55,16 +56,16 @@ gallery.slider({
 </script>
 <script>
 function goSub() {
-    var keyword = $("#keyword_fenci_m").val();
+    var keyword = $("#keywordInput").val();
     if (keyword == '请输入关键字' || keyword.replace(/\s/g, "") == '') {
         alert('请输入关键字');
-        //window.location.href = "http://m.jmw.com.cn/so/show_search.php";
+        //window.location.href = "search.html";
     } else {
         window.location.href = "/search.html?keyword=" + encodeURIComponent(keyword);
     }
 }
 $(function() {
-    $('#keyword_fenci_m').bind('keypress',
+    $('#keywordInput').bind('keypress',
     function(event) {
         if (event.keyCode == "13") {
             goSub();

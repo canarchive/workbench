@@ -35,7 +35,8 @@ class SearchController extends HouseController
     {
         $model = new Merchant();
         $mSortInfos = $model->merchantSortInfos;
-        $urlBase = Yii::getAlias('@gallerycmsurl') . '/' . $this->currentCityCode . '/merchant/';
+        $urlBase = $this->isMobile ? Yii::getAlias('@m.gallerycmsurl') : Yii::getAlias('@gallerycmsurl');
+        $urlBase .= '/' . $this->currentCityCode . '/merchant/';
         foreach ($mSortInfos as $sort => $info) {
             foreach ($info['values'] as $key => $value) {
                 if (strtolower($value) == strtolower($keyword)) {
@@ -50,17 +51,18 @@ class SearchController extends HouseController
     protected function _askSearch($keyword)
     {
         $sort = new AskSort();
+        $urlBase = $this->isMobile ? Yii::getAlias('@m.gallerycmsurl') : Yii::getAlias('@gallerycmsurl');
         $info = $sort->find()->where(['name' => $keyword])->one();
         if ($info) {
-            return ['status' => 200, 'url' => Yii::getAlias('@gallerycmsurl') . '/ask_lm_' . $info['code'] . '/'];
+            return ['status' => 200, 'url' => $urlBase . '/ask_lm_' . $info['code'] . '/'];
         }
 
         $tag = new AskTag();
         $info = $tag->find()->where(['name' => $keyword])->one();
         if ($info) {
-            return ['status' => 200, 'url' => Yii::getAlias('@gallerycmsurl') . '/ask_' . $info['id'] . '/'];
+            return ['status' => 200, 'url' => $urlBase . '/ask_' . $info['id'] . '/'];
         }
 
-        return ['status' => 200, 'url' => Yii::getAlias('@gallerycmsurl') . '/ask_0/?keyword=' . $keyword];
+        return ['status' => 200, 'url' => $urlBase . '/ask_0/?keyword=' . $keyword];
     }
 }

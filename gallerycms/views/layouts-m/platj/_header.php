@@ -2,11 +2,12 @@
 <header class="zp_header clearfix">
     <a href="javascript:;" onclick="goBack()" class="fl a1"></a>
     <div class="ipt fl">
-        <input type="text" onfocus="if(this.value=='输入品牌名/项目名'){this.value=''}" onblur="if(this.value==''){this.value='输入品牌名/项目名'}" value="输入品牌名/项目名" name="keyword" id="keyword_fenci_m" class="input" />
+        <input type="text" onfocus="if(this.value=='搜装修公司'){this.value=''}" onblur="if(this.value==''){this.value='搜装修公司'}" value="搜装修公司" name="keyword" id="keywordInput" class="input" />
         <i>
         </i>
     </div>
-    <a onclick="goSub()" class="fr a2" value="搜索" style="background:#E14546;" />搜索</a></a>
+    <input type="hidden" id="search_sort" value="merchant" />
+    <a onclick="searchOptjm()" class="fr a2" value="搜索" style="background:#E14546;" />搜索</a></a>
 </header>
 <script>function goSub() {
         var keyword = $("#keyword_fenci_m").val();
