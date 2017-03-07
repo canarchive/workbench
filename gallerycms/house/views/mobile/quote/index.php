@@ -7,167 +7,35 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 ?>
 <?= $this->render('_header'); ?>
 <!--主导航（默认隐藏） start-->
-<?= $this->render('_nav'); ?>
+<?php //echo $this->render('_nav'); ?>
 <!-- 正文 start -->
 <div class="container" data-page="budget-info-list">
     <div class="bar-nav cMdGray clearfix">
         <i class="iconfont icone620 l"></i>
-        <strong class="title"><?= $this->context->currentCityName; ?>装修报价</strong></div>
+        <strong class="title"><?= $this->context->currentCityName; ?>装修报价</strong>
+    </div>
     <!-- 分类筛选-->
-    <?= $this->render('_sort'); ?>
+    <?php echo $this->render('_sort', ['quoteSortInfos' => $quoteSortInfos, 'cTag' => $tag, 'tagInfos' => $tagInfos, 'model' => $model]); ?>
     <!-- 图文混排（左侧图片，右侧文字） start -->
     <div class="tuwen-mix bgfff">
         <div class="mask-layer2 zp-mask-layer2"></div>
-        <a class="tuwen-item clearfix" href="/baojia/644868.html">
+        <?php foreach ($infos as $info) { ?>
+        <a class="tuwen-item clearfix" href="/<?= $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>">
             <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">雷捷时代广场130平米新古典风格装修报价别墅</p>
+                    <span class="f14 mycom-ellipsis line2"><?= $info['name']; ?></p>
                 <p class="p2 two-price-item cFGray mt2">
                     <span>半包:&nbsp;
                         <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">36087</i></span>
+                        <i class="f16"><?= $info['price_part']; ?></i></span>
                     <span>全包:&nbsp;
                         <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">85097</i></span>
+                        <i class="f16"><?= $info['price_full']; ?></i></span>
                 </p>
             </div>
         </a>
-        <a class="tuwen-item clearfix" href="/baojia/644867.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">桃花苑120平米中式风格装修报价别墅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">36707</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">81947</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644866.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">万年花城110平米美式风格装修报价普通住宅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">33839</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">75309</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644865.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">对视70平米地中海风格装修报价小户型</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">22503</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">48893</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644864.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">漷县镇商业广场住宅小区200平米田园风格装修报价别墅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">53670</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">129070</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644863.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">五矿万科·如园(如园作品壹号)190平米东南亚风格装修报价普通住宅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">56513</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">128143</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644862.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">华凯花园180平米新古典风格装修报价别墅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">53670</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">121530</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644861.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">西路时代大厦160平米美式风格装修报价普通住宅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">47919</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">108239</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644860.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">国展家园140平米混搭风格装修报价别墅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">38647</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">91427</i></span>
-                </p>
-            </div>
-        </a>
-        <a class="tuwen-item clearfix" href="/baojia/644859.html">
-            <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
-            <div class="txt-box">
-                <p class="p1">
-                    <span class="f14 mycom-ellipsis line2">酷特区130平米现代风格装修报价别墅</p>
-                <p class="p2 two-price-item cFGray mt2">
-                    <span>半包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">36087</i></span>
-                    <span>全包:&nbsp;
-                        <i class="iconfont f10 icone67a"></i>
-                        <i class="f16">85097</i></span>
-                </p>
-            </div>
-        </a>
+        <?php } ?>
     </div>
 </div>
 <!-- 图文混排（左侧图片，右侧文字） end -->

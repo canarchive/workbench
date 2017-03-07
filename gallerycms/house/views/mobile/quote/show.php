@@ -6,10 +6,8 @@ $cssFiles = ['25195-6919', '167a4-9368', '859bc-4030', '00ce0-6662', '73eaa-5273
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat1/m']);
 //$this->params['jsStr'] = $this->render('_js-header');
 ?>
-<!--页头 start-->
 <?= $this->render('_header'); ?>
-<!--主导航（默认隐藏） start-->
-<?= $this->render('_nav'); ?>
+<?php //echo $this->render('_nav'); ?>
 <!-- 正文 start -->
 <div class="container" data-page="gujia">
     <!-- 标题栏 start -->
@@ -37,18 +35,16 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                 <p>人人</p>
             </li>
         </ul>
-        <div class="share-msg-btn">取消</div></div>
-    <!-- 标题栏 end -->
+        <div class="share-msg-btn">取消</div>
+    </div>
     <div class="concl-banner">
         <img class="img100" src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/5aab6-3943.jpg">
         <div class="con-wrap">
             <div class="ban-tit">
-                <h1 style="font-size:1.8rem;">北京雷捷时代广场130㎡新古典风格装修报价</h1></div>
+                <h1 style="font-size:1.8rem;"><?= $info['name']; ?></h1></div>
             <p class="size-value-box" style="padding-top: 0;">房屋面积:
-                <span class="size-value">130</span>
-                <em class="m2-unit">m
-                    <i>2</i>
-                </em>
+                <span class="size-value"><?= $info['area_real']; ?></span>
+                <em class="m2-unit">m <i>2</i></em>
             </p>
             <div class="ban-bot">
                 <input type="text" value="6">
@@ -60,7 +56,8 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                 <input type="text" value="3">
                 <span class="mr1">卫</span>
                 <input type="text" value="2">
-                <span class="mr1">阳台</span></div>
+                <span class="mr1">阳台</span>
+            </div>
         </div>
     </div>
     <!-- 切换-->
@@ -248,89 +245,8 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
     </ul>
-    <!-- 表格视图end-->
-    <h2 class="com-title-tag border1-bottom mt2">
-        <i>
-        </i>
-        <span>市场估价对比</span></h2>
-    <div class="chart-col">
-        <div class="chart-box">
-            <div class="box-cont">
-                <div class="zhu-base zhu1  anima">
-                    <span class="top-txt nowrap">¥ 36079</span>
-                    <span class="mid-txt">半包</span></div>
-                <div class="zhu-base zhu2 bg-orange anima">
-                    <span class="top-txt nowrap c9">¥ 85089</span>
-                    <span class="mid-txt">全包</span></div>
-                <div class="zhu-base zhu3  anima">
-                    <span class="top-txt nowrap c9">¥ 40769</span>
-                    <span class="mid-txt">半包</span></div>
-                <div class="zhu-base zhu4  anima">
-                    <span class="top-txt nowrap c9">¥ 96150</span>
-                    <span class="mid-txt">全包</span></div>
-                <div class="zhu-base zhu5  anima">
-                    <span class="top-txt nowrap c9">¥ 44377</span>
-                    <span class="mid-txt">半包</span></div>
-                <div class="zhu-base zhu6  anima">
-                    <span class="top-txt nowrap c9">¥ 104659</span>
-                    <span class="mid-txt">全包</span></div>
-            </div>
-        </div>
-        <div class="bot-txt">
-            <span>一起装修网</span>
-            <span>市场预估</span>
-            <span>装修公司</span></div>
-    </div>
-    <!--chart-col end-->
-    <h2 class="com-title-tag border1-bottom mt2">
-        <i>
-        </i>
-        <span>优惠超值套餐</span></h2>
-    <div class="taocan-box f14 clearfix">
-        <div class="taocan">
-            <div class="txt-box">
-                <a href="http://m.beijing.17zhuangxiu.com/zhengzhuang/">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/46b7d-5779.jpg" alt="677元/平米整装套餐" class="img34">
-                    <div class="tao-txt">
-                        <p class="p1 text-right  f18 ellipsis ">
-                            <span class="first-letter cBRed">6</span>
-                            <span class="cBRed">77</span>
-                            <span class="cMdGray f16 ">元/m
-                                <sup class="f10">2</sup>整装包</span></p>
-                        <p class="p2 text-right cFGray">全程托管
-                            <span class="ml3">拎包入住</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="txt-r">
-                <p class="pz1">12
-                    <i>%</i>
-                </p>
-                <p class="pz2">市价再优惠</p></div>
-        </div>
-        <!--taocan end-->
-        <div class="taocan ">
-            <div class="txt-box">
-                <a href="http://m.beijing.17zhuangxiu.com/zhucai/">
-                    <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7af79-8304.jpg" alt="377元/平米主材套餐" class="img34" style="margin-top:0; margin-bottom: 5%;">
-                    <div class="tao-txt">
-                        <p class="p1 text-right  f18 ellipsis">
-                            <span class="first-letter cBRed">3</span>
-                            <span class="cBRed">77</span>
-                            <span class="cMdGray f16 ">元/m
-                                <sup class="f10">2</sup>主材包</span></p>
-                        <p class="p2 text-right cFGray">全套建材
-                            <span class="ml3">一次全搞定</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="txt-r">
-                <p class="pz1">10
-                    <i>%</i>
-                </p>
-                <p class="pz2">市价再优惠</p></div>
-        </div>
-        <!--taocan end--></div>
+    <?php //echo $this->render('_charge'); ?>
+    <?php //echo $this->render('_recomend'); ?>
 </div>
 <!-- 正文 end -->
 <!--页脚 start-->
