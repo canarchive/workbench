@@ -183,11 +183,11 @@
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/2498b-4213.jpg" alt="" class="fl" />
                     <!--<p class="fr" style="line-height:30px;">已有<i style="color:#e43c01;font-weight:bold;">位</i>创业者线上发送意向：在<i style="color:#e43c01;font-weight:bold;position:relative">北京<span style="font-size:25px;position:absolute;top:-13px;">.</span>&nbsp;&nbsp;国家会议中心</i>现场去看<i style="color:#e43c01;font-weight:bold;">投资博览会</i></p>--></div>
                 <div class="three_pic">
-                    <a href="http://search.jmw.com.cn/cybd.php" target="_blank">
+                    <a href="javascript: void(0);">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/8cffc-5192.png" alt="" /></a>
-                    <a href="http://zch.jmw.com.cn/" target="_blank" style="width:275px;">
+                    <a href="javascript: void(0);" style="width:275px;">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/957e2-7586.gif" alt="" /></a>
-                    <a href="javascript:;" onclick="waitTime();">
+                    <a href="javascript:void(0);">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/171fd-8106.png" alt="" /></a>
                 </div>
             </div>

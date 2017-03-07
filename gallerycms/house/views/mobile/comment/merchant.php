@@ -7,9 +7,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/platj-pic/_js-header');
 ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_header', ['showHeaderBase' => true]); ?>
-<?php echo $this->render('_content'); ?>
-    
-
+<?php echo $this->render('_content', ['infos' => $commentInfos['infos'], 'pages' => $commentInfos['pages']]); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_check'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_pop-show'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_pop-new'); ?>
