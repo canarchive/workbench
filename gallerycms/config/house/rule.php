@@ -25,7 +25,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         ],
     ],
     'index' => [
-        'hosts' => ['base'],
+        'hosts' => ['base', 'm', '3g', 'wap', 'merchant'],
         'data' => [
             'pattern' => '/', 
             'route' => '/house/site/index', 

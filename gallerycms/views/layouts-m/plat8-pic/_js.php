@@ -1,3 +1,5 @@
+<?php
+?>
 <script>jQuery(function($) {
         var sUserAgent = navigator.userAgent.toLowerCase();
         var IsWeixin = sUserAgent.match(/MicroMessenger/i) == "micromessenger";
@@ -117,13 +119,10 @@
     })()</script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/plat8rsas.js"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/js/zbcommon.js"></script>
-<div style="display:none">
-    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/5aaf0-1267.jpg' alt='欧式精致奢华二居室装修效果图' />
-    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/1aef6-8466.jpg' alt='欧式精致奢华卧室装修效果图' />
-    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/37d4d-8972.jpg' alt='欧式精致奢华餐厅装修效果图' />
-    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/aac84-9748.jpg' alt='欧式精致奢华电视背景墙装修效果图' />
-    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/336f2-1586.jpg' alt='欧式精致奢华过道装修效果图' />
-    <img src='<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/ceb38-4961.jpg' alt='欧式精致奢华客厅设计效果图' /></div>
+<div style="display:">
+    <?php foreach ($info->picture as $pInfo) { ?>
+    <img src='<?= $pInfo['l']['s']; ?>' alt='<?= $info['name']; ?>' />
+    <?php } ?>
 <script>var param = {
         'detail_data': [<?= $picDatas; ?>],
         'dataurl': '',///xiaoguotu/getDetailData-0-0-0',

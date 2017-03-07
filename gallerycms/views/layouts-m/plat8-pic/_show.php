@@ -21,19 +21,19 @@ $this->params['jsStr'] = $this->render('_js-header');
                 <a href="javascript:void(0);" id="jubu"></a>
             </div>
         </div>
-        <div class='clear show-shoucang-ad'>
-            <a class='publick-click-stream' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_812' data-ptag='2_2_10_812'>这样装修多少钱?</a>
-            <a class='publick-click-stream yellow dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_1_1' data-ptag='2_2_1_1'>这样装修多少钱?</a>
-            <a class='publick-click-stream orange dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_813' data-ptag='2_2_10_813'>这样装修多少钱?</a>
-            <a class='publick-click-stream blue dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_814' data-ptag='2_2_10_814'>这样装修多少钱?</a>
-        </div>
+        <!--<div class='clear show-shoucang-ad'>
+            <a class='publick-click-stream' href='' data-ptag='2_2_10_812'>这样装修多少钱?</a>
+            <a class='publick-click-stream yellow dn' href='' data-ptag='2_2_1_1'>这样装修多少钱?</a>
+            <a class='publick-click-stream orange dn' href='' data-ptag='2_2_10_813'>这样装修多少钱?</a>
+            <a class='publick-click-stream blue dn' href='' data-ptag='2_2_10_814'>这样装修多少钱?</a>
+        </div>-->
     </div>
-    <div class='xgt-bottom-bgc'></div>
+    <!--<div class='xgt-bottom-bgc'></div>
     <div class="xgt-save-notice-cover"></div>
     <div class="xgt-save-notice-img-box">
         <div class="xgt-save-notice-txt">长按图片可以进行保存哦</div>
         <div class="xgt-save-notice-img">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/542aa-7953.png" width="34px" /></div>
-    </div>
+    </div>-->
 </section>
-<?php echo $this->render('_js', ['picDatas' => $picDatas]); ?>
+<?php echo $this->render('_js', ['info' => $info, 'picDatas' => $picDatas]); ?>
