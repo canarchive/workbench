@@ -6,6 +6,7 @@ use Yii;
 use yii\web\NotFoundHttpException;
 use gallerycms\components\HouseController;
 use gallerycms\merchant\models\Realcase;
+use gallerycms\house\models\Sample;
 
 class RealcaseController extends HouseController
 {
@@ -90,9 +91,13 @@ class RealcaseController extends HouseController
 		}
 
         $dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-        $this->getTdkInfos('merchant-realcase-show', $dataTdk);
+        $this->getTdkInfos('realcase-show', $dataTdk);
+
+        $sampleModel = new Sample();
+        $infos = $sampleModel->getInfos([], 18);
 		$datas = [
 			'info' => $info,
+            'infos' => $infos,
 		];
 		return $this->render('show', $datas);
 	}

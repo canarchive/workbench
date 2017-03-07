@@ -28,7 +28,7 @@
             });*/
         });</script>
     <!--右边导航按钮-->
-    <nav id="dt-hd-nav">
+    <!--<nav id="dt-hd-nav">
         <i class="icon-dt-hd-white"></i>
     </nav>
     <div id="dt-hd-navs-wrap" class="hide">
@@ -91,8 +91,7 @@
                 </a>
             </li>
         </ul>
-    </div>
-    <!--页码-->
+    </div>-->
     <span class="img-count"></span>
 </header>
 <script>$('.xgt-search-btn').click(function() {

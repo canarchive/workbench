@@ -131,9 +131,9 @@ return [
     ],
     // 工地内容 http://cmshouse.alyee.com/beijing/working-1.html
     'working-show' => [
-        'title' => '{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图_{{INFONAME}}-兔班长装修网',
-        'keyword' => '{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图,{{CITYNAME}}{小区+面积+风格/户型+报价}装修设计图',
-        'description' => '{{INFONAME}}工地案例大全：为广大装修业主分享更多{{CITYNAME}}{小区+面积+风格/户型+报价}装修效果图，{{CITYNAME}}{小区+面积+风格/户型+报价}装修设计图，帮您找到属于您自己喜欢的装修风格。',
+        'title' => '{{CITYNAME}}{{INFONAME}}装修效果图-兔班长装修网',
+        'keyword' => '{{CITYNAME}}{{INFONAME}}装修效果图,{{CITYNAME}}{{INFONAME}}装修设计图',
+        'description' => '{{INFONAME}}工地案例大全：为广大装修业主分享更多{{CITYNAME}}{{INFONAME}}装修效果图，{{CITYNAME}}{{INFONAME}}装修设计图，帮您找到属于您自己喜欢的装修风格。',
     ],
 
     // 商家设计师 http://cmshouse.alyee.com/beijing/jz/designer/

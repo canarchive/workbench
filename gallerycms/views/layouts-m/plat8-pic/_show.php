@@ -25,7 +25,8 @@ $this->params['jsStr'] = $this->render('_js-header');
             <a class='publick-click-stream' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_812' data-ptag='2_2_10_812'>这样装修多少钱?</a>
             <a class='publick-click-stream yellow dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_1_1' data-ptag='2_2_1_1'>这样装修多少钱?</a>
             <a class='publick-click-stream orange dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_813' data-ptag='2_2_10_813'>这样装修多少钱?</a>
-            <a class='publick-click-stream blue dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_814' data-ptag='2_2_10_814'>这样装修多少钱?</a></div>
+            <a class='publick-click-stream blue dn' href='http://m.to8to.com/yezhu/zxbj.php?from=144&ptag=2_2_10_814' data-ptag='2_2_10_814'>这样装修多少钱?</a>
+        </div>
     </div>
     <div class='xgt-bottom-bgc'></div>
     <div class="xgt-save-notice-cover"></div>
@@ -35,4 +36,4 @@ $this->params['jsStr'] = $this->render('_js-header');
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/m/img/542aa-7953.png" width="34px" /></div>
     </div>
 </section>
-<?php echo $this->render('_js'); ?>
+<?php echo $this->render('_js', ['picDatas' => $picDatas]); ?>

@@ -6,6 +6,7 @@ use Yii;
 use yii\web\NotFoundHttpException;
 use gallerycms\components\HouseController;
 use gallerycms\merchant\models\Working;
+use gallerycms\house\models\Sample;
 
 class WorkingController extends HouseController
 {
@@ -89,9 +90,12 @@ class WorkingController extends HouseController
         }
 
         $dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
-        $this->getTdkInfos('merchant-working-show', $dataTdk);
+        $this->getTdkInfos('working-show', $dataTdk);
+        $sampleModel = new Sample();
+        $infos = $sampleModel->getInfos([], 18);
 		$datas = [
 			'info' => $info,
+            'infos' => $infos,
 		];
 		return $this->render('show', $datas);
 	}

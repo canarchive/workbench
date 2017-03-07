@@ -83,8 +83,13 @@ class SampleController extends HouseController
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
         $this->getTdkInfos('sample-show', $dataTdk);
+
+        //$askModel = new AskQuestion();
+        $infos = $model->getInfos([], 18);
 		$datas = [
 			'info' => $info,
+            'infos' => $infos,
+            //'askInfos' => $askInfos,
 		];
 		return $this->render('show', $datas);
 	}
