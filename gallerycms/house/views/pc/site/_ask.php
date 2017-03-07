@@ -11,7 +11,7 @@ $liClasses = [
         <li class="fl li190  hotHover_li hot_JMTitle " style="text-align:left;    border-bottom: 2px solid #000;"><a href="/ask/" title="装修问答">装修问答</a></li>
         <li class="fl li_shuXian"></li>
         <?php $i = 1; foreach ($infos as $sort => $info) { if ($sort == 'lastest') { continue; } $liClass = isset($liClasses[$i]) ? $liClasses[$i] : '90';?>
-        <li class="fl hotHover_li li<?= $liClass; ?>"><a href='/ask/lm-_?= $sort; ?>/'><?= $info['name']; ?></a></li>
+        <li class="fl hotHover_li li<?= $liClass; ?>"><a href='/ask_lm_<?= $sort; ?>/'><?= $info['name']; ?></a></li>
         <?php if ($i < 10) { ?><li class="fl li_shuXian">|</li><?php } ?>
         <?php $i++; } ?>
     </ul>

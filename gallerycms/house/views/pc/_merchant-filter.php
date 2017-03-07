@@ -8,7 +8,7 @@ use yii\helpers\Url;
         <div class="channelOne clearfix" style="padding:0px 0 5px 12px;<?php if ($sortKey == 'color') { echo 'border-bottom: medium none;'; } ?>">
 		    <em><?= $sortInfo['name']; ?></em>
             <div style="float:left;">
-                <a href="<?php $nTag = $model->createTag($tagInfos, [$sortKey => '']); echo "/{$this->context->currentCityCode}/merchant/{$nTag}/"; ?>">不限</a>
+                <a href="<?php $nTag = $model->createTag($tagInfos, [$sortKey => '']); $nTag = empty($nTag) ? '' : $nTag . '/'; echo "/{$this->context->currentCityCode}/merchant/{$nTag}"; ?>">不限</a>
                 <span style="display:none;" class="red_ll"></span>
                 <span style="display:none;" class="red_rr"></span>
             </div>
