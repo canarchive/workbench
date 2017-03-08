@@ -43,7 +43,6 @@ $this->params['jsStr'] = $this->render('_js-header');
     })</script>
 <!-- 留言验证 start -->
 <?php //echo $this->render('_pop'); ?>
-<?php echo $this->render('@gallerycms/views/layouts-m/platj/_pop-1'); ?>
 <?php //echo $this->render('@gallerycms/views/layouts-m/platj/_valid-common'); ?>
 <?php //echo $this->render('_js-footer'); ?>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/js/jquery.textslider.js"></script>

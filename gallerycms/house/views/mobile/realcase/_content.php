@@ -40,9 +40,9 @@
 </div>
 <!-- 行业站品牌 end -->
 <!-- 查看更多 start -->
-<div class="seaMore" id="show_all">
+<!--<div class="seaMore" id="show_all">
     <a href="javascript:;" onclick="show_more($(this));">查看更多</a>
-    <input type="hidden" id="pagesize" value="2" /></div>
+    <input type="hidden" id="pagesize" value="2" /></div>-->
 <script>
 function show_more(obj) {
         var page = $("#pagesize").val();

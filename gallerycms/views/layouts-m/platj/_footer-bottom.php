@@ -152,3 +152,4 @@
     })</script>
 <!-- 留言验证 start -->
 <?php echo $this->render('@gallerycms/views/layouts-m/platj-merchant/_pop-show'); ?>
+<?php echo $this->render('@gallerycms/views/layouts-m/platj/_pop-1'); ?>

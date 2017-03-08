@@ -26,7 +26,7 @@
         <div class="fr ruodetail2">
             <div class="clear">
                 <ul class="ul1 fl">
-                    <a id="font" class="a1" href="<?= "/js_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                    <a id="font" class="a1" href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
 
                     <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}/realcase/"; ?>" title="<?= $info['name'] . '实景案例'; ?>">
                         <li>实景案例：<?= $info['num_realcase']; ?></li></a>

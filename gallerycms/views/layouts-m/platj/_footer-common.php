@@ -14,7 +14,7 @@
             <br />首页</a>
         <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>">
             <i class="zp_icon zp_icon2"></i><br />装修公司</a>
-        <a id="dl_line" href="/ask/" title="<?= $this->context->currentCityName . '装修问答'; ?>">
+        <a id="dl_line" href="/ask_lm_gzsj/" title="<?= $this->context->currentCityName . '装修问答'; ?>">
             <i class="zp_icon zp_icon3"></i>
             <br /><?= $this->context->currentCityName . '装修问答'; ?></a>
         <!--<a id="dl_line" href="/ask/" title="<?= $this->context->currentCityName . '装修问答'; ?>">

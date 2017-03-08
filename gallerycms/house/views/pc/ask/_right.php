@@ -37,7 +37,7 @@
         <div class="side_bd side_list">
             <?php foreach ($merchantInfos as $info) { ?>
             <div class="need_case">
-                <a href="<?= $info['infoUrl']; ?>" id="erweima01">
+                <a href="<?= $info['infoUrl']; ?>">
                     <img src="<?= $info['logo']; ?>" alt="<?= $info['name']; ?>">
                     <p><?= $info['name_full']; ?></p>
                 </a>

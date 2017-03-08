@@ -40,7 +40,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 </div>
 <!-- 图文混排（左侧图片，右侧文字） end -->
 <!-- 分页 start -->
-<div class="block-page cDGray">
+<!--<div class="block-page cDGray">
     <span class="disabled">
         <a href="javascript:;">上一页</a></span>
     <span>
@@ -62,6 +62,6 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
         <a href="">第1页</a>
         <a href="">第1页</a>
         <a href="">第1页</a></div>
+</div>-->
 </div>
-<!-- 分页 end --></div>
 <?= $this->render('_footer'); ?>

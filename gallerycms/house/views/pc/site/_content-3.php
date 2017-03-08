@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\StringHelper;
+?>
 <div class='content clear new last'>
     <div class="recommend">
         <h2 class="fl"><?= $this->context->currentCityName . '工地直播'; ?></h2>
@@ -12,7 +15,7 @@
                     <img src="<?= $info->resizePic('thumb', 380, 244); ?>" alt="<?= $info['name']; ?>"></a>
                     <span class='op'></span>
                 <a href="<?= '/' . $this->context->currentCityCode . '/workingshow_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">
-                    <p class='imgLa ImgLaZi'><?= $info['name']; ?></p></a>
+                    <p class='imgLa ImgLaZi'><?= StringHelper::truncate($info['name'], 19, '...'); ?></p></a>
                 <button class='newButton' onclick="message_check('<?= $info['id']; ?>','working', 'index', '预约参观', '');">预约参观</button>
             </li>
             <?php $i++; } ?>

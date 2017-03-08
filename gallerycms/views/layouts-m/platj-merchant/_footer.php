@@ -29,3 +29,4 @@ function func() {
     }
 }
 </script>
+<?php echo $this->render('@gallerycms/views/layouts-m/platj/_pop-1'); ?>

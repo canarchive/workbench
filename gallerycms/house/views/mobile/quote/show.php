@@ -125,7 +125,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
     <!-- 表格视图-->
     <ul class="msg-list box88 msg-list-icon mycom-disinput">
         <li>
-            <a href="/baojia/644868_1.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone67d l"></i>
                 <label class="title">主&nbsp;&nbsp;&nbsp;&nbsp;卧 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -140,7 +140,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_2.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone68a l"></i>
                 <label class="title">次&nbsp;&nbsp;&nbsp;&nbsp;卧 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -155,7 +155,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_3.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone67e l"></i>
                 <label class="title">客&nbsp;&nbsp;&nbsp;&nbsp;卧 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -170,7 +170,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_4.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone68a l"></i>
                 <label class="title">客&nbsp;&nbsp;&nbsp;&nbsp;厅 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -185,7 +185,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_6.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone67c l"></i>
                 <label class="title">厨&nbsp;&nbsp;&nbsp;&nbsp;房 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -200,7 +200,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_7.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone68b l"></i>
                 <label class="title">卫生间 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -215,7 +215,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_8.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone67b l"></i>
                 <label class="title">阳&nbsp;&nbsp;&nbsp;&nbsp;台 :</label>
                 <i class="iconfont icone60c r"></i>
@@ -230,7 +230,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
             </a>
         </li>
         <li>
-            <a href="/baojia/644868_9.html">
+            <a href="javascript: void(0);">
                 <i class="media-object iconfont icone680 l"></i>
                 <label class="title">其&nbsp;&nbsp;&nbsp;&nbsp;他 :</label>
                 <i class="iconfont icone60c r"></i>

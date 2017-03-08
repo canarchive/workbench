@@ -22,7 +22,7 @@
                 <p class="pa pic_phone">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/e63c2-3831.png" alt="" /></p>
             </li>
-            <li class="li_weiXin li_weiXin2">
+            <!--<li class="li_weiXin li_weiXin2">
                 <a>
                     <i class="zong_icon i3"></i>微信</a>
                 <p class="pa pic_two_wei1">
@@ -33,7 +33,7 @@
                     <i class="zong_icon i4"></i>微博</a>
                 <p class="pa pic_two_wei2">
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4f186-9756.png" alt="" /></p>
-            </li>
+            </li>-->
         </ul>
     </div>
 </div>

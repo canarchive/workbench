@@ -5,7 +5,7 @@
         <div class="fl ruodetail">
             <dl>
                 <dt>
-                    <a href="/sample_show_<?= $info['id']; ?>.html" title="<?= $info['name']; ?>">
+                    <a href="<?= "/{$this->context->currentCityCode}/workingshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
 						<img src="<?= $info['thumb']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" /></a>
                 </dt>
                 <!--<dd>
@@ -17,7 +17,7 @@
         <div class="fr ruodetail2">
             <div class="clearfix">
                 <ul class="ul1 fl">
-                    <a id="font" class="a1" href="/sample_show_<?= $info['id']; ?>.html" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+                    <a id="font" class="a1" href="<?= "/{$this->context->currentCityCode}/workingshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
                     <a href="javascript:void(0);">
                         <li>户型：<?= $info['ownerInfo']['house_type']; ?></li></a>
                     <?php if (!empty($info['style'])) { ?>
@@ -40,9 +40,9 @@
 </div>
 <!-- 行业站品牌 end -->
 <!-- 查看更多 start -->
-<div class="seaMore" id="show_all">
+<!--<div class="seaMore" id="show_all">
     <a href="javascript:;" onclick="show_more($(this));">查看更多</a>
-    <input type="hidden" id="pagesize" value="2" /></div>
+    <input type="hidden" id="pagesize" value="2" /></div>-->
 <script>
 function show_more(obj) {
         var page = $("#pagesize").val();

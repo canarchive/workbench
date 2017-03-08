@@ -24,7 +24,7 @@ $info = $this->context->mDatas['info'];
             <li class="icons3 fl">
                 <span style="color:red;"><?= $info['num_working']; ?></span>个工地</li>
             <li class="icons4 fr">
-                <a style="display: block;width: 100%;height: 100%;" onclick="$('.gray_mask').show();$('.tm_bg').show()&amp;&amp;$('#online_consult').show();$('#zj_origin').val('1');$('#contents').val('免费设计');">
+                <a style="display: block;width: 100%;height: 100%;" onclick="publish_mess('<?= $info['id']; ?>','merchant', 'index-merchant-design', '免费设计', '')">
                     <i class="icon"></i>免费设计</a>
             </li>
         </ul>
