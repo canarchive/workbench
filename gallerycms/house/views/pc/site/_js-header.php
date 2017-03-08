@@ -5,5 +5,4 @@
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/newzh.js"></script>
 <script>var sqcatid = '24';</script>
 <!--location start-->
-<script type="text/javascript" src="http://function.jmw.com.cn/location/getlocationjs.php?type=searchlist&industry=24&industrychild=&money=&keyword="></script>
 <!--location end-->

@@ -13,6 +13,7 @@ class TdkInfoController extends TdkInfo
     {
         $datas = $this->getUrlTdkInfos();
         $datas['domain'] = Yii::$app->params['baseDomain'];
+        $datas['domainPc'] = Yii::getAlias('@gallerycmsurl');//$app->params['baseDomain'];
         //print_r($datas);exit();
         return $this->render('listinfo', $datas);
     }

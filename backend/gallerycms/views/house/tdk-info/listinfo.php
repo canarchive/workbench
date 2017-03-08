@@ -6,7 +6,7 @@ foreach ($urlInfos as $code => $info) {
         if (strpos($info['pc-url'], 'http') !== false) {
             $info['pc-url'] = str_replace('{{DOMAIN}}', $domain, $info['pc-url']);
         }else {
-            $info['pc-url'] = "http://{$domain}{$info['pc-url']}";
+            $info['pc-url'] = "{$domainPc}{$info['pc-url']}";
         }
     }
     if (isset($info['mobile-url'])) {
