@@ -2,6 +2,14 @@
 
 INSERT INTO `ws_page` 
     (`site_code`, `code`, `name`, `name_source`, `url`, `is_mobile`, `created_at`, `description`, `isbak`) VALUES 
+    ('jizhu', 'hd', '极装苏宁', '推广页', 'http://www.jzjz.com/pc/activity.html', '0', '20170205', '', 0),
+    ('jizhu', 'hdm', '极装苏宁', '推广页', 'https://m.jzjz.com/mobile/activity.html', '1', '20170205', '', 0),
+
+    ('50jia', 'hd', '50家活动页', '50家活动页', 'http://hd.50-jia.com/35-1.html', '0', '20170121', '', 0),
+    ('50jia', 'hdm', '50家活动页2', '50家活动页2', 'http://hd.50-jia.com/36-4.html', '1', '20170121', '', 0),
+    ('50jia', 'hdm2', '50家活动页3', '50家活动页3', 'http://hd.50-jia.com/1-4.html', '1', '20170121', '', 0),
+
+
     ('juran', 'jrdp', '居然大牌汇', '推广页', 'http://lohohd.juran.com.cn/juran/event/170222hd/index.html?pcbd_1937', '0', '20170205', '', 0),
 
     ('juran', 'snzb', '十年质保', '推广页', 'http://lohohd.juran.com.cn/juran/event/170217/index.html?bd_1951', '1', '20170205', '', 0),

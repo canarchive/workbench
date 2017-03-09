@@ -28,4 +28,8 @@ return [
         'code' => 'spreadjz',
         'name' => '极装吉住',
     ],
+    '50jia' => [
+        'code' => 'spread50j',
+        'name' => '50家',
+    ],
 ];
