@@ -69,7 +69,7 @@ return [
     'sample-show' => [
         'title' => '{{INFONAME}}_{{TAGSTR}}-兔班长装修网',
         'keyword' => '{{INFONAME}}',
-        'description' => '{{INFONAME}}',
+        'description' => '兔班长图库频道，提供2017年最受欢迎的{标题}装修图片及实景效果图，每天更新数百张{{INFONAME}}图片及装修参考图片，为您的房子装修带来美轮美奂的参考灵感。',
     ],
 
     // 问答内容 http://cmshouse.alyee.com/ask-1.html

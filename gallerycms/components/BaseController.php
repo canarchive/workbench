@@ -16,6 +16,7 @@ class BaseController extends Controller
     public $layout = '@gallerycms/views/main-pc';
     public $currentCityCode;
     public $currentCityName;
+	public $footerStatStr;
     public $mDatas;
 
     public function init()
@@ -38,6 +39,7 @@ class BaseController extends Controller
 		$this->mobileMappingUrl = '/';
         $this->currentCityCode = Yii::$app->params['currentCompany']['code'];
         $this->currentCityName = Yii::$app->params['currentCompany']['name'];
+		$this->footerStatStr = $this->_setStatStr();
     }
 
     protected function _initMerchant($page = 'merchant-index')
@@ -174,4 +176,63 @@ class BaseController extends Controller
         $infos = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->limit(100)->asArray()->all();
         return $infos;
     }
+
+	protected function _setStatStr()
+	{
+		if ($this->isMobile) {
+return 
+"<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName(\"script\")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement(\"script\");
+  hm.src = \"https://hm.baidu.com/hm.js?388a8f6628dcd988e1a5b060ae421e7a\";
+  var s = document.getElementsByTagName(\"script\")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+";
+		} else {
+return 
+"
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName(\"script\")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement(\"script\");
+  hm.src = \"https://hm.baidu.com/hm.js?9ca262cf1b353283e75c91d98d96e598\";
+  var s = document.getElementsByTagName(\"script\")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+";
+		}
+
+	}
 }
