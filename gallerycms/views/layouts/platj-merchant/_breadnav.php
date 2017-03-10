@@ -8,6 +8,9 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
             <li class="current3">
                 <a href="<?= $baseUrl; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteName']; ?></a></li>
             <li><span></span></li>
+            <li class="current3">
+                <a href="<?= $baseUrl . "/{$this->context->currentCityCode}/"; ?>" title="<?= $this->context->currentCityName . '装修网'; ?>"><?= $this->context->currentCityName . '装修网'; ?></a></li>
+            <li><span></span></li>
             <li>
                 <a title="<?= $this->context->currentCityName; ?>装修公司" href="<?= "{$baseUrl}/{$this->context->currentCityCode}/merchant/"; ?>"><?= $this->context->currentCityName; ?>装修公司</a></li>
             <li><span></span></li>

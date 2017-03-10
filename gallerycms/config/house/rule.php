@@ -24,14 +24,6 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => ''
         ],
     ],
-    'select-city' => [
-        'hosts' => ['base'],
-        'data' => [
-            'pattern' => '/index', 
-            'route' => '/house/site/select-city', 
-            'suffix' => '.html'
-        ],
-    ],
     'record' => [
         'hosts' => ['base'],
         'data' => [
