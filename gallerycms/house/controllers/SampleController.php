@@ -9,6 +9,12 @@ use gallerycms\house\models\Sample;
 
 class SampleController extends HouseController
 {
+    public function init()
+    {
+        parent::init();
+        $this->metaLocation = '';
+    }
+
 	public function actionIndex()
 	{
 		$tag = Yii::$app->request->get('tag', '');

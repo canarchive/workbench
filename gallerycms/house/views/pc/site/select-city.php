@@ -7,6 +7,9 @@ $jsFiles = ['jquery', 'common'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
 $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
+<script>
+window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
+</script>
 
 <div class="choose_city">
     <!--热门城市-->

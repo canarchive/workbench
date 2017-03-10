@@ -24,6 +24,7 @@ class AskController extends HouseController
         } else {
             $this->layout = 'main-ask';
         }
+        $this->metaLocation = '';
     }
 
     public function actionTag()

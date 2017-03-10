@@ -2,6 +2,7 @@
 
 namespace gallerycms\merchant\controllers;
 
+use Yii;
 use gallerycms\components\MerchantController;
 use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\Quote;
@@ -15,6 +16,9 @@ class SiteController extends MerchantController
         $datas = $this->_initMerchant();
 		$dataTdk = ['{{INFONAME}}' => $datas['info']['name_full']];
 		$this->getTdkInfos('merchant-showindex', $dataTdk);
+
+		$this->pcMappingUrl = $datas['info']['infoUrl'];
+        $this->mobileMappingUrl = Yii::getAlias('@m.gallerycmsurl') . '/sj_' . $datas['info']['code'] . '/';
 
 		return $this->render('index', $datas);
 	}

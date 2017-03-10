@@ -18,6 +18,7 @@ class BaseController extends Controller
     public $currentCityName;
 	public $footerStatStr;
     public $mDatas;
+    public $metaLocation;
 
     public function init()
     {
@@ -40,6 +41,12 @@ class BaseController extends Controller
         $this->currentCityCode = Yii::$app->params['currentCompany']['code'];
         $this->currentCityName = Yii::$app->params['currentCompany']['name'];
 		$this->footerStatStr = $this->_setStatStr();
+        if ($this->clientType == 'mobile') {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = '@gallerycms/views/main-pc';
+        }
+        $this->metaLocation = "province={$this->currentCityName};city={$this->currentCityName};";
     }
 
     protected function _initMerchant($page = 'merchant-index')

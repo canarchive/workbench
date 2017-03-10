@@ -9,10 +9,17 @@ use gallerycms\house\models\Guestbook;
 
 class AboutusController extends HouseController
 {
+    public function init()
+    {
+        parent::init();
+        $this->metaLocation = '';
+    }
+
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
         if ($this->clientType == 'mobile') {
+            $this->layout = '@gallerycms/views/main-mobile';
         } else {
             $this->layout = 'main-about';
         }
@@ -35,6 +42,9 @@ class AboutusController extends HouseController
 			'view' => $view,
 			'communityInfo' => [],
 		];
+
+		$this->pcMappingUrl = Yii::getAlias('@gallerycmsurl') . '/desc.html';
+		$this->mobileMappingUrl = Yii::getAlias('@m.gallerycmsurl') . '/desc.html';
 		$this->getTdkInfos('aboutus-' . $view);
 		return $this->render($view, $datas);
 	}

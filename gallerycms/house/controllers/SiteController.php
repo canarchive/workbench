@@ -15,6 +15,11 @@ class SiteController extends HouseController
 {
 	public function actionIndex()
 	{
+        if ($this->clientType == 'mobile') {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = '@gallerycms/views/main-pc';
+        }
 		$where = ['city_code' => $this->currentCityCode, 'status' => 1];
 		$datas = [
 			'merchantInfos' => $this->getMerchantInfos($where, 18),
