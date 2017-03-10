@@ -12,7 +12,7 @@ class HouseController extends BaseController
 		$url = Yii::$app->request->url;
 		$cityCode = isset($this->module->currentCityCode) ? $this->module->currentCityCode : null;
 		$redirect = strpos($url, 'index.php') !== false ? true : false;
-		$redirect = empty($redirect) ? is_null($cityCode) && $url == '/' : $redirect;
+		//$redirect = empty($redirect) ? is_null($cityCode) && $url == '/' : $redirect;
 		$redirect = empty($redirect) ? !is_null($cityCode) && $cityCode != Yii::$app->params['currentCompany']['code'] : $redirect;
 		if ($redirect) {
 			$this->_redirectRule();

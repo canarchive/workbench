@@ -28,15 +28,15 @@ class BaseController extends Controller
         $this->mHosts = Yii::$app->params['mHosts'];
         if (in_array($this->host, $this->mHosts)) {
             $this->clientType = 'mobile';
-            $this->isMobile = true;
+            //$this->isMobile = true;
         }
 
         if (isset($this->module->viewPath)) {
-            $this->module->viewPath .= $this->clientType ? '/mobile' : '/pc';
+            $this->module->viewPath .= $this->clientType == 'mobile' ? '/mobile' : '/pc';
         }
 
-		$this->pcMappingUrl = '/';
-		$this->mobileMappingUrl = '/';
+		$this->pcMappingUrl = Yii::getAlias('@gallerycmsurl') . Yii::$app->request->url;
+		$this->mobileMappingUrl = Yii::getAlias('@m.gallerycmsurl') . Yii::$app->request->url;
         $this->currentCityCode = Yii::$app->params['currentCompany']['code'];
         $this->currentCityName = Yii::$app->params['currentCompany']['name'];
 		$this->footerStatStr = $this->_setStatStr();
@@ -52,7 +52,7 @@ class BaseController extends Controller
         if (empty($datas)) {
             throw new ForbiddenHttpException('信息不存在');
         }
-        if ($this->isMobile) {
+        if ($this->clientType == 'mobile') {
             $this->layout = '@gallerycms/views/main-mobile';
         } else {
             if ($page != 'merchant-index') {

@@ -8,29 +8,29 @@ class Quote
 
     }   
 
-    public function getResult($area)
+    public function getResult($area, $priceRate = 1.5)
     {   
         if ($area < 30 || $area > 400) {
             return ['status' => 400, 'message' => '请输入30-300范围内的值'];
         }   
         $spaceInfo = $this->_getSpaceInfo($area);
-        $priceInfo = $this->_getPriceInfo($area, $spaceInfo);
+        $priceInfo = $this->_getPriceInfo($area, $spaceInfo, $priceRate);
 
         return $priceInfo;
     }   
 
-    protected function _getPriceInfo($area, $spaceInfo)
+    protected function _getPriceInfo($area, $spaceInfo, $priceRate)
     {   
         $spaceNames = [ 
-            'bedroom_master' => ['name' => '主卧', 'area' => '0.19', 'price' => '4788'],
-            'bedroom_second' => ['name' => '次卧', 'area' => '0.15', 'price' => '3780'],
-            'bedroom_guest' => ['name' => '客卧', 'area' => '0.11', 'price' => '2772'],
-            'living_room' => ['name' => '客厅', 'area' => '0.32', 'price' => '11406.4'],
-            'dining_room' => ['name' => '餐厅', 'area' => '5', 'price' => '1343.75'],
-            'kitchen' => ['name' => '厨房', 'area' => '7', 'price' => '2656.6'],
-            'toilet' => ['name' => '厕所', 'area' => '5', 'price' => '2435'],
-            'balcony' => ['name' => '阳台', 'area' => '4', 'price' => '824'],
-            'other' => ['name' => '其他', 'area' => '', 'price' => '2533'],
+            'bedroom_master' => ['name' => '主卧', 'area' => '0.19', 'price' => '4788' * $priceRate],
+            'bedroom_second' => ['name' => '次卧', 'area' => '0.15', 'price' => '3780' * $priceRate],
+            'bedroom_guest' => ['name' => '客卧', 'area' => '0.11', 'price' => '2772' * $priceRate],
+            'living_room' => ['name' => '客厅', 'area' => '0.32', 'price' => '11406.4' * $priceRate],
+            'dining_room' => ['name' => '餐厅', 'area' => '5', 'price' => '1343.75' * $priceRate],
+            'kitchen' => ['name' => '厨房', 'area' => '7', 'price' => '2656.6' * $priceRate],
+            'toilet' => ['name' => '厕所', 'area' => '5', 'price' => '2435' * $priceRate],
+            'balcony' => ['name' => '阳台', 'area' => '4', 'price' => '824' * $priceRate],
+            'other' => ['name' => '其他', 'area' => '', 'price' => '2533' * $priceRate],
         ];  
 
         $data = []; 

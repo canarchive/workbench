@@ -15,6 +15,17 @@ class Controller extends CommonController
     {
         parent::init();
 
+        $url = Yii::$app->request->url;
+        if (strpos($url, '.html') === false) {
+            $lastChar = substr($url, -1);
+            if ($lastChar != '/') {
+                $url = Yii::$app->request->hostInfo . $url . '/';
+                //echo $url;exit();
+                //header("Location: {$url}");
+                return Yii::$app->response->redirect($url, 301)->send();
+                exit();
+            }
+        }
         $this->_initAsset();
     }
 

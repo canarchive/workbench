@@ -18,7 +18,7 @@ class SampleController extends HouseController
 		if ($tagInfos === false) {
             throw new NotFoundHttpException('页面不存在');
 		}
-        if ($this->isMobile) {
+        if ($this->clientType == 'mobile') {
             $this->layout = '@gallerycms/views/main-mobile';
         } else {
             $this->layout = '@gallerycms/views/layouts/main-plat-pic';

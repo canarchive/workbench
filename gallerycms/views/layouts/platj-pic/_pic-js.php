@@ -20,15 +20,9 @@
 <script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/convtype_hy.js"></script>
 <script language="javascript" type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/liuyan_from.js"></script>
 <script language="javascript" src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/js/loginstatus.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://function.jmw.com.cn/location/getlocationjs.php?type=searchlist"></script>
 <script>var is_login = "unlogin";</script>
 <style>#mainBox{ width:244px; height:378px; position:relative; overflow:hidden;} #content{ position:absolute; left:0; top:0;} .scrollDiv{ width:10px; position:absolute; top:0; background:#666; border-radius:10px; height:85px;}</style>
-<script>var _hmt = _hmt || []; (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?0161b429f1bfca93f010719d48f96a75";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+<script>
     $(function() {
         var lasturl = window.location.href;
         var fromurl = document.referrer;

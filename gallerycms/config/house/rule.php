@@ -16,20 +16,20 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => '.html'
         ],
     ],
+    'index' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'pattern' => '/', 
+            'route' => '/house/site/select-city', 
+            'suffix' => ''
+        ],
+    ],
     'select-city' => [
         'hosts' => ['base'],
         'data' => [
             'pattern' => '/index', 
             'route' => '/house/site/select-city', 
             'suffix' => '.html'
-        ],
-    ],
-    'index' => [
-        'hosts' => ['base', 'm', '3g', 'wap', 'merchant'],
-        'data' => [
-            'pattern' => '/', 
-            'route' => '/house/site/index', 
-            'suffix' => ''
         ],
     ],
     'record' => [

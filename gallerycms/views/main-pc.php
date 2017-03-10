@@ -4,6 +4,12 @@ use yii\helpers\Url;
 $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/house/favicon.ico';
 ?>
 <?php $this->beginContent('@common/views/base/main.php'); ?>
+<script>
+var isMobile = '<?= intval($this->context->isMobile); ?>';
+if (isMobile == 1) {
+    window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
+}
+</script>
 <?= $content; ?>
 <input type="hidden" id="currentCityCode" value="<?= $this->context->currentCityCode; ?>" />
 <script>

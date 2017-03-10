@@ -139,12 +139,6 @@
     } catch(e) {}</script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/referrerpathrecord.js" type="text/javascript"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/seostatis.js"></script>
-<script type="text/javascript">var _hmt = _hmt || []; (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?dbdd94468cf0ef471455c47f380f58d2";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();</script>
 </div>
 <link type="text/css" rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/css/ec6ff-6001.css">
 <script src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/js/submodal.js" type="text/javascript"></script>

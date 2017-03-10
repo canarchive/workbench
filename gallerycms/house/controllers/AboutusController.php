@@ -12,7 +12,7 @@ class AboutusController extends HouseController
 	public function actionIndex()
 	{
 		$view = Yii::$app->request->get('view');
-        if ($this->isMobile) {
+        if ($this->clientType == 'mobile') {
         } else {
             $this->layout = 'main-about';
         }

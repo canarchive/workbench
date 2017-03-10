@@ -19,7 +19,7 @@ class AskController extends HouseController
     {
         parent::init();
 
-        if ($this->isMobile) {
+        if ($this->clientType == 'mobile') {
             $this->layout = '@gallerycms/views/main-mobile';
         } else {
             $this->layout = 'main-ask';

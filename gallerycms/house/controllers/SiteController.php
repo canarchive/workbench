@@ -32,8 +32,12 @@ class SiteController extends HouseController
 
 	public function actionSelectCity()
 	{
-        $this->layout = 'main-about';
-		$this->getTdkInfos('site-select-city');
+        if ($this->clientType == 'mobile') {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = 'main-about';
+        }
+		$this->getTdkInfos('select-city');
 		return $this->render('select-city');
 	}
 

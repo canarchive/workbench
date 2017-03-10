@@ -22,6 +22,7 @@ class CommunityBase extends GallerycmsModel
     public function rules()
     {
         return [
+            [['num_quote', 'num_ask'], 'safe'],
         ];
     }
 
