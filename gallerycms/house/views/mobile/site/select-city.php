@@ -7,7 +7,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
 echo $this->render('@gallerycms/views/layouts-m/plat8/_js-header');
 ?>
 <script>
-//window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
+window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
 </script>
 <header class="header pg-hd">
     <a id="headcitycode" class="icon-logo-index" href="/"></a>
