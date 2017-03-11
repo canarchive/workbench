@@ -4,6 +4,7 @@ namespace gallerycms\components;
 use Yii;
 use yii\helpers\Url;
 use yii\web\ForbiddenHttpException;
+use yii\web\NotFoundHttpException;
 use gallerycms\merchant\models\Merchant;
 use gallerycms\house\models\Friendlink;
 use gallerycms\house\models\AskQuestion;
@@ -57,7 +58,7 @@ class BaseController extends Controller
         }
         $datas = $this->_merchantDatas($code, $page);
         if (empty($datas)) {
-            throw new ForbiddenHttpException('信息不存在');
+            throw new NotFoundHttpException('信息不存在');
         }
         if ($this->clientType == 'mobile') {
             $this->layout = '@gallerycms/views/main-mobile';

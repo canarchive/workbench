@@ -3,6 +3,7 @@ namespace gallerycms\components;
 
 use Yii;
 use yii\helpers\Url;
+use yii\web\NotFoundHttpException;
 
 class HouseController extends BaseController
 {
@@ -21,6 +22,9 @@ class HouseController extends BaseController
 
 	protected function _redirectRule()
 	{
+        if (empty($this->module->cityCodeValid)) {
+            throw new NotFoundHttpException('信息不存在');
+        }
         $cityCode = Yii::$app->params['currentCompany']['code'];
         $url = "{$this->host}/{$cityCode}/";
         //header("Location:$url");
