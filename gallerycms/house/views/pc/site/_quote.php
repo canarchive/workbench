@@ -52,10 +52,10 @@ $picDatas = [
                     </div>
                     <div class='seekContentBottom'>
                         <ul>
-                            <?php foreach ($sInfos as $info) { ?>
+                            <?php foreach ($sInfos as $subInfo) { ?>
                             <li>
-                                <span>1662人查看</span>
-                                <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $fInfo['id'] . '.html'; ?>" title="<?= $fInfo['name']; ?>"><?= $fInfo['name']; ?></a>
+                                <span><?= substr($subInfo['id'], 0, -4); ?>人查看</span>
+                                <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $subInfo['id'] . '.html'; ?>" title="<?= $subInfo['name']; ?>"><?= $subInfo['name']; ?></a>
                             </li>
                             <?php } ?>
                         </ul>

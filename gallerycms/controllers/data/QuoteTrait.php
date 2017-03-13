@@ -4,11 +4,44 @@ namespace gallerycms\controllers\data;
 
 use Yii;
 use common\models\Company;
-use gallerycms\merchant\models\Merchant;
-use gallerycms\merchant\models\Owner;
+use gallerycms\house\models\QuoteBak;
+use gallerycms\house\models\CommunityBase;
+use common\models\Quote as QuoteTool;
 
 trait QuoteTrait
 {
+    protected function qustatus()
+    {
+        $sql = '';
+		$time = time() - 86400 * 10;
+        for ($i = 1; $i <= 100; $i++) {
+            $sql .= "UPDATE `wc_quote_bak` SET `created_at` = {$time} + FLOOR(1 + (RAND() * 86400)) WHERE `status` = 1 AND `created_at` = 0 LIMIT 20;\n";
+        }
+        echo $sql;
+    }
+    public function qPrice()
+    {
+        //$model = new QuoteBak();
+        //$infos = $model->db->createCommand('SELECT `area_real`, COUNT(*) AS `count` FROM `wc_quote_bak` GROUP BY `area_real`')->queryAll();
+
+        $quoteTool = new QuoteTool();
+        $sqlFile = '/tmp/quote/bj.sql';
+        $areas = require Yii::getAlias('@gallerycms/runtime/area.php');
+        $sql = '';
+        foreach ($areas as $area) {
+            $area = $area['area_real'];
+            $quoteInfos = $quoteTool->getResult($area, 2.3);
+            $priceFull = round($quoteInfos['price'], 2);
+            $pricePart = round($priceFull / 1.989, 2);
+            $hardbackFull = round($priceFull * 2.0242, 2);
+            $hardbackPart = round($hardbackFull / 1.992, 2);
+            $sql .= "UPDATE `wc_quote_bak` SET `price_full` = $priceFull, `price_part` = $pricePart, `hardback_full` = $hardbackFull, `hardback_part` = $hardbackPart WHERE `area_real` = $area; <br />";
+        }
+        echo $sql;
+
+
+        //var_export($areas);
+    }
 
     public function quote()
     {

@@ -92,7 +92,7 @@ class Quote extends GallerycmsModel
 
 	public function getInfos($where, $limit = 100)
 	{
-		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
+		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
             $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
 		}
@@ -197,7 +197,6 @@ class Quote extends GallerycmsModel
             'news' => ['name' => '老房装修报价'], 
             'code' => ['name' => '二手房装修报价'], 
         ];
-        $where = [];
         $datas = $this->getInfos($where, 100);
         foreach ($infos as $sort => & $info) {
             //$where = $sort == 'lastest' ? ['status' => 0] : ['sort' => $sort, 'status' => 0];
