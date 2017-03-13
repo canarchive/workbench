@@ -1,179 +1,29 @@
 <?php
 
-namespace gallerycms\controllers;
+namespace gallerycms\controllers\data;
 
 use Yii;
-use Overtrue\Pinyin\Pinyin; 
-use gallerycms\components\Controller as GallerycmsController;
+use common\models\Company;
 use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\AskSort;
 use gallerycms\house\models\AskTag;
-use gallerycms\merchant\models\Merchant;
-use gallerycms\house\models\QuoteBak;
-use gallerycms\house\models\CommunityBase;
-use common\models\Quote as QuoteTool;
 
-class TmpController extends GallerycmsController
+trait AskTrait
 {
-    public function actionTest()
-    {   
-        $action = Yii::$app->request->get('action');
-        $this->$action();
-    }
-
-    public function quote()
+    protected function uq()
     {
-        $model = new QuoteBak();
-        $infos = $model->find()->all();
-        $sInfos = $model->styleInfos;
-        $hInfos = $model->houseTypeInfos;
-        $bInfos = $model->budgetInfos;
-
-        $sqlFile = '/tmp/quote/bj.sql';
-        $quote = new QuoteTool();
-        $r = $quote->getResult(123);
-        $cModel = new CommunityBase();
-        $cInfos = $cModel->find()->where(['city_name' => '北京', 'num_quote' => 0])->limit(1000)->all();
-        $areas = $this->_getAreas();
-        foreach ($cInfos as $cInfo) {
-            $i = 0;
-            foreach ($sInfos as $sKey => $sValue) {
-                foreach ($hInfos as $hKey => $hValue) {
-                    foreach ($areas as $areaReal => $area) {
-                        $data = [
-                            'city_code' => 'beijing',
-                            'district' => $cInfo['district'],
-                            'community_name' => $cInfo['name'],
-                            'owner_name' => '',
-                            'house_type' => $hKey,
-                            'style' => $sKey,
-                            'area_real' => $areaReal,
-                            'area' => $area,
-                        ];
-                        $mark = md5('beijing' . $cInfo['district'] . $cInfo['name'] . $hKey . $sKey . $area . $areaReal);
-                        $sql = "INSERT INTO `wc_quote_bak` (`code`, `city_code`, `district`, `community_name`, `owner_name`, `house_type`, `style`, `area`, `area_real`, `price_part`, `price_full`, `hardback_part`, `hardback_full`, `orderlist`, `created_at`, `updated_at`, `description`, `mark`, `status`) VALUES ('', 'beijing', '{$cInfo['district']}', '{$cInfo['name']}', '', '{$hKey}', '{$sKey}', '{$area}', {$areaReal}, 0.00, 0.00, 0.00, 0.00, 0, 0, 0, '', '{$mark}', 1);\n";
-
-                        $i++;
-                        file_put_contents($sqlFile, $sql, FILE_APPEND);
-                    }
-                }
-            }
-            $cInfo['num_quote'] = $i;
-            $cInfo->update(false);
-        }
-        //echo $sql;
-
-    }
-
-    protected function _getAreas()
-    {
-        $areas = [];
-        //for ($areaReal = 1; $areaReal <= 20; $areaReal + 5) {
-        for ($i = 1; $i <= 100; $i++) {
-            if (count($areas) > 19) {
-                break;
-            }
-            $areaReal = rand(40, 160);
-            if (in_array($areaReal, array_keys($areas))) {
+        $sorts = AskSort::find()->indexBy('code')->asArray()->all();
+        $sql = '';
+		$time = time() - 86400 * 6;
+        foreach ($sorts as $sort => $sortInfo) {
+            if ($sortInfo['parent_code'] == '') {
                 continue;
             }
-            
-            $area = '';
-            if ($areaReal <= 60) {
-                $area = 'one';
-            } elseif ($areaReal > 60 && $areaReal <= 80) {
-                $area = 'two';
-            } elseif ($areaReal > 80 && $areaReal <= 100) {
-                $area = 'three';
-            } elseif ($areaReal > 100 && $areaReal <= 120) {
-                $area = 'four';
-            } elseif ($areaReal > 120 && $areaReal <= 160) {
-                $area = 'five';
-            } elseif ($areaReal > 160) {
-                $area = 'six';
+            for ($i = 1; $i <= 10; $i++) {
+            $sql .= "UPDATE `wc_ask_question` SET `created_at` = {$time} + FLOOR(1 + (RAND() * 86400)) WHERE `sort` = '{$sort}' AND `created_at` = 0 LIMIT 1;\n";
             }
-            $areas[$areaReal] = $area;
         }
-
-        return $areas;
-
-    }
-
-    public function community()
-    {
-        $file = '/tmp/quote/house.txt';
-        $datas = file($file);
-        ini_set('display_errors', 1);
-        error_reporting(E_ALL);
-        echo count($datas), '<br />';
-
-        $sqlFile = '/tmp/quote/tag.sql';
-        $i = 0;
-        foreach ($datas as $data) {
-            $info = explode("\t", $data);
-            $city_name = str_replace("'", '"', trim(trim($info[0]), '"'));
-            $name = str_replace("'", '"', trim(trim($info[1]), '"'));
-            $district = str_replace("'", '"', trim(trim($info[2]), '"'));
-            $sqlStr = "INSERT INTO `wc_community_base` (`city_name`, `name`, `district`) VALUES('{$city_name}', '{$name}', '{$district}');\n";
-            file_put_contents($sqlFile, $sqlStr, FILE_APPEND);
-            $i++;
-        }
-        echo $i;
-    }
-
-    public function dispatch()
-    {
-        $model = New Merchant();
-        $mInfos = $model->merchantSortInfos;
-        /*$sorts = [
-            ['common', 'villa', 'ktv', 'dining', 'recreation'],
-            ['showroom', 'workshop', 'hsopital', 'bar', 'other'],
-            ['loft', 'double', 'solo', 'part', 'store'],
-            ['beauty', 'hotal', 'office', 'school', 'specailty'],
-            ['super', 'plat', 'selfbuild'],
-        ];
-        $styles = [
-            ['simple', 'en', 'rural', 'us'],
-            ['family', 'newclassics', 'modern', 'cn'],
-            ['mediterranean', 'mashup', 'simpleen', 'seasia'],
-        ];*/
-        $prices = [
-            ['one', 'two', 'three'],
-            ['two', 'three', 'four', 'five'],
-            ['three', 'four', 'five'],
-            ['four', 'five', 'size'],
-            ['five', 'six', 'seven'],
-        ];
-        $sorts = array_keys($mInfos['decoration_sort']['values']);
-        $styles = array_keys($mInfos['style']['values']);
-        //$prices = $mInfos['budget']['values'];
-
-        $infos = $model->find()->where(['source_status_deal' => 1])->limit(2000)->all();
-        foreach ($infos as $info) {
-            $sNum = rand(4, 8);
-            $sortKeys = array_rand($sorts, $sNum);
-            $sortStr = '';
-            foreach ($sortKeys as $key) {
-                $sortStr .= $sorts[$key] . ',';
-            }
-            //$info->sort = $sortStr;
-
-            $styleNum = rand(3, 6);
-            $styleKeys = array_rand($styles, $styleNum);
-            $styleStr = '';
-            foreach ($styleKeys as $key) {
-                $styleStr .= $styles[$key] . ',';
-            }
-            echo $styleStr . '<br />';
-            $info->style = $styleStr;
-            $pIndex = rand(0, 4);
-            $pKeys = $prices[$pIndex];
-            $pStr = implode($pKeys, ',');
-            //$info->price = $pStr . ',';
-            $info->source_status_deal = 0;
-            $info->update(false);
-
-        }
+        echo $sql;
     }
 
     public function asktag()
@@ -418,8 +268,4 @@ class TmpController extends GallerycmsController
         print_r($single);print_r($full);
 
     }   
-
-    protected function updateInfo()
-    {   
-    }
 }
