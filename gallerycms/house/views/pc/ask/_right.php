@@ -49,14 +49,14 @@
         <a id="autourl" href="/temai/zt539" hidefocus="" target="_blank" rel="nofollow">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat8/img/ff04f-1328.jpg" width="240" height="130"></a>
     </div>-->
-    <div class="ask_side spceil">
+    <!--<div class="ask_side spceil">
         <div class="side_hd">最新标签</div>
         <div class="new_tag ">
             <?php $i = 0; foreach ($tagInfos as $key => $tInfo) { if ($i > 20) { break; }?>
             <a href="/ask_<?= $tInfo['id']; ?>/" title="<?= $tInfo['name']; ?>"><?= $tInfo['name']; ?></a>
             <?php unset($tagInfos[$key]); $i++; } $this->params['tagInfos'] = $tagInfos; ?>
         </div>
-    </div>
+    </div>-->
 </div>
 <script type='text/javascript'>var href = jq('#HotArea a').attr('href');
     if (!href) {

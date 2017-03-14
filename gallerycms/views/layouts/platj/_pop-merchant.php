@@ -272,7 +272,7 @@
                                 <strong>
                                     <em>晨阳水漆</em>投资加盟热线：</strong></p>
                             <p>
-                                <em>4000-500-555转95542</em></p>
+                                <em><?= Yii::$app->params['siteHotline']; ?>转95542</em></p>
                             <p>
                                 <em>0312-8593111</em></p>
                             <p style="display:none;">
@@ -467,7 +467,7 @@
                     <img src="http://search.jmw.com.cn/images/right_phone.png" alt="" style="width:55px; height:55px; margin-top:8px;" /></dt>
                 <dd class="fl" style="width:230px;">
                     <p style="color:#333; margin-bottom:6px;font-size:14px; margin-top:9px;">晨阳水漆 投资加盟热线：</p>
-                    <p class="map2">4000-500-555
+                    <p class="map2"><?= Yii::$app->params['siteHotline']; ?>
                         <span>转</span>95542</p></dd>
             </dl>
         </div>

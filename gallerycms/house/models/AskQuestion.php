@@ -113,7 +113,7 @@ class AskQuestion extends GallerycmsModel
         $keyCache = 'index-ask-question';
         $infos = $this->_getCacheDatas($keyCache);
         if ($infos) {
-            //return $infos;
+            return $infos;
         }
 
 		$sortInfos = ArrayHelper::map(AskSort::find()->all(), 'code', 'name');

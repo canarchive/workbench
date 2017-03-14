@@ -18,7 +18,7 @@
                                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/49c15-1220.jpg" width="250" height="332" alt="" />
                                 <div class="hotline">
                                     <span>热线电话：</span>
-                                    <a href="javascript:;">4000-500-555</a>
+									<a href="javascript:;"><?= Yii::$app->params['siteHotline']; ?></a>
                                     <h3>人工推荐好项目</h3>
                                     <p>留下您的手机号</p>
                                     <p>

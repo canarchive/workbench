@@ -4,8 +4,8 @@
             <div class="tenth_phone">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/b0a29-2052.png" alt="" />
                 <span>全国免费电话：</span>
-                <!--<strong style="display:inline-block; vertical-align:middle; color:#fff; font-size:23px;">4000-500-555转95542</strong>-->
-                <strong style="display:inline-block; vertical-align:middle; color:#fff; font-size:23px;">4000-500-555</strong></div>
+                <!--<strong style="display:inline-block; vertical-align:middle; color:#fff; font-size:23px;"><?= Yii::$app->params['siteHotline']; ?>转95542</strong>-->
+                <strong style="display:inline-block; vertical-align:middle; color:#fff; font-size:23px;"><?= Yii::$app->params['siteHotline']; ?></strong></div>
         </div>
         <div class="J-messages">
             <form action="" method="post">

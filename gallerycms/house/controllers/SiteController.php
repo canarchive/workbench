@@ -42,6 +42,7 @@ class SiteController extends HouseController
         } else {
             $this->layout = 'main-about';
         }
+        $this->metaLocation = '';
 		$this->getTdkInfos('select-city');
 		return $this->render('select-city');
 	}

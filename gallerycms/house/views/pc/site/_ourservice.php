@@ -54,7 +54,7 @@
     </div>
     <div class="tiGong_right fr">
         <p class="p1">加盟咨询:</p>
-        <p class="p2">4000-500-555</p>
+		<p class="p2"><?= Yii::$app->params['siteHotline']; ?></p>
         <p class="p1">招商咨询:</p>
         <p class="p2">010-62168889</p>
         <p class="p3">

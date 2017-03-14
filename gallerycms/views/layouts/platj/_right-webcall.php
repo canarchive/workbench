@@ -9,9 +9,9 @@
     <div class="Pfind_money2">
         <p class="p_title2">晨阳水漆全国免费咨询热线</p>
         <ul class="p_ul">
-            <!--<li style="color:#333; font-size:16px; font-weight:bold; ">免费通话<span style="color:#e93c00;">4000-500-555转95542</span></li>-->
+            <!--<li style="color:#333; font-size:16px; font-weight:bold; ">免费通话<span style="color:#e93c00;"><?= Yii::$app->params['siteHotline']; ?>转95542</span></li>-->
             <li style="color:#333; font-size:16px; font-weight:bold; ">免费通话
-                <span style="color:#e93c00;">4000-500-555</span></li>
+                <span style="color:#e93c00;"><?= Yii::$app->params['siteHotline']; ?></span></li>
             <li style="color:#666; font-size:12px;">
                 <span style="color:#999; font-size:12px;">请提供您的联系方式，加盟顾问会及时与您联系</span></li>
         </ul>

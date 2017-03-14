@@ -48,7 +48,7 @@ $footerNavs = $this->context->footerNavs;
             </div>
             <div class="fbc_copyright"><?= $footerNavs['disclaimer']; ?></div>
             <div class="fbc_copyright"><?= $footerNavs['copyRight']; ?></div>
-            <div class="fbc_icp">中国装修网
+			<div class="fbc_icp"><?= Yii::$app->params['siteName']; ?>
                 <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow"><?= $footerNavs['icpInfo']; ?></a>
             </div>
         </div>

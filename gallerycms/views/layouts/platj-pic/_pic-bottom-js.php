@@ -58,7 +58,7 @@
 
     function showStory(cid, phone, cname) {
         var html = '<div class="advice-1"><p>' + cname + '全国免费咨询热线' + '</p><input type="hidden" name="tid" id="tid" value="' + cid + '"><input type="hidden" name="cname" id="cname" value="' + cname + '"></div>';
-        var htmlphone = '<strong  style="color:#fff;font-size:24px;line-height:46px;padding-left:6px;">4000-500-555</strong>';
+		var htmlphone = '<strong  style="color:#fff;font-size:24px;line-height:46px;padding-left:6px;"><?= Yii::$app->params['siteHotline']; ?></strong>';
         jQuery("#advicephone").html(htmlphone);
         jQuery("#parameter").html(html);
         jQuery('#tel400_box').show();

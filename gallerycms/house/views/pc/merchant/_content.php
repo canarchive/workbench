@@ -6,7 +6,8 @@ use gallerycms\components\LinkPager;
 <div class="fl sel_left">
     <div class="sel_l_tit">
         <ul class="sorts fl clearfix">
-        <li class="li_li1 li_se"><a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName . '装修公司'; ?></a></li>
+        <!--<li class="li_li1 li_se"><a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= $this->context->currentCityName . '装修公司'; ?></a></li>-->
+        <li class="li_li1 li_se"><a rel="nofollow" href="javascript: void(0); "><?= $this->context->currentCityName . '装修公司'; ?></a></li>
         </ul>
         <?php if (!empty($keyword)) { ?>
         <ul class="styles fr clearfix">

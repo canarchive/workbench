@@ -29,7 +29,7 @@ class QuoteController extends HouseController
 
 		$page = Yii::$app->request->get('page');
 		//$infos = $model->getInfos([]);
-        $where = [];
+        $where = ['city_code' => $this->currentCityCode, 'status' => 1];
         foreach ($tagInfos as $field => $value) {
             if (empty($value)) {
                 continue;

@@ -2,7 +2,7 @@
 <!--<a href="https://weidian.com/?userid=214234322" rel="nofollow" class="show-logo" style="width: 100%;margin-top: 2%;position: relative;display:block;">  
 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/14271-6316.jpg" style="width: 100%;height: auto;"></a>-->
 <!--新加展会索取入口的LOGo-->
-<div id="helpYou">
+<!--<div id="helpYou">
     <ul>
         <li onclick="_MEIQIA._SHOWPANEL()">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/d475d-7810.png" /></li>
@@ -13,7 +13,7 @@
         <li style="margin: 0;" onclick="_MEIQIA._SHOWPANEL()">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/a818b-4154.png" /></li>
     </ul>
-</div>
+</div>-->
 <!--倒计时-->
 <div id="time">
     <div class="left1">

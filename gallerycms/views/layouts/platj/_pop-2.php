@@ -24,7 +24,7 @@
             <div class="information">
                 <h1>全国免费咨询热线</h1>
                 <span class="free-tell">免费通话
-                    <i style="font-style: normal;">4000-500-555</i></span>
+                    <i style="font-style: normal;"><?= Yii::$app->params['siteHotline']; ?></i></span>
                 <span style="color: #ccc;" class="three-span">请直接拨打免费热线，或留言咨询</span>
                 <div style="width: 318px;height: 35px;margin: 0 auto;font-size: 14px;">姓名：
                     <input type="text" placeholder="您的姓名" / style="font-size: 12px;height: 30px;margin-right: 10px;width: 131px;padding-left: 4px;" fourTelUserName="fourTelUserName" onfocus="if(this.value=='您的姓名'){this.value=''}" onblur="if(this.value==''){this.value='您的姓名'}" id="name" name="name">性别：
@@ -108,7 +108,7 @@
 <div class="Pfind_money2"> 
 <p class="p_title2">全国免费咨询热线</p>
 <ul class="p_ul"> 
-<li style="color:#333; font-size:16px; font-weight:bold; ">免费通话<span style="color:#e93c00;">4000-500-555</span></li>
+<li style="color:#333; font-size:16px; font-weight:bold; ">免费通话<span style="color:#e93c00;"><?= Yii::$app->params['siteHotline']; ?></span></li>
 <li style="color:#666; font-size:12px;"><span style="color:#999; font-size:12px;"> 请直接拨打免费热线，或留言咨询</span></li></ul>
 <div class="name_box"> 
 <p>
