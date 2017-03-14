@@ -180,7 +180,7 @@ class Quote extends GallerycmsModel
 
     protected function _getSelect()
     {
-        return 'id,community_name, district, house_type,style,area_real,area,created_at,status';
+        return 'id,community_name, district, house_type,style,area_real,area,created_at,status, price_part, price_full, hardback_part, hardback_full';
     }
 
     public function getIndexInfos($where)
