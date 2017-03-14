@@ -6,6 +6,7 @@ use Yii;
 use yii\web\NotFoundHttpException;
 use gallerycms\components\HouseController;
 use gallerycms\house\models\Quote;
+use common\models\Quote as QuoteTool;
 
 class QuoteController extends HouseController
 {
@@ -86,12 +87,16 @@ class QuoteController extends HouseController
 			$tagStr .= $str;
 			$info[$tagKey] = $str;
 		}
+        $quoteTool = new QuoteTool();
+        $priceDatas = $quoteTool->getResult($info['area_real']);
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $tagStr];
         $this->getTdkInfos('quote-show', $dataTdk);
 		$datas = [
 			'info' => $info,
+            'priceDatas' => $priceDatas,
 		];
+        //print_r($priceDatas);exit();
 		return $this->render('show', $datas);
 	}
 }

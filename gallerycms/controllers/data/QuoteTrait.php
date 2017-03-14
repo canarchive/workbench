@@ -13,10 +13,13 @@ trait QuoteTrait
     protected function qustatus()
     {
         $sql = '';
-		$time = time() - 86400 * 10;
+        //for ($j = 1; $j <= 9; $j++) {
+        $j = 9;
+		$time = time() - 86400 * $j;
         for ($i = 1; $i <= 100; $i++) {
-            $sql .= "UPDATE `wc_quote_bak` SET `created_at` = {$time} + FLOOR(1 + (RAND() * 86400)) WHERE `status` = 1 AND `created_at` = 0 LIMIT 20;\n";
+            $sql .= "UPDATE `wc_quote` SET `created_at` = {$time} + FLOOR(1 + (RAND() * 86400)) WHERE `status` = 1 AND `created_at` = 0 LIMIT 10;\n";
         }
+        //}
         echo $sql;
     }
     public function qPrice()

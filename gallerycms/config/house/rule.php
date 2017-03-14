@@ -95,7 +95,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-    		'pattern' => '/askshow_<id:\d+>',
+    		'pattern' => '/askshow_<id:\w+>',
     		'route'	=> '/house/ask/show',
         ],
     ],
