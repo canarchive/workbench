@@ -20,7 +20,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
     <div class="tuwen-mix bgfff">
         <div class="mask-layer2 zp-mask-layer2"></div>
         <?php foreach ($infos as $info) { ?>
-        <a class="tuwen-item clearfix" href="/<?= $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>">
+        <a class="tuwen-item clearfix" href="/<?= $this->context->currentCityCode . '/quoteshow_' . $info['code'] . '.html'; ?>">
             <!-- <img src="<?= Yii::getAlias('@asseturl'); ?>/house/plat1/m/img/7e42a-7763.jpg" alt="" class="img-circle"></img> -->
             <div class="txt-box">
                 <p class="p1">

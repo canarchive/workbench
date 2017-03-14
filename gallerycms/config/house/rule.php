@@ -112,7 +112,7 @@ return \gallerycms\components\RuleFormat::formatRule([
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
             'suffix' => '.html',
-            'pattern' => '/<city_code:[a-z]+>/quoteshow_<id:\d+>',
+            'pattern' => '/<city_code:[a-z]+>/quoteshow_<id:\w+>',
     		'route'	=> '/house/quote/show',
         ],
     ],

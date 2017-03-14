@@ -46,7 +46,7 @@ $picDatas = [
                             </div>
                         </div>
                         <div class='seekContentMiddleR fl'>
-                        <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $fInfo['id'] . '.html'; ?>" title="<?= $fInfo['name']; ?>" class='oneLine'><?= $fInfo['name']; ?></a>
+                        <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $fInfo['code'] . '.html'; ?>" title="<?= $fInfo['name']; ?>" class='oneLine'><?= $fInfo['name']; ?></a>
                             <p class='twoLine'><?= $fInfo['name']; ?></p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ $picDatas = [
                             <?php foreach ($sInfos as $subInfo) { ?>
                             <li>
                                 <span><?= substr($subInfo['id'], 0, -4); ?>人查看</span>
-                                <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $subInfo['id'] . '.html'; ?>" title="<?= $subInfo['name']; ?>"><?= $subInfo['name']; ?></a>
+                                <a href="/<?= $this->context->currentCityCode . '/quoteshow_' . $subInfo['code'] . '.html'; ?>" title="<?= $subInfo['name']; ?>"><?= $subInfo['name']; ?></a>
                             </li>
                             <?php } ?>
                         </ul>
@@ -75,7 +75,7 @@ $picDatas = [
                             <?php foreach ($infos['lastest']['infos'] as $info) { ?>
                             <div class='seekContentMiddle  seekContentZhaoMS clear'>
                                 <?= date('Y-m-d H:i:s', $info['created_at']); ?><span><?= $info['name']; ?></span>获取了报价信息
-                                [<a href='<?= '/' . $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>' target='_blank'>详情</a>]
+                                [<a href='<?= '/' . $this->context->currentCityCode . '/quoteshow_' . $info['code'] . '.html'; ?>' target='_blank'>详情</a>]
                             </div>
                             <?php } ?>
                         </div>
@@ -88,7 +88,7 @@ $picDatas = [
                             <?php foreach ($infos['lastest']['infos'] as $info) { ?>
                             <div class='seekContentMiddle  seekContentZhaoMS clear'>
                                 <?= date('Y-m-d H:i:s', $info['created_at']); ?><span><?= $info['name']; ?></span>获取了报价信息
-                                [<a href='<?= '/' . $this->context->currentCityCode . '/quoteshow_' . $info['id'] . '.html'; ?>' target='_blank'>详情</a>]
+                                [<a href='<?= '/' . $this->context->currentCityCode . '/quoteshow_' . $info['code'] . '.html'; ?>' target='_blank'>详情</a>]
                             </div>
                             <?php } ?>
                         <div id='seekContentZhaoBoxzdemoTwo'></div>

@@ -67,11 +67,13 @@ class QuoteController extends HouseController
 
 	public function actionShow()
 	{
-        $id = \Yii::$app->getRequest()->get('id');
+		$code = \Yii::$app->getRequest()->get('id'); 
+        //$id = \Yii::$app->getRequest()->get('id');
+		$id = intval(substr($code, strrpos($code, 'e') + 1));
         $model = new Quote();
 		$info = $model->getInfo($id);
-		if (empty($info)) {
-            return $this->redirect('/')->send();
+		if (empty($info) || $info['code'] != $code) {
+			throw new NotFoundHttpException('页面不存在');
 		}
 		$quoteSortInfos = $model->quoteSortInfos;
 		$tagStr = '';

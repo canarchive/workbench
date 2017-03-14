@@ -2,7 +2,7 @@
     <div class="global_pie_container">
         <ul>
             <li class="has_arrow">
-                <a href="/" title="<?= $this->context->currentCityName . '装修网'; ?>"><?= $this->context->currentCityName . '装修网'; ?></a>
+				<a href="/" title="<?= Yii::$app->params['siteName']; ?>"><?= Yii::$app->params['siteName']; ?></a>
                 <span class="nav_arrow_right"></span>
             </li>
             <li class="has_arrow">
@@ -29,10 +29,10 @@
 
 
             <?php } else { ?>
-            <li class="has_arrow">
+            <!--<li class="has_arrow">
                 <a href="/ask_tag.html" title="问答标签">标签</a>
                 <span class="nav_arrow_right"></span>
-            </li>
+            </li>-->
             <li><?= $tagNavStr; ?></li>
             <?php } ?>
         </ul>

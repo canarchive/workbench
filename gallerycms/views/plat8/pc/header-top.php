@@ -11,7 +11,7 @@
                     <a href="/" class="nav_fzlink" rel="nofollow">我要装修</a>
                     <em>咨询热线：<?= Yii::$app->params['siteHotline']; ?></em>
                     <span class="htr_line"></span>
-                    <a href="/ask/" target="_blank">装修问答</a>
+                    <a href="/ask_lm_gzsj/" target="_blank">装修问答</a>
                     <span class="htr_line"></span>
                     <a href="/<?= Yii::$app->params['currentCompany']['code']; ?>/merchant/" target="_blank"><?= Yii::$app->params['currentCompany']['name']; ?>装修公司</a>
                     <span class="htr_line"></span>
