@@ -33,24 +33,21 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
                 <pre>
                 <p style="line-height:1.75em;"><?= $aInfo['description']; ?></p>
                 </pre>
-                <footer><?= $aInfo['memberInfo']['name']; ?><time><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></time></footer>
+                <!--<footer><?= $aInfo['memberInfo']['name']; ?><time><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></time></footer>-->
             </section>
         </article>
         <?php } ?>
         <div class="zxask-answer-box answer_num_astrict">
-            <h3 class="zxask-answer-title">其他答案</h3>
+            <h3 class="zxask-answer-title"><b><?= count($answerInfos['infos']); ?></b>其他答案</h3>
+            <?php foreach ($answerInfos['infos'] as $aInfo) { ?>
             <div>
-                <pre class="zxask-answer-info">这样字问是没发回答的，材料有质量层次，装修有风格设计和房子面积</pre>
+                <pre class="zxask-answer-info"><?= $aInfo['description']; ?></pre>
                 <p class="zxask-answer-meta">
-                    <span>成都天怡美装饰工程有限公司</span>
-                    <time>2016-06-26</time></p>
+                    <span><?= $aInfo['memberInfo']['name']; ?></span>
+                    <!--><time><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></time>-->
+                </p>
             </div>
-            <div>
-                <pre class="zxask-answer-info">2、陶瓷类装饰材料:陶瓷外墙里砖牢固耐用,颜色艳丽而具有丰盛的装饰后果,并具有易浑洗、防火、抗水、耐磨、耐腐化和维修用度低的长处。</pre>
-                <p class="zxask-answer-meta">
-                    <span>杭州蓝冠装饰设计有限公司</span>
-                    <time>2016-06-26</time></p>
-            </div>
+            <?php } ?>
         </div>
         <?php //echo $this->render('_ad-show'); ?>
         <div class="zxask-answer-box zxask-other-questions">

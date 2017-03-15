@@ -5,6 +5,18 @@ use yii\bootstrap\ActiveForm;
 $cssFiles = ['25195-6919', '167a4-9368', '859bc-4030', '00ce0-6662', '73eaa-5273'];
 $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat1/m']);
 //$this->params['jsStr'] = $this->render('_js-header');
+$pDatas = $priceDatas['elems'];
+$elems = [
+    'bedroom_master' => ['3' => '67d'],
+    'bedroom_second' => ['3' => '68a'],
+    'bedroom_guest' => ['3' => '67e'],
+    'living_room' => ['3' => '68a'],
+    'kitchen' => ['3' => '67c'],
+    //'dining_room' => ['3' => ''],
+    'toilet' => ['3' => '68b'],
+    'balcony' => ['3' => '67b'],
+    'other' => ['3' => '680'],
+];
 ?>
 <?= $this->render('_header'); ?>
 <?php //echo $this->render('_nav'); ?>
@@ -47,15 +59,15 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                 <em class="m2-unit">m <i>2</i></em>
             </p>
             <div class="ban-bot">
-                <input type="text" value="6">
+                <input type="text" value="<?= $pDatas['bedroom_master']['num'] + $pDatas['bedroom_second']['num'] + $pDatas['bedroom_guest']['num']; ?>">
                 <span class="mr1">室</span>
-                <input type="text" value="2">
+                <input type="text" value="<?= $pDatas['living_room']['num'] + $pDatas['dining_room']['num']; ?>">
                 <span class="mr1">厅</span>
-                <input type="text" value="1">
+                <input type="text" value="<?= $pDatas['kitchen']['num']; ?>">
                 <span class="mr1">厨</span>
-                <input type="text" value="3">
+                <input type="text" value="<?= $pDatas['toilet']['num']; ?>">
                 <span class="mr1">卫</span>
-                <input type="text" value="2">
+                <input type="text" value="<?= $pDatas['balcony']['num']; ?>">
                 <span class="mr1">阳台</span>
             </div>
         </div>
@@ -65,9 +77,9 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
         <!-- 切换导航-->
         <ul class="com-labelchange-btngroup border1-bottom clearfix">
             <li class="com-labelchange-btn width50 active txt" data-index="1">
-                <span>简装报价</span></li>
+                <span onclick="$('#jzbj-elems').show(); $('#jing-elems').hide();">简装报价</span></li>
             <li class="com-labelchange-btn width50  txt" data-index="0">
-                <span>精装报价</span></li>
+                <span onclick="$('#jzbj-elems').hide(); $('#jing-elems').show();">精装报价</span></li>
         </ul>
         <!-- 切换导航 end-->
         <!-- 切换内容-->
@@ -78,7 +90,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                     <div class="txt">
                         <p>半包价格（纯施工）</p>
                         <span>
-                            <i>￥</i>36079</span>
+                            <i>¥</i><?= number_format($info['price_part'], 0); ?>元</span>
                     </div>
                 </div>
                 <div class="list-con">
@@ -86,7 +98,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                     <div class="txt no">
                         <p>全包价格（施工+主材）</p>
                         <span>
-                            <i>￥</i>85089</span>
+                            <i>¥</i><?= number_format($info['price_full'], 0); ?>元</span>
                     </div>
                 </div>
             </div>
@@ -96,7 +108,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                     <div class="txt">
                         <p>半包价格（纯施工）</p>
                         <span>
-                            <i>￥</i>39543</span>
+                            <i>¥</i><?= number_format($info['hardback_part'], 0); ?>元</span>
                     </div>
                 </div>
                 <div class="list-con">
@@ -104,7 +116,7 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
                     <div class="txt no">
                         <p>全包价格（施工+主材）</p>
                         <span>
-                            <i>￥</i>88553</span>
+                            <i>¥</i><?= number_format($info['hardback_full'], 0); ?>元</span>
                     </div>
                 </div>
             </div>
@@ -123,127 +135,43 @@ $this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' =>
         </a>
     </div>
     <!-- 表格视图-->
-    <ul class="msg-list box88 msg-list-icon mycom-disinput">
+    <ul class="msg-list box88 msg-list-icon mycom-disinput" id="jzbj-elems">
+        <?php foreach ($elems as $key => $elem) { $data = $pDatas[$key]; if (empty($data['area_result'])) { continue; } ?>
         <li>
             <a href="javascript: void(0);">
-                <i class="media-object iconfont icone67d l"></i>
-                <label class="title">主&nbsp;&nbsp;&nbsp;&nbsp;卧 :</label>
+                <i class="media-object iconfont icone<?= $elem['3']; ?> l"></i>
+                <label class="title"><?= $data['name']; ?> :</label>
                 <i class="iconfont icone60c r"></i>
                 <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="28" style="opacity: 1;" readonly/>&nbsp;&nbsp;
+                <input class="input-hasunit" type="text" value="<?= ceil($data['area_result']); ?>" style="opacity: 1;" readonly/>&nbsp;&nbsp;
                     <em class="cGray m2-unit">m
                         <i>2</i>
                     </em>
                 </span>
                 <span class="span-right">
-                    <i class="iconfont icone67a l"></i>6713</span>
+                <i class="iconfont icone67a l"></i><?= number_format($data['price_result'], 0); ?></span>
             </a>
         </li>
+        <?php } ?>
+    </ul>
+    <ul class="msg-list box88 msg-list-icon mycom-disinput" id="jing-elems">
+        <?php foreach ($elems as $key => $elem) { $data = $pDatas[$key]; if (empty($data['area_result'])) { continue; } ?>
         <li>
             <a href="javascript: void(0);">
-                <i class="media-object iconfont icone68a l"></i>
-                <label class="title">次&nbsp;&nbsp;&nbsp;&nbsp;卧 :</label>
+                <i class="media-object iconfont icone<?= $elem['3']; ?> l"></i>
+                <label class="title"><?= $data['name']; ?> :</label>
                 <i class="iconfont icone60c r"></i>
                 <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="19" readonly/>&nbsp;&nbsp;
+                <input class="input-hasunit" type="text" value="<?= ceil($data['area_result']); ?>" style="opacity: 1;" readonly/>&nbsp;&nbsp;
                     <em class="cGray m2-unit">m
                         <i>2</i>
                     </em>
                 </span>
                 <span class="span-right">
-                    <i class="iconfont icone67a l"></i>4553</span>
+                <i class="iconfont icone67a l"></i><?= number_format($data['price_result'] * 2.0242, 0); ?></span>
             </a>
         </li>
-        <li>
-            <a href="javascript: void(0);">
-                <i class="media-object iconfont icone67e l"></i>
-                <label class="title">客&nbsp;&nbsp;&nbsp;&nbsp;卧 :</label>
-                <i class="iconfont icone60c r"></i>
-                <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="37" readonly/>&nbsp;&nbsp;
-                    <em class="cGray m2-unit">m
-                        <i>2</i>
-                    </em>
-                </span>
-                <span class="span-right">
-                    <i class="iconfont icone67a l"></i>8869</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript: void(0);">
-                <i class="media-object iconfont icone68a l"></i>
-                <label class="title">客&nbsp;&nbsp;&nbsp;&nbsp;厅 :</label>
-                <i class="iconfont icone60c r"></i>
-                <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="19" readonly/>&nbsp;&nbsp;
-                    <em class="cGray m2-unit">m
-                        <i>2</i>
-                    </em>
-                </span>
-                <span class="span-right">
-                    <i class="iconfont icone67a l"></i>4826</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript: void(0);">
-                <i class="media-object iconfont icone67c l"></i>
-                <label class="title">厨&nbsp;&nbsp;&nbsp;&nbsp;房 :</label>
-                <i class="iconfont icone60c r"></i>
-                <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="6" readonly/>&nbsp;&nbsp;
-                    <em class="cGray m2-unit">m
-                        <i>2</i>
-                    </em>
-                </span>
-                <span class="span-right">
-                    <i class="iconfont icone67a l"></i>2236</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript: void(0);">
-                <i class="media-object iconfont icone68b l"></i>
-                <label class="title">卫生间 :</label>
-                <i class="iconfont icone60c r"></i>
-                <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="12" readonly/>&nbsp;&nbsp;
-                    <em class="cGray m2-unit">m
-                        <i>2</i>
-                    </em>
-                </span>
-                <span class="span-right">
-                    <i class="iconfont icone67a l"></i>4473</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript: void(0);">
-                <i class="media-object iconfont icone67b l"></i>
-                <label class="title">阳&nbsp;&nbsp;&nbsp;&nbsp;台 :</label>
-                <i class="iconfont icone60c r"></i>
-                <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="9" readonly/>&nbsp;&nbsp;
-                    <em class="cGray m2-unit">m
-                        <i>2</i>
-                    </em>
-                </span>
-                <span class="span-right">
-                    <i class="iconfont icone67a l"></i>1876</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript: void(0);">
-                <i class="media-object iconfont icone680 l"></i>
-                <label class="title">其&nbsp;&nbsp;&nbsp;&nbsp;他 :</label>
-                <i class="iconfont icone60c r"></i>
-                <span class="list-input-box">
-                    <input class="input-hasunit" type="text" value="" readonly/>&nbsp;&nbsp;
-                    <em class="cGray m2-unit" style="visibility: hidden;">m
-                        <i>2</i>
-                    </em>
-                </span>
-                <span class="span-right">
-                    <i class="iconfont icone67a l"></i>2533</span>
-            </a>
-        </li>
+        <?php } ?>
     </ul>
     <?php //echo $this->render('_charge'); ?>
     <?php //echo $this->render('_recomend'); ?>
