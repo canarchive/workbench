@@ -1,11 +1,11 @@
 <?php
 
-namespace gallerycms\controllers;
+namespace demo\controllers;
 
 use common\components\UploadController;
-use gallerycms\models\Attachment;
+use demo\models\Attachment;
 
-class GallerycmsUploadController extends UploadController
+class DemoUploadController extends UploadController
 {
     public $enableCsrfValidation = false;
 

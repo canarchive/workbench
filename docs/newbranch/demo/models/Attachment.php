@@ -1,8 +1,8 @@
 <?php
 
-namespace gallerycms\models;
+namespace demo\models;
 
-use common\models\GallerycmsModel;
+use common\models\DemoModel;
 use common\models\Attachment as AttachmentBase;
 
 class Attachment extends AttachmentBase

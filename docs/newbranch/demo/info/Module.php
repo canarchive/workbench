@@ -1,6 +1,6 @@
 <?php
 
-namespace gallerycms\info;
+namespace demo\info;
 
 use Yii;
 
