@@ -14,9 +14,15 @@ class SpiderAbstract extends SpiderModel
         return file_exists($file);
     }
 
-    public function getContent($file)
+    public function getFile($file)
     {
         $file = Yii::$app->params['spiderPath'] . 'source/' . $file;
+        return $file;
+    }
+
+    public function getContent($file)
+    {
+        $file = $this->getFile($file);//Yii::$app->params['spiderPath'] . 'source/' . $file;
         $content = file_get_contents($file);
         return $content;
     }

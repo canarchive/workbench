@@ -17,7 +17,7 @@ class SiteController extends SpiderController
         $code = Yii::$app->request->get('code');
         $id = Yii::$app->request->get('site_id');
         $id = empty($id) ? 1 : $id;
-        $codes = ['eale', 'cmsad', 'sinfo'];
+        $codes = ['eale', 'cmsad', 'sinfo', 'jia'];
         if (!in_array($code, $codes)) {
             exit('code error');
         }
@@ -51,7 +51,7 @@ class SiteController extends SpiderController
         $code = Yii::$app->request->get('code');
         $id = Yii::$app->request->get('site_id');
         $id = empty($id) ? 1 : $id;
-        $codes = ['eale', 'cmsad'];
+        $codes = ['eale', 'cmsad', 'jia'];
         if (!in_array($code, $codes)) {
             exit('code error');
         }

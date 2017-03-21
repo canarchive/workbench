@@ -2,6 +2,10 @@
 
 INSERT INTO `ws_page` 
     (`site_code`, `code`, `name`, `name_source`, `url`, `is_mobile`, `created_at`, `description`, `isbak`) VALUES 
+    ('taopaipai', 'index', '首页', '首页', 'http://www.taopaipai.com/', '0', '20170205', '', 0),
+
+
+
     ('jizhu', 'hd', '极装苏宁', '推广页', 'http://www.jzjz.com/pc/activity.html', '0', '20170205', '', 0),
     ('jizhu', 'hdm', '极装苏宁', '推广页', 'https://m.jzjz.com/mobile/activity.html', '1', '20170205', '', 0),
 
