@@ -25,8 +25,8 @@ document.body.oncopy = function() {
                     <a href="/" target="_blank" title=""></a>
                     <span>|</span>浏览：
                     <b>36</b>-->
-                    <span>|</span>时间：
-                    <b><?= date('Y-m-d H:i:s', $info['created_at']); ?></b>
+                    <!--<span>|</span>时间：
+                    <b><?= date('Y-m-d H:i:s', $info['created_at']); ?></b>-->
                     <!--<div id='wyhd' style='display:none;margin-top: 35px;'>
                         <a href="javascript:void(0)" class="f_c_01af63" id="showthis">我要回答&gt;&gt;</a>
                     </div>-->
@@ -49,7 +49,8 @@ document.body.oncopy = function() {
                                 <b><?= $aInfo['memberInfo']['num_answer']; ?></b>
                                 <!--<span>|</span>被采纳数：
                                 <b>1</b>-->
-                                <b class="time"><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></b></div>
+								<!--<b class="time"><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></b>-->
+						    </div>
                         </div>
                     </li>
                 </ul>
@@ -70,7 +71,8 @@ document.body.oncopy = function() {
                                 <a href="javascript: void(0);" rel="nofollow" class="company_name"><?= $aInfo['memberInfo']['name']; ?></a>
                                 <div class="company_case">回答数：
                                     <b><?= $aInfo['memberInfo']['num_answer']; ?></b>
-                                    <b class="time"><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></b></div>
+									<!--<b class="time"><?= date('Y-m-d H:i:s', $aInfo['created_at']); ?></b>-->
+                                </div>
                             </div>
                         </li>
                     </ul>

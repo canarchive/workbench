@@ -28,7 +28,6 @@ $faviconUrl = isset($this->params['faviconUrl']) ? $this->params['faviconUrl'] :
 <meta name="applicable-device" content="mobile" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 <meta name="format-detection" content="address=no">
 <meta name="format-detection" content="telephone=no">
 <meta content="false" name="twcClient" id="twcClient" />

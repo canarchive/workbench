@@ -33,7 +33,7 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/plat8/_js-he
         由北京维纳亚科技有限公司斥巨资打造的兔班长装修网（<a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">www.tu8zhang.com</a>)是中国最具权威的装修建材行业平台，目前已在全国近百个大中城市开设分站，在超过110个一二线设立分支机构，入驻装饰企业超过10万家，帮助逾十万企业成功转型电子商务。
         </p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-        从2016年成立至今，兔班长网建立了完善的装饰企业品牌推广、形象维护体系，致力于扩大装饰企业在互联网的影响力，为企业带来高速的来自于互联网的产值增长，进而推动企业整体发展，有效地结合线上线下的影响力，最终为企业成功融入互联网时代的浪潮做出最强力的支持。
+        从2016年成立至今，兔班长装修网建立了完善的装饰企业品牌推广、形象维护体系，致力于扩大装饰企业在互联网的影响力，为企业带来高速的来自于互联网的产值增长，进而推动企业整体发展，有效地结合线上线下的影响力，最终为企业成功融入互联网时代的浪潮做出最强力的支持。
         </p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
         做中国最专业的家装门户，需要的是时间，对于兔班长人来说，敬业，职业，专业，用心，不断地提升自我，为客户提供优质的服务，帮助客户选择最优的装修公司，解决客户在家装中遇到的难题，是其发展过程中永远的话题。

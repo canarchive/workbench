@@ -11,4 +11,7 @@
         <a href="<?= Yii::getAlias('@m.gallerycmsurl'); ?>"><?= Yii::getAlias('@m.gallerycmsurl'); ?></a>&nbsp;
         <?= Yii::$app->params['siteIcpInfo']; ?>
     </div>
+    <div class="company-info">地址：北京市昌平区科星西路106号楼407室 </div>
+	<div class="company-info">联系电话：<a href="tel:<?= Yii::$app->params['siteHotline']; ?>"><?= Yii::$app->params['siteHotline']; ?></a>&nbsp;
+    </div>
 </div>
