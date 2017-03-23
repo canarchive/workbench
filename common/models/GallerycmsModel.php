@@ -47,7 +47,7 @@ class GallerycmsModel extends BaseModel
             $id = rand(1, 226542);
             $member = Member::findOne($id);
             $info->user_id = $id;
-            $info->update(false);
+            $info->update(false, ['user_id']);
             $numField = 'num_' . $type;
             $member->$numField = $member->$numField + 1;
             $member->update(false);

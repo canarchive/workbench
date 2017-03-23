@@ -9,6 +9,7 @@ class AskAnswer extends GallerycmsModel
 {
     use HouseTrait;
     public $memberInfo;
+    public $lastCreatedAt;
     
     public static function getDb()
     {
@@ -86,20 +87,55 @@ class AskAnswer extends GallerycmsModel
 		return $info;
 	}
 
-	public function getInfos($where, $limit = 50)
+	public function getInfos($qInfo)
 	{
-		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
+        $limit = $qInfo->num_answer;
+        $this->lastCreatedAt = $qInfo['created_at'];
+		$infos = $this->find()->where(['question_id' => $qInfo['id']])->indexBy('id')->orderBy(['id' => SORT_DESC])->all();
         $datas = ['infos' => []];
+        $i = 1;
 		foreach ($infos as $key => $info) {
             $info['memberInfo'] = $this->getMemberInfo($info, 'answer');
+
+            if (empty($info['created_at'])) {
+                $info['created_at'] = $this->getCreatedAt($info, $qInfo['created_at'], $i);
+            } else {
+                $this->lastCreatedAt = $info['created_at'];
+            }
+
             if ($info['is_best']) {
                 $datas['best'] = $info;
             } else {
                 $datas['infos'][] = $info;
             }
+            $i++;
 		}
 
         //$cache->set($keyCache, $infos);
 		return $datas;
 	}		
+
+    public function getCreatedAt($info, $qCreatedAt, $index)
+    {
+        if ($index == 1) {
+            $min = $qCreatedAt;
+            $max = $qCreatedAt + 60 * 5;
+        } elseif ($index <= 5) {
+            $min = max($qCreatedAt + 60 * 5, $this->lastCreatedAt);
+            $max = $qCreatedAt + 60 * 60;
+        } elseif ($index <= 10) {
+            $min = max($qCreatedAt + 60 * 60, $this->lastCreatedAt);
+            $max = $qCreatedAt + 60 * 1440;
+        } elseif ($index <= 25) {
+            $min = max($qCreatedAt + 60 * 1440, $this->lastCreatedAt);
+            $max = $qCreatedAt + 60 * 43200;
+        } else {
+            $max = $qCreatedAt + 60 * 57600;
+        }
+        $createdAt = rand($min, $max);
+        $this->lastCreatedAt = $createdAt;
+        $info->created_at = $createdAt;
+        $info->update(false);
+        return $createdAt;
+    }
 }

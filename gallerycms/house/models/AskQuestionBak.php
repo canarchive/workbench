@@ -8,4 +8,10 @@ class AskQuestionBak extends AskQuestion
     {
         return \Yii::$app->dbAsk;
     }	
+
+    public function updateInfo()
+    {
+        $info = $this->find()->one();
+        print_r($info);
+    }
 }

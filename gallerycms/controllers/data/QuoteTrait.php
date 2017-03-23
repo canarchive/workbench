@@ -14,7 +14,7 @@ trait QuoteTrait
     {
         $sql = '';
         //for ($j = 1; $j <= 9; $j++) {
-        $j = 9;
+        $j = 7;
 		$time = time() - 86400 * $j;
         for ($i = 1; $i <= 100; $i++) {
             $sql .= "UPDATE `wc_quote` SET `created_at` = {$time} + FLOOR(1 + (RAND() * 86400)) WHERE `status` = 1 AND `created_at` = 0 LIMIT 10;\n";

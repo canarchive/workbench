@@ -46,7 +46,7 @@ class AskController extends HouseController
         } else {
             $keyword = strip_tags(Yii::$app->request->get('keyword'));
         }
-        $where = [];//['status' => 1];
+        $where = ['status' => 1];
         $andWhere = ['like', 'name', $keyword];
 		$model = new AskQuestion();
         $orderBy = ['created_at' => SORT_DESC];
@@ -97,7 +97,6 @@ class AskController extends HouseController
         $sortInfos = $this->_checkSort($sort);
 
         $where = ['status' => 1, 'sort' => $sortInfos['codes']];
-        $where = ['sort' => $sortInfos['codes']];
 		$model = new AskQuestion();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 20, 'pagePreStr' => '_']);
@@ -127,7 +126,7 @@ class AskController extends HouseController
         $id = Yii::$app->getRequest()->get('id');
         $model = new AskQuestion();
 		$info = $model->getInfo($id);
-		if (empty($info)) {
+		if (empty($info) || $info['status'] != 1) {
             throw new NotFoundHttpException('NO found');
 		}
 
@@ -140,9 +139,9 @@ class AskController extends HouseController
 
         $info['memberInfo'] = $info->getMemberInfo($info, 'ask');
         $aModel = new AskAnswer();
-        $answerInfos = $aModel->getInfos(['question_id' => $info['id']]);
+        $answerInfos = $aModel->getInfos($info);//['question_id' => $info['id']]);
         //print_r($answerInfos);exit();
-        $infos = $model->getInfos(['sort' => $sortInfos['code']], 6);
+        $infos = $model->getInfos(['status' => 1, 'sort' => $sortInfos['code']], 6);
 		$datas = [
 			'info' => $info,
             'sortInfos' => $sortInfos,

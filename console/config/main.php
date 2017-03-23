@@ -21,5 +21,10 @@ return [
             ],
         ],
     ],
+    'modules' => [
+        'gallerycms' => [
+            'class' => 'console\gallerycms\Module',
+        ],
+    ],
     'params' => $params,
 ];

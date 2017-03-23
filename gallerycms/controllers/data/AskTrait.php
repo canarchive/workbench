@@ -5,16 +5,48 @@ namespace gallerycms\controllers\data;
 use Yii;
 use common\models\Company;
 use gallerycms\house\models\AskQuestion;
+use gallerycms\house\models\AskQuestionBak;
 use gallerycms\house\models\AskSort;
 use gallerycms\house\models\AskTag;
 
 trait AskTrait
 {
+    protected function testNum()
+    {
+        $model = new AskQuestion();
+        $infos = $model->find()->orderBy(['created_at' => SORT_DESC])->limit(20)->all();
+        foreach ($infos as $info) {
+            echo $info->num_answer . '--' . $info->num_answer_final . '<br />';
+            echo date('Y-m-d H:i:s', $info->created_at) . '<br />';
+            echo $info->getNumAnswer() . '<br /> <br />';
+        }
+
+    }
+
+    protected function aupdate()
+    {
+        $updateDatas = require(Yii::getAlias('@gallerycms') . '/config/update-datas.php');
+        $uData = $updateDatas['ask'];
+        $cTime = Yii::$app->params['currentTime'];
+        $index = date('W', $cTime) - 11;
+        $data = $uData[$index];
+        
+        $cMinute = $cTime - strtotime(date('Y-m-d', $cTime));
+        $cMinute = floor($cMinute / 60);
+        echo $cMinute . '<br />';
+        $hit = $cMinute % $data['minute'];
+        //if ($hit === 0) {
+            $model = new AskQuestion();
+            $model->updateInfo();
+        //}
+    }
+
     protected function uq()
     {
         $sorts = AskSort::find()->indexBy('code')->asArray()->all();
         $sql = '';
-		$time = time() - 86400 * 6;
+		$time = time() - 86400 * 4;
+        //echo date('Y-m-d', $time);exit();
         foreach ($sorts as $sort => $sortInfo) {
             if ($sortInfo['parent_code'] == '') {
                 continue;

@@ -2,6 +2,7 @@
 
 namespace gallerycms\house\models;
 
+use Yii;
 use yii\helpers\ArrayHelper;
 use common\models\GallerycmsModel;
 
@@ -216,4 +217,14 @@ class Quote extends GallerycmsModel
         //print_r($infos);
 		return $infos;
 	}
+
+    public function updateInfo($num)
+    {
+        $info = $this->find()->where(['status' => 0])->orderBy(['orderlist' => SORT_DESC])->limit($num)->one();
+        $info->created_at = Yii::$app->params['currentTime'];
+        print_r($info);
+        $info->status = 1;
+        //$info->update(false);
+        return true;
+    }
 }

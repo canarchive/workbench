@@ -2,7 +2,8 @@
 $footerNavs = $this->context->footerNavs;
 ?>
 <div class="footer" id="footerHeight">
-    <?php if (isset($showFooterTop) && $showFooterTop) { ?>
+    <?php //if (isset($showFooterTop) && $showFooterTop) { ?>
+    <?php if (false) { ?>
     <div class="footer_top">
         <div class="footer_top_container">
             <div class="ftc_left">
