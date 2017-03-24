@@ -1,12 +1,11 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\merchant;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
 
-Trait JiaShowTrait
+Trait TraitShow
 {
-
     public function showSpider($siteCode)
     {
         $where = ['source_site_code' => $siteCode, 'source_status' => 0];

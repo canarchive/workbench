@@ -1,16 +1,14 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\merchant;
 
 use Yii;
-use Symfony\Component\DomCrawler\Crawler;
-use spider\models\SpiderAbstract;
-use Overtrue\Pinyin\Pinyin;
+use spider\models\AbstractModel;
 
-class Jia extends SpiderAbstract
+class Base extends AbstractModel
 {
-    use JiaPreTrait;
-    use JiaListTrait;
-    use JiaShowTrait;
+    use TraitPre;
+    use TraitList;
+    use TraitShow;
 
     private $configInfo;
 
@@ -24,8 +22,8 @@ class Jia extends SpiderAbstract
      */
     public function __construct()
     {
-        $file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
-        $this->configInfo = require $file;
+        //$file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
+        //$this->configInfo = require $file;
     }
 
     protected function _getListInfos($where, $limit = 100)

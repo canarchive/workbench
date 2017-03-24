@@ -14,29 +14,25 @@ class SiteController extends SpiderController
 
     public function actionSpider()
     {
-        $code = Yii::$app->request->get('code');
-        $codes = ['eale', 'cmsad', 'sinfo', 'jia'];
-        if (!in_array($code, $codes)) {
-            exit('code error');
-        }
+        $this->_checkCode();
 
         $urlBase = Yii::getAlias('@spiderurl');
         $content = '<h3>采集操作</h3>';
-        $configFile = "{$code}/config.php";
+        $configFile = "{$this->code}/config.php";
         $actions = require Yii::getAlias('@app') . '/config/' . $configFile;
         $spiderActions = $actions['spiderActions'];
         foreach ($spiderActions as $action => $info) {
-            $url = $urlBase . "/spider/spider.html?code={$code}&action={$action}";
+            $url = $urlBase . "/spider/spider.html?code={$this->code}&action={$action}";
             $content .= "<a href='{$url}' target='_blank'>{$info['name']}</a><br />";
         }
 
-        //$downUrl = $urlBase . "/{$code}/spider/file-down.html?code={$code}";
-        $downUrl = $urlBase . "/spider/file-down.html?code={$code}";
+        //$downUrl = $urlBase . "/{$this->code}/spider/file-down.html?code={$this->code}";
+        $downUrl = $urlBase . "/spider/file-down.html?code={$this->code}";
         //$content .= "<a href='{$downUrl}' target='_blank'>下载文件</a><br />";
         $content .= '<br /><h3>信息处理</h3>';
         $dealActions = $actions['dealActions'];
         foreach ($dealActions as $action => $info) {
-            $url = $urlBase . "/spider/deal.html?code={$code}&action={$action}";
+            $url = $urlBase . "/spider/deal.html?code={$this->code}&action={$action}";
             $content .= "<a href='{$url}' target='_blank'>{$info['name']}</a><br />";
         }
 

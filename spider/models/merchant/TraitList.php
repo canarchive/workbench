@@ -1,12 +1,12 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\merchant;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
 use spider\models\SpiderAbstract;
 use Overtrue\Pinyin\Pinyin;
 
-Trait JiaListTrait
+Trait TraitList
 {
     public function infosListSpider($siteCode)
     {

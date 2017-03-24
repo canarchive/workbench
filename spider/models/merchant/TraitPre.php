@@ -1,11 +1,11 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\merchant;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
 use Overtrue\Pinyin\Pinyin;
 
-Trait JiaPreTrait
+Trait TraitPre
 {
     public function inputList()
     {

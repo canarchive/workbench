@@ -8,6 +8,13 @@ use common\models\SpiderModel;
 
 class Dispatch extends SpiderModel
 {
+    public $code;
+
+    public static function tableName()
+    {
+        return '{{%page}}';
+    }
+
     public function spider($action)
     {
         $object = $this->getSpiderObject();
@@ -24,9 +31,7 @@ class Dispatch extends SpiderModel
 
     protected function getSpiderObject()
     {
-        $code = $this->code;
-        $class = ucfirst($code);
-        $class = "spider\models\\{$this->type}\\{$class}";
+        $class = "spider\models\\{$this->code}\Base";
         $object = new $class();
 
         return $object;
@@ -86,40 +91,4 @@ class Dispatch extends SpiderModel
             //print_r($info);exit();
         }
     }
-       public function fileCheck($siteCode)
-       {
-        $model = new Attachment();
-        $where = ['source_status_ext' => 0];
-        $infos = $model->find()->where($where)->limit(10000)->all();
-               //$pathBase = Yii::$app->params['pathParams']['default'] . '/';
-               $localBase = 'http://sj.shedaojia.com/';
-               $pathBase = '/data/htmlwww/upload/';
-               $exists = $noexists = [];
-        foreach ($infos as $info) {
-                       $filepath = $info['filepath'];
-                       $file = $pathBase . $filepath;
-                       //echo "<a href='{$localBase}{$filepath}' target='_blank'>{$file}</a>--<a href='{$info['source_url']}' target='_blank'>源文件</a><br />";
-
-                       if (file_exists($file)) {
-                               $exists[] = $info->id;
-                       } else {
-                               $noexists[] = $info->id;
-                       }
-               }
-               $existStr = implode($exists, ',');
-               $noexistStr = implode($noexists, ',');
-               $sql = $sqlNo = '';
-               if ($existStr) {
-                       $sql = "UPDATE `ws_attachment` SET `source_status_ext` = 1 WHERE `id` IN ({$existStr})";
-            $this->db->createCommand($sql)->execute();
-               }
-               if ($noexistStr) {
-                       $sqlNo = "UPDATE `ws_attachment` SET `source_status_ext` = -1 WHERE `id` IN ({$noexistStr})";
-            $this->db->createCommand($sqlNo)->execute();
-               }
-               echo $sql . '<br />';
-               echo $sqlNo . '<br />';
-
-               echo count($exists) . '-no-' . count($noexists);
-       }
 }
