@@ -22,16 +22,9 @@ class Base extends AbstractModel
      */
     public function __construct()
     {
+        $this->code = 'merchant';
         //$file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
         //$this->configInfo = require $file;
-    }
-
-    protected function _getListInfos($where, $limit = 100)
-    {
-        $model = new Listurlnews();
-        $infos = $model->find()->where($where)->limit($limit)->all();
-
-        return $infos;
     }
 
     protected function _getShowInfos($where, $limit = 100)

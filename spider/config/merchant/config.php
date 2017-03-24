@@ -1,12 +1,10 @@
 <?php
 return [
     'spiderActions' => [
-        'tagSpider' => ['name' => '标签'],
-        'tagDeal' => ['name' => '标签'],
-        'inputList' => ['name' => '导入列表url'],
+        'citylist' => ['name' => '地图城市列表'],
+        'listSpider' => ['name' => '列表页采集'],
     ],
     'dealActions' => [
-        'infoList' => ['name' => '列表'],
-        'show' => ['name' => '详情'],
+        'listDeal' => ['name' => '列表页处理'],
     ],
 ];

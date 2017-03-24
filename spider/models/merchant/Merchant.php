@@ -4,11 +4,11 @@ namespace spider\models\cmsad;
 
 use common\models\GallerycmsModel;
 
-class Article extends GallerycmsModel
+class Merchant extends GallerycmsModel
 {
     public static function tableName()
     {
-        return '{{%article}}';
+        return '{{%merchant}}';
     }
 
     /**
@@ -24,7 +24,7 @@ class Article extends GallerycmsModel
 
     public function showFile()
     {
-        $file = "{$this->source_site_code}/show/{$this->category_code_first}/{$this->category_code}/{$this->source_id}.html";
+        $file = "merchant/{$this->source_site_code}/show/{$this->source_city_code}/{$this->source_id}.html";
         return $file;
     }
 }

@@ -28,14 +28,6 @@ class Jia extends SpiderAbstract
         $this->configInfo = require $file;
     }
 
-    protected function _getListInfos($where, $limit = 100)
-    {
-        $model = new Listurlnews();
-        $infos = $model->find()->where($where)->limit($limit)->all();
-
-        return $infos;
-    }
-
     protected function _getShowInfos($where, $limit = 100)
     {
         $model = new Article();

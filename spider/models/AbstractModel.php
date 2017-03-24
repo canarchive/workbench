@@ -7,6 +7,7 @@ use yii\helpers\FileHelper;
 
 class AbstractModel extends SpiderModel
 {
+    public $code;
 
     public function fileExist($file)
     {
@@ -37,15 +38,23 @@ class AbstractModel extends SpiderModel
         return file_put_contents($logFile, $content);
     }
 
+    protected function _getListInfos($where, $limit = 100)
+    {
+        $class = "\spider\models\\{$this->code}\ListModel";
+        $model = new $class();
+        $infos = $model->find()->where($where)->limit($limit)->all();
+
+        return $infos;
+    }
+
     protected function _listSpider($infos)
     {
         foreach ($infos as $info) {
             $fileSuffix = '';
             $file = $info->listFile();
             $info->status = 1;
-            $info->updated_at = Yii::$app->params['currentTime'];
             if ($this->fileExist($file)) {
-                //echo $file . '<br />';
+                echo $file . '<br />';
                 $info->update();
                 continue;
             }

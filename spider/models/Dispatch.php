@@ -19,14 +19,14 @@ class Dispatch extends SpiderModel
     {
         $object = $this->getSpiderObject();
         $method = $action;
-        return $object->$method($this->code);
+        return $object->$method();
     }
 
     public function deal($action)
     {
         $object = $this->getSpiderObject();
         $method = $action;
-        return $object->$method($this->code);
+        return $object->$method();
     }
 
     protected function getSpiderObject()
