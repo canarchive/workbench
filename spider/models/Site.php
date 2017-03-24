@@ -30,6 +30,16 @@ class Site extends SpiderModel
         return $object->$method($this->code);
     }
 
+    protected function getSpiderObject()
+    {
+        $code = $this->code;
+        $class = ucfirst($code);
+        $class = "spider\models\\{$this->type}\\{$class}";
+        $object = new $class();
+
+        return $object;
+    }
+
     public function fileDown()
     {
         $attachmentClass = "\spider\models\\{$this->type}\Attachment";
@@ -83,16 +93,6 @@ class Site extends SpiderModel
             //echo "<a href='{$localBase}{$filepath}' target='_blank'>{$file}</a>--<a href='{$url}' target='_blank'>源文件</a><br />";
             //print_r($info);exit();
         }
-    }
-
-    protected function getSpiderObject()
-    {
-        $code = $this->code;
-        $class = ucfirst($code);
-        $class = "spider\models\\{$this->type}\\{$class}";
-        $object = new $class();
-
-        return $object;
     }
        public function fileCheck($siteCode)
        {

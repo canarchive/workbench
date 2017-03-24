@@ -32,4 +32,12 @@ return [
         'code' => 'spread50j',
         'name' => '50家',
     ],
+    'taopaipai' => [
+        'code' => 'shoot',
+        'name' => '淘拍拍',
+    ],
+    'heiguang' => [
+        'code' => 'shooth',
+        'name' => '黑光',
+    ],
 ];

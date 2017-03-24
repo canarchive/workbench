@@ -36,12 +36,12 @@ class SpiderController extends Controller
 
     protected function siteInfo()
     {
-        $siteId = Yii::$app->request->get('id');
-        if (empty($siteId)) {
+        $code = Yii::$app->request->get('code');
+        if (empty($code)) {
             exit('param error');
         }
 
-        $siteInfo = Site::findOne($siteId);
+        $siteInfo = Site::find()->where(['code' => $code])->one();
         if (empty($siteInfo)) {
             exit('info empty');
         }

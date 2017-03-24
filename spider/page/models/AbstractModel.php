@@ -36,7 +36,7 @@ class AbstractModel extends SpiderAbstract
     {
         $urlBase = str_replace(['"', "'", ' '], ['', '', ''], $urlBase); 
         $url = strpos($urlBase, '//') === 0 ? 'http:' . $urlBase : $urlBase;
-        echo $url . '<br />';
+        //echo $url . '<br />';
         if (strpos($url, 'http') !== false) {
             return $url;
         }
@@ -52,7 +52,9 @@ class AbstractModel extends SpiderAbstract
         }
 
         $last = substr($this->url, -1);
-        $urlPre = $last == '/' ? $this->url : dirname($this->url) . '/';
+        $posNum = strripos($this->url, '/');
+        $baseUrlPre = $posNum == 6 ? $this->url : dirname($this->url);
+        $urlPre = $last == '/' ? $this->url : $baseUrlPre . '/';
         if (substr($url, 0, 1) != '.' || substr($url, 0, 2) == './') {
             $url = $urlPre . $url;
             //echo "<a href='{$url}' target='_blank'>{$url}</a>--{$urlBase}==<a href='{$this->url}' target='_blank'>{$this->url}</a><br />";
