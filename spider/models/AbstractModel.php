@@ -5,7 +5,7 @@ use Yii;
 use common\models\SpiderModel;
 use yii\helpers\FileHelper;
 
-class SpiderAbstract extends SpiderModel
+class AbstractModel extends SpiderModel
 {
 
     public function fileExist($file)

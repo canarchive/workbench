@@ -1,46 +1,30 @@
 <?php
-namespace spider\models\news;
 
-use Yii;
-use Symfony\Component\DomCrawler\Crawler;
-use spider\models\SpiderAbstract;
-use Overtrue\Pinyin\Pinyin;
+namespace spider\models\cmsad;
 
-class Merchant extends SpiderAbstract
+use common\models\GallerycmsModel;
+
+class Article extends GallerycmsModel
 {
-    //use MerchantPreTrait;
-    //use MerchantListTrait;
-    //use MerchantShowTrait;
-
-    private $configInfo;
-
     public static function tableName()
     {
-        return '{{%site}}';
+        return '{{%article}}';
     }
 
     /**
-     * 构造方法，初始化采集网站属性
+     * @inheritdoc
      */
-    public function __construct()
+    public function behaviors()
     {
-        $file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
-        $this->configInfo = require $file;
+        $behaviors = [
+            $this->timestampBehaviorComponent,
+        ];
+        return $behaviors;
     }
 
-    protected function _getListInfos($where, $limit = 100)
+    public function showFile()
     {
-        $model = new Listurlnews();
-        $infos = $model->find()->where($where)->limit($limit)->all();
-
-        return $infos;
-    }
-
-    protected function _getShowInfos($where, $limit = 100)
-    {
-        $model = new Article();
-        $infos = $model->find()->where($where)->limit($limit)->all();
-
-        return $infos;
+        $file = "{$this->source_site_code}/show/{$this->category_code_first}/{$this->category_code}/{$this->source_id}.html";
+        return $file;
     }
 }

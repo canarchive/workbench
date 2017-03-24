@@ -6,16 +6,8 @@ use Yii;
 use yii\helpers\FileHelper;
 use common\models\SpiderModel;
 
-class Site extends SpiderModel
+class Dispatch extends SpiderModel
 {
-    public function behaviors()
-    {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
-    }
-
     public function spider($action)
     {
         $object = $this->getSpiderObject();
