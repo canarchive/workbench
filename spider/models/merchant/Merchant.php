@@ -1,14 +1,20 @@
 <?php
 
-namespace spider\models\cmsad;
+namespace spider\models\merchant;
 
-use common\models\GallerycmsModel;
+use Yii;
+use common\models\SpiderModel;
 
-class Merchant extends GallerycmsModel
+class Merchant extends SpiderModel
 {
     public static function tableName()
     {
         return '{{%merchant}}';
+    }
+
+    public static function getDb()
+    {
+        return Yii::$app->dbMerchant;
     }
 
     /**

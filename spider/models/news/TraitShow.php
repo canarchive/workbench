@@ -4,7 +4,7 @@ namespace spider\models\news;
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
 
-Trait JiaShowTrait
+Trait TraitShow
 {
 
     public function showSpider($siteCode)

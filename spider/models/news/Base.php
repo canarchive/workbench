@@ -3,14 +3,14 @@ namespace spider\models\news;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
-use spider\models\SpiderAbstract;
+use spider\models\AbstractModel;
 use Overtrue\Pinyin\Pinyin;
 
-class Jia extends SpiderAbstract
+class Base extends AbstractModel
 {
-    use JiaPreTrait;
-    use JiaListTrait;
-    use JiaShowTrait;
+    use TraitPre;
+    use TraitList;
+    use TraitShow;
 
     private $configInfo;
 
@@ -24,8 +24,9 @@ class Jia extends SpiderAbstract
      */
     public function __construct()
     {
-        $file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
-        $this->configInfo = require $file;
+        $this->code = 'news';
+        //$file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
+        //$this->configInfo = require $file;
     }
 
     protected function _getShowInfos($where, $limit = 100)

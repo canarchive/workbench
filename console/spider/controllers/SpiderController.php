@@ -4,45 +4,38 @@ namespace console\spider\controllers;
 
 use Yii;
 use yii\console\Controller;
-use spider\models\Site as Site;
+use spider\models\Dispatch;
 
 class SpiderController extends Controller
 {
-    public function actionCompanylist()
+    public function actionSpider($code, $action)
     {
-        $siteInfo = $this->siteInfo();
-        $siteInfo->companylist();
-    }
-
-    public function actionSpider($siteId, $action)
-    {
-        $siteInfo = $this->siteInfo($siteId);
-        $siteInfo->spider($action);
+        $dispatch = $this->getDispatch($code);
+        $dispatch->spider($action);
     }
 
     public function actionDeal($siteId, $action)
     {
-        $siteInfo = $this->siteInfo($siteId);
-        $siteInfo->deal($action);
+        $dispatch = $this->getDispatch();
+        $action = Yii::$app->request->get('action');
+        $dispatch->deal($action);
     }
 
-    public function actionFileDown($siteId)
+    public function actionFileDown()
     {
-        $siteInfo = $this->siteInfo($siteId);
-        $siteInfo->fileDown();
+        $dispatch = $this->getDispatch();
+        $dispatch->fileDown();
     }
 
-    protected function siteInfo($siteId)
+    protected function getDispatch($code)
     {
-        if (empty($siteId)) {
-            exit('param error');
+        $code = $code;
+        $codes = require(Yii::getAlias('@spider') . '/config/params-code.php');
+        if (!in_array($code, array_keys($codes))) {
+            exit('code error');
         }
-
-        $siteInfo = Site::findOne($siteId);
-        if (empty($siteInfo)) {
-            exit('info empty');
-        }
-
-        return $siteInfo;
+        $dispatch = new Dispatch();
+        $dispatch->code = $code;
+        return $dispatch;
     }
 }

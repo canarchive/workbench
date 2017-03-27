@@ -19,7 +19,7 @@ Trait TraitList
     public function listDeal()
     {
         $where = ['status' => 1];
-        $infos = $this->_getListInfos($where, 200);
+        $infos = $this->_getListInfos($where, 50);
         foreach ($infos as $info) {
             $file = $info->listFile();
             $info->status = 2;
@@ -39,13 +39,21 @@ Trait TraitList
                 $name = trim($elem->text());
                 $sourceUrl = trim($elem->attr('href'));
                 $cCode = basename(rtrim($sourceUrl, '/'));
-                $sourceUrl = $sourceUrl . 'B12/';
-                $sql .= "('mapbar', '{$sourceUrl}', '{$cCode}', '{$name}'),<br />";
+                $data = [
+                    'name' => $name,
+                    'name_full' => $name,
+                    'source_city_code' => $info['source_city_code'],
+                    'city_code' => $info['city_code'],
+                    'source_site_code' => $info['site_code'],
+                    'source_id' => $cCode,
+                    'source_url' => $sourceUrl,
+                ];
+                $model = new Merchant($data);
+                $model->insert(false);
                 $spiderNum++;
             });
             $info->spider_num = $spiderNum;
             $info->status = 2;
-            //print_r($info);exit();
             $info->update(false);
         }
     }

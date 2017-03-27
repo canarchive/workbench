@@ -38,7 +38,7 @@ class AbstractModel extends SpiderModel
         return file_put_contents($logFile, $content);
     }
 
-    protected function _getListInfos($where, $limit = 100)
+    protected function _getListInfos($where, $limit = 50)
     {
         $class = "\spider\models\\{$this->code}\ListModel";
         $model = new $class();

@@ -3,14 +3,13 @@ namespace spider\models\news;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
-use spider\models\SpiderAbstract;
 use Overtrue\Pinyin\Pinyin;
 
-Trait JiaListTrait
+Trait TraitList
 {
-    public function infosListSpider($siteCode)
+    public function listSpider()
     {
-        $where = ['site_code' => $siteCode, 'status' => 0];
+        $where = ['status' => 0];
         $infos = $this->_getListInfos($where);
         $this->_listSpider($infos);
     }

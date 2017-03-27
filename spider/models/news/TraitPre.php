@@ -5,7 +5,7 @@ use Yii;
 use Symfony\Component\DomCrawler\Crawler;
 use Overtrue\Pinyin\Pinyin;
 
-Trait JiaPreTrait
+Trait TraitPre
 {
     public function inputList()
     {
