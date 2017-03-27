@@ -222,9 +222,8 @@ class Quote extends GallerycmsModel
     {
         $info = $this->find()->where(['status' => 0])->orderBy(['orderlist' => SORT_DESC])->limit($num)->one();
         $info->created_at = Yii::$app->params['currentTime'];
-        print_r($info);
         $info->status = 1;
-        //$info->update(false);
+        $info->update(false);
         return true;
     }
 }

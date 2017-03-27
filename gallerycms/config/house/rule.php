@@ -1,5 +1,22 @@
 <?php
 return \gallerycms\components\RuleFormat::formatRule([
+    'sitemap' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '.xml',
+            'pattern' => '/sitemap',
+            'route' => '/house/sitemap/index', 
+        ],
+    ],
+    'sitemap-elems' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'suffix' => '.xml',
+            'pattern' => '/sitemap_<sort:[a-z]+><page:_[0-9]+>',
+            'route' => '/house/sitemap/elems', 
+    		'defaults' => ['page' => '_1'],
+        ],
+    ],
     'signup' => [
         'hosts' => ['base', 'm', '3g', 'wap', 'merchant'],
         'data' => [

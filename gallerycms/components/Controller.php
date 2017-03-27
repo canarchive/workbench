@@ -16,7 +16,7 @@ class Controller extends CommonController
         parent::init();
 
         $url = Yii::$app->request->url;
-        if (strpos($url, '.html') === false) {
+        if (strpos($url, '.html') === false && strpos($url, '.xml') === false) {
             $lastChar = substr($url, -1);
             if ($lastChar != '/') {
                 $url = Yii::$app->request->hostInfo . $url . '/';

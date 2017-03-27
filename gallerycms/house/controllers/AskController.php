@@ -164,7 +164,7 @@ class AskController extends HouseController
         $sortInfos = AskSort::find()->indexBy('code')->asArray()->all();
         $cInfo = isset($sortInfos[$code]) ? $sortInfos[$code] : [];
         if (empty($cInfo)) {
-            //throw new NotFoundHttpException('NO found');
+            throw new NotFoundHttpException('NO found');
         }
         
         $parentCode = $cInfo['parent_code'];

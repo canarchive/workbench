@@ -1,6 +1,11 @@
 <?php 
 return [
     'site-index' => [
+		'name' => '首页',
+		'pc-url' => '/',
+		'mobile-url' => '/',
+    ],
+    'site-index' => [
 		'name' => '分站首页',
 		'pc-url' => '/beijing/',
 		'mobile-url' => '/beijing/',
@@ -41,31 +46,37 @@ return [
 		'mobile-url' => '/beijing/quote_show_1.html',
     ],
 	'aboutus-desc' => [
+        'in-sitemap' => true,
 		'name' => '关于我们',
 		'pc-url' => '/desc.html',
 		'mobile-url' => '/desc.html',
 	],
 	'aboutus-culture' => [
+        'in-sitemap' => true,
 		'name' => '企业文化',
 		'pc-url' => '/culture.html',
 		//'mobile-url' => '/info-aboutus.html',
     ],
 	'aboutus-contactus' => [
+        'in-sitemap' => true,
 		'name' => '联系我们',
 		'pc-url' => '/contactus.html',
 		//'mobile-url' => '/info-aboutus.html',
     ],
 	'aboutus-guestbook' => [
+        'in-sitemap' => true,
 		'name' => '意见反馈',
 		'pc-url' => '/guestbook.html',
 		'mobile-url' => '/guestbook.html',
     ],
 	'aboutus-friendlink' => [
+        'in-sitemap' => true,
 		'name' => '友情链接',
 		'pc-url' => '/friendlink.html',
 		//'mobile-url' => '/info-aboutus.html',
     ],
 	'aboutus-statement' => [
+        'in-sitemap' => true,
 		'name' => '法律声明',
 		'pc-url' => '/statement.html',
 		//'mobile-url' => '/info-aboutus.html',

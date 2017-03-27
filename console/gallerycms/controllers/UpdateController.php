@@ -23,10 +23,10 @@ class UpdateController extends Controller
     {
         $data = $this->baseInfo('quote');
 
-        //if ($data['hit'] === 0) {
+        if ($data['hit'] === 0) {
             $model = new Quote();
             $model->updateInfo($data['num']);
-        //}
+        }
     }
 
     protected function baseInfo($sort)
