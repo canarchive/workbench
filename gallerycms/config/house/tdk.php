@@ -18,7 +18,7 @@ return [
     'merchant-index' => [
         'title' => '{{CITYNAME}}装修公司大全_{{CITYNAME}}装饰公司推荐_{{CITYNAME}}家装公司汇总-{{CITYNAME}}兔班长装修网',
         'keyword' => '{{CITYNAME}}装修公司大全,{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司大全',
-        'description' => '一起装修网网罗了{{CITYNAME}}十大装修公司排名，{{CITYNAME}}家装公司大全，{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司推荐，让您快速找到最适合自己的装修公司。',
+        'description' => '兔班长装修网网罗了{{CITYNAME}}十大装修公司排名，{{CITYNAME}}家装公司大全，{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司推荐，让您快速找到最适合自己的装修公司。',
     ],
     // 找装修公司交叉搜索： {类别}：
     'merchant-index-decoration_sort' => [

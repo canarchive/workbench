@@ -4,13 +4,19 @@ namespace gallerycms\house\controllers;
 use Yii;
 use gallerycms\components\HouseController;
 use gallerycms\merchant\models\Merchant;
-use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\Quote;
 use common\components\Sitemap;
+use gallerycms\house\controllers\sitemap\TraitAsk;
+use gallerycms\house\controllers\sitemap\TraitQuote;
+use gallerycms\house\controllers\sitemap\TraitMerchant;
 
 class SitemapController extends HouseController
 {
+    use TraitAsk;
+    use TraitQuote;
+    use TraitMerchant;
     public $domain;
+    public $numPage = 10;//40000;
 
     public function init()
     {
@@ -26,8 +32,7 @@ class SitemapController extends HouseController
         $sitemapData = $this->renderPartial('@common/views/sitemap-index', [
             'urls' => $datas,
         ]);
-        echo $sitemapData;
-        //return $this->_sendSitemap($sitemapData);
+        return $this->_sendSitemap($sitemapData);
     }
 
     public function actionElems()
@@ -38,11 +43,11 @@ class SitemapController extends HouseController
         
         $method = "{$sort}Urls";
         $urls = $this->$method($page);
-        $this->setViewPath('@common/views/sitemap-index');
-        $sitemapData = $this->renderPartial('@common/views/sitemap-index', [
+        $this->setViewPath('@common/views/sitemap');
+        $sitemapData = $this->renderPartial('@common/views/sitemap', [
             'urls' => $urls,
         ]);
-        echo $sitemapData;
+        return $this->_sendSitemap($sitemapData);
     }
 
     protected function _sitemapIndex()
@@ -53,20 +58,11 @@ class SitemapController extends HouseController
         ];
 
         $askShowUrls = $this->_askShowUrlIndex();
-        $datas = array_merge($datas, $askShowUrls);
+        $quoteShowUrls = $this->_quoteShowUrlIndex();
+        $merchantShowUrls = $this->_merchantShowUrlIndex();
+        $datas = array_merge($datas, $askShowUrls, $quoteShowUrls, $merchantShowUrls);
 
         return $datas;
-    }
-
-    protected function sitemap()
-    {
-        $sitemap = new Sitemap();
-        $sitemap->models = $this->_sitemapModels();
-        $sitemap->urls = $this->_sitemapUrls();
-        $sitemap->enableGzip = true; // default is false
-        $sitemap->cacheExpire = 1; // 1 second. Default is 24 hours
-        return $sitemap;
-
     }
 
     protected function _sitemapUrls()
@@ -102,86 +98,6 @@ class SitemapController extends HouseController
         }
 
         return $urls;
-    }
-
-    protected function _sitemapModels()
-    {
-        return [];
-    }
-
-    protected function _infoUrls()
-    {
-        $this->domain = $this->isMobile ? Yii::getAlias('@m.ad.cmsurl') : Yii::getAlias('@ad.cmsurl');
-
-        $showUrls = [];
-        $model = new Article();
-        //$infos = $model->find()->select('id, category_id, updated_at')->where(['status' => 1])->asArray()->limit(200)->all();
-        $infos = $model->find()->select('id, category_id, updated_at')->where(['status' => 1])->asArray()->all();
-        if (empty($infos)) {
-            return [];
-        }
-
-        $catdirs = [0 => count($infos)];
-        $modelCategory = new Category();
-        $cInfos = $modelCategory->getDatas('id');
-        foreach ($infos as $info) {
-            $urls[] = [
-                'loc' => $this->domain . '/info/' . $info['id'] . '.html',
-                'lastmod' => intval($info['updated_at']),
-            ];
-            $catId = $info['category_id'];
-            $catdirs[$catId] = isset($catdirs[$catId]) ? $catdirs[$catId] + 1 : 1;
-
-            $pId = $cInfos[$catId]['parent_id'];
-            $catdirs[$pId] = isset($catdirs[$pId]) ? $catdirs[$pId] + 1 : 1;
-        }
-
-        $listUrls = [];
-        foreach ($catdirs as $catId => $num) {
-            $pages = ceil($num / 10);
-            $base = $catId == 0 ? '/info' : '/info_' . $cInfos[$catId]['catdir'];
-            for ($i = 1; $i <= $pages; $i++) {
-                $listUrls[] = [
-                    'loc' => $i == 1 ? "$this->domain{$base}/" : "{$this->domain}{$base}_{$i}/",
-                    'lastmod' => intval(time()),
-                ];
-            }
-        }
-        $urls = array_merge($listUrls, $urls);
-
-        return $urls;
-
-    }
-
-    protected function _askShowUrlIndex()
-    {
-        $model = new AskQuestion();
-        $count = $model->find()->where(['status' => 1])->count();
-        $num = ceil($count / 40000);
-        $datas = [];
-        for ($i = 1; $i <= $num; $i++) {
-            $datas['askShowUrls' . $i] = [
-                'loc' => "{$this->domain}/sitemap_askshow_{$i}.xml",
-                'lastmod' => Yii::$app->params['currentTime'],
-            ];
-        }
-
-        return $datas;
-    }
-
-    protected function askUrls($page = 1)
-    {
-        $model = new AskQuestion();
-        $infos = $model->find()->select('id', 'created_at')->where(['status' => 1])->offset(10 * ($page - 1))->limit(10)->all();
-        $datas = [];
-        foreach ($infos as $info) {
-            $datas[$info['id']] = [
-                'loc' => "{$this->domain}/askshow_{$info['id']}.html",
-                'lastmod' => $info['created_at'],
-            ];
-        }
-
-        return $datas;
     }
 
     protected function _sendSitemap($content)

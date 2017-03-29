@@ -116,7 +116,7 @@ class AskController extends HouseController
 		$dataTdk = ['{{SORTSTR}}' => $sortStr, '{{PAGESTR}}' => $pageStr];
             $tdkInfo['title'] = $sortInfos['cInfo']['meta_title'];
             $tdkInfo['keyword'] = $sortInfos['cInfo']['meta_keyword'];
-            $tdkInfo['desription'] = $sortInfos['cInfo']['meta_description'];
+            $tdkInfo['description'] = $sortInfos['cInfo']['meta_description'];
 		$this->getTdkInfos('ask-list', $dataTdk, $tdkInfo);
 		return $this->render('list', $datas);
 	}
