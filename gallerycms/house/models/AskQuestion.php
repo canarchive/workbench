@@ -100,7 +100,7 @@ class AskQuestion extends GallerycmsModel
 
 	public function getInfos($where, $limit = 100)
 	{
-		$infos = $this->find()->select('id, name, sort, num_answer, created_at')->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
+		$infos = $this->find()->select('id, name, sort, num_answer, num_answer_final, created_at')->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
             $info['num_answer'] = $info->getNumAnswer();
 		}
@@ -153,7 +153,7 @@ class AskQuestion extends GallerycmsModel
         $return = min($return, $this->num_answer_final);
         if ($return != $this->num_answer) {
             $this->num_answer = $return;
-            //$this->update(false);
+            $this->update(false);
         }
         return $return;
     }

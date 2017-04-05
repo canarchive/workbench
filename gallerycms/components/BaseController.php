@@ -15,6 +15,8 @@ class BaseController extends Controller
     public $mHosts;
     public $clientType;
     public $layout = '@gallerycms/views/main-pc';
+	public $wapMappingUrl;
+	public $threegMappingUrl;
     public $currentCityCode;
     public $currentCityName;
 	public $footerStatStr;
@@ -39,6 +41,8 @@ class BaseController extends Controller
 
 		$this->pcMappingUrl = Yii::getAlias('@gallerycmsurl') . Yii::$app->request->url;
 		$this->mobileMappingUrl = Yii::getAlias('@m.gallerycmsurl') . Yii::$app->request->url;
+		$this->wapMappingUrl = Yii::getAlias('@wap.gallerycmsurl') . Yii::$app->request->url;
+		$this->threegMappingUrl = Yii::getAlias('@3g.gallerycmsurl') . Yii::$app->request->url;
         $this->currentCityCode = Yii::$app->params['currentCompany']['code'];
         $this->currentCityName = Yii::$app->params['currentCompany']['name'];
 		$this->footerStatStr = $this->_setStatStr();

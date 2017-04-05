@@ -15,8 +15,8 @@
 <link rel="canonical" href="<?= $this->context->pcMappingUrl; ?>">
 <?php } else { ?>
 <meta http-equiv="mobile-agent" content="format=xhtml;url=<?= $this->context->mobileMappingUrl; ?>" />
-<meta http-equiv="mobile-agent" content="format=html5;url=<?= $this->context->mobileMappingUrl; ?>" />
-<meta http-equiv="mobile-agent" content="format=wml;url=<?= $this->context->mobileMappingUrl; ?>" />
+<meta http-equiv="mobile-agent" content="format=html5;url=<?= $this->context->wapMappingUrl; ?>" />
+<meta http-equiv="mobile-agent" content="format=wml;url=<?= $this->context->threegMappingUrl; ?>" />
 <?php } ?>
 <?php if (isset($this->context->metaLocation) && !empty($this->context->metaLocation)) { ?>
 <meta name="location" content="<?= $this->context->metaLocation; ?>">

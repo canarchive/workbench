@@ -18,7 +18,7 @@ return [
     'siteAddressInfo' => '北京市昌平区科星西路106号楼407室',
     'siteJoinusTel' => '18888888888',
     'siteCustomServiceQQ' => '1313113',
-    'siteFriendlinkQQ' => '12345678',
+    'siteFriendlinkQQ' => '52502655',//12345678',
     'siteName' => '兔班长装修网',
     'siteSlogan' => '装修就找兔班长',
     'siteNameBase' => '兔班长',

@@ -41,7 +41,7 @@ $this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]
                     <br/>“首页”友情链接，网站Google PageRank PR值不低于5，世界排名不低于5W名，搜索引擎快照更新正常，收录不低于5000页。</p>
                 <p class="new_p2">
                     <strong>联系方式：</strong>
-                    <br/>友链QQ:<?= Yii::$app->params['siteFriendlinkQQ']; ?>,装修咨询QQ:<?= Yii::$app->params['siteCustomServiceQQ']; ?>
+                    <br/>友链QQ:<?= Yii::$app->params['siteFriendlinkQQ']; ?>,<!--装修咨询QQ:<?= Yii::$app->params['siteCustomServiceQQ']; ?>-->
                     <br>[如您有疑问或其它合作方式，欢迎致电，共同商榷。]</p></div>
         </div>
     </div>

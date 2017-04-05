@@ -87,7 +87,7 @@ class Quote extends GallerycmsModel
 
 	protected function _formatInfo($info, $noPic = true)
 	{
-        $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
+        $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . '平米' . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
 		return $info;
 	}
 
@@ -212,7 +212,7 @@ class Quote extends GallerycmsModel
 	protected function _formatInfos($infos)
 	{
         foreach ($infos as & $info) {
-            $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
+            $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . '平米' . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
         }
         //print_r($infos);
 		return $infos;
