@@ -19,7 +19,6 @@ $context = $this->context;
 	<input type="hidden" name="city_code" value="<?= $context->companyInfo['code_short']; ?>" />
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'mobile')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'service_id')->dropDownList($model->serviceInfos, ['prompt' => Yii::t('admin-common', 'Select Service')]); ?>
     <?= $form->field($model, 'designer_id')->dropDownList($model->designerInfos, ['prompt' => Yii::t('admin-common', 'Select Designer')]); ?>
     <?= $form->field($model, 'orderlist')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'community_name')->textInput(['maxlength' => 128]) ?>

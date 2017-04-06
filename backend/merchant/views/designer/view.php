@@ -14,10 +14,6 @@ $detailViewParams = [
 		'title',
 		'aptitude',
 		'record',
-		[
-			'attribute' => 'merchant_id',
-			'value' => ($model->merchant_id > 0 && isset($model->merchantInfos[$model->merchant_id])) ? $model->merchantInfos[$model->merchant_id] : $model->merchant_id,
-		],
         'orderlist',
 		[
 			'attribute' => 'status',

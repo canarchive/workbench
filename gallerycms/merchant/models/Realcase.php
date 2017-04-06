@@ -87,8 +87,8 @@ class Realcase extends MerchantModel
         parent::afterSave($insert, $changedAttributes);
 
 		$fields = ['thumb', 'picture_origin', 'picture_design'];
-		$this->_updateSingleAttachment('merchant', $fields);
-		$this->_updateMulAttachment('merchant', 'design_sketch');
+		$this->_updateSingleAttachment('realcase', $fields);
+		$this->_updateMulAttachment('realcase', 'design_sketch');
 
 		if ($insert) {
 			$this->merchantInfo->updateNum('realcase', 'add');

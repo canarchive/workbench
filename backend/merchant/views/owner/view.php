@@ -17,10 +17,6 @@ $detailViewParams = [
 			'value' => '',//$model->merchantInfos[$model->merchant_id],
 		],
 		[
-			'attribute' => 'service_id',
-			'value' => isset($model->serviceInfos[$model->service_id]) ? $model->serviceInfos[$model->service_id] : '',
-		],
-		[
 			'attribute' => 'house_type',
 			'value' => isset($model->houseTypeInfos[$model->house_type]) ? $model->houseTypeInfos[$model->house_type] : $model->house_type,
 		],

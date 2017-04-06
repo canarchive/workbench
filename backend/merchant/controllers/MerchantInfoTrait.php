@@ -20,7 +20,7 @@ trait MerchantInfoTrait
 	    $this->layout = 'main';
 		$cityCode = Yii::$app->request->get('city_code', '');
 		$companyModel = new Company();
-		$this->companyInfo = $companyModel->getInfoByCodeShort($cityCode);
+		$this->companyInfo = $companyModel->getInfoByCode($cityCode);
 		$this->owner_id = Yii::$app->request->get('owner_id');
 		$this->merchant_id = Yii::$app->request->get('merchant_id');
 	}

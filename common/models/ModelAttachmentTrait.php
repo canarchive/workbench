@@ -43,7 +43,8 @@ trait ModelAttachmentTrait
             $attachment->updateInfo($this->$field, $this->id, $extData);
 
             $where = ['info_table' => $table, 'info_field' => $field, 'info_id' => $this->id];
-            $this->deleteAttachment && $attachment->deleteInfo($where, $this->$field);
+            $attachment->deleteInfo($where, $this->$field);
+            //$this->deleteAttachment && $attachment->deleteInfo($where, $this->$field);
         }
 
         return ;

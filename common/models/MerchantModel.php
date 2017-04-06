@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use gallerycms\merchant\models\Attachment As AttachmentMerchant;
-use merchant\models\Merchant;
+use gallerycms\merchant\models\Merchant;
 
 class MerchantModel extends BaseModel
 {
@@ -96,4 +96,13 @@ class MerchantModel extends BaseModel
 
 		return $datas;
 	}	
+
+    public function getCompanyInfo()
+    {
+        if ($this->city_code) {
+            return Company::find()->where(['code' => $this->city_code])->one();
+        }
+
+        return [];
+    }
 }

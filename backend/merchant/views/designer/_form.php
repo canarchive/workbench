@@ -29,7 +29,7 @@ $context = $this->context;
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[photo]',
-        'url' => ['/merchant-upload/index', 'table' => 'designer', 'field' => 'photo', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'designer', 'field' => 'photo', 'id' => $model->id],
 		'gallery' => true,
         'fieldOptions' => [
 			'isSingle' => $photo['isSingle'],

@@ -28,7 +28,7 @@ $ownerInfo = $this->context->ownerInfo;
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[thumb]',
-        'url' => ['/merchant-upload/index', 'table' => 'realcase', 'field' => 'thumb', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'realcase', 'field' => 'thumb', 'id' => $model->id],
 		'gallery' => true,
         'fieldOptions' => [
 			'isSingle' => $thumb['isSingle'],
@@ -41,45 +41,11 @@ $ownerInfo = $this->context->ownerInfo;
         ],
     ]);
     ?>
-    <?= $form->field($model, 'picture_origin')->hiddenInput(); ?>
-    <?= FileUploadUI::widget([
-        'model' => $attachmentModel,
-        'attribute' => 'files[picture_origin]',
-        'url' => ['/merchant-upload/index', 'table' => 'realcase', 'field' => 'picture_origin', 'id' => $model->id],
-		'gallery' => true,
-        'fieldOptions' => [
-			'isSingle' => $pictureOrigin['isSingle'],
-			'idField' => Html::getInputId($model, 'picture_origin'),
-            'accept' => 'image/*'
-        ],
-        'clientOptions' => [
-		    //'dataType' => 'json',
-			'maxFileSize' => $pictureOrigin['maxSize'] * 1024,
-        ],
-    ]);
-    ?>
-    <?= $form->field($model, 'picture_design')->hiddenInput(); ?>
-    <?= FileUploadUI::widget([
-        'model' => $attachmentModel,
-        'attribute' => 'files[picture_design]',
-        'url' => ['/merchant-upload/index', 'table' => 'realcase', 'field' => 'picture_design', 'id' => $model->id],
-		'gallery' => true,
-        'fieldOptions' => [
-			'isSingle' => $pictureDesign['isSingle'],
-			'idField' => Html::getInputId($model, 'picture_design'),
-            'accept' => 'image/*'
-        ],
-        'clientOptions' => [
-		    //'dataType' => 'json',
-			'maxFileSize' => $pictureDesign['maxSize'] * 1024,
-        ],
-    ]);
-    ?>
     <?= $form->field($model, 'design_sketch')->hiddenInput(); ?>
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[design_sketch]',
-        'url' => ['/merchant-upload/index', 'table' => 'realcase', 'field' => 'design_sketch', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'realcase', 'field' => 'design_sketch', 'id' => $model->id],
         'gallery' => true,
         'fieldOptions' => [
             'isSingle' => $designSketch['isSingle'],
