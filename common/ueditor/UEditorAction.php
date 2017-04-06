@@ -236,6 +236,8 @@ class UEditorAction extends Action
             $source = $_GET[$fieldName];
         }
         foreach ($source as $imgUrl) {
+            $pos = strpos($imgUrl, '?');
+            $imgUrl = $pos ? substr($imgUrl, 0, $pos) : $imgUrl;
             $item = new Uploader($imgUrl, $config, "remote");
             $info = $item->getFileInfo();
             array_push($list, array(
@@ -244,7 +246,8 @@ class UEditorAction extends Action
                 "size" => $info["size"],
                 "title" => htmlspecialchars($info["title"]),
                 "original" => htmlspecialchars($info["original"]),
-                "source" => htmlspecialchars($imgUrl)
+                "source" => $this->config['imageUrlPrefix'] . $info["url"],
+                //"source" => htmlspecialchars($imgUrl)
             ));
         }
 
