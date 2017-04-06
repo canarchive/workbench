@@ -53,6 +53,7 @@ class Merchant extends MerchantModel
         return [
             'id' => '商家ID',
             'name' => '名称',
+            'name_full' => '全称',
             'breif' => '简介',
 			'company_id' => '所属公司',
 			'category_id' => '分类',

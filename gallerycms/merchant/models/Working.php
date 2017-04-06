@@ -169,7 +169,6 @@ class Working extends MerchantModel
 
 	public function getInfos($where, $limit = 30)
 	{
-        $where = [];
 		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
 		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
