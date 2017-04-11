@@ -78,7 +78,7 @@ class Attachment extends BaseModel
 
             [['type'], 'string', 'max' => 32],
             [['type'], 'default', 'value' => function() {
-                $type = FileHelper::getMimeType($this->file->tempName);
+                $type = isset($this->file->type) && !empty($this->file->type) ? $this->file->type : FileHelper::getMimeType($this->file->tempName);
                 return $type == null ? 'image/jpeg' : $type;
             }],
             [['type'], 'filterType'],
