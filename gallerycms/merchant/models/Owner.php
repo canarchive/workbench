@@ -83,7 +83,7 @@ class Owner extends MerchantModel
 		$fields = ['thumb'];
 		$this->_updateSingleAttachment('owner', $fields);
 		if ($insert) {
-			$this->merchantInfo->updateNum('owner', 'add');
+			$this->merchantInfo->updateNum('num_owner', 'add');
 		}
 
 		return true;
@@ -91,7 +91,7 @@ class Owner extends MerchantModel
 
 	public function afterDelete()
 	{
-		$this->merchantInfo->updateNum('owner', 'minus');
+		$this->merchantInfo->updateNum('num_owner', 'minus');
 	}
 
 	public function getInfo($id)
@@ -169,4 +169,28 @@ class Owner extends MerchantModel
 
 		return $info;
 	}
+
+    public function fillDesignerInfo()
+    {
+        if (!empty($this->designer_id)) {
+            $dInfo = Designer::findOne($dId);
+            if (!empty($dInfo)) {
+                return $dInfo;
+            }
+        }
+
+		if (empty($this->merchant_id)) {
+			return [];
+		}
+
+		$dModel = new Designer();
+		$infos = $dModel->find()->indexBy('id')->where(['merchant_id' => $this->merchant_id])->all();
+        $ids = array_keys($infos);
+        $index = array_rand($ids);
+        $dInfo = $infos[$ids[$index]];
+        $dInfo->updateNum('sample_num', 'add');
+        $this->designer_id = $index;
+        $this->update(false);
+        return $dInfo;
+    }
 }

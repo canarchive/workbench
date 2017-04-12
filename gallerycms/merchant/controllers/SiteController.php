@@ -28,6 +28,7 @@ class SiteController extends MerchantController
         $datas = $this->_initMerchant('merchant-show');
 		$dataTdk = ['{{INFONAME}}' => $datas['info']['name_full']];
 		$this->getTdkInfos('merchant-desc', $dataTdk);
+        $datas['info']->addRelateInfos();
 
 		return $this->render('show', $datas);
 	}

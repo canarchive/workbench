@@ -2,6 +2,7 @@
 
 namespace gallerycms\merchant\models;
 
+use Yii;
 use common\models\MerchantModel;
 use yii\helpers\ArrayHelper;
 
@@ -31,8 +32,8 @@ class MerchantComment extends MerchantModel
     public function rules()
     {
         return [
-            [['content', 'owner_id', 'merchant_id', 'city_code', 'status'], 'required'],
-            [['design_star', 'execution_star', 'service_star'], 'default', 'value' => 0],
+            [['content', 'owner_id', 'merchant_id', 'city_code', 'status_decoration'], 'required'],
+            [['design_star', 'execution_star', 'service_star', 'status'], 'default', 'value' => 0],
         ];
     }
 
@@ -77,8 +78,8 @@ class MerchantComment extends MerchantModel
 	{
         parent::afterSave($insert, $changedAttributes);
 		if ($insert) {
-			$this->merchantInfo->updateNum('comment', 'add');
-			$this->ownerInfo->updateNum('comment', 'add');
+			$this->merchantInfo->updateNum('num_comment', 'add');
+			$this->ownerInfo->updateNum('num_comment', 'add');
 		}
 
 		return true;
@@ -86,8 +87,8 @@ class MerchantComment extends MerchantModel
 
 	public function afterDelete()
 	{
-		$this->merchantInfo->updateNum('comment', 'minus');
-		$this->ownerInfo->updateNum('comment', 'minus');
+		$this->merchantInfo->updateNum('num_comment', 'minus');
+		$this->ownerInfo->updateNum('num_comment', 'minus');
 	}
 
 	public function getInfos($where, $limit = 10)
@@ -108,4 +109,17 @@ class MerchantComment extends MerchantModel
 		$infos = $this->_getMerchantInfos([]);
 		return $infos;
 	}
+
+    public function formatContent()
+    {
+        $oInfo = Merchant::findOne($this->merchant_id_old);
+        $nInfo = Merchant::findOne($this->merchant_id);
+        $oName = isset($oInfo['name']) ? $oInfo['name'] : '';
+        $nName = isset($nInfo['name']) ? $nInfo['name'] : '';
+        $datas = ['土巴兔', $oName];
+        $rDatas = [Yii::$app->params['siteNameBase'], $nName];
+        $content = str_replace($datas, $rDatas, $this->content);
+
+        return $content;
+    }
 }

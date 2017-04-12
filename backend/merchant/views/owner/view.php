@@ -28,7 +28,7 @@ $detailViewParams = [
 		'community_name',
 		[
 			'attribute' => 'decoration_type',
-			'value' => isset($model->decorationTypeInfos[$model->decoration_type]) ? $mode->decorationTypeInfos[$model->decoration_type] : $model->decoration_price,
+			'value' => isset($model->decorationTypeInfos[$model->decoration_type]) ? $model->decorationTypeInfos[$model->decoration_type] : $model->decoration_price,
 		],
 		'decoration_price',
 		[

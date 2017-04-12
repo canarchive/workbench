@@ -38,10 +38,11 @@ class Merchant extends MerchantModel
     public function rules()
     {
         return [
-            [['name', 'city_code'], 'required'],
+            [['name', 'city_code', 'code'], 'required'],
+            ['code', 'unique', 'targetClass' => '\gallerycms\merchant\models\Merchant', 'message' => 'This username has already been taken.'],
 			[['logo', 'picture'], 'integer'],
 			[['logo', 'picture', 'category_id', 'status', 'num_owner', 'num_realcase', 'num_working', 'score', 'praise'], 'default', 'value' => '0'],
-			[['aptitude', 'decoration_sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+			[['aptitude', 'decoration_sort', 'hotline', 'postcode', 'brief', 'address', 'description', 'name_full'], 'safe'],
         ];
     }
 
@@ -91,17 +92,6 @@ class Merchant extends MerchantModel
 		return $datas;
 	}	
 
-	/*protected function getDecorationSortInfos()
-	{
-		$datas = [
-			'focus' => '关注',
-			'discuss' => '洽谈',
-			'cooperation' => '合作',
-			'deepco' => '深度合作',
-		];
-		return $datas;
-    }*/
-
 	public function beforeSave($insert)
 	{
 		return true;
@@ -114,13 +104,18 @@ class Merchant extends MerchantModel
 		$fields = ['logo', 'picture'];
 		$this->_updateSingleAttachment('merchant', $fields);
 		$this->_updateMulAttachment('merchant', 'aptitude');
+        if ($insert) {
+            $this->fillAttrs();
+        }
+
+        $this->_updateRelateInfos();
 
 		return true;
 	}	
 
 	public function afterDelete()
 	{
-		$this->deleteSubInfos();
+        $this->_deleteRelateInfos();
 	}
 
 	protected function getCompanyInfos()
@@ -217,7 +212,7 @@ class Merchant extends MerchantModel
 	public function getCommentInfos()
 	{
 		$model = new MerchantComment();
-		$infos = $model->getInfos(['merchant_id' => $this->id], 30);
+		$infos = $model->getInfos(['merchant_id' => $this->id, 'status' => 1], 30);
 		//$infos = $model->getInfos([], 30);
 
 		return $infos;
@@ -231,13 +226,62 @@ class Merchant extends MerchantModel
 		return $infos;
 	}
 
-	public function deleteSubInfos()
+	public function addRelateInfos($numOne = null)
 	{
-	    Designer::deleteAll("merchant_id = {$this->id}");
-	    Owner::deleteAll("merchant_id = {$this->id}");
-	    Realcase::deleteAll("merchant_id = {$this->id}");
-	    Working::deleteAll("merchant_id = {$this->id}");
-	    MerchantComment::deleteAll("merchant_id = {$this->id}");
+        $elems = [
+            'designer' => new Designer, 
+            'owner' => new Owner,
+            'realcase' => new Realcase,
+            'working' => new Working,
+            'comment' => new MerchantComment,
+        ];
+
+        $where = ['city_code' => $this->city_code, 'merchant_id' => 0];
+        $ownerNum = $numOne !== null ? $numOne : rand(9, 21);
+        foreach ($elems as $elem => $model) {
+            $num = $numOne !== null ? $numOne : ($elem == 'owner' ? rand(3, $ownerNum) : rand(5, 10));
+            $datas = $model->find()->where($where)->orderBy(['orderlist' => SORT_ASC])->limit($num)->all();
+            foreach ($datas as $data) {
+                $rResult = true;
+                $data['merchant_id'] = $this->id;
+                $data['created_at'] = Yii::$app->params['currentTime'] - rand(1, 86400);
+                $data['updated_at'] = $data['created_at'];
+                $data['status'] = $this->status;
+                if (in_array($elem, ['realcase', 'working', 'comment'])) {
+                    $rResult = $data->fillOwnerInfo($elem);
+                }
+                if ($elem == 'owner') {
+                    $rResult = $data->fillDesignerInfo();
+                }
+                if (empty($rResult)) {
+                    $num--;
+                    continue;
+                }
+                if ($elem == 'comment') {
+                    $data['content'] = $data->formatContent();
+                }
+                $data->update(false);
+            }
+            $this->updateNum("num_$elem", 'add', $num);
+        }
+	}
+
+	public function _updateRelateInfos()
+	{
+	    Designer::updateAll(['status' => $this->status], "merchant_id = {$this->id}");
+	    Owner::updateAll(['status' => $this->status], "merchant_id = {$this->id}");
+	    Realcase::updateAll(['status' => $this->status], "merchant_id = {$this->id}");
+	    Working::updateAll(['status' => $this->status], "merchant_id = {$this->id}");
+	    MerchantComment::updateAll(['status' => $this->status], "merchant_id = {$this->id}");
+	}
+
+	public function _deleteRelateInfos()
+	{
+	    Designer::updateAll(['merchant_id' => 0, 'status' => 0], "merchant_id = {$this->id}");
+	    Owner::updateAll(['merchant_id' => 0, 'status' => 0], "merchant_id = {$this->id}");
+	    Realcase::updateAll(['merchant_id' => 0, 'status' => 0], "merchant_id = {$this->id}");
+	    Working::updateAll(['merchant_id' => 0, 'status' => 0], "merchant_id = {$this->id}");
+	    MerchantComment::updateAll(['merchant_id' => 0, 'status' => 0], "merchant_id = {$this->id}");
 	}
 
     public function getInfoUrl()
@@ -254,4 +298,46 @@ class Merchant extends MerchantModel
 		}
 		return $infos;
 	}
+
+    public function fillAttrs($attrs = ['sort', 'style', 'price'])
+    {
+        $mInfos = $this->merchantSortInfos;
+        if (in_array('sort', $attrs)) {
+            $sorts = array_keys($mInfos['decoration_sort']['values']);
+            $sNum = rand(4, 8);
+            $sortKeys = array_rand($sorts, $sNum);
+            $sortStr = '';
+            foreach ($sortKeys as $key) {
+                $sortStr .= $sorts[$key] . ',';
+            }
+            $this->decoration_sort = $sortStr;
+        }
+
+        if (in_array('price', $attrs)) {
+            $prices = [
+                ['one', 'two', 'three'],
+                ['two', 'three', 'four', 'five'],
+                ['three', 'four', 'five'],
+                ['four', 'five', 'size'],
+                ['five', 'six', 'seven'],
+            ];
+            $pIndex = rand(0, 4);
+            $pKeys = $prices[$pIndex];
+            $pStr = implode($pKeys, ',');
+            $this->budget = $pStr . ',';
+        }
+
+        if (in_array('style', $attrs)) {
+            $styles = array_keys($mInfos['style']['values']);
+            $styleNum = rand(3, 6);
+            $styleKeys = array_rand($styles, $styleNum);
+            $styleStr = '';
+            foreach ($styleKeys as $key) {
+                $styleStr .= $styles[$key] . ',';
+            }
+            $this->style = $styleStr;
+        }
+
+        $this->update(false);
+    }
 }

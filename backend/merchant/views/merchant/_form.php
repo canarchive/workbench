@@ -17,10 +17,10 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 	<input type="hidden" name="city_code" value="<?= $this->context->companyInfo['code_short']; ?>" />
+    <?= $form->field($model, 'code')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'name_full')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'brief')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'decoration_sort')->dropDownList($model->decorationSortInfos, ['prompt' => Yii::t('admin-common', '')]); ?>
     <?= $form->field($model, 'logo')->hiddenInput(); ?>
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
@@ -38,9 +38,9 @@ $model->aptitude = $attachmentModel->getFieldIds('merchant', 'aptitude', $model-
         ],
     ]);
     ?>
-    <?= $form->field($model, 'num_owner')->textInput() ?>
-    <?= $form->field($model, 'num_realcase')->textInput() ?>
-    <?= $form->field($model, 'num_working')->textInput() ?>
+    <?php //echo $form->field($model, 'num_owner')->textInput() ?>
+    <?php //echo $form->field($model, 'num_realcase')->textInput() ?>
+    <?php //echo $form->field($model, 'num_working')->textInput() ?>
     <?= $form->field($model, 'score')->textInput() ?>
     <?= $form->field($model, 'praise')->textInput() ?>
     <?= $form->field($model, 'hotline')->textInput() ?>

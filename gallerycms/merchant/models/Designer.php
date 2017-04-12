@@ -2,6 +2,7 @@
 
 namespace gallerycms\merchant\models;
 
+use Yii;
 use common\models\MerchantModel;
 use yii\helpers\ArrayHelper;
 
@@ -77,9 +78,9 @@ class Designer extends MerchantModel
         parent::afterSave($insert, $changedAttributes);
 
 		$fields = ['photo'];
-		$this->_updateSingleAttachment('professor', $fields);
+		$this->_updateSingleAttachment('designer', $fields);
 		if ($insert) {
-			$this->merchantInfo->updateNum('designer', 'add');
+			$this->merchantInfo->updateNum('num_designer', 'add');
 		}
 
 		return true;
@@ -87,7 +88,7 @@ class Designer extends MerchantModel
 
 	public function afterDelete()
 	{
-		$this->merchantInfo->updateNum('designer', 'minus');
+		$this->merchantInfo->updateNum('num_designer', 'minus');
 	}
 
 	public function getInfos($where, $limit = 100)

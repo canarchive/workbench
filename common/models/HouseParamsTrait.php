@@ -157,4 +157,31 @@ trait HouseParamsTrait
 		$info = $model->getInfo(['id' => $this->owner_id]);
 		return $info;
 	}
+
+    public function fillOwnerInfo($type)
+    {
+        if (empty($this->owner_id)) {
+            $where = ['merchant_id' => $this->merchant_id];
+            $where = $type == 'realcase' || $type == 'working' ? array_merge($where, [$type . '_id' => 0]) : $where;
+            $oInfos = Owner::find()->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit(100)->all();
+            if (empty($oInfos)) {
+                return false;
+            }
+            $ids = array_keys($oInfos);
+            $this->owner_id = $ids[array_rand($ids)];
+            $oInfo = $oInfos[$this->owner_id];
+            if ($type == 'comment') {
+                $oInfo->updateNum('num_comment', 'add');
+            } elseif ($type == 'realcase') {
+                $oInfo->realcase_id = $this->id;
+                $oInfo->update(false);
+            } elseif ($type == 'working') {
+                $oInfo->working_id = $this->id;
+                $oInfo->update(false);
+            }
+            $this->update(false);
+            return true;
+        }
+        return true;
+    }
 }

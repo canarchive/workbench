@@ -10,9 +10,7 @@ $gridViewParams = [
 			'format' => 'raw',
             'attribute' => 'name',
 			'value' => function($model) {
-				$url = Yii::getAlias('@gallerycmsurl') . Url::to(['/decoration-company/show', 'id' => $model->id]);
-				//return "<a href='{$url}' target='_blank'>{$model->name}</a>";
-				return "{$model->name}";
+				return "<a href='{$model->infoUrl}' target='_blank'>{$model->name}</a>";
 			},
 		],
 		[

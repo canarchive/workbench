@@ -107,7 +107,7 @@ class Working extends MerchantModel
 		    $this->_updateMulAttachment('working', $status);
 		}
 		if ($insert) {
-			$this->merchantInfo->updateNum('working', 'add');
+			$this->merchantInfo->updateNum('num_working', 'add');
 			$ownerInfo = $this->ownerInfo;
 			$ownerInfo->working_id = $this->id;
 			$r = $ownerInfo->update(false, ['working_id']);
@@ -118,7 +118,7 @@ class Working extends MerchantModel
 
 	public function afterDelete()
 	{
-		$this->merchantInfo->updateNum('working', 'minus');
+		$this->merchantInfo->updateNum('num_working', 'minus');
 		$this->ownerInfo->working_id = 0;
 		$this->ownerInfo->update(false, ['working_id']);
 	}

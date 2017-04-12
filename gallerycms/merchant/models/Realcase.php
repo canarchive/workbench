@@ -91,7 +91,7 @@ class Realcase extends MerchantModel
 		$this->_updateMulAttachment('realcase', 'design_sketch');
 
 		if ($insert) {
-			$this->merchantInfo->updateNum('realcase', 'add');
+			$this->merchantInfo->updateNum('num_realcase', 'add');
 			$ownerInfo = $this->ownerInfo;
 			$ownerInfo->realcase_id = $this->id;
 			$r = $ownerInfo->update(false, ['realcase_id']);
@@ -102,7 +102,7 @@ class Realcase extends MerchantModel
 
 	public function afterDelete()
 	{
-		$this->merchantInfo->updateNum('realcase', 'minus');
+		$this->merchantInfo->updateNum('num_realcase', 'minus');
 		$this->ownerInfo->realcase_id = 0;
 		$this->ownerInfo->update(false, ['realcase_id']);
 	}
