@@ -124,10 +124,10 @@ class BaseModel extends ActiveRecord
         return $infos;
     }
 
-    public function updateNum($field, $type)
+    public function updateNum($field, $type, $num = 1)
     {
-        $num = $type == 'add' ? 1 : -1;
-        $this->updateCounters(['num_' . $field => $num]);
+        $num = $type == 'add' ? $num : '-' . $num;
+        $this->updateCounters([$field => $num]);
     }
 
     public function statisticRecord($data, $type)

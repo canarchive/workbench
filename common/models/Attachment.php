@@ -313,11 +313,14 @@ class Attachment extends BaseModel
         }
         // 处理附件的常用属性，名称、排序和描述
         $attrs = ['filename', 'orderlist', 'description'];
+        $requestObj = \Yii::$app->request;
+        if (\Yii::$app->id != 'app-console') {
         foreach ($attrs as $attr) {
             $params = \Yii::$app->request->post('attachment_' . $attr, '');
             $value = isset($params[$id]) ? $params[$id] : '';
             $value = $attr == 'orderlist' ? intval($value) : $value;
             $info->$attr = $value;
+        }
         }
         //print_r($info);exit();
            return $info->update(false);
