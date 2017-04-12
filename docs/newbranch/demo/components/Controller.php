@@ -1,5 +1,5 @@
 <?php
-namespace gallerycms\components;
+namespace demo\components;
 
 use common\components\Controller as CommonController;
 

@@ -2,15 +2,15 @@
 
 namespace common\models;
 
-class GallerycmsModel extends BaseModel
+class DemoModel extends BaseModel
 {
     public static function getDb()
     {
-        return \Yii::$app->dbGallerycms;
+        return \Yii::$app->dbDemo;
     }    
 
     public function getAttachmentModel()
     {
-        return new \gallerycms\models\Attachment();
+        return new \demo\models\Attachment();
     }
 }

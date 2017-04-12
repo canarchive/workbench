@@ -1,14 +1,14 @@
 <?php
 
-namespace gallerycms\models;
+namespace demo\models;
 
-use common\models\GallerycmsModel;
+use common\models\DemoModel;
 use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "photographer".
  */
-class Photographer extends GallerycmsModel
+class Photographer extends DemoModel
 {
 
     /**
@@ -37,7 +37,7 @@ class Photographer extends GallerycmsModel
     {
         return [
             [['name'], 'required'],
-            ['code', 'unique', 'targetClass' => '\gallerycms\models\Photographer', 'message' => '代码已经被使用。'],
+            ['code', 'unique', 'targetClass' => '\demo\models\Photographer', 'message' => '代码已经被使用。'],
             //[['orderlist'], 'integer'],
             [['orderlist', 'logo', 'status'], 'default', 'value' => 0],
             ['description', 'safe'],
@@ -67,7 +67,7 @@ class Photographer extends GallerycmsModel
         parent::afterSave($insert, $changedAttributes);
 
         $fields = ['logo'];
-        $attachment = new \gallerycms\models\Attachment();
+        $attachment = new \demo\models\Attachment();
         $this->_updateSingleAttachment($attachment, 'brand', $fields);
 
         return true;

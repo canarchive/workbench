@@ -1,18 +1,20 @@
 <?php
 
-namespace gallerycms\models\searchs;
+namespace demo\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use gallerycms\models\Photographer as PhotographerModel;
+use demo\models\Attachment as AttachmentModel;
 
-class Photographer extends PhotographerModel
+class Attachment extends AttachmentModel
 {
     public function search($params)
     {
-        $query = PhotographerModel::find();
+        $query = AttachmentModel::find();
+
         $dataProvider = new ActiveDataProvider(['query' => $query]);
+
         return $dataProvider;
     }
 }

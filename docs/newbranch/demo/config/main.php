@@ -7,12 +7,12 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-gallerycms',
+    'id' => 'app-demo',
     'basePath' => dirname(__DIR__),
-    'viewPath' => '@gallerycms/views/default',
+    'viewPath' => '@demo/views/default',
     'layout' => null,
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'gallerycms\controllers',
+    'controllerNamespace' => 'demo\controllers',
     'components' => [
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -23,7 +23,7 @@ return [
     ],
     'modules' => [
         'info' => [
-            'class' => 'gallerycms\info\Module',
+            'class' => 'demo\info\Module',
         ],
     ],
     'params' => $params,
