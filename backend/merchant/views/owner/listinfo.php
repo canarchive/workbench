@@ -43,6 +43,9 @@ $gridViewParams = [
 			'format' => 'raw',
             'attribute' => 'merchant_id',
 			'value' => function($model) {
+                if (empty($model->merchantInfo)) {
+                    return '';
+                }
 				return $model->merchantInfo['nameUrl'];
 			},
 		],

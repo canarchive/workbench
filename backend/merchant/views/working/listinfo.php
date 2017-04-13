@@ -11,8 +11,8 @@ $gridViewParams = [
 			'format' => 'raw',
             'attribute' => 'name',
 			'value' => function($model) {
-				$url = $model->infoUrl;
-				return "<a href='{$url}' target='_blank'>{$model->ownerInfo['nameCommunity']}</a>";
+				$url = Yii::getAlias('@gallerycmsurl') . '/' . $model->city_code . '/workingshow_' . $model->id . '.html';
+				return "<a href='{$url}' target='_blank'>{$model->name}</a>";
 			},
 		],
 		[

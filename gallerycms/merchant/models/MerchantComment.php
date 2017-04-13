@@ -51,22 +51,32 @@ class MerchantComment extends MerchantModel
 			'execution_star' => '施工评分',
 			'service_star' => '服务评分',
             'content' => '内容',
+            'status_decoration' => '装修阶段',
             'status' => '状态',
             'created_at' => '添加时间',
             'updated_at' => '更新时间',
         ];
     }
 
-	public function getStatusInfos()
+	public function getStatusDecorationInfos()
 	{
 		return $this->_decorationStatusInfos();
+	}	
+
+	public function getStatusInfos()
+	{
+		$datas = [
+			'0' => '隐藏',
+			'1' => '正常',
+		];	
+		return $datas;
 	}	
 
 	public function beforeSave($insert)
 	{
 		if ($insert) {
 			if ($this->ownerInfo->num_comment >= 6) {
-                $this->addError('status', '一个业主评论数不能超过6条');
+                $this->addError('status_decoration', '一个业主评论数不能超过6条');
 				return false;
 			}
 		}

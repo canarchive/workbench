@@ -25,6 +25,7 @@ class MerchantController extends Controller
         $info->status = 1;
         $info->update(false);
         $info->addRelateInfos();
+        var_dump($info);
     }
 
     public function actionUpdateInfo()

@@ -13,6 +13,7 @@ $detailViewParams = [
         'name',
 		'orderlist',
 		[
+			'format' => 'raw',
 			'attribute' => 'merchant_id',
 			'value' => $model->merchantInfo['nameUrl'],
 		],

@@ -1,3 +1,5 @@
+UPDATE `wp_company` SET `status` = 2 WHERE `code` IN ('beijing', 'shanghai', 'guangzhou', 'changsha', 'chengdu', 'tianjin', 'shijiazhuang', 'wuhan', 'jinan', 'shenyang', 'haerbin');
+
 ALTER TABLE `wm_merchant_comment` CHANGE `status` `status_decoration` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '装修';
 ALTER TABLE `wm_merchant_comment` ADD `status` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '状态' AFTER `updated_at`;
 

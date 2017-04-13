@@ -13,7 +13,6 @@ use spread\models\CustomService;
 class Working extends MerchantModel
 {
     use MerchantTrait;
-	public $name;
 	public $statusDatas;
 	//public $merchantInfo;
 	public $avatar;
@@ -140,8 +139,6 @@ class Working extends MerchantModel
 		$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 		$info['status'] = isset($info->statusInfos[$info->status]) ? $info->statusInfos[$info->status] : $info->status;
 		//echo $info->owner_id;exit();
-		$ownerInfo = $info->ownerInfo;
-		$info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 
         $condition = [ 
             'info_table' => 'working',
@@ -170,11 +167,8 @@ class Working extends MerchantModel
 	public function getInfos($where, $limit = 30)
 	{
 		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
-		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
-			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
-		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 			$info['status'] = isset($info->statusInfos[$info->status]) ? $info->statusInfos[$info->status] : $info->status;
 		}
 
@@ -201,9 +195,17 @@ class Working extends MerchantModel
 		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
-			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
-		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 		}
 		return $infos;
 	}
+
+    public function getName()
+    {
+		$ownerModel = new Owner();
+		$ownerInfo = $ownerModel->getInfo($this->owner_id);
+        if (empty($ownerInfo)) {
+            return '';
+        }
+        return $ownerInfo->nameFull;
+    }
 }

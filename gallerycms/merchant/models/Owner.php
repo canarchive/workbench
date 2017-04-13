@@ -193,4 +193,9 @@ class Owner extends MerchantModel
         $this->update(false);
         return $dInfo;
     }
+
+    public function getNameFull()
+    {
+		return $this->community_name . ' ' . $this->style . ' ' . $this->area . '平米 ' . $this->decoration_price . '万元';
+    }
 }

@@ -238,6 +238,7 @@ class Merchant extends MerchantModel
 
         $where = ['city_code' => $this->city_code, 'merchant_id' => 0];
         $ownerNum = $numOne !== null ? $numOne : rand(9, 21);
+        var_dump($ownerNum);
         foreach ($elems as $elem => $model) {
             $num = $numOne !== null ? $numOne : ($elem == 'owner' ? rand(3, $ownerNum) : rand(5, 10));
             $datas = $model->find()->where($where)->orderBy(['orderlist' => SORT_ASC])->limit($num)->all();

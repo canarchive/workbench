@@ -11,7 +11,7 @@ $gridViewParams = [
 			'format' => 'raw',
             'attribute' => 'name',
 			'value' => function($model) {
-				$url = Yii::getAlias('@gallerycmsurl') . Url::to(['/realcase/show', 'id' => $model->id]);
+				$url = Yii::getAlias('@gallerycmsurl') . '/' . $model->city_code . '/realcaseshow_' . $model->id . '.html';
 				return "<a href='{$url}' target='_blank'>{$model->name}</a>";
 			},
 		],

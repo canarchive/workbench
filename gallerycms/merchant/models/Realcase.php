@@ -15,7 +15,6 @@ class Realcase extends MerchantModel
 	public $design_sketch;
 	//public $merchantInfo;
 	public $pictureDesignInfo;
-	public $name;
     
     /**
      * @inheritdoc
@@ -128,9 +127,6 @@ class Realcase extends MerchantModel
 		}
 		$info['pictureDesignInfo'] = $pictureDesign;
 
-		$ownerInfo = $info->ownerInfo;
-		$info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
-
         $condition = [ 
             'info_table' => 'realcase',
             //'info_field' => 'design_sketch',
@@ -158,10 +154,7 @@ class Realcase extends MerchantModel
 	public function getInfos($where, $limit = 30)
 	{
 		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['orderlist' => SORT_DESC])->limit($limit)->all();
-		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
-			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
-		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 		}
 
@@ -179,12 +172,19 @@ class Realcase extends MerchantModel
 
 	protected function _formatInfos($infos)
 	{
-		$ownerModel = new Owner();
 		foreach ($infos as $key => & $info) {
-			$ownerInfo = $ownerModel->getInfo($info['owner_id']);
-		    $info['name'] = $ownerInfo['community_name'] . ' ' . $ownerInfo['style'] . ' ' . $ownerInfo['area'] . '平米 ' . $ownerInfo['decoration_price'] . '万元';
 			$info['thumb'] = $info->getAttachmentUrl($info['thumb']);
 		}
 		return $infos;
 	}
+
+    public function getName()
+    {
+		$ownerModel = new Owner();
+		$ownerInfo = $ownerModel->getInfo($this->owner_id);
+        if (empty($ownerInfo)) {
+            return '';
+        }
+        return $ownerInfo->nameFull;
+    }
 }

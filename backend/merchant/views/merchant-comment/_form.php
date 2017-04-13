@@ -26,6 +26,7 @@ $starElems = [
     <?= $form->field($model, 'execution_star')->dropDownList($starElems); ?>
     <?= $form->field($model, 'service_star')->dropDownList($starElems); ?>
 
+    <?= $form->field($model, 'status_decoration')->dropDownList($model->statusDecorationInfos); ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
     <?= $form->field($model, 'content')->textarea(['rows' => 2]) ?>
 
