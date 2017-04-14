@@ -106,6 +106,9 @@ class Merchant extends MerchantModel
 		$this->_updateMulAttachment('merchant', 'aptitude');
         if ($insert) {
             $this->fillAttrs();
+            $this->addRelateInfos();
+        } elseif ($this->num_owner == 0 && $this->num_comment == 0) {
+            $this->addRelateInfos();
         }
 
         $this->_updateRelateInfos();
