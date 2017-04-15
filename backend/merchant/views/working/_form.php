@@ -20,7 +20,7 @@ $thumb = $attachmentModel->getFieldInfos('working', 'thumb');
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[thumb]',
-        'url' => ['/merchant-upload/index', 'table' => 'working', 'field' => 'thumb', 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'working', 'field' => 'thumb', 'id' => $model->id],
 		'gallery' => true,
         'fieldOptions' => [
 			'isSingle' => $thumb['isSingle'],
@@ -41,7 +41,7 @@ $thumb = $attachmentModel->getFieldInfos('working', 'thumb');
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => "files[{$stepField}]",
-        'url' => ['/merchant-upload/index', 'table' => 'working', 'field' => $stepField, 'id' => $model->id],
+        'url' => ['/merchant/merchant-upload/index', 'table' => 'working', 'field' => $stepField, 'id' => $model->id],
 		'gallery' => true,
         'fieldOptions' => [
 			'isSingle' => $pictureInfo['isSingle'],

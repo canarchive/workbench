@@ -48,12 +48,11 @@
             <div class="fixed_service2">
                 <ul class="ul1">
                     <li class="li1">
-                        <p>您好,欢迎光临中国加盟网</p>
+					<p>您好,欢迎光临<?= Yii::$app->params['siteNameBase']; ?></p>
                         <span class="span1">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/266e0-2266.png" alt="" /></span>
                     </li>
                     <li class="li2">
-                        <p>请问有什么需要咨询的？</p>
                         <p>您可以先留下联系方式，我们稍后会联系您。</p>
                         <span class="span2">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/6b222-5826.png" alt="" /></span>
@@ -68,7 +67,7 @@
                         <input type="text" name="phone" id="m_phone" value="如 13111111111" onfocus="if(this.value=='如 13111111111'){this.value=''}" onblur="if(this.value==''){this.value='如 13111111111'}" maxlength="11" /></li>
                     <li class="clear">
                         <span>留言:</span>
-                        <textarea name="contant" id="m_contant" cols="30" rows="10">哪个项目加盟赚钱？请客服帮我推荐</textarea></li>
+                        <textarea name="contant" id="m_contant" cols="30" rows="10"></textarea></li>
                     <li class="clear">
                         <a href="javascript:;" onclick="return m_footer($(this));" class="button" />提交</a></li>
                 </ul>

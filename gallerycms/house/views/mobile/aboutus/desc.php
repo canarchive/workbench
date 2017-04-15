@@ -30,17 +30,11 @@ $this->params['jsStr'] = $this->render('@gallerycms/views/layouts-m/plat8/_js-he
             <span style="background-color:transparent;font-size:14px"><?= Yii::$app->params['siteNameBase']; ?></span>
             <a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">装修网</a>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-        由北京维纳亚科技有限公司斥巨资打造的兔班长装修网（<a href="<?= "/{$this->context->currentCityCode}/"; ?>" title="<?= Yii::$app->params['siteNameBase']; ?>">www.tu8zhang.com</a>)是中国最具权威的装修建材行业平台，目前已在全国近百个大中城市开设分站，在超过110个一二线设立分支机构，入驻装饰企业超过10万家，帮助逾十万企业成功转型电子商务。
-        </p>
+兔班长装修网（<a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>">www.tu8zhang.com</a>)是北京维纳亚科技有限公司全力打造的互联网装修建材平台。兔班长装修网认为，要深化家装行业服务品质、提升业主体验，就要解决装修业主重决策与家装企业长服务链条的矛盾，建立起公平、透明、可持续深入的综合平台，满足业主与装企的刚性需求！</p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-        从2016年成立至今，兔班长装修网建立了完善的装饰企业品牌推广、形象维护体系，致力于扩大装饰企业在互联网的影响力，为企业带来高速的来自于互联网的产值增长，进而推动企业整体发展，有效地结合线上线下的影响力，最终为企业成功融入互联网时代的浪潮做出最强力的支持。
-        </p>
+兔班长装修网以“创新、速度、合作、共赢”为宗旨，欲打造中国最具权威的互联网装修建材平台，计划在全国近百个大中城市开设分站，用全新的商业模式营造共赢的商业氛围！</p>
         <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-        做中国最专业的家装门户，需要的是时间，对于兔班长人来说，敬业，职业，专业，用心，不断地提升自我，为客户提供优质的服务，帮助客户选择最优的装修公司，解决客户在家装中遇到的难题，是其发展过程中永远的话题。
-        </p>
-        <p style="padding:0px;font-size:14px;vertical-align:baseline;border:0px none;color:#333333;font-family:tahoma, helvetica, arial, sans-serif, 宋体;;line-height:1.75em;background-color:#ffffff;margin-top:10px;margin-bottom:0px;">
-        “创新、速度、合作、共赢”是兔班长人的宗旨，兔班长正在不断努力突破，打造一个互赢的家装平台。
-        </p>
+做中国最专业的互联网家装建材门户！是兔班长装修网的目标，我们将以专业，职业、敬业的执行标准，不断地提升自我、实现突破、为客户提供优质的服务！</p>
     </div>
 </article>
 <section class="zx-wtg-wrap" style='margin:0 10px 0 10px;'>

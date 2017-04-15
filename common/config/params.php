@@ -22,5 +22,5 @@ return [
     'siteName' => '兔班长装修网',
     'siteSlogan' => '装修就找兔班长',
     'siteNameBase' => '兔班长',
-    'siteWechat' => '兔班长装修平台',
+    'siteWechat' => 'zxjcjjq',
 ];

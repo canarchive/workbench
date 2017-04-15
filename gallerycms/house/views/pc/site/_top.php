@@ -10,7 +10,7 @@
                 <li class="fl">
                     <a href="/" target="_blank" style="color:#df0303;">&nbsp;&nbsp;选择城市</a><em>|</em>
                     <?php foreach (Yii::$app->params['companyInfos'] as $cInfo) { ?>
-                    <a href="/<?= $cInfo['code']; ?>/" class="denglu" style="margin-right:0;<?php if ($this->context->currentCityCode == $cInfo['code']) { echo 'color:#df0303;'; } ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
+                    <a href="<?= Yii::getAlias('@gallerycmsurl') . '/' . $cInfo['code']; ?>/" class="denglu" style="margin-right:0;<?php if ($this->context->currentCityCode == $cInfo['code']) { echo 'color:#df0303;'; } ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
                     <?php } ?>
                 </li>
             </ul>

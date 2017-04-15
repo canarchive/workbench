@@ -173,7 +173,7 @@ class Owner extends MerchantModel
     public function fillDesignerInfo()
     {
         if (!empty($this->designer_id)) {
-            $dInfo = Designer::findOne($dId);
+            $dInfo = Designer::findOne($this->designer_id);
             if (!empty($dInfo)) {
                 return $dInfo;
             }

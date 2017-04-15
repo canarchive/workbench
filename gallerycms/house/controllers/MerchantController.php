@@ -27,7 +27,7 @@ class MerchantController extends MerchantControllerBase
 		$page = Yii::$app->request->get('page');
 		//$infos = $model->getInfos([]);
         $where = [
-            'and', ['=' , 'city_code', Yii::$app->params['currentCompany']['code']]
+            'and', ['=' , 'city_code', Yii::$app->params['currentCompany']['code']], 'status=1',
         ];
         foreach ($tagInfos as $tField => $tValue) {
             if (empty($tValue)) {

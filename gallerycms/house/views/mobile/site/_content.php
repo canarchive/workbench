@@ -28,11 +28,11 @@
                 <ul class="ul1 fl">
                     <a id="font" class="a1" href="<?= "/sj_{$info['code']}/"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
 
-                    <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}/realcase/"; ?>" title="<?= $info['name'] . '实景案例'; ?>">
+                    <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}_realcase/"; ?>" title="<?= $info['name'] . '实景案例'; ?>">
                         <li>实景案例：<?= $info['num_realcase']; ?></li></a>
-                    <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}/working/"; ?>" title="<?= $info['name'] . '直播工地'; ?>">
+                    <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}_working/"; ?>" title="<?= $info['name'] . '直播工地'; ?>">
                         <li>直播工地：<?= $info['num_working']; ?></li></a>
-                    <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}/realcase"; ?>" title="<?= $info['name'] . '设计师'; ?>">
+                    <a href="<?= "/{$this->context->currentCityCode}/{$info['code']}_designer/"; ?>" title="<?= $info['name'] . '设计师'; ?>">
                         <li>设计师：<?= $info['num_designer']; ?></li></a>
                 </ul>
                 <div class="phone fr">
