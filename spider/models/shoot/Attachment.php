@@ -1,6 +1,6 @@
 <?php
 
-namespace spider\models\news;
+namespace spider\models\shoot;
 
 use Yii;
 use common\models\SpiderModel;
@@ -9,11 +9,11 @@ class Attachment extends SpiderModel
 {
     public static function tableName()
     {
-        return '{{%attachment_news}}';
+        return '{{%attachment}}';
     }
 
     public static function getDb()
     {
-        return Yii::$app->dbHouse;
+        return Yii::$app->dbShoot;
     }
 }

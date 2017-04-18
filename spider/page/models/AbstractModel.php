@@ -3,9 +3,9 @@
 namespace spider\page\models;
 
 use yii\helpers\FileHelper;
-use spider\models\SpiderAbstract;
+use common\models\SpiderModel as ModelBase;
 
-class AbstractModel extends SpiderAbstract
+class AbstractModel extends ModelBase
 {
     protected $validExtNames = ['js', 'css', 'png', 'jpg', 'gif', 'ico', 'jpeg', 'eot', 'ttf', 'woff', 'svg', 'cur'];
     public $urlInfo;

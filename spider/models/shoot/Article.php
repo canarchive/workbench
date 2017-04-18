@@ -1,6 +1,6 @@
 <?php
 
-namespace spider\models\news;
+namespace spider\models\shoot;
 
 use Yii;
 use common\models\SpiderModel;
@@ -9,12 +9,12 @@ class Article extends SpiderModel
 {
     public static function tableName()
     {
-        return '{{%news}}';
+        return '{{%sample}}';
     }
 
     public static function getDb()
     {
-        return Yii::$app->dbHouse;
+        return Yii::$app->dbShoot;
     }
 
     /**
@@ -30,7 +30,7 @@ class Article extends SpiderModel
 
     public function showFile()
     {
-        $file = "news/{$this->source_site_code}/show/{$this->sort}/{$this->source_id}.html";
+        $file = "shoot/{$this->source_site_code}/show/{$this->sort}/{$this->source_id}.html";
         return $file;
     }
 }

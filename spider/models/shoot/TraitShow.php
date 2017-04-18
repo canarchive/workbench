@@ -1,5 +1,5 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\shoot;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;

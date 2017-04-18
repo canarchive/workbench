@@ -1,5 +1,5 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\shoot;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;
@@ -16,7 +16,6 @@ Trait TraitList
 
     public function listDeal()
     {
-        //$where = ['site_code' => 'mll', 'status' => 1];
         $where = ['status' => 1];
         $infos = $this->_getListInfos($where, 100);
         foreach ($infos as $info) {
@@ -30,7 +29,12 @@ Trait TraitList
 
             $crawler = new Crawler();
             $crawler->addContent($this->getContent($file));
-            $method = $info['site_code'] . 'Deal';
+            $method = in_array($info['site_code'], ['toteme', 'jingshan', 'hanhan']) ? 'dede' : $info['site_code'];
+            echo $method;
+            if ($method != 'shouxi') {
+                //continue;
+            }
+            $method = $method . 'Deal';
             $spiderNum = $this->$method($crawler, $info);
             $info->spider_num = $spiderNum;
             $info->status = 2;
@@ -38,14 +42,19 @@ Trait TraitList
         }
     }
 
-    protected function jiaDeal($crawler, $info) 
+    protected function dedeDeal($crawler, $info) 
     {
+        $urlBases = [
+            'hanhan' => 'http://www.hanhanstudio.com/',
+            'jingshan' => 'http://www.jingshanwenhua.com/',
+            'toteme' => 'http://www.toteme.cn/',
+        ];
+        $urlBase = $urlBases[$info['site_code']];
         $spiderNum = 0;
-        $crawler->filter('.news_matter li')->each(function ($node) use ($info, &$spiderNum) {
-            //print_r($node);exit();
-            $baseElem = $node->filter('.news_matter_img');
-            $img = $baseElem->filter('img')->attr('src');
-            $source_url = $baseElem->filter('a')->attr('href');
+        $crawler->filter('.zuopin li')->each(function ($node) use ($info, &$spiderNum, $urlBase) {
+            $baseElem = $node->filter('a');
+            $img = $urlBase . $baseElem->filter('img')->attr('src');
+            $source_url = $urlBase . $baseElem->filter('a')->attr('href');
             $name = $node->filter('h3')->text();
             $source_id = str_replace('.html', '', basename($source_url));
             //echo "<a href='{$info['url_source']}'>{$info['url_source']}</a>" . '--' . $source_url . '--' . $name . '--' . $source_id . '<br />';
@@ -60,25 +69,14 @@ Trait TraitList
                 ];
                 $this->_addAttachment(new Attachment($aData));
             }
-            $descriptions = $node->filter('p');//->text());
-            foreach ($descriptions as $description) {
-                $d = $description->nodeValue;
-            }
-            $tags = '';
-            $tagInfos = $node->filter('.tag_small a');//->eq(0)->filter('em');
-            foreach ($tagInfos as $tag) {
-                $tags .= trim($tag->nodeValue) . ' ';
-            }
-            $createdAt = $node->filter('.time_details span')->eq(0)->text();
             $data = [
                 'source_id' => $source_id,
                 'name' => $name,
                 'sort' => $info['sort'],
                 'source_url' => $source_url,
-                'tags' => $tags,
-                'description' => $d,
-                'content' => $d,
-                'source_created' => $createdAt,
+                'tag' => '',
+                'description' => '',
+                'content' => '',
                 'source_site_code' => $info['site_code'],
             ];
             $model = new Article($data);
@@ -89,24 +87,64 @@ Trait TraitList
         return $spiderNum;
     }
 
-    protected function mllDeal($crawler, $info) 
+    protected function honggDeal($crawler, $info) 
     {
         //print_r($info);exit();
         $spiderNum = 0;
-        $crawler->filter('.zxcate_list_box dl')->each(function ($node) use ($info, &$spiderNum) {
+        $crawler->filter('.zxkp_list li')->each(function ($node) use ($info, &$spiderNum) {
             //print_r($node);exit();
-            $baseElem = $node->filter('h3');
-            $img = $node->filter('dt a img')->attr('data-src');
-            $source_url = $baseElem->filter('a')->attr('href');
-            $source_url = 'http://zx.meilele.com' . $source_url;
-            $name = $baseElem->filter('a')->text();
+            $baseElem = $node->filter('a');
+            $img = $baseElem->filter('img')->attr('src');
+            $source_url = $baseElem->attr('href');
+            $name = $baseElem->filter('img')->attr('alt');
             $source_id = str_replace(['article-', '.html'], ['', ''], basename($source_url));
+            $name = '';
             //echo "<a href='{$info['url_source']}'>{$info['url_source']}</a>" . '--' . $source_url . '--' . $name . '--' . $source_id . '--' . $img . '<br />';
             if (!empty($img)) {
                 $aData = [
                     'source_url' => $img,
                     'name' => $name,
                     'info_table' => 'article',
+                    'info_field' => 'thumb',
+                    'source_site_code' => $info['site_code'],
+                    'source_id' => $source_id,
+                ];
+                $this->_addAttachment(new Attachment($aData));
+            }
+            $data = [
+                'source_id' => $source_id,
+                'name' => $name,
+                'sort' => $info['sort'],
+                'source_url' => $source_url,
+                'description' => $name,
+                'content' => $name,
+                'source_site_code' => $info['site_code'],
+            ];
+            $model = new Article($data);
+            $model->insert(false);
+
+            $spiderNum++;
+        });
+        return $spiderNum;
+    }
+
+    protected function shouxiDeal($crawler, $info) 
+    {
+        //print_r($info);exit();
+        $spiderNum = 0;
+        $crawler->filter('.n_pro_list li')->each(function ($node) use ($info, &$spiderNum) {
+            //print_r($node);exit();
+            $img = 'http://shouxiphotos.com/' . $node->filter('img')->attr('src');
+            $source_url = $node->filter('a')->attr('href');
+            $source_url = 'http://shouxiphotos.com/' . $source_url;
+            $name = '';
+            $source_id = str_replace(['http://shouxiphotos.com/pro_show.asp?id='], [''], $source_url);
+            //echo "<a href='{$info['url_source']}'>{$info['url_source']}</a>" . '--' . $source_url . '--' . $name . '--' . $source_id . '--' . $img . '<br />';
+            if (!empty($img)) {
+                $aData = [
+                    'source_url' => $img,
+                    'name' => $name,
+                    'info_table' => 'sample',
                     'info_field' => 'thumb',
                     'source_site_code' => $info['site_code'],
                     'source_id' => $source_id,
