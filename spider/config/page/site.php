@@ -4,16 +4,16 @@ return [
         'code' => 'groupon',
         'name' => '大件会',
     ],
-    'ns' => [
-        'code' => 'sflower',
+    'nuoshi' => [
+        'code' => 'nsflower',
         'name' => 'FLOWER',
-    ],
-    'taopaipai' => [
-        'code' => 'shoot',
-        'name' => '淘拍拍',
     ],
     'heiguang' => [
         'code' => 'shooth',
         'name' => '黑光',
+    ],
+    'kids' => [
+        'code' => 'hulian',
+        'name' => '可嘟儿',
     ],
 ];

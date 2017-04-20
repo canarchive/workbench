@@ -45,10 +45,7 @@ use yii\helpers\Html;
                         <tr>
                             <th>代码</th>
                             <th>名称</th>
-                            <th>源名称</th>
-                            <th>添加时间</th>
                             <th>状态</th>
-                            <th>是否启用</th>
                             <th>操作</th>
                         </tr>
                     </thead>
@@ -57,10 +54,7 @@ use yii\helpers\Html;
                         <tr>
                             <td><?= $info['code']; ?></td>
                             <td><?= $info['urlLocalName']; ?></td>
-                            <td><?= "<a href='{$info['url']}' target='_blank'>{$info['name_source']}</a>"; ?></td>
-                            <td><?= $info['created_at']; ?></td>
                             <td><?= $info->statusInfos[$info->status]; ?></td>
-                            <td><?= $info->isbakInfos[$info->isbak]; ?></td>
                             <td><?= $info->opeStr; ?></td>
 
                         </tr>
