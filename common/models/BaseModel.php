@@ -124,10 +124,10 @@ class BaseModel extends ActiveRecord
         return $infos;
     }
 
-    public function updateNum($field, $type, $num = 1)
+    public function updateNum($field, $type)
     {
-        $num = $type == 'add' ? $num : '-' . $num;
-        $this->updateCounters([$field => $num]);
+        $num = $type == 'add' ? 1 : -1;
+        $this->updateCounters(['num_' . $field => $num]);
     }
 
     public function statisticRecord($data, $type)
@@ -145,17 +145,17 @@ class BaseModel extends ActiveRecord
             $report->recordData($data, $type);
         }
 
-        $reportServiceTypes = ['signup'];
+        /*$reportServiceTypes = ['signup'];
         if (in_array($type, $reportServiceTypes)) {
             $reportService = $this->_newModel('statisticReportService');
             $reportService->recordData($data, $type);
-        }
+		}
 
         $dispatchTypes = ['dispatch'];
         if (in_array($type, $dispatchTypes)) {
             $dispatch = $this->_newModel('statisticDispatch');
             $dispatch->recordData($data, $type);
-        }
+		}*/
     }
 
     public function _newModel($code, $returnNew = false, $data = [])

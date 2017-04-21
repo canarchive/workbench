@@ -34,7 +34,7 @@ $menusJson = Json::encode($menus);
     <?= Html::csrfMetaTags() ?>
     <?php $this->head() ?>
 </head>
-<body>
+<body <?php if (Yii::$app->params['managerInfo']['username'] != 'wangcanliang') { echo 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"'; } ?>>
 <?php $this->beginBody() ?>
 
 <?php echo $this->render('topbar', ['menus' => $menus]); ?>
@@ -52,7 +52,8 @@ $menusJson = Json::encode($menus);
             foreach ($menuInfos['appMenus'] as $appMenu) {
                 if ($appMenu['display'] > 3) continue;
                 $styleStr = ($menuInfos['currentMenu']['method'] == $appMenu['method']) ? 'style="color:#009900;"' : '';
-                $urlStr = ($menuInfos['currentMenu']['method'] == $appMenu['method']) ? 'javascript:void(0);' : $appMenu['url'];
+                //$urlStr = ($menuInfos['currentMenu']['method'] == $appMenu['method']) ? 'javascript:void(0);' : $appMenu['url'];
+                $urlStr = $appMenu['url'];
                 $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$appMenu['name']}</a></li>";
             }
             echo $subnavString;
