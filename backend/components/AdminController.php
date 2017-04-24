@@ -115,13 +115,16 @@ class AdminController extends Controller
         return true;
     }
 
-    protected function _importInfo($model)
+    protected function _importInfo()
     {
+        $modelClass = $this->modelClass;
+        $model = new $modelClass();
         if ($model->load(Yii::$app->request->post()) && $model->import()) {
             return $this->redirect(['listinfo']);
         }
 
         return $this->render('import', [
+            'number' => 0,
             'model' => $model,
         ]);
     }
