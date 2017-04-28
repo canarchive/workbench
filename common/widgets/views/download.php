@@ -29,6 +29,9 @@
             <span class="">名称：<input type="text" name="attachment_filename[{%=file.id%}]" value="{%=file.filename%}"/></span>
         </td>
         <td>
+            <span class="">置为主图：<input type="radio" name="attachment_is_master[{%=file.id%}]" value="1" {% if (file.is_master) { %} checked="checked" {% } %} /></span>
+        </td>
+        <td>
             <span class="size">排序：<input type="text" name="attachment_orderlist[{%=file.id%}]" value="{%=file.orderlist%}"/></span>
         </td>
         <td>

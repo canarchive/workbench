@@ -9,10 +9,11 @@ trait ModelAttachmentTrait
      */
     public $deleteAttachment = false;
 
-    public function getAttachmentImg($id, $pointSize = true, $options = [])
+    public function getAttachmentImg($where, $pointSize = true, $options = [])
     {
         $model = $this->_newModel('attachment');
-        $info = $model->findOne($id);
+        $where = is_int($where) ? ['id' => $id] : $where;
+        $info = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->one();
         if ($info) {
             $info->getUrl();
             $optionsDefault = [
@@ -25,11 +26,12 @@ trait ModelAttachmentTrait
         return '';
     }
 
-    public function getAttachmentUrl($id)
+    public function getAttachmentUrl($where)
     {
         $model = $this->_newModel('attachment');
         //$model = $this->getAttachmentModel();
-        $info = $model->findOne($id);
+        $where = is_int($where) ? ['id' => $id] : $where;
+        $info = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->one();
         return empty($info) ? '' : $info->getUrl();
     }
 
@@ -53,13 +55,13 @@ trait ModelAttachmentTrait
     {
         $attachment = $this->_newModel('attachment');
         $ids = array_filter(explode(',', $this->$field));
+        $isMasterData = [];
         foreach ($ids as $id) {
-            $attachment->updateInfo($id, $this->id, $extData);
+            $isMasterData[$id] = $attachment->updateInfo($id, $this->id, $extData);
         }
 
         $where = ['info_table' => $table, 'info_field' => $field, 'info_id' => $this->id];
         $this->deleteAttachment && $attachment->deleteInfo($where, $ids);
-
-        return ;
+        return $isMasterData;
     }
 }
