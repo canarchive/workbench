@@ -29,7 +29,7 @@
             <span class="">名称：<input type="text" name="attachment_filename[{%=file.id%}]" value="{%=file.filename%}"/></span>
         </td>
         <td>
-            <span class="">置为主图：<input type="radio" name="attachment_is_master[{%=file.id%}]" value="1" {% if (file.is_master) { %} checked="checked" {% } %} /></span>
+            <span class="">置为主图：<input type="checkbox" name="attachment_is_master[{%=file.id%}]" value="1" {% if (file.is_master) { %} checked="checked" {% } %} onclick="inputChecked($(this))" /></span>
         </td>
         <td>
             <span class="size">排序：<input type="text" name="attachment_orderlist[{%=file.id%}]" value="{%=file.orderlist%}"/></span>
@@ -55,3 +55,13 @@
 {% } %}
 
 </script>
+<script>
+    function inputChecked($obj){
+        var td=$obj.parents("tr").siblings('tr').children('td');
+        var span=td.children('span');
+        if($obj.is(':checked')){
+            span.children("input[type='checkbox']").prop('checked',false);
+        }
+    }
+</script>
+
