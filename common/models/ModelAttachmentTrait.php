@@ -12,7 +12,7 @@ trait ModelAttachmentTrait
     public function getAttachmentImg($where, $pointSize = true, $options = [])
     {
         $model = $this->_newModel('attachment');
-        $where = is_int($where) ? ['id' => $id] : $where;
+        $where = is_int($where) ? ['id' => $where] : $where;
         $info = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->one();
         if ($info) {
             $info->getUrl();
@@ -30,7 +30,7 @@ trait ModelAttachmentTrait
     {
         $model = $this->_newModel('attachment');
         //$model = $this->getAttachmentModel();
-        $where = is_int($where) ? ['id' => $id] : $where;
+        $where = is_int($where) ? ['id' => $where] : $where;
         $info = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->one();
         return empty($info) ? '' : $info->getUrl();
     }
