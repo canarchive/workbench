@@ -16,6 +16,8 @@ return [
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
+                ['pattern' => '/spread-upload/<table:\w+>/<field:\w+>', 'route' => '/spread-upload/index', 'host' => Yii::getAlias('@spreadurl')],
+                ['pattern' => '/merchant-upload/<table:\w+>/<field:\w+>', 'route' => '/merchant-upload/index', 'host' => Yii::getAlias('@merchanturl')],
             ],
         ],
         'errorHandler' => [

@@ -64,6 +64,18 @@ return [
     ],
 
     'modules' => [
+        'spread' => [
+            'class' => 'backend\spread\Module',
+        ],
+        'statistic' => [
+            'class' => 'backend\statistic\Module',
+        ],
+        'merchant' => [
+            'class' => 'backend\merchant\Module',
+        ],
+        'saccount' => [
+            'class' => 'backend\saccount\Module',
+        ],
     ],
     'language' => 'zh-CN',
 
