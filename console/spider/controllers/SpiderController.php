@@ -21,9 +21,9 @@ class SpiderController extends Controller
         $dispatch->deal($action);
     }
 
-    public function actionFileDown()
+    public function actionFileDown($code)
     {
-        $dispatch = $this->getDispatch();
+        $dispatch = $this->getDispatch($code);
         $dispatch->fileDown();
     }
 

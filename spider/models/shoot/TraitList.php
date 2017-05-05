@@ -62,7 +62,7 @@ Trait TraitList
                 $aData = [
                     'source_url' => $img,
                     'name' => $name,
-                    'info_table' => 'article',
+                    'info_table' => 'sample',
                     'info_field' => 'thumb',
                     'source_site_code' => $info['site_code'],
                     'source_id' => $source_id,
@@ -104,7 +104,7 @@ Trait TraitList
                 $aData = [
                     'source_url' => $img,
                     'name' => $name,
-                    'info_table' => 'article',
+                    'info_table' => 'sample',
                     'info_field' => 'thumb',
                     'source_site_code' => $info['site_code'],
                     'source_id' => $source_id,

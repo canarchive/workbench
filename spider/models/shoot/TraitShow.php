@@ -15,9 +15,9 @@ Trait TraitShow
         echo $num;
     }
 
-    public function show($siteCode)
+    public function showDeal()
     {
-        $where = ['source_site_code' => $siteCode, 'source_status' => 1];
+        $where = ['source_status' => 1];
         $infos = $this->_getShowInfos($where, 500);
         foreach ($infos as $info) {
             $file = $info->showFile();
@@ -30,35 +30,86 @@ Trait TraitShow
             $crawler->addContent($this->getContent($file));
             //echo $file;exit();
 
-            $attrs = $crawler->filter('.pr30 span');
-            $count = count($attrs);
-            if ($count < 3) {
-                echo $info['source_url'] . '<br />';
-                $info->source_status = -1;
-                $info->update(false);
+
+            $method = in_array($info['source_site_code'], ['toteme', 'jingshan', 'hanhan']) ? 'dede' : $info['source_site_code'];
+            if ($method != 'dede') {
                 continue;
             }
-            $created_at = $attrs->eq(0)->text();//nodeValue;
-            $created_at = strtotime($created_at);
-            $author = $attrs->eq(1)->text();//nodeValue;
-            $author = trim(str_replace('来源：', '', $author));
-            $editor = trim($attrs->eq(2)->text());//nodeValue;
-            $pos = strpos($editor, '【');
-            $editor = $pos != false ? substr($editor, 0, $pos) : $editor;
-            $editor = str_replace('编辑：', '', $editor);
-            //echo $created_at . '==' . $from_source . '==' . $editor;
-            $content = trim($crawler->filter('#ctrlfscont')->html());
-            $content = preg_replace("'<script(.*?)<\/script>'is", '', $content);
-            $content = strip_tags($content, '<p>');
-            //echo $content;exit();
-
-            $info->created_at = $created_at;
-            $info->author = $author;
-            $info->editor = $editor;
-            $info->content = $content;
-            $info->source_status = 2;
-            //print_r($info);exit();
-            $info->update(false);
+            $method = $method . 'DealShow';
+            $r = $this->$method($crawler, $info);
+            $info->status = 2;
+            if ($r) {
+                $info->update(false);
+            }
         }
+    }
+
+    protected function shouxiDealShow($crawler, $info)
+    {
+        $crawler->filter('.list img')->each(function ($node) use ($info) {
+            $img = $node->filter('img')->attr('src');
+            $img = 'http://shouxiphotos.com/' . $img;
+            if (!empty($img)) {
+                $aData = [
+                    'source_url' => $img,
+                    'name' => $info['name'],
+                    'info_table' => 'sample',
+                    'info_field' => 'picture',
+                    'source_site_code' => $info['source_site_code'],
+                    'source_id' => $info['source_id'],
+                ];
+                $this->_addAttachment(new Attachment($aData));
+            }
+        });
+        return true;
+    }
+
+    protected function honggDealShow($crawler, $info)
+    {
+        $infos = $crawler->filter('.zhanshi_box');
+        $name = $infos->filter('h1')->text();
+        $crawler->filter('tbody img')->each(function ($node) use ($info) {
+            $img = $node->filter('img')->attr('src');
+            if (!empty($img)) {
+                $aData = [
+                    'source_url' => $img,
+                    'name' => $info['name'],
+                    'info_table' => 'sample',
+                    'info_field' => 'picture',
+                    'source_site_code' => $info['source_site_code'],
+                    'source_id' => $info['source_id'],
+                ];
+                $this->_addAttachment(new Attachment($aData));
+            }
+        });
+        return true;
+    }
+
+    protected function dedeDealShow($crawler, $info)
+    {
+        $urlBases = [
+            'hanhan' => 'http://www.hanhanstudio.com/',
+            'jingshan' => 'http://www.jingshanwenhua.com/',
+            'toteme' => 'http://www.toteme.cn/',
+        ];
+        $urlBase = $urlBases[$info['source_site_code']];
+        $name = $crawler->filter('.biaoti')->text();
+        $crawler->filter('.space li img')->each(function ($node) use ($info, $urlBase) {
+            $img = $urlBase . $node->filter('img')->attr('src');
+            if (!empty($img)) {
+                $aData = [
+                    'source_url' => $img,
+                    'name' => $info['name'],
+                    'info_table' => 'sample',
+                    'info_field' => 'picture',
+                    'source_site_code' => $info['source_site_code'],
+                    'source_id' => $info['source_id'],
+                ];
+                $this->_addAttachment(new Attachment($aData));
+            }
+        });
+        $info->name = $name;
+        $info->update(false);
+        return true;
     }
 }
