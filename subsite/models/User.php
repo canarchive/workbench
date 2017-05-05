@@ -1,0 +1,400 @@
+<?php
+
+namespace spread\models;
+
+use Yii;
+use yii\helpers\ArrayHelper;
+use common\components\sms\Smser;
+use common\models\SpreadModel;
+use common\models\Company;
+
+class User extends SpreadModel
+{
+    public $user;
+    public $serviceModel;
+    public $serviceInfo;
+    public $notice_merchant;
+    public $notice_user;
+
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return '{{%user}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'city_code' => '城市代码',
+            'service_id' => '客服',
+            'mobile' => '手机号',
+            'name' => '名字',
+            'client_type' => '来源',
+            'signup_at' => '报名时间',
+            'notice_merchant' => '是否短信通知商家',
+            'notice_user' => '是否短信通知业主',
+            'signup_ip' => '报名IP',
+            'area_input' => '房屋面积',
+            'city_input' => '房屋所在地',
+            'signup_city' => '报名城市',
+            'channel_big' => '一级渠道',
+            'signup_num' => '报名次数',
+            'channel' => '报名渠道',
+            'message' => '留言',
+            'note' => '备注',
+            'merchant_id' => '商家',
+            'keyword' => '关键字',
+            'keyword_search' => '搜索关键字',
+            'invalid_status' => '无效原因',
+            'out_status' => '承接范围外无效原因',
+            'callback_at' => '第一次回访',
+            'callback_again' => '再次回访时间',
+            'status' => '状态',
+        ];
+    }
+
+    public function addOwner($data, $serviceId = null)
+    {
+        $serviceInfo = !is_null($serviceId) ? $this->_newModel('service')->findOne($serviceId) : null;
+        $serviceInfo = empty($serviceInfo) ? $this->_newModel('service')->getServiceInfo($data['merchant_id']) : $serviceInfo;
+        $ip = Yii::$app->getRequest()->getIP();
+        $city = \common\components\IP::find($ip);
+        $city = is_array($city) ? implode('-', $city) : $city;
+        $time = Yii::$app->params['currentTime'];
+        $data = array_merge($data, [
+            'signup_at' => $time,
+            'created_at' => $time,
+            'created_month' => date('Ym', $time),
+            'created_day' => date('Ymd', $time),
+            'created_hour' => date('H', $time),
+            'created_week' => date('W', $time),
+            'created_weekday' => date('N', $time),
+            'signup_num' => 1,
+            'signup_ip' => $ip,
+            'signup_city' => $city,
+            'service_id' => empty($serviceInfo) ? 1 : $serviceInfo->id,
+        ]);
+
+        $newModel = $this->_newModel('user', true, $data);
+        $insert = $newModel->insert(true, $data);
+        if (!$insert) {
+            return false;
+        }
+        $newModel->serviceInfo = $serviceInfo;
+
+        return $newModel;
+    }
+
+    public function insert($runValidation = true, $attributes = null)
+    {
+        if (($primaryKeys = $this->getDb()->schema->insert($this->tableName(), $attributes)) === false) {
+            return false;
+        }
+        foreach ($primaryKeys as $name => $value) {
+            $id = $this->getTableSchema()->columns[$name]->phpTypecast($value);
+            $this->setAttribute($name, $id);
+            $values[$name] = $id;
+        }
+
+        $changedAttributes = array_fill_keys(array_keys($values), null);
+        $this->setOldAttributes($values);
+        return true;
+    }        
+
+    public function getOutStatusInfos()
+    {
+        $datas = [
+            '' => '未知',
+            'out' => '外地',
+			'part' => '局部装修',
+			'small' => '50平米以下整装',
+			'shop' => '商铺',
+			'we_part' => '水电改造',
+			'soft' => '软装',
+        ];
+
+        return $datas;
+    }
+
+    public function getInvalidStatusInfos()
+    {
+        $datas = [
+            '' => '未知',
+            'no_call' => '空号',
+            'noneed' => '无需求',
+            'booked' => '已定好',
+            'no_test' => '测试',
+        ];
+
+        return $datas;
+    }
+
+    public function getStatusInfos()
+    {
+        $datas = [
+            '' => '未回访',
+            'follow' => '跟进',
+            'follow-plan' => '期房跟进',
+			'valid' => '有效',
+			'valid-part' => '有效-局装',
+			'valid-out' => '承接范围外-无效',
+            //'valid-dispatch' => '已派单',
+            'bad' => '废单',
+        ];
+        return $datas;
+    }
+
+    public function getCallbackAgainInfos()
+    {
+        $datas = [
+            0 => '',
+            1 => '再次回访',
+        ];
+
+        return $datas;
+    }
+
+    public function getSignupChannelInfos()
+    {
+        $datas = [
+            'semthird' => '第三方SEM',
+            'semspider' => 'SEM抓取',
+			'phone400' => '400电话',
+			'hotline' => '网络直拨',
+        ];
+        return $datas;
+    }
+
+    protected function getCompanyInfos()
+    {
+        $infos = ArrayHelper::map(Company::find()->select('code_short, name')->where(['status' => 2])->all(), 'code_short', 'name');
+        return $infos;
+    }
+
+    public function updateAfterInsert($cInfo)
+    {
+        //if (!empty($cInfo['channel']) || !empty($cInfo['keyword'] || !empty($cInfo['keywork_search']))) {
+        if (empty($this->merchant_id)) {
+            $this->merchant_id = isset($cInfo['merchant_id']) ? $cInfo['merchant_id'] : 0;
+        }
+            $this->channel = isset($cInfo['channel']) ? $cInfo['channel'] : '';
+            $this->keyword = isset($cInfo['keyword']) ? $cInfo['keyword'] : '';
+            $this->keyword_search = isset($cInfo['keyword_search']) ? $cInfo['keyword_search'] : '';
+            $this->sem_account = isset($cInfo['sem_account']) ? $cInfo['sem_account'] : '';
+            $this->plan_id = isset($cInfo['plan_id']) ? $cInfo['plan_id'] : 0;
+            $this->unit_id = isset($cInfo['unit_id']) ? $cInfo['unit_id'] : 0;
+            
+            $this->city_code = isset($cInfo['city_code']) ? $cInfo['city_code'] : strval($this->city_code);
+        //}
+        //print_r($this->toArray());exit();
+        $this->statisticRecord($this->toArray(), 'signup');
+        $this->update(false);
+        return ;
+    }
+
+    public function addHandle($statusInput = 'admin')
+    {
+        $validator = new \common\validators\MobileValidator();
+        $valid =  $validator->validate($this->mobile);
+        if (empty($valid)) {
+            $this->addError('mobile', '手机号有误');
+            return false;
+        }
+        $this->merchant_id = empty($this->merchant_id) ? 2 : $this->merchant_id;
+
+        $exist = self::findOne(['merchant_id' => $this->merchant_id, 'mobile' => $this->mobile]);
+        if ($exist) {
+            $this->addError('mobile', '手机号已存在');
+            return false;
+        }
+
+        $data = [
+            'mobile' => $this->mobile,
+            'merchant_id' => $this->merchant_id,
+            'name' => $this->name,
+            'city_code' => $this->city_code,
+            'position' => '',
+            //'channel_big' => 'seo',
+            'note' => $this->note,
+            'message' => '',
+			'status_input' => $statusInput,
+            'client_type' => 'pc',
+            'area_input' => $this->area_input,
+            'city_input' => $this->city_input,
+            'channel' => $this->channel,
+        ];
+        $serviceId = $this->service_id ? $this->service_id : null;
+        $decorationOwner = $this->addOwner($data, $serviceId);
+        $conversionModel = $this->_newModel('conversion');
+        $cData = $data;
+        foreach (['position', 'city_input', 'area_input', 'status_input', 'note', 'message'] as $cNoField) {
+            unset($cData[$cNoField]);
+        }
+        $conversionInfo = $conversionModel->successLog($cData);
+
+        if (!empty($this->merchant_id)) {
+            $this->_sendSms($data, $decorationOwner->serviceInfo);
+        }
+		$sDatas = $decorationOwner->toArray();
+		$sDatas['plan_id'] = 0;
+		$sDatas['unit_id'] = 0;
+        $this->statisticRecord($sDatas, 'signup');
+
+        return $decorationOwner;
+    }
+
+    protected function _sendSms($data, $serviceInfo)
+    {
+        $merchantInfo = $this->getMerchantInfo();
+        if (empty($merchantInfo)) {
+            return ;
+        }
+
+        if ($this->notice_merchant) {
+            $this->sendSmsService($merchantInfo, $data, $serviceInfo);
+        }
+        if ($this->notice_user) {
+            $this->sendSms($merchantInfo, $data);
+        }
+    }
+
+    public function dealService()
+    {
+        $serviceModel = isset($this->serviceInfo) ? $this->serviceInfo : $this->_newModel('service')->findOne($this->service_id);
+
+        $serviceModel->distributed_at = Yii::$app->params['currentTime'];
+        $serviceModel->update(false);
+        $serviceModel->updateCounters(['serviced_times' => 1]);
+        
+        $serviceModel->updateServiceInfo();
+        return $serviceModel;
+    }
+
+    public function viewInfo($merchantId, $ids)
+    {
+        $ids = explode(',', $ids);
+        if (count($ids) > 50) {
+            return ['status' => 400, 'message' => '请求有误'];
+        }
+        $infos = $this->find()->where(['id' => $ids])->indexBy('id')->all();
+        foreach ($infos as $id => $info) {
+            if ($info['merchant_id'] != $merchantId) {
+                return ['status' => 400, 'message' => '你没有查看这些信息的权限'];
+            }
+        }
+        $datas = [];
+        foreach ($infos as $id => $info) {
+            if (!$info->view_at) {
+            $info->view_at = Yii::$app->params['currentTime'];
+            $info->update(false);
+            }
+            $datas[$id]['mobile'] = $info['mobile'];
+            $datas[$id]['viewAt'] = date('Y-m-d H:i:s', $info->view_at);
+        }
+
+        return ['status' => 200, 'message' => 'OK', 'datas' => $datas];
+    }
+
+    public function getNoticeMerchantInfos()
+    {
+        $datas = [
+            '0' => '不通知',
+            '1' => '通知',
+        ];
+        return $datas;
+    }
+
+    public function getNoticeUserInfos()
+    {
+        $datas = [
+            '0' => '不通知',
+            '1' => '通知',
+        ];
+        return $datas;
+    }
+
+    public function sendSmsValid($data, $userInfo)
+    {
+        $merchantId = $data->merchant_id;
+        if (empty($merchantId)) {
+            return ;
+        }
+        $noticeMobiles = [
+            '667' => '17316278360',
+            '671' => '15110125766',
+			'682' => '18600063835',
+			'669' => '13717716106',//'13581522034',
+			'684' => '18614242810',
+			'686' => '15801558634',
+        ];
+        $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
+        if (empty($mobile)) {
+            return ;
+        }
+
+        $houseInfo = $this->_newModel('house', true)->findOne($data->house_id);
+        if (empty($houseInfo)) {
+            return ;
+        }
+        $houseType = isset($houseInfo->houseTypeInfos[$houseInfo->house_type]) ? $houseInfo->houseTypeInfos[$houseInfo->house_type] : '';
+        $houseSort = isset($houseInfo->houseSortInfos[$houseInfo->house_sort]) ? $houseInfo->houseSortInfos[$houseInfo->house_sort] : '';
+		$content = "业主信息，姓名：{$userInfo['name']};电话：{$userInfo['mobile']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访【兔班长装修网】";
+
+        $smser = new Smser();
+        $smser->send($mobile, $content, 'decoration_valid');
+        return ;
+    }
+
+    protected function sendSmsService($merchantInfo, $data, $employee)
+    {
+		if (empty($merchantInfo) || $employee['status_sendmsg'] == 0) {
+			return ;
+		}
+
+        $mobile = $employee['mobile'];
+		$signStr = !isset($merchantInfo->name) ? '' : "【{$merchantInfo->name}】";
+		$content = "有业主：{$data['name']}，电话：{$data['mobile']}，咨询您公司的家装业务，请立即回访{$signStr}";
+
+        $smser = new Smser();
+        $smser->send($mobile, $content, 'decoration_service');
+		if ($employee['status_sendmsg'] == 2 && !empty($employee['mobile_ext'])) {
+            $smser->send($employee['mobile_ext'], $content, 'decoration_service');
+		}
+        
+        return true;
+    }
+
+    protected function sendSms($merchantInfo, $data)
+    {
+        $mobile = $data['mobile'];
+
+		$message = isset($merchantInfo['msg']) ? $merchantInfo['msg'] : '';
+		if (empty($message)) {
+            $siteName = Yii::$app->params['siteNameBase'];
+            $hotline = Yii::$app->params['siteHotline'];
+            $message = "您已成功预约，装修顾问会在15分钟内回访了解您的具体装修需求，请保持您的电话畅通，详情咨询{$hotline}【{$siteName}】";
+		}
+
+        $smser = new Smser();
+        $smser->send($mobile, $message, 'decoration_signup');
+        
+        return true;
+    }
+
+	protected function _formatInfos($infos)
+	{
+		foreach ($infos as $key => & $info) {
+			if (!$info['view_at']) {
+				$info['mobile'] = substr_replace($info['mobile'], '******', 3, 6);
+			}
+		}
+
+		return $infos;
+	}
+}
