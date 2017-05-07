@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
-use spread\decoration\models\Service;
+use subsite\decoration\models\Service;
 
 /*if ($this->context->isService) {
     $customInfos = ArrayHelper::map($this->context->serviceInfos, 'id', 'name');

@@ -108,7 +108,7 @@ $tableName = 'user';
                         <td><?= $model->keyword_search; ?></td>
                         <td><?= $model->note; ?></td>
                         <td><?= $model->message; ?></td>
-                        <td><?= "<a href='/spread/decoration/user/change-merchant.html?id={$model->id}'>指派其他商家</a>"; ?></td>
+                        <td><?= "<a href='/subsite/decoration/user/change-merchant.html?id={$model->id}'>指派其他商家</a>"; ?></td>
                     </tr>
                     </tbody>
                 </table>

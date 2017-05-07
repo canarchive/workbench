@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Dispatch;
+use backend\subsite\controllers\Dispatch;
 
 class DispatchController extends Dispatch
 {
-    protected $modelClass = 'spread\decoration\models\Dispatch';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Dispatch';
+    protected $modelClass = 'subsite\decoration\models\Dispatch';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Dispatch';
 
 }

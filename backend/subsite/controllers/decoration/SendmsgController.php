@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Sendmsg;
+use backend\subsite\controllers\Sendmsg;
 
 class SendmsgController extends Sendmsg
 {
-    protected $modelClass = 'spread\decoration\models\Sendmsg';
+    protected $modelClass = 'subsite\decoration\models\Sendmsg';
 
 }

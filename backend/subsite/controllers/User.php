@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\spread\controllers;
+namespace backend\subsite\controllers;
 
 use Yii;
 use yii\web\ForbiddenHttpException;

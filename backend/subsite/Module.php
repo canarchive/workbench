@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\spread;
+namespace backend\subsite;
 
 
 class Module extends \yii\base\Module

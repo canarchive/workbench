@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Visit;
+use backend\subsite\controllers\Visit;
 
 class VisitController extends Visit
 {
-    protected $modelClass = 'spread\decoration\models\Visit';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Visit';
+    protected $modelClass = 'subsite\decoration\models\Visit';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Visit';
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\spread\controllers\third;
+namespace backend\subsite\controllers\kl;
 
 use backend\components\AdminController;
 use backend\components\ControllerFullTrait;
@@ -8,8 +8,8 @@ use backend\components\ControllerFullTrait;
 class BookController extends AdminController
 {
     use ControllerFullTrait;
-    protected $modelClass = 'spread\models\third\KlBook';
-    protected $modelSearchClass = 'spread\models\third\searchs\KlBook';
+    protected $modelClass = 'subsite\models\kl\KlBook';
+    protected $modelSearchClass = 'subsite\models\kl\searchs\KlBook';
 
     public function _addData()
     {

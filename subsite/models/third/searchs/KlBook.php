@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\models\third\searchs;
+namespace spread\models\kl\searchs;
 
 use yii\data\ActiveDataProvider;
-use spread\models\third\KlBook as KlBookModel;
+use spread\models\kl\KlBook as KlBookModel;
 
 class KlBook extends KlBookModel
 {

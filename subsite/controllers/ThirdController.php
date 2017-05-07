@@ -4,16 +4,16 @@ namespace spread\controllers;
 
 use Yii;
 use spread\components\Controller as SpreadController;
-use spread\models\third\KlBook;
-use spread\models\third\KlProduct;
+use spread\models\kl\KlBook;
+use spread\models\kl\KlProduct;
 
-class ThirdController extends SpreadController
+class klController extends SpreadController
 {
     public $mobile;
 
     public function actionIndex()
     {
-        return $this->render('@spread/views/third/kele');
+        return $this->render('@spread/views/kl/kele');
 	}
 
     public function actionSignup()

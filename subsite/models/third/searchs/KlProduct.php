@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\models\third\searchs;
+namespace spread\models\kl\searchs;
 
 use yii\data\ActiveDataProvider;
-use spread\models\third\KlProduct as KlProductModel;
+use spread\models\kl\KlProduct as KlProductModel;
 
 class KlProduct extends KlProductModel
 {

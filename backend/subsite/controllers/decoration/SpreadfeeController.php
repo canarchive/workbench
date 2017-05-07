@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Spreadfee;
+use backend\subsite\controllers\Subsitefee;
 
-class SpreadfeeController extends Spreadfee
+class SubsitefeeController extends Subsitefee
 {
-    protected $modelClass = 'spread\decoration\models\Spreadfee';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Spreadfee';
+    protected $modelClass = 'subsite\decoration\models\Subsitefee';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Subsitefee';
 
 }

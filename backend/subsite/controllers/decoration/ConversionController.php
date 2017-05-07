@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Conversion;
+use backend\subsite\controllers\Conversion;
 
 class ConversionController extends Conversion
 {
-    protected $modelClass = 'spread\decoration\models\Conversion';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Conversion';
+    protected $modelClass = 'subsite\decoration\models\Conversion';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Conversion';
 }

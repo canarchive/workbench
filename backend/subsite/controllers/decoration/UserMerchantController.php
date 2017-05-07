@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\UserMerchant;
+use backend\subsite\controllers\UserMerchant;
 
 class UserMerchantController extends UserMerchant
 {
-    protected $modelClass = 'spread\decoration\models\UserMerchant';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\UserMerchant';
+    protected $modelClass = 'subsite\decoration\models\UserMerchant';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\UserMerchant';
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace spread\models\third;
+namespace spread\models\kl;
 
 use Yii;
 use common\models\SpreadModel;

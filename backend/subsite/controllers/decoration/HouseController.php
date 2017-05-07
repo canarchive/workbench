@@ -1,13 +1,13 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
 use backend\components\AdminController;
 use backend\components\ControllerListTrait;
 
 class HouseController extends AdminController
 {
-    protected $modelClass = 'spread\decoration\models\House';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\House';
+    protected $modelClass = 'subsite\decoration\models\House';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\House';
     use ControllerListTrait;
 }

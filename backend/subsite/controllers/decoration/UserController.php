@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\User;
+use backend\subsite\controllers\User;
 
 class UserController extends User
 {
-    protected $modelClass = 'spread\decoration\models\User';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\User';
+    protected $modelClass = 'subsite\decoration\models\User';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\User';
 }

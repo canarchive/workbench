@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Callback;
+use backend\subsite\controllers\Callback;
 
 class CallbackController extends Callback
 {
-    protected $modelClass = 'spread\decoration\models\Callback';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Callback';
+    protected $modelClass = 'subsite\decoration\models\Callback';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Callback';
 
 }

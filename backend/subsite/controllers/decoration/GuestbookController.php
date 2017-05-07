@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Guestbook;
+use backend\subsite\controllers\Guestbook;
 
 class GuestbookController extends Guestbook
 {
-    protected $modelClass = 'spread\decoration\models\Guestbook';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Guestbook';
+    protected $modelClass = 'subsite\decoration\models\Guestbook';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Guestbook';
 
 }

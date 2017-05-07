@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Service;
+use backend\subsite\controllers\Service;
 
 class ServiceController extends Service
 {
-    protected $modelClass = 'spread\decoration\models\Service';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Service';
+    protected $modelClass = 'subsite\decoration\models\Service';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Service';
 
 }

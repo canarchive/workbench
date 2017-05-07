@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
-use backend\spread\controllers\Keyword;
+use backend\subsite\controllers\Keyword;
 
 class KeywordController extends Keyword
 {
-    protected $modelClass = 'spread\decoration\models\Keyword';
-    protected $modelSearchClass = 'spread\decoration\models\searchs\Keyword';
+    protected $modelClass = 'subsite\decoration\models\Keyword';
+    protected $modelSearchClass = 'subsite\decoration\models\searchs\Keyword';
 
 }

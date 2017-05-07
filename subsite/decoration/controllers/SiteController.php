@@ -21,7 +21,7 @@ class SiteController extends Controller
         print_r($params);
     }
 
-    public function actionApiThird()
+    public function actionApikl()
     {
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         $code = Yii::$app->request->get('code');

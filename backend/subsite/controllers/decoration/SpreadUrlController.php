@@ -1,17 +1,17 @@
 <?php
 
-namespace backend\spread\controllers\decoration;
+namespace backend\subsite\controllers\decoration;
 
 use Yii;
-use backend\spread\controllers\SpreadUrl;
+use backend\subsite\controllers\SubsiteUrl;
 
-class SpreadUrlController extends SpreadUrl
+class SubsiteUrlController extends SubsiteUrl
 {
     protected $modelClass = '';
-    protected $visitClass = 'spread\decoration\models\Visit';
+    protected $visitClass = 'subsite\decoration\models\Visit';
 
     public function getParams()
     {
-        return require Yii::getAlias('@spread') . '/config/params-decoration.php';
+        return require Yii::getAlias('@subsite') . '/config/params-decoration.php';
     }
 }
