@@ -76,6 +76,9 @@ return [
         'saccount' => [
             'class' => 'backend\saccount\Module',
         ],
+        'subsite' => [
+            'class' => 'backend\subsite\Module',
+        ],
     ],
     'language' => 'zh-CN',
 

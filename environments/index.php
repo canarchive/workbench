@@ -7,6 +7,7 @@ return [
             //'backend/web/assets',
             'spread/runtime',
             'merchant/runtime',
+            'subsite/runtime',
         ],
         'setExecutable' => [
             'yii',
@@ -16,6 +17,7 @@ return [
             'backend/config/main-local.php',
             'spread/config/main-local.php',
             'merchant/config/main-local.php',
+            'subsite/config/main-local.php',
         ],
     ],
     'Production' => [
@@ -24,6 +26,7 @@ return [
             'backend/runtime',
             'spread/runtime',
             'merchant/runtime',
+            'subsite/runtime',
         ],
         'setExecutable' => [
             'yii',
@@ -32,6 +35,7 @@ return [
             'backend/config/main-local.php',
             'spread/config/main-local.php',
             'merchant/config/main-local.php',
+            'subsite/config/main-local.php',
         ],
     ],
 ];

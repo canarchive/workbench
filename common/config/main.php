@@ -18,6 +18,7 @@ return [
             'rules' => [
                 ['pattern' => '/spread-upload/<table:\w+>/<field:\w+>', 'route' => '/spread-upload/index', 'host' => Yii::getAlias('@spreadurl')],
                 ['pattern' => '/merchant-upload/<table:\w+>/<field:\w+>', 'route' => '/merchant-upload/index', 'host' => Yii::getAlias('@merchanturl')],
+                ['pattern' => '/subsite-upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index', 'host' => Yii::getAlias('@subsiteurl')],
             ],
         ],
         'errorHandler' => [
