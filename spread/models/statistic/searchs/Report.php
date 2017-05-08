@@ -3,8 +3,9 @@
 namespace spread\models\statistic\searchs;
 
 use yii\data\ActiveDataProvider;
+use spread\models\statistic\Report as ReportModel;
 
-Trait ReportTrait
+class Report extends ReportModel
 {
     public $field_hit;
 

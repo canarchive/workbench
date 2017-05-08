@@ -4,11 +4,14 @@ namespace backend\statistic\controllers;
 
 use backend\components\AdminController;
 
-class Service extends AdminController
+class KeywordController extends AdminController
 {
     use StatisticTrait;
     public $viewPrefix = '/';
-    protected $viewCurrent = 'service';
+    protected $viewCurrent = 'keyword';
+    protected $modelClass = 'spread\models\statistic\Keyword';
+    protected $modelSearchClass = 'spread\models\statistic\searchs\Keyword';
+    protected $showInfo = false;
 
     public function beforeAction($action)
     {

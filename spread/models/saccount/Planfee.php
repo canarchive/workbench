@@ -220,4 +220,49 @@ class Planfee extends BaseModel
             echo $sql . '<br />';
         exit();
     }
+
+    public static function getSemInfo($infos, $where, $type)
+    {
+        static $existDatas = [];
+        $cMark = '';
+        foreach ($infos as $key => $value) {
+            $cMark .= $key . $value;
+        }
+        if (isset($existDatas[$cMark][$type])) {
+            return $existDatas[$cMark][$type];
+        }
+
+        $fields = array_keys($infos);
+        $query = self::find();
+        $fieldsStr = implode(',', $fields);
+        $fieldsStr .= ", SUM(`hit_num`) AS `hit_num`, SUM(`fee`) As `fee`";
+        $query->select($fieldsStr);
+        $query->where($where);
+        $query->groupBy($fields);
+        $datas = $query->all();
+        foreach ($datas as $data) {
+            $mark = '';
+            foreach ($fields as $field) {
+                $mark .= $field . $data[$field];
+            }
+            $existDatas[$mark]['hit_num'] = $data['hit_num'];
+            $existDatas[$mark]['fee'] = $data['fee'];
+        }
+
+        $existDatas[$cMark]['hit_num'] = isset($existDatas[$cMark]['hit_num']) ? $existDatas[$cMark]['hit_num'] : 0;
+        $existDatas[$cMark]['fee'] = isset($existDatas[$cMark]['fee']) ? $existDatas[$cMark]['fee'] : 0;
+        return $existDatas[$cMark][$type];
+    }
+
+    public function getInfo($where)
+    {
+        $info = $this->findOne($where);
+        return $info;
+    }
+
+    public function getChannelInfos()
+    {
+        $model = $this->_newModel('visit');
+        return $model->channelInfos;
+    }
 }

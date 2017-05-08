@@ -3,8 +3,9 @@
 namespace spread\models\statistic\searchs;
 
 use yii\data\ActiveDataProvider;
+use spread\models\statistic\Dispatch as DispatchModel;
 
-trait DispatchTrait
+class Dispatch extends DispatchModel
 {
     public $field_hit;
 

@@ -2,14 +2,26 @@
 
 namespace spread\models\statistic;
 
+use Yii;
 use common\models\SpreadModel;
 use yii\helpers\ArrayHelper;
+use spread\models\saccount\Planfee;
 
 class AbstractStatistic extends SpreadModel
 {
     public $fields;
     public $where;
     
+    public static function getDb()
+    {
+        return Yii::$app->dbStatistic;
+    }    
+
+    public function _getClassPrefix()
+    {
+        return __NAMESPACE__ . '\\';
+    }
+
     public function recordData($data, $type)
     {
         //print_R($data);print_R($this);exit();
@@ -117,7 +129,7 @@ class AbstractStatistic extends SpreadModel
         foreach ($fields as $field) {
             $datas[$field] = $model->$field;
         }
-        $model = $this->_newModel('spreadfee');
+        $model = new Planfee();//$this->_newModel('spreadfee');
         $return = $model->getSemInfo($datas, $type, $where);
         return $return;
     }
