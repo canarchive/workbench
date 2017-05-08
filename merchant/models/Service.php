@@ -1,14 +1,13 @@
 <?php
 
-namespace spread\models;
+namespace merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use common\models\SpreadModel;
+use common\models\MerchantModel;
 use backend\models\Manager;
-use merchant\models\Merchant;
 
-class Service extends spreadModel
+class Service extends MerchantModel
 {
     public static function tableName()
     {

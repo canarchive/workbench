@@ -3,8 +3,9 @@
 namespace spread\models\statistic\searchs;
 
 use yii\data\ActiveDataProvider;
+use spread\models\statistic\Keyword as KeywordModel;
 
-trait KeywordTrait
+class Keyword extends KeywordModel
 {
     public $field_hit;
 

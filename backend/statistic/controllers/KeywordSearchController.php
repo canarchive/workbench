@@ -2,6 +2,6 @@
 
 namespace backend\statistic\controllers;
 
-class Keyword extends KeywordController
+class KeywordSearchController extends KeywordController
 {
 }
