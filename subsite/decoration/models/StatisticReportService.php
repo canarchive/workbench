@@ -1,8 +1,8 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\statistic\ReportService;
+use subsite\models\statistic\ReportService;
 
 class StatisticReportService extends ReportService
 {

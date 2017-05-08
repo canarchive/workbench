@@ -1,18 +1,18 @@
 <?php
 
-namespace spread\models\kl;
+namespace subsite\models\kl;
 
 use Yii;
-use common\models\SpreadModel;
+use common\models\SubsiteModel;
 
-class KlBook extends SpreadModel
+class KlBook extends SubsiteModel
 {
     private $_productInfos;
     public $couponData;
 
     public static function getDb()
     {
-        return Yii::$app->dbSpread;
+        return Yii::$app->dbSubsite;
     }    
 
     public function behaviors()

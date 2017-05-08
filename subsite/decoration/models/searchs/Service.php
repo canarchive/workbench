@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\searchs\ServiceTrait;
-use spread\decoration\models\Service AS ServiceModel;
+use subsite\models\searchs\ServiceTrait;
+use subsite\decoration\models\Service AS ServiceModel;
 
 class Service extends ServiceModel
 {

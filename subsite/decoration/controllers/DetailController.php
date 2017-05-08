@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\controllers;
+namespace subsite\decoration\controllers;
 
 use Yii;
-use spread\components\Controller;
-use spread\decoration\models\SignupForm;
+use subsite\components\Controller;
+use subsite\decoration\models\SignupForm;
 
 class DetailController extends Controller
 {
@@ -54,7 +54,7 @@ class DetailController extends Controller
 
         $view = Yii::$app->request->get('view');
         $params = require Yii::getAlias('@app') . '/config/params-decoration.php';
-        $urlTypes = $params['spreadUrlTypes'];
+        $urlTypes = $params['subsiteUrlTypes'];
         if (!in_array($view, array_keys($urlTypes))) {
             return $this->redirect('/')->send();
         }
@@ -103,7 +103,7 @@ class DetailController extends Controller
 
     public function _getCopyInfo()
     {
-        $datas = require (Yii::getAlias('@spread/config/params-copy.php'));
+        $datas = require (Yii::getAlias('@subsite/config/params-copy.php'));
         foreach ($datas as $key => $value) {
             if (strpos($this->host, $key) !== false) {
                 $this->copyStr = $value['copy'];

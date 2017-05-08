@@ -1,8 +1,8 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\statistic\Dispatch;
+use subsite\models\statistic\Dispatch;
 
 class StatisticDispatch extends Dispatch
 {

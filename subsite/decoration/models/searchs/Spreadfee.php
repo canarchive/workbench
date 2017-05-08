@@ -1,11 +1,11 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\searchs\SpreadfeeTrait;
-use spread\decoration\models\Spreadfee AS SpreadfeeModel;
+use subsite\models\searchs\SubsitefeeTrait;
+use subsite\decoration\models\Subsitefee AS SubsitefeeModel;
 
-class Spreadfee extends SpreadfeeModel
+class Subsitefee extends SubsitefeeModel
 {
-    use SpreadfeeTrait;
+    use SubsitefeeTrait;
 }

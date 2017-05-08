@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\searchs\CallbackTrait;
-use spread\decoration\models\Callback AS CallbackModel;
+use subsite\models\searchs\CallbackTrait;
+use subsite\decoration\models\Callback AS CallbackModel;
 
 class Callback extends CallbackModel
 {

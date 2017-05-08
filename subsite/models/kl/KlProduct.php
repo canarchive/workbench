@@ -1,17 +1,17 @@
 <?php
 
-namespace spread\models\kl;
+namespace subsite\models\kl;
 
 use Yii;
-use common\models\SpreadModel;
+use common\models\SubsiteModel;
 
-class KlProduct extends SpreadModel
+class KlProduct extends SubsiteModel
 {
     private $_productInfos;
 
     public static function getDb()
     {
-        return Yii::$app->dbSpread;
+        return Yii::$app->dbSubsite;
     }    
 
     public function behaviors()

@@ -1,11 +1,11 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\User as UserBase;
+use subsite\models\User as UserBase;
 
 class User extends UserBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 
 }

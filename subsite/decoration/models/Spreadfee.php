@@ -1,12 +1,12 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\Spreadfee as SpreadfeeBase;
+use subsite\models\Subsitefee as SubsitefeeBase;
 
-class Spreadfee extends SpreadfeeBase
+class Subsitefee extends SubsitefeeBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 
     public static function tableName()
     {

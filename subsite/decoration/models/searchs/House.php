@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use spread\decoration\models\House AS HouseModel;
+use subsite\decoration\models\House AS HouseModel;
 
 class House extends HouseModel
 {

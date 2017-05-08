@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\Service as ServiceBase;
+use subsite\models\Service as ServiceBase;
 
 class Service extends ServiceBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 }

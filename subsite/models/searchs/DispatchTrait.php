@@ -1,6 +1,6 @@
 <?php
 
-namespace spread\models\searchs;
+namespace subsite\models\searchs;
 
 use yii\data\ActiveDataProvider;
 

@@ -1,5 +1,5 @@
 <?php
-namespace spread\components;
+namespace subsite\components;
 
 use Yii;
 use yii\helpers\Url;
@@ -14,8 +14,8 @@ class Controller extends CommonController
         parent::init();
 
         $this->host = \Yii::$app->request->hostInfo;
-        $hostPc = Yii::getAlias('@spreadurl');
-        $hostMobile = Yii::getAlias('@m.spreadurl');
+        $hostPc = Yii::getAlias('@subsiteurl');
+        $hostMobile = Yii::getAlias('@m.subsiteurl');
         //$this->isMobile = $this->clientIsMobile();
         $this->isMobile = in_array($this->host, Yii::$app->params['mHosts']) ? true : false;
         $this->_getHostKey();
@@ -56,8 +56,8 @@ class Controller extends CommonController
         }   
 
         Yii::$app->params['hostKey'] = $hostKey;
-        Yii::$app->params['hostAliasPc'] = "@{$hostKey}spreadurl";
-        Yii::$app->params['hostAliasMobile'] = "@m.{$hostKey}spreadurl";
+        Yii::$app->params['hostAliasPc'] = "@{$hostKey}subsiteurl";
+        Yii::$app->params['hostAliasMobile'] = "@m.{$hostKey}subsiteurl";
     }
 
     public function _statistic($class)

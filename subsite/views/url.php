@@ -14,12 +14,12 @@
         </tr>  
     </thead>  
     <tbody>  
-        <?php foreach ($spreadInfos as $spreadInfo) { ?>
+        <?php foreach ($subsiteInfos as $subsiteInfo) { ?>
         <tr>  
-            <td><?= $spreadInfo['template_name']; ?></td>
-            <td><?= $spreadInfo['groupon_name']; ?></td>
-            <td><?= "<a href='{$spreadInfo['url']}' target='_blank'>pc推广链接</a>"; ?></td>
-            <td><?= "<a href='{$spreadInfo['url']}&force_mobile=1' target='_blank'>h5推广链接</a>"; ?></td>
+            <td><?= $subsiteInfo['template_name']; ?></td>
+            <td><?= $subsiteInfo['groupon_name']; ?></td>
+            <td><?= "<a href='{$subsiteInfo['url']}' target='_blank'>pc推广链接</a>"; ?></td>
+            <td><?= "<a href='{$subsiteInfo['url']}&force_mobile=1' target='_blank'>h5推广链接</a>"; ?></td>
         </tr>  
         <?php } ?>
     </tbody>  

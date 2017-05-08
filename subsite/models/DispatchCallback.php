@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\models;
+namespace subsite\models;
 
-use common\models\SpreadModel;
+use common\models\SubsiteModel;
 
-class DispatchCallback extends SpreadModel
+class DispatchCallback extends SubsiteModel
 {
     public static function tableName()
     {

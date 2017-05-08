@@ -1,8 +1,8 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\statistic\Keyword;
+use subsite\models\statistic\Keyword;
 
 class StatisticKeyword extends Keyword
 {

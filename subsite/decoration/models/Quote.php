@@ -1,5 +1,5 @@
 <?php
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
 class Quote
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace spread\decoration\controllers;
+namespace subsite\decoration\controllers;
 
 use Yii;
-use spread\components\Controller;
+use subsite\components\Controller;
 
 class TestController extends Controller
 {
     public function actionStatistic()
     {
-        $params = require Yii::getAlias('@spread') . '/config/params-statistic.php';
+        $params = require Yii::getAlias('@subsite') . '/config/params-statistic.php';
         print_r($params);
     }
 
@@ -47,7 +47,7 @@ class TestController extends Controller
             'user_id' => 0,
         ];
 
-        $model = new \spread\decoration\models\DecorationOwner($data);
+        $model = new \subsite\decoration\models\DecorationOwner($data);
         $return = $model->xunkeOperation($data);
         return 'OK';
     }

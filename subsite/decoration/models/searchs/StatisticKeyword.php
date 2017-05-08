@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\statistic\searchs\KeywordTrait;
-use spread\decoration\models\StatisticKeyword AS StatisticKeywordModel;
+use subsite\models\statistic\searchs\KeywordTrait;
+use subsite\decoration\models\StatisticKeyword AS StatisticKeywordModel;
 
 class StatisticKeyword extends StatisticKeywordModel
 {

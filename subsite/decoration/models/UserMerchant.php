@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\UserMerchant as UserMerchantBase;
+use subsite\models\UserMerchant as UserMerchantBase;
 
 class UserMerchant extends UserMerchantBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 }

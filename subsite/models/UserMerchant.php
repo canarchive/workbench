@@ -1,6 +1,6 @@
 <?php
 
-namespace spread\models;
+namespace subsite\models;
 
 use Yii;
 use common\models\MerchantModel;

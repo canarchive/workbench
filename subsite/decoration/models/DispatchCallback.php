@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\DispatchCallback as DispatchCallbackBase;
+use subsite\models\DispatchCallback as DispatchCallbackBase;
 
 class DispatchCallback extends DispatchCallbackBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 }

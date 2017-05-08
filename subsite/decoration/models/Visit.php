@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\Visit as VisitBase;
+use subsite\models\Visit as VisitBase;
 
 class Visit extends VisitBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 }

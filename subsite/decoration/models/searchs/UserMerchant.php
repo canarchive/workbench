@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\searchs\UserMerchantTrait;
-use spread\decoration\models\UserMerchant AS UserMerchantModel;
+use subsite\models\searchs\UserMerchantTrait;
+use subsite\decoration\models\UserMerchant AS UserMerchantModel;
 
 class UserMerchant extends UserMerchantModel
 {

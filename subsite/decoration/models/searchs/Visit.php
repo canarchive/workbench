@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\decoration\models\Visit as VisitModel;
-use spread\models\searchs\VisitTrait;
+use subsite\decoration\models\Visit as VisitModel;
+use subsite\models\searchs\VisitTrait;
 
 class Visit extends VisitModel
 {

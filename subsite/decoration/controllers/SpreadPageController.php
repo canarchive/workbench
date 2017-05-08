@@ -1,13 +1,13 @@
 <?php
 
-namespace spread\decoration\controllers;
+namespace subsite\decoration\controllers;
 
 use Yii;
-use spread\components\Controller;
-use spread\decoration\models\SignupForm;
-use spread\decoration\models\Template;
+use subsite\components\Controller;
+use subsite\decoration\models\SignupForm;
+use subsite\decoration\models\Template;
 
-class SpreadPageController extends Controller
+class SubsitePageController extends Controller
 {
     public $isMobile;
     public $mHost;
@@ -59,7 +59,7 @@ class SpreadPageController extends Controller
 
     public function _getCopyInfo()
     {
-        $datas = require (Yii::getAlias('@spread/config/params-copy.php'));
+        $datas = require (Yii::getAlias('@subsite/config/params-copy.php'));
         foreach ($datas as $key => $value) {
             if (strpos($this->host, $key) !== false) {
                 $this->copyStr = $value['copy'];

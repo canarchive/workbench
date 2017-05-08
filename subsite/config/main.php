@@ -7,12 +7,12 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-spread',
+    'id' => 'app-subsite',
     'basePath' => dirname(__DIR__),
-    //'viewPath' => '@spread/views',
+    //'viewPath' => '@subsite/views',
     'layout' => null,
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'spread\controllers',
+    'controllerNamespace' => 'subsite\controllers',
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -37,13 +37,13 @@ return [
 
     'modules' => [
         'decoration' => [
-            'class' => 'spread\decoration\Module',
+            'class' => 'subsite\decoration\Module',
         ],
         'shoot' => [
-            'class' => 'spread\shoot\Module',
+            'class' => 'subsite\shoot\Module',
         ],
         'saccount' => [
-            'class' => 'spread\asssount\Module',
+            'class' => 'subsite\asssount\Module',
         ]
             ],
     'params' => $params,

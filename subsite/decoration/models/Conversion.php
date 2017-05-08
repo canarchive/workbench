@@ -1,12 +1,12 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\Conversion as ConversionBase;
+use subsite\models\Conversion as ConversionBase;
 
 class Conversion extends ConversionBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 
  /*   protected function _newModel($data = [])
     {

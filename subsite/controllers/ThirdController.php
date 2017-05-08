@@ -1,19 +1,19 @@
 <?php
 
-namespace spread\controllers;
+namespace subsite\controllers;
 
 use Yii;
-use spread\components\Controller as SpreadController;
-use spread\models\kl\KlBook;
-use spread\models\kl\KlProduct;
+use subsite\components\Controller as SubsiteController;
+use subsite\models\kl\KlBook;
+use subsite\models\kl\KlProduct;
 
-class klController extends SpreadController
+class klController extends SubsiteController
 {
     public $mobile;
 
     public function actionIndex()
     {
-        return $this->render('@spread/views/kl/kele');
+        return $this->render('@subsite/views/kl/kele');
 	}
 
     public function actionSignup()

@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\Sendmsg as SendmsgBase;
+use subsite\models\Sendmsg as SendmsgBase;
 
 class Sendmsg extends SendmsgBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 }

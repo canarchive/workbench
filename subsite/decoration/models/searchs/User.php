@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\searchs\UserTrait;
-use spread\decoration\models\User AS UserModel;
+use subsite\models\searchs\UserTrait;
+use subsite\decoration\models\User AS UserModel;
 
 class User extends UserModel
 {

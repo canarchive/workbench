@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\searchs\GuestbookTrait;
-use spread\decoration\models\Guestbook AS GuestbookModel;
+use subsite\models\searchs\GuestbookTrait;
+use subsite\decoration\models\Guestbook AS GuestbookModel;
 
 class Guestbook extends GuestbookModel
 {

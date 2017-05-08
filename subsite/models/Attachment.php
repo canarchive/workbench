@@ -1,6 +1,6 @@
 <?php
 
-namespace spread\models;
+namespace subsite\models;
 
 use common\models\WebsiteModel;
 use common\models\Attachment as AttachmentBase;

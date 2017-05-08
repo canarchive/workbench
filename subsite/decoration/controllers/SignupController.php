@@ -1,14 +1,14 @@
 <?php
 
-namespace spread\decoration\controllers;
+namespace subsite\decoration\controllers;
 
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\filters\Cors;
-use spread\components\Controller as spreadController;
-use spread\decoration\models\SignupForm;
+use subsite\components\Controller as subsiteController;
+use subsite\decoration\models\SignupForm;
 
-class SignupController extends spreadController
+class SignupController extends subsiteController
 {
     public $enableCsrfValidation = false;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace spread\models;
+namespace subsite\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\components\sms\Smser;
-use common\models\SpreadModel;
+use common\models\SubsiteModel;
 use common\models\Company;
 
-class User extends SpreadModel
+class User extends SubsiteModel
 {
     public $user;
     public $serviceModel;

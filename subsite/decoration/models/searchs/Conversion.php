@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\decoration\models\Conversion as ConversionModel;
-use spread\models\searchs\ConversionTrait;
+use subsite\decoration\models\Conversion as ConversionModel;
+use subsite\models\searchs\ConversionTrait;
 
 class Conversion extends ConversionModel
 {

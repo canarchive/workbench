@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\statistic\searchs\ReportTrait;
-use spread\decoration\models\StatisticReport AS StatisticReportModel;
+use subsite\models\statistic\searchs\ReportTrait;
+use subsite\decoration\models\StatisticReport AS StatisticReportModel;
 
 class StatisticReport extends StatisticReportModel
 {

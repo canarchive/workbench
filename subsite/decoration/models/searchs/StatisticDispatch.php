@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\decoration\models\searchs;
+namespace subsite\decoration\models\searchs;
 
-use spread\models\statistic\searchs\DispatchTrait;
-use spread\decoration\models\StatisticDispatch AS StatisticDispatchModel;
+use subsite\models\statistic\searchs\DispatchTrait;
+use subsite\decoration\models\StatisticDispatch AS StatisticDispatchModel;
 
 class StatisticDispatch extends StatisticDispatchModel
 {

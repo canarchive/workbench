@@ -1,12 +1,12 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use common\models\SpreadModel;
+use common\models\SubsiteModel;
 
-class House extends SpreadModel
+class House extends SubsiteModel
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
     public static function tableName()
     {
         return '{{%house}}';

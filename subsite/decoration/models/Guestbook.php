@@ -1,10 +1,10 @@
 <?php
 
-namespace spread\decoration\models;
+namespace subsite\decoration\models;
 
-use spread\models\Guestbook as GuestbookBase;
+use subsite\models\Guestbook as GuestbookBase;
 
 class Guestbook extends GuestbookBase
 {
-    use \spread\models\DecorationTrait;
+    use \subsite\models\DecorationTrait;
 }

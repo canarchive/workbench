@@ -1,11 +1,11 @@
 <?php
 
-namespace spread\models;
+namespace subsite\models;
 
 use Yii;
-use common\models\SpreadModel;
+use common\models\SubsiteModel;
 
-class Dispatch extends SpreadModel
+class Dispatch extends SubsiteModel
 {
     public $houseInfo;
     public $statusModel;

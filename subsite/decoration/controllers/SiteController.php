@@ -1,13 +1,13 @@
 <?php
 
-namespace spread\decoration\controllers;
+namespace subsite\decoration\controllers;
 
 use Yii;
 use yii\helpers\Url;
-use spread\components\Controller;
-use spread\decoration\models\SignupForm;
-use spread\decoration\models\Statistic;
-use spread\decoration\models\User;
+use subsite\components\Controller;
+use subsite\decoration\models\SignupForm;
+use subsite\decoration\models\Statistic;
+use subsite\decoration\models\User;
 
 class SiteController extends Controller
 {
@@ -15,9 +15,9 @@ class SiteController extends Controller
     {
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
-        $this->_statistic('\spread\decoration\models\Visit');
+        $this->_statistic('\subsite\decoration\models\Visit');
         exit();
-        $params = require Yii::getAlias('@spread') . '/config/params-statistic.php';
+        $params = require Yii::getAlias('@subsite') . '/config/params-statistic.php';
         print_r($params);
     }
 
