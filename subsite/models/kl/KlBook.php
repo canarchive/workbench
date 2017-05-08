@@ -10,11 +10,6 @@ class KlBook extends SubsiteModel
     private $_productInfos;
     public $couponData;
 
-    public static function getDb()
-    {
-        return Yii::$app->dbSubsite;
-    }    
-
     public function behaviors()
     {
         $behaviors = [

@@ -9,11 +9,6 @@ class KlProduct extends SubsiteModel
 {
     private $_productInfos;
 
-    public static function getDb()
-    {
-        return Yii::$app->dbSubsite;
-    }    
-
     public function behaviors()
     {
         $behaviors = [
