@@ -4,15 +4,14 @@ namespace backend\statistic\controllers;
 
 use backend\components\AdminController;
 
-class ChannelController extends AdminController
+class ServiceController extends AdminController
 {
     use StatisticTrait;
     public $viewPrefix = '/';
-    protected $viewCurrent = 'channel';
-    protected $modelClass = 'spread\models\statistic\Report';
-    protected $modelSearchClass = 'spread\models\statistic\searchs\Report';
+    protected $viewCurrent = 'service';
+    protected $modelClass = 'spread\models\statistic\ReportService';
+    protected $modelSearchClass = 'spread\models\statistic\searchs\ReportService';
     protected $showInfo = false;
-
 
     public function beforeAction($action)
     {
