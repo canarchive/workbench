@@ -1,10 +1,11 @@
 <?php
 
-namespace spread\models\searchs;
+namespace merchant\models\searchs;
 
 use yii\data\ActiveDataProvider;
+use merchant\models\Service;
 
-Trait ServiceTrait
+class Service extends Service
 {
     public function search($params)
     {

@@ -7,6 +7,7 @@ use backend\components\AdminController;
 
 class Sendmsg extends AdminController
 {
+    protected $modelClass = 'subsite\decoration\models\Sendmsg';
     public $viewPrefix = '/sendmsg/';
 
     public function actionListinfo()

@@ -226,6 +226,10 @@ class Planfee extends BaseModel
         static $existDatas = [];
         $cMark = '';
         foreach ($infos as $key => $value) {
+            if ($key == 'sem_account') {
+                unset($infos[$key]);
+                $infos['account_id'] = $value;
+            }
             $cMark .= $key . $value;
         }
         if (isset($existDatas[$cMark][$type])) {
