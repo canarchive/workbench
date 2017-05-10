@@ -5,8 +5,9 @@ namespace common\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use merchant\models\Merchant;
+use merchant\models\Service;
 
-class MerchantModel extends BaseModel
+class MerchantSpreadModel extends BaseModel
 {
     public static function getDb()
     {
@@ -34,16 +35,6 @@ class MerchantModel extends BaseModel
     {
         $infos = Merchant::find()->indexBy('id')->all();
         return $infos;
-    }
-
-    protected function getMerchantInfo()
-    {
-        if (!isset($this->merchant_id) || empty($this->merchant_id)) {
-            return [];
-        }
-
-        $info = Merchant::findOne($this->merchant_id);
-        return $info;
     }
 
     public function getServiceInfos()

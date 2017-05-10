@@ -67,14 +67,14 @@ class Service extends MerchantModel
         return $datas;
     }
 
-    public static function getServiceInfo($merchantId)
+    /*public static function getServiceInfo($merchantId)
     {
 		$where = $merchantId > 0 ? ['merchant_id' => $merchantId, 'status' => 1] : ['status' => 1];
         $orderBy = ['distributed_at' => SORT_ASC];
         $info = self::find()->where($where)->orderBy($orderBy)->one();
 
         return $info;
-    }
+    }*/
 
     public function updateServiceInfo()
     {

@@ -5,10 +5,8 @@ namespace common\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use spread\models\Attachment as AttachmentSpread;
-use merchant\models\Merchant;
-use merchant\models\Service;
 
-class SpreadModel extends BaseModel
+class SpreadModel extends MerchantSpreadModel
 {
     public static function getDb()
     {
