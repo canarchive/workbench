@@ -17,7 +17,7 @@ foreach ($searchModel->fields as $field) {
         $columns[] = [
             'attribute' => $field,
             'value' => function ($model) {
-                $info = $model->serviceData;
+                $info = $model->serviceInfo;
                 $name = isset($info['name']) ? $info['name'] : '';
                 return $name;
             }

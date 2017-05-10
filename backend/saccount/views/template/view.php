@@ -8,7 +8,7 @@ $detailViewParams = [
         'code',
         [
             'attribute' => 'merchant_id',
-            'value' => $model->merchantInfos[$model->merchant_id],
+            'value' => empty($model->merchantInfo) ? '' : $model->merchantInfo['name'],
         ],
         [
             'attribute' => 'have_pc',

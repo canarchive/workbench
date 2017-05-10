@@ -11,6 +11,7 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'code')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->merchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'have_pc', ['inline' => true])->radioList($model->havePcInfos); ?>
+    <?= $form->field($model, 'have_mobile', ['inline' => true])->radioList($model->haveMobileInfos); ?>
 
     <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
