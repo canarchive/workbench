@@ -6,5 +6,5 @@ use subsite\models\DispatchCallback as DispatchCallbackBase;
 
 class DispatchCallback extends DispatchCallbackBase
 {
-    use \subsite\models\DecorationTrait;
+    use DecorationTrait;
 }

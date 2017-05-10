@@ -6,7 +6,7 @@ use common\models\SubsiteModel;
 
 class House extends SubsiteModel
 {
-    use \subsite\models\DecorationTrait;
+    use DecorationTrait;
     public static function tableName()
     {
         return '{{%house}}';

@@ -19,7 +19,7 @@ $columnsBase = [
     [
         'attribute' => 'service_id',
         'value' => function($model) {
-            return isset($model->serviceData['name']) ? $model->serviceData['name'] : $model->service_id;
+            return isset($model->serviceInfo['name']) ? $model->serviceData['name'] : $model->service_id;
         },
     ],
     'channel',

@@ -1,6 +1,6 @@
 <?php
 
-namespace subsite\models;
+namespace subsite\decoration\models;
 
 use Yii;
 

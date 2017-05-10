@@ -6,5 +6,5 @@ use subsite\models\Callback as CallbackBase;
 
 class Callback extends CallbackBase
 {
-    use \subsite\models\DecorationTrait;
+    use DecorationTrait;
 }
