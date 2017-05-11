@@ -6,6 +6,8 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
+$spreadRules = array_merge(require(__DIR__ . '/decoration/rules.php'), require(__DIR__ . '/rules.php'));
+
 return [
     'id' => 'app-subsite',
     'basePath' => dirname(__DIR__),
@@ -31,7 +33,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'rules' => array_merge(require(__DIR__ . '/rules-decoration.php'), require(__DIR__ . '/rules-shoot.php')),
+            'rules' => $spreadRules,
         ],
     ],
 
@@ -39,12 +41,6 @@ return [
         'decoration' => [
             'class' => 'subsite\decoration\Module',
         ],
-        'shoot' => [
-            'class' => 'subsite\shoot\Module',
-        ],
-        'saccount' => [
-            'class' => 'subsite\asssount\Module',
-        ]
-            ],
+    ],
     'params' => $params,
 ];

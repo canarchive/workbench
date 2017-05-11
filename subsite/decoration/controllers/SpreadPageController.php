@@ -5,9 +5,9 @@ namespace subsite\decoration\controllers;
 use Yii;
 use subsite\components\Controller;
 use subsite\decoration\models\SignupForm;
-use subsite\decoration\models\Template;
+use spread\models\saccount\Template;
 
-class SubsitePageController extends Controller
+class SpreadPageController extends Controller
 {
     public $isMobile;
     public $mHost;
@@ -31,7 +31,7 @@ class SubsitePageController extends Controller
 
     public function actionIndex()
     {
-        $code = Yii::$app->request->get('code');
+        $code = Yii::$app->request->get('tcode');
         $tInfos = $this->_getTemplateInfos();
         if (!in_array($code, array_keys($tInfos))) {
             return $this->redirect('/')->send();
@@ -44,7 +44,7 @@ class SubsitePageController extends Controller
             'model' => $signupForm,
         ];
 
-        $this->layout = $tInfo['main'];
+        $this->layout = empty($tInfo['main']) ? 'main' : $tInfo['main'];
         $this->_getCopyInfo();
 
         return $this->render($code, $datas);   
