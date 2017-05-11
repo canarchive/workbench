@@ -27,7 +27,7 @@ $currentMenu = $menuInfos['currentMenu'];
                     <?= Html::dropDownList(
                         "city_code",
                         0,
-                        $model->companyInfos,
+                        $companyInfos,
                         [
                             'prompt' => '全部',
                             'class' => 'form-control',
@@ -39,7 +39,7 @@ $currentMenu = $menuInfos['currentMenu'];
                     <?= Html::dropDownList(
                         "domain_code",
                         0,
-                        $model->domainInfos,
+                        $domainInfos,
                         [
                             'prompt' => '全部',
                             'class' => 'form-control',
@@ -51,7 +51,7 @@ $currentMenu = $menuInfos['currentMenu'];
                     <?= Html::dropDownList(
                         "template_code",
                         0,
-                        $model->templateInfos,
+                        $templateInfos,
                         [
                             'prompt' => '全部',
                             'class' => 'form-control',
@@ -65,7 +65,7 @@ $currentMenu = $menuInfos['currentMenu'];
                     <?= Html::dropDownList(
                         "channel",
                         0,
-                        $model->channelInfos,
+                        $channelInfos,
                         [
                             'prompt' => '',
                             'class' => 'form-control',
@@ -81,7 +81,7 @@ $currentMenu = $menuInfos['currentMenu'];
                     <?= Html::dropDownList(
                         "domain_redirect",
                         0,
-                        array_merge(['no' => ''], $model->domainInfos),
+                        array_merge(['no' => ''], $domainInfos),
                         [
                             'class' => 'form-control',
                         ]
