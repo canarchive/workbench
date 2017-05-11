@@ -1,4 +1,4 @@
-<?= $this->render('_search', array_merge(['model' => $model])); ?>
+<?= $this->render('_search', array_merge($searchDatas)); ?>
 
 <div id="w1" class="grid-view">
     <div class="summary">推广参数列表</div>
@@ -14,7 +14,7 @@
     </table>
 </div>
 <div id="w1" class="grid-view">
-    <div class="summary"><?php echo "<b>{$model->companyInfos[$cityCode]}</b>--<b>{$merchantInfo['name']}</b>-推广URL汇总"; ?></div>
+    <div class="summary"><b><?php echo $title; ?></b>-推广URL汇总"; ?></div>
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -24,19 +24,12 @@
             </tr>
         </thead>
         <tbody>
-            <?php 
-            foreach ($domainInfos as $domain => $dData) { 
-            foreach ($templateInfos as $template => $tData) { 
-            foreach ($channelInfos as $channel => $cData) { 
-                $params = ['showFull' => $showFull, 'domain_code' => $domain, 'template_code' => $template, 'channel' => $channel];
-            ?>
+            <?php foreach ($infos as $info) { ?>
             <tr data-key="">
-                <td><?= $dData . '<=>' . $tData . '<=>' . $cData; ?></td>
-                <td><?php echo $model->getUrlOfSpread($params, $attrs); ?></td>
-                <td><?php echo $model->getUrlOfSpread($params, $attrs, false); ?></td>
+                <td><?= $info['name']; ?></td>
+                <td><?= $info['pcUrl']; ?></td>
+                <td><?= $info['mobileUrl']; ?></td>
             </tr>
-            <?php } ?>
-            <?php } ?>
             <?php } ?>
         </tbody>
     </table>

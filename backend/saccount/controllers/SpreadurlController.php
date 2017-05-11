@@ -25,6 +25,7 @@ class SpreadurlController extends AdminController
         ];
         $model->inputParams = $params;
         $datas = $model->createDatas();
+        $datas['attrs'] = $params['attrs'];
 
         return $this->render('/spreadurl/listinfo', $datas);
     }

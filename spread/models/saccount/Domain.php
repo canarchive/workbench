@@ -76,4 +76,16 @@ class Domain extends BaseModel
         $info = $this->findOne($where);
         return $info;
     }
+
+    public function getMobileDomain()
+    {
+        $alias = "m.{$this->code}spreadurl";
+        return Yii::getAlias($alias);
+    }
+
+    public function getPcDomain()
+    {
+        $alias = "@{$this->code}spreadurl";
+        return Yii::getAlias($alias);
+    }
 }

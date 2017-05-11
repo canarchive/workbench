@@ -19,55 +19,113 @@ class Spreadurl extends BaseModel
     public function createDatas()
     {
         $searchDatas = $this->getSearchDatas();
+        $title = "{$searchDatas['companyInfos'][$this->inputParams['cityCode']]}--{$searchDatas['merchantInfos'][$this->inputParams['merchantId']]}";
+        $datas = [
+            'searchDatas' => $this->getSearchDatas(),
+            'infos' => $this->getInfos(),
+            'title' => $title,
+        ];
+
+        return $datas;
+
+    }
+
+    protected function getInfos()
+    {
+        $domainInfos = $this->getRelatedInfos('domain');
+        $domainInfos = empty($this->inputParams['domainCode']) ? $domainInfos : $domainInfos[$this->inputParams['domainCode']];
+        $templateInfos = $this->getRelatedInfos('template');
+        $templateInfos = empty($this->inputParams['templateCode']) ? $templateInfos : $templateInfos[$this->inputParams['templateCode']];
+        $channelInfos = empty($this->inputParams['channel']) ? $this->channelInfos : [$this->inputParams['channel'] => $channeInfos[$this->inputParams['channel']]];
+        $datas = [];
+        foreach ($domainInfos as $domainCode => $domain) {
+            foreach ($templateInfos as $templateCode => $template) {
+                foreach ($channelInfos as $channel => $channelName) {
+                    $params = [
+                        'domain' => $domain, 
+                        'template' => $template, 
+                        'channel' => $channel
+                    ];
+                    $pcUrl = $this->getUrlSpread($params);
+                    $mobileUrl = $this->getUrlSpread($params, false);
+                    $datas[] = [
+                        'name' => "{$domain['name']}<=>{$template['name']}<=>{$channelName}",
+                        'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
+                        'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
+                    ];
+                }
+            }
+        }
+
+        return $datas;
+    }
+
+    public function getUrlSpread($params, $isPc = true)
+    {
+        $template = $params['template'];
+        if ($isPc && empty($template['have_pc'])) {
+            return '';
+        }
+        if (!$isPc && empty($template['have_mobile'])) {
+            return '';
+        }
+        $domain = $params['domain'];
+        $domain = $isPc ? $domain->pcDomain : $domain->mobileDomain;
+        $url = $domain . "/baom-{$template->code}-{$this->inputParams['cityCode']}.html";
+        
+        return $url;
     }
 
     public function getSearchDatas()
     {
         $datas = [
-            'companyInfos' => $this->companyInfos,
-            'domainInfos' => $this->domainInfos,
-            'templateInfos' => $this->templateInfos,
+            'companyInfos' => $this->getRelatedInfos('company', true, ['status' => 2]),
+            'templateInfos' => $this->getRelatedInfos('template', true),
+            'domainInfos' => $this->getRelatedInfos('domain', true),
             'channelInfos' => $this->channelInfos,
+            'merchantInfos' => $this->merchantInfos,
+        ];
+        return $datas;
     }
 
-    public function getUrlOfSpread($params, $isPc = true)
+    protected function getRelatedInfos($code, $keyValue = false, $where = null)
     {
-        print_r($params);exit();
+        static $objects = [];
+        $params = [
+            'domain' => [
+                'class' => '\spread\models\saccount\Domain',
+                'keyField' => 'code',
+                'keyName' => 'name',
+            ],
+            'template' => [
+                'class' => '\spread\models\saccount\Template',
+                'keyField' => 'code',
+                'keyName' => 'name',
+            ],
+            'company' => [
+                'class' => '\common\models\Company',
+                'keyField' => 'code',
+                'keyName' => 'name',
+            ],
+            'visit' => [
+                'class' => '\spread\models\Visit',
+                'keyField' => 'code',
+                'keyName' => 'name',
+            ],
+        ];
+        $param = $params[$code];
+        if (isset($objects[$code])) {
+            $model = $objects[$code];
+        } else {
+            $class = $param['class'];
+            $model = new $class();
+        }
 
-        $url = 'abc';
-        return $url;
-    }
-
-    public function getAccountInfos()
-    {
-        $infos = ArrayHelper::map(Account::find()->select('id, name')->all(), 'id', 'name');
+        $infos = $model->find()->where($where)->indexBy($param['keyField'])->all();
+        if ($keyValue) {
+            $infos = ArrayHelper::map($infos, $param['keyField'], $param['keyName']);
+        }
         return $infos;
-    }
-
-    public function getPlanInfos()
-    {
-        $infos = ArrayHelper::map(Plan::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
-
-    public function getTemplateInfos()
-    {
-        $infos = ArrayHelper::map(Template::find()->select('code, name')->all(), 'code', 'name');
-        return $infos;
-    }
-
-    public function getDomainInfos()
-    {
-        $infos = ArrayHelper::map(Domain::find()->select('code, name')->all(), 'code', 'name');
-        return $infos;
-    }
-
-    public function getCompanyInfos()
-    {
-        $company = new Company();
-        $companyInfos = $company->getInfos(['status' => 2], 'code');
-        $cInfos = ArrayHelper::map($companyInfos, 'code', 'name');
-        return $cInfos;
     }
 
     public function getAttributeParams()
