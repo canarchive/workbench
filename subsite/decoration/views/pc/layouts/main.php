@@ -6,12 +6,7 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/third/eale/images/f
 $cid = $this->context->cid;
 $cid = empty($cid) && isset($this->params['cidDefault']) ? $this->params['cidDefault'] : $cid;
 ?>
-<?php $this->beginContent('@subsite/views/main-pc.php'); ?>
-<script type="text/javascript">
-window.ASSET_URL = '<?= Yii::getAlias('@assetself'); ?>';
-window.SIGINUP_URL = '<?= Yii::getAlias('@web') . '/jz-signup.html'; ?>';
-window.SPREAD_URL = '<?= Yii::getAlias('@web'); ?>';
-</script>
+<?php $this->beginContent('@subsite/views/main.php'); ?>
 <?= $content; ?>
 <input type="hidden" id="cid" value="<?= $cid; ?>" />
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none">
