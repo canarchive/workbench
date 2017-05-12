@@ -31,7 +31,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'rules' => array_merge(require(__DIR__ . '/rules-decoration.php'), require(__DIR__ . '/rules-shoot.php')),
+            'rules' => array_merge(require(__DIR__ . '/rules.php')),
         ],
     ],
 
