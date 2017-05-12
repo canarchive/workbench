@@ -14,11 +14,13 @@
     </table>
 </div>
 <div id="w1" class="grid-view">
-    <div class="summary"><b><?php echo $title; ?></b>-推广URL汇总"; ?></div>
+    <div class="summary"><b><?php echo $title; ?></b>-推广URL汇总</div>
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th>域名<=>模板<=>渠道</th>
+                <th>域名</th>
+                <th>模板</th>
+                <th>渠道</th>
                 <th>PC-URL</th>
                 <th>MOBILE-URL</th>
             </tr>
@@ -26,7 +28,9 @@
         <tbody>
             <?php foreach ($infos as $info) { ?>
             <tr data-key="">
-                <td><?= $info['name']; ?></td>
+                <td><?= $info['dName']; ?></td>
+                <td><?= $info['tName']; ?></td>
+                <td><?= $info['cName']; ?></td>
                 <td><?= $info['pcUrl']; ?></td>
                 <td><?= $info['mobileUrl']; ?></td>
             </tr>
