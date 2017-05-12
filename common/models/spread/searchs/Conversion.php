@@ -1,8 +1,8 @@
 <?php
 
-namespace spread\models\searchs;
+namespace common\models\spread\searchs;
 
-use spread\models\Conversion as ConversionModel;
+use common\models\spread\Conversion as ConversionModel;
 
 class Conversion extends ConversionModel
 {

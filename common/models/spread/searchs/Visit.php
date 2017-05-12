@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\models\searchs;
+namespace common\models\spread\searchs;
 
 use yii\data\ActiveDataProvider;
-use spread\models\Visit as VisitModel;
+use common\models\spread\Visit as VisitModel;
 
 class Visit extends VisitModel
 {

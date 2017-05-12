@@ -6,7 +6,7 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use spread\models\saccount\Account;
 use spread\models\saccount\Plan;
-use spread\models\Visit;
+use common\models\spread\Visit;
 
 class Planfee extends BaseModel
 {
@@ -263,11 +263,5 @@ class Planfee extends BaseModel
     {
         $info = $this->findOne($where);
         return $info;
-    }
-
-    public function getChannelInfos()
-    {
-        $model = new Visit();
-        return $model->channelInfos;
     }
 }

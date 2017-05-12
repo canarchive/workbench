@@ -5,7 +5,7 @@ namespace spread\models\saccount;
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\models\Company;
-use spread\models\Visit;
+use common\models\spread\Visit;
 
 class Spreadurl extends BaseModel
 {
@@ -117,7 +117,7 @@ class Spreadurl extends BaseModel
                 'keyName' => 'name',
             ],
             'visit' => [
-                'class' => '\spread\models\Visit',
+                'class' => '\common\models\spread\Visit',
                 'keyField' => 'code',
                 'keyName' => 'name',
             ],

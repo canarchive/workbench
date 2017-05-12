@@ -1,15 +1,20 @@
 <?php
 
-namespace spread\models;
+namespace common\models\spread;
 
 use Yii;
-use common\models\SpreadModel;
+use common\models\BaseModel;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
 
-class Visit extends SpreadModel
+class Visit extends BaseModel
 {
     public $rate;
+
+    public static function getDb()
+    {
+        return Yii::$app->dbSpread;
+    }    
 
     public static function tableName()
     {
@@ -20,6 +25,7 @@ class Visit extends SpreadModel
     {
         return [
             'id' => 'ID',
+            'sort' => '类别',
             'merchant_id' => '客户ID',
             'channel' => '渠道',
             'channel_info' => '渠道参数',
@@ -179,12 +185,9 @@ class Visit extends SpreadModel
     
     public function getSearchDatas()
     {
-        $channelInfos = ['bd' => 'bd', '360' => '360', 'sg' => 'sg', 'sm' => 'sm'];
-        $clientTypeInfos = ['pc' => 'pc', 'h5' => 'h5'];
-
         $datas = [
-            'clientTypeInfos' => $clientTypeInfos,
-            'channelInfos' => $channelInfos,
+            'clientTypeInfos' => $this->clientTypeInfos,
+            'channelInfos' => $this->channelInfos,
         ];
 
         return $datas;
