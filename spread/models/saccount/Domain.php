@@ -79,13 +79,13 @@ class Domain extends BaseModel
 
     public function getMobileDomain()
     {
-        $alias = "m.{$this->code}spreadurl";
+        $alias = "@m.{$this->code}.spreadurl";
         return Yii::getAlias($alias);
     }
 
     public function getPcDomain()
     {
-        $alias = "@{$this->code}spreadurl";
+        $alias = "@{$this->code}.spreadurl";
         return Yii::getAlias($alias);
     }
 }

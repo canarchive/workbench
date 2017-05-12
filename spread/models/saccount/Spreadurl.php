@@ -33,13 +33,13 @@ class Spreadurl extends BaseModel
     protected function getInfos()
     {
         $domainInfos = $this->getRelatedInfos('domain');
-        $domainInfos = empty($this->inputParams['domainCode']) ? $domainInfos : $domainInfos[$this->inputParams['domainCode']];
+        $domainInfos = empty($this->inputParams['domainCode']) ? $domainInfos : [$domainInfos[$this->inputParams['domainCode']]];
         $templateInfos = $this->getRelatedInfos('template');
-        $templateInfos = empty($this->inputParams['templateCode']) ? $templateInfos : $templateInfos[$this->inputParams['templateCode']];
+        $templateInfos = empty($this->inputParams['templateCode']) ? $templateInfos : [$templateInfos[$this->inputParams['templateCode']]];
         $channelInfos = empty($this->inputParams['channel']) ? $this->channelInfos : [$this->inputParams['channel'] => $channeInfos[$this->inputParams['channel']]];
         $datas = [];
-        foreach ($domainInfos as $domainCode => $domain) {
-            foreach ($templateInfos as $templateCode => $template) {
+        foreach ($domainInfos as $domain) {
+            foreach ($templateInfos as $template) {
                 foreach ($channelInfos as $channel => $channelName) {
                     $params = [
                         'domain' => $domain, 
@@ -49,7 +49,9 @@ class Spreadurl extends BaseModel
                     $pcUrl = $this->getUrlSpread($params);
                     $mobileUrl = $this->getUrlSpread($params, false);
                     $datas[] = [
-                        'name' => "{$domain['name']}<=>{$template['name']}<=>{$channelName}",
+                        'dName' => $domain['name'],
+                        'tName' => $template['name'],
+                        'cName' => $channelName,
                         'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
                         'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
                     ];
@@ -72,6 +74,13 @@ class Spreadurl extends BaseModel
         $domain = $params['domain'];
         $domain = $isPc ? $domain->pcDomain : $domain->mobileDomain;
         $url = $domain . "/baom-{$template->code}-{$this->inputParams['cityCode']}.html";
+        $url .= '?cid=' . $this->inputParams['merchantId'];
+        if ($this->inputParams['showFull']) {
+            foreach ($this->inputParams['attrs'] as $pKey => $pInfo) {
+                $pValue = $pKey == 'channel' ? $params['channel'] : $pInfo['default'];
+                $url .= "&{$pInfo['param']}={$pValue}";
+            }
+        }
         
         return $url;
     }
