@@ -267,4 +267,28 @@ class BaseModel extends ActiveRecord
         }
         return $infos;
     }
+
+    public function getClientTypeInfos()
+    {
+        $datas = [
+            '' => '全部',
+            'pc' => 'PC端',
+            'h5' => '移动端',
+        ];
+        return $datas;
+    }
+
+    public function getChannelInfos()
+    {
+        $datas = [
+            'bd' => '百度',
+            'bdxxl' => '百度信息流',
+            'sg' => '搜狗',
+            '360' => '360',
+			'zht' => '智慧推',
+            'gdt' => '广点通',
+            //'sm' => '神马',
+        ];
+        return $datas;
+    }    
 }
