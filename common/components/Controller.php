@@ -7,6 +7,10 @@ use yii\web\Controller as YiiController;
 
 class Controller extends YiiController
 {
+    public $host;
+    public $isMobile;
+    public $clientType;
+    public $clientUrl;
 	public $pcMappingUrl;
 	public $mobileMappingUrl;
     public $pagePosition = 'default';
@@ -36,6 +40,22 @@ class Controller extends YiiController
     public function init()
     {
         parent::init();
+
+        $this->host = Yii::$app->request->hostInfo;
+        $this->clientUrl = Yii::$app->request->url;
+        if (strpos($this->clientUrl, 'index.php') !== false) {
+            return Yii::$app->response->redirect($this->host)->send();
+            exit();
+        }
+
+        $this->isMobile = $this->clientIsMobile();
+        $this->initClientType();
+        $this->module->viewPath .= is_null($this->clientType) ? '' : ($this->clientType == 'mobile' ? '/mobile' : '/pc');
+    }
+
+    protected function initClientType()
+    {
+        return null;
     }
 
     /**
