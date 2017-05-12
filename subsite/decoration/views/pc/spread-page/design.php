@@ -1,7 +1,7 @@
 <?php
 
-$cssFiles = ['fanke'];
-$this->params['cssStr'] = $this->render('@common/views/base/_css', ['isSelf' => true, 'cssFiles' => $cssFiles, 'path' => 'fanke/']);
+$cssFiles = ['style'];
+$this->params['cssStr'] = $this->render('@common/views/base/_css', ['isSelf' => true, 'cssFiles' => $cssFiles, 'path' => 'design/css/']);
 ?>
 <div class="site_topnav" role="navigation">
     <div class="top_nav_info">
@@ -1816,7 +1816,7 @@ $this->params['cssStr'] = $this->render('@common/views/base/_css', ['isSelf' => 
     </div>
     <a href="javascript:;" class="layer_setwin apply_close">1</a>
 </div>
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@assetself'); ?>/design/js/jquery-1.11.3.min.js"></script>
 <script>
 //    滚动的插件
 (function($) {
