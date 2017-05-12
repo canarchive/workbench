@@ -5,6 +5,7 @@ use Yii;
 use yii\base\Model;
 use common\components\sms\Smser;
 use merchant\models\Merchant;
+use common\models\spread\Conversion;
 
 class SignupForm extends Model
 {

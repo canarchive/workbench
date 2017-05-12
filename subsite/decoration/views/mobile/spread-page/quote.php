@@ -4,7 +4,7 @@ $cssFiles = [
     'h5_common', 'h5_icon_font', 'swiper', 'common',
     'icon_font', 'decoration-budget',
 ];
-$this->params['cssStr'] = $this->render('@common/views/base/_css', ['cssFiles' => $cssFiles, 'path' => 'spread/house/baojia/']);
+$this->params['cssStr'] = $this->render('@common/views/base/_css', ['cssFiles' => $cssFiles, 'path' => 'spread/house/baojia/css/']);
 $this->params['bodyClass'] = 'bg-f2';
 $this->params['formPosition'] = 'hd-bjnew';
 $this->params['formPositionName'] = '活动推广-报价new';

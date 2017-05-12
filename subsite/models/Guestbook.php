@@ -28,13 +28,6 @@ class Guestbook extends SubsiteModel
         ];
     }
 
-    public function getService()
-    {
-        $info = CustomService::findOne($this->service_id);
-
-        return $info;
-    }
-
     public function getMobile()
     {
         if (!is_null($this->_mobile)) {

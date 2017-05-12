@@ -33,11 +33,4 @@ class DispatchCallback extends SubsiteModel
             'created_at' => '创建时间',
         ];
     }
-
-    public function getService()
-    {
-        $info = CustomService::findOne($this->service_id);
-
-        return $info;
-    }
 }

@@ -31,13 +31,7 @@ class Callback extends SubsiteModel
             'service_id' => '客服ID',
             'content' => '回访纪要',
             'created_at' => '创建时间',
+            'update_at' => '更新时间',
         ];
-    }
-
-    public function getService()
-    {
-        $info = $this->_newModel('service')->findOne($this->service_id);
-
-        return $info;
     }
 }

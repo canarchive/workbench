@@ -11,16 +11,6 @@ use subsite\decoration\models\User;
 
 class SiteController extends Controller
 {
-    public function actionStatistic()
-    {
-        ini_set('display_errors', 1);
-        error_reporting(E_ALL);
-        $this->_statistic('\subsite\decoration\models\Visit');
-        exit();
-        $params = require Yii::getAlias('@subsite') . '/config/params-statistic.php';
-        print_r($params);
-    }
-
     public function actionApikl()
     {
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;

@@ -25,7 +25,6 @@ class Controller extends CommonController
                 break;
             }
             if ($this->host == $data->mobileDomain) {
-                echo 'ooo';
                 $this->clientType = 'mobile';
                 break;
             }
