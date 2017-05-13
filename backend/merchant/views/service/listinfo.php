@@ -14,9 +14,9 @@ $gridViewParams = [
         'code',
         'name',
         [
-            'attribute' => 'mananger_id',
+            'attribute' => 'user_id',
             'value' => function($model) {
-                $return  = isset($model->managerAllInfos[$model->manager_id]) ? $model->managerAllInfos[$model->manager_id] : '';
+                $return  = isset($model->userInfos[$model->user_id]) ? $model->userInfos[$model->user_id] : '';
                 return $return;
             }
         ],

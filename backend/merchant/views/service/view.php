@@ -8,7 +8,7 @@ $detailViewParams = [
         'name',
         [
             'attribute' => 'status',
-            'value' => isset($model->managerAllInfos[$model->manager_id]) ? $model->managerAllInfos[$model->manager_id] : '',
+            'value' => isset($model->managerInfos[$model->manager_id]) ? $model->managerInfos[$model->manager_id] : '',
         ],
         'mobile',
         [
