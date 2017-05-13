@@ -7,17 +7,13 @@ use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\helpers\ArrayHelper;
 use common\models\AuthBase;
-use spread\decoration\models\Service;
 
 class User extends AuthBase
 {
-    const STATUS_NOACTIVE = 0;
-    const STATUS_ACTIVE = 1;
-    const STATUS_LOCK = 99;
-
     public $password_new_repeat;
     public $password_old;
     public $password_new;
+    public $merchant_show;
 
     public static function getDb()
     {
@@ -40,9 +36,9 @@ class User extends AuthBase
     public function scenarios()
     {
         return [
-            'create' => ['mobile', 'role', 'truename', 'email', 'password', 'status', 'merchant_id', 'service_id'],
-            'update' => ['truename', 'email', 'role', 'password_new', 'status', 'merchant_id', 'service_id'],
-            'edit' => ['truename', 'email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
+            'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id'],
+            'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id'],
+            'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
             //'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
         ];
     }
@@ -53,13 +49,15 @@ class User extends AuthBase
     public function rules()
     {
         return [
+            [['mobile'], 'required'],
+            ['mobile', 'unique', 'targetClass' => '\merchant\models\User', 'message' => 'This mobile has already been taken.'],
             [['password_old'], 'required', 'on' => ['edit']],
-            [['status', 'service_id', 'merchant_id'], 'default', 'value' => 0],
+            [['status'], 'default', 'value' => 0],
             [['password_old'], 'checkPasswordOld', 'on' => ['edit']],
             ['password_new', 'string', 'min' => 6, 'when' => function($model) { return $model->password_new != ''; }],
             ['password_new', 'compare', 'on' => ['edit']],
-            [['truename', 'email', 'mobile', 'password_new', 'password_new_repeat'], 'safe', 'on' => ['edit']],
-            [['truename', 'email', 'mobile', 'status', 'merchant_id'], 'safe', 'on' => ['create', 'update']],
+            [['email', 'mobile', 'password_new', 'password_new_repeat'], 'safe', 'on' => ['edit']],
+            [['email', 'mobile', 'status', 'merchant_show'], 'safe', 'on' => ['create', 'update']],
         ];
     }
 
@@ -77,7 +75,7 @@ class User extends AuthBase
         return [
             'id' => 'ID',
             'merchant_id' => '商家ID',
-            'truename' => '真实姓名',
+            'name' => '姓名',
             'login_num' => '登录次数',
             'password' => '密码',
             'password_old' => '旧密码',
@@ -95,14 +93,14 @@ class User extends AuthBase
     public function beforeSave($insert)
     {
         if (parent::beforeSave($insert)) {
-            if (Yii::$app->controller->id == 'site') {
-                return true;
-            }
             if ($this->isNewRecord) {
                 $this->setPassword($this->password);
             } else if (!empty($this->password_new)) {
                 $this->setPassword($this->password_new);
             }
+        }
+        if (!is_null($this->merchant_show)) {
+            $this->merchant_id = implode(',', (array) $this->merchant_show);
         }
 
         return true;
@@ -111,6 +109,10 @@ class User extends AuthBase
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
+        if (in_array($this->role, ['service', 'service-admin']) && !empty($this->mobile)) {
+            $service = new Service();
+            $service->addServiceByUser($this);
+        }
 
         return true;
     }
@@ -118,25 +120,20 @@ class User extends AuthBase
     public static function getRoleInfos()
     {
         return [
+            '' => '访客',
 			'admin' => '管理员',
-			'service' => '客服',
 			'valid' => '看有效信息',
+			'service' => '客服',
 			'service-admin' => '客服主管',
         ];
-    }
-
-    public function getServiceInfos()
-    {
-        $infos = ArrayHelper::map(Service::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
     }
 
     public static function getStatusInfos()
     {
         return [
-            self::STATUS_ACTIVE => '正常',
-            self::STATUS_NOACTIVE => '没激活',
-            self::STATUS_LOCK => '锁定',
+            '1' => '正常',
+            '0' => '没激活',
+            '99' => '锁定',
         ];
     }
 
@@ -159,9 +156,73 @@ class User extends AuthBase
         return static::findOne($where);
     }
 
-    protected function getMerchantInfos()
+    public function getUserMerchantInfos()
     {
-        $infos = ArrayHelper::map(Merchant::find()->select('id, name')->all(), 'id', 'name');
+        if (empty($this->merchant_id)) {
+            return [];
+        }
+        $ids = explode(',', $this->merchant_id);
+        $datas = [];
+        foreach ($this->merchantAllInfos as $info) {
+            if (in_array($info['id'], $ids)) {
+                $datas[$info['id']] = $info['name'];
+            }
+        }
+        return $datas;
+    }
+
+    public function getMerchantAllInfos()
+    {
+        $infos = Merchant::find()->indexBy('id')->all();
         return $infos;
+    }
+
+    public function getMerchantInfos()
+    {
+        $infos = $this->getMerchantAllInfos();
+        $infos = ArrayHelper::map($infos, 'id', 'name');
+        return $infos;
+    }
+
+    public function getUserMerchantStr()
+    {
+        $datas = $this->getUserMerchantInfos();
+        $str = implode((array) $datas, ',');
+        return $str;
+    }
+
+    public function addUserByService($service)
+    {
+        $mobile = $service['mobile'];
+        $merchantId = $service['merchant_id'];
+        $passwordUser = $service['password_user'];
+        $info = $this->find()->where(['mobile' => $mobile])->one();
+        if (!empty($info)) {
+            $merchantIds = explode(',', $info->merchant_id);
+            $update = false;
+            if (!in_array($merchantId, $merchantIds)) {
+                $info->merchant_id = implode(',', array_merge($merchantIds, [$merchantId]));
+                $update = true;
+            }
+            if (!empty($passwordUser)) {
+                $info->password_new = $passwordUser;
+                $update = true;
+            }
+            $update && $info->update(false);
+            return ;
+        }
+
+        $data = [
+            'merchant_id' => $merchantId,
+            'role' => 'service',
+            'mobile' => $mobile,
+        ];
+        if (!empty($passwordUser)) {
+            $data['password'] = $passwordUser;
+        }
+        $newModel = new self($data);
+        $newModel->scenario = 'create';
+        $newModel->insert();
+        return ;
     }
 }

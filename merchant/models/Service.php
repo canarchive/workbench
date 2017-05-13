@@ -5,10 +5,11 @@ namespace merchant\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\models\MerchantModel;
-use backend\models\Manager;
 
 class Service extends MerchantModel
 {
+    public $password_user;
+
     public static function tableName()
     {
         return '{{%service}}';
@@ -27,7 +28,8 @@ class Service extends MerchantModel
         return [
             [['name', 'mobile'], 'required'],
             [['merchant_id', 'manager_id', 'status', 'status_sendmsg', 'serviced_num', 'serviced_times', 'distributed_at'], 'default', 'value' => 0],
-            [['code', 'status', 'mobile_ext'], 'safe'],
+            ['password_user', 'string', 'min' => 6, 'when' => function($model) { return $model->password_user != ''; }],
+            [['code', 'status', 'mobile_ext', 'password_user'], 'safe'],
         ];
     }    
 
@@ -91,25 +93,61 @@ class Service extends MerchantModel
         return $info;
     }
 
-    public function getManagerAllInfos()
+    public function getUserAllInfos($where = [])
     {
-        $managerModel = new Manager();
-        $infos = $managerModel->getInfos();
+        $user = new User();
+        $infos = $user->find()->where($where)->all();//getInfos();
 
-        $infos = ArrayHelper::map($infos, 'id', 'username');
         return $infos;
     }
 
-    public function getManagerInfos($returnAll = false)
+    public function getManagerInfos()
     {
-        $managerModel = new Manager();
-        $infos = $managerModel->getInfosByRoles(['客服']);
+        $infos = $this->getUserAllInfos(['role' => 'service-admin']);
+        $infos = ArrayHelper::map($infos, 'id', 'name');
+        return $infos;
+    }
 
-        if ($returnAll) {
-            return $infos;
+    public function getUserInfos()
+    {
+        $infos = $this->getUserAllInfos();
+        $infos = ArrayHelper::map($infos, 'id', 'name');
+        return $infos;
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+
+        $user = new User();
+        $user->addUserByService($this);
+
+        return true;
+    }
+
+    public function addServiceByUser($user)
+    {
+        $mobile = $user->mobile;
+        $merchantIds = explode(',', $user->merchant_id);
+        if (empty($mobile) || empty($merchantIds)) {
+            return ;
         }
 
-        $infos = ArrayHelper::map($infos, 'id', 'username');
-        return $infos;
+        foreach ($merchantIds as $merchantId) {
+            $where = ['merchant_id' => $merchantId, 'mobile' => $mobile];
+            $info = $this->find()->where($where)->one();
+            if (!empty($info)) {
+                continue;
+            }
+
+            $data = [
+                'mobile' => $mobile,
+                'name' => $user->name,
+                'user_id' => $user->id,
+                'merchant_id' => $merchantId,
+            ];
+            $newModel = new self($data);
+            $newModel->insert(false);
+        }
     }
 }

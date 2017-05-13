@@ -11,6 +11,7 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'merchant_id')->dropDownList($model->merchantInfos, ['prompt' => Yii::t('admin-common', 'Select merchant')]); ?>
     <?= $form->field($model, 'manager_id')->dropDownList($model->managerInfos, ['prompt' => Yii::t('admin-common', 'Select Manager')]); ?>
     <?= $form->field($model, 'code')->textInput() ?>
+    <?= $form->field($model, 'password_user')->textInput() ?>
     <?= $form->field($model, 'mobile')->textInput() ?>
     <?= $form->field($model, 'mobile_ext')->textInput() ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => Yii::t('admin-common', 'Select Status')]); ?>

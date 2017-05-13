@@ -9,7 +9,6 @@ $detailViewParams = [
             'value' => isset($model->merchantInfos[$model->merchant_id]) ? $model->merchantInfos[$model->merchant_id] : '',
         ],
         'login_num',
-        'truename',
         'email',
         [
             'attribute' => 'status',
