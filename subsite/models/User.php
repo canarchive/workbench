@@ -10,8 +10,6 @@ use common\models\Company;
 
 class User extends SubsiteModel
 {
-    public $user;
-    public $serviceModel;
     public $serviceInfo;
     public $notice_merchant;
     public $notice_user;
@@ -61,8 +59,9 @@ class User extends SubsiteModel
 
     public function addOwner($data, $serviceId = null)
     {
-        $serviceInfo = !is_null($serviceId) ? $this->_newModel('service')->findOne($serviceId) : null;
-        $serviceInfo = empty($serviceInfo) ? $this->_newModel('service')->getServiceInfo($data['merchant_id']) : $serviceInfo;
+        $serviceInfo = !is_null($serviceId) ? $this->getServiceModel()->findOne($serviceId) : null;
+        $serviceInfo = empty($serviceInfo) ? $this->getServiceModel()->getDispatchService(['merchant_id' => $data['merchant_id']]) : $serviceInfo;
+
         $ip = Yii::$app->getRequest()->getIP();
         $city = \common\components\IP::find($ip);
         $city = is_array($city) ? implode('-', $city) : $city;
@@ -106,76 +105,6 @@ class User extends SubsiteModel
         $this->setOldAttributes($values);
         return true;
     }        
-
-    public function getOutStatusInfos()
-    {
-        $datas = [
-            '' => '未知',
-            'out' => '外地',
-			'part' => '局部装修',
-			'small' => '50平米以下整装',
-			'shop' => '商铺',
-			'we_part' => '水电改造',
-			'soft' => '软装',
-        ];
-
-        return $datas;
-    }
-
-    public function getInvalidStatusInfos()
-    {
-        $datas = [
-            '' => '未知',
-            'no_call' => '空号',
-            'noneed' => '无需求',
-            'booked' => '已定好',
-            'no_test' => '测试',
-        ];
-
-        return $datas;
-    }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '' => '未回访',
-            'follow' => '跟进',
-            'follow-plan' => '期房跟进',
-			'valid' => '有效',
-			'valid-part' => '有效-局装',
-			'valid-out' => '承接范围外-无效',
-            //'valid-dispatch' => '已派单',
-            'bad' => '废单',
-        ];
-        return $datas;
-    }
-
-    public function getCallbackAgainInfos()
-    {
-        $datas = [
-            0 => '',
-            1 => '再次回访',
-        ];
-
-        return $datas;
-    }
-
-    public function getSignupChannelInfos()
-    {
-        $datas = [
-            'semthird' => '第三方SEM',
-            'semspider' => 'SEM抓取',
-			'phone400' => '400电话',
-			'hotline' => '网络直拨',
-        ];
-        return $datas;
-    }
-
-    protected function getCompanyInfos()
-    {
-        $infos = ArrayHelper::map(Company::find()->select('code_short, name')->where(['status' => 2])->all(), 'code_short', 'name');
-        return $infos;
-    }
 
     public function updateAfterInsert($cInfo)
     {
@@ -249,31 +178,16 @@ class User extends SubsiteModel
         return $decorationOwner;
     }
 
-    protected function _sendSms($data, $serviceInfo)
-    {
-        $merchantInfo = $this->getMerchantInfo();
-        if (empty($merchantInfo)) {
-            return ;
-        }
-
-        if ($this->notice_merchant) {
-            $this->sendSmsService($merchantInfo, $data, $serviceInfo);
-        }
-        if ($this->notice_user) {
-            $this->sendSms($merchantInfo, $data);
-        }
-    }
-
     public function dealService()
     {
-        $serviceModel = isset($this->serviceInfo) ? $this->serviceInfo : $this->_newModel('service')->findOne($this->service_id);
+        $service = isset($this->serviceInfo) ? $this->serviceInfo : $this->getServiceInfo();
 
-        $serviceModel->distributed_at = Yii::$app->params['currentTime'];
-        $serviceModel->update(false);
-        $serviceModel->updateCounters(['serviced_times' => 1]);
+        $service->distributed_at = Yii::$app->params['currentTime'];
+        $service->update(false);
+        $service->updateCounters(['serviced_times' => 1]);
         
-        $serviceModel->updateServiceInfo();
-        return $serviceModel;
+        $service->updateServiceInfo();
+        return $service;
     }
 
     public function viewInfo($merchantId, $ids)
@@ -301,22 +215,19 @@ class User extends SubsiteModel
         return ['status' => 200, 'message' => 'OK', 'datas' => $datas];
     }
 
-    public function getNoticeMerchantInfos()
+    protected function _sendSms($data, $serviceInfo)
     {
-        $datas = [
-            '0' => '不通知',
-            '1' => '通知',
-        ];
-        return $datas;
-    }
+        $merchantInfo = $this->getMerchantInfo();
+        if (empty($merchantInfo)) {
+            return ;
+        }
 
-    public function getNoticeUserInfos()
-    {
-        $datas = [
-            '0' => '不通知',
-            '1' => '通知',
-        ];
-        return $datas;
+        if ($this->notice_merchant) {
+            $this->sendSmsService($merchantInfo, $data, $serviceInfo);
+        }
+        if ($this->notice_user) {
+            $this->sendSms($merchantInfo, $data);
+        }
     }
 
     public function sendSmsValid($data, $userInfo)
@@ -397,4 +308,92 @@ class User extends SubsiteModel
 
 		return $infos;
 	}
+
+    public function getOutStatusInfos()
+    {
+        $datas = [
+            '' => '未知',
+            'out' => '外地',
+			'part' => '局部装修',
+			'small' => '50平米以下整装',
+			'shop' => '商铺',
+			'we_part' => '水电改造',
+			'soft' => '软装',
+        ];
+
+        return $datas;
+    }
+
+    public function getInvalidStatusInfos()
+    {
+        $datas = [
+            '' => '未知',
+            'no_call' => '空号',
+            'noneed' => '无需求',
+            'booked' => '已定好',
+            'no_test' => '测试',
+        ];
+
+        return $datas;
+    }
+
+    public function getStatusInfos()
+    {
+        $datas = [
+            '' => '未回访',
+            'follow' => '跟进',
+            'follow-plan' => '期房跟进',
+			'valid' => '有效',
+			'valid-part' => '有效-局装',
+			'valid-out' => '承接范围外-无效',
+            //'valid-dispatch' => '已派单',
+            'bad' => '废单',
+        ];
+        return $datas;
+    }
+
+    public function getCallbackAgainInfos()
+    {
+        $datas = [
+            0 => '',
+            1 => '再次回访',
+        ];
+
+        return $datas;
+    }
+
+    public function getSignupChannelInfos()
+    {
+        $datas = [
+            'semthird' => '第三方SEM',
+            'semspider' => 'SEM抓取',
+			'phone400' => '400电话',
+			'hotline' => '网络直拨',
+        ];
+        return $datas;
+    }
+
+    protected function getCompanyInfos()
+    {
+        $infos = ArrayHelper::map(Company::find()->select('code_short, name')->where(['status' => 2])->all(), 'code_short', 'name');
+        return $infos;
+    }
+
+    public function getNoticeMerchantInfos()
+    {
+        $datas = [
+            '0' => '不通知',
+            '1' => '通知',
+        ];
+        return $datas;
+    }
+
+    public function getNoticeUserInfos()
+    {
+        $datas = [
+            '0' => '不通知',
+            '1' => '通知',
+        ];
+        return $datas;
+    }
 }
