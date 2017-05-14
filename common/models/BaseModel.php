@@ -132,6 +132,7 @@ class BaseModel extends ActiveRecord
 
     public function statisticRecord($data, $type)
     {
+        return ;
         $keywordTypes = ['visit', 'signup'];
         if (in_array($type, $keywordTypes)) {
             $keyword = $this->_newModel('statisticKeyword');
