@@ -39,8 +39,7 @@ class MerchantSpreadModel extends BaseModel
 
     public function getServiceInfos()
     {
-        $model = new Service();
-        $infos = $model->find()->indexBy('id')->all();
+        $infos = $this->getServiceModel()->find()->indexBy('id')->all();
         return $infos;
     }
 
@@ -50,8 +49,17 @@ class MerchantSpreadModel extends BaseModel
             return [];
         }
 
-        $model = new Service();
-        $info = $model->findOne($this->service_id);
+        $info = $this->getServiceModel()->findOne($this->service_id);
         return $info;
+    }
+
+    protected function getServiceModel($forceNew = false)
+    {
+        static $model;
+        if (is_null($model) || $forceNew) {
+            $model = new Service();
+        }
+
+        return $model;
     }
 }
