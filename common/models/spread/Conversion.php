@@ -33,7 +33,7 @@ class Conversion extends Visit
         }
         $insertInfo = array_merge($spreadInfo, $data);
 
-        $conversion = $this->_newModel('conversion');
+        $conversion = new self();
         $newData = $conversion->insert(false, $insertInfo);
         //$this->statisticRecord($newData, 'signup');
 
