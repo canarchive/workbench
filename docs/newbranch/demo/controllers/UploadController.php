@@ -5,7 +5,7 @@ namespace demo\controllers;
 use common\components\UploadController;
 use demo\models\Attachment;
 
-class DemoUploadController extends UploadController
+class UploadController extends UploadController
 {
     public $enableCsrfValidation = false;
 
