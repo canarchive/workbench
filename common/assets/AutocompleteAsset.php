@@ -1,27 +1,27 @@
 <?php
 
-namespace backend\assets;
+namespace common\assets;
 
 class AutocompleteAsset extends \yii\web\AssetBundle
 {
     /**
      * @inheritdoc
      */
-    //public $sourcePath = '@backend/assets';
+    //public $sourcePath = '@common/assets';
     public $baseUrl = '@asseturl';
 
     /**
      * @inheritdoc
      */
     public $css = [
-        'backend/jquery-ui.css',
+        'common/jquery-ui.css',
     ];
 
     /**
      * @inheritdoc
      */
     public $js = [
-        'backend/jquery-ui.js',
+        'common/jquery-ui.js',
     ];
 
     public $depends = [

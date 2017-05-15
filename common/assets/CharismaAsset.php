@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\assets;
+namespace common\assets;
 
 class CharismaAsset extends \yii\web\AssetBundle
 {

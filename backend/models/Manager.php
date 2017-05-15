@@ -56,8 +56,8 @@ class Manager extends AuthBase
     public function scenarios()
     {
         return [
-            'create' => ['username', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
-            'update' => ['username', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
+            'create' => ['name', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
+            'update' => ['name', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
             'edit-info' => ['email', 'truename', 'mobile'],
             'edit-password' => ['oldpassword', 'password_new', 'password_new_repeat'],
         ];
@@ -69,10 +69,10 @@ class Manager extends AuthBase
     public function rules()
     {
         return [
-            ['username', 'filter', 'filter' => 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\backend\models\Manager', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['name', 'filter', 'filter' => 'trim'],
+            ['name', 'required'],
+            ['name', 'unique', 'targetClass' => '\backend\models\Manager', 'message' => 'This name has already been taken.'],
+            ['name', 'string', 'min' => 2, 'max' => 255],
 
             [['oldpassword'], 'required'],
             [['oldpassword'], 'checkOldPassword', 'on' => ['edit-password']],
@@ -102,7 +102,7 @@ class Manager extends AuthBase
     {
         return [
             'id' => 'ID',
-            'username' => '管理员账号',
+            'name' => '管理员账号',
             'roles' => '角色',
             'truename' => '真实姓名',
             'login_num' => '登录次数',
