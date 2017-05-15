@@ -4,7 +4,7 @@ $detailViewParams = [
     'model' => $model,
     'attributes' => [
         'id',
-        'username',
+        'name',
         'roles',
         'login_num',
         'truename',

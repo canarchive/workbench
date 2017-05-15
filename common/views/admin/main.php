@@ -1,8 +1,8 @@
 <?php
 
 use yii\bootstrap\NavBar;
-use backend\assets\CharismaAsset;
-use backend\assets\Ltie9Asset;
+use common\assets\CharismaAsset;
+use common\assets\Ltie9Asset;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Json;
@@ -34,13 +34,13 @@ $menusJson = Json::encode($menus);
     <?= Html::csrfMetaTags() ?>
     <?php $this->head() ?>
 </head>
-<body <?php if (Yii::$app->params['managerInfo']['username'] != 'wangcanliang') { echo 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"'; } ?>>
+<body <?php if (Yii::$app->params['managerInfo']['name'] != 'wangcanliang') { echo 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"'; } ?>>
 <?php $this->beginBody() ?>
 
-<?php echo $this->render('topbar', ['menus' => $menus]); ?>
+<?php echo $this->render('_elem-topbar', ['menus' => $menus]); ?>
 <div class="ch-container">
     <div class="row">
-        <?php echo $this->render('left-menu', ['menus' => $menus]); ?>
+        <?php echo $this->render('_elem-left', ['menus' => $menus]); ?>
 
         <div id="content" class="col-lg-10 col-sm-10">
             <!-- content starts -->
@@ -68,7 +68,7 @@ $menusJson = Json::encode($menus);
     </div><!--/fluid-row-->
 
     <hr>
-    <?php echo $this->render('modal'); ?>
+    <?php echo $this->render('_elem-modal'); ?>
     <?php //echo $this->render('footer'); ?>
 
 </div><!--/.fluid-container-->

@@ -45,7 +45,7 @@ class Manager extends ManagerModel
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'sort' => ['attributes' => ['username', 'login_num', 'create_time', 'last_time', 'status']],
+            'sort' => ['attributes' => ['name', 'login_num', 'create_time', 'last_time', 'status']],
         ]);
 
         if (!($this->load($params) && $this->validate())) {

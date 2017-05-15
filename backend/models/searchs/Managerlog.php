@@ -43,7 +43,7 @@ class Managerlog extends ManagerlogModel
 
     public function getSearchDatas()
     {
-        $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'username');
+        $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'name');
         $datas = [
             'managerInfos' => $managerInfos,
         ];
