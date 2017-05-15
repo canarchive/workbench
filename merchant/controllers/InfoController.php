@@ -82,7 +82,7 @@ class InfoController extends LoginedController
 		} else {
 			$user->email = $user->getOldAttribute('email');
 		}
-		$user->truename = empty($user->truename) ? $user->getOldAttribute('truename') : $user->truename;
+		$user->name = empty($user->name) ? $user->getOldAttribute('name') : $user->name;
 
 		return true;
 	}

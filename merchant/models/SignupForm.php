@@ -15,7 +15,7 @@ class SignupForm extends Model
     public $mobileCode;
     public $captcha;
     public $email;
-    public $truename;
+    public $name;
     public $password;
     public $passwordConfirm;
 
@@ -63,7 +63,7 @@ class SignupForm extends Model
             $data = [
                 'mobile' => $this->mobile,
                 'password' => $this->password,
-                'truename' => strip_tags($this->truename),
+                'name' => strip_tags($this->name),
             ];
             return $user->registerUser($data);
         }

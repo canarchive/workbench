@@ -84,7 +84,7 @@ class SiteController extends MerchantController
         $infos = [];
         $message = '';
         if ($model->load(Yii::$app->request->post(), '')) {
-            $model->truename = $_POST['username'];
+            $model->name = $_POST['name'];
             $message = '请填写完整的注册信息';
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {

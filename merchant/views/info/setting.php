@@ -102,7 +102,7 @@ Yii::$app->params['seoTitle'] = '信息编辑-' . Yii::$app->params['seoTitle'];
                                         <div class="small-3 columns">
                                             <label for="old_phone" class="inline">原用户名：</label></div>
                                         <div class="small-9 columns">
-										<input type="text" id="old_phone" disabled value="<?= $this->context->userInfo['truename']; ?>">
+										<input type="text" id="old_phone" disabled value="<?= $this->context->userInfo['name']; ?>">
 										</div>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@ Yii::$app->params['seoTitle'] = '信息编辑-' . Yii::$app->params['seoTitle'];
                                         <div class="small-3 columns">
                                             <label for="mobile" class="inline">输入新用户名：</label></div>
                                         <div class="small-9 columns">
-                                            <input type="text" id="truename" name="truename" />
+                                            <input type="text" id="name" name="name" />
 										</div>
                                     </div>
                                 </div>
