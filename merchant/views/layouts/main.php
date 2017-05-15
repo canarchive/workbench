@@ -43,7 +43,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
             </header>
             <aside class="right-off-canvas-menu side-panel">
                 <?php if (!Yii::$app->user->isGuest) { ?>
-                <div class="user-block"><span class="name"><?= Yii::$app->user->identity->truename; ?></span></div>
+                <div class="user-block"><span class="name"><?= Yii::$app->user->identity->name; ?></span></div>
                 <?php } ?>
                 <nav class="nav">
                     <ul class="nav-list">

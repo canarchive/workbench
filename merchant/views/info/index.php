@@ -36,7 +36,7 @@ Yii::$app->params['seoTitle'] = '商家面板-' . Yii::$app->params['seoTitle'];
 						<h5>账户信息</h5>
                     </div>
                     <div class="bd">
-					    <label>用户名</label><?= $userInfo['truename']; ?>
+					    <label>用户名</label><?= $userInfo['name']; ?>
                         <label>电子邮件</label><?= $userInfo['email']; ?>
 						<label>联系电话</label><?= $userInfo['mobile']; ?>
 						<div class="panel callout radius">请确保联系方式正确及畅通,便于我们及时通知相关事务</div>
