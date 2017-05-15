@@ -5,23 +5,13 @@ namespace demo\models;
 use common\models\DemoModel;
 use yii\helpers\ArrayHelper;
 
-/**
- * This is the model class for table "photographer".
- */
-class Photographer extends DemoModel
+class Demo extends DemoModel
 {
-
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
-        return '{{%photographer}}';
+        return '{{%demo}}';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         $behaviors = [
@@ -30,9 +20,6 @@ class Photographer extends DemoModel
         return $behaviors;
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -44,18 +31,11 @@ class Photographer extends DemoModel
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
             'name' => '名称',
-            'nickname' => '昵称',
-            'title' => '头衔',
-            'photo' => '头像',
-            'brief' => '简介',
             'status' => '是否显示',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',

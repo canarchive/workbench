@@ -9,11 +9,11 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'viewPath' => '@backend/views/charisma',
+	'viewPath' => '@backend/views/charisma',
     'bootstrap' => ['log'],
-        'bootstrap' => [
-        'log',
-        function () {
+		'bootstrap' => [
+		'log',
+		function () {
             if (!isset(Yii::$app->i18n->translations['rbac-admin'])) {
                 Yii::$app->i18n->translations['rbac-admin'] = [
                     'class' => 'yii\i18n\PhpMessageSource',
@@ -28,7 +28,7 @@ return [
             }
             //user did not define the Navbar?
         }
-    ],
+	],
     'controllerNamespace' => 'backend\controllers',
     'components' => [
         'user' => [
@@ -57,19 +57,19 @@ return [
     'as access' => [
         'class' => 'backend\components\AccessControl',
         'allowActions' => [
-            'site/login',
-            'site/logout',
-            'site/error',
+			'site/login',
+			'site/logout',
+			'site/error',
             'debug/*',
         ]
     ],
 
-    'modules' => [
-        'demo' => [
-            'class' => 'backend\demo\Module',
-        ],
-    ],
-    'language' => 'zh-CN',
+	'modules' => [
+		'gallerycms' => [
+			'class' => 'backend\gallerycms\Module',
+		],
+	],
+	'language' => 'zh-CN',
 
     'params' => $params,
 ];
