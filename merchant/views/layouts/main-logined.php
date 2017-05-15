@@ -52,7 +52,7 @@ $currentNav = isset($this->params['currentNav']) ? $this->params['currentNav'] :
         </header>
         <aside class="right-off-canvas-menu side-panel">
             <div class="user-block">
-            <span class="name"><?= $this->context->userInfo['truename']; ?></span>
+            <span class="name"><?= $this->context->userInfo['name']; ?></span>
                 <a href="<?= Url::to(['/info/setting']); ?>" class="setting" title="个人设置">
                     <i class="fa fa-cog"></i>
                 </a>

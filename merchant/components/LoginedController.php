@@ -8,8 +8,13 @@ class LoginedController extends Controller
 {
     public $userInfo;
     public $merchantInfo;
+    public $menuInfos = ['appMenus' => [], 'menus' => [], 'currentMenu' => [], 'parentMenu' => []];
+    public $showSubnav = true;
+    protected $modelClass = '';
+    protected $viewPrefix = '';
 
-    public $layout = 'main-logined';
+    //public $layout = 'main-logined';
+    public $layout = 'main-admin';
 
     public function init()
     {
