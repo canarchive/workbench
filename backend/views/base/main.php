@@ -10,8 +10,9 @@ $this->params['menus'] = $this->context->menuInfos['menus'];
 $this->params['appMenus'] = $this->context->menuInfos['appMenus'];
 $this->params['currentMenu'] = $this->context->menuInfos['currentMenu'];
 $this->params['parentMenu'] = $this->context->menuInfos['parentMenu'];
+$this->params['identityInfo'] = $this->context->identityInfo;
 
-$bodyClass = (Yii::$app->params['managerInfo']['name'] != 'wangcanliang') ? 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"' : '';
+$bodyClass = ($this->params['identityInfo']['name'] != 'wangcanliang') ? 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"' : '';
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

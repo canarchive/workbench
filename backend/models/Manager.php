@@ -166,10 +166,15 @@ class Manager extends AuthBase
         ];
     }
 
-    public function getRoles()
+    public function getRolesInfos()
     {
         $roles = \yii\helpers\ArrayHelper::getColumn(Yii::$app->getAuthManager()->getRolesByUser($this->id), 'name');
         return $roles;
+    }
+
+    public function getRolesStr()
+    {
+        return implode(',', (array) $this->getRolesInfos());
     }
 
     public function getRoleInfos()

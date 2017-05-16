@@ -64,8 +64,8 @@ class BaseModel extends ActiveRecord
 
         $infos = [
             'manager_id' => $managerInfo['id'],
-            'manager_username' => $managerInfo['username'],
-            'roles' => $managerInfo['roles'],
+            'manager_name' => $managerInfo['name'],
+            'roles' => $managerInfo['rolesStr'],
             'menu_code' => $menuInfo['code'],
             'menu_name' => $menuInfo['name'],
             'data' => serialize($data),

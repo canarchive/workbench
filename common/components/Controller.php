@@ -2,7 +2,6 @@
 namespace common\components;
 
 use Yii;
-use yii\filters\AccessControl;
 use yii\web\Controller as YiiController;
 
 class Controller extends YiiController

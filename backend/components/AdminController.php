@@ -12,6 +12,7 @@ use common\components\Controller;
 class AdminController extends Controller
 {
     public $menuInfos = [];
+    public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
     protected $viewPrefix = '';
