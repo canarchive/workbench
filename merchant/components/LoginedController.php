@@ -4,14 +4,10 @@ namespace merchant\components;
 use Yii;
 use merchant\models\Merchant;
 
-class LoginedController extends Controller
+class LoginedController extends AdminController
 {
     public $userInfo;
     public $merchantInfo;
-    public $menuInfos = ['appMenus' => [], 'menus' => [], 'currentMenu' => [], 'parentMenu' => []];
-    public $showSubnav = true;
-    protected $modelClass = '';
-    protected $viewPrefix = '';
 
     //public $layout = 'main-logined';
     public $layout = 'main-admin';
