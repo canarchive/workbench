@@ -90,7 +90,7 @@ class Attachment extends BaseModel
 
             [['filepath'], 'string', 'max' => 256],
             [['filepath'], 'default', 'value' => function() {
-                $key = md5($this->file->name);
+                $key = md5($this->file->name . rand(0, 1000));
                 $base = "{$this->filePre}{$this->info_table}/{$this->info_field}";
                 if ($this->directoryLevel > 0) {
                     for ($i = 0; $i < $this->directoryLevel; ++$i) {
@@ -227,7 +227,7 @@ class Attachment extends BaseModel
     {
         $filePath = $this->getPathBase($this->path_prefix) . '/' . $this->filepath;
         if (file_exists($filePath)) {
-            unlink($filePath);
+            //unlink($filePath);
         }
         return true;
     }
