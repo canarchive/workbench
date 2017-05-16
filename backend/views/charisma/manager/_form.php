@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$model->roles = $model->getRoles();
+$model->roles = $model->getRolesInfos();
 $model->password_new = '';
 ?>
 
