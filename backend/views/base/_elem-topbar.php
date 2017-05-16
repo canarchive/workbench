@@ -52,7 +52,7 @@ $roleName = isset($this->params['roleName']) ? $this->params['roleName'] : 'Êìç‰
         <!-- theme selector ends -->
 
         <ul class="collapse navbar-collapse nav navbar-nav top-menu" id="baseMenu">
-            <?php foreach ($menus as $menu) { if ($menu['parent_code'] == '') { ?>
+            <?php foreach ($this->params['menus'] as $menu) { if ($menu['parent_code'] == '') { ?>
             <li id="baseMenu_<?php echo $menu['code']; ?>"><a href="javascript: setLeftNav('<?php echo $menu['code']; ?>'); void(0);"><?php echo $menu['name']; ?></a></li>
             <?php } } ?>
         </ul>

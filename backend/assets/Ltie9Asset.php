@@ -1,6 +1,6 @@
 <?php
 
-namespace common\assets;
+namespace backend\assets;
 
 class Ltie9Asset extends \yii\web\AssetBundle
 {

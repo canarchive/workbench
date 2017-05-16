@@ -1,80 +1,6 @@
 <?php
-
-use yii\bootstrap\NavBar;
-use common\assets\CharismaAsset;
-use common\assets\Ltie9Asset;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
 use yii\helpers\Json;
-
-CharismaAsset::register($this);
-Ltie9Asset::register($this);
-
-$controller = $this->context;
-$menuInfos = $controller->menuInfos;
-$menus = isset($menuInfos['menus']) ? $menuInfos['menus'] : [];
-$menusJson = Json::encode($menus);
-//$this->title = $menuInfos['menuTitle'];
 ?>
-<?php $this->beginPage() ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-    <meta name="author" content="Muhammad Usman">
-    <title><?= Html::encode($this->title) ?></title>
-
-    <link id="bs-css" href="<?= Yii::getAlias('@asseturl/backend'); ?>/css/bootstrap-cerulean.min.css" rel="stylesheet">
-    <script src="<?= Yii::getAlias('@asseturl'); ?>/bower_components/jquery/jquery.min.js"></script>
-    <link rel="shortcut icon" href="<?= Yii::getAlias('@asseturl/backend'); ?>/img/favicon-fb.ico">
-
-    <?= Html::csrfMetaTags() ?>
-    <?php $this->head() ?>
-</head>
-<body <?php if (Yii::$app->params['managerInfo']['name'] != 'wangcanliang') { echo 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"'; } ?>>
-<?php $this->beginBody() ?>
-
-<?php echo $this->render('_elem-topbar', ['menus' => $menus]); ?>
-<div class="ch-container">
-    <div class="row">
-        <?php echo $this->render('_elem-left', ['menus' => $menus]); ?>
-
-        <div id="content" class="col-lg-10 col-sm-10">
-            <!-- content starts -->
-            <?php if ($controller->showSubnav) { ?>
-            <div>
-                <ul class="breadcrumb">
-            <?php
-            $subnavString = '';
-            foreach ($menuInfos['appMenus'] as $appMenu) {
-                if ($appMenu['display'] > 3) continue;
-                $styleStr = ($menuInfos['currentMenu']['method'] == $appMenu['method']) ? 'style="color:#009900;"' : '';
-                //$urlStr = ($menuInfos['currentMenu']['method'] == $appMenu['method']) ? 'javascript:void(0);' : $appMenu['url'];
-                $urlStr = $appMenu['url'];
-                $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$appMenu['name']}</a></li>";
-            }
-            echo $subnavString;
-            ?>
-                </ul>
-            </div>
-            <?php } ?>
-            <?= $content ?>
-            <?php //echo $this->render('content'); ?>
-            <!-- content ends -->
-        </div><!--/#content.col-md-0-->
-    </div><!--/fluid-row-->
-
-    <hr>
-    <?php echo $this->render('_elem-modal'); ?>
-    <?php //echo $this->render('footer'); ?>
-
-</div><!--/.fluid-container-->
-
-<?php $this->endBody() ?>
-
 <?php if (isset($this->params['haveTreeList'])) { ?>
 <script src="http://static.acanstudio.com/backend/js/jquery.treetable.js"></script>
 <script src="http://static.acanstudio.com/backend/js/jquery.treeview.js"></script>
@@ -100,8 +26,7 @@ $(document).ready(function(){
     $('#bs-css').attr('href','<?= Yii::getAlias('@asseturl'); ?>/backend/css/bootstrap-'+theme_name+'.min.css');
   }
 });
-
-var menuJsons = <?= $menusJson; ?>;
+var menuJsons = <?= Json::encode($this->params['menus']); ?>;
 
 function setLeftNav(parentCode)
 {
@@ -119,7 +44,7 @@ function setLeftNav(parentCode)
       subMenuStr += '<li class="nav-header hidden-tablet">' + n.name + '</li>';
       $.each(menuJsons, function(i1, n1) {
         if (n1.parent_code == n.code && n1.display == 2) {
-          if (n1.id == '<?= $menuInfos['currentMenu']['id']; ?>') {
+          if (n1.id == '<?= $this->params['currentMenu']['id']; ?>') {
             isActive = 'class="active"';
             haveActive = true;
           }
@@ -135,7 +60,7 @@ function setLeftNav(parentCode)
   $("#leftMenuContent").hide();
 
   if (!haveActive) {
-      var appMenusJson = <?= Json::encode($menuInfos['appMenus']);?>;
+      var appMenusJson = <?= Json::encode($this->params['appMenus']);?>;
       $.each(appMenusJson, function(i2, n2) {
           if (!haveActive && n2.display == 2 && $n2.extparam == '') {
               $("#left_menu_" + n2.code).addClass("active");
@@ -144,7 +69,7 @@ function setLeftNav(parentCode)
       });
   }
 }
-setLeftNav('<?php $baseMenu = isset($menuInfos['parentMenu']['code']) ? $menuInfos['parentMenu']['code'] : 'backend_panel'; echo $baseMenu; ?>');
+setLeftNav('<?php $baseMenu = isset($this->params['parentMenu']['code']) ? $this->params['parentMenu']['code'] : 'backend_panel'; echo $baseMenu; ?>');
 var showCatType = typeof(showCat);
 if (showCatType == 'function') {
     showCat();
@@ -202,6 +127,3 @@ function changeDate(table, modelId, field, value)
     $("#" + field + '_old').val(value);
 }
 </script>
-</body>
-</html>
-<?php $this->endPage() ?>
