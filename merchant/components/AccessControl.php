@@ -4,78 +4,81 @@ namespace merchant\components;
 
 use Yii;
 use yii\web\ForbiddenHttpException;
-use yii\web\User;
-use yii\di\Instance;
 use yii\helpers\Url;
-use merchant\models\MerchantUser;
+use common\components\AccessControl as AccessControlBase;
+use merchant\models\Menu;
 
-class AccessControl extends \yii\base\ActionFilter
+class AccessControl extends AccessControlBase
 {
-    /**
-     * @var User User for check access.
-     */
-    private $_user = 'user';
-
-    /**
-     * @var array List of action that not need to check access.
-     */
-    public $allowActions = [];
-
-    /**
-     * Get user
-     * @return User
-     */
-    public function getUser()
+    protected function _checkStatus($elem = 'lock')
     {
-        if (!$this->_user instanceof User) {
-            $this->_user = Instance::ensure($this->_user, User::className());
-        }
-        return $this->_user;
+        return empty($this->identity['status']);
     }
 
-    /**
-     * Set user
-     * @param User|string $user
-     */
-    public function setUser($user)
+    protected function _checkCurrentMenu($action)
     {
-        $this->_user = $user;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function beforeAction($action)
-    {
-        $controller = $action->controller;
         $actionId = $action->getUniqueId();
 
-        // Allowed actions return true
-        foreach ($this->allowActions as $allowAction) {
-            if ($allowAction == $actionId) {
-                return true;
+        // Get the current route infos, get the current menu
+        $routeData = explode('/', $actionId);
+        $currentMethod = array_pop($routeData);
+        $currentController = array_pop($routeData);
+        $currentModule = implode('/', $routeData);
+        $where = [
+            'module' => $currentModule,
+            'controller' => $currentController,
+            'method' => $currentMethod,
+        ];
+
+        $currentMenu = Menu::findOne($where);
+        //if (empty($currentMenu) || !$this->user->can($currentMenu['code'])) {
+        if (empty($currentMenu)) {// || !$this->user->can($currentMenu['code'])) {
+            throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
+        }
+
+        return $currentMenu;
+    }
+
+    /**
+     * Get the menus of current manager
+     */
+    protected function _initMenus($currentMenu)
+    {
+        //$menus = Menu::find()->asArray()->where(['code' => $codes])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
+        $menus = Menu::find()->asArray()->indexBy('code')->all();
+        $appMenus = [];
+        foreach ($menus as $key => $menu) {
+            $route = '/' . trim($menu['module'] . '/' . $menu['controller'] . '/' . $menu['method'], '/');
+            $menu['url'] = Url::toRoute($route);
+            if (!empty($menu['extparam'])) {
+                $menu['url'] = $menu['url'] . '?' . $menu['extparam'];
             }
-            $allowAction = rtrim($allowAction, "*");
-            if (strpos($actionId, $allowAction) === 0) {
-                return true;
+            if ($key == $currentMenu['code']) {
+                $currentMenu['url'] = $menu['url'];
+            }
+            $menus[$key] = $menu;
+            if ($menu['parent_code'] == $currentMenu['parent_code'] && $menu['module'] == $currentMenu['module'] && $currentMenu['controller'] == $menu['controller']) {
+                $appMenus[$menu['method']] = $menu;
             }
         }
 
-        // Whether logined
-        $user = $this->getUser();
-        if ($user->getIsGuest()) {
-            $user->loginRequired();
-            return false;
+        $parentMenu = isset($menus['parent_code']) ? $currentMenu['parent_code'] : $currentMenu;
+        $menuTitle = $currentMenu['name'];
+        $menuBreadCrumb = $currentMenu['name'];
+        while (isset($menus[$parentMenu['parent_code']])) {
+            $parentMenu = $menus[$parentMenu['parent_code']];
+            $menuTitle .= '--' . $parentMenu['name'];
+            $menuBreadCrumb = $parentMenu['name'] . '-->' . $menuBreadCrumb;
         }
 
-        // Get the current manager info, include the roles
-        $userInfo = $user->getIdentity()->toArray();
-
-		if (empty($userInfo['status'])) {
-            throw new ForbiddenHttpException(Yii::t('yii', '您没有权限查看相关信息！'));
-		}
-        Yii::$app->params['managerInfo'] = $userInfo;
-
-        return true;
+        $menuInfos = [
+            'menuTitle' => $menuTitle,
+            'menuBreadCrumb' => $menuBreadCrumb,
+            'currentMenu' => $currentMenu,
+            'parentMenu' => $parentMenu,
+            'appMenus' => $appMenus,
+            'menus' => $menus,
+        ];
+        return $menuInfos;
     }
 }
