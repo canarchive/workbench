@@ -5,10 +5,7 @@ use backend\components\AdminController as AdminControllerBase;
 
 class AdminController extends AdminControllerBase
 {
-    public $menuInfos = ['appMenus' => [], 'menus' => [], 'currentMenu' => [], 'parentMenu' => []];
-    public $showSubnav = true;
-    protected $modelClass = '';
-    protected $viewPrefix = '';
+    public $layout = 'main-admin';
 
     public function init()
     {

@@ -9,8 +9,7 @@ class LoginedController extends AdminController
     public $userInfo;
     public $merchantInfo;
 
-    //public $layout = 'main-logined';
-    public $layout = 'main-admin';
+    public $layout = 'main-logined';
 
     public function init()
     {
