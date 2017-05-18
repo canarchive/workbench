@@ -2,18 +2,10 @@
 
 namespace merchant\models;
 
-use Yii;
-use yii\helpers\ArrayHelper;
 use common\models\MerchantModel;
-use common\models\Company;
 
-/**
- * This is the model class for table "merchant".
- */
 class Merchant extends MerchantModel
 {
-    //public $companyInfo;
-
     public static function tableName()
     {
         return '{{%merchant}}';
@@ -37,9 +29,6 @@ class Merchant extends MerchantModel
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -61,15 +50,6 @@ class Merchant extends MerchantModel
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
         ];
-    }
-
-    protected function getIsJoinedInfos()
-    {
-        $datas = [
-            '0' => '未合作',
-            '1' => '合作',
-        ];
-        return $datas;
     }
 
     protected function getStatusInfos()

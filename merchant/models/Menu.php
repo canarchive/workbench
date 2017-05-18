@@ -13,4 +13,17 @@ class Menu extends MerchantModel
     {
         return '{{%menu}}';
     }
+
+    /**
+     * Get the module
+     *
+     * @return array
+     */
+    public function getModuleInfos()
+    {
+        $datas = [
+            'admin' => '',
+        ];
+        return $datas;
+    }
 }

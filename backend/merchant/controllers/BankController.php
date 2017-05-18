@@ -2,6 +2,7 @@
 
 namespace backend\merchant\controllers;
 
+use Yii;
 use backend\components\AdminController;
 use backend\components\ControllerFullTrait;
 

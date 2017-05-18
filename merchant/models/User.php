@@ -3,8 +3,6 @@
 namespace merchant\models;
 
 use Yii;
-use yii\db\ActiveRecord;
-use yii\behaviors\TimestampBehavior;
 use yii\helpers\ArrayHelper;
 use common\models\AuthBase;
 
@@ -63,7 +61,7 @@ class User extends AuthBase
 
     public function checkPasswordOld()
     {
-        $result = \Yii::$app->security->validatePassword($this->password_old, $this->getOldAttribute('password'));
+        $result = Yii::$app->security->validatePassword($this->password_old, $this->getOldAttribute('password'));
         if (!$result) {
             $this->addError('password_old', '旧密码错误');
         }
@@ -140,8 +138,8 @@ class User extends AuthBase
     public function registerUser($data)
     {
         $user = new self($data);
-        $user->created_at = \Yii::$app->params['currentTime'];
-        $user->updated_at = \Yii::$app->params['currentTime'];
+        $user->created_at = Yii::$app->params['currentTime'];
+        $user->updated_at = Yii::$app->params['currentTime'];
         $user->setPassword($data['password']);
         $user->generateAuthKey();
         if ($user->save(false)) {
