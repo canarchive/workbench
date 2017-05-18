@@ -22,8 +22,6 @@ class User extends AdminController
 
     public function actionListinfo()
     {
-		$log = date('Y-m-d H:i:s') . '--' . Yii::$app->params['managerInfo']['username'] . '--' . Yii::$app->request->getIp() . "\n";
-		file_put_contents('/tmp/log.txt', $log, FILE_APPEND);
         if ($this->isService) {
             $_GET['service_id'] = array_keys($this->serviceInfos);
         }
