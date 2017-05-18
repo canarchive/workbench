@@ -25,13 +25,10 @@ class Contact extends MerchantModel
         return [
             [['name', 'merchant_id', 'mobile'], 'required'],
             [['orderlist', 'status'], 'default', 'value' => 0],
-            [['type', 'description'], 'safe'],
+            [['type', 'description', 'wechat'], 'safe'],
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [

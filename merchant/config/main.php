@@ -45,6 +45,7 @@ return [
             //'info/*',
             //'owner/*',
             'api/*',
+            'site/*',
             'merchant-upload/*',
             'site/error',
             //'admin/site/index',

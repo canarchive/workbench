@@ -20,12 +20,9 @@ class SiteController extends MerchantController
         parent::init();
         //$this->layoutPath = Yii::getAlias('@app/info/views');
         //$this->homeUrl = Url::to(['/info/index']);
-        $this->homeUrl = Url::to(['/info/index']);
+        $this->homeUrl = Url::to(['/admin']);
     }
 
-    /**
-     * @inheritdoc
-     */
     public function actions()
     {
         $actions = parent::actions();
@@ -40,16 +37,22 @@ class SiteController extends MerchantController
 
     public function actionIndex()
     {
-        //return Yii::$app->response->redirect($this->homeUrl)->send();
-        return $this->render('index');
+        $action = Yii::$app->request->get('action');
+        $actions = ['signin', 'signup', 'logout'];
+        if (!in_array($action, $actions)) {
+            exit();
+        }
+        $method = "_{$action}Method";
+        return $this->$method();
     }
 
-    public function actionSignin()
+    protected function _signinMethod()
     {
         $this->layout = 'main-base';
         if (!Yii::$app->user->isGuest) {
             return Yii::$app->response->redirect($this->homeUrl)->send();
         }
+
         $model = new SigninForm();
         $message = '';
         //$wrongTimes = $model->wrongTimes('check');
@@ -69,14 +72,14 @@ class SiteController extends MerchantController
         ]);
     }
 
-    public function actionLogout()
+    public function _logoutMethod()
     {
         Yii::$app->user->logout();
 
         return $this->goHome();
     }
 
-    public function actionSignup()
+    public function _signupMethod()
     {
         $this->layout = 'main-base';
         $model = new SignupForm();
