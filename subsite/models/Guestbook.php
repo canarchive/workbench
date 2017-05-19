@@ -3,7 +3,6 @@
 namespace subsite\models;
 
 use common\models\SubsiteModel;
-use subsite\decoration\models\UserDispatch;
 use merchant\models\Merchant;
 
 class Guestbook extends SubsiteModel

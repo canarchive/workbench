@@ -3,6 +3,7 @@
 namespace subsite\models\kl;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use common\models\SubsiteModel;
 
 class KlProduct extends SubsiteModel
@@ -19,6 +20,7 @@ class KlProduct extends SubsiteModel
 
     public function rules()
     {
+        return [];
     }
 
     public function attributeLabels()
@@ -76,6 +78,14 @@ class KlProduct extends SubsiteModel
         return $datas;
     }
 
+    public function getBookInfos()
+    {
+        $model = new KlBook();
+        $infos = $model->find()->all();
+        $infos = ArrayHelper::map($infos, 'id', 'mobile');
+        return $infos;
+    }
+
     public function getBookInfo()
     {
         if (empty($this->book_id)) {
@@ -85,5 +95,11 @@ class KlProduct extends SubsiteModel
         $model = new KlBook();
         $info = $model->find()->where(['id' => $this->book_id])->one();
         return $info;
+    }
+
+    public function getStatusInfos()
+    {
+        $datas = [];
+        return $datas;
     }
 }

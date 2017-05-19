@@ -8,7 +8,6 @@ use common\models\SubsiteModel;
 class Dispatch extends SubsiteModel
 {
     public $houseInfo;
-    public $statusModel;
 
     public static function tableName()
     {
@@ -67,9 +66,9 @@ class Dispatch extends SubsiteModel
         return true;
     }    
 
-    public function changeFromMerchant($ownerMerchant, $insert)
+    public function changeFromMerchant($userMerchant, $insert)
     {
-        $data = $ownerMerchant->toArray();
+        $data = $userMerchant->toArray();
         $exist = $this->findOne(['mobile' => $data['mobile'], 'house_id' => $data['house_id']]);
         if (!$exist) {
             $newData = [
@@ -86,7 +85,6 @@ class Dispatch extends SubsiteModel
 
         if ($insert) {
             $exist->updateCounters(['num_merchant' => 1]);
-
         }
     }
 }

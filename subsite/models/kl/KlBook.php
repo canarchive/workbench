@@ -56,7 +56,6 @@ class KlBook extends SubsiteModel
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
-        var_dump($this->couponData);
         if (!is_array($this->couponData) || empty($this->couponData)) {
             return true;
         }
