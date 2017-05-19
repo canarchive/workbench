@@ -12,6 +12,7 @@ use common\components\Controller;
 class AdminController extends Controller
 {
     public $menuInfos = [];
+    public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
     protected $viewPrefix = '';
@@ -60,7 +61,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Lists all Menu models.
+     * Lists tree infos,
      * @return mixed
      */
     public function _listinfoTree($model)

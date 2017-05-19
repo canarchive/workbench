@@ -22,9 +22,9 @@ return [
         ],
     ],
     'modules' => [
-        'info' => [
-            'class' => 'demo\info\Module',
-        ],
+        /*'submodule' => [
+            'class' => 'demo\submodule\Module',
+		],*/
     ],
     'params' => $params,
 ];

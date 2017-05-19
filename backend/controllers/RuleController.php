@@ -4,39 +4,20 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\RuleManager;
-use backend\models\searchs\RuleManager as RuleManagerSearch;
 use yii\web\NotFoundHttpException;
 use backend\components\AdminController;
+use backend\components\ControllerTraitView;
+use backend\components\ControllerTraitAdd;
 
 /**
  * Description of RuleController
  */
 class RuleController extends AdminController
 {
-    public function actionListinfo()
-    {
-        $searchModel = new RuleManagerSearch();
-        return $this->_listinfoInfo($searchModel);
-    }
-
-    public function actionView($id)
-    {
-        return $this->_viewInfo($id);
-    }
-
-    public function actionAdd()
-    {
-        return $this->_addInfo(new RuleManager(null));
-    }
-
-    public function actionUpdate($id = 0)
-    {
-        if (Yii::$app->request->isAjax) {
-            return $this->_updateByAjax();
-        }
-
-        return $this->_updateInfo($id, 'update');
-    }
+	use ControllerTraitView;
+	use ControllerTraitAdd;
+    protected $modelClass = 'backend\models\RuleManager';
+    protected $modelSearchClass = 'backend\models\searchs\RuleManager';
 
     /**
      * Deletes an existing AuthItem model.

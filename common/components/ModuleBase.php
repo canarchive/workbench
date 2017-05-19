@@ -18,7 +18,7 @@ class ModuleBase extends \yii\base\Module
     public function init()
     {
         parent::init();
-        $this->layout = 'main';
+        //$this->layout = 'main';
     }
 
     protected function getCompanyInfos()

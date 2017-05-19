@@ -4,7 +4,7 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
-        'username',
+        'name',
         'truename',
         [
             'attribute' => 'roles',

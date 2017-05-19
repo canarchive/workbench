@@ -10,9 +10,9 @@ use common\components\Pagination;
 
 class BaseModel extends ActiveRecord
 {
-    use ModelAttachmentTrait;
-    use ModelLevelTrait;
-    use PHPExcelTrait;
+    use TraitAttachment;
+    use TraitLevel;
+    use TraitPHPExcel;
 
     protected function getTimestampBehaviorComponent($createField = 'created_at', $updateField = 'updated_at')
     {
@@ -64,8 +64,8 @@ class BaseModel extends ActiveRecord
 
         $infos = [
             'manager_id' => $managerInfo['id'],
-            'manager_username' => $managerInfo['username'],
-            'roles' => $managerInfo['roles'],
+            'manager_name' => $managerInfo['name'],
+            'roles' => $managerInfo['rolesStr'],
             'menu_code' => $menuInfo['code'],
             'menu_name' => $menuInfo['name'],
             'data' => serialize($data),
@@ -128,35 +128,6 @@ class BaseModel extends ActiveRecord
     {
         $num = $type == 'add' ? 1 : -1;
         $this->updateCounters(['num_' . $field => $num]);
-    }
-
-    public function statisticRecord($data, $type)
-    {
-        return ;
-        $keywordTypes = ['visit', 'signup'];
-        if (in_array($type, $keywordTypes)) {
-            $keyword = $this->_newModel('statisticKeyword');
-            //print_r($keyword);exit();
-            $keyword->recordData($data, $type);
-        }
-
-        $reportTypes = ['visit', 'signup'];
-        if (in_array($type, $reportTypes)) {
-            $report = $this->_newModel('statisticReport');
-            $report->recordData($data, $type);
-        }
-
-        /*$reportServiceTypes = ['signup'];
-        if (in_array($type, $reportServiceTypes)) {
-            $reportService = $this->_newModel('statisticReportService');
-            $reportService->recordData($data, $type);
-		}
-
-        $dispatchTypes = ['dispatch'];
-        if (in_array($type, $dispatchTypes)) {
-            $dispatch = $this->_newModel('statisticDispatch');
-            $dispatch->recordData($data, $type);
-		}*/
     }
 
     public function _newModel($code, $returnNew = false, $data = [])

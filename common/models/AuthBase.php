@@ -17,9 +17,9 @@ class AuthBase extends PassportModel implements IdentityInterface
      * @param string $username
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByName($name)
     {
-        return static::findOne(['username' => $username]);//, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['name' => $name]);//, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
