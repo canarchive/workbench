@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-trait PHPExcelTrait
+trait TraitPHPExcel
 {
     public function exportDatas($datas, $title)
     {   

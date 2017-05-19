@@ -4,7 +4,7 @@ namespace common\models;
 
 use common\helpers\Tree;
 
-trait ModelLevelTrait
+trait TraitLevel
 {
     protected function getTreeInfos($infos, $key, $parentKey, $name, $parentValue = 0)
     {
