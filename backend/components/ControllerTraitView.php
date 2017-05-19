@@ -2,12 +2,15 @@
 
 namespace backend\components;
 
-use Yii;
-
-Trait ControllerListTrait
+Trait ControllerTraitView
 {
     public function actionListinfo()
     {
         return $this->_listinfoInfo();
+    }
+
+    public function actionView($id)
+    {
+        return $this->_viewInfo($id);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace backend\components;
 
-Trait ControllerAddMulTrait
+trait ControllerTraitAddMul
 {
 	public function actionAddMul()
 	{
