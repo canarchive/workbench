@@ -25,7 +25,7 @@ class Domain extends BaseModel
     {
         return [
             [['code', 'name'], 'required'],
-            [['status', 'domain_pc', 'domain_mobile'], 'default', 'value' => 0],
+            [['status'], 'default', 'value' => 0],
             [['created_at','updated_at','stat_code',], 'safe'],
         ];
     }

@@ -7,8 +7,14 @@ $detailViewParams = [
         'name',
         'code',
         'stat_code',
-        'domain_pc',
-        'domain_mobile',
+        [
+            'attribute' => 'domain_pc',
+            'value' => $model->pcDomain,
+        ],
+        [
+            'attribute' => 'domain_mobile',
+            'value' => $model->mobileDomain,
+        ],
         [
             'attribute' => 'status',
             'value' => $model->statusInfos[$model->status],
