@@ -3,10 +3,12 @@ ALTER TABLE `wd_user`
   DROP `client_type`,
   DROP `plan_id`,
   DROP `unit_id`,
+  DROP `city_input`,
+  DROP `area_input`,
   DROP `signup_num`,
   DROP `position`,
   DROP `note`,
-  DROP `message`,
+  DROP `signup_city`,
   DROP `signup_ip`,
   DROP `keyword`,
   DROP `keyword_search`,
@@ -18,6 +20,7 @@ ALTER TABLE `wd_user`
 
 ALTER TABLE `wd_user` ADD `update_at` INT(10) NOT NULL DEFAULT '0' COMMENT '更新时间' AFTER `created_at`;
 ALTER TABLE `wd_user` ADD `conversion_id` INT(10) NOT NULL DEFAULT '0' COMMENT '转化信息ID' AFTER `id`;
+ALTER TABLE `wd_user` CHANGE `invalid_status` `status_invalid` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '无效原因';
 
 ALTER TABLE `wd_conversion` ADD `position` VARCHAR(60) NOT NULL DEFAULT '' COMMENT '位置' AFTER `url_pre`, ADD `note` VARCHAR(1000) NOT NULL DEFAULT '' COMMENT '备注' AFTER `position`, ADD `message` VARCHAR(1000) NOT NULL DEFAULT '' COMMENT '留言' AFTER `note`, ADD `signup_num` SMALLINT(5) NOT NULL DEFAULT '0' COMMENT '报名次数' AFTER `message`, ADD `signup_at` INT(10) NOT NULL DEFAULT '0' COMMENT '报名时间' AFTER `signup_num`;
 
