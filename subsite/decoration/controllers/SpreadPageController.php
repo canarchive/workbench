@@ -34,6 +34,7 @@ class SpreadPageController extends Controller
             'code' => $code,
             'model' => $signupForm,
         ];
+        $this->layout = 'main';
 
         return $this->render($code, $datas);   
     }

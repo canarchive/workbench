@@ -3,13 +3,6 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
-use subsite\decoration\models\Service;
-
-if ($this->context->isService) {
-    $customInfos = ArrayHelper::map($this->context->serviceInfos, 'id', 'name');
-} else {
-    $customInfos = ArrayHelper::map(Service::find()->select('id, name')->where(['status' => 1])->all(), 'id', 'name');
-}
 
 $merchantInfos = [];
 foreach ($model->getMerchantAllInfos() as $key => $info) {
@@ -20,19 +13,18 @@ foreach ($model->getMerchantAllInfos() as $key => $info) {
 ?>
 
 <div class="menu-form">
-
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'mobile')->textInput() ?>
-    <?= $form->field($model, 'area_input')->textInput() ?>
-    <?= $form->field($model, 'city_input')->textInput() ?>
+    <?= $form->field($model, 'area')->textInput() ?>
+    <?= $form->field($model, 'region')->textInput() ?>
     <?= $form->field($model, 'city_code')->dropDownList($model->companyInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'channel')->dropDownList($model->signupChannelInfos, ['prompt' => '']); ?>
-    <?= $form->field($model, 'service_id')->dropDownList($customInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($merchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'notice_merchant')->dropDownList($model->noticeMerchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'notice_user')->dropDownList($model->noticeUserInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'note')->textarea(['rows' => 2]) ?>
+    <?= $form->field($model, 'message')->textarea(['rows' => 2]) ?>
 
     <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

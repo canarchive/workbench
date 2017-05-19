@@ -13,47 +13,39 @@ class User extends SubsiteModel
     public $serviceInfo;
     public $notice_merchant;
     public $notice_user;
+    public $region;
+    public $area;
+    public $note;
 
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return '{{%user}}';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
+            'conversion_id' => '转化ID',
+            'channel' => '报名渠道',
             'city_code' => '城市代码',
-            'service_id' => '客服',
+            'merchant_id' => '商家',
             'mobile' => '手机号',
             'name' => '名字',
-            'client_type' => '来源',
+            'message' => '留言',
+            'service_id' => '客服',
+            'service_num' => '客服数',
+            'status' => '状态',
+            'status_input' => '状态',
+            'status_invalid' => '无效原因',
+            'callback_again' => '再次回访时间',
+            'view_at' => '查看时间',
             'signup_at' => '报名时间',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
+
             'notice_merchant' => '是否短信通知商家',
             'notice_user' => '是否短信通知业主',
-            'signup_ip' => '报名IP',
-            'area_input' => '房屋面积',
-            'city_input' => '房屋所在地',
-            'signup_city' => '报名城市',
-            'channel_big' => '一级渠道',
-            'signup_num' => '报名次数',
-            'channel' => '报名渠道',
-            'message' => '留言',
-            'note' => '备注',
-            'merchant_id' => '商家',
-            'keyword' => '关键字',
-            'keyword_search' => '搜索关键字',
-            'invalid_status' => '无效原因',
-            'out_status' => '承接范围外无效原因',
-            'callback_at' => '第一次回访',
-            'callback_again' => '再次回访时间',
-            'status' => '状态',
         ];
     }
 
@@ -144,22 +136,20 @@ class User extends SubsiteModel
         }
 
         $data = [
-            'mobile' => $this->mobile,
-            'merchant_id' => $this->merchant_id,
-            'name' => $this->name,
             'city_code' => $this->city_code,
-            'position' => '',
-            //'channel_big' => 'seo',
-            'note' => $this->note,
-            'message' => '',
-			'status_input' => $statusInput,
             'client_type' => 'pc',
-            'area_input' => $this->area_input,
-            'city_input' => $this->city_input,
+            'merchant_id' => $this->merchant_id,
             'channel' => $this->channel,
+            'mobile' => $this->mobile,
+            'name' => $this->name,
+            'note' => $this->note,
+            'message' => $this->message,
+			'status_input' => $statusInput,
+            'area' => $this->area,
+            'region' => $this->region,
         ];
-        $serviceId = $this->service_id ? $this->service_id : null;
-        $decorationOwner = $this->addOwner($data, $serviceId);
+        //$serviceId = $this->service_id ? $this->service_id : null;
+        $decorationOwner = $this->addOwner($data);
         $conversionModel = $this->_newModel('conversion');
         $cData = $data;
         foreach (['position', 'city_input', 'area_input', 'status_input', 'note', 'message'] as $cNoField) {
@@ -375,7 +365,7 @@ class User extends SubsiteModel
 
     protected function getCompanyInfos()
     {
-        $infos = ArrayHelper::map(Company::find()->select('code_short, name')->where(['status' => 2])->all(), 'code_short', 'name');
+        $infos = ArrayHelper::map(Company::find()->select('code, name')->where(['status' => 2])->all(), 'code', 'name');
         return $infos;
     }
 

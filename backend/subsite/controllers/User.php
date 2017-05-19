@@ -8,23 +8,15 @@ use backend\components\AdminController;
 
 class User extends AdminController
 {
-    //public $viewPrefix = '/user/';
-    public $isService;
-    public $serviceInfos;
-
     use UserTrait;
 
     public function beforeAction($action)
     {
-        $this->initCustomService();
         return parent::beforeAction($action);
     }
 
     public function actionListinfo()
     {
-        if ($this->isService) {
-            $_GET['service_id'] = array_keys($this->serviceInfos);
-        }
         return $this->_listinfoInfo();
     }
 
@@ -47,11 +39,6 @@ class User extends AdminController
         return $this->render('change-merchant', [
             'model' => $model,
         ]);
-    }
-
-    public function actionView($id)
-    {
-        return $this->_viewInfo($id);
     }
 
     public function actionAdd()
@@ -85,24 +72,5 @@ class User extends AdminController
         //print_r($data);exit();
 
         return $this->render('update', $data);
-    }
-
-    protected function initCustomService()
-    {
-        $managerInfo = Yii::$app->params['managerInfo'];
-        if ($managerInfo['roles'] == '客服') {
-            $modelClass = $this->modelClass;
-            $model = new $modelClass();
-            $this->isService = true;
-            $this->serviceInfos = $model->_newModel('service')->find()->where(['manager_id' => $managerInfo['id']])->indexBy('id')->all();
-			$this->serviceInfos = empty($this->serviceInfos) ? ['-1'] : $this->serviceInfos;
-        }
-    }
-
-    protected function _checkRecordPriv($model)
-    {
-        if ($this->isService && (empty($model->service_id) || !in_array($model->service_id, array_keys($this->serviceInfos)))) {
-            throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
-        }
     }
 }
