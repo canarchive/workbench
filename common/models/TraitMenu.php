@@ -6,7 +6,7 @@ use Yii;
 use common\models\PassportModel;
 use common\helpers\Tree;
 
-trait MenuTrait
+trait TraitMenu
 {
     //public $parent_code;
     public $url;

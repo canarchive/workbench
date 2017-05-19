@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-trait ModelAttachmentTrait
+trait TraitAttachment
 {
     /**
      * 附件类型的字段信息更新时，是否删除旧的附件，默认删除

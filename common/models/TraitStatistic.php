@@ -5,7 +5,7 @@ namespace common\models;
 use common\models\spread\Visit;
 use common\models\spread\Conversion;
 
-trait ModelLevelTrait
+trait TraitStatistic
 {
 
     public function statisticRecord($data, $type)
