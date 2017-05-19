@@ -6,9 +6,18 @@ $gridViewParams = [
         'id',
         'name',
         'code',
-        'domain_pc',
-        'domain_mobile',
-      
+        [
+            'attribute' => 'domain_pc',
+            'value' => function($model) {
+                return $model->pcDomain;
+            },
+        ],
+        [
+            'attribute' => 'domain_mobile',
+            'value' => function($model) {
+                return $model->mobileDomain;
+            },
+        ],
         [
             'attribute' => 'created_at',
             'value'=> function($model){
