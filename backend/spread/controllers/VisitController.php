@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\spread\controllers;
+namespace backend\statistic\controllers;
 
 use backend\components\AdminController;
 use backend\components\ControllerViewTrait;
@@ -9,6 +9,6 @@ class VisitController extends AdminController
 {
     public $viewPrefix = '/visit/';
     use ControllerViewTrait;
-    protected $modelClass = 'common\models\spread\Visit';
-    protected $modelSearchClass = 'common\models\spread\searchs\Visit';
+    protected $modelClass = 'common\models\statistic\Visit';
+    protected $modelSearchClass = 'common\models\statistic\searchs\Visit';
 }
