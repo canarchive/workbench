@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\saccount\controllers;
+namespace backend\spread\controllers;
 
 use Yii;
 use yii\helpers\ArrayHelper;

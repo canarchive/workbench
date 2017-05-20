@@ -9,8 +9,8 @@ class ChannelController extends AdminController
     use StatisticTrait;
     public $viewPrefix = '/';
     protected $viewCurrent = 'channel';
-    protected $modelClass = 'spread\models\statistic\Report';
-    protected $modelSearchClass = 'spread\models\statistic\searchs\Report';
+    protected $modelClass = 'common\models\statistic\Report';
+    protected $modelSearchClass = 'common\models\statistic\searchs\Report';
     protected $showInfo = false;
 
 

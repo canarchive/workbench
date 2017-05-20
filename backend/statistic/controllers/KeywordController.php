@@ -9,8 +9,8 @@ class KeywordController extends AdminController
     use StatisticTrait;
     public $viewPrefix = '/';
     protected $viewCurrent = 'keyword';
-    protected $modelClass = 'spread\models\statistic\Keyword';
-    protected $modelSearchClass = 'spread\models\statistic\searchs\Keyword';
+    protected $modelClass = 'common\models\statistic\Keyword';
+    protected $modelSearchClass = 'common\models\statistic\searchs\Keyword';
     protected $showInfo = false;
 
     public function beforeAction($action)
