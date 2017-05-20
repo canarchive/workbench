@@ -1,11 +1,11 @@
 <?php
 
-namespace spread\models\statistic;
+namespace common\models\statistic;
 
 use Yii;
 use common\models\SpreadModel;
 use yii\helpers\ArrayHelper;
-use spread\models\saccount\Planfee;
+use spread\models\Planfee;
 
 class AbstractStatistic extends SpreadModel
 {
