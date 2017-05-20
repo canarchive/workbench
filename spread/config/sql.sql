@@ -33,6 +33,7 @@ ALTER TABLE `wm_user` CHANGE `truename` `name` VARCHAR(30) CHARACTER SET utf8 CO
 ALTER TABLE `wm_user` DROP `encrypt`;
 ALTER TABLE `wm_user` DROP `service_id`;
 
+ALTER TABLE `wd_callback` ADD `status` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '状态' AFTER `note`;
 -----------------
 
 ALTER TABLE `wd_sem_template` DROP `layout`;

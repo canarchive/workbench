@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\saccount\controllers;
+namespace backend\spread\controllers;
 
 use Yii;
 use backend\components\AdminController;
 use backend\components\ControllerFullTrait;
-use backend\saccount\controllers\ImportController;
+use backend\spread\controllers\ImportController;
 
 class PlanfeeController extends AdminController
 {

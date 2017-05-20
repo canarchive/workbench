@@ -5,7 +5,7 @@ namespace spread\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\models\Company;
-use common\models\spread\Visit;
+use common\models\statistic\Visit;
 
 class Spreadurl extends BaseModel
 {
@@ -77,6 +77,7 @@ class Spreadurl extends BaseModel
         $url .= '?cid=' . $this->inputParams['merchantId'];
         if ($this->inputParams['showFull']) {
             foreach ($this->inputParams['attrs'] as $pKey => $pInfo) {
+                if ($pKey == 'merchant_id') { continue; }
                 $pValue = $pKey == 'channel' ? $params['channel'] : $pInfo['default'];
                 $url .= "&{$pInfo['param']}={$pValue}";
             }
