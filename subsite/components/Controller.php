@@ -4,7 +4,7 @@ namespace subsite\components;
 use Yii;
 use yii\helpers\Url;
 use common\components\Controller as CommonController;
-use spread\models\saccount\Domain;
+use spread\models\Domain;
 
 class Controller extends CommonController
 {

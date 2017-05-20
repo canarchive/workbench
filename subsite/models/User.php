@@ -148,14 +148,11 @@ class User extends SubsiteModel
             'area' => $this->area,
             'region' => $this->region,
         ];
+
+        $conversion = $this->conversionSuccessLog($data);
+        var_dump($conversion);exit();
         //$serviceId = $this->service_id ? $this->service_id : null;
         $decorationOwner = $this->addOwner($data);
-        $conversionModel = $this->_newModel('conversion');
-        $cData = $data;
-        foreach (['position', 'city_input', 'area_input', 'status_input', 'note', 'message'] as $cNoField) {
-            unset($cData[$cNoField]);
-        }
-        $conversionInfo = $conversionModel->successLog($cData);
 
         if (!empty($this->merchant_id)) {
             $this->_sendSms($data, $decorationOwner->serviceInfo);

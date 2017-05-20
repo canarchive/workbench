@@ -5,7 +5,7 @@ namespace subsite\decoration\controllers;
 use Yii;
 use subsite\components\Controller;
 use subsite\decoration\models\SignupForm;
-use spread\models\saccount\Template;
+use spread\models\Template;
 
 class SpreadPageController extends Controller
 {
