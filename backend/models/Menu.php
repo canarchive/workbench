@@ -3,14 +3,14 @@
 namespace backend\models;
 
 use common\models\PassportModel;
-use common\models\MenuTrait;
+use common\models\TraitMenu;
 
 /**
  * This is the model class for table "menu".
  */
 class Menu extends PassportModel
 {
-    use MenuTrait;
+    use TraitMenu;
 
     public static function tableName()
     {

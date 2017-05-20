@@ -13,6 +13,7 @@ class BaseModel extends ActiveRecord
     use TraitAttachment;
     use TraitLevel;
     use TraitPHPExcel;
+    use TraitStatistic;
 
     protected function getTimestampBehaviorComponent($createField = 'created_at', $updateField = 'updated_at')
     {

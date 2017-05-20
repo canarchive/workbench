@@ -2,11 +2,16 @@
 
 namespace common\models;
 
-use common\models\spread\Visit;
-use common\models\spread\Conversion;
+use common\models\statistic\Visit;
+use common\models\statistic\Conversion;
 
 trait TraitStatistic
 {
+    public function conversionSuccessLog($data)
+    {
+        $model = new Conversion;
+        return $model->successLog($data);
+    }
 
     public function statisticRecord($data, $type)
     {

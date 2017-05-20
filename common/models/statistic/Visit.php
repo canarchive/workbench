@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\spread;
+namespace common\models\statistic;
 
 use Yii;
 use common\models\BaseModel;
@@ -44,9 +44,8 @@ class Visit extends BaseModel
         ];
     }
 
-    public function writeVisitLog($isMobile)
+    public function writeVisitLog($data)
     {
-        $data = [];
         $attributeParams = $this->getAttributeParams();
         $channelInfo = Yii::$app->getRequest()->get('qinfo');
         foreach ($attributeParams as $field => $param) {
@@ -84,7 +83,6 @@ class Visit extends BaseModel
         $urlBase = empty($urlBase) ? $urlFull : $urlBase;
         $data['url'] = $urlBase;
         $data['url_full'] = $urlFull;
-        $data['client_type'] = $isMobile ? 'h5' : 'pc';
 
         $urlFullPre = Yii::$app->request->get('url_pre', '');
         $urlPre = substr($urlFullPre, 0, strpos($urlFullPre, '?'));

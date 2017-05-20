@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\spread;
+namespace common\models\statistic;
 
 use Yii;
 
@@ -24,6 +24,7 @@ class Conversion extends Visit
 
     public function successLog($data)
     {
+        $data = $this->_formatData($data);
         $session = Yii::$app->session;
         $spreadInfo = isset($session['session_spread_info']) ? $session['session_spread_info'] : [];
         $spreadInfo = !empty($spreadInfo) && time() - $spreadInfo['time'] < 1800 ? $spreadInfo : [];
@@ -37,6 +38,20 @@ class Conversion extends Visit
         $newData = $conversion->insert(false, $insertInfo);
         //$this->statisticRecord($newData, 'signup');
 
-        return $insertInfo;
+        return $newData;
+    }
+
+    public function _formatData($data)
+    {
+        $fields = [
+            'sort', 'merchant_id', 'city_code', 'client_type',
+            'mobile', 'name', 'channel', 'note', 
+        ];
+
+        $infos = [];
+        foreach ($fields as $field) {
+            $infos[$field] = isset($data[$field]) ? $data[$field] : '';
+        }
+        return $infos;
     }
 }
