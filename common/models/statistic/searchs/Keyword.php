@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\models\statistic\searchs;
+namespace common\models\statistic\searchs;
 
 use yii\data\ActiveDataProvider;
-use spread\models\statistic\Keyword as KeywordModel;
+use common\models\statistic\Keyword as KeywordModel;
 
 class Keyword extends KeywordModel
 {

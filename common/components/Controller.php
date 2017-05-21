@@ -99,4 +99,19 @@ class Controller extends YiiController
 
         return parent::beforeAction($action);
     }
+
+    protected function _statistic($data)
+    {
+        $channel = Yii::$app->getRequest()->get('qudao');
+        $method = Yii::$app->getRequest()->method;
+        if ($channel && $method == 'GET') {
+            $isMobile = $this->clientIsMobile();
+            $data['client_type'] = $isMobile ? 'h5' : 'pc';
+            $model = new \common\models\statistic\Visit();
+            $model->writeVisitLog($data);
+        }
+        //echo json_encode([]);//Yii::getAlias('@asseturl') . '/common/images/blank.gif';
+
+        return ;
+    }
 }

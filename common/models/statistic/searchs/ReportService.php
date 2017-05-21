@@ -1,9 +1,9 @@
 <?php
 
-namespace spread\models\statistic\searchs;
+namespace common\models\statistic\searchs;
 
 use yii\data\ActiveDataProvider;
-use spread\models\statistic\ReportService as ReportServiceModel;
+use common\models\statistic\ReportService as ReportServiceModel;
 
 class ReportService extends ReportServiceModel
 {
