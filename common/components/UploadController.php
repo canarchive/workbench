@@ -48,7 +48,7 @@ class UploadController extends \yii\web\Controller
         $params = [
             'info_table' => $table,
             'info_field' => $field,
-            'info_id' => $id,
+            'info_id' => intval($id),
         ];
         $action = Yii::$app->request->get('action');
         if ($action == 'show') {
