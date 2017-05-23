@@ -1,4 +1,5 @@
 <?= $this->render('_search', array_merge($searchDatas)); ?>
+<?= $this->render('_nav-merchant', ['model' => $model]); ?>
 
 <div id="w1" class="grid-view">
     <div class="summary">推广参数列表</div>
