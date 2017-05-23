@@ -17,11 +17,6 @@ class Conversion extends Visit
         return $attributes;
     }
 
-    public function insert($runValidation = true, $attributes = null)
-    {
-        return parent::insert($runValidation, $attributes);
-    }    
-
     public function successLog($data)
     {
         $data = $this->_formatData($data);
@@ -34,24 +29,26 @@ class Conversion extends Visit
         }
         $insertInfo = array_merge($spreadInfo, $data);
 
-        $conversion = new self();
-        $newData = $conversion->insert(false, $insertInfo);
+        $conversion = new self($insertInfo);
+        $conversion->save();
+        //$newData = $conversion->insert(false, $insertInfo);
         //$this->statisticRecord($newData, 'signup');
 
-        return $newData;
+        return $conversion;
     }
 
-    public function _formatData($data)
+    public function _getDatasForFormat()
     {
         $fields = [
-            'sort', 'merchant_id', 'city_code', 'client_type',
-            'mobile', 'name', 'channel', 'note', 
+            'sort' => ['default' => ''], 
+            'merchant_id' => ['default' => 0], 
+            'city_code' => ['default' => ''], 
+            'client_type' => ['defaut' => ''],
+            'mobile' => ['default' => ''], 
+            'name' => ['default' => ''], 
+            'channel' => ['default' => ''], 
+            'note' => ['default' => ''], 
         ];
-
-        $infos = [];
-        foreach ($fields as $field) {
-            $infos[$field] = isset($data[$field]) ? $data[$field] : '';
-        }
-        return $infos;
+        return $fields;
     }
 }

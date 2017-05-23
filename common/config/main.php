@@ -6,20 +6,18 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'assetManager' => [
-            'basePath' => '@assetcustom/assets',
-            'baseUrl' => '@asseturl/assets',
-        ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
-                ['pattern' => '/spread-upload/<table:\w+>/<field:\w+>', 'route' => '/spread-upload/index', 'host' => Yii::getAlias('@spreadurl')],
-                ['pattern' => '/merchant-upload/<table:\w+>/<field:\w+>', 'route' => '/merchant-upload/index', 'host' => Yii::getAlias('@merchanturl')],
-                ['pattern' => '/subsite-upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index', 'host' => Yii::getAlias('@subsiteurl')],
+                ['pattern' => '/upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index'],
             ],
+        ],
+        'assetManager' => [
+            'basePath' => '@assetcustom/assets',
+            'baseUrl' => '@asseturl/assets',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

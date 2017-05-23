@@ -18,6 +18,7 @@ $bodyClass = ($this->params['identityInfo']['name'] != 'wangcanliang') ? 'ondrag
 <!DOCTYPE html>
 <html lang="en">
 <?= $this->render('_elem-header'); ?>
+<?php echo $this->render('_elem-style'); ?>
 <body <?= $bodyClass; ?>>
 <?php $this->beginBody() ?>
 <?php echo $this->render('_elem-topbar'); ?>
