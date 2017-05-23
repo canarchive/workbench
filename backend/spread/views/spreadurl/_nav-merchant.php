@@ -8,8 +8,9 @@ $merchantId = $model->merchant_id;
 <?php
 $subnavString = '';
 foreach ($infos as $mId => $mInfo) {
+    if (!in_array($mInfo['status'], [1, 2, 3])) { continue; }
     $styleStr =  $mId == $merchantId ? 'style="color:#009900;"' : '';
-    $urlStr =  '?merchant_id=' . $mId . '&field_hit=' . $model->field_hit;
+    $urlStr =  '?merchant_id=' . $mId;
     $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$mInfo['name']}</a></li>";
 }
 echo $subnavString;

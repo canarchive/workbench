@@ -23,9 +23,11 @@ class SpreadurlController extends AdminController
             'channel' => Yii::$app->request->get('channel'),
             'attrs' => $this->dealParams($model->attributeParams),
         ];
+        $params['channel'] = empty($params['channel']) ? 'bd' : $params['channel'];
         $model->inputParams = $params;
         $datas = $model->createDatas();
         $datas['attrs'] = $params['attrs'];
+        $datas['model'] = $model;
 
         return $this->render('/spreadurl/listinfo', $datas);
     }

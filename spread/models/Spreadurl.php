@@ -36,7 +36,7 @@ class Spreadurl extends BaseModel
         $domainInfos = empty($this->inputParams['domainCode']) ? $domainInfos : [$domainInfos[$this->inputParams['domainCode']]];
         $templateInfos = $this->getRelatedInfos('template');
         $templateInfos = empty($this->inputParams['templateCode']) ? $templateInfos : [$templateInfos[$this->inputParams['templateCode']]];
-        $channelInfos = empty($this->inputParams['channel']) ? $this->channelInfos : [$this->inputParams['channel'] => $channeInfos[$this->inputParams['channel']]];
+        $channelInfos = $this->inputParams['channel'] == 'all' ? $this->channelInfos : [$this->inputParams['channel'] => $this->channelInfos[$this->inputParams['channel']]];
         $datas = [];
         foreach ($domainInfos as $domain) {
             foreach ($templateInfos as $template) {
@@ -95,6 +95,7 @@ class Spreadurl extends BaseModel
             'channelInfos' => $this->channelInfos,
             'merchantInfos' => $this->merchantInfos,
         ];
+        $datas['channelInfos']['all'] = '全部渠道';
         return $datas;
     }
 

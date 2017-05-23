@@ -26,9 +26,8 @@ class Template extends BaseModel
         return [
             [['code', 'name'], 'required'],
             [['merchant_id', 'status', 'have_pc', 'have_mobile'], 'default', 'value' => 0],
-            [['layout'], 'safe'],
         ];
-    }    
+    }
 
     public function attributeLabels()
     {
