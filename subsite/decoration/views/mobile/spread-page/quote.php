@@ -1,23 +1,30 @@
 <?php
-
-$cssFiles = [
-    'h5_common', 'h5_icon_font', 'swiper', 'common',
-    'icon_font', 'decoration-budget',
+use yii\helpers\Url;
+$this->params['cssFiles'] = [
+    'baojia/css/h5_common', 'baojia/css/h5_icon_font', 'baojia/css/swiper', 'baojia/css/common',
+    'baojia/css/icon_font', 'baojia/css/decoration-budget',
 ];
-$this->params['cssStr'] = $this->render('@common/views/base/_css', ['cssFiles' => $cssFiles, 'path' => 'spread/house/baojia/css/']);
+$this->params['jsFiles'] = [
+    'baojia/js/jquery-1.11.3.min',
+];
 $this->params['bodyClass'] = 'bg-f2';
 $this->params['formPosition'] = 'hd-bjnew';
 $this->params['formPositionName'] = '活动推广-报价new';
-$currentCode = '';
+$currentCode = $this->params['currentCode'];
 ?>
-<script src="<?= Yii::getAlias('@assetself'); ?>/spread/house/baojia/js/jquery-1.11.3.min"></script>
+<script>
+var isMobile = '<?= intval($this->context->isMobile); ?>';
+if (isMobile == 0) {
+    //window.location.href = "<?= Yii::getAlias(Yii::$app->params['hostAliasPc']) . Url::to(['/decoration/detail/feature', 'view' => 'sj', 'city_code' => Yii::$app->params['currentCompany']['code_short']]); ?>";
+}
+</script>
 <header class="cWhite cMdGray clearfix">
     <div class="tit_top">
         <div class="left">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/phone_logo_<?= $currentCode; ?>.png" alt="">
         </div>
         <div class="f12 text_tit">
-		<p><?php //echo $this->params['slogan']; ?></p>
+		<p><?= $this->params['slogan']; ?></p>
         </div>
     </div>
 </header>

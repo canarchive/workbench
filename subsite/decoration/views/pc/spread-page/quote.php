@@ -1,12 +1,9 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
-$cssFiles = [
-    'common/css/webcommon', 'rabbithouse/webrabbit/web/mycss/calculator',
-];
-$this->params['cssStr'] = $this->render('@common/views/base/_css', ['isSelf' => true, 'cssFiles' => $cssFiles, 'path' => '']);
 
-$currentCode = '';//$this->params['currentCode'];
+$currentCode = $this->params['currentCode'];
+$cid = !empty($this->context->cid) ? $this->context->cid : $this->params['cidDefault'];
 $signupNum = time() - strtotime(date('Y-m-d'));
 $signupNum = ceil($signupNum / 30);
 $domainCms = 'http://www.tu8zhang.com';
@@ -40,9 +37,31 @@ for ($i = 1; $i < 9; $i++) {
 }
 
 ?>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>装修报价_装修预算_装修需要多少钱_装修公司报价</title>
+    <meta name="keywords" content="装修报价_装修预算_装修需要多少钱_装修公司报价">
+    <meta name="description" content="">
+    <link rel="canonical" href="http://www.tu8zhang.com/">
+    <link rel="shortcut icon" href="<?= Yii::getAlias('@asselfurl'); ?>/rabbithouse/webrabbit/images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="<?= Yii::getAlias('@asselfurl'); ?>/common/css/webcommon.css"/>
+    <!--<link rel="stylesheet" href="<?= Yii::getAlias('@asselfurl'); ?>/rabbithouse/webrabbit/web/mycss/main.css"/>-->
+    <link rel="stylesheet" href="<?= Yii::getAlias('@asselfurl'); ?>/rabbithouse/webrabbit/web/mycss/calculator.css"/>
+<script type="text/javascript">
+window.BASE_URL = "<?= Yii::getAlias('@gallerycmsurl'); ?>";
+window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
+window.signupUrl = '<?= Yii::getAlias('@web') . '/jz-signup.html'; ?>';
+window.SPREAD_URL = '<?= Yii::getAlias('@web'); ?>';
+</script>
+
+</head>
+<body>
+<!--头部-->
 <div class="quote_header ">
     <a href="">
-        <img class="lf" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/logo/<?= $currentCode; ?>.png" alt=""/>
+        <img class="lf" src="<?= Yii::getAlias('@asselfurl'); ?>/rabbithouse/webrabbit/images/logo/<?= $currentCode; ?>.png" alt=""/>
     </a>
     <ul class="">
         <li>
@@ -65,7 +84,7 @@ for ($i = 1; $i < 9; $i++) {
 </div>
 <!--装修计算器-->
 <div class="quote_box">
-    <img class="box_img" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/bg_calc.jpg" alt=""/>
+    <img class="box_img" src="<?= Yii::getAlias('@asselfurl'); ?>/rabbithouse/webrabbit/images/bg_calc.jpg" alt=""/>
 
     <div class="qbox">
         <div class="qbox_l">
@@ -179,8 +198,8 @@ for ($i = 1; $i < 9; $i++) {
         <p><?= $this->context->icpStr; ?></p>
     </div>
 </footer>
-<script src="<?= Yii::getAlias('@assetself'); ?>/common/js/jquery-1.11.3.min.js"></script>
-<script src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/web/myjs/index.js"></script>
+<script src="<?= Yii::getAlias('@asselfurl'); ?>/common/js/jquery-1.11.3.min.js"></script>
+<script src="<?= Yii::getAlias('@asselfurl'); ?>/rabbithouse/webrabbit/web/myjs/index.js"></script>
 <script>
 
     function quoteCheck($obj) {
@@ -409,3 +428,11 @@ for ($i = 1; $i < 9; $i++) {
     });
 
 </script>
+<input type="hidden" id="cid" value="<?= $cid; ?>" />
+<input type="hidden" id="info_id" value="1" />
+<?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
+<div style="position:absolute; width:0px; height:0px; z-index:1; display:none">
+<?php $statUrl = str_replace(Yii::getAlias('@spreadurl'), '', Yii::$app->params['statUrl']); echo $statUrl; ?>
+</div>
+</body>
+</html>
