@@ -19,7 +19,7 @@ foreach ($model->getMerchantAllInfos() as $key => $info) {
     <?= $form->field($model, 'area')->textInput() ?>
     <?= $form->field($model, 'region')->textInput() ?>
     <?= $form->field($model, 'city_code')->dropDownList($model->companyInfos, ['prompt' => '']); ?>
-    <?= $form->field($model, 'channel')->dropDownList($model->signupChannelInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'channel')->dropDownList($model->channelInnerInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($merchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'notice_merchant')->dropDownList($model->noticeMerchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'notice_user')->dropDownList($model->noticeUserInfos, ['prompt' => '']); ?>

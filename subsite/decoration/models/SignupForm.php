@@ -5,7 +5,8 @@ use Yii;
 use yii\base\Model;
 use common\components\sms\Smser;
 use merchant\models\Merchant;
-use common\models\spread\Conversion;
+use common\models\statistic\Conversion;
+use common\models\QuoteHouse;
 
 class SignupForm extends Model
 {
@@ -14,7 +15,7 @@ class SignupForm extends Model
     public $name;
     public $message;
     public $position;
-    public $position_name;
+    public $note;
     public $city_input;
     public $area_input;
     public $isMobile;
@@ -34,7 +35,7 @@ class SignupForm extends Model
             [['mobile'], 'required'],
             ['mobile', 'common\validators\MobileValidator'],
             //[['city_input', 'area_input'], 'default', 'value' => ''],
-            [['cid', 'city_input', 'area_input', 'message', 'position', 'position_name'], 'safe'],
+            [['cid', 'city_input', 'area_input', 'message', 'position', 'note'], 'safe'],
         ];
     }
 
@@ -56,7 +57,7 @@ class SignupForm extends Model
             'name' => strip_tags($this->name),
             'client_type' => $this->isMobile ? 'h5' : 'pc',
         ];
-        $note = strip_tags($this->position_name);
+        $note = strip_tags($this->note);
         $data = array_merge($dataBase, [
             'city_input' => empty(strip_tags($this->city_input)) ? '' : strip_tags($this->city_input),
             'area_input' => empty(strip_tags($this->area_input)) ? 0 : strip_tags($this->area_input),
@@ -74,17 +75,10 @@ class SignupForm extends Model
             $this->existOwner = true;
             return false;
         }
-		$this->merchantInfo = Merchant::findOne($dataBase['merchant_id']);
-
-        $userModel = new User();
-        $userInfo = $userModel->addOwner($data);
-        if (!$userInfo) {
-            $this->addError('mobile', '报名失败，请您重新报名');
-            return false;
-        }
 
         $conversionModel = new Conversion();
         $conversionInfo = $conversionModel->successLog($dataBase);
+        $data['conversion_id'] = $conversionInfo['id'];
         if ($this->area_input > 20 && $this->area_input < 500) {
             $rateDatas = [
                 '677' => '2.7',
@@ -95,6 +89,14 @@ class SignupForm extends Model
             
             $this->quoteInfo = $this->_getQuoteInfo($this->area_input, $priceRate);
         }
+
+        $userModel = new User();
+        $userInfo = $userModel->addUser($data);
+        if (!$userInfo) {
+            $this->addError('mobile', '报名失败，请您重新报名');
+            return false;
+        }
+		$this->merchantInfo = $userInfo->merchantInfo;
 
         $serviceModel = $userInfo->dealService($data);
         $userInfo->updateAfterInsert($conversionInfo);
@@ -156,7 +158,7 @@ class SignupForm extends Model
 
     public function _getQuoteInfo($area, $priceRate = 2)
     {
-        $quote = new Quote(); 
+        $quote = new QuoteHouse(); 
         $info = $quote->getResult($area, $priceRate);
         return $info;
     }

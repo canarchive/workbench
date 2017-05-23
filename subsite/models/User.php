@@ -7,6 +7,7 @@ use yii\helpers\ArrayHelper;
 use common\components\sms\Smser;
 use common\models\SubsiteModel;
 use common\models\Company;
+use common\models\statistic\Conversion;
 
 class User extends SubsiteModel
 {
@@ -22,9 +23,19 @@ class User extends SubsiteModel
         return '{{%user}}';
     }
 
+    public function behaviors()
+    {
+        $behaviors = [
+            $this->timestampBehaviorComponent,
+        ];
+        return $behaviors;
+    }
+
     public function attributeLabels()
     {
-        return [
+        $cModel = new Conversion();
+        $conversionAttributes = $cModel->attributeLabels();
+        return array_merge($conversionAttributes, [
             'id' => 'ID',
             'conversion_id' => '转化ID',
             'channel' => '报名渠道',
@@ -46,43 +57,49 @@ class User extends SubsiteModel
 
             'notice_merchant' => '是否短信通知商家',
             'notice_user' => '是否短信通知业主',
-        ];
+        ]);
     }
 
-    public function addOwner($data, $serviceId = null)
+    public function addUser($data, $serviceId = null)
     {
         $serviceInfo = !is_null($serviceId) ? $this->getServiceModel()->findOne($serviceId) : null;
         $serviceInfo = empty($serviceInfo) ? $this->getServiceModel()->getDispatchService(['merchant_id' => $data['merchant_id']]) : $serviceInfo;
 
-        $ip = Yii::$app->getRequest()->getIP();
-        $city = \common\components\IP::find($ip);
-        $city = is_array($city) ? implode('-', $city) : $city;
         $time = Yii::$app->params['currentTime'];
-        $data = array_merge($data, [
-            'signup_at' => $time,
-            'created_at' => $time,
-            'created_month' => date('Ym', $time),
-            'created_day' => date('Ymd', $time),
-            'created_hour' => date('H', $time),
-            'created_week' => date('W', $time),
-            'created_weekday' => date('N', $time),
-            'signup_num' => 1,
-            'signup_ip' => $ip,
-            'signup_city' => $city,
-            'service_id' => empty($serviceInfo) ? 1 : $serviceInfo->id,
-        ]);
+        $data['service_id'] = empty($serviceInfo) ? 1 : $serviceInfo->id;
+        $data = $this->_formatData($data);
 
         $newModel = $this->_newModel('user', true, $data);
-        $insert = $newModel->insert(true, $data);
-        if (!$insert) {
-            return false;
-        }
+        $newModel->save();
         $newModel->serviceInfo = $serviceInfo;
 
         return $newModel;
     }
 
-    public function insert($runValidation = true, $attributes = null)
+    public function _getDatasForFormat()
+    {
+        $datas = [
+            'conversion_id' => ['default' => 0],
+            'channel' => ['default' => ''],
+            'city_code' => ['default' => ''],
+            'merchant_id' => ['default' => 0],
+            'mobile' => ['default' => ''],
+            'name' => ['default' => ''],
+            'message' => ['default' => ''],
+            'service_id' => ['default' => 0],
+            'service_num' => ['default' => 0],
+            'status' => ['default' => ''],
+            'status_invalid' => ['default' => ''],
+            'status_input' => ['default' => ''],
+            'callback_again' => ['default' => 0],
+            'view_at' => ['default' => 0],
+            'view_at' => ['default' => Yii::$app->params['currentTime']],
+        ];
+
+        return $datas;
+    }
+
+    /*public function insert($runValidation = true, $attributes = null)
     {
         if (($primaryKeys = $this->getDb()->schema->insert($this->tableName(), $attributes)) === false) {
             return false;
@@ -96,7 +113,7 @@ class User extends SubsiteModel
         $changedAttributes = array_fill_keys(array_keys($values), null);
         $this->setOldAttributes($values);
         return true;
-    }        
+    }*/        
 
     public function updateAfterInsert($cInfo)
     {
@@ -105,11 +122,11 @@ class User extends SubsiteModel
             $this->merchant_id = isset($cInfo['merchant_id']) ? $cInfo['merchant_id'] : 0;
         }
             $this->channel = isset($cInfo['channel']) ? $cInfo['channel'] : '';
-            $this->keyword = isset($cInfo['keyword']) ? $cInfo['keyword'] : '';
-            $this->keyword_search = isset($cInfo['keyword_search']) ? $cInfo['keyword_search'] : '';
-            $this->sem_account = isset($cInfo['sem_account']) ? $cInfo['sem_account'] : '';
-            $this->plan_id = isset($cInfo['plan_id']) ? $cInfo['plan_id'] : 0;
-            $this->unit_id = isset($cInfo['unit_id']) ? $cInfo['unit_id'] : 0;
+            //$this->keyword = isset($cInfo['keyword']) ? $cInfo['keyword'] : '';
+            //$this->keyword_search = isset($cInfo['keyword_search']) ? $cInfo['keyword_search'] : '';
+            //$this->sem_account = isset($cInfo['sem_account']) ? $cInfo['sem_account'] : '';
+            //$this->plan_id = isset($cInfo['plan_id']) ? $cInfo['plan_id'] : 0;
+            //$this->unit_id = isset($cInfo['unit_id']) ? $cInfo['unit_id'] : 0;
             
             $this->city_code = isset($cInfo['city_code']) ? $cInfo['city_code'] : strval($this->city_code);
         //}
@@ -150,9 +167,8 @@ class User extends SubsiteModel
         ];
 
         $conversion = $this->conversionSuccessLog($data);
-        var_dump($conversion);exit();
         //$serviceId = $this->service_id ? $this->service_id : null;
-        $decorationOwner = $this->addOwner($data);
+        $decorationOwner = $this->addUser($data);
 
         if (!empty($this->merchant_id)) {
             $this->_sendSms($data, $decorationOwner->serviceInfo);
@@ -349,17 +365,6 @@ class User extends SubsiteModel
         return $datas;
     }
 
-    public function getSignupChannelInfos()
-    {
-        $datas = [
-            'semthird' => '第三方SEM',
-            'semspider' => 'SEM抓取',
-			'phone400' => '400电话',
-			'hotline' => '网络直拨',
-        ];
-        return $datas;
-    }
-
     protected function getCompanyInfos()
     {
         $infos = ArrayHelper::map(Company::find()->select('code, name')->where(['status' => 2])->all(), 'code', 'name');
@@ -382,5 +387,15 @@ class User extends SubsiteModel
             '1' => '通知',
         ];
         return $datas;
+    }
+
+    public function getConversionInfo()
+    {
+        $info = [];
+        if (empty($this->conversion_id)) {
+            return $info;
+        }
+        $info = Conversion::findOne($this->conversion_id);
+        return $info;
     }
 }

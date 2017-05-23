@@ -14,31 +14,55 @@ $tableName = 'user';
                 </div>
             </div>
             <div class="box-content">
+                <?php if (!empty($model->conversionInfo)) { $cModel = $model->conversionInfo; ?>
+                <table class="table table-striped table-bordered responsive">
+                    <thead>
+                    <tr>
+                        <th><?= $cModel->getAttributeLabel('sort'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('merchant_id'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('city_code'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('client_type'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('channel'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('sem_account'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('keyword'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('keyword_search'); ?></th>
+                        <th><?= $cModel->getAttributeLabel('note'); ?></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><?= $cModel->sort; ?></td>
+                        <td><?php $merchantName = isset($model->merchantInfo) ? $model->merchantInfo['name'] : $model->merchant_id; if ($model->merchant_id == 3) { echo "<b style='font:oblique small-caps 900 29pt 黑体;'>{$merchantName}</b>"; } else { echo $merchantName; } ?></td>
+                        <td><?= $cModel->city_code; ?></td>
+                        <td><?= $cModel->client_type; ?></td>
+                        <td><?= $cModel->channel; ?></td>
+                        <td><?= $cModel->sem_account; ?></td>
+                        <td><?= $cModel->keyword; ?></td>
+                        <td><?= $cModel->keyword_search; ?></td>
+                        <td><?= $cModel->note; ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <?php } ?>
                 <table class="table table-striped table-bordered responsive">
                     <thead>
                     <tr>
                         <th><?= $model->getAttributeLabel('mobile'); ?></th>
-                        <th><?= $model->getAttributeLabel('merchant_id'); ?></th>
                         <th><?= $model->getAttributeLabel('name'); ?></th>
                         <th><?= $model->getAttributeLabel('signup_at'); ?></th>
-                        <th><?= $model->getAttributeLabel('signup_city'); ?></th>
-                        <th><?= $model->getAttributeLabel('channel'); ?></th>
-                        <th><?= $model->getAttributeLabel('area_input'); ?></th>
-                        <th><?= $model->getAttributeLabel('city_input'); ?></th>
                         <th><?= $model->getAttributeLabel('signup_num'); ?></th>
+                        <th><?= $model->getAttributeLabel('created_at'); ?></th>
+                        <th><?= $model->getAttributeLabel('message'); ?></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td><?= $model->mobile; ?></td>
-                        <td><?php $merchantName = isset($model->merchantInfos[$model->merchant_id]) ? $model->merchantInfos[$model->merchant_id] : $model->merchant_id; if ($model->merchant_id == 3) { echo "<b style='font:oblique small-caps 900 29pt 黑体;'>{$merchantName}</b>"; } else { echo $merchantName; } ?></td>
                         <td><input type="text" name="name" value="<?= $model->name; ?>" onchange="updateElemForUser('<?= $tableName; ?>', <?= $model->id; ?>, 'name', this.value);"/></td>
                         <td><?= date('Y-m-d H:i:s', $model->signup_at); ?></td>
-                        <td><?= $model->signup_city; ?></td>
-                        <td><?= $model->channel; ?></td>
-                        <td><?= $model->area_input; ?></td>
-                        <td><?= $model->city_input; ?></td>
                         <td><?= $model->signup_num; ?></td>
+                        <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
+                        <td><?= $model->message; ?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -46,13 +70,8 @@ $tableName = 'user';
                     <thead>
                     <tr>
                         <th><?= $model->getAttributeLabel('status'); ?></th>
-                        <th><?= $model->getAttributeLabel('out_status'); ?></th>
-                        <th><?= $model->getAttributeLabel('invalid_status'); ?></th>
+                        <th><?= $model->getAttributeLabel('status_invalid'); ?></th>
                         <th><?= $model->getAttributeLabel('callback_again'); ?></th>
-                        <th><?= $model->getAttributeLabel('keyword'); ?></th>
-                        <th><?= $model->getAttributeLabel('keyword_search'); ?></th>
-                        <th><?= $model->getAttributeLabel('note'); ?></th>
-                        <th><?= $model->getAttributeLabel('message'); ?></th>
                         <th>指派其他商家</th>
                     </tr>
                     </thead>
@@ -72,25 +91,13 @@ $tableName = 'user';
                         </td>
                         <td>
                         <?= Html::dropDownList(
-                            "out_status",
-                            $model->out_status,
-                            $model->outStatusInfos,
-                            [
-                                'prompt' => '全部',
-                                'class' => 'form-control',
-                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'out_status', this.value)",
-                            ]
-                        ); ?>
-                        </td>
-                        <td>
-                        <?= Html::dropDownList(
-                            "invalid_status",
-                            $model->invalid_status,
+                            "status_invalid",
+                            $model->status_invalid,
                             $model->invalidStatusInfos,
                             [
                                 'prompt' => '全部',
                                 'class' => 'form-control',
-                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'invalid_status', this.value)",
+                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'status_invalid', this.value)",
                             ]
                         ); ?>
                         </td>
@@ -104,10 +111,6 @@ $tableName = 'user';
                         });
                     </script>
                         </td>
-                        <td><?= $model->keyword; ?></td>
-                        <td><?= $model->keyword_search; ?></td>
-                        <td><?= $model->note; ?></td>
-                        <td><?= $model->message; ?></td>
                         <td><?= "<a href='/subsite/decoration/user/change-merchant.html?id={$model->id}'>指派其他商家</a>"; ?></td>
                     </tr>
                     </tbody>
