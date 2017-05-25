@@ -39,6 +39,7 @@ trait QuoteTrait
             $hardbackFull = round($priceFull * 2.0242, 2);
             $hardbackPart = round($hardbackFull / 1.992, 2);
             $sql .= "UPDATE `wc_quote_bak` SET `price_full` = $priceFull, `price_part` = $pricePart, `hardback_full` = $hardbackFull, `hardback_part` = $hardbackPart WHERE `area_real` = $area; <br />";
+			break;
         }
         echo $sql;
 

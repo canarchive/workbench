@@ -5,19 +5,30 @@ namespace console\gallerycms\controllers;
 use Yii;
 use yii\console\Controller;
 use gallerycms\merchant\models\Merchant;
+use gallerycms\merchant\models\QuoteUpdate;
 use common\models\Company;
 
 class MerchantController extends Controller
 {
+	public function actionQuote()
+	{
+		$model = new QuoteUpdate();
+        $cInfos = $this->getCompanyInfos(['status' => [1, 2, 99]]);
+		foreach ($cInfos as $cInfo) {
+			$cityCode = $cInfo['code'];
+			$model->quoteUpdate($cityCode);
+		}
+	}
+
     public function actionMerchant()
     {
-        $cInfos = $this->getCompanyInfos();
+        $cInfos = $this->getCompanyInfos(['status' => [1]]);
         $cityCodes = array_keys($cInfos);
         $cityCode = $cityCodes[array_rand($cityCodes)];
         $model = new Merchant();
         $where = ['status' => 0, 'city_code' => $cityCode];
         $info = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->one();
-        $info = $model->find()->where($where)->offset(0)->one();
+        //$info = $model->find()->where($where)->offset(0)->one();
         if (empty($info)) {
             return ;
         }
@@ -25,7 +36,7 @@ class MerchantController extends Controller
         $info->status = 1;
         $info->update(false);
         $info->addRelateInfos();
-        var_dump($info);
+        //var_dump($info);exit();
     }
 
     public function actionUpdateInfo()
@@ -46,10 +57,10 @@ class MerchantController extends Controller
         }
     }
 
-    protected function getCompanyInfos()
+    protected function getCompanyInfos($where)
     {
         $company = new Company();
-        $datas = $company->getInfos(['status' => [2]]);
+        $datas = $company->getInfos($where);
         return $datas;
     }
 }

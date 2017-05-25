@@ -185,6 +185,9 @@ class Owner extends MerchantModel
 
 		$dModel = new Designer();
 		$infos = $dModel->find()->indexBy('id')->where(['merchant_id' => $this->merchant_id])->all();
+		if (empty($infos)) {
+			return [];
+		}
         $ids = array_keys($infos);
         $index = array_rand($ids);
         $dInfo = $infos[$ids[$index]];
