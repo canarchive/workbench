@@ -5,7 +5,7 @@ namespace console\gallerycms\controllers;
 use Yii;
 use yii\console\Controller;
 use gallerycms\merchant\models\Merchant;
-use gallerycms\merchant\models\QuoteUpdate;
+use gallerycms\house\models\QuoteUpdate;
 use common\models\Company;
 
 class MerchantController extends Controller

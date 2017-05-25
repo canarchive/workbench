@@ -27,10 +27,10 @@ class QuoteUpdate extends Quote
     protected function dataBase($cityCode)
     {
         $sInfos = array_keys($this->styleInfos);
-        $sIndex = rand(0, count($sInfos));
+        $sIndex = rand(0, count($sInfos) - 1);
         $sKey = $sInfos[$sIndex];
         $hInfos = array_keys($this->houseTypeInfos);
-        $hIndex = rand(0, count($hInfos));
+        $hIndex = rand(0, count($hInfos) - 1);
         $hKey = $sInfos[$sIndex];
 
         $cModel = new CommunityBase();
