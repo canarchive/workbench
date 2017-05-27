@@ -12,7 +12,7 @@ Trait UserTrait
     public function rules()
     {
         return [
-            [['merchant_id', 'mobile', 'city_input', 'city_code', 'status', 'invalid_status', 'keyword', 'created_at_start', 'created_at_end',], 'safe'],
+            [['merchant_id', 'mobile', 'city_code', 'status', 'status_invalid', 'created_at_start', 'created_at_end',], 'safe'],
         ];
     }
 
@@ -24,11 +24,6 @@ Trait UserTrait
 
         if ($this->load($params, '') && !$this->validate()) {
             return $dataProvider;
-        }
-
-        if (!empty($this->keyword)) {
-            $query->orFilterWhere(['like', 'keyword', $this->keyword]);
-            //$query->orFilterWhere(['like', 'message', $this->keyword]);
         }
 
         $query->andFilterWhere(['like', 'mobile', $this->mobile]);
@@ -44,9 +39,9 @@ Trait UserTrait
             //'service_id' => $this->service_id,
             'merchant_id' => $this->merchant_id,
             'city_code' => $this->city_code,
-            'city_input' => $this->city_input,
+            //'city_input' => $this->city_input,
             //'status' => $this->status,
-            'invalid_status' => $this->invalid_status,
+            'status_invalid' => $this->status_invalid,
         ]);
 		if ($this->status !== null) {
 			$query->andWhere(['status' => $this->status]);

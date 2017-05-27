@@ -1,3 +1,6 @@
+ALTER TABLE `wm_merchant` ADD `code` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '代码' AFTER `id`;
+
+
 ALTER TABLE `wd_user`
   DROP `sem_account`,
   DROP `client_type`,

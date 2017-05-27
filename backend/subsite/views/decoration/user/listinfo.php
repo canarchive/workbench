@@ -7,8 +7,14 @@ $columnsBase = [
             return isset($model->merchantInfo['name']) ? $model->merchantInfo['name'] : $model->merchant_id;
         },
     ],
-	'client_type',
-    'city_code',
+	//'client_type',
+    [
+        'attribute' => 'city_code',
+        'value' => function($model) {
+            $city_code = empty($model->conversionInfo) ? '' : $model->conversionInfo['city_code'];
+            return $city_code;
+        } 
+    ],
     'name',
     [
         'attribute' => 'mobile',
@@ -29,43 +35,31 @@ $columnsBase = [
             return  date('Y-m-d H:i:s',$model->signup_at);
         },
     ],
-	'area_input',
-	'city_input',
-    'signup_city',
-    /*[
+    [
+        'attribute' => 'city',
+        'value' => function($model) {
+            $city = empty($model->conversionInfo) ? '' : $model->conversionInfo['city'];
+            return $city;
+        } 
+    ],
+];
+$columnsExts = [
+    'follow-plan' => [
+    [
         'attribute' => 'callback_again',
         'value' => function($model) {
             return  date('Y-m-d H:i:s',$model->callback_again);
         }
-    ],*/
-];
-$columnsExts = [
-    '' => [
-        //'message',
-        'keyword',
-        'keyword_search',
-        'note',
     ],
-    'follow' => [
     ],
-    'follow-plan' => [
-    ],
-    'valid-dispatch' => [
-    ],
-	'valid-part' => [
-	],
     'bad' => [
         [
-            'attribute' => 'invalid_status',
+            'attribute' => 'status_invalid',
             'value' => function($model) {
-                $value = isset($model->invalidStatusInfos[$model->invalid_status]) ? $model->invalidStatusInfos[$model->invalid_status] : $model->invalid_status;
+                $value = isset($model->invalidStatusInfos[$model->status_invalid]) ? $model->invalidStatusInfos[$model->status_invalid] : $model->status_invalid;
                 return $value;
             },
         ],
-    ],
-    'valid-out' => [
-    ],
-    'valid' => [
     ],
     'other' => [
     [
@@ -78,11 +72,12 @@ $columnsExts = [
     ]
 ];
 $extKey = is_null($searchModel->status) ? 'other' : $searchModel->status;
-$columns = array_merge($columnsBase, $columnsExts[$extKey]);
+$cExt = isset($columnsExts[$extKey]) ? $columnsExts[$extKey] : [];
+$columns = array_merge($columnsBase, $cExt);
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
+    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
 echo $this->render('_nav-status', ['model' => $searchModel]);

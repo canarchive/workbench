@@ -8,10 +8,5 @@ $cid = empty($cid) && isset($this->params['cidDefault']) ? $this->params['cidDef
 ?>
 <?php $this->beginContent('@subsite/views/main.php'); ?>
 <?= $content; ?>
-<input type="hidden" id="cid" value="<?= $cid; ?>" />
-<div style="position:absolute; width:0px; height:0px; z-index:1; display:none">
-<?php $statUrl = str_replace(Yii::getAlias('@spreadurl'), '', Yii::$app->params['statUrl']); echo $statUrl; ?>
-</div>
-<?php if (isset($this->params['bodyStr'])) { echo $this->params['bodyStr']; } ?>
 <?= $this->render('@subsite/decoration/views/_stat', []); // 顶部 ?>
 <?php $this->endContent(); ?>

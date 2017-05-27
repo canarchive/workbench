@@ -177,4 +177,10 @@ class SignupForm extends Model
         
         return true;
     }
+
+    public function getMerchantInfo($id)
+    {
+        $info = Merchant::findOne($id);
+        return $info;
+    }
 }

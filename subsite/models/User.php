@@ -93,7 +93,7 @@ class User extends SubsiteModel
             'status_input' => ['default' => ''],
             'callback_again' => ['default' => 0],
             'view_at' => ['default' => 0],
-            'view_at' => ['default' => Yii::$app->params['currentTime']],
+            'signup_at' => ['default' => Yii::$app->params['currentTime']],
         ];
 
         return $datas;
