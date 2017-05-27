@@ -15,6 +15,11 @@ class Controller extends YiiController
     public $pagePosition = 'default';
     public $pagePositionName = 'default';
 
+    public $siteCode;
+    public $currentSiteInfo;
+    public $currentPage;
+    public $currentElem;
+
     /**
      * @inheritdoc
      */
@@ -49,6 +54,7 @@ class Controller extends YiiController
 
         $this->isMobile = $this->clientIsMobile();
         $this->initClientType();
+        $this->initSiteInfo();
         $this->module->viewPath .= is_null($this->clientType) ? '' : ($this->clientType == 'mobile' ? '/mobile' : '/pc');
     }
 
@@ -56,6 +62,41 @@ class Controller extends YiiController
     {
         return null;
     }
+
+	protected function initSiteInfo()
+	{
+		if (empty($this->siteInfos)) {
+			return ;
+		}
+        foreach ($this->siteInfos as $siteCode => $info) {
+			if (!empty($this->siteCode)) {
+				break;
+			}
+			if (!isset($info['domains'])) {
+				continue;
+			}
+			foreach ($info['domains'] as $clientType => $domain) {
+                if ($domain == $this->host) {
+                    $this->clientType = $clientType == 'pc' ? 'pc' : 'mobile';
+                    $this->siteCode = $siteCode;
+					break;
+				}
+            }
+        }
+		if (!isset($this->siteInfos[$this->siteCode])) {
+			return ;
+		}
+
+        $this->currentSiteInfo = $this->siteInfos[$this->siteCode];
+		$this->pcMappingUrl = $this->currentSiteInfo['domains']['pc'] . $this->clientUrl;
+		$this->mobileMappingUrl = $this->currentSiteInfo['domains']['mobile'] . $this->clientUrl;
+		return ;
+	}
+
+	protected function getSiteInfos()
+	{
+		return [];
+	}
 
     /**
      * 获取当前客户端类型；目前只区分PC、移动端
