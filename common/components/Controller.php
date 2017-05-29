@@ -53,14 +53,8 @@ class Controller extends YiiController
         }
 
         $this->isMobile = $this->clientIsMobile();
-        $this->initClientType();
         $this->initSiteInfo();
         $this->module->viewPath .= is_null($this->clientType) ? '' : ($this->clientType == 'mobile' ? '/mobile' : '/pc');
-    }
-
-    protected function initClientType()
-    {
-        return null;
     }
 
 	protected function initSiteInfo()
@@ -77,7 +71,7 @@ class Controller extends YiiController
 			}
 			foreach ($info['domains'] as $clientType => $domain) {
                 if ($domain == $this->host) {
-                    $this->clientType = $clientType == 'pc' ? 'pc' : 'mobile';
+                    $this->clientType = empty($clientType) ? null : ($clientType == 'pc' ? 'pc' : 'mobile');
                     $this->siteCode = $siteCode;
 					break;
 				}
@@ -88,6 +82,9 @@ class Controller extends YiiController
 		}
 
         $this->currentSiteInfo = $this->siteInfos[$this->siteCode];
+		if (is_null($this->clientType)) {
+			return ;
+		}
 		$this->pcMappingUrl = $this->currentSiteInfo['domains']['pc'] . $this->clientUrl;
 		$this->mobileMappingUrl = $this->currentSiteInfo['domains']['mobile'] . $this->clientUrl;
 		return ;
