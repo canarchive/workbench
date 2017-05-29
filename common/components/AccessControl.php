@@ -69,6 +69,7 @@ class AccessControl extends \yii\base\ActionFilter
         $controller = $action->controller;
         $this->identity = $this->user->getIdentity();
         if ($this->_checkStatus('lock')) {
+			echo 'sss';exit();
             throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
         }
 
@@ -93,6 +94,7 @@ class AccessControl extends \yii\base\ActionFilter
 
     protected function _checkCurrentMenu($action)
     {
+		echo 'ssso';exit();
         throw new ForbiddenHttpException(Yii::t('yii', 'error'));
     }
 }
