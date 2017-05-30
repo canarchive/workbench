@@ -1,19 +1,19 @@
 <?php
-namespace merchant\controllers\admin;
+namespace merchant\decoration\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
 use backend\models\LoginForm;
 use merchant\components\AdminController;
 
-class SiteController extends AdminController
+class EntranceController extends AdminController
 {
     public function actionIndex()
     {
         return $this->render('index');
     }
 
-    public function actionLogin()
+    public function actionSignin()
     {
         $this->layout = false;
         if (!Yii::$app->user->isGuest) {
@@ -29,7 +29,7 @@ class SiteController extends AdminController
             $identity->update(false);
             return $this->goBack();
         } else {
-            return $this->render('login', [
+            return $this->render('signin', [
                 'model' => $model,
             ]);
         }

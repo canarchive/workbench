@@ -1,14 +1,9 @@
 <?php
-/*    ['pattern' => Yii::getAlias('@merchanturl') . '/', 'route' => '/site/index', 'suffix' => ''],
-    '/sp-<code:\w+>' => '/product/index',
-    'signin' => '/site/signin',
-    'signup' => '/site/signup',
-    'logout' => '/site/logout',
-
+/*
     '/admin' => '/admin/site/index',
     'userlist' => '/user/index',
 	'/report-<type:\w+>' => '/statistic/index',*/
-$ruleInfos = [
+return [
     'index' => [
         'data' => [
 			'suffix' => '',
@@ -24,8 +19,8 @@ $ruleInfos = [
     ],
     'user-operation' => [
         'data' => [
-			'pattern' => '/<operation:(signin|siginup|logout)>',
-    		'route'	=> '/{{SORT}}/site/<action>',
+			'pattern' => '/<action:(signin|siginup|logout)>',
+    		'route'	=> '/{{SORT}}/entrance/<action>',
         ],
     ],
     'sitemap' => [
@@ -33,6 +28,12 @@ $ruleInfos = [
             'suffix' => '.xml',
             'pattern' => '/sitemap',
             'route' => '/{{SORT}}/sitemap/index', 
+        ],
+    ],
+    'admin' => [
+        'data' => [
+            'pattern' => '/<controller>/<action>',
+            'route' => '/{{SORT}}/admin/<controller>/<action>', 
         ],
     ],
 ];

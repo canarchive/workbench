@@ -7,8 +7,10 @@ $params = array_merge(
 );
 
 $routeRules = array_merge(
-	require(__DIR__ . '/shoot/rule.php'),
-	require(__DIR__ . '/flower/rule.php')
+	require(__DIR__ . '/decoration/rule.php')
+	//require(__DIR__ . '/merchant/rule.php'),
+	//require(__DIR__ . '/salesys/rule.php')
+	//require(__DIR__ . '/flower/rule.php')
 );
 //print_r($routeRules);exit();
 
@@ -42,13 +44,19 @@ return [
         ],
     ],
 
+    'modules' => [
+        'decoration' => [
+            'class' => 'merchant\decoration\Module',
+        ],
+    ],
+
     'as access' => [
         'class' => 'merchant\components\AccessControl',
         'allowActions' => [
             //'info/*',
             //'owner/*',
             'api/*',
-            'site/*',
+            'decoration/entrance/*',
             'merchant-upload/*',
             'site/error',
             //'admin/site/index',
