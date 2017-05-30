@@ -4,6 +4,7 @@ namespace common\models;
 
 trait TraitAttachment
 {
+	public $attachmentCode = 'attachment';
     /**
      * 附件类型的字段信息更新时，是否删除旧的附件，默认删除
      */
@@ -11,7 +12,7 @@ trait TraitAttachment
 
     public function getAttachmentImg($id, $pointSize = true, $options = [])
     {
-        $model = $this->_newModel('attachment');
+        $model = $this->_newModel($this->attachmentCode);
         $info = $model->findOne($id);
         if ($info) {
             $info->getUrl();
@@ -27,7 +28,7 @@ trait TraitAttachment
 
     public function getAttachmentUrl($id)
     {
-        $model = $this->_newModel('attachment');
+        $model = $this->_newModel($this->attachmentCode);
         //$model = $this->getAttachmentModel();
         $info = $model->findOne($id);
         return empty($info) ? '' : $info->getUrl();
@@ -38,7 +39,7 @@ trait TraitAttachment
 
     protected function _updateSingleAttachment($table, $fields, $extData = [])
     {
-        $attachment = $this->_newModel('attachment');
+        $attachment = $this->_newModel($this->attachmentCode);
         foreach ($fields as $field) {
             $attachment->updateInfo($this->$field, $this->id, $extData);
 
@@ -51,7 +52,7 @@ trait TraitAttachment
 
     protected function _updateMulAttachment($table, $field, $extData = [])
     {
-        $attachment = $this->_newModel('attachment');
+        $attachment = $this->_newModel($this->attachmentCode);
         $ids = array_filter(explode(',', $this->$field));
         foreach ($ids as $id) {
             $attachment->updateInfo($id, $this->id, $extData);

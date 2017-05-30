@@ -6,7 +6,7 @@ $cssStr = isset($this->params['cssStr']) ? $this->params['cssStr'] : '';
 $jsStr = isset($this->params['jsStr']) ? $this->params['jsStr'] : '';
 $jsFooterStr = isset($this->params['jsFooterStr']) ? $this->params['jsFooterStr'] : '';
 $statCodeStr = isset($this->params['statCodeStr']) ? $this->params['statCodeStr'] : '';
-$doctypeStr = isset($this->params['doctypeStr']) ? $this->params['doctypeStr'] : '';
+$doctypeStr = isset($this->params['doctypeStr']) ? $this->params['doctypeStr'] : 'html';
 ?>
 <!DOCTYPE <?= $doctypeStr; ?>>
 <html lang="zh-cn">

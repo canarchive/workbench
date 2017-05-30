@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
 use common\components\Pagination;
@@ -254,5 +255,13 @@ class BaseModel extends ActiveRecord
     protected function _getDatasForFormat()
     {
         return [];
+    }    
+
+    public function search($params)
+    {
+        $query = self::find();
+        $dataProvider = new ActiveDataProvider(['query' => $query]);
+
+        return $dataProvider;
     }
 }
