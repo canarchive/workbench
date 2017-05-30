@@ -10,7 +10,6 @@ $doctypeStr = isset($this->params['doctypeStr']) ? $this->params['doctypeStr'] :
 ?>
 <!DOCTYPE <?= $doctypeStr; ?>>
 <html lang="zh-cn">
-
 <head>
 <?= $this->render('_meta'); ?>
 <?= $this->render('_tdk'); ?>
