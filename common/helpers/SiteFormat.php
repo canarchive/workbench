@@ -18,12 +18,11 @@ class SiteFormat
 		}
 
 		foreach ($datas as $code => & $data) {
-			if (!isset($data['domains']) || !is_array($data['domains'])) {
-				$data['domains'] = ['' => Yii::getAlias("@pc.{$code}.{$sort}url")];
-				continue;
-			}
-			foreach ($data['domains'] as $clientType) {
-			    $data[$clientType] = Yii::getAlias("@{$clientType}.{$code}.{$sort}url");
+			$domains = isset($data['domains']) ? (array) $data['domains'] : ['' => null];
+			unset($data['domains']);
+			foreach ($domains as $key => $clientType) {
+				$aliasPre = in_array($clientType, ['', 'pc']) ? '' : $clientType . '.';
+			    $data['domains'][$clientType] = Yii::getAlias("@{$aliasPre}{$code}.{$sort}url");
 			};
 		}
 		$infos[$sort] = $datas;
