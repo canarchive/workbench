@@ -6,6 +6,12 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
+$routeRules = array_merge(
+	require(__DIR__ . '/shoot/rule.php'),
+	require(__DIR__ . '/flower/rule.php')
+);
+//print_r($routeRules);exit();
+
 return [
     'id' => 'app-merchant',
     'basePath' => dirname(__DIR__),
@@ -29,13 +35,10 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            //'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'enableStrictParsing' => false,
-            'showScriptName' => false,
-            'rules' => require(__DIR__ . '/rules.php'),
+            'rules' => $routeRules,
         ],
     ],
 
