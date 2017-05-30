@@ -1,6 +1,6 @@
 <?php
 
-namespace spread\models\statistic;
+namespace common\models\statistic;
 
 class ReportService extends AbstractStatistic
 {

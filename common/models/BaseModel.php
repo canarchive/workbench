@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
 use common\components\Pagination;
@@ -13,6 +14,7 @@ class BaseModel extends ActiveRecord
     use TraitAttachment;
     use TraitLevel;
     use TraitPHPExcel;
+    use TraitStatistic;
 
     protected function getTimestampBehaviorComponent($createField = 'created_at', $updateField = 'updated_at')
     {
@@ -240,27 +242,26 @@ class BaseModel extends ActiveRecord
         return $infos;
     }
 
-    public function getClientTypeInfos()
+    protected function _formatData($data)
     {
-        $datas = [
-            '' => '全部',
-            'pc' => 'PC端',
-            'h5' => '移动端',
-        ];
-        return $datas;
+        $fields = $this->_getDatasForFormat();
+        $infos = [];
+        foreach ($fields as $field => $fInfo) {
+            $infos[$field] = isset($data[$field]) ? $data[$field] : $fInfo['default'];
+        }
+        return $infos;
     }
 
-    public function getChannelInfos()
+    protected function _getDatasForFormat()
     {
-        $datas = [
-            'bd' => '百度',
-            'bdxxl' => '百度信息流',
-            'sg' => '搜狗',
-            '360' => '360',
-			'zht' => '智慧推',
-            'gdt' => '广点通',
-            //'sm' => '神马',
-        ];
-        return $datas;
+        return [];
     }    
+
+    public function search($params)
+    {
+        $query = self::find();
+        $dataProvider = new ActiveDataProvider(['query' => $query]);
+
+        return $dataProvider;
+    }
 }

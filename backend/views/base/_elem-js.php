@@ -7,6 +7,35 @@ use yii\helpers\Json;
 <?php } ?>
 <script language="javascript">
 $(document).ready(function(){
+    //提示成功信息
+    ShowSuccessMessage = function(message, life) {
+        var time = 5000;
+        if (!life) {
+            time = life;
+        }
+
+        if ($("#tip_message").text().length > 0) {
+            var msg = "<span>" + message + "</span>";
+            $("#tip_message").empty().append(msg);
+        } else {
+            var msg = "<div id='tip_message'><span>" + message + "</span>";
+            $("body").append(msg);
+        }
+
+        $("#tip_message").fadeIn(time);
+        setTimeout($("#tip_message").fadeOut(time), time);
+    };
+
+    //提示错误信息
+    ShowErrorMessage = function(message, life) {
+        ShowSuccessMessage(message, life);
+        $("#tip_message span").addClass("error");
+    };
+
+    //ShowSuccessMessage("Hello success!", 5000); // 第二个参数life是指消息显示时间
+    //ShowErrorMessage("Hello error!", 5000);
+});
+$(document).ready(function(){
   var current_theme = $.cookie('current_theme')==null ? 'cerulean' :$.cookie('current_theme');
   switch_theme(current_theme);
 
@@ -88,9 +117,9 @@ function updateElemByAjax(url, info_id, field, value)
         data: data,
         success: function(data,status) {
             if (status == 'success') {
-                alert('编辑成功');
+                ShowSuccessMessage("信息编辑成功", 3000);
             } else {
-                alert('编辑失败');
+                ShowErrorMessage(data.message, 3000);
             }
         }
     });
@@ -112,7 +141,8 @@ function operationForSelected(url)
         url: url,
         data: {selections: selections},
         success: function(data,status) {
-            alert("Data: " + data + "\nStatus: " + status);
+            //alert("Data: " + data + "\nStatus: " + status);
+            ShowSuccessMessage("信息编辑成功", 3000);
         }
     });
 }

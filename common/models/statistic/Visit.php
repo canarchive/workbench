@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\spread;
+namespace common\models\statistic;
 
 use Yii;
 use common\models\BaseModel;
@@ -44,9 +44,8 @@ class Visit extends BaseModel
         ];
     }
 
-    public function writeVisitLog($isMobile)
+    public function writeVisitLog($data)
     {
-        $data = [];
         $attributeParams = $this->getAttributeParams();
         $channelInfo = Yii::$app->getRequest()->get('qinfo');
         foreach ($attributeParams as $field => $param) {
@@ -84,7 +83,6 @@ class Visit extends BaseModel
         $urlBase = empty($urlBase) ? $urlFull : $urlBase;
         $data['url'] = $urlBase;
         $data['url_full'] = $urlFull;
-        $data['client_type'] = $isMobile ? 'h5' : 'pc';
 
         $urlFullPre = Yii::$app->request->get('url_pre', '');
         $urlPre = substr($urlFullPre, 0, strpos($urlFullPre, '?'));
@@ -92,18 +90,44 @@ class Visit extends BaseModel
         //print_r($data);exit();
         $this->_searchEngineDatas($data);
 
-        $newData = $this->insert(true, $data);
+        $newModel = new self($data);
+        $newModel->save();
+        //$newData = $this->insert(true, $data);
 
         $session = Yii::$app->session;
         $data['time'] = time();
         $session['session_spread_info'] = $data;
 
-        $this->statisticRecord($newData, 'visit');
+        $this->statisticRecord($newModel, 'visit');
 
-        return $data;        
+        print_r($newModel);
+        return $newModel;        
     }
 
-    public function insert($runValidation = true, $attributes = null)
+    public function beforeSave($insert)
+    {
+        if(parent::beforeSave($insert)) {
+            $time = Yii::$app->params['currentTime'];
+            $day = date('Ymd', $time);
+            $hour = date('H', $time);
+            $this->created_at = $time;
+            $this->created_month = date('Ym', $time);
+            $this->created_day = date('Ymd', $time);
+            $this->created_hour = date('H', $time);
+            $this->created_week = date('W', $time);
+            $this->created_weekday = date('N', $time);
+            $this->ip = Yii::$app->getRequest()->getIP();
+            //$this->ip = '123.57.148.73';
+            $city = \common\components\IP::find($this->ip);
+            $city = is_array($city) ? implode('-', $city) : $city;
+            $this->city = $city;
+            return true;
+        }
+        return false;
+    }
+
+
+    public function ssinsert($runValidation = true, $attributes = null)
     {
         $time = Yii::$app->params['currentTime'];
         $day = date('Ymd', $time);
