@@ -1,9 +1,13 @@
 <?php
 use yii\helpers\Url;
 
+$cssFiles = ['website'];;
+$this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'merchant/adview/css']);
+$jsFiles = ['modernizr'];;
+$this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'merchant/adview/js']);
 $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'] : 'index';
 ?>
-<?php $this->beginContent('@merchant/views/layouts/main-base.php'); ?>
+<?php $this->beginContent('@merchant/decoration/views/layouts/main-base.php'); ?>
 <div class="off-canvas-wrap">
     <div class="inner-wrap">
         <div class="index-header">
@@ -11,7 +15,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                 <div class="row doc-width">
                     <div class="small-12 columns">
                         <div class="logo">
-                            <a href="<?= Yii::getAlias('@merchanturl'); ?>" title="返回首页"></a>
+                            <a href="<?= Yii::getAlias('@web'); ?>" title="返回首页"></a>
                         </div>
                         <div class="menu right">
                             <?php if (Yii::$app->user->isGuest) { ?>
@@ -24,7 +28,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                             <?php } ?>
                         </div>
                         <nav class="nav right">
-                            <a href="<?= Yii::getAlias('@merchanturl'); ?>" title="<?= Yii::$app->params['siteNameBase']; ?>" <?php if ($currentElem == 'index') { echo 'class="active"'; } ?>>首页</a>
+                            <a href="<?= Yii::getAlias('@web'); ?>" title="<?= Yii::$app->params['siteNameBase']; ?>" <?php if ($currentElem == 'index') { echo 'class="active"'; } ?>>首页</a>
                             <a href="/sp-cpa.html" title="CPA服务" <?php if ($currentElem == 'cpa') { echo 'class="active"'; } ?>>CPA服务</a>
                             <a href="/sp-sem.html" title="竞价托管" <?php if ($currentElem == 'sem') { echo 'class="active"'; } ?>>竞价托管</a>
                             <a href="/sp-seo.html" title="网站SEO" <?php if ($currentElem == 'seo') { echo 'class="active"'; } ?>>网站SEO</a>
@@ -36,7 +40,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                 </div>
             </div>
             <header class="header-mini show-for-small">
-                <div class="left logo"><a href="<?= Yii::getAlias('@merchanturl'); ?>"></a></div>
+                <div class="left logo"><a href="<?= Yii::getAlias('@web'); ?>"></a></div>
                 <div class="menu right">
                     <a href="#" class="right-off-canvas-toggle"><i class="fa fa-bars"></i></a>
                 </div>
@@ -48,7 +52,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                 <nav class="nav">
                     <ul class="nav-list">
                         <li>
-                            <a href="<?= Yii::getAlias('@merchanturl'); ?>" title="首页">首页</a>
+                            <a href="<?= Yii::getAlias('@web'); ?>" title="首页">首页</a>
                         </li>
                         <li><a href="/sp-cpa.html" title="CPA服务" >CPA服务</a></li>
                         <li><a href="/sp-sem.html" title="竞价托管" >竞价托管</a></li>
