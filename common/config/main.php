@@ -20,7 +20,7 @@ return [
             'baseUrl' => '@asseturl/assets',
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            //'errorAction' => 'site/error',
         ],
         'request' => [
             'class' => 'common\components\Request',
