@@ -12,7 +12,7 @@ $this->params['currentElem'] = 'seo';
             <h1>网站流量整体解决方案</h1>
             <h2>让网站流量迅速提升200%以上，霸占四大搜索引擎</h2>
             <div class="sub">
-            <?= $this->render('@merchant/views/_banner-button'); ?>
+            <?= $this->render('../_banner-button'); ?>
             </div>
         </div>
     </div>

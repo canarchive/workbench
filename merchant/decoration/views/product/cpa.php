@@ -12,7 +12,7 @@ $this->params['currentElem'] = 'cpa';
             <h1>装修行业获客成本200-300元/户</h1>
             <h2>国内首家专注装修建材企业CPA效果营销服务商</h2>
             <div class="sub">
-            <?= $this->render('@merchant/views/_banner-button'); ?>
+            <?= $this->render('../_banner-button'); ?>
             </div>
         </div>
     </div>
