@@ -30,10 +30,4 @@ return [
             'route' => '/{{SORT}}/sitemap/index', 
         ],
     ],
-    'admin' => [
-        'data' => [
-            'pattern' => '/<controller>/<action>',
-            'route' => '/{{SORT}}/admin/<controller>/<action>', 
-        ],
-    ],
 ];
