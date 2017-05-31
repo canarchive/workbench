@@ -1,5 +1,5 @@
 <?php
-namespace merchant\controllers;
+namespace merchant\decoration\controllers;
 
 use Yii;
 use merchant\components\Controller as MerchantController;

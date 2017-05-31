@@ -12,7 +12,7 @@ $this->params['currentElem'] = 'sem';
             <h1>敢于承诺效果的SEM营销服务商</h1>
             <h2>投放预算不变，获客成本降低50%，转化率提升30%</h2>
             <div class="sub">
-            <?= $this->render('@merchant/views/_banner-button'); ?>
+            <?= $this->render('../_banner-button'); ?>
             </div>
         </div>
     </div>

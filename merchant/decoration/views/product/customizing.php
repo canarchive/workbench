@@ -13,7 +13,7 @@ $this->params['currentElem'] = 'customizing';
             <h1>企业营销定制化解决方案</h1>
             <h2>营销自动化，帮您大幅度节省成本，提升效率</h2>
             <div class="sub">
-            <?= $this->render('@merchant/views/_banner-button'); ?>
+            <?= $this->render('../_banner-button'); ?>
             </div>
         </div>
     </div>

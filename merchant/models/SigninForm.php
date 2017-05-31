@@ -6,7 +6,7 @@ use yii\base\Model;
 
 class SigninForm extends Model
 {
-    public $username;
+    public $name;
     public $password;
     public $rememberMe = true;
 
@@ -19,7 +19,7 @@ class SigninForm extends Model
     public function rules()
     {
         return [
-            [['username', 'password'], 'required'],
+            [['name', 'password'], 'required'],
             ['rememberMe', 'boolean'],
             ['password', 'validatePassword'],
         ];
@@ -37,13 +37,13 @@ class SigninForm extends Model
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
+                $this->addError($attribute, 'Incorrect name or password.');
             }
         }
     }
 
     /**
-     * Logs in a user using the provided username and password.
+     * Logs in a user using the provided name and password.
      *
      * @return boolean whether the user is logged in successfully
      */
@@ -57,7 +57,7 @@ class SigninForm extends Model
     }
 
     /**
-     * Finds user by [[username]]
+     * Finds user by [[name]]
      *
      * @return User|null
      */
@@ -65,7 +65,7 @@ class SigninForm extends Model
     {
         if ($this->_user === false) {
             $userModel = new User();
-            $this->_user = $userModel->getInfo(['mobile' => $this->username]);
+            $this->_user = $userModel->getInfo(['mobile' => $this->name]);
         }
 
         return $this->_user;

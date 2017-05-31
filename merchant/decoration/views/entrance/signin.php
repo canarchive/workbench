@@ -1,39 +1,9 @@
 <?php
-
-use yii\bootstrap\NavBar;
-use backend\assets\CharismaAsset;
-use backend\assets\Ltie9Asset;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-
-CharismaAsset::register($this);
-Ltie9Asset::register($this);
 ?>
-<?php $this->beginPage() ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-    <meta name="author" content="Muhammad Usman">
-
-    <!-- The styles -->
-    <link id="bs-css" href="<?= Yii::getAlias('@asseturl/backend'); ?>/css/bootstrap-cerulean.min.css" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="<?= Yii::getAlias('@asseturl'); ?>/bower_components/jquery/jquery.min.js"></script>
-
-    <!-- The fav icon -->
-    <link rel="shortcut icon" href="<?= Yii::getAlias('@asseturl/backend'); ?>/img/favicon-fb.ico">
-
-    <?= Html::csrfMetaTags() ?>
-    <?php $this->head() ?>
-</head>
-<body>
-<?php $this->beginBody() ?>
-
+<?php $this->beginContent('@backend/views/base/main-base.php'); ?>
+<?= Html::csrfMetaTags() ?>
 <div class="ch-container">
     <div class="row">
         <div class="col-md-12 center login-header"><h2><b><?= Yii::$app->params['siteNameBase']; ?>后台系统</h2></div>
@@ -52,8 +22,4 @@ Ltie9Asset::register($this);
         </div>
     </div>
 </div>
-
-<?php $this->endBody() ?>
-</body>
-</html>
-<?php $this->endPage() ?>
+<?php $this->endContent(); ?>

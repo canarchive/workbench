@@ -3,11 +3,11 @@
 namespace merchant\models;
 
 use common\models\MerchantModel;
-use common\models\MenuTrait;
+use common\models\TraitMenu;
 
 class Menu extends MerchantModel
 {
-    use MenuTrait;
+    use TraitMenu;
 
     public static function tableName()
     {

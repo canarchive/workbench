@@ -11,9 +11,4 @@ class SiteController extends MerchantController
 		$datas = [];
         return $this->render('index', ['datas' => $datas]);
     }
-
-	public function actionSignin()
-	{
-		echo 'sss';exit();
-	}
 }
