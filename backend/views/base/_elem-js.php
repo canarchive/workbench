@@ -77,7 +77,7 @@ function setLeftNav(parentCode)
             isActive = 'class="active"';
             haveActive = true;
           }
-          subMenuStr += '<li class="abc" ' + isActive + ' id="left_menu_' + n1.code + '"><a class="ajax-link" href="<?= Yii::getAlias('@backendurl'); ?>' + n1.url + '"><i class="icon-align-justify"></i><span class="hidden-tablet">' + n1.name + '</span></a></li>';
+          subMenuStr += '<li class="abc" ' + isActive + ' id="left_menu_' + n1.code + '"><a class="ajax-link" href="' + n1.url + '"><i class="icon-align-justify"></i><span class="hidden-tablet">' + n1.name + '</span></a></li>';
           isActive = '';
         }
       });

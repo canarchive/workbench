@@ -10,23 +10,8 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'viewPath' => '@backend/views/charisma',
-    'bootstrap' => ['log'],
-        'bootstrap' => [
+    'bootstrap' => [
         'log',
-        function () {
-            if (!isset(Yii::$app->i18n->translations['rbac-admin'])) {
-                Yii::$app->i18n->translations['rbac-admin'] = [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
-                    'basePath' => '@backend/messages'
-                ];
-                Yii::$app->i18n->translations['admin-common'] = [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
-                    'basePath' => '@backend/messages'
-                ];
-            }
-        }
     ],
     'controllerNamespace' => 'backend\controllers',
     'components' => [
