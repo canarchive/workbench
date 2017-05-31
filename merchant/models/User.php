@@ -36,7 +36,9 @@ class User extends AuthBase
         return [
             'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id'],
             'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id'],
-            'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
+            //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
+            'edit-info' => ['email'],//, 'mobile'],
+            'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
             //'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
         ];
     }
@@ -49,11 +51,14 @@ class User extends AuthBase
         return [
             [['mobile'], 'required'],
             ['mobile', 'unique', 'targetClass' => '\merchant\models\User', 'message' => 'This mobile has already been taken.'],
-            [['password_old'], 'required', 'on' => ['edit']],
             [['status'], 'default', 'value' => 0],
-            [['password_old'], 'checkPasswordOld', 'on' => ['edit']],
+
+            [['password_old'], 'required', 'on' => ['edit-password']],
+            [['password_old'], 'checkPasswordOld', 'on' => ['edit-password']],
+            ['password_new', 'required', 'on' => ['create', 'edit-password']],
             ['password_new', 'string', 'min' => 6, 'when' => function($model) { return $model->password_new != ''; }],
-            ['password_new', 'compare', 'on' => ['edit']],
+            ['password_new', 'compare', 'on' => ['edit-password']],
+
             [['email', 'mobile', 'password_new', 'password_new_repeat'], 'safe', 'on' => ['edit']],
             [['email', 'mobile', 'status', 'merchant_show'], 'safe', 'on' => ['create', 'update']],
         ];

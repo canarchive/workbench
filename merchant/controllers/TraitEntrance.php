@@ -1,7 +1,8 @@
 <?php
-namespace merchant\decoration\controllers;
+namespace merchant\controllers;
 
 use Yii;
+use merchant\models\SigninForm;
 
 trait TraitEntrance
 {
