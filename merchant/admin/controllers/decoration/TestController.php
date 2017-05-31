@@ -9,5 +9,6 @@ class TestController extends AdminController
     public function actionIndex()
     {
 		echo 'test';exit();
+		r
     }
 }
