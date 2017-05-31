@@ -60,9 +60,10 @@ class AccessControl extends AccessControlBase
         $menus = Menu::find()->asArray()->where(['code' => $codes])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
         //$menus = Menu::find()->asArray()->indexBy('code')->all();
         $appMenus = [];
+		$baseUrl = Yii::getAlias('@backendurl');
         foreach ($menus as $key => $menu) {
             $route = '/' . trim($menu['module'] . '/' . $menu['controller'] . '/' . $menu['method'], '/');
-            $menu['url'] = Url::toRoute($route);
+            $menu['url'] = empty($menu['controller']) ? '' : $baseUrl . Url::toRoute($route);
             if (!empty($menu['extparam'])) {
                 $menu['url'] = $menu['url'] . '?' . $menu['extparam'];
             }
