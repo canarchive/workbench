@@ -48,22 +48,9 @@ return [
         'decoration' => [
             'class' => 'merchant\decoration\Module',
         ],
-    ],
-
-    'as access' => [
-        'class' => 'merchant\components\AccessControl',
-        'allowActions' => [
-            //'info/*',
-            //'owner/*',
-            'api/*',
-            'decoration/entrance/*',
-            'decoration/site/*',
-            'decoration/product/*',
-            'merchant-upload/*',
-            'site/error',
-            //'admin/site/index',
-            'debug/*',
-        ]
+        'admin' => [
+            'class' => 'merchant\admin\Module',
+        ],
     ],
 
     'params' => $params,
