@@ -6,7 +6,8 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
-$spreadRules = array_merge(require(__DIR__ . '/decoration/rules.php'), require(__DIR__ . '/rules.php'));
+$spreadRules = array_merge(require(__DIR__ . '/decoration/rules.php'));//, require(__DIR__ . '/rules.php'));
+//print_r($spreadRules);exit();
 
 return [
     'id' => 'app-subsite',

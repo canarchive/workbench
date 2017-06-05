@@ -1,9 +1,2 @@
 <?php
-$rules = [
-    'baom-<tcode:\w+>-<city_code:\w+>' => 'decoration/spread-page/index',
-    'jz-signup' => '/decoration/signup/index',
-    'jz-signup-cms' => '/decoration/signup/cms',
-    'stat' => '/decoration/site/statistic',
-];
-
-return $rules;
+return \common\helpers\RuleFormat::formatRule(require(dirname(__DIR__) . '/params-rule.php'), require(dirname(__DIR__) . '/params-site.php'), 'decoration');
