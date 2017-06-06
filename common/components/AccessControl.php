@@ -69,7 +69,6 @@ class AccessControl extends \yii\base\ActionFilter
         $controller = $action->controller;
         $this->identity = $this->user->getIdentity();
         if ($this->_checkStatus('lock')) {
-			echo 'sss';exit();
             throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
         }
 
@@ -81,7 +80,7 @@ class AccessControl extends \yii\base\ActionFilter
         $menuInfos = $this->_initMenus($currentMenu);
         $controller->menuInfos = $menuInfos;
 
-        Yii::$app->params['currentMenu'] = $currentMenu->toArray();
+        Yii::$app->params['currentMenu'] = $currentMenu;//->toArray();
         Yii::$app->params['managerInfo'] = $this->identity;
 
         return true;

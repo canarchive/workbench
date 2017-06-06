@@ -1,5 +1,5 @@
 <?php
-$model->roles = implode(',', $model->getRoles());
+$model->roles = implode(',', $model->getRolesInfos());
 $detailViewParams = [
     'model' => $model,
     'attributes' => [
