@@ -6,12 +6,9 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
-$routeRules = array_merge(
-	require(__DIR__ . '/decoration/rule.php')
-	//require(__DIR__ . '/merchant/rule.php'),
-	//require(__DIR__ . '/salesys/rule.php')
-	//require(__DIR__ . '/flower/rule.php')
-);
+$routeRules = [];//array_merge(
+	//require(__DIR__ . '/decoration/rule.php')
+//);
 //print_r($routeRules);exit();
 
 return [
