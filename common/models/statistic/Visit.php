@@ -54,6 +54,9 @@ class Visit extends BaseModel
             }
             $paramValue = (Yii::$app->getRequest()->get($param['param'], ''));
             switch ($field) {
+            case 'merchant_id':
+				$paramValue = intval($paramValue);
+				break;
             case 'keyword':
                 $paramValue = $this->_formatUtf8Code($paramValue);
                 break;
@@ -73,6 +76,7 @@ class Visit extends BaseModel
                 $data['unit_id'] = isset($cInfos[2]) ? intval($cInfos[2]) : 0;
                 break;
             }
+			
             $data[$field] = $paramValue;
         }
         $data['city_code'] = Yii::$app->request->get('city_code', '');
@@ -87,7 +91,6 @@ class Visit extends BaseModel
         $urlFullPre = Yii::$app->request->get('url_pre', '');
         $urlPre = substr($urlFullPre, 0, strpos($urlFullPre, '?'));
         $data['url_pre'] = empty($urlPre) ? $urlFullPre : $urlPre;
-        //print_r($data);exit();
         $this->_searchEngineDatas($data);
 
         $newModel = new self($data);
@@ -100,7 +103,6 @@ class Visit extends BaseModel
 
         $this->statisticRecord($newModel, 'visit');
 
-        print_r($newModel);
         return $newModel;        
     }
 
