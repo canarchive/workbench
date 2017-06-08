@@ -6,8 +6,10 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
-$spreadRules = array_merge(require(__DIR__ . '/decoration/rules.php'));//, require(__DIR__ . '/rules.php'));
-//print_r($spreadRules);exit();
+$routeRules = array_merge(
+	require(__DIR__ . '/decoration/rule.php')
+);
+//print_r($routeRules);exit();
 
 return [
     'id' => 'app-subsite',
@@ -34,7 +36,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'rules' => $spreadRules,
+            'rules' => $routeRules,
         ],
     ],
 

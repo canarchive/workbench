@@ -10,7 +10,7 @@ $this->params['jsFiles'] = [
 $this->params['currentNav'] = 'free';
 $this->params['formPosition'] = 'hd-sjpc';
 $this->params['formPositionName'] = '活动-设计量房pc';
-$currentCode = $this->params['currentCode'];
+$currentCode = $merchantInfo['code'];
 Yii::$app->params['tdkInfos']['title'] = '装修免费设计，免费量房';
 Yii::$app->params['tdkInfos']['description'] = '装修设计,量房';
 Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
@@ -19,7 +19,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';
 if (isMobile == 1) {
-    window.location.href = "<?= Yii::getAlias(Yii::$app->params['hostAliasMobile']) . Url::to(['/decoration/detail/feature', 'view' => $this->params['currentCode'] . 'tbj', 'city_code' => Yii::$app->params['currentCompany']['code_short']]); ?>";
+    //window.location.href = "";
 }
 </script>
 <style>.layer_content_v2 .rank_li .get_code_v2{display:block;height:16px;line-height:16px;color:#ff875a;position: absolute;right: 15px;top:18px;z-index: 4;}</style></head>
@@ -31,7 +31,7 @@ if (isMobile == 1) {
                 <p class="top_info"></p>
                 <ul class="entry_menu tn_menu clearfix">
                     <!--<li class="myorder">
-                        <a class="menu_hd major_pop" href="javascript:;" tjjj="click_pc_top.menu.qjqb" tjjj_name="<?= Yii::$app->params['siteNameBase']; ?>钱包"><?= Yii::$app->params['siteNameBase']; ?>钱包</a>
+                        <a class="menu_hd major_pop" href="javascript:;" tjjj="click_pc_top.menu.qjqb" tjjj_name="<?= $merchantInfo['name']; ?>钱包"><?= $merchantInfo['name']; ?>钱包</a>
                         <b>
                         </b>
                         <div class="menu_bd hide">
@@ -61,7 +61,7 @@ if (isMobile == 1) {
         <div class="jia_logo clearfix fl" style="padding-top: 0px;">
             <div class="logo fl" style="padding-top: 10px;">
                 <a target="_top" class="major_pop" tjjj="click_pc_head.logo.jia" tjjj_name="首页logo" href="javascript:;">
-                <img width="121" height="75" alt="<?= Yii::$app->params['siteNameBase']; ?>网首页" src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/pc_logo_<?= $currentCode; ?>_1.png"></a>
+                <img width="121" height="75" alt="<?= $merchantInfo['name']; ?>网首页" src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/pc_logo_<?= $currentCode; ?>_1.png"></a>
             </div>
             <div class="fl" style="position: relative;">
                 <a href="javascript:;" class="major_pop" tjjj="click_pc_logo.right.link" tjjj_name="暖暖的新家logo">
@@ -104,7 +104,7 @@ if (isMobile == 1) {
                 <div class="my_Qj_wrap">
                     <p>
                         <em></em>
-                        <a class="major_pop" tjjj="click_pc_top.menu.myqj" href="javascript:;" tjjj_name="我的<?= Yii::$app->params['siteNameBase']; ?>">我的<?= Yii::$app->params['siteNameBase']; ?></a></p>
+                        <a class="major_pop" tjjj="click_pc_top.menu.myqj" href="javascript:;" tjjj_name="我的<?= $merchantInfo['name']; ?>">我的<?= $merchantInfo['name']; ?></a></p>
                     <i>
                     </i>
                 </div>
@@ -183,7 +183,7 @@ if (isMobile == 1) {
 </div>
 <!--<div class="self-introduction">
     <div class="self_box">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/sj/images/jia_pet36x36.png"><?= Yii::$app->params['siteNameBase']; ?>网成立于2005年，是国内知名的专注于装修、建材、家居垂直领域的电商平台。</div>
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/sj/images/jia_pet36x36.png"><?= $merchantInfo['name']; ?>网成立于2005年，是国内知名的专注于装修、建材、家居垂直领域的电商平台。</div>
 </div>-->
 <div class="newput_main">
     <div class="topmost clearfix">
@@ -250,7 +250,7 @@ if (isMobile == 1) {
                                 <input type="radio" name="home_state" />二手房装修</label>
                             <label>
                                 <input type="radio" name="home_state" />毛坯房装修</label></div>
-                        <a href="javascript:;" class="putin_btn estimate_offer major_pop" tjjj="click_pc_top_left_bjbtn" tjjj_name="在线装修报价" apply_title="立即预约<?= Yii::$app->params['siteNameBase']; ?>网装修报价">立即估算报价</a></div>
+                        <a href="javascript:;" class="putin_btn estimate_offer major_pop" tjjj="click_pc_top_left_bjbtn" tjjj_name="在线装修报价" apply_title="立即预约<?= $merchantInfo['name']; ?>网装修报价">立即估算报价</a></div>
                     <div class="grade_price">
                         <p>经济实惠≤299元/㎡&nbsp;&nbsp;&nbsp;简约现代≥299元/㎡</p>
                         <p>低调奢华≥499元/㎡&nbsp;&nbsp;&nbsp;高端大气≥999元/㎡</p>
@@ -302,7 +302,7 @@ if (isMobile == 1) {
                             <!--<div class="form_remember_v2">
                                 <span class="rem_box memCheck" id="iagree2">
                                     <input class="infor_areaflag" name="house_areaflag" value="shanghai" type="hidden" />
-                                    <input type="checkbox" checked="checked" class="rem_check" name="iagree">我已阅读并且同意<?= Yii::$app->params['siteNameBase']; ?>网的
+                                    <input type="checkbox" checked="checked" class="rem_check" name="iagree">我已阅读并且同意<?= $merchantInfo['name']; ?>网的
                                     <a target="_blank" class="forget_pass" href="/help/0051.html">用户协议</a></span>
                             </div>-->
                             <div class="verify_tips" id="iagree_tips" style="display:none;">
@@ -686,9 +686,9 @@ if (isMobile == 1) {
                     
                 <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides clearfix" style="width: 2000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
                                                 <li style="width: 197.6px; float: left; display: block;">
-												<a href="javascript:;" class="major_pop" shop_id="5124263" tjjj="click_pc_3F_logo_2" tjjj_name="<?= $this->params['siteName']; ?>"><img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/<?= $currentCode; ?>.jpg" draggable="false"></a>
+												<a href="javascript:;" class="major_pop" shop_id="5124263" tjjj="click_pc_3F_logo_2" tjjj_name="<?= $merchantInfo['name']; ?>"><img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/<?= $currentCode; ?>.jpg" draggable="false"></a>
                             <div class="message_r">
-						<a href="javascript:;" class="major_pop" tjjj="click_pc_3F_name_2" shop_id="5124263" title="<?= $this->params['siteName']; ?>" tjjj_name="<?= $this->params['siteName']; ?>"><?= $this->params['siteName']; ?></a>
+						<a href="javascript:;" class="major_pop" tjjj="click_pc_3F_name_2" shop_id="5124263" title="<?= $merchantInfo['name']; ?>" tjjj_name="<?= $merchantInfo['name']; ?>"><?= $merchantInfo['name']; ?></a>
                                 <span>案例：398个</span>
                                 <span>评论：1854条</span>
                                 <span>口碑值：1231</span>
@@ -789,7 +789,7 @@ if (isMobile == 1) {
     </div>
     <!--famous_company end-->
     <div id="5F" class="AdPositionId clearfix">
-        <a href="javascript:;" class="major_pop ad_baojia" tjjj="click_pc_Ad_left" tjjj_name="获取报价" apply_title="立即预约<?= Yii::$app->params['siteNameBase']; ?>网装修报价">
+        <a href="javascript:;" class="major_pop ad_baojia" tjjj="click_pc_Ad_left" tjjj_name="获取报价" apply_title="立即预约<?= $merchantInfo['name']; ?>网装修报价">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/sj/images/ad_baojia.png" /></a>
         <a href="javascript:;" class="major_pop" tjjj="click_pc_Ad_right" tjjj_name="免费申请设计方案">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/sj/images/ad_free.png" /></a>
@@ -1382,7 +1382,7 @@ if (isMobile == 1) {
         </div>
         <div id="9F" class="qijia_baozhang">
             <h2 class="column_title">
-                <span><?= Yii::$app->params['siteNameBase']; ?>保障</span></h2>
+                <span><?= $merchantInfo['name']; ?>保障</span></h2>
             <div class="safeguard_cont">
                 <ul class="clearfix">
                     <li>
@@ -1417,17 +1417,17 @@ if (isMobile == 1) {
                     </li>
                 </ul>
                 <div class="terrace_referral jiabg">
-                    <h3>为什么选择<?= Yii::$app->params['siteNameBase']; ?>？
+                    <h3>为什么选择<?= $merchantInfo['name']; ?>？
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/sj/images/fw_terrace.png" /></h3>
-                    <p>1.<?= Yii::$app->params['siteNameBase']; ?>致力于让更多的网友体验到实实在在的装修体验</p>
-                    <p>2.<?= Yii::$app->params['siteNameBase']; ?>真正的建立起了业主和装修公司、材料商家互通的网上桥梁。</p>
-                    <p>3.<?= Yii::$app->params['siteNameBase']; ?>已成为广大业主装修青睐的装修综合门户网站</p>
+                    <p>1.<?= $merchantInfo['name']; ?>致力于让更多的网友体验到实实在在的装修体验</p>
+                    <p>2.<?= $merchantInfo['name']; ?>真正的建立起了业主和装修公司、材料商家互通的网上桥梁。</p>
+                    <p>3.<?= $merchantInfo['name']; ?>已成为广大业主装修青睐的装修综合门户网站</p>
                 </div>
                 <div class="terrace_referral shield">
-                    <h3><?= Yii::$app->params['siteNameBase']; ?>网优质施工队认证标准
+                    <h3><?= $merchantInfo['name']; ?>网优质施工队认证标准
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/sj/images/jia_QA.png" /></h3>
-                    <p>1.必须是通过审核在<?= Yii::$app->params['siteNameBase']; ?>网入住的商家所属的施工队才有资格申请认证优质施工队。</p>
-                    <p>2.优质施工队必须参加每次<?= Yii::$app->params['siteNameBase']; ?>网主办的施工队长培训，并经过考核。</p>
+                    <p>1.必须是通过审核在<?= $merchantInfo['name']; ?>网入住的商家所属的施工队才有资格申请认证优质施工队。</p>
+                    <p>2.优质施工队必须参加每次<?= $merchantInfo['name']; ?>网主办的施工队长培训，并经过考核。</p>
                     <p>3.任何一个月中有3名业主对同一支优质施工队不满，即取消优质资格。</p>
                     <p>4.优质施工队长在任何时候出现有效投诉在5个工作日内没有解决的则取消资格。</p>
                 </div>
@@ -1435,7 +1435,7 @@ if (isMobile == 1) {
         </div>
     </div>
 </div>
-<input type="hidden" id="return_url" value="<?= $this->params['returnUrlPc']; ?>" />
+<input type="hidden" id="return_url" value="<?php //echo $this->params['returnUrlPc']; ?>" />
 <div id="jia_footer">
     <div class="jia_foot_info">
         <p><?= $this->context->copyStr; ?></p>
@@ -1685,13 +1685,13 @@ if (isMobile == 1) {
     var tupian_yz = $(".passport");
     var order_html = '<div id="apply_form" class="layer_order_v2 layer_order_ap layer_anim" style="display:none">' + '      <div class="layer_title_v2 apply_title">申请预约免费设计量房</div>' + '      <div class="layer_content_v2">' + '        <p class="lead_num">今日已有<span class="day_number">6867</span>用户预约装修</p>' + '          <form class="centre_form">' + '              <div class="rank_li">' + '                  <input type="text" value="" name="user_name" class="input-text-v2" />' + '                <span class="placeholder" style="display: block;">请输入您的姓名</span>' + '                <div class="cut_off"></div>' + '             </div>' + '<div class="verify_tips" id="user_name_tips" style="display:none;"><i></i><span></span> </div>' + '          <div class="rank_li">' + '              <input type="text" value="" maxlength="11" name="mobile" class="input-text-v2" />' + '                <span class="placeholder" style="display: block;">请输入您的电话</span>' + '                <div class="cut_off"></div>' + '          </div>' + '<div class="verify_tips" id="mobile_tips" style="display:none;"><i></i><span></span></div>' + '          <div class="rank_li">' + '                  <input type="text" value="北京" readonly="" data-city="shanghai" name="areaflag_name" class="infor_city" />' + '                    <div class="cut_off"></div>' + '                  <div style="display:none" class="tab_select_v2 clearfix"><ul class="breviary_list clearfix"><li class="cur">ABCDE</li><li>FGHJ</li><li>KLMNP</li><li>QRSTW</li><li>XYZ</li></ul><div class="region_cont region_show"><ul class="clearfix"><li><a name="beijing" href="javascript:;">北京</a></li><li><a name="chongqing" href="javascript:;">重庆</a></li><li><a name="chengdu" href="javascript:;">成都</a></li><li><a name="changsha" href="javascript:;">长沙</a></li><li><a name="changchun" href="javascript:;">长春</a></li><li><a name="dalian" href="javascript:;">大连</a></li><li><a name="changzhou" href="javascript:;">常州</a></li><li><a name="gddg" href="javascript:;">东莞</a></li><li><a name="ahaq" href="javascript:;">安庆</a></li><li><a name="hncd" href="javascript:;">常德</a></li><li><a name="anshan" href="javascript:;">鞍山</a></li><li><a name="baoding" href="javascript:;">保定</a></li></ul></div><div class="region_cont"><ul class="clearfix"><li><a name="fuzhou" href="javascript:;">福州</a></li><li><a name="jxfz" href="javascript:;">抚州</a></li><li><a name="guiyang" href="javascript:;">贵阳</a></li><li><a name="hangzhou" href="javascript:;">杭州</a></li><li><a name="haerbin" href="javascript:;">哈尔滨</a></li><li><a name="hefei" href="javascript:;">合肥</a></li><li><a name="jinan" href="javascript:;">济南</a></li><li><a name="jiaxing" href="javascript:;">嘉兴</a></li><li><a name="jingmen" href="javascript:;">荆门</a></li><li><a name="jsha" href="javascript:;">淮安</a></li><li><a name="guilin" href="javascript:;">桂林</a></li><li><a name="ganzhou" href="javascript:;">赣州</a></li><li><a name="sxjc" href="javascript:;">晋城</a></li><li><a name="jljl" href="javascript:;">吉林</a></li><li><a name="huzhou" href="javascript:;">湖州</a></li><li><a name="guangzhou" href="javascript:;">广州</a></li></ul></div><div class="region_cont"><ul class="clearfix"><li><a name="jslyg" href="javascript:;">连云港</a></li><li><a name="gxlz" href="javascript:;">柳州</a></li><li><a name="kunming" href="javascript:;">昆明</a></li><li><a name="kunshan" href="javascript:;">昆山</a></li><li><a name="lanzhou" href="javascript:;">兰州</a></li><li><a name="maanshan" href="javascript:;">马鞍山</a></li><li><a name="luoyang" href="javascript:;">洛阳</a></li><li><a name="nanchang" href="javascript:;">南昌</a></li><li><a name="nanning" href="javascript:;">南宁</a></li><li><a name="nantong" href="javascript:;">南通</a></li><li><a name="nanjing" href="javascript:;">南京</a></li><li><a name="ningbo" href="javascript:;">宁波</a></li><li><a href="javascript:;" name="ningde">宁德</a></li><li><a name="nanyang" href="javascript:;">南阳</a></li><li> <a href="javascript:;" name="putian">莆田</a></li></ul></div><div class="region_cont"><ul class="clearfix"><li><a name="qingdao" href="javascript:;">青岛</a></li><li><a name="quanzhou" href="javascript:;">泉州</a></li><li><a name="shanghai" href="javascript:;">上海</a></li><li><a name="shenyang" href="javascript:;">沈阳</a></li><li><a name="suzhou" href="javascript:;">苏州</a></li><li><a href="javascript:;" name="sanming">三明</a></li><li><a name="shenzhen" href="javascript:;">深圳</a></li><li><a name="shijiazhuang" href="javascript:;">石家庄</a></li><li><a name="tianjin" href="javascript:;">天津</a></li><li><a name="wuxi" href="javascript:;">无锡</a></li><li><a name="wuhan" href="javascript:;">武汉</a></li><li><a name="taiyuan" href="javascript:;">太原</a></li><li><a name="xiamen" href="javascript:;">厦门</a></li><li><a name="qhxn" href="javascript:;">西宁</a></li><li><a name="jsxz" href="javascript:;">徐州</a></li><li><a name="zjtz" href="javascript:;">台州</a></li><li><a name="hbxt" href="javascript:;">邢台</a></li><li><a name="wulumuqi" href="javascript:;">乌鲁木齐</a></li><li><a name="sdwf" href="javascript:;">潍坊</a></li><li><a name="zjwz" href="javascript:;">温州</a></li></ul></div><div class="region_cont"><ul class="clearfix"><li><a name="xian" href="javascript:;">西安</a></li><li><a name="zhengzhou" href="javascript:;">郑州</a></li><li><a name="yancheng" href="javascript:;">盐城</a></li><li><a name="jsyz" href="javascript:;">扬州</a></li><li><a name="sxyc" href="javascript:;">运城</a></li><li><a name="hnyy" href="javascript:;">岳阳</a></li><li><a name="other" href="javascript:;">其它</a></li></ul></div></div>' + '                  <i></i>' + '              </div>' + ' <div class="rank_li validateCode_li validateCode">' + '<input type="text" class="input-text-v2 input_focus" name="verify_code" maxlength="4" value="" onkeyup="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,\'\');send_msg_code($(this),4);"  onBlur="send_msg_code($(this),0);" >' + '<span class="placeholder "    onBlur="shop_name_check()">请输入图片验证码</span>' + '<div class="cut_off"></div>' + ' <div class="Turing_number">' + '    <span style="display:none"></span>' + '  <img width="70" height="28" src="" class="passport" id="passport2" onclick="newchange($(this))">' + '     <a href="javascript:;" onclick="newchange($(\'.passport\'))">换一张</a>' + '    </div>' + ' </div>' + ' <div class="verify_tips" id="verify_code_tips" style="display:none;"><i></i><span></span></div>'
 
-    + '<div class="rank_li verify_code_li" style="display:none;">' + ' <input type="text" class="input-text-v2 input_focus" name="note" maxlength="6" value=""> ' + '  <span class="placeholder codeText" style="display: block;" >请输入验证码</span>' + '   <div class="cut_off"></div>' + '  <a href="javascript:;" class="get_code_v2">获取手机验证码</a>' + ' </div>' + '<div class="verify_tips" id= "validateCode_tips" style="display:none;"><i></i><span></span></div>' + '              <div class="form_remember_v2" style="display:none;">' + '              <span id="iagree2" class="rem_box memCheck">' + '                <input type="checkbox" name="iagree" class="rem_check" checked="checked">我已阅读并且同意<?= Yii::$app->params['siteNameBase']; ?>网的' + '                <a href="/help/0051.html" class="forget_pass" target="_blank">用户协议</a>' + '              </span>' + '            </div>' + '<input name="xnkf_id" id="xnkf_id" value="" type="hidden">' + '<input name="shop_id" value="0" type="hidden" />' + '<input name="source" value="pc-toufang-new" type="hidden" />' + '<input name="type" value="1" type="hidden" />' + '<input class="infor_areaflag" name="house_areaflag" value="shanghai" type="hidden" />' + '            <div class="verify_tips" style="display:none;margin:26px 0 -26px 0;"></div>' + '            <a href="javascript:;" class="entire_present apply_submit">立即预约</a>' + '          </form>' + '      </div>' + '<div class="verify_tips" id= "iagree_tips" style="display:none;"><i></i><span></span></div>'
+    + '<div class="rank_li verify_code_li" style="display:none;">' + ' <input type="text" class="input-text-v2 input_focus" name="note" maxlength="6" value=""> ' + '  <span class="placeholder codeText" style="display: block;" >请输入验证码</span>' + '   <div class="cut_off"></div>' + '  <a href="javascript:;" class="get_code_v2">获取手机验证码</a>' + ' </div>' + '<div class="verify_tips" id= "validateCode_tips" style="display:none;"><i></i><span></span></div>' + '              <div class="form_remember_v2" style="display:none;">' + '              <span id="iagree2" class="rem_box memCheck">' + '                <input type="checkbox" name="iagree" class="rem_check" checked="checked">我已阅读并且同意<?= $merchantInfo['name']; ?>网的' + '                <a href="/help/0051.html" class="forget_pass" target="_blank">用户协议</a>' + '              </span>' + '            </div>' + '<input name="xnkf_id" id="xnkf_id" value="" type="hidden">' + '<input name="shop_id" value="0" type="hidden" />' + '<input name="source" value="pc-toufang-new" type="hidden" />' + '<input name="type" value="1" type="hidden" />' + '<input class="infor_areaflag" name="house_areaflag" value="shanghai" type="hidden" />' + '            <div class="verify_tips" style="display:none;margin:26px 0 -26px 0;"></div>' + '            <a href="javascript:;" class="entire_present apply_submit">立即预约</a>' + '          </form>' + '      </div>' + '<div class="verify_tips" id= "iagree_tips" style="display:none;"><i></i><span></span></div>'
 
     + '      <a href="javascript:;" class="layer_setwin apply_close"></a>' + '   </div>' + '   <div style="display:none;" class="layer_shade"></div>';
 
     var add_completion = '<div id="buquan_form" class="layer_order_v2 layer_anim" style="display:none">' + '      <div class="layer_title_v2 apply_buquan">恭喜你已预约成功</div>' + '      <div class="layer_content_v2">' + '        <p class="lead_times">24小时内会有客服人员与您联系，确认您的具体需求</p>' + '          <p class="lead_tiny">由于申请人数较多，完善资料可更快获取审核服务</p>' + '          <form class="centre_form">' + '              <div class="rank_li house_type">' + '                  <label class="use_a"></label>' + '                  <input type="text" class="input-text-v2" name="fangxing" value="" readonly="">' + '                    <span class="placeholder" style="display: block;">请选择您的房型</span>' + '                  <i></i>' + '                    <div class="cut_off"></div>' + '                  <ul class="house_list" style="display:none">' + '                      <li id="382">一房</li>' + '                      <li id="383">二房</li>' + '                      <li id="384">三房</li>' + '                      <li id="385">四房</li>' + '                      <li id="386">复式</li>' + '                      <li id="387">别墅</li>' + '                  </ul>' + '              </div>' + '<div class="verify_tips" id="user_name_tips" style="display:none;"><i></i><span></span></div>' + '              <div class="rank_li">' + '                  <input type="text" class="input-text-v2 input_focus" name="house_space" maxlength="6" value="">' + '                  <span class="placeholder" style="display: block;">请输入你要装修的房屋面积</span>' + '                  <em class="unit">㎡</em>' + '                  <div class="cut_off"></div>' + '              </div>' + '<div class="verify_tips" id="user_name_tips" style="display:none;"><i></i><span></span></div>' + '              <div class="rank_li house_type">' + '              <input type="text" class="input-text-v2" name="yusuan" value="" readonly="">' + '                <span class="placeholder" style="display: block;">请选择不包括家具、电器的预算</span>' + '                  <i></i>' + '                    <div class="cut_off"></div>' + '                  <ul class="house_list" style="display:none">' + '                      <li id="292">3万以下</li>' + '                      <li id="293">3-5万</li>' + '                      <li id="294">5-8万</li>' + '                      <li id="949">8-10万</li>' + '                      <li id="950">10-12万</li>' + '                      <li id="951">12-15万</li>' + '                      <li id="952">15-18万</li>' + '                      <li id="953">18-25万</li>' + '                      <li id="954">25-30万</li>' + '                      <li id="955">30万以上</li>' + '                  </ul>' + '              </div>' + '<div class="verify_tips" id="user_name_tips" style="display:none;"><i></i><span></span></div>' + '              <div class="rank_li">' + '                  <input type="text" class="input-text-v2 input_focus" name="house_address" value="">' + '                    <span class="placeholder" style="display: block;">您的小区&nbsp;如：佳嘉佳苑</span>' + '                    <div class="cut_off"></div>' + '                  </div>' + '<div class="verify_tips" id="user_name_tips" style="display:none;"><i></i><span></span></div>' + '              <div class="rank_li house_type">' + '                  <input type="text"  readonly="" value="" name="" class="" />' + '                  <em class="placeholder" style="display: block;">是否需要装修贷款</em>' + '                  <i></i>' + '                  <div class="cut_off"></div>' + '                  <ul class="house_list" style="display:none">' + '                     <li id="">是</li>' + '                    <li id="">否</li>' + '                  </ul>' + '              </div>' + '              <a href="javascript:;" class="entire_present" onclick="submit_apply_add($(this))">提交</a>' + '          </form>' + '      </div>' + '      <a href="javascript:;" class="layer_setwin layer_anim_close"></a>' + '   </div>';
 
-    var order_success = '<div class="layer_order_v2 layer_anim" style="display:none" id="sucess">' + '      <div class="layer_title_v2 apply_success"><i class="ok"></i>恭喜您预约成功！</div>' + '      <div class="layer_content_v3">' + '        <p class="p_green">扫一扫，关注<?= Yii::$app->params['siteNameBase']; ?>官方微信号</p>' + '        <div class="planar_code"><img src="http://fastued3.jia.com/image/zhuangxiu/new_finish_v2/pc_jiazx.jpg" width="232" height="232" id="qcode"></div>' + '        <p class="stay_cul stor_cul">“您还可以在微信上找到更多服务”</p>' + '      </div>' + '      <a href="javascript:;" class="layer_setwin layer_anim_close" close_tag="success"></a>' + '   </div>';
+    var order_success = '<div class="layer_order_v2 layer_anim" style="display:none" id="sucess">' + '      <div class="layer_title_v2 apply_success"><i class="ok"></i>恭喜您预约成功！</div>' + '      <div class="layer_content_v3">' + '        <p class="p_green">扫一扫，关注<?= $merchantInfo['name']; ?>官方微信号</p>' + '        <div class="planar_code"><img src="http://fastued3.jia.com/image/zhuangxiu/new_finish_v2/pc_jiazx.jpg" width="232" height="232" id="qcode"></div>' + '        <p class="stay_cul stor_cul">“您还可以在微信上找到更多服务”</p>' + '      </div>' + '      <a href="javascript:;" class="layer_setwin layer_anim_close" close_tag="success"></a>' + '   </div>';
 
     $('body').append(order_html);
     $('body').append(add_completion);
@@ -1857,7 +1857,7 @@ if (isMobile == 1) {
         //var tjjj_sp = $obj;
         //文案编辑
         if (tjjj.indexOf("5F_") != -1 || tjjj.indexOf("6F_") != -1 || tjjj.indexOf("7F_fuwu_") != -1 || tjjj == "free_jl") {
-            $(".apply_title").text("申请免费体验<?= Yii::$app->params['siteNameBase']; ?>服务");
+            $(".apply_title").text("申请免费体验<?= $merchantInfo['name']; ?>服务");
             $(".apply_buquan").text("恭喜你已申请成功");
             $(".apply_success").html("<i class='ok'></i>恭喜您申请成功！");
             $(".lead_num").html("今日已有<span class='day_number'>6867</span>用户申请体验");
@@ -1867,7 +1867,7 @@ if (isMobile == 1) {
                 $("input[name='shop_id']").val(shop_id);
             }
             if (tjjj.indexOf("7F_image_") != -1) {
-                $(".apply_title").text("申请体验<?= Yii::$app->params['siteNameBase']; ?>480道工艺");
+                $(".apply_title").text("申请体验<?= $merchantInfo['name']; ?>480道工艺");
                 $(".lead_num").html("今日已有<span class='day_number'>6867</span>用户申请体验");
             } else if (tjjj.indexOf("4F_") != -1) {
                 $(".apply_title").text("免费预约人气设计师");
@@ -1876,7 +1876,7 @@ if (isMobile == 1) {
                 $(".apply_title").text("申请免费领装修基金");
                 $(".lead_num").html("今日已有<span class='day_number'>6867</span>用户预约装修");
             } else if (tjjj == 'click_pc_head.logo.jia' || tjjj == 'click_pc_top.menu.myqj') {
-                $(".apply_title").text("申请免费体验<?= Yii::$app->params['siteNameBase']; ?>服务");
+                $(".apply_title").text("申请免费体验<?= $merchantInfo['name']; ?>服务");
                 $(".lead_num").html("今日已有<span class='day_number'>6867</span>用户预约装修");
             } else if (tjjj.indexOf("1F_") != -1) {
                 $(".apply_title").text("申请免费预约精选方案");
@@ -2184,7 +2184,7 @@ if (isMobile == 1) {
                 _this.find('.verify_tips').css('display', 'none');
                 _this.find(input_class).css('border-color', '');
             });
-            var arr = ['请输入姓名', '请输入手机号码', '请输入正确的手机号码', '请填写验证码', '请勾选已阅读并且同意<?= Yii::$app->params['siteNameBase']; ?>网的用户协议'];
+            var arr = ['请输入姓名', '请输入手机号码', '请输入正确的手机号码', '请填写验证码', '请勾选已阅读并且同意<?= $merchantInfo['name']; ?>网的用户协议'];
 
             _this.find('.verify_tips').css('display', 'none');
             _this.find(input_class).css('border-color', '');

@@ -18,7 +18,7 @@ if (isMobile == 1) {
 <input type="hidden" id="position_name" value="<?= $this->context->pagePositionName; ?>" />
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none">
-<?php $statUrl = str_replace(Yii::getAlias('@spreadurl'), '', Yii::$app->params['statUrl']); echo $statUrl; ?>
+<?php $statUrl = Yii::$app->params['statUrl']; echo $statUrl; ?>
 </div>
 <?php if (isset($this->params['bodyStr'])) { echo $this->params['bodyStr']; } ?>
 <?php $this->endContent(); ?>
