@@ -86,13 +86,15 @@ class Controller extends YiiController
 			return ;
 		}
 		$this->pcMappingUrl = $this->currentSiteInfo['domains']['pc'] . $this->clientUrl;
-		$this->mobileMappingUrl = $this->currentSiteInfo['domains']['mobile'] . $this->clientUrl;
+		$this->mobileMappingUrl = $this->currentSiteInfo['domains']['m'] . $this->clientUrl;
 		return ;
 	}
 
 	protected function getSiteInfos()
 	{
-		return [];
+        $file = Yii::getAlias('@app') . "/config/params-site.php";
+        $datas = file_exists($file) ? require($file) : [];
+        return $datas;
 	}
 
     /**
@@ -130,7 +132,7 @@ class Controller extends YiiController
         if (!empty($channelSpread)) {
             $urlPre = strval(Yii::$app->request->referrer);
             $cityCode = Yii::$app->request->get('city_code', '');
-            $statUrl = Yii::getAlias('@spreadurl') . '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
+            $statUrl = '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
             //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";
         }
