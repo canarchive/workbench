@@ -1,25 +1,44 @@
 <?php
-use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
-?>
-<?php $this->beginContent('@backend/views/base/main-base.php'); ?>
-<?= Html::csrfMetaTags() ?>
-<div class="ch-container">
-    <div class="row">
-        <div class="col-md-12 center login-header"><h2><b><?= Yii::$app->params['siteNameBase']; ?>后台系统</h2></div>
-    </div><!--/row-->
+use yii\helpers\Html;
 
-    <div class="row">
-        <div class="well col-md-5 center login-box">
-            <div class="alert alert-info">请输入管理员账号和密码登录后台</div>
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
-                <?= $form->field($model, 'name')->label('管理员账号') ?>
-                <?= $form->field($model, 'password')->passwordInput()->label('密码') ?>
-                <?= $form->field($model, 'rememberMe')->checkbox()->label('保存登录状态') ?>
-                <?= Html::submitButton('登录', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+$this->params['bodyClass'] = 'auth-back';
+Yii::$app->params['seoTitle'] = '登录-' . Yii::$app->params['seoTitle'];
+
+?>
+<div class="account-container">
+    <div class="logo">
+        <a href="/"></a>
+    </div>
+    <div class="wrapper">
+        <h3 class="wrapper-title">商家登录</h3>
+        <div class="row site-width">
+            <?php $form = ActiveForm::begin(['options' => ['id' => 'loginForm']]); ?>
+                <div class="small-12 columns">
+                    <label for="username" class="tit">账号：</label>
+                    <input type="text" class="form-text" name="username" placeholder="输入手机号" id="username" autocomplete="off" require value="" /></div>
+                <div class="small-12 columns">
+                    <label for="username" class="tit">密码：</label>
+                    <input type="password" class="form-text" name="password" placeholder="输入密码" id="password" autocomplete="off" require />
+                    <?php if (!empty($message)) { ?><span class="error">账号或密码错误</span><?php } ?>
+                </div>
+                <!--<div class="small-12 columns">
+                    <label for="username" class="tit">人机验证：</label>
+                    <div class="l-captcha" data-site-key="<?= Yii::$app->params['luosimaoCaptcha']['siteKey']; ?>" data-width="100%" style="margin-bottom:10px;" data-callback="getRegResponse"></div>
+                </div>-->
+                <div class="small-12 columns">
+                    <input type="submit" class="button radius success expand" value="立即登录" />
+                    <div class="reg-goto">
+                        <!--<a href='<?= Url::to(['site/signup']); ?>'>立即注册</a>&nbsp;&nbsp;&nbsp;-->
+                        <!--<a href="/forgot_password">忘了密码？</a>-->
+                    </div>
+                </div>
             <?php ActiveForm::end(); ?>
-            </div>
         </div>
     </div>
+    <div class="row site-width">
+        <div class="account-footer"><?= Yii::$app->params['siteCopyRightInfo']. ' ' . Yii::$app->params['siteIcpInfo']; ?></div>
+    </div>
 </div>
-<?php $this->endContent(); ?>
+<div class="reg-back"></div>

@@ -23,5 +23,5 @@ $this->params['bodyClass'] = ($this->params['identityInfo']['name'] != 'wangcanl
     <?php echo $this->render('_elem-modal'); ?>
     <?php //echo $this->render('footer'); ?>
 </div>
-<?= $this->render('_elem-js'); ?>
 <?php $this->endContent(); ?>
+<?= $this->render('_elem-js'); ?>

@@ -19,7 +19,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                         </div>
                         <div class="menu right">
                             <?php if (Yii::$app->user->isGuest) { ?>
-                            <a rel="nofollow" href="<?= Url::to(['/site/signin']); ?>" class="button tiny radius success" title="登录">登录</a>
+                            <a rel="nofollow" href="/signin.html" class="button tiny radius success" title="登录">登录</a>
                             <!--<a rel="nofollow" href="<?= Url::to(['/site/signup']); ?>" class="button tiny radius info" title="注册tuanjiahui会员">注册</a>-->
                             <?php } else { ?>
                             <span class="is-login">
@@ -62,7 +62,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                         <li><a href="/sp-material.html" title="合作商家助手">合作商家助手</a></li>
                         <?php if (Yii::$app->user->isGuest) { ?>
                         <li>
-                            <a href="<?= Url::to(['/site/signin']); ?>" class="button small radius success expand" title="登录">登录</a>
+                            <a href="/signin.html" class="button small radius success expand" title="登录">登录</a>
                         </li>
                         <?php } else { ?>
                         <li><a href="<?= Url::to(['/info/index']); ?>" class="button radius success small expand" title="进入管理中心">进入管理中心</a></li>
@@ -80,7 +80,7 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                     </div>
                     <div class="footer-inner">
                         <div class="bottom-link">
-                            <a rel="nofollow" href="<?= Url::to(['/site/signin']); ?>" title="地址">地址：<?= Yii::$app->params['siteAddressInfo']; ?></a>
+                            <a rel="nofollow" href="/signin.html" title="地址">地址：<?= Yii::$app->params['siteAddressInfo']; ?></a>
                         </div>
                         <div class="company-info ">
                             <div class="footer-tips ">
