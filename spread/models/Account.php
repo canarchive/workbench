@@ -25,7 +25,7 @@ class Account extends BaseModel
         return [
             [['name','merchant'], 'required'],
             [['status',], 'default', 'value' => 0],
-            [['channel','password', 'created_at','updated_at','domain_id'], 'safe'],
+            [['channel','password', 'created_at','updated_at', 'domain'], 'safe'],
         ];
     }
 
@@ -36,18 +36,12 @@ class Account extends BaseModel
             'channel' => '渠道',
             'name' => '账户名',
             'merchant' => '所属公司',
-            'domain_id' => '推广域名',
+            'domain' => '推广域名',
             'password' => '密码',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
             'status' => '状态',
         ];
-    }
-
-    protected function getDomainInfos()
-    {
-        $infos = ArrayHelper::map(Domain::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
     }
 
     public function getMerchantInfos()

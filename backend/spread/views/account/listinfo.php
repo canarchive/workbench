@@ -13,13 +13,7 @@ $gridViewParams = [
             }
         ],
         'password',
-        [
-            'attribute' => 'domain_id',
-            'value' => function($model) {
-                $name = isset($model->domainInfos[$model->domain_id]) ? $model->domainInfos[$model->domain_id] : $model->domain_id;
-                return $name;
-            }
-        ],
+        'domain',
         [
             'attribute' => 'merchant',
             'value' => function($model) {
