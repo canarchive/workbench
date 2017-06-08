@@ -16,13 +16,14 @@ class RuleFormat
         $ruleDatas = [];
         foreach ($datas as $data) {
 
-            $siteCodes = $onlySite ? [$onlySite] : (isset($data['only']) && !empty($data['only']) ? $data['only'] : array_keys($siteBaseCodes));
+            $siteCodes = $onlySite ? [$onlySite] : (isset($data['only']) && !empty($data['only']) ? $data['only'] : array_keys($siteInfos));
             $ruleDataOrigin = $data['data'];
         
             foreach ($siteCodes as $siteCode) {
 				$domains = (array) $siteInfos[$siteCode]['domains'];
+                $sort = isset($siteInfos[$siteCode]['sort']) ? $siteInfos[$siteCode]['sort'] : $siteCode;
 				foreach ($domains as $domain) {
-			        $ruleData['route'] = str_replace('{{SORT}}', $siteCode, $ruleDataOrigin['route']);
+			        $ruleData['route'] = str_replace('{{SORT}}', $sort, $ruleDataOrigin['route']);
                     $ruleData['pattern'] = $domain . $ruleDataOrigin['pattern'];
                     $ruleDatas[] = $ruleData;
                 }   

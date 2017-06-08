@@ -86,13 +86,15 @@ class Controller extends YiiController
 			return ;
 		}
 		$this->pcMappingUrl = $this->currentSiteInfo['domains']['pc'] . $this->clientUrl;
-		$this->mobileMappingUrl = $this->currentSiteInfo['domains']['mobile'] . $this->clientUrl;
+		$this->mobileMappingUrl = $this->currentSiteInfo['domains']['m'] . $this->clientUrl;
 		return ;
 	}
 
 	protected function getSiteInfos()
 	{
-		return [];
+        $file = Yii::getAlias('@app') . "/config/params-site.php";
+        $datas = file_exists($file) ? require($file) : [];
+        return $datas;
 	}
 
     /**
