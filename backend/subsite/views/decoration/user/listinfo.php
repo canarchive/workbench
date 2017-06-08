@@ -54,9 +54,9 @@ $columnsExts = [
     ],
     'bad' => [
         [
-            'attribute' => 'status_invalid',
+            'attribute' => 'invalid_status',
             'value' => function($model) {
-                $value = isset($model->invalidStatusInfos[$model->status_invalid]) ? $model->invalidStatusInfos[$model->status_invalid] : $model->status_invalid;
+                $value = isset($model->invalidStatusInfos[$model->invalid_status]) ? $model->invalidStatusInfos[$model->invalid_status] : $model->invalid_status;
                 return $value;
             },
         ],

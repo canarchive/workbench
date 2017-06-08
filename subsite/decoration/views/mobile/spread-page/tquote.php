@@ -1,11 +1,15 @@
 <?php
 use yii\helpers\Url;
-$this->params['cssFiles'] = [
-    'tobj/css/common.min', 'tobj/css/reseth5', 'tobj/css/swiper.min', 'tobj/css/provincesSelect', 'tobj/css/zxbj2',
+
+$cssFiles = [
+    'common.min', 'reseth5', 'swiper.min', 'provincesSelect', 'zxbj2',
 ];
-$this->params['jsFiles'] = [
-    'tobj/js/jquery.min', 'tobj/js/to8torsas', 'tobj/js/zbcommon',
+$this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'spread/house/tobj/css/']);
+
+$jsFiles = [
+    'jquery.min', 'to8torsas', 'zbcommon',
 ];
+$this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/tobj/js/']);
 $this->params['formPosition'] = 'hd-tobj';
 $this->params['formPositionName'] = '活动-报价详情';
 ?>

@@ -12,7 +12,7 @@ Trait UserTrait
     public function rules()
     {
         return [
-            [['merchant_id', 'mobile', 'city_code', 'status', 'status_invalid', 'created_at_start', 'created_at_end',], 'safe'],
+            [['merchant_id', 'mobile', 'city_code', 'status', 'invalid_status', 'created_at_start', 'created_at_end',], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ Trait UserTrait
             'city_code' => $this->city_code,
             //'city_input' => $this->city_input,
             //'status' => $this->status,
-            'status_invalid' => $this->status_invalid,
+            'invalid_status' => $this->invalid_status,
         ]);
 		if ($this->status !== null) {
 			$query->andWhere(['status' => $this->status]);

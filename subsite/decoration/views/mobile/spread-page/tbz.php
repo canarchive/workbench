@@ -7,24 +7,36 @@ $cssFiles = [
 $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'spread/house/baojia/css/']);
 $jsFiles = ['jquery-1.11.3.min'];
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/baojia/js/']);
-
 $this->params['bodyClass'] = 'bg-f2';
 $this->params['formPosition'] = 'hd-bjnew';
 $this->params['formPositionName'] = '活动推广-报价new';
-$currentCode = $this->context->merchantInfo['code'];
+Yii::$app->params['tdkInfos']['title'] =  '装修报价-上海装修报价单_上海装修预算表_上海装修到底需要多少钱-兔班长装修网';
+Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
+Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';
+$urls = $this->context->navUrls;
 ?>
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';
 if (isMobile == 0) {
 }
 </script>
+<style>
+.text_tit{
+    padding-left: 1.2rem;
+    width: 2.2rem;
+    display: inline-block;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: url("<?= Yii::getAlias('@assetself'); ?>/rabbithouse/wapprabbit/images/searchbackground.png")  no-repeat;
+}
+</style>
 <header class="cWhite cMdGray clearfix">
     <div class="tit_top">
         <div class="left">
-            <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/phone_logo_<?= $currentCode; ?>.png" alt="">
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/phone_logo_tbz.jpg" alt="">
         </div>
         <div class="f12 text_tit">
-		<p><?php //echo $merchantInfo['slogan']; ?></p>
+            <a href="<?= $urls['index'] . '/shanghai/'; ?>" >上海</a>
         </div>
     </div>
 </header>
@@ -36,13 +48,13 @@ if (isMobile == 0) {
     <!-- 标题栏 end -->
     <!-- 表格视图-->
     <ul class="msg-list pd-lr4 msg-list-icon bg-ff border-bottom" id="formStart">
-        <!--<li>
+        <li>
             <a data-target="zp-decoration-city">
                 <i class="media-object iconfont icone684 l"></i>
                 <label class="title">所在地区 :</label>
                 <i class="iconfont icone60c r"></i>
                 <span class="dib r mr4 zp-city" id="selectcity">点击选择</span></a>
-        </li>-->
+        </li>
         <li class="zp-area-focus">
             <a>
                 <i class="media-object iconfont icone682 l"></i>
@@ -112,7 +124,7 @@ if (isMobile == 0) {
     <div id="zp-decoration-city" class="fixed-bottom-list hide box-tag3 zp-brother ">
         <ul>
             <li>
-                <a class="active" href="javascript:;">北京</a>
+                <a class="active" href="javascript:;">上海</a>
                 <a href="javascript:;">上海</a>
                 <a href="javascript:;">石家庄</a>
                 <a href="javascript:;">天津</a>
@@ -159,35 +171,24 @@ if (isMobile == 0) {
         </ul>
     </div>
 </div>
+
+<footer class="cGray">
+    <nav class="f16 cDGray">
+        <ul>
+            <li>
+			<a href="<?= $urls['desc']; ?>" rel="nofollow">关于我们</a></li>
+            <li>
+			<a href="<?= $urls['merchant']; ?>" rel="nofollow">装修公司</a></li>
+            <li>
+			<a href="<?= $urls['ask']; ?>" rel="nofollow">装修问答</a></li>
+            <li>
+			<a href="<?= $urls['quote']; ?>" rel="nofollow">装修报价</a></li>
+        </ul>
+    </nav>
+	<p class="f12"><?= $this->context->copyStr . '  ' . $this->context->icpStr; ?></p>
+	<p class="f12">兔班长装修网隶属北京维纳亚科技有限公司</p>
+	<p class="f12">地址：北京市昌平区科星西路106号楼407室</p>
+	<p class="f12">联系电话：400-8032-163</p>
+</footer>
 <!-- 正文 end -->
 <script data-main="<?= Yii::getAlias('@asseturl'); ?>/spread/house/baojia/js/main.js" src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/baojia/js/require.js"></script>
-  <style>
-body{
- font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
-  }
-
-  a {
- text-decoration:none;
-
- }
- .seek_phone {
- border: 1px solid #FFFFFF;
-   background-color: #EA5504;
-   border-radius: 3rem;
-   position: fixed;
-   bottom: 0.5rem;
-   left: 0;
-   text-align: center;
- }
- .seek_phone a {
-   display: block;
-   width:4.6rem;
-   line-height: 4.6rem;
-   height: 4.6rem;
-   font-size: 1rem;
-   color: #FFFFFF;
- }
-  </style>
-  <aside class="seek_phone">
-    <a href="tel:4008032163">电话咨询</a>
-</aside>

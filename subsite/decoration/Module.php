@@ -10,7 +10,7 @@ class Module extends ModuleBase
     public function init()
     {
         parent::init();
-        Yii::$app->params['subsiteModule'] = 'decoration';
+        //Yii::$app->params['subsiteModule'] = 'decoration';
 		Yii::$app->params['currentCompany'] = $this->getCurrentCompany();
     }
 }

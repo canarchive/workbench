@@ -5,10 +5,9 @@ namespace subsite\decoration\controllers;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\filters\Cors;
-use subsite\components\Controller as subsiteController;
 use subsite\decoration\models\SignupForm;
 
-class SignupController extends subsiteController
+class SignupController extends Controller
 {
     public $enableCsrfValidation = false;
 

@@ -3,10 +3,10 @@
 namespace backend\subsite\controllers;
 
 use backend\components\AdminController;
-use backend\components\ControllerViewTrait;
+use backend\components\ControllerTraitView;
 
 class UserMerchant extends AdminController
 {
     public $viewPrefix = '/user-merchant/';
-    use ControllerViewTrait;
+    use ControllerTraitView;
 }

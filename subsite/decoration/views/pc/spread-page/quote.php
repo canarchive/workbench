@@ -4,57 +4,25 @@ use yii\helpers\Url;
 
 $signupNum = time() - strtotime(date('Y-m-d'));
 $signupNum = ceil($signupNum / 30);
-$domainCms = 'http://www.tu8zhang.com';
-$urls = [
-    'index' => $domainCms,
-    'sample' => $domainCms . '/sample/',
-    'merchant' => $domainCms . '/beijing/merchant/',
-    'ask' => $domainCms . '/ask_lm_gzsj/',
-    'quote' => $domainCms . '/beijing/quote/',
-    'desc' => $domainCms . '/desc.html',
-    'guestbook' => $domainCms . '/guestbook.html',
-    'friendlink' => $domainCms . '/friendlink.html',
-    'statement' => $domainCms . '/statement.html',
-    'contactus' => $domainCms . '/contactus.html',
-];
-$names = ['王', '李', '孟', '石', '吕', '张', '赵', '刘', '黄', '胡', '王', '李', '张'];
-$nameSuffixs = ['先生', '女士', '小姐'];
-$mobiles = ['3', '4', '5', '8'];
-$owners = [];
-for ($i = 1; $i < 9; $i++) {
-    $name = $names[array_rand($names)];
-    $nameSuffix = $nameSuffixs[array_rand($nameSuffixs)];
-    $mobile = '1' . $mobiles[array_rand($mobiles)] . '*****' . rand(1000, 9999);
-    $owner = [
-        'name' => $name . $nameSuffix,
-        'area' => rand(80, 300),
-        'minute' => rand(2, 30),
-        'mobile' => $mobile,
-    ];
-    $owners[] = $owner;
-}
 
 Yii::$app->params['tdkInfos'] = [
     'title' => '装修报价_装修预算_装修需要多少钱_装修公司报价',
     'keyword' => '装修报价_装修预算_装修需要多少钱_装修公司报价',
     'description' => '',
 ];
+$urls = $this->context->navUrls;
+$owners = $this->context->ownerInfos;
 ?>
 <link rel="stylesheet" href="<?= Yii::getAlias('@assetself'); ?>/common/css/webcommon.css"/>
 <!--<link rel="stylesheet" href="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/web/mycss/main.css"/>-->
 <link rel="stylesheet" href="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/web/mycss/calculator.css"/>
-<script type="text/javascript">
-window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
-window.signupUrl = '<?= Yii::getAlias('@web') . '/jz-signup.html'; ?>';
-window.SPREAD_URL = '<?= Yii::getAlias('@web'); ?>';
-</script>
 
 </head>
 <body>
 <!--头部-->
 <div class="quote_header ">
     <a href="">
-        <img class="lf" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/logo/<?= $merchantInfo['code']; ?>.png" alt=""/>
+        <img class="lf" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/logo/<?= $this->context->merchantInfo['code']; ?>.png" alt=""/>
     </a>
     <ul class="">
         <li>

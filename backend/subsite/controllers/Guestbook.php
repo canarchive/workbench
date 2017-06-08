@@ -3,10 +3,10 @@
 namespace backend\subsite\controllers;
 
 use backend\components\AdminController;
-use backend\components\ControllerListTrait;
+use backend\components\ControllerTraitView;
 
 class Guestbook extends AdminController
 {
     public $viewPrefix = '/guestbook/';
-    use ControllerListTrait;
+    use ControllerTraitView;
 }

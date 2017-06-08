@@ -9,7 +9,7 @@ class SiteController extends SubsiteController
 {
     public function actionIndex()
     {
-		$url = Yii::getAlias('@tbz.spreadurl') . '/baom-quote-beijing.html';
+		$url = Yii::getAlias('@tbz.subsiteurl') . '/baom-quote-beijing.html';
         header("Location:$url");
         exit();
     }
@@ -19,7 +19,7 @@ class SiteController extends SubsiteController
         $sourceCode = Yii::$app->request->get('source_code', '');
 		$domain = isset($this->domainDatas[$sourceCode]) ? $this->domainDatas[$sourceCode] : false;
 		if (empty($domain)) {
-		    $url = Yii::getAlias('@tbz.spreadurl') . '/baom-quote-beijing.html';
+		    $url = Yii::getAlias('@tbz.subsiteurl') . '/baom-quote-beijing.html';
             header("Location:$url");
             exit();
 		}

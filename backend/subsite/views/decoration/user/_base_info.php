@@ -70,7 +70,7 @@ $tableName = 'user';
                     <thead>
                     <tr>
                         <th><?= $model->getAttributeLabel('status'); ?></th>
-                        <th><?= $model->getAttributeLabel('status_invalid'); ?></th>
+                        <th><?= $model->getAttributeLabel('invalid_status'); ?></th>
                         <th><?= $model->getAttributeLabel('callback_again'); ?></th>
                         <th>指派其他商家</th>
                     </tr>
@@ -91,13 +91,13 @@ $tableName = 'user';
                         </td>
                         <td>
                         <?= Html::dropDownList(
-                            "status_invalid",
-                            $model->status_invalid,
+                            "invalid_status",
+                            $model->invalid_status,
                             $model->invalidStatusInfos,
                             [
                                 'prompt' => '全部',
                                 'class' => 'form-control',
-                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'status_invalid', this.value)",
+                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'invalid_status', this.value)",
                             ]
                         ); ?>
                         </td>

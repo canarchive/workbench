@@ -29,11 +29,24 @@ return [
         ],
     ],
     'kl' => [
-		'only' => ['kele'],
+		//'only' => ['kele'],
         'data' => [
             'suffix' => '',
 			'pattern' => '/',
     		'route'	=> '/{{SORT}}/site/home',
+        ],
+    ],
+
+    'page' => [
+        'data' => [
+			'pattern' => '/baom-<tcode:\w+>-<city_code:\w+>',
+    		'route'	=> '/{{SORT}}/spread-page/index',
+        ],
+    ],
+    'signup' => [
+        'data' => [
+			'pattern' => '/jz-signup',
+    		'route'	=> '/{{SORT}}/signup/index',
         ],
     ],
 ];

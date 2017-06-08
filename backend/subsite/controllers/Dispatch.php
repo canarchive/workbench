@@ -4,13 +4,13 @@ namespace backend\subsite\controllers;
 
 use Yii;
 use backend\components\AdminController;
-use backend\components\ControllerListTrait;
+use backend\components\ControllerTraitView;
 
 class Dispatch extends AdminController
 {
     public $isAjax;
     public $viewPrefix = '';//'/dispatch/';
-    use ControllerListTrait;
+    use ControllerTraitView;
 
     public function actionUpdate($id)
     {
