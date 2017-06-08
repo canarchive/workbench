@@ -7,7 +7,7 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/shootplat/shoot/img
 <?php $this->beginContent('@common/views/base/main.php'); ?>
 <?= $this->render('_top-js'); ?>
 <?= $content; ?>
-<input type="hidden" id="cid" value="<?= $this->context->cid; ?>" />
+<input type="hidden" id="cid" value="<?= $this->context->merchantInfo['id']; ?>" />
 <input type="hidden" id="position" value="<?= $this->context->pagePosition; ?>" />
 <input type="hidden" id="position_name" value="<?= $this->context->pagePositionName; ?>" />
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
@@ -15,4 +15,5 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/shootplat/shoot/img
 <?php $statUrl = Yii::$app->params['statUrl']; echo $statUrl; ?>
 </div>
 <?php if (isset($this->params['bodyStr'])) { echo $this->params['bodyStr']; } ?>
+<?= $this->render('@subsite/views/_stat', []); // 顶部 ?>
 <?php $this->endContent(); ?>

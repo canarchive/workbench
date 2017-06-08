@@ -3,14 +3,12 @@
 namespace subsite\decoration\controllers;
 
 use Yii;
-use subsite\components\Controller;
 use subsite\decoration\models\SignupForm;
 use spread\models\Template;
 
 class SpreadPageController extends Controller
 {
-    public $mHost;
-	public $cid;
+	public $merchantInfo;
     public $copyStr;
     public $icpStr;
 
@@ -29,17 +27,15 @@ class SpreadPageController extends Controller
         }
         $tInfo = $tInfos[$code];
         $signupForm = new SignupForm();
-		$this->cid = (int) Yii::$app->request->get('cid', 2);
-        $merchantInfo = $signupForm->getMerchantInfo($this->cid);
-        if (empty($merchantInfo)) {
-		    $this->cid = 2;
-            $merchantInfo = $signupForm->getMerchantInfo($this->cid);
+		$cid = (int) Yii::$app->request->get('cid', 2);
+        $this->merchantInfo = $signupForm->getMerchantInfo($cid);
+        if (empty($this->merchantInfo)) {
+            $this->merchantInfo = $signupForm->getMerchantInfo(2);
         }
 
         $datas = [
             'code' => $code,
             'model' => $signupForm,
-            'merchantInfo' => $merchantInfo,
         ];
         $this->layout = 'main';
 
@@ -56,12 +52,14 @@ class SpreadPageController extends Controller
     public function getNavUrls()
     {
         $domainCms = 'http://www.tu8zhang.com';
+        $cityCode = Yii::$app->params['currentCompany']['code'];
         $urls = [
             'index' => $domainCms,
+            'city' => $domainCms . '/' . $cityCode . '/',
             'sample' => $domainCms . '/sample/',
-            'merchant' => $domainCms . '/beijing/merchant/',
+            'merchant' => $domainCms . '/' . $cityCode . '/merchant/',
             'ask' => $domainCms . '/ask_lm_gzsj/',
-            'quote' => $domainCms . '/beijing/quote/',
+            'quote' => $domainCms . '/' . $cityCode . '/quote/',
             'desc' => $domainCms . '/desc.html',
             'guestbook' => $domainCms . '/guestbook.html',
             'friendlink' => $domainCms . '/friendlink.html',

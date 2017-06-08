@@ -10,22 +10,19 @@ Yii::$app->params['tdkInfos'] = [
     'keyword' => '装修报价_装修预算_装修需要多少钱_装修公司报价',
     'description' => '',
 ];
+$urls = $this->context->navUrls;
+$owners = $this->context->ownerInfos;
 ?>
 <link rel="stylesheet" href="<?= Yii::getAlias('@assetself'); ?>/common/css/webcommon.css"/>
 <!--<link rel="stylesheet" href="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/web/mycss/main.css"/>-->
 <link rel="stylesheet" href="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/web/mycss/calculator.css"/>
-<script type="text/javascript">
-window.ASSET_URL = '<?= Yii::getAlias('@asseturl'); ?>';
-window.signupUrl = '<?= Yii::getAlias('@web') . '/jz-signup.html'; ?>';
-window.SPREAD_URL = '<?= Yii::getAlias('@web'); ?>';
-</script>
 
 </head>
 <body>
 <!--头部-->
 <div class="quote_header ">
     <a href="">
-        <img class="lf" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/logo/<?= $merchantInfo['code']; ?>.png" alt=""/>
+        <img class="lf" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/logo/<?= $this->context->merchantInfo['code']; ?>.png" alt=""/>
     </a>
     <ul class="">
         <li>

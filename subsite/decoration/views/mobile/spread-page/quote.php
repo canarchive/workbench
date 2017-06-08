@@ -11,7 +11,7 @@ $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 
 $this->params['bodyClass'] = 'bg-f2';
 $this->params['formPosition'] = 'hd-bjnew';
 $this->params['formPositionName'] = '活动推广-报价new';
-$currentCode = $merchantInfo['code'];
+$currentCode = $this->context->merchantInfo['code'];
 ?>
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';

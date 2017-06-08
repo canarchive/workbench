@@ -178,7 +178,7 @@ $urls = $this->context->navUrls;
     <li><a class="cr" href="tel:4008032163">立即咨询</a></li>
     <li><a class="cw bcred" href="#quote_form">立即报名</a></li>
 </ul>
-<?= $this->render('_common-form'); ?>
+<?= $this->render('@subsite/decoration/views/_js-signup'); ?>
 <script src="<?= Yii::getAlias('@assetself'); ?>/common/js/jquery-1.11.3.min.js"></script>
 <script src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/wapprabbit/app/myjs/mobile_city.js"></script>
 <script src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/wapprabbit/app/myjs/CNAddrArr.min.js"></script>
