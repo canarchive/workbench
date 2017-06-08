@@ -18,7 +18,7 @@ class SpreadurlController extends AdminController
             'showFull' => Yii::$app->request->get('show_full', ''),
             'cityCode' => empty($cityCode) ? 'beijing' : $cityCode,
             'merchantId' => Yii::$app->request->get('merchant_id', 2),
-            'domainCode' => Yii::$app->request->get('domain_code'),
+            'siteCode' => Yii::$app->request->get('site_code'),
             'templateCode' => Yii::$app->request->get('template'),
             'channel' => Yii::$app->request->get('channel'),
             'attrs' => $this->dealParams($model->attributeParams),

@@ -37,9 +37,9 @@ $currentMenu = $menuInfos['currentMenu'];
                 <label class="control-label col-md-1">推广域名</label>
                 <div class="col-md-2">
                     <?= Html::dropDownList(
-                        "domain_code",
+                        "site_code",
                         0,
-                        $domainInfos,
+                        $siteInfos,
                         [
                             'prompt' => '全部',
                             'class' => 'form-control',
@@ -79,9 +79,9 @@ $currentMenu = $menuInfos['currentMenu'];
                 <label class="control-label col-md-1">跳转域名</label>
                 <div class="col-md-2">
                     <?= Html::dropDownList(
-                        "domain_redirect",
+                        "site_redirect",
                         0,
-                        array_merge(['no' => ''], $domainInfos),
+                        array_merge(['no' => ''], $siteInfos),
                         [
                             'class' => 'form-control',
                         ]

@@ -5,10 +5,7 @@ $detailViewParams = [
     'attributes' => [
         'id',
         'name',
-        [
-            'attribute' => 'domain_id',
-            'value' => isset($model->domainInfos[$model->domain_id]) ? $model->domainInfos[$model->domain_id] : $model->domain_id,
-        ],
+        'domain',
         [
             'attribute' => 'channel',
             'value' => isset($model->domainInfos[$model->channel]) ? $model->domainInfos[$model->channel] : $model->channel,

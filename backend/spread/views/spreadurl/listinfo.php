@@ -29,7 +29,7 @@
         <tbody>
             <?php foreach ($infos as $info) { ?>
             <tr data-key="">
-                <td><?= $info['dName']; ?></td>
+                <td><?= $info['sName']; ?></td>
                 <td><?= $info['tName']; ?></td>
                 <td><?= $info['cName']; ?></td>
                 <td><?= $info['pcUrl']; ?></td>
