@@ -65,6 +65,12 @@ class Spreadurl extends BaseModel
     public function getUrlSpread($params, $isPc = true)
     {
         $template = $params['template'];
+        if ($isPc && empty($template['have_pc'])) {
+            return '';
+        }
+        if (!$isPc && empty($template['have_mobile'])) {
+            return '';
+        }
         $siteInfo = $params['siteInfo'];
         $domain = $isPc ? $siteInfo['domains']['pc'] : $siteInfo['domains']['m'];
         $url = $domain . "/baom-{$template->code}-{$this->inputParams['cityCode']}.html";
