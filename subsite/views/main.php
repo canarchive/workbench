@@ -6,12 +6,6 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/shootplat/shoot/img
 ?>
 <?php $this->beginContent('@common/views/base/main.php'); ?>
 <?= $this->render('_top-js'); ?>
-<script>
-var isMobile = '<?= intval($this->context->isMobile); ?>';
-if (isMobile == 1) {
-    //window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
-}
-</script>
 <?= $content; ?>
 <input type="hidden" id="cid" value="<?= $this->context->cid; ?>" />
 <input type="hidden" id="position" value="<?= $this->context->pagePosition; ?>" />

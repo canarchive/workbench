@@ -4,35 +4,6 @@ use yii\helpers\Url;
 
 $signupNum = time() - strtotime(date('Y-m-d'));
 $signupNum = ceil($signupNum / 30);
-$domainCms = 'http://www.tu8zhang.com';
-$urls = [
-    'index' => $domainCms,
-    'sample' => $domainCms . '/sample/',
-    'merchant' => $domainCms . '/beijing/merchant/',
-    'ask' => $domainCms . '/ask_lm_gzsj/',
-    'quote' => $domainCms . '/beijing/quote/',
-    'desc' => $domainCms . '/desc.html',
-    'guestbook' => $domainCms . '/guestbook.html',
-    'friendlink' => $domainCms . '/friendlink.html',
-    'statement' => $domainCms . '/statement.html',
-    'contactus' => $domainCms . '/contactus.html',
-];
-$names = ['王', '李', '孟', '石', '吕', '张', '赵', '刘', '黄', '胡', '王', '李', '张'];
-$nameSuffixs = ['先生', '女士', '小姐'];
-$mobiles = ['3', '4', '5', '8'];
-$owners = [];
-for ($i = 1; $i < 9; $i++) {
-    $name = $names[array_rand($names)];
-    $nameSuffix = $nameSuffixs[array_rand($nameSuffixs)];
-    $mobile = '1' . $mobiles[array_rand($mobiles)] . '*****' . rand(1000, 9999);
-    $owner = [
-        'name' => $name . $nameSuffix,
-        'area' => rand(80, 300),
-        'minute' => rand(2, 30),
-        'mobile' => $mobile,
-    ];
-    $owners[] = $owner;
-}
 
 Yii::$app->params['tdkInfos'] = [
     'title' => '装修报价_装修预算_装修需要多少钱_装修公司报价',

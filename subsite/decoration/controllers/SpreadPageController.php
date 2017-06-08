@@ -52,4 +52,43 @@ class SpreadPageController extends Controller
         $infos = $model->find(['status' => 1])->indexBy('code')->asArray()->all();
         return $infos;
     }
+
+    public function getNavUrls()
+    {
+        $domainCms = 'http://www.tu8zhang.com';
+        $urls = [
+            'index' => $domainCms,
+            'sample' => $domainCms . '/sample/',
+            'merchant' => $domainCms . '/beijing/merchant/',
+            'ask' => $domainCms . '/ask_lm_gzsj/',
+            'quote' => $domainCms . '/beijing/quote/',
+            'desc' => $domainCms . '/desc.html',
+            'guestbook' => $domainCms . '/guestbook.html',
+            'friendlink' => $domainCms . '/friendlink.html',
+            'statement' => $domainCms . '/statement.html',
+            'contactus' => $domainCms . '/contactus.html',
+        ];
+        return $urls;
+    }
+
+    public function getOwnerInfos()
+    {
+        $names = ['王', '李', '孟', '石', '吕', '张', '赵', '刘', '黄', '胡', '王', '李', '张'];
+        $nameSuffixs = ['先生', '女士', '小姐'];
+        $mobiles = ['3', '4', '5', '8'];
+        $owners = [];
+        for ($i = 1; $i < 9; $i++) {
+            $name = $names[array_rand($names)];
+            $nameSuffix = $nameSuffixs[array_rand($nameSuffixs)];
+            $mobile = '1' . $mobiles[array_rand($mobiles)] . '*****' . rand(1000, 9999);
+            $owner = [
+                'name' => $name . $nameSuffix,
+                'area' => rand(80, 300),
+                'minute' => rand(2, 30),
+                'mobile' => $mobile,
+            ];
+            $owners[] = $owner;
+        }
+        return $owners;
+    }
 }
