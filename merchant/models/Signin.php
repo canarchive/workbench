@@ -4,7 +4,7 @@ namespace merchant\models;
 use Yii;
 use yii\base\Model;
 
-class SigninForm extends Model
+class Signin extends Model
 {
     public $name;
     public $password;
