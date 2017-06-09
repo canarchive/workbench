@@ -18,6 +18,7 @@ return [
         'user' => [
             'identityClass' => 'backend\models\Manager',
             'enableAutoLogin' => true,
+			'loginUrl' => '/signin.html',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -34,14 +35,18 @@ return [
         'authManager' => [
             //'class' => 'yii\rbac\PhpManager',
             'class' => 'yii\rbac\DbManager',
-        ]
+        ],
+		'urlManager' => [
+			'rules' => [
+				'/<action:(signin|logout)>' => 'entrance/<action>',
+			],
+		],
     ],
 
     'as access' => [
         'class' => 'backend\components\AccessControl',
         'allowActions' => [
-            'site/login',
-            'site/logout',
+            'entrance/*',
             'site/error',
             'backend-upload/*',
             'debug/*',
