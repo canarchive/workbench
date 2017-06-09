@@ -1,18 +1,18 @@
 <?php
 
-namespace common\models\statistic\searchs;
+namespace common\statistic\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use common\models\statistic\Keyword as KeywordModel;
+use common\statistic\models\Dispatch as DispatchModel;
 
-class Keyword extends KeywordModel
+class Dispatch extends DispatchModel
 {
     public $field_hit;
 
     public function rules()
     {
         return [
-            [['field_hit', 'created_day', 'channel', 'client_type'], 'safe'],
+            [['service_id', 'field_hit', 'created_day', 'merchant_id'], 'safe'],
         ];
     }
 
@@ -26,17 +26,24 @@ class Keyword extends KeywordModel
             return $dataProvider;
         }
 
-        if (!empty($this->keyword)) {
-            $query->orFilterWhere(['like', 'keyword', $this->keyword]);
-            //$query->orFilterWhere(['like', 'message', $this->keyword]);
-        }
-
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`visit_num_success`) AS `visit_num_success`";
+        $fieldsStr .= ", SUM(`dispatch_num`) AS `dispatch_num`, SUM(`back_reply_num`) AS `back_reply_num`, SUM(`back_confirm_num`) AS `back_confirm_num`";
         //echo $fieldsStr;exit();
         $query->select($fieldsStr);
         $query->groupBy($fields);
+		if (in_array('created_day', $this->fields)) {
+			$query->orderBy(['created_day' => SORT_DESC]);
+		}
+
+		$serviceIds = empty($this->service_id) ? [27, 28, 31] : $this->service_id;
+        $query->andFilterWhere([
+            'service_id' => $serviceIds,
+        ]);
+
+        $query->andFilterWhere([
+            'merchant_id' => $this->merchant_id,
+        ]);
 
         return $dataProvider;        
     }    
@@ -48,10 +55,10 @@ class Keyword extends KeywordModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['city_code', 'merchant_id', 'client_type', 'keyword', 'keyword_search', 'channel', 'sem_account', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
-                return ['keyword', 'created_day'];
+                return ['created_day'];
             }
         }
         return $fields;

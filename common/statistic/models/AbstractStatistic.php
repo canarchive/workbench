@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\statistic;
+namespace common\statistic\models;
 
 use Yii;
 use common\models\SpreadModel;

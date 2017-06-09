@@ -1,12 +1,12 @@
 <?php
 
-namespace common\models\statistic;
+namespace common\statistic\models;
 
-class Keyword extends AbstractStatistic
+class Report extends AbstractStatistic
 {
     public static function tableName()
     {
-        return '{{%keyword_origin}}';
+        return '{{%report_origin}}';
     }
 
     public function attributeLabels()
@@ -23,16 +23,22 @@ class Keyword extends AbstractStatistic
             'client_type' => '客户端',
             'visit_num' => '访问数',
             'visit_num_success' => '转化数',
+            'success_rate' => '转化率',
+            'hit_num' => 'SEM点击数',
+            'hit_rate' => 'SEM转化率',
+            'fee' => 'SEM消费',
+            'fee_average' => 'SEM报名成本',
         ];
     }
 
     public function recordDetail($data, $info, $type)
     {
+        $data['merchant_id'] = intval($data['merchant_id']);
         $isSuccess = $type == 'signup' ? true : false;
         if (empty($info)) {
             $data['visit_num'] = $isSuccess ? 0 : 1;
             $data['visit_num_success'] = $isSuccess ? 1 : 0;
-            $info = $this->_newModel('statisticKeyword', true, $data);
+            $info = $this->_newModel('statisticReport', true, $data);
             $info->insert();
             return ;
         }
@@ -50,7 +56,7 @@ class Keyword extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['merchant_id', 'city_code', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour', 'keyword', 'keyword_search'];
+        $fields = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour'];
         return $fields;
     }
 }

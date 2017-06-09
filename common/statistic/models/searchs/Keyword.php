@@ -1,18 +1,18 @@
 <?php
 
-namespace common\models\statistic\searchs;
+namespace common\statistic\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use common\models\statistic\Report as ReportModel;
+use common\statistic\models\Keyword as KeywordModel;
 
-class Report extends ReportModel
+class Keyword extends KeywordModel
 {
     public $field_hit;
 
     public function rules()
     {
         return [
-            [['merchant_id', 'field_hit', 'created_day', 'channel', 'client_type'], 'safe'],
+            [['field_hit', 'created_day', 'channel', 'client_type'], 'safe'],
         ];
     }
 
@@ -26,21 +26,17 @@ class Report extends ReportModel
             return $dataProvider;
         }
 
+        if (!empty($this->keyword)) {
+            $query->orFilterWhere(['like', 'keyword', $this->keyword]);
+            //$query->orFilterWhere(['like', 'message', $this->keyword]);
+        }
+
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`visit_num_real`) As `visit_num_real`, SUM(`visit_num_success`) AS `visit_num_success`";
+        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`visit_num_success`) AS `visit_num_success`";
         //echo $fieldsStr;exit();
-		if (in_array('created_day', $this->fields)) {
-			$query->orderBy(['created_day' => SORT_DESC]);
-		}
         $query->select($fieldsStr);
         $query->groupBy($fields);
-
-        $query->andFilterWhere([
-            'client_type' => $this->client_type,
-            'channel' => $this->channel,
-            'merchant_id' => $this->merchant_id,
-        ]);
 
         return $dataProvider;        
     }    
@@ -52,10 +48,10 @@ class Report extends ReportModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['city_code', 'merchant_id', 'client_type', 'keyword', 'keyword_search', 'channel', 'sem_account', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
-                return ['merchant_id', 'created_day'];
+                return ['keyword', 'created_day'];
             }
         }
         return $fields;

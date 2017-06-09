@@ -1,9 +1,9 @@
 <?php
 
-namespace common\models\statistic\searchs;
+namespace common\statistic\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use common\models\statistic\Visit as VisitModel;
+use common\statistic\models\Visit as VisitModel;
 
 class Visit extends VisitModel
 {
