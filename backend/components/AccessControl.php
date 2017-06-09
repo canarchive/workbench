@@ -38,7 +38,7 @@ class AccessControl extends AccessControlBase
 
         $currentMenu = Menu::findOne($where);
         if (empty($currentMenu) || !$this->user->can($currentMenu['code'])) {
-            throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
+            //throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
         }
         if ($this->identity->status == Manager::STATUS_NOACTIVE && $currentMenu['controller'] != 'document' && $currentMenu['method'] != 'edit-password') {
             $url = Url::to(['/manager/edit-password']);
