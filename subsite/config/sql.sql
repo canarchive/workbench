@@ -7,8 +7,6 @@ ALTER TABLE `wd_user`
   DROP `client_type`,
   DROP `plan_id`,
   DROP `unit_id`,
-  DROP `city_input`,
-  DROP `area_input`,
   DROP `position`,
   DROP `note`,
   DROP `signup_city`,
@@ -39,15 +37,7 @@ ALTER TABLE `ws_report_service_origin` ADD `sort` VARCHAR(20) NOT NULL DEFAULT '
 ALTER TABLE `ws_dispatch_origin` ADD `sort` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '类别' AFTER `id`;
 
 -----------------
-
-
-
-ALTER TABLE `wd_sem_template` DROP `layout`;
-ALTER TABLE `wd_sem_domain` CHANGE `domain_pc` `copyright` VARCHAR(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '版权信息';
-ALTER TABLE `wd_sem_domain` CHANGE `domain_mobile` `icp` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'ICP备案';
-
-
-ALTER TABLE `wm_service` ADD `user_id` SMALLINT(5) NOT NULL DEFAULT '0' COMMENT '用户ID' AFTER `id`;
+ALTER TABLE `wd_sem_template` DROP `layout`; ALTER TABLE `wd_sem_domain` CHANGE `domain_pc` `copyright` VARCHAR(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '版权信息'; ALTER TABLE `wd_sem_domain` CHANGE `domain_mobile` `icp` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'ICP备案'; ALTER TABLE `wm_service` ADD `user_id` SMALLINT(5) NOT NULL DEFAULT '0' COMMENT '用户ID' AFTER `id`;
 
 ALTER TABLE `wd_visit` ADD `sort` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '类别' AFTER `id`;
 ALTER TABLE `wd_conversion` ADD `sort` VARCHAR(20) NOT NULL DEFAULT '' COMMENT '类别' AFTER `id`;

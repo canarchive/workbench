@@ -6,5 +6,5 @@ use subsite\models\Dispatch as DispatchBase;
 
 class Dispatch extends DispatchBase
 {
-    use DecorationTrait;
+    use ModelTrait;
 }

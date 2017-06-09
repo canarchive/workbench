@@ -6,5 +6,5 @@ use subsite\models\Guestbook as GuestbookBase;
 
 class Guestbook extends GuestbookBase
 {
-    use DecorationTrait;
+    use ModelTrait;
 }

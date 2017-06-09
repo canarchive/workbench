@@ -6,5 +6,5 @@ use subsite\models\UserMerchant as UserMerchantBase;
 
 class UserMerchant extends UserMerchantBase
 {
-    use DecorationTrait;
+    use ModelTrait;
 }

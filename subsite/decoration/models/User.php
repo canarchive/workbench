@@ -2,10 +2,12 @@
 
 namespace subsite\decoration\models;
 
-use subsite\models\User as UserBase;
+use common\models\SubsiteModel;
+use common\statistic\models\UserTrait;
 
-class User extends UserBase
+class User extends SubsiteModel
 {
-    use DecorationTrait;
+    use ModelTrait;
+    use UserTrait;
 
 }

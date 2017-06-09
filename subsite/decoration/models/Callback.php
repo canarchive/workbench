@@ -2,9 +2,11 @@
 
 namespace subsite\decoration\models;
 
-use subsite\models\Callback as CallbackBase;
+use common\models\SubsiteModel;
+use common\statistic\models\CallbackTrait;
 
-class Callback extends CallbackBase
+class Callback extends SubsiteModel
 {
-    use DecorationTrait;
+    use ModelTrait;
+    use CallbackTrait;
 }

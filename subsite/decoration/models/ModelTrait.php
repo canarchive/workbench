@@ -4,7 +4,7 @@ namespace subsite\decoration\models;
 
 use Yii;
 
-trait DecorationTrait
+trait ModelTrait
 {
     public static function getDb()
     {
