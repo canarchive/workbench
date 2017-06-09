@@ -1,33 +1,25 @@
 <?php
 
-namespace common\models\statistic;
+namespace common\statistic\models;
 
-class Report extends AbstractStatistic
+class Dispatch extends AbstractStatistic
 {
     public static function tableName()
     {
-        return '{{%report_origin}}';
+        return '{{%dispatch_origin}}';
     }
 
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
-            'keyword' => '关键字',
-            'keyword_search' => '搜索关键字',
-            'channel_big' => '一级渠道',
-            'channel' => '渠道',
+            'dispatch_num' => '派单数',
+            'back_reply_num' => '申请退单数',
+            'back_confirm_num' => '确认退单数',
+            'service_id' => '客服',
+            'merchant_id' => '商家',
             'day' => '日期',
-            'hour' => '小时',
             'week' => '周',
-            'client_type' => '客户端',
-            'visit_num' => '访问数',
-            'visit_num_success' => '转化数',
-            'success_rate' => '转化率',
-            'hit_num' => 'SEM点击数',
-            'hit_rate' => 'SEM转化率',
-            'fee' => 'SEM消费',
-            'fee_average' => 'SEM报名成本',
         ];
     }
 
@@ -38,7 +30,7 @@ class Report extends AbstractStatistic
         if (empty($info)) {
             $data['visit_num'] = $isSuccess ? 0 : 1;
             $data['visit_num_success'] = $isSuccess ? 1 : 0;
-            $info = $this->_newModel('statisticReport', true, $data);
+            $info = new self($data);
             $info->insert();
             return ;
         }
@@ -56,7 +48,7 @@ class Report extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour'];
+        $fields = ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour'];
         return $fields;
     }
 }

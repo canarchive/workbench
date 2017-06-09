@@ -1,8 +1,8 @@
 <?php
 
-namespace common\models\statistic\searchs;
+namespace common\statistic\models\searchs;
 
-use common\models\statistic\Conversion as ConversionModel;
+use common\statistic\models\Conversion as ConversionModel;
 
 class Conversion extends ConversionModel
 {
