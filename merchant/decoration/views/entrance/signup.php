@@ -6,7 +6,7 @@ Yii::$app->params['seoTitle'] = '商家注册-' . Yii::$app->params['seoTitle'];
 ?>
 <div class="account-container">
     <div class="logo">
-        <a href="<?= Yii::getAlias('@merchanturl'); ?>"></a>
+        <a href="/"></a>
     </div>
     <div class="wrapper">
         <h3 class="wrapper-title">新用户注册</h3>

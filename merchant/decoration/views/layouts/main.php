@@ -1,10 +1,6 @@
 <?php
 use yii\helpers\Url;
 
-$cssFiles = ['website'];;
-$this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'merchant/adview/css']);
-$jsFiles = ['modernizr'];;
-$this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'merchant/adview/js']);
 $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'] : 'index';
 ?>
 <?php $this->beginContent('@merchant/decoration/views/layouts/main-base.php'); ?>
