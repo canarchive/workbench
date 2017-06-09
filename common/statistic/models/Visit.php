@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\statistic;
+namespace common\statistic\models;
 
 use Yii;
 use common\models\BaseModel;
@@ -54,6 +54,9 @@ class Visit extends BaseModel
             }
             $paramValue = (Yii::$app->getRequest()->get($param['param'], ''));
             switch ($field) {
+            case 'merchant_id':
+				$paramValue = intval($paramValue);
+				break;
             case 'keyword':
                 $paramValue = $this->_formatUtf8Code($paramValue);
                 break;
@@ -73,6 +76,7 @@ class Visit extends BaseModel
                 $data['unit_id'] = isset($cInfos[2]) ? intval($cInfos[2]) : 0;
                 break;
             }
+			
             $data[$field] = $paramValue;
         }
         $data['city_code'] = Yii::$app->request->get('city_code', '');
@@ -87,7 +91,6 @@ class Visit extends BaseModel
         $urlFullPre = Yii::$app->request->get('url_pre', '');
         $urlPre = substr($urlFullPre, 0, strpos($urlFullPre, '?'));
         $data['url_pre'] = empty($urlPre) ? $urlFullPre : $urlPre;
-        //print_r($data);exit();
         $this->_searchEngineDatas($data);
 
         $newModel = new self($data);
@@ -100,7 +103,6 @@ class Visit extends BaseModel
 
         $this->statisticRecord($newModel, 'visit');
 
-        print_r($newModel);
         return $newModel;        
     }
 
@@ -125,31 +127,6 @@ class Visit extends BaseModel
         }
         return false;
     }
-
-
-    public function ssinsert($runValidation = true, $attributes = null)
-    {
-        $time = Yii::$app->params['currentTime'];
-        $day = date('Ymd', $time);
-        $hour = date('H', $time);
-        $attributes['created_at'] = $time;
-        $attributes['created_month'] = date('Ym', $time);
-        $attributes['created_day'] = date('Ymd', $time);
-        $attributes['created_hour'] = date('H', $time);
-        $attributes['created_week'] = date('W', $time);
-        $attributes['created_weekday'] = date('N', $time);
-        $attributes['ip'] = Yii::$app->getRequest()->getIP();
-        //$attributes['ip'] = '123.57.148.73';
-        $city = \common\components\IP::find($attributes['ip']);
-        $city = is_array($city) ? implode('-', $city) : $city;
-        $attributes['city'] = $city;
-
-        if (($primaryKeys = $this->getDb()->schema->insert($this->tableName(), $attributes)) === false) {
-            return false;
-        }
-
-        return $attributes;
-    }    
 
     public function getAttributeParams()
     {

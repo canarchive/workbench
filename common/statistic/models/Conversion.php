@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models\statistic;
+namespace common\statistic\models;
 
 use Yii;
 
@@ -19,7 +19,6 @@ class Conversion extends Visit
 
     public function successLog($data)
     {
-        $data = $this->_formatData($data);
         $session = Yii::$app->session;
         $spreadInfo = isset($session['session_spread_info']) ? $session['session_spread_info'] : [];
         $spreadInfo = !empty($spreadInfo) && time() - $spreadInfo['time'] < 1800 ? $spreadInfo : [];
@@ -28,11 +27,10 @@ class Conversion extends Visit
             unset($spreadInfo['time']);
         }
         $insertInfo = array_merge($spreadInfo, $data);
+        $insertInfo = $this->_formatData($insertInfo);
 
         $conversion = new self($insertInfo);
         $conversion->save();
-        //$newData = $conversion->insert(false, $insertInfo);
-        //$this->statisticRecord($newData, 'signup');
 
         return $conversion;
     }
