@@ -128,31 +128,6 @@ class Visit extends BaseModel
         return false;
     }
 
-
-    public function ssinsert($runValidation = true, $attributes = null)
-    {
-        $time = Yii::$app->params['currentTime'];
-        $day = date('Ymd', $time);
-        $hour = date('H', $time);
-        $attributes['created_at'] = $time;
-        $attributes['created_month'] = date('Ym', $time);
-        $attributes['created_day'] = date('Ymd', $time);
-        $attributes['created_hour'] = date('H', $time);
-        $attributes['created_week'] = date('W', $time);
-        $attributes['created_weekday'] = date('N', $time);
-        $attributes['ip'] = Yii::$app->getRequest()->getIP();
-        //$attributes['ip'] = '123.57.148.73';
-        $city = \common\components\IP::find($attributes['ip']);
-        $city = is_array($city) ? implode('-', $city) : $city;
-        $attributes['city'] = $city;
-
-        if (($primaryKeys = $this->getDb()->schema->insert($this->tableName(), $attributes)) === false) {
-            return false;
-        }
-
-        return $attributes;
-    }    
-
     public function getAttributeParams()
     {
         return [
