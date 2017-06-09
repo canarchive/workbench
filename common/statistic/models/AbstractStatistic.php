@@ -24,7 +24,6 @@ class AbstractStatistic extends SpreadModel
 
     public function recordData($data, $type)
     {
-        //print_R($data);print_R($this);exit();
         $validTypes = ['visit', 'signup'];
         if (!in_array($type, $this->validTypes)) {
             return false;
@@ -32,7 +31,8 @@ class AbstractStatistic extends SpreadModel
 
         $newData = [];
         foreach ($this->fieldInfos as $field) {
-            $newData[$field] = isset($data[$field]) ? $data[$field] : '';
+            $dValue = in_array($field, ['plan_id', 'unit_id']) ? 0 : '';
+            $newData[$field] = isset($data[$field]) ? $data[$field] : $dValue;
         }
         $mark = $this->getMark($newData);
         $info = $this->findOne(['mark' => $mark]);

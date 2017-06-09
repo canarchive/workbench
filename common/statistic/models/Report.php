@@ -38,7 +38,7 @@ class Report extends AbstractStatistic
         if (empty($info)) {
             $data['visit_num'] = $isSuccess ? 0 : 1;
             $data['visit_num_success'] = $isSuccess ? 1 : 0;
-            $info = $this->_newModel('statisticReport', true, $data);
+            $info = new self($data);
             $info->insert();
             return ;
         }
@@ -56,7 +56,7 @@ class Report extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour'];
+        $fields = ['sort', 'city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour'];
         return $fields;
     }
 }
