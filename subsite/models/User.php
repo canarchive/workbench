@@ -7,7 +7,7 @@ use yii\helpers\ArrayHelper;
 use common\components\sms\Smser;
 use common\models\SubsiteModel;
 use common\models\Company;
-use common\models\statistic\Conversion;
+use common\statistic\models\Conversion;
 
 class User extends SubsiteModel
 {
