@@ -9,8 +9,8 @@ class ServiceController extends AdminController
     use StatisticTrait;
     public $viewPrefix = '/';
     protected $viewCurrent = 'service';
-    protected $modelClass = 'common\models\statistic\ReportService';
-    protected $modelSearchClass = 'common\models\statistic\searchs\ReportService';
+    protected $modelClass = 'common\statistic\models\ReportService';
+    protected $modelSearchClass = 'common\statistic\models\searchs\ReportService';
     protected $showInfo = false;
 
     public function beforeAction($action)

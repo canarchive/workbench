@@ -9,8 +9,8 @@ class DispatchController extends AdminController
     use StatisticTrait;
     public $viewPrefix = '/';
     protected $viewCurrent = 'dispatch';
-    protected $modelClass = 'common\models\statistic\Dispatch';
-    protected $modelSearchClass = 'common\models\statistic\searchs\Dispatch';
+    protected $modelClass = 'common\statistic\models\Dispatch';
+    protected $modelSearchClass = 'common\statistic\models\searchs\Dispatch';
     protected $showInfo = false;
 
     public function beforeAction($action)
