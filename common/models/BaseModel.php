@@ -45,7 +45,7 @@ class BaseModel extends ActiveRecord
 
     protected function writeManagerLog()
     {
-        if (Yii::$app->id != 'app-backend' || Yii::$app->controller->id == 'site' || Yii::$app->controller->id == 'backend-upload') {
+        if (Yii::$app->id != 'app-backend' || in_array(Yii::$app->controller->id, ['entrance', 'site', 'backend-upload'])) {
             return true;
         }
 

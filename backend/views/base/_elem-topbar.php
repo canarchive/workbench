@@ -26,7 +26,7 @@ $roleName = isset($this->params['roleName']) ? $this->params['roleName'] : '操�
             <ul class="dropdown-menu">
                 <!--<li><a href="">Profile</a></li>-->
                 <li class="divider"></li>
-                <li><a href="<?= Yii::getAlias('@backendurl') . Url::to(['/site/logout']); ?>">退出</a></li>
+                <li><a href="<?= Yii::getAlias('@backendurl') . Url::to(['/entrance/logout']); ?>">退出</a></li>
             </ul>
         </div>
         <!-- user dropdown ends -->
