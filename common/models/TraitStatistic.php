@@ -2,8 +2,8 @@
 
 namespace common\models;
 
-use common\models\statistic\Visit;
-use common\models\statistic\Conversion;
+use common\statistic\models\Visit;
+use common\statistic\models\Conversion;
 
 trait TraitStatistic
 {
