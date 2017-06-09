@@ -4,6 +4,9 @@ namespace common\models;
 
 use common\statistic\models\Visit;
 use common\statistic\models\Conversion;
+use common\statistic\models\Report;
+use common\statistic\models\ReportService;
+use common\statistic\models\Keyword;
 
 trait TraitStatistic
 {
@@ -15,31 +18,24 @@ trait TraitStatistic
 
     public function statisticRecord($data, $type)
     {
-        return ;
         $keywordTypes = ['visit', 'signup'];
         if (in_array($type, $keywordTypes)) {
-            $keyword = $this->_newModel('statisticKeyword');
+            $keyword = new Keyword();
             //print_r($keyword);exit();
             $keyword->recordData($data, $type);
         }
 
         $reportTypes = ['visit', 'signup'];
         if (in_array($type, $reportTypes)) {
-            $report = $this->_newModel('statisticReport');
+            $report = new Report();
             $report->recordData($data, $type);
         }
 
         /*$reportServiceTypes = ['signup'];
         if (in_array($type, $reportServiceTypes)) {
-            $reportService = $this->_newModel('statisticReportService');
+            $reportService = new ReportService();
             $reportService->recordData($data, $type);
-		}
-
-        $dispatchTypes = ['dispatch'];
-        if (in_array($type, $dispatchTypes)) {
-            $dispatch = $this->_newModel('statisticDispatch');
-            $dispatch->recordData($data, $type);
-		}*/
+        }*/
     }
 
     public function getClientTypeInfos()
