@@ -9,6 +9,6 @@ class VisitController extends AdminController
 {
     public $viewPrefix = '/visit/';
     use ControllerTraitView;
-    protected $modelClass = 'common\models\statistic\Visit';
-    protected $modelSearchClass = 'common\models\statistic\searchs\Visit';
+    protected $modelClass = 'common\statistic\models\Visit';
+    protected $modelSearchClass = 'common\statistic\models\searchs\Visit';
 }
