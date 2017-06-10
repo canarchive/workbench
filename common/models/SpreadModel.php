@@ -3,15 +3,19 @@
 namespace common\models;
 
 use Yii;
-use yii\helpers\ArrayHelper;
 use spread\models\Attachment as AttachmentSpread;
 
-class SpreadModel extends MerchantSpreadModel
+class SpreadModel extends BaseModel
 {
     public static function getDb()
     {
         return Yii::$app->dbSpread;
     }    
+
+    public function getBehaviorCodes()
+    {
+        return ['merchant', 'service'];
+    }
 
 	protected function getAttachmentModel()
 	{
