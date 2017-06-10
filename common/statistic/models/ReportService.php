@@ -34,7 +34,7 @@ class ReportService extends AbstractStatistic
         $data['merchant_id'] = intval($data['merchant_id']);
         if (empty($info)) {
             $data['visit_num_success'] = 1;
-            $info = $this->_newModel('statisticReportService', true, $data);
+            $info = new self($data);
             $info->insert();
             return ;
         }
@@ -52,7 +52,7 @@ class ReportService extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['city_code', 'merchant_id', 'service_id', 'channel', 'created_month', 'created_week', 'created_weekday', 'created_day'];
+        $fields = ['sort', 'city_code', 'merchant_id', 'service_id', 'channel', 'created_month', 'created_week', 'created_weekday', 'created_day'];
         return $fields;
     }
 

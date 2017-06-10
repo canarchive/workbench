@@ -32,7 +32,7 @@ class Keyword extends AbstractStatistic
         if (empty($info)) {
             $data['visit_num'] = $isSuccess ? 0 : 1;
             $data['visit_num_success'] = $isSuccess ? 1 : 0;
-            $info = $this->_newModel('statisticKeyword', true, $data);
+            $info = new self($data);
             $info->insert();
             return ;
         }
@@ -50,7 +50,7 @@ class Keyword extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['merchant_id', 'city_code', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour', 'keyword', 'keyword_search'];
+        $fields = ['sort', 'merchant_id', 'city_code', 'client_type', 'channel', 'sem_account', 'plan_id', 'unit_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour', 'keyword', 'keyword_search'];
         return $fields;
     }
 }

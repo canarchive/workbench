@@ -31,6 +31,7 @@ class Conversion extends Visit
 
         $conversion = new self($insertInfo);
         $conversion->save();
+        $this->statisticRecord($conversion->toArray(), 'signup');
 
         return $conversion;
     }
