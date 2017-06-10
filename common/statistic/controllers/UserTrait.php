@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\subsite\controllers;
+namespace common\statistic\controllers;
 
 use Yii;
 
@@ -86,8 +86,8 @@ trait UserTrait
     {
         $modelClass = $this->modelClass;
         $modelBase = new $modelClass();
+        $tableInfos = $this->_tableInfos;
         //$tables = ['user_house', 'callback'];
-        $tables = ['callback'];
         $table = Yii::$app->request->post('table');
 
         if ($table == 'house') {
