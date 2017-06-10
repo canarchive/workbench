@@ -18,12 +18,9 @@ class User extends AuthBase
         return Yii::$app->dbMerchant;
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public static function tableName()
