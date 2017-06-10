@@ -20,12 +20,9 @@ class UserMerchant extends MerchantModel
         return '{{%user_merchant}}';
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()

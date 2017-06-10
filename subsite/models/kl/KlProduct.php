@@ -10,12 +10,9 @@ class KlProduct extends SubsiteModel
 {
     private $_productInfos;
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()

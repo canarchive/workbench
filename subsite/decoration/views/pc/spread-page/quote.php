@@ -22,7 +22,7 @@ $owners = $this->context->ownerInfos;
 <!--头部-->
 <div class="quote_header ">
     <a href="">
-        <img class="lf" src="<?= Yii::getAlias('@assetself'); ?>/rabbithouse/webrabbit/images/logo/<?= $this->context->merchantInfo['code']; ?>.png" alt=""/>
+        <img class="lf" src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/quote/<?= $this->context->merchantInfo['code']; ?>.png" alt=""/>
     </a>
     <ul class="">
         <li>
