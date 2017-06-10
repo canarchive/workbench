@@ -21,12 +21,9 @@ class Manager extends AuthBase
     public $oldpassword;
     public $password_new;
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     /*public function behaviors()
@@ -56,8 +53,8 @@ class Manager extends AuthBase
     public function scenarios()
     {
         return [
-            'create' => ['name', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
-            'update' => ['name', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
+            'create' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
+            'update' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
             'edit-info' => ['email', 'truename', 'mobile'],
             'edit-password' => ['oldpassword', 'password_new', 'password_new_repeat'],
         ];
