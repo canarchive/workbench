@@ -27,6 +27,11 @@ class BaseModel extends ActiveRecord
         print_r($return);exit();
     }
 
+    public function getBehaviorCodes()
+    {
+        return [];
+    }
+
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
