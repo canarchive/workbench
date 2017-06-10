@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\models;
+namespace common\models;
 
 use common\models\MerchantModel;
 
@@ -11,12 +11,9 @@ class Merchant extends MerchantModel
         return '{{%merchant}}';
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()

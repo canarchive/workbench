@@ -3,16 +3,19 @@
 namespace common\models;
 
 use Yii;
-use yii\helpers\ArrayHelper;
-use \merchant\models\Attachment As AttachmentMerchant;
-use merchant\models\Merchant;
+use merchant\models\Attachment As AttachmentMerchant;
 
-class MerchantModel extends MerchantSpreadModel
+class MerchantModel extends BaseModel
 {
     public static function getDb()
     {
         return Yii::$app->dbMerchant;
     }    
+
+    public function getBehaviorCodes()
+    {
+        return ['merchant', 'service'];
+    }
 
     protected function getAttachmentModel()
     {

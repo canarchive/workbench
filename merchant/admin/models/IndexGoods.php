@@ -12,14 +12,6 @@ class IndexGoods extends ShopModel
         return '{{%index_goods}}';
     }
 
-    public function behaviors()
-    {
-		$behaviors = [
-		    $this->timestampBehaviorComponent,
-		];
-		return $behaviors;
-    }
-
     public function rules()
     {
         return [

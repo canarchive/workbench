@@ -6,7 +6,7 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
-use yii\behaviors\TimestampBehavior;
+use common\behaviors\BehaviorHelper;
 use common\components\Pagination;
 
 class BaseModel extends ActiveRecord
@@ -16,15 +16,15 @@ class BaseModel extends ActiveRecord
     use TraitPHPExcel;
     use TraitStatistic;
 
-    protected function getTimestampBehaviorComponent($createField = 'created_at', $updateField = 'updated_at')
+    public function behaviors()
     {
-        return [
-            'class' => TimestampBehavior::className(),
-            'attributes' => [
-                ActiveRecord::EVENT_BEFORE_INSERT => [$createField, $updateField],
-                ActiveRecord::EVENT_BEFORE_UPDATE => [$updateField],
-            ],
-        ];
+        if (empty($this->behaviorCodes)) {
+            return [];
+        }
+
+        $return = BehaviorHelper::behaviors($this->className(), $this->behaviorCodes);
+        return $return;
+        print_r($return);exit();
     }
 
     public function afterSave($insert, $changedAttributes)

@@ -14,12 +14,9 @@ class Bank extends MerchantModel
         return '{{%bank}}';
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()

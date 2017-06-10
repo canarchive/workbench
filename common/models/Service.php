@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\models;
+namespace common\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -15,12 +15,9 @@ class Service extends MerchantModel
         return '{{%service}}';
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()

@@ -20,12 +20,9 @@ trait UserTrait
         return '{{%user}}';
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function attributeLabels()
@@ -44,7 +41,6 @@ trait UserTrait
             'service_id' => '客服',
             'service_num' => '客服数',
             'status' => '状态',
-            'status_input' => '状态',
             'invalid_status' => '无效原因',
             'callback_again' => '再次回访时间',
             'view_at' => '查看时间',
@@ -62,7 +58,6 @@ trait UserTrait
         $serviceInfo = !is_null($serviceId) ? $this->getServiceModel()->findOne($serviceId) : null;
         $serviceInfo = empty($serviceInfo) ? $this->getServiceModel()->getDispatchService(['merchant_id' => $data['merchant_id']]) : $serviceInfo;
 
-        $time = Yii::$app->params['currentTime'];
         $data['service_id'] = empty($serviceInfo) ? 1 : $serviceInfo->id;
         $data = $this->_formatData($data);
 
@@ -145,8 +140,6 @@ trait UserTrait
             $this->_sendSms($data, $decorationOwner->serviceInfo);
         }
 		$sDatas = $decorationOwner->toArray();
-		$sDatas['plan_id'] = 0;
-		$sDatas['unit_id'] = 0;
         $this->statisticRecord($sDatas, 'signup');
 
         return $decorationOwner;
@@ -282,59 +275,6 @@ trait UserTrait
 
 		return $infos;
 	}
-
-    public function getOutStatusInfos()
-    {
-        $datas = [
-            '' => '未知',
-            'out' => '外地',
-			'part' => '局部装修',
-			'small' => '50平米以下整装',
-			'shop' => '商铺',
-			'we_part' => '水电改造',
-			'soft' => '软装',
-        ];
-
-        return $datas;
-    }
-
-    public function getInvalidStatusInfos()
-    {
-        $datas = [
-            '' => '未知',
-            'no_call' => '空号',
-            'noneed' => '无需求',
-            'booked' => '已定好',
-            'no_test' => '测试',
-        ];
-
-        return $datas;
-    }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '' => '未回访',
-            'follow' => '跟进',
-            'follow-plan' => '期房跟进',
-			'valid' => '有效',
-			'valid-part' => '有效-局装',
-			'valid-out' => '承接范围外-无效',
-            //'valid-dispatch' => '已派单',
-            'bad' => '废单',
-        ];
-        return $datas;
-    }
-
-    public function getCallbackAgainInfos()
-    {
-        $datas = [
-            0 => '',
-            1 => '再次回访',
-        ];
-
-        return $datas;
-    }
 
     protected function getCompanyInfos()
     {
