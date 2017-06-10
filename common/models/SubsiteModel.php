@@ -3,16 +3,19 @@
 namespace common\models;
 
 use Yii;
-use yii\helpers\ArrayHelper;
-use spread\models\Attachment as AttachmentSubsite;
-use merchant\models\Merchant;
+use subsite\models\Attachment as AttachmentSubsite;
 
-class SubsiteModel extends MerchantSpreadModel
+class SubsiteModel extends BaseModel
 {
     public static function getDb()
     {
         return Yii::$app->dbSubsite;
     }    
+
+    public function getBehaviorCodes()
+    {
+        return ['merchant', 'service'];
+    }
 
 	protected function getAttachmentModel()
 	{
