@@ -5,7 +5,7 @@ namespace spread\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\models\Company;
-use common\statistic\models\Visit;
+use baseapp\statistic\models\Visit;
 
 class Spreadurl extends BaseModel
 {
