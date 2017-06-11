@@ -6,8 +6,9 @@ use Yii;
 use yii\db\ActiveRecord;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
-use common\behaviors\BehaviorHelper;
 use common\components\Pagination;
+use baseapp\behaviors\BehaviorHelper;
+use baseapp\statistic\models\TraitStatistic;
 
 class BaseModel extends ActiveRecord
 {

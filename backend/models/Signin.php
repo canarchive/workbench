@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use common\models\PassportModel;
-use common\auth\models\SigninTrait;
+use baseapp\auth\models\SigninTrait;
 
 class Signin extends PassportModel
 {
