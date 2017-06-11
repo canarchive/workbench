@@ -3,7 +3,7 @@
 namespace subsite\models;
 
 use common\models\SubsiteModel;
-use common\models\Merchant;
+use baseapp\merchant\models\Merchant;
 
 class Guestbook extends SubsiteModel
 {

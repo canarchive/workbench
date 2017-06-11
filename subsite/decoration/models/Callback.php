@@ -3,7 +3,7 @@
 namespace subsite\decoration\models;
 
 use common\models\SubsiteModel;
-use common\statistic\models\CallbackTrait;
+use baseapp\merchant\models\CallbackTrait;
 
 class Callback extends SubsiteModel
 {
