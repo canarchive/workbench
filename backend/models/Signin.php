@@ -2,7 +2,7 @@
 
 namespace backend\models;
 
-use common\models\PassportModel;
+use baseapp\passport\models\PassportModel;
 use baseapp\auth\models\SigninTrait;
 
 class Signin extends PassportModel

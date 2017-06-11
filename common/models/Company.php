@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 use common\components\IP;
 use Overtrue\Pinyin\Pinyin;
-use common\models\PassportModel;
+use baseapp\passport\models\PassportModel;
 
 class Company extends PassportModel
 {

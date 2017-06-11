@@ -1,8 +1,9 @@
 <?php
 
-namespace common\models;
+namespace baseapp\spread\models;
 
 use Yii;
+use common\models\BaseModel;
 use spread\models\Attachment as AttachmentSpread;
 
 class SpreadModel extends BaseModel

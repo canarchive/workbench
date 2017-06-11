@@ -3,7 +3,7 @@
 namespace baseapp\statistic\models;
 
 use Yii;
-use common\models\SpreadModel;
+use baseapp\spread\models\SpreadModel;
 use yii\helpers\ArrayHelper;
 use spread\models\Planfee;
 
