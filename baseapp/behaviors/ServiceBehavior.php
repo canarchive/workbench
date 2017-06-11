@@ -14,7 +14,7 @@ class ServiceBehavior extends Behavior
         return $infos;
     }
 
-    protected function getServiceInfo()
+    public function getServiceInfo()
     {
         if (!isset($this->service_id) || empty($this->service_id)) {
             return [];
@@ -24,7 +24,7 @@ class ServiceBehavior extends Behavior
         return $info;
     }
 
-    protected function getServiceModel($forceNew = false)
+    public function getServiceModel($forceNew = false)
     {
         static $model;
         if (is_null($model) || $forceNew) {

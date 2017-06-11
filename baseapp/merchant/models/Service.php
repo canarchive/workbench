@@ -1,9 +1,10 @@
 <?php
 
-namespace baseapp\models;
+namespace baseapp\merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use merchant\models\User;
 
 class Service extends MerchantModel
 {
