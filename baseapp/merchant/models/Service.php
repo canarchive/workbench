@@ -71,6 +71,7 @@ class Service extends MerchantModel
 		$where = array_merge($where, ['status' => 1]);
         $orderBy = ['distributed_at' => SORT_ASC];
         $info = self::find()->where($where)->orderBy($orderBy)->one();
+        $info = empty($info) ? self::findOne(1) : $info;
 
         return $info;
     }
@@ -114,6 +115,10 @@ class Service extends MerchantModel
 
     public function afterSave($insert, $changedAttributes)
     {
+        if (empty($insert)) {
+            return true;
+        }
+
         parent::afterSave($insert, $changedAttributes);
 
         $user = new User();

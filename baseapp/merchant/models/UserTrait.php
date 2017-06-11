@@ -68,7 +68,7 @@ trait UserTrait
         return $newModel;
     }
 
-    public function _getDatasForFormat()
+    public function _baseDatasForFormat()
     {
         $datas = [
             'conversion_id' => ['default' => 0],
@@ -82,7 +82,6 @@ trait UserTrait
             'service_num' => ['default' => 0],
             'status' => ['default' => ''],
             'invalid_status' => ['default' => ''],
-            'status_input' => ['default' => ''],
             'callback_again' => ['default' => 0],
             'view_at' => ['default' => 0],
             'signup_at' => ['default' => Yii::$app->params['currentTime']],

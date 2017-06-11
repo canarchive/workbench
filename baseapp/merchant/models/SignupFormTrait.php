@@ -20,11 +20,8 @@ trait SignupFormTrait
     public $userModel;
     public $userInfo;
 	public $merchantInfo = [];
-    public $existOwner;
+    public $existUser;
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -32,7 +29,7 @@ trait SignupFormTrait
             [['mobile'], 'required'],
             ['mobile', 'common\validators\MobileValidator'],
             //[['city_input', 'area_input'], 'default', 'value' => ''],
-            [['cid', 'city_input', 'area_input', 'message', 'position', 'note'], 'safe'],
+            [['cid', 'message', 'position', 'note'], 'safe'],
         ];
     }
 
@@ -63,13 +60,13 @@ trait SignupFormTrait
             'message' => strip_tags($this->message),
         ]);
 
-        $infoExist = $this->getUserModel()->findOne(['merchant_id' => $dataBase['merchant_id'], 'mobile' => $this->mobile]);
+        $infoExist = false;//$this->getUserModel()->findOne(['merchant_id' => $dataBase['merchant_id'], 'mobile' => $this->mobile]);
         if ($infoExist) {
             $infoExist->signup_at = Yii::$app->params['currentTime'];
             $infoExist->signup_num = $infoExist->signup_num + 1;
             $infoExist->update(false);
             $this->addError('error', '您的手机号已报名成功');
-            $this->existOwner = true;
+            $this->existUser = true;
             return false;
         }
 
@@ -113,72 +110,18 @@ trait SignupFormTrait
             $this->addError('error', '信息有误');
             return false;
         }
-
-        return true;
-    }
-
-    protected function sendSms($data)
-    {
-        $mobile = $data['mobile'];
-		$message = isset($this->merchantInfo['msg']) ? $this->merchantInfo['msg'] : '';
-		if (empty($message)) {
-            $siteName = Yii::$app->params['siteNameBase'];
-            $hotline = Yii::$app->params['siteHotline'];
-            $message = "您已成功预约，装修顾问会在15分钟内回访了解您的具体装修需求，请保持您的电话畅通，详情咨询{$hotline}【{$siteName}】";
-		}
-
-        $smser = new Smser();
-        $smser->send($mobile, $message, 'decoration_signup');
-        
-        return true;
-    }
-
-    protected function sendSmsService($data, $employee)
-    {
-		if (empty($this->merchantInfo) || $employee['status_sendmsg'] == 0) {
-			return ;
-		}
-
-        $mobile = $employee['mobile'];
-		$signStr = !isset($this->merchantInfo->name) ? '' : "【{$this->merchantInfo->name}】";
-		$content = "有业主：{$data['name']}，电话：{$data['mobile']}，咨询您公司的家装业务，请立即回访【兔班长装修网】";
-        //$content = "业主家装报名：{$data['name']}，电话：{$data['mobile']}，请立即回访{$signStr}";
-
-        $smser = new Smser();
-        $smser->send($mobile, $content, 'decoration_service');
-		if ($employee['status_sendmsg'] == 2 && !empty($employee['mobile_ext'])) {
-            $smser->send($employee['mobile_ext'], $content, 'decoration_service');
-		}
-        
-        return true;
-    }
-
-    public function _getQuoteInfo($area, $priceRate = 2)
-    {
-        $quote = new QuoteHouse(); 
-        $info = $quote->getResult($area, $priceRate);
-        return $info;
-    }
-
-    public function _getPushData($data)
-    {
-
-        $fields = ['signup_at', 'name', 'mobile', 'city_input', 'channel', 'area_input', 'keyword', 'signup_city', 'note', 'signup_ip'];
-        $datas = [];
-        foreach ($fields as $field) {
-            $datas[$field] = $data[$field];
+        $ext = $this->validateExt();
+        if (!$ext) {
+            $this->addError('error', '信息有误1');
+            return false;
         }
-        $url = 'http://www.jzjz.com/cms/api/user/jz?';
-        $url .= http_build_query($datas);
-        $r = file_get_contents($url);
-        
+
         return true;
     }
 
-    public function getMerchantInfo($id)
+    protected function validateExt()
     {
-        $info = Merchant::findOne($id);
-        return $info;
+        return true;
     }
 
     public function getUserModel($returnNew = false)
