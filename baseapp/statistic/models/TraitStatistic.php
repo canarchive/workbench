@@ -2,11 +2,11 @@
 
 namespace common\models;
 
-use common\statistic\models\Visit;
-use common\statistic\models\Conversion;
-use common\statistic\models\Report;
-use common\statistic\models\ReportService;
-use common\statistic\models\Keyword;
+use baseapp\statistic\models\Visit;
+use baseapp\statistic\models\Conversion;
+use baseapp\statistic\models\Report;
+use baseapp\statistic\models\ReportService;
+use baseapp\statistic\models\Keyword;
 
 trait TraitStatistic
 {

@@ -1,8 +1,6 @@
 <?php
 
-namespace common\models;
-
-use common\models\MerchantModel;
+namespace baseapp\models;
 
 class Merchant extends MerchantModel
 {

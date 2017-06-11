@@ -1,5 +1,5 @@
 <?php
-namespace common\auth\controllers;
+namespace baseapp\auth\controllers;
 
 use Yii;
 

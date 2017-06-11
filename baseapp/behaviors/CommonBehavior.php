@@ -1,6 +1,6 @@
 <?php
 
-namespace common\behaviors;
+namespace baseapp\behaviors;
 
 use yii\base\Behavior;
 //use website\models\Category;

@@ -1,10 +1,10 @@
 <?php
 
-namespace common\behaviors;
+namespace baseapp\behaviors;
 
 use yii\base\Behavior;
 use yii\helpers\ArrayHelper;
-use common\models\Merchant;
+use baseapp\merchant\models\Merchant;
 
 class MerchantBehavior extends Behavior
 {

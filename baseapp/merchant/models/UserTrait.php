@@ -1,12 +1,12 @@
 <?php
 
-namespace common\statistic\models;
+namespace baseapp\merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
 use common\components\sms\Smser;
 use common\models\Company;
-use common\statistic\models\Conversion;
+use baseapp\statistic\models\Conversion;
 
 trait UserTrait
 {

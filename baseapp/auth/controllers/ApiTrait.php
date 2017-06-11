@@ -1,15 +1,11 @@
 <?php
-namespace merchant\controllers;
+namespace baseapp\auth\controllers;
 
 use Yii;
 use yii\web\BadRequestHttpException;
-use merchant\components\Controller as MerchantController;
 use merchant\models\User;
 
-/**
- * Site controller
- */
-class ApiController extends MerchantController
+trait ApiTrait
 {
     public function init()
     {

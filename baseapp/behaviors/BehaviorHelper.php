@@ -1,6 +1,6 @@
 <?php
 
-namespace common\behaviors;
+namespace baseapp\behaviors;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
@@ -38,7 +38,7 @@ class BehaviorHelper
         }
 
         $class = ucfirst($code);
-        $class = "\common\behaviors\\{$class}Behavior";
+        $class = "\baseapp\behaviors\\{$class}Behavior";
         $behavior = empty($params) ? ['class' => $class] : ['class' => $class, $params];
         return $behavior;
     }

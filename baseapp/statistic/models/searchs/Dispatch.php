@@ -1,9 +1,9 @@
 <?php
 
-namespace common\statistic\models\searchs;
+namespace baseapp\statistic\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use common\statistic\models\Dispatch as DispatchModel;
+use baseapp\statistic\models\Dispatch as DispatchModel;
 
 class Dispatch extends DispatchModel
 {

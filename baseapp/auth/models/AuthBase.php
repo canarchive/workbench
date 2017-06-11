@@ -1,10 +1,11 @@
 <?php
-namespace common\models;
+namespace baseapp\models;
 
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\web\IdentityInterface;
+use baseapp\passport\models\PassportModel;
 
 /**
  * Auth base model

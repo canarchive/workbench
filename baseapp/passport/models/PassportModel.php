@@ -1,8 +1,10 @@
 <?php
 
-namespace common\models;
+namespace baseapp\passport\models;
 
 use Yii;
+use common\models\BaseModel;
+use common\models\AttachmentCommon;
 
 class PassportModel extends BaseModel
 {

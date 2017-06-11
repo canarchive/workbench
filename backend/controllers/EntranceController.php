@@ -5,7 +5,7 @@ use Yii;
 use yii\filters\AccessControl;
 use backend\models\Signin;
 use backend\components\AdminController;
-use common\auth\controllers\EntranceTrait;
+use baseapp\auth\controllers\EntranceTrait;
 
 class EntranceController extends AdminController
 {

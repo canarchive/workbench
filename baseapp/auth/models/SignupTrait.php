@@ -1,6 +1,6 @@
 <?php
 
-namespace common\auth\models;
+namespace baseapp\auth\models;
 
 trait SignupTrait
 {

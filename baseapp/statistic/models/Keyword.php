@@ -1,6 +1,6 @@
 <?php
 
-namespace common\statistic\models;
+namespace baseapp\statistic\models;
 
 class Keyword extends AbstractStatistic
 {
