@@ -10,12 +10,13 @@ class MerchantBehavior extends Behavior
 {
     protected function getMerchantInfo()
     {
-        if (empty($this->merchant_id)) {
+        $merchantId = $this->owner->merchant_id;
+        if (empty($merchantId)) {
             return [];
         }
 
         $model = new Merchant();
-        $info = $model->findOne($this->merchant_id);
+        $info = $model->findOne($merchantId);
         return $info;
     }
 
