@@ -1,14 +1,14 @@
 <?php
-namespace subsite\decoration\models;
+namespace baseapp\merchant\models;
 
 use Yii;
 use yii\base\Model;
 use common\components\sms\Smser;
-use merchant\models\Merchant;
-use baseapp\statistic\models\Conversion;
 use common\models\QuoteHouse;
+use baseapp\merchant\models\Merchant;
+use baseapp\statistic\models\Conversion;
 
-class SignupForm extends Model
+trait SignupFormTrait
 {
     public $cid;
     public $mobile;
@@ -16,12 +16,9 @@ class SignupForm extends Model
     public $message;
     public $position;
     public $note;
-    public $city_input;
-    public $area_input;
     public $isMobile;
     public $userModel;
     public $userInfo;
-    public $quoteInfo = [];
 	public $merchantInfo = [];
     public $existOwner;
 
@@ -66,7 +63,7 @@ class SignupForm extends Model
             'message' => strip_tags($this->message),
         ]);
 
-        $infoExist = User::findOne(['merchant_id' => $dataBase['merchant_id'], 'mobile' => $this->mobile]);
+        $infoExist = $this->getUserModel()->findOne(['merchant_id' => $dataBase['merchant_id'], 'mobile' => $this->mobile]);
         if ($infoExist) {
             $infoExist->signup_at = Yii::$app->params['currentTime'];
             $infoExist->signup_num = $infoExist->signup_num + 1;
@@ -90,7 +87,7 @@ class SignupForm extends Model
             $this->quoteInfo = $this->_getQuoteInfo($this->area_input, $priceRate);
         }
 
-        $userModel = new User();
+        $userModel = $this->getUserModel(true);
         $userInfo = $userModel->addUser($data);
         if (!$userInfo) {
             $this->addError('mobile', '报名失败，请您重新报名');
@@ -182,5 +179,9 @@ class SignupForm extends Model
     {
         $info = Merchant::findOne($id);
         return $info;
+    }
+
+    public function getUserModel($returnNew = false)
+    {
     }
 }

@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
-use common\models\AuthBase;
+use baseapp\auth\models\AuthBase;
 
 /**
  * This is the model class for table "manager".

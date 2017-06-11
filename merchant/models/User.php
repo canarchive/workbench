@@ -4,7 +4,8 @@ namespace merchant\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use common\models\AuthBase;
+use baseapp\auth\models\AuthBase;
+use baseapp\merchant\models\Merchant;
 
 class User extends AuthBase
 {

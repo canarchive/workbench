@@ -3,7 +3,7 @@
 namespace spread\models;
 
 use Yii;
-use common\models\SpreadModel;
+use baseapp\spread\models\SpreadModel;
 
 class BaseModel extends SpreadModel
 {

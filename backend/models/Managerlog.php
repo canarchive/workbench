@@ -2,7 +2,7 @@
 
 namespace backend\models;
 
-use common\models\PassportModel;
+use baseapp\passport\models\PassportModel;
 
 class Managerlog extends PassportModel
 {

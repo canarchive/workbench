@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace baseapp\statistic\models;
 
 use baseapp\statistic\models\Visit;
 use baseapp\statistic\models\Conversion;

@@ -3,7 +3,7 @@
 namespace merchant\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use merchant\models\Service as ServiceModel;
+use baseapp\merchant\models\Service as ServiceModel;
 
 class Service extends ServiceModel
 {

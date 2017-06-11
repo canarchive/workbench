@@ -9,6 +9,6 @@ class ConversionController extends AdminController
 {
     public $viewPrefix = '/conversion/';
     use ControllerTraitView;
-    protected $modelClass = 'common\statistic\models\Conversion';
-    protected $modelSearchClass = 'common\statistic\models\searchs\Conversion';
+    protected $modelClass = 'baseapp\statistic\models\Conversion';
+    protected $modelSearchClass = 'baseapp\statistic\models\searchs\Conversion';
 }

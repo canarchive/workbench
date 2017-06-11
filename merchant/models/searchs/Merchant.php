@@ -5,7 +5,7 @@ namespace merchant\models\searchs;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use merchant\models\Merchant as MerchantModel;
+use baseapp\merchant\models\Merchant as MerchantModel;
 
 class Merchant extends MerchantModel
 {
