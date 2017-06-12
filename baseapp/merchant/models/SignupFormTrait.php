@@ -11,6 +11,7 @@ trait SignupFormTrait
     public $isMobile;
     public $existUser;
     public $inputFieldExts = [];
+    public $_intFields = ['cid'];
 
     public static function tableName()
     {
@@ -19,7 +20,7 @@ trait SignupFormTrait
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['smsSignup']);
+        return array_merge(parent::getBehaviorCodes(), ['smsSignup', 'merchant']);
     }
 
     /**
@@ -59,8 +60,8 @@ trait SignupFormTrait
         $serviceInfo = $userInfo->dealService();
         $userInfo->updateAfterInsert($conversionInfo);
 
-        $this->sendSms($userInfo->merchantInfo, $datas['mobile']);
-        $this->sendSmsService($userInfo->merchantInfo, $datas, $serviceInfo);
+        $this->sendSms($userInfo->merchantInfoPoint($userInfo->merchant_id), $datas['mobile']);
+        $this->sendSmsService($userInfo->merchantInfoPoint($userInfo->merchant_id), $datas, $serviceInfo);
         return ['status' => 200, 'message' => 'OK'];
     }
 
@@ -73,18 +74,38 @@ trait SignupFormTrait
 
         $datas = [];
         foreach ($inputFields as $field) {
-            $datas[$field] = trim(strip_tags(Yii::$app->request->post($field)));
+            $value = trim(strip_tags(Yii::$app->request->post($field)));
+            $datas[$field] = in_array($field, $this->_intFields) ? intval($value) : $value;
+            //$datas[$field] = trim(strip_tags(Yii::$app->request->get($field)));
         }
 
         $datas['merchant_id'] = intval($datas['cid']);
         $datas['client_type'] = $this->isMobile ? 'h5' : 'pc';
+        //print_R($datas);exit();
         $this->_datas = $datas;
-        return $datas;
+        return ;
     }
 
     protected function validateDatas()
     {
+        $mobile = $this->_datas['mobile'];
+        $check = $this->checkMobile($this->_datas['mobile']);
+        if ($check !== true) {
+            $this->addError('error', $check['message']);
+            return false;
+        }
         return true;
+    }
+
+    protected function _formatFailResult()
+    {
+        $errors = $this->getFirstErrors('error');
+        $message = isset($errors['error']) ? $errors['error'] : '报名失败，请您重试！';
+        $data = [
+            'status' => $this->existUser ? '200' : '400',
+            'message' => $message,
+        ];
+        return $data;
     }
 
     public function getUserModel($returnNew = false)

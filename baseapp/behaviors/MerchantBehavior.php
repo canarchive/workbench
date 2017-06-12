@@ -8,24 +8,25 @@ use baseapp\merchant\models\Merchant;
 
 class MerchantBehavior extends Behavior
 {
-    protected function getMerchantInfo()
+    public function getMerchantInfo()
     {
         $merchantId = $this->owner->merchant_id;
         if (empty($merchantId)) {
             return [];
         }
 
-        return $this->merchantInfoByWhere(['id' => $merchantId]);
+        return $this->merchantInfoPoint($merchantId);
     }
 
-    protected function merchantInfoByWhere($where)
+    public function merchantInfoPoint($where)
     {
         $model = new Merchant();
+        $where = is_array($where) ? $where : ['id' => $where];
         $info = $model->find()->where($where)->one();
         return $info;
     }
 
-    protected function getMerchantInfos()
+    public function getMerchantInfos()
     {
         $infos = ArrayHelper::map(Merchant::find()->select('id, name')->all(), 'id', 'name');
         return $infos;
