@@ -4,7 +4,6 @@ namespace backend\models;
 
 use Yii;
 use yii\db\ActiveRecord;
-use yii\behaviors\TimestampBehavior;
 use baseapp\auth\models\AuthBase;
 
 /**
@@ -25,19 +24,6 @@ class Manager extends AuthBase
     {
         return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
-
-    /*public function behaviors()
-    {
-        return [
-            [
-                'class' => TimestampBehavior::className(),
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'last_time'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => ['last_time'],
-                ],
-            ],
-        ];
-    }*/
 
     /**
      * @inheritdoc

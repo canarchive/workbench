@@ -15,8 +15,13 @@ class MerchantBehavior extends Behavior
             return [];
         }
 
+        return $this->merchantInfoByWhere(['id' => $merchantId]);
+    }
+
+    protected function merchantInfoByWhere($where)
+    {
         $model = new Merchant();
-        $info = $model->findOne($merchantId);
+        $info = $model->find()->where($where)->one();
         return $info;
     }
 
