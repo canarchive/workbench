@@ -19,11 +19,9 @@ class BaseModel extends ActiveRecord
 
     public function behaviors()
     {
-        if (empty($this->behaviorCodes)) {
-            return [];
-        }
+        $behaviorCodes = array_merge(['validator'], $this->behaviorCodes);
 
-        $return = BehaviorHelper::behaviors($this->className(), $this->behaviorCodes);
+        $return = BehaviorHelper::behaviors($this->className(), $behaviorCodes);
         return $return;
     }
 
