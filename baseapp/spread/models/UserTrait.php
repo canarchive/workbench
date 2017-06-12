@@ -21,7 +21,7 @@ trait UserTrait
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'merchant', 'service']);
+        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'merchant', 'service', 'smsSignup']);
     }
 
     public function attributeLabels()
@@ -105,14 +105,17 @@ trait UserTrait
 
     public function addHandle($statusInput = 'admin')
     {
-        $validator = new \common\validators\MobileValidator();
-        $valid =  $validator->validate($this->mobile);
-        if (empty($valid)) {
-            $this->addError('mobile', '手机号有误');
+        $check = $this->checkMobile($this->mobile);
+        if ($check !== true) {
+            $this->addError('mobile', $check['message']);
             return false;
         }
-        $this->merchant_id = empty($this->merchant_id) ? 2 : $this->merchant_id;
+        if (empty($this->merchant_id)) {
+            $this->addError('merchant_id', '请选择商家');
+            return false;
+        }
 
+        $this->merchant_id = empty($this->merchant_id) ? 2 : $this->merchant_id;
         $exist = self::findOne(['merchant_id' => $this->merchant_id, 'mobile' => $this->mobile]);
         if ($exist) {
             $this->addError('mobile', '手机号已存在');
@@ -129,21 +132,20 @@ trait UserTrait
             'note' => $this->note,
             'message' => $this->message,
 			'status_input' => $statusInput,
-            'area_input' => intval($this->area),
-            'city_input' => $this->city_input,
         ];
+        $data = array_merge($data, $this->handleFieldExts());
 
         $conversion = $this->conversionSuccessLog($data);
-        //$serviceId = $this->service_id ? $this->service_id : null;
-        $decorationOwner = $this->addUser($data);
+        $data['conversion_id'] = $conversion->id;
+        $newUser = $this->addUser($data);
 
         if (!empty($this->merchant_id)) {
-            $this->_sendSms($data, $decorationOwner->serviceInfo);
+            $this->_sendSms($data, $newUser->serviceInfo);
         }
-		$sDatas = $decorationOwner->toArray();
+		$sDatas = $conversion->toArray();
         $this->statisticRecord($sDatas, 'signup');
 
-        return $decorationOwner;
+        return $newUser;
     }
 
     public function dealService()
