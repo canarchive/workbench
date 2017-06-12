@@ -1,6 +1,6 @@
 <?php
 
-namespace baseapp\merchant\controllers;
+namespace baseapp\spread\controllers;
 
 use Yii;
 
