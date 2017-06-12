@@ -26,16 +26,14 @@ class SpreadPageController extends Controller
             return $this->redirect('/')->send();
         }
         $tInfo = $tInfos[$code];
-        $signupForm = new SignupForm();
+        $model = new SignupForm();
 		$cid = (int) Yii::$app->request->get('cid', 2);
-        $this->merchantInfo = $signupForm->getMerchantInfo($cid);
-        if (empty($this->merchantInfo)) {
-            $this->merchantInfo = $signupForm->getMerchantInfo(2);
-        }
+        $merchantInfo = $model->merchantInfoPoint($cid);
+        $this->merchantInfo = empty($merchantInfo) ? $model->merchantInfoByWhere(2) : $merchantInfo;
 
         $datas = [
             'code' => $code,
-            'model' => $signupForm,
+            'model' => $model,
         ];
         $this->layout = 'main';
 

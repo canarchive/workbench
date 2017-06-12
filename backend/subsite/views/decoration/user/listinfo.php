@@ -29,6 +29,8 @@ $columnsBase = [
         },
     ],
     'channel',
+    'city_input',
+    'area_input',
     [
         'attribute' => 'signup_at',
         'value'=> function($model){

@@ -2050,7 +2050,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 mobile: mobile,
                 note: tjjj_name,
                 //house_areaflag: house_areaflag,
-                select_city: select_city,
+                city_input: select_city,
                 shop_id: shop_id,
                 type: type
             };

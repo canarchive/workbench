@@ -69,6 +69,8 @@ $tableName = 'user';
                 <table class="table table-striped table-bordered responsive">
                     <thead>
                     <tr>
+                        <th><?= $model->getAttributeLabel('city_input'); ?></th>
+                        <th><?= $model->getAttributeLabel('area_input'); ?></th>
                         <th><?= $model->getAttributeLabel('status'); ?></th>
                         <th><?= $model->getAttributeLabel('invalid_status'); ?></th>
                         <th><?= $model->getAttributeLabel('callback_again'); ?></th>
@@ -77,6 +79,8 @@ $tableName = 'user';
                     </thead>
                     <tbody>
                     <tr>
+                        <td><?= $model->city_input; ?></td>
+                        <td><?= $model->area_input; ?></td>
                         <td>
                         <?= Html::dropDownList(
                             "status",

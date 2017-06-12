@@ -10,6 +10,16 @@ class User extends SubsiteModel
     use ModelTrait;
     use UserTrait;
 
+    public function _getDatasForFormat()
+    {
+        $datas = [
+            'area_input' => ['default' => 0],
+            'city_input' => ['default' => '']
+        ];
+        $return = array_merge($this->_baseDatasForFormat(), $datas);
+        return $return;
+    }
+
     public function getOutStatusInfos()
     {
         $datas = [
@@ -51,5 +61,27 @@ class User extends SubsiteModel
             'bad' => '废单',
         ];
         return $datas;
+    }
+
+    public function _getQuoteInfo($area, $priceRate = 2)
+    {
+        $quote = new QuoteHouse(); 
+        $info = $quote->getResult($area, $priceRate);
+        return $info;
+    }
+
+    public function _getPushData($data)
+    {
+
+        $fields = ['signup_at', 'name', 'mobile', 'city_input', 'channel', 'area_input', 'keyword', 'signup_city', 'note', 'signup_ip'];
+        $datas = [];
+        foreach ($fields as $field) {
+            $datas[$field] = $data[$field];
+        }
+        $url = 'http://www.jzjz.com/cms/api/user/jz?';
+        $url .= http_build_query($datas);
+        $r = file_get_contents($url);
+        
+        return true;
     }
 }
