@@ -25,12 +25,11 @@ class BaseModel extends ActiveRecord
 
         $return = BehaviorHelper::behaviors($this->className(), $this->behaviorCodes);
         return $return;
-        print_r($return);exit();
     }
 
     public function getBehaviorCodes()
     {
-        return [];
+        return ['validator'];
     }
 
     public function afterSave($insert, $changedAttributes)
@@ -84,34 +83,6 @@ class BaseModel extends ActiveRecord
         $managerlogModel = new \backend\models\Managerlog($infos);
         Yii::$app->params['managerlogModel'] = $managerlogModel;
         $managerlogModel->insert();
-
-        return true;
-    }
-
-    public function checkMobile($mobile)
-    {
-        $validator = new \common\validators\MobileValidator();
-        $valid =  $validator->validate($mobile);
-        if (empty($valid)) {
-            return ['status' => 400, 'message' => '手机号码格式有误'];
-        }
-
-        return true;
-    }
-
-    /**
-     * 验证邮箱格式
-     *
-     * @param $email string
-     * @return boolean
-     */
-    public function checkEmail($email)
-    {
-        $validator = new \yii\validators\EmailValidator();
-        $valid =  $validator->validate($email);
-        if (empty($valid)) {
-            return ['status' => 400, 'message' => '邮箱有误'];
-        }
 
         return true;
     }

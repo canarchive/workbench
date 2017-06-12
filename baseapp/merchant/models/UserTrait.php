@@ -61,7 +61,10 @@ trait UserTrait
         $data = $this->_formatData($data);
 
         $newModel = $this->_newModel('user', true, $data);
-        $newModel->save();
+        $insert = $newModel->save();
+        if (empty($insert)) {
+            return false;
+        }
         $newModel->serviceInfo = $serviceInfo;
 
         return $newModel;
@@ -126,7 +129,7 @@ trait UserTrait
             'note' => $this->note,
             'message' => $this->message,
 			'status_input' => $statusInput,
-            'area_input' => $this->area,
+            'area_input' => intval($this->area),
             'city_input' => $this->city_input,
         ];
 
