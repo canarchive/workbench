@@ -1,6 +1,6 @@
 <?php
 
-namespace baseapp\merchant\models;
+namespace baseapp\spread\models;
 
 trait CallbackTrait
 {

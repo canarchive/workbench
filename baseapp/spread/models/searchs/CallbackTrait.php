@@ -1,6 +1,6 @@
 <?php
 
-namespace baseapp\merchant\models\searchs;
+namespace baseapp\spread\models\searchs;
 
 use yii\data\ActiveDataProvider;
 
