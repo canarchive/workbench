@@ -3,7 +3,7 @@ namespace subsite\decoration\models;
 
 use common\models\BaseModel;
 use common\models\QuoteHouse;
-use baseapp\merchant\models\SignupFormTrait;
+use baseapp\spread\models\SignupFormTrait;
 
 class SignupForm extends BaseModel
 {

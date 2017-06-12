@@ -3,7 +3,7 @@
 namespace subsite\decoration\models;
 
 use common\models\SubsiteModel;
-use baseapp\merchant\models\UserTrait;
+use baseapp\spread\models\UserTrait;
 
 class User extends SubsiteModel
 {
