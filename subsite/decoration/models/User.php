@@ -10,6 +10,14 @@ class User extends SubsiteModel
     use ModelTrait;
     use UserTrait;
 
+    public function handleFieldExts()
+    {
+        return [
+            'area_input' => intval($this->area_input),
+            'city_input' => $this->city_input,
+        ];
+    }
+
     public function _getDatasForFormat()
     {
         $datas = [
@@ -83,5 +91,35 @@ class User extends SubsiteModel
         $r = file_get_contents($url);
         
         return true;
+    }
+
+    public function sendSmsValid($data, $userInfo)
+    {
+        $merchantId = $data->merchant_id;
+        if (empty($merchantId)) {
+            return ;
+        }
+        $noticeMobiles = [
+            '667' => '17316278360',
+            '671' => '15110125766',
+			'682' => '18600063835',
+			'669' => '13717716106',//'13581522034',
+			'684' => '18614242810',
+			'686' => '15801558634',
+        ];
+        $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
+        if (empty($mobile)) {
+            return ;
+        }
+
+        $houseInfo = $this->_newModel('house', true)->findOne($data->house_id);
+        if (empty($houseInfo)) {
+            return ;
+        }
+        $houseType = isset($houseInfo->houseTypeInfos[$houseInfo->house_type]) ? $houseInfo->houseTypeInfos[$houseInfo->house_type] : '';
+        $houseSort = isset($houseInfo->houseSortInfos[$houseInfo->house_sort]) ? $houseInfo->houseSortInfos[$houseInfo->house_sort] : '';
+		$content = "业主信息，姓名：{$userInfo['name']};电话：{$userInfo['mobile']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访【兔班长装修网】";
+
+        return $this->sendSmsBase($mobile, $content, 'decoration_valid');
     }
 }

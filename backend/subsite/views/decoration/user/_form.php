@@ -16,8 +16,8 @@ foreach ($model->getMerchantAllInfos() as $key => $info) {
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'mobile')->textInput() ?>
-    <?= $form->field($model, 'area')->textInput() ?>
-    <?= $form->field($model, 'region')->textInput() ?>
+    <?= $form->field($model, 'area_input')->textInput() ?>
+    <?= $form->field($model, 'city_input')->textInput() ?>
     <?= $form->field($model, 'city_code')->dropDownList($model->companyInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'channel')->dropDownList($model->channelInnerInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($merchantInfos, ['prompt' => '']); ?>
