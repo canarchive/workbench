@@ -147,7 +147,7 @@ class Controller extends YiiController
         if ($channel && $method == 'GET') {
             $isMobile = $this->clientIsMobile();
             $data['client_type'] = $isMobile ? 'h5' : 'pc';
-            $model = new \common\statistic\models\Visit();
+            $model = new \baseapp\statistic\models\Visit();
             $model->writeVisitLog($data);
         }
         //echo json_encode([]);//Yii::getAlias('@asseturl') . '/common/images/blank.gif';

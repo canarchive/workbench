@@ -12,12 +12,9 @@ class Demo extends DemoModel
         return '{{%demo}}';
     }
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()

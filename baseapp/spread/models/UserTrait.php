@@ -1,10 +1,9 @@
 <?php
 
-namespace baseapp\merchant\models;
+namespace baseapp\spread\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use common\components\sms\Smser;
 use common\models\Company;
 use baseapp\statistic\models\Conversion;
 
@@ -22,7 +21,7 @@ trait UserTrait
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'merchant', 'service']);
+        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'merchant', 'service', 'smsSignup']);
     }
 
     public function attributeLabels()
@@ -62,13 +61,16 @@ trait UserTrait
         $data = $this->_formatData($data);
 
         $newModel = $this->_newModel('user', true, $data);
-        $newModel->save();
+        $insert = $newModel->save();
+        if (empty($insert)) {
+            return false;
+        }
         $newModel->serviceInfo = $serviceInfo;
 
         return $newModel;
     }
 
-    public function _getDatasForFormat()
+    public function _baseDatasForFormat()
     {
         $datas = [
             'conversion_id' => ['default' => 0],
@@ -82,7 +84,6 @@ trait UserTrait
             'service_num' => ['default' => 0],
             'status' => ['default' => ''],
             'invalid_status' => ['default' => ''],
-            'status_input' => ['default' => ''],
             'callback_again' => ['default' => 0],
             'view_at' => ['default' => 0],
             'signup_at' => ['default' => Yii::$app->params['currentTime']],
@@ -104,14 +105,17 @@ trait UserTrait
 
     public function addHandle($statusInput = 'admin')
     {
-        $validator = new \common\validators\MobileValidator();
-        $valid =  $validator->validate($this->mobile);
-        if (empty($valid)) {
-            $this->addError('mobile', '手机号有误');
+        $check = $this->checkMobile($this->mobile);
+        if ($check !== true) {
+            $this->addError('mobile', $check['message']);
             return false;
         }
-        $this->merchant_id = empty($this->merchant_id) ? 2 : $this->merchant_id;
+        if (empty($this->merchant_id)) {
+            $this->addError('merchant_id', '请选择商家');
+            return false;
+        }
 
+        $this->merchant_id = empty($this->merchant_id) ? 2 : $this->merchant_id;
         $exist = self::findOne(['merchant_id' => $this->merchant_id, 'mobile' => $this->mobile]);
         if ($exist) {
             $this->addError('mobile', '手机号已存在');
@@ -128,21 +132,20 @@ trait UserTrait
             'note' => $this->note,
             'message' => $this->message,
 			'status_input' => $statusInput,
-            'area_input' => $this->area,
-            'city_input' => $this->city_input,
         ];
+        $data = array_merge($data, $this->handleFieldExts());
 
         $conversion = $this->conversionSuccessLog($data);
-        //$serviceId = $this->service_id ? $this->service_id : null;
-        $decorationOwner = $this->addUser($data);
+        $data['conversion_id'] = $conversion->id;
+        $newUser = $this->addUser($data);
 
         if (!empty($this->merchant_id)) {
-            $this->_sendSms($data, $decorationOwner->serviceInfo);
+            $this->_sendSms($data, $newUser->serviceInfo);
         }
-		$sDatas = $decorationOwner->toArray();
+		$sDatas = $conversion->toArray();
         $this->statisticRecord($sDatas, 'signup');
 
-        return $decorationOwner;
+        return $newUser;
     }
 
     public function dealService()
@@ -195,74 +198,6 @@ trait UserTrait
         if ($this->notice_user) {
             $this->sendSms($merchantInfo, $data);
         }
-    }
-
-    public function sendSmsValid($data, $userInfo)
-    {
-        $merchantId = $data->merchant_id;
-        if (empty($merchantId)) {
-            return ;
-        }
-        $noticeMobiles = [
-            '667' => '17316278360',
-            '671' => '15110125766',
-			'682' => '18600063835',
-			'669' => '13717716106',//'13581522034',
-			'684' => '18614242810',
-			'686' => '15801558634',
-        ];
-        $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
-        if (empty($mobile)) {
-            return ;
-        }
-
-        $houseInfo = $this->_newModel('house', true)->findOne($data->house_id);
-        if (empty($houseInfo)) {
-            return ;
-        }
-        $houseType = isset($houseInfo->houseTypeInfos[$houseInfo->house_type]) ? $houseInfo->houseTypeInfos[$houseInfo->house_type] : '';
-        $houseSort = isset($houseInfo->houseSortInfos[$houseInfo->house_sort]) ? $houseInfo->houseSortInfos[$houseInfo->house_sort] : '';
-		$content = "业主信息，姓名：{$userInfo['name']};电话：{$userInfo['mobile']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访【兔班长装修网】";
-
-        $smser = new Smser();
-        $smser->send($mobile, $content, 'decoration_valid');
-        return ;
-    }
-
-    protected function sendSmsService($merchantInfo, $data, $employee)
-    {
-		if (empty($merchantInfo) || $employee['status_sendmsg'] == 0) {
-			return ;
-		}
-
-        $mobile = $employee['mobile'];
-		$signStr = !isset($merchantInfo->name) ? '' : "【{$merchantInfo->name}】";
-		$content = "有业主：{$data['name']}，电话：{$data['mobile']}，咨询您公司的家装业务，请立即回访{$signStr}";
-
-        $smser = new Smser();
-        $smser->send($mobile, $content, 'decoration_service');
-		if ($employee['status_sendmsg'] == 2 && !empty($employee['mobile_ext'])) {
-            $smser->send($employee['mobile_ext'], $content, 'decoration_service');
-		}
-        
-        return true;
-    }
-
-    protected function sendSms($merchantInfo, $data)
-    {
-        $mobile = $data['mobile'];
-
-		$message = isset($merchantInfo['msg']) ? $merchantInfo['msg'] : '';
-		if (empty($message)) {
-            $siteName = Yii::$app->params['siteNameBase'];
-            $hotline = Yii::$app->params['siteHotline'];
-            $message = "您已成功预约，装修顾问会在15分钟内回访了解您的具体装修需求，请保持您的电话畅通，详情咨询{$hotline}【{$siteName}】";
-		}
-
-        $smser = new Smser();
-        $smser->send($mobile, $message, 'decoration_signup');
-        
-        return true;
     }
 
 	protected function _formatInfos($infos)

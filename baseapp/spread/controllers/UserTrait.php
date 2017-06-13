@@ -1,6 +1,6 @@
 <?php
 
-namespace baseapp\statistic\controllers;
+namespace baseapp\spread\controllers;
 
 use Yii;
 
