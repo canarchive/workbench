@@ -13,7 +13,10 @@ trait EntranceTrait
         }
 
         $model = $this->getModel('signin');
-        if ($model->load(Yii::$app->request->post()) && $model->signin()) {
+        $model->load(Yii::$app->request->post(), '');
+        print_r($_POST);
+        print_r($model);exit();
+        if ($model->load(Yii::$app->request->post(), '') && $model->signin()) {
             $identity = Yii::$app->user->getIdentity();
             $identity->last_at = Yii::$app->params['currentTime'];
             $identity->last_ip = Yii::$app->request->getIp();
@@ -21,6 +24,7 @@ trait EntranceTrait
             $identity->update(false);
             return $this->goBack();
         } else {
+        //var_dump($model);exit();
             return $this->render('signin', [
                 'model' => $model,
             ]);
