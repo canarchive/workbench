@@ -4,42 +4,15 @@ namespace baseapp\auth\models;
 
 trait SignupTrait
 {
-    //public $username;
-    //public $email;
-    public $mobile;
-    public $mobileCode;
-    public $captcha;
-    public $password;
-    public $passwordConfirm;
-
-
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
-            ['mobile', 'filter', 'filter' => 'trim'],
-            [['mobile', 'password', 'mobileCode'], 'required'],
-            ['mobile', 'common\validators\MobileValidator'],
-            ['mobile', 'unique', 'targetClass' => '\passport\models\User', 'message' => 'This mobile address has already been taken.'],
-
-            ['mobileCode', 'required'],
-			['mobileCode', 'checkCode'],
-            //['captcha', 'captcha'],
-			//['aggreement', 'compare', 'compareValue' => 1, 'operator' => '=='],
-            ['password', 'string', 'min' => 6],
-			['passwordConfirm', 'compare','compareAttribute'=>'password'],
-        ];
-    }
+    public $_datas;
 
 	public function checkCode()
 	{
-		$smser = new \common\components\sms\Smser();
-		$result = 'OK';//$smser->checkCode($this->mobile, 'register', $this->mobileCode);
-        if ($result !== 'OK') {
-            $this->addError('mobileCode', '手机验证码有误');
+        $check = $this->checkMobileCode($this->_datas['mobile'], 'register', $this->_data['mobileCode']);
+        if ($check !== true) {
+            $this->addError('mobile_code', '手机验证码有误');
         }
+        return false;
 	}
 
     /**
@@ -47,17 +20,37 @@ trait SignupTrait
      *
      * @return User|null the saved model or null if saving fails
      */
-    public function signup()
+    protected function _signup()
     {
-        if ($this->validate()) {
-            $user = new User();
-			$data = [
-				'mobile' => $this->mobile,
-				'password' => $this->password,
-			];
-            return $user->registerUser($data);
+        $this->_formatDatas();
+        $validate = $this->validateDatas();
+        if (empty($validate)) {
+            return false;
         }
 
+        return $this->_register();
+    }
+
+    protected function _register()
+    {
+        $result = $this->userModel()->insert();
         return null;
+    }
+
+    protected function _formatDatas()
+    {
+        $inputFields = [
+            'mobile', 'name', 'mobile_code', 'password', 'password_confirm', 'captcha', 'email',
+        ];
+        $inputFields = array_merge($inputFields, $this->inputFieldExts);
+
+        $datas = [];
+        foreach ($inputFields as $field) {
+            $datas[$field] = trim(strip_tags(Yii::$app->request->post($field)));
+            //$datas[$field] = trim(strip_tags(Yii::$app->request->get($field)));
+        }
+
+        $this->_datas = $datas;
+        return ;
     }
 }

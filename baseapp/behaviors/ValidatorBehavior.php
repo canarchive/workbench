@@ -4,10 +4,23 @@ namespace baseapp\behaviors;
 
 use yii\base\Behavior;
 use common\validators\MobileValidator;
+use common\components\sms\Smser;
 use yii\validators\EmailValidator;
 
 class ValidatorBehavior extends Behavior
 {
+	public function checkMobileCode($mobile, $sort, $code)
+	{
+        $result = true;
+
+		$smser = new Smser();
+		$check = 'OK';//$smser->checkCode($mobile, $sort, $code);
+        if ($check !== 'OK') {
+            $result = ['code' => 400, 'message' => '手机验证码有误'];
+        }
+        return $result;
+	}
+
     public function checkMobile($mobile)
     {
         if (empty($mobile)) {
