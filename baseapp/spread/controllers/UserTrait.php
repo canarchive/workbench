@@ -51,87 +51,109 @@ trait UserTrait
 
     public function actionUpdate($id)
     {
-        $data = $this->_userInfos($id);
+        $datas = $this->_userInfos($id);
         if (Yii::$app->getRequest()->method == 'POST') {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             $operation = Yii::$app->request->post('operation');
-            return $operation == 'add' ? $this->_add($model) : $this->_update();
+            $userModel = $datas['model'];
+            return $this->_operationInfo($userModel, $operation);
         }
-        //print_r($data);exit();
+        //print_r($datas);exit();
 
-        return $this->render('update', $data);
+        return $this->render('update', ['datas' => $datas]);
     }
 
     protected function _userInfos($id)
     {
         $model = $this->findModel($id);
 
-        //print_r($model);exit();
         $mobile = $model->mobile;
         $callbackInfos = $model->_newModel('callback')->findAll(['mobile' => $mobile]);
-        $houseInfos = $model->_newModel('house')->findAll(['mobile' => $model->mobile]);
         $userMerchantInfos = $model->_newModel('userMerchant')->getInfos(['mobile' => $model->mobile]);
 
-        $data = [
+        $datas = [
             'model' => $model,
             'callbackInfos' => $callbackInfos,
-            'houseInfos' => $houseInfos,
             'userMerchantInfos' => $userMerchantInfos,
         ];
+        $dataExts = $this->_userInfoExts($model);
+        $datas = array_merge($datas, $dataExts);
 
-        return $data;
+        return $datas;
     }
 
-    protected function _add($userInfo)
+    protected function _operations($userModel, $operationType)
     {
-        $modelClass = $this->modelClass;
-        $modelBase = new $modelClass();
-        $tableInfos = $this->_tableInfos;
-        //$tables = ['user_house', 'callback'];
         $table = Yii::$app->request->post('table');
+        $method = "_{$table}Operation";
+        if (!method_exists($method, $this)) {
+            return ['status' => 400, 'message' => "{$table}有误"];
+        }
+        $params = [];
+        if ($operationType == 'update') {
+            $infoId = Yii::$app->request->post('info_id');
+            $field = Yii::$app->request->post('field');
+            $value = Yii::$app->request->post('value');
+            if (empty($table) || !in_array($table, $tables) || empty($infoId) || empty($field)) {
+                return ['status' => 400, 'message' => '参数错误'];
+            }
+        }
+        $result = $this->$method($userModel, $operationType, $params);
+    }
 
-        if ($table == 'house') {
+    protected function _houseOperation($userModel, $operationType, $params = [])
+    {
             $fields = ['mobile', 'service_id', 'region', 'address', 'house_area', 'house_sort', 'house_type', 'renovation_budget'];
-            $model = $modelBase->_newModel('house', true);
-        } else if ($table == 'callback') {
+            $model = $userModel->_newModel('house', true);
+            $model->insert(false);
+    }
+
+    protected function _callbackOperation($userModel, $operationType)
+    {
             //$fields = ['mobile', 'content', 'note'];
             $fields = ['mobile', 'service_id', 'content'];
-            $model = $modelBase->_newModel('callback', true);
-        } else if ($table == 'user_merchant') {
+            $model = $userModel->_newModel('callback', true);
+            $model->insert(false);
+            $content = $this->renderPartial('_user_house', ['model' => $model]);
+    }
+
+    protected function _user_merchantOperation($userModel, $operationType)
+    {
             $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
-            $model = $modelBase->_newModel('userMerchant', true);
-        } else {
-            return ['status' => 400, 'message' => '参数错误'];
-        }
+            $model = $userModel->_newModel('userMerchant', true);
 
-        foreach ($fields as $field) {
-            $model->$field = Yii::$app->request->post($field);
-        }
-
-        if ($table == 'user_merchant') {
             $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
             if ($oldInfo) {
                 return ['status' => 400, 'message' => '已派单'];
             }
             $model->insert(false);
-            $modelBase->sendSmsValid($model, $userInfo);
-        } else {
-            $model->insert(false);
-        }
-
-        $content = '';
-        if ($table === 'house') {
-            $content = $this->renderPartial('_user_house', ['model' => $model]);
-        } else if ($table == 'user_merchant') {
+            $userModel->sendSmsValid($model, $userInfo);
             $noteData = [
                 'user_merchant_id' => $model->id,
                 'reply' => Yii::$app->request->post('note'),
                 'reply_at' => Yii::$app->params['currentTime'],
             ];
-            $guestbook = $modelBase->_newModel('guestbook', true, $noteData);
+            $guestbook = $userModel->_newModel('guestbook', true, $noteData);
             $guestbook->insert(false);
             $model->note = $noteData['reply'];
             $content = $this->renderPartial('_user_merchant_info', ['model' => $model]);
+    }
+
+    protected function _houseOperation($userModel, $operationType)
+    {
+    }
+
+    protected function _initFields($model, $fields)
+    {
+        foreach ($fields as $field) {
+            $model->$field = Yii::$app->request->post($field);
+        }
+        return $model;
+    }
+
+        $content = '';
+        if ($table === 'house') {
+        } else if ($table == 'user_merchant') {
         }
 
         $return = [
@@ -145,7 +167,7 @@ trait UserTrait
         return $return;
     }
 
-    protected function _update()
+    protected function _update($userModel)
     {
         $tables = ['user', 'house', 'callback', 'user_merchant'];
         $table = Yii::$app->request->post('table');
@@ -157,7 +179,7 @@ trait UserTrait
         }
 
         $modelClass = $this->modelClass;
-        $modelBase = new $modelClass();
+        $userModel = new $modelClass();
         switch ($table) {
         case 'user':
             $model = $this->findModel($infoId);
@@ -166,18 +188,23 @@ trait UserTrait
             }
             break;
         case 'house':
-            $model = $modelBase->_newModel('house')->findOne($infoId);
+            $model = $userModel->_newModel('house')->findOne($infoId);
             break;
         case 'user_merchant':
-            $model = $modelBase->_newModel('userMerchant')->findOne($infoId);
+            $model = $userModel->_newModel('userMerchant')->findOne($infoId);
             break;
         case 'callback':
-            $model = $modelBase->_newModel('callback')->findOne($infoId);
+            $model = $userModel->_newModel('callback')->findOne($infoId);
             break;
         }
         $model->$field = $value;
         $r =$model->update(false);
 
         return ['status' => 200, 'message' => 'OK'];
+    }
+
+    protected function _userInfoExts($model)
+    {
+        return [];
     }
 }
