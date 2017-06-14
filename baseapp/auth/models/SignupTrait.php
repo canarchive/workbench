@@ -2,10 +2,10 @@
 
 namespace baseapp\auth\models;
 
+use Yii;
+
 trait SignupTrait
 {
-    public $_datas;
-
 	public function checkCode()
 	{
         $check = $this->checkMobileCode($this->_datas['mobile'], 'register', $this->_data['mobileCode']);
@@ -22,35 +22,13 @@ trait SignupTrait
      */
     protected function _signup()
     {
-        $this->_formatDatas();
-        $validate = $this->validateDatas();
+        $this->load(Yii::$app->request->post(), '');
+        print_r($this->attributes);exit();
+        $validate = $this->validate();
         if (empty($validate)) {
-            return false;
+            return $this->_formatFailResult('报名失败，请您重试');
         }
 
-        return $this->_register();
-    }
-
-    protected function _register()
-    {
-        $result = $this->userModel()->insert();
-        return null;
-    }
-
-    protected function _formatDatas()
-    {
-        $inputFields = [
-            'mobile', 'name', 'mobile_code', 'password', 'password_confirm', 'captcha', 'email',
-        ];
-        $inputFields = array_merge($inputFields, $this->inputFieldExts);
-
-        $datas = [];
-        foreach ($inputFields as $field) {
-            $datas[$field] = trim(strip_tags(Yii::$app->request->post($field)));
-            //$datas[$field] = trim(strip_tags(Yii::$app->request->get($field)));
-        }
-
-        $this->_datas = $datas;
-        return ;
+        return $this->registerUser();
     }
 }
