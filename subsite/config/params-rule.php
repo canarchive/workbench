@@ -9,6 +9,12 @@
 ];
 return $rules;*/
 return [
+    'pagecheck' => [
+        'data' => [
+            'pattern' => '/pagecheck',
+            'route' => '/site/index', 
+        ],
+    ],
     'hdenter' => [
         'data' => [
             'pattern' => '/hdenter',
