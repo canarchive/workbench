@@ -16,8 +16,8 @@ Yii::$app->params['seoTitle'] = '商家注册-' . Yii::$app->params['seoTitle'];
                     <label for="mobile" class="tit">手机号码：</label>
                     <input type="text" name="mobile" id="mobile" require data-validate="mobile" value="" /></div>
                 <div class="small-12 columns">
-                    <label for="username" class="tit">用户名：</label>
-                    <input type="text" name="username" id="username" require data-validate="username" autocomplete="off" value=""></div>
+                    <label for="name" class="tit">用户名：</label>
+                    <input type="text" name="name" id="name" require data-validate="name" autocomplete="off" value=""></div>
                 <div class="small-12 columns">
                     <label for="password" class="tit">密码：</label>
                     <input type="password" name="password" id="password" require onpaste="return false" data-validate="password" data-equal="confirmpassword" autocomplete="off" />
