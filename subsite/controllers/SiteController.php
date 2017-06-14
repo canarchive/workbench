@@ -11,15 +11,12 @@ class SiteController extends SubsiteController
 {
     public function actionIndex()
     {
-        return $this->pageCheck();
-        exit();
-
 		$url = Yii::getAlias('@tbz.subsiteurl') . '/baom-quote-beijing.html';
         header("Location:$url");
         exit();
     }
 
-    public function pageCheck()
+    public function actionPageCheck()
     {
         $templates = Template::find()->indexBy('code')->all();
         $merchants = Merchant::find()->indexBy('id')->orderBy('orderlist desc')->all();
@@ -29,6 +26,7 @@ class SiteController extends SubsiteController
         $datas = [];
         foreach ($merchants as $id => $merchant) {
             $datas[$id]['name'] = $merchant['name'];
+            $datas[$id]['code'] = $merchant['code'];
             $tpcName = $tmobileName = '';
             foreach ($templates as $code => $template) {
                 $name = $template['name'];

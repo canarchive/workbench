@@ -24,7 +24,7 @@
                 </a>
             </div>
             <h1 class="am-header-title">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/m/img/4db17-8789.png" /></h1>
+            <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/nbj/<?= $this->context->merchantInfo['code']; ?>.png" /></h1>
             <div class="am-header-right am-header-nav">
                 <a href="tel:4000890888" class="">
                     <i class="am-header-icon am-icon-chevron-right"></i>

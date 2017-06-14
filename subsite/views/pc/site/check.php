@@ -12,7 +12,7 @@
         <tbody>
             <?php foreach ($datas as $id => $info) { ?>
             <tr data-key="">
-                <td><?= $info['name']; ?></td>
+                <td><?= $info['name'] . "( {$info['code']} )"; ?></td>
                 <td><?= $info['tpcName']; ?></td>
                 <td><?= $info['tmobileName']; ?></td>
             </tr>

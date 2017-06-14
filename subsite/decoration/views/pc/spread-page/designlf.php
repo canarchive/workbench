@@ -30,7 +30,9 @@ document.write('<script type="text/javascript"  data-lxb-uid="23355229" data-lxb
     </div>
     <div class="container">
         <div class="logo clearfloat">
-            <div class="logo_left lf"></div>
+            <div class="logo_left lf">
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/designlf/<?= $this->context->merchantInfo['code']; ?>.png" />
+            </div>
 
             <div class="logo_center lf">
                 <div class="logo_select  lf">

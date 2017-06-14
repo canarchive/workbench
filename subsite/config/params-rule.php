@@ -12,7 +12,7 @@ return [
     'pagecheck' => [
         'data' => [
             'pattern' => '/pagecheck',
-            'route' => '/site/index', 
+            'route' => '/site/page-check', 
         ],
     ],
     'hdenter' => [
