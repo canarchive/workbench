@@ -17,6 +17,12 @@ return [
     		'route'	=> '/{{SORT}}/product/index',
         ],
     ],
+    'api-validation' => [
+        'data' => [
+			'pattern' => '/api-<action:(validation)>',
+    		'route'	=> '/api/<action>',
+        ],
+    ],
     'user-operation' => [
         'data' => [
 			'pattern' => '/<action:(signin|signup|logout|findpwd)>',
