@@ -93,13 +93,18 @@ class User extends AuthBase
 
     public function beforeSave($insert)
     {
-        if (parent::beforeSave($insert)) {
-            if ($this->isNewRecord) {
-                $this->setPassword($this->password);
-            } else if (!empty($this->password_new)) {
-                $this->setPassword($this->password_new);
-            }
+        if (!parent::beforeSave($insert)) {
+            return false;
         }
+
+        if ($insert) {
+            $this->setPassword($this->password);
+            $this->last_ip = $this->ipInfo['ip'];
+            $this->last_at = Yii::$app->params['currentTime'];
+        } else if (!empty($this->password_new)) {
+            $this->setPassword($this->password_new);
+        }
+
         if (!is_null($this->merchant_show)) {
             $this->merchant_id = implode(',', (array) $this->merchant_show);
         }
@@ -136,20 +141,6 @@ class User extends AuthBase
             '0' => '没激活',
             '99' => '锁定',
         ];
-    }
-
-    public function registerUser($data)
-    {
-        $user = new self($data);
-        $user->created_at = Yii::$app->params['currentTime'];
-        $user->updated_at = Yii::$app->params['currentTime'];
-        $user->setPassword($data['password']);
-        $user->generateAuthKey();
-        if ($user->save(false)) {
-            return $user;
-        }
-
-        return false;
     }
 
     public function getInfo($where)

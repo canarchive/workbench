@@ -5,6 +5,29 @@ use Yii;
 
 trait EntranceTrait
 {
+    public function actionSignup()
+    {   
+        $model = $this->getModel('signup');
+        $infos = $result = $errors = []; 
+        $result = false;
+        if (Yii::$app->request->isPost) {
+            $result = $model->signup();
+            if ($result['status'] == 200) {
+                return Yii::$app->response->redirect($this->homeUrl)->send();
+            }
+            $infos = $model->toArray();
+        }
+        $message = isset($result['message']) ? $result['message'] : '';
+        $errors = isset($result['errors']) ? $result['errors'] : $errors;
+
+        return $this->render('signup', [
+            'model' => $model,
+            'infos' => $infos,
+            'errors' => $errors,
+            'message' => $message,
+        ]); 
+    }
+
     public function actionSignin()
     {
 		//$this->layout = Yii::getAlias('@backend/views/base/main-base');
@@ -29,33 +52,6 @@ trait EntranceTrait
                 'model' => $model,
             ]);
         }
-    }
-
-    public function actionSignup()
-    {
-        $model = $this->getModel('signup');
-
-        $infos = [];
-        $message = '';
-        if ($model->load(Yii::$app->request->post(), '')) {
-            $model->truename = $_POST['username'];
-            $message = '请填写完整的注册信息';
-            if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return Yii::$app->response->redirect($this->homeUrl)->send();
-                }
-            }
-            $error = $model->getFirstErrors();
-            $field = key($error);
-            $message = isset($error[$field]) ? $error[$field] : $message;
-            $infos = $model->toArray();
-        }
-
-        return $this->render('signup', [
-            'model' => $model,
-            'infos' => $infos,
-            'message' => $message,
-        ]);
     }
 
     public function actionLogout()

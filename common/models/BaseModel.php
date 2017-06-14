@@ -239,4 +239,37 @@ class BaseModel extends ActiveRecord
 
         return $dataProvider;
     }
+
+    protected function _formatFailResult($defaultMessage, $info = null)
+    {
+        $errors = $this->getErrors();
+        $errorFirst = $this->getFirstErrors();
+        $message = !empty($errorFirst) ? current($errorFirst) : $defaultMessage;
+        $eInfo = [];
+        $info = is_null($info) ? $this->toArray() : $info;
+        print_r($info);
+        foreach ($info as $field => $value) {
+            $eInfo[$field]['value'] = $value;
+            $error = isset($errors[$field]) ? current($errors[$field]) : '';
+            $eInfo[$field]['error'] = $error;
+        }
+
+        $data = [
+            'status' => '400',
+            'message' => $message,
+            'info' => $eInfo,
+        ];
+        print_r($data);exit();
+        return $data;
+    }
+
+    public function getIpInfo()
+    {
+        //$ip = '123.57.148.73';
+        $ip = Yii::$app->getRequest()->getIP();
+        $city = \common\components\IP::find($ip);
+        $city = is_array($city) ? implode('-', $city) : $city;
+        return ['ip' => $ip, 'ipCity' => $city];
+        //var_dump($return);exit();
+    }
 }

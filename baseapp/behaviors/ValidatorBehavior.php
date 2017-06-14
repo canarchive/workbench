@@ -21,8 +21,12 @@ class ValidatorBehavior extends Behavior
         return $result;
 	}
 
-    public function checkMobile($mobile)
+    public function checkMobile($mobile, $allowEmpty = false)
     {
+        if (empty($email) && $allowEmpty) {
+            return true;
+        }
+
         if (empty($mobile)) {
             return ['status' => 400, 'message' => '手机号码不能为空'];
         }
@@ -42,8 +46,12 @@ class ValidatorBehavior extends Behavior
      * @param $email string
      * @return boolean
      */
-    public function checkEmail($email)
+    public function checkEmail($email, $allowEmpty = false)
     {
+        if (empty($email) && $allowEmpty) {
+            return true;
+        }
+
         if (empty($email)) {
             return ['status' => 400, 'message' => '邮箱不能为空'];
         }
