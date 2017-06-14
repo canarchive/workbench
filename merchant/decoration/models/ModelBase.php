@@ -3,9 +3,11 @@
 namespace merchant\decoration\models;
 
 use Yii;
+use baseapp\merchant\models\MerchantModel;
 
-trait ModelTrait
+class ModelBase extends MerchantModel
 {
+
     /*public static function getDb()
     {
         return Yii::$app->dbSubsite;

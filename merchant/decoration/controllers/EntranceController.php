@@ -4,11 +4,11 @@ namespace merchant\decoration\controllers;
 use merchant\decoration\models\Signin;
 use merchant\decoration\models\Signup;
 use merchant\components\Controller;
-use merchant\controllers\TraitEntrance;
+use baseapp\auth\controllers\EntranceTrait;
 
 class EntranceController extends Controller
 {
-	use TraitEntrance;
+	use EntranceTrait;
 
     public function init()
     {

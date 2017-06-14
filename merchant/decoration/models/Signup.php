@@ -2,9 +2,9 @@
 
 namespace merchant\decoration\models;
 
-use merchant\models\Signup as SignupBase;
+use merchant\models\MerchantSignupTrait;
 
-class Signup extends SignupBase
+class Signup extends ModelBase
 {
-    use ModelTrait;
+    use MerchantSignupTrait;
 }

@@ -10,4 +10,8 @@ $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 
 ?>
 <?php $this->beginContent('@merchant/views/main.php'); ?>
 <?= $content; ?>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/adview/js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/adview/js/foundation.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/adview/js/app.js"></script>
+<script src="//captcha.luosimao.com/static/dist/api.js"></script>
 <?php $this->endContent(); ?>
