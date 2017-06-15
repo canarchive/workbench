@@ -2,15 +2,15 @@
 
 namespace merchant\models;
 
-use baseapp\merchant\models\MerchantModel;
+use common\models\BaseModelNotable;
 use baseapp\auth\models\ApiTrait;
 
-class Api extends MerchantModel
+class Api extends BaseModelNotable
 {
     use ApiTrait;
 
-    public static function tableName()
+    public function getBehaviorCodes()
     {
-        return '{{%user}}';
+        return ['merchant'];
     }
 }
