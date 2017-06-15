@@ -61,20 +61,6 @@ class RegionAll extends PassportModel
         return $this->hasOne(Region::className(), ['code' => 'parent_code']);
     }
 
-    /**
-     * Get the islog
-     *
-     * @return array
-     */
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '不显示',
-            '1' => '显示',
-        ];
-        return $datas;
-    }
-
     public function updateSpell()
     {
         $infos = $this->find()->where(['spell' => ''])->limit(5000)->all();

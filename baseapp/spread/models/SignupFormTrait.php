@@ -97,17 +97,6 @@ trait SignupFormTrait
         return true;
     }
 
-    protected function _formatFailResult()
-    {
-        $errors = $this->getFirstErrors('error');
-        $message = isset($errors['error']) ? $errors['error'] : '报名失败，请您重试！';
-        $data = [
-            'status' => $this->existUser ? '200' : '400',
-            'message' => $message,
-        ];
-        return $data;
-    }
-
     public function getUserModel($returnNew = false)
     {
     }

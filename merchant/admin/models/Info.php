@@ -49,15 +49,6 @@ class Info extends ShopModel
 		return $datas;
 	}
 
-	public function getStatusInfos()
-	{
-		$datas = [
-			'0' => '隐藏',
-			'1' => '显示',
-		];	
-		return $datas;
-	}
-
 	public function getTemplateInfos()
 	{
 		$datas = [

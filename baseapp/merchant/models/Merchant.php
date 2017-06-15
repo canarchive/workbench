@@ -47,7 +47,7 @@ class Merchant extends MerchantModel
         ];
     }
 
-    protected function getStatusInfos()
+    public function getStatusInfos()
     {
         $datas = [
             '0' => '关注',

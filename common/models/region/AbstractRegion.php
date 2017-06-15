@@ -52,20 +52,6 @@ class RegionTown extends PassportModel
         return $this->hasOne(self::className(), ['code' => 'parent_code']);
     }
 
-    /**
-     * Get the status
-     *
-     * @return array
-     */
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '不显示',
-            '1' => '显示',
-        ];
-        return $datas;
-    }
-
     public function getInfo($where)
     {
         $info = $this->findOne($where);

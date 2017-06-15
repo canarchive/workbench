@@ -105,4 +105,13 @@ trait TraitModel
         return ['ip' => $ip, 'ipCity' => $city];
         //var_dump($return);exit();
     }
+
+    public function getStatusInfos()
+    {
+        $datas = [
+            '0' => '停用',
+            '1' => '正常',
+        ];
+        return $datas;
+    }
 }

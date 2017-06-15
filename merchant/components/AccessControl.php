@@ -30,6 +30,7 @@ class AccessControl extends AccessControlBase
             'method' => $currentMethod,
         ];
 
+        var_dump($where);exit();
         $currentMenu = Menu::findOne($where);
         //if (empty($currentMenu) || !$this->user->can($currentMenu['code'])) {
         if (empty($currentMenu)) {// || !$this->user->can($currentMenu['code'])) {

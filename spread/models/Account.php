@@ -53,13 +53,4 @@ class Account extends BaseModel
         ];
         return $datas;
     }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '停用',
-            '1' => '正常',
-        ];
-        return $datas;
-    }
 }
