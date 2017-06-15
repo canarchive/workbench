@@ -39,15 +39,6 @@ class IndexGoods extends ShopModel
         ];
     }
 
-	public function getStatusInfos()
-	{
-		$datas = [
-			'0' => '暂停显示',
-			'1' => '正常',
-		];	
-		return $datas;
-	}	
-
 	public function afterSave($insert, $changedAttributes)
 	{
 		$attachment = new Attachment();

@@ -2,7 +2,7 @@
 
 namespace merchant\models;
 
-use common\models\MerchantModel;
+use baseapp\merchant\models\MerchantModel;
 use yii\helpers\ArrayHelper;
 
 class Contact extends MerchantModel
@@ -48,15 +48,6 @@ class Contact extends MerchantModel
         $datas = [
             'order' => '订单联系人',
             'money' => '汇款联系人',
-        ];
-        return $datas;
-    }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '停用',
-            '1' => '正常',
         ];
         return $datas;
     }

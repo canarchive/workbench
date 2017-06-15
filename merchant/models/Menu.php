@@ -2,7 +2,7 @@
 
 namespace merchant\models;
 
-use common\models\MerchantModel;
+use baseapp\merchant\models\MerchantModel;
 use common\models\TraitMenu;
 
 class Menu extends MerchantModel

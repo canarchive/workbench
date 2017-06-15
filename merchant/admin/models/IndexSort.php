@@ -36,13 +36,4 @@ class IndexSort extends ShopModel
             'status' => '状态',
         ];
     }
-
-	public function getStatusInfos()
-	{
-		$datas = [
-			'0' => '停用',
-			'1' => '正常',
-		];
-		return $datas;
-	}
 }

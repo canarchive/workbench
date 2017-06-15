@@ -58,7 +58,7 @@ class User extends AuthBase
             ['password_new', 'compare', 'on' => ['edit-password']],
 
             [['email', 'mobile', 'password_new', 'password_new_repeat'], 'safe', 'on' => ['edit']],
-            [['email', 'mobile', 'status', 'merchant_show'], 'safe', 'on' => ['create', 'update']],
+            [['email', 'mobile', 'status', 'merchant_show', 'merchant_id'], 'safe', 'on' => ['create', 'update']],
         ];
     }
 
@@ -105,6 +105,7 @@ class User extends AuthBase
             $this->setPassword($this->password_new);
         }
 
+        $this->merchant_id = strval($this->merchant_id);
         if (!is_null($this->merchant_show)) {
             $this->merchant_id = implode(',', (array) $this->merchant_show);
         }

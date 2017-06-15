@@ -8,6 +8,6 @@ use backend\components\ControllerFullTrait;
 class MerchantController extends AdminController
 {
     protected $modelClass = 'baseapp\merchant\models\Merchant';
-    protected $modelSearchClass = 'baseapp\merchant\models\searchs\Merchant';
+    protected $modelSearchClass = 'merchant\models\searchs\Merchant';
     use ControllerFullTrait;
 }

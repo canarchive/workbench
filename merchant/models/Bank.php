@@ -3,7 +3,7 @@
 namespace merchant\models;
 
 use Yii;
-use common\models\MerchantModel;
+use baseapp\merchant\models\MerchantModel;
 use yii\helpers\ArrayHelper;
 
 class Bank extends MerchantModel
@@ -51,15 +51,6 @@ class Bank extends MerchantModel
         $datas = [
             'inuse' => '常用',
             'bak' => '备用',
-        ];
-        return $datas;
-    }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '停用',
-            '1' => '正常',
         ];
         return $datas;
     }

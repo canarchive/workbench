@@ -46,14 +46,4 @@ class Plan extends BaseModel
         $infos = ArrayHelper::map(Account::find()->select('id, name')->all(), 'id', 'name');
         return $infos;
     }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '未完成',
-            '1' => '已完成',
-            '99' => '已取消',
-        ];
-        return $datas;
-    }
 }
