@@ -93,10 +93,4 @@ class KlProduct extends SubsiteModel
         $info = $model->find()->where(['id' => $this->book_id])->one();
         return $info;
     }
-
-    public function getStatusInfos()
-    {
-        $datas = [];
-        return $datas;
-    }
 }

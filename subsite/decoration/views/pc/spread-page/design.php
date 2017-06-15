@@ -680,7 +680,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     
                 <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides clearfix" style="width: 2000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
                                                 <li style="width: 197.6px; float: left; display: block;">
-												<a href="javascript:;" class="major_pop" shop_id="5124263" tjjj="click_pc_3F_logo_2" tjjj_name="<?= $this->context->merchantInfo['name']; ?>"><img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/<?= $currentCode; ?>.jpg" draggable="false"></a>
+												<a href="javascript:;" class="major_pop" shop_id="5124263" tjjj="click_pc_3F_logo_2" tjjj_name="<?= $this->context->merchantInfo['name']; ?>"><img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/designbanner/<?= $currentCode; ?>.png" draggable="false"></a>
                             <div class="message_r">
 						<a href="javascript:;" class="major_pop" tjjj="click_pc_3F_name_2" shop_id="5124263" title="<?= $this->context->merchantInfo['name']; ?>" tjjj_name="<?= $this->context->merchantInfo['name']; ?>"><?= $this->context->merchantInfo['name']; ?></a>
                                 <span>案例：398个</span>

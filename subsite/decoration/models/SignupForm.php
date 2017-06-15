@@ -45,7 +45,7 @@ class SignupForm extends BaseModel
         }
 
         if (empty($result)) {
-            $result = $this->_formatFailResult();
+            $result = $this->_formatFailResult('报名失败，请您重试！');
         }
         $result['quoteInfo'] = $quoteInfo;
 

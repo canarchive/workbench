@@ -112,14 +112,4 @@ class KlBook extends SubsiteModel
         }
         return $this->_productInfos;
     }
-
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '未完成',
-            '1' => '已完成',
-            '99' => '已取消',
-        ];
-        return $datas;
-    }
 }
