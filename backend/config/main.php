@@ -55,7 +55,6 @@ return [
 
     'modules' => [
     ],
-    'language' => 'zh-CN',
 
     'params' => $params,
 ];
