@@ -2,12 +2,13 @@
 return [
     'timeZone'=>'Asia/Shanghai',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'language' => 'zh-CN',
 	'bootstrap' => [
         function () {
             if (!isset(Yii::$app->i18n->translations['rbac-admin'])) {
                 Yii::$app->i18n->translations['rbac-admin'] = [
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
+                    'sourceLanguage' => 'zh-CN',
                     'basePath' => '@common/messages'
                 ];
                 Yii::$app->i18n->translations['admin-common'] = [

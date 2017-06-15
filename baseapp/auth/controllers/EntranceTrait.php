@@ -7,48 +7,41 @@ trait EntranceTrait
 {
     public function actionSignup()
     {   
-        $model = $this->getModel('signup');
+        $result = $this->_signMethod('signup');
+        if ($result['status'] == 200 && isset($result['homeUrl'])) {
+            return Yii::$app->response->redirect($result['homeUrl'])->send();
+        }
+        return $this->render('signup', $result);
+    }
+
+    public function actionSignin()
+    {
+        $result = $this->_signMethod('signin');
+        if ($result['status'] == 200 && isset($result['homeUrl'])) {
+            return Yii::$app->response->redirect($result['homeUrl'])->send();
+        }
+        return $this->render('signin', $result);
+    }
+
+    protected function _signMethod($action)
+    {
+        if (!Yii::$app->user->isGuest) {
+            return ['status' => 200, 'message' => 'return', 'homeUrl' => $this->homeUrl];
+        }
+            
+        $model = $this->getModel($action);
         $result = $info = []; 
         if (Yii::$app->request->isPost) {
-            $result = $model->signup();
+            $result = $model->$action();
             if ($result['status'] == 200) {
-                return Yii::$app->response->redirect($this->homeUrl)->send();
+                $result['homeUrl'] = $this->homeUrl;
+                return $result;
             }
         }
         $message = isset($result['message']) ? $result['message'] : '';
         $info = isset($result['info']) ? $result['info'] : $info;
 
-        return $this->render('signup', [
-            'model' => $model,
-            'info' => $info,
-            'message' => $message,
-        ]); 
-    }
-
-    public function actionSignin()
-    {
-		//$this->layout = Yii::getAlias('@backend/views/base/main-base');
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = $this->getModel('signin');
-        $model->load(Yii::$app->request->post(), '');
-        print_r($_POST);
-        print_r($model);exit();
-        if ($model->load(Yii::$app->request->post(), '') && $model->signin()) {
-            $identity = Yii::$app->user->getIdentity();
-            $identity->last_at = Yii::$app->params['currentTime'];
-            $identity->last_ip = Yii::$app->request->getIp();
-            $identity->login_num = $identity->login_num + 1;
-            $identity->update(false);
-            return $this->goBack();
-        } else {
-        //var_dump($model);exit();
-            return $this->render('signin', [
-                'model' => $model,
-            ]);
-        }
+        return ['status' => 400, 'message' => $message, 'info' => $info, 'model' => $model];
     }
 
     public function actionLogout()

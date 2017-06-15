@@ -5,37 +5,35 @@ use Yii;
 
 trait SigninTrait
 {
-    public $name;
-    public $password;
-    public $rememberMe = true;
-    public $captcha;
+    protected $_user;
 
-    private $_user = false;
-
-    public function rules()
+    /**
+     * Logs in a user using the provided name and password.
+     *
+     * @return boolean whether the user is logged in successfully
+     */
+    public function _signin()
     {
-        return [
-            [['name', 'password'], 'required'],
-            //['rememberMe', 'boolean'],
-            //['captcha', 'default', 'value' => true],
-            //['captcha', 'checkCaptcha'],
-            ['password', 'validatePassword'],
-        ];
-    }
+        $this->load(Yii::$app->request->post(), '');
+        $validate = $this->validate();
+        if (empty($validate)) {
+            return $this->_formatFailResult('登录失败，请您重试');
+        }
 
-	public function checkCaptcha()
-	{
-		$wrongTimes = $this->wrongTimes('check');
-		if ($wrongTimes <= 5) {
-			return ;
+        $loginResult = Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+		if (!$loginResult) {
+		    return ['status' => 400, 'message' => '登录失败'];
 		}
 
-        $validator = new \yii\captcha\CaptchaValidator();
-        $valid =  $validator->validate($this->captcha);
-        if (!$valid) {
-            $this->addError('captcha', 'error captcha');
-        }
-	}
+        $identity = Yii::$app->user->getIdentity();
+        $identity->last_at = Yii::$app->params['currentTime'];
+        $identity->last_ip = Yii::$app->request->getIp();
+        $identity->login_num = $identity->login_num + 1;
+        $identity->update(false);
+
+	    $this->wrongTimes('clear');
+		return ['status' => 200, 'message' => 'OK', 'identity' => $identity];
+    }
 
     /**
      * Validates the password.
@@ -48,60 +46,14 @@ trait SigninTrait
     {
         $user = $this->getUser();
 		if (!$user) {
-            $this->addError($attribute, 'Incorrect name.');
+            $this->addError('mobile', '用户不存在');
 			return ;
 		}
 
         if (!$user->validatePassword($this->password)) {
 			$this->wrongTimes('write');
-            $this->addError($attribute, 'Incorrect password.');
+            $this->addError('password', '密码错误');
         }
-    }
-
-    /**
-     * Logs in a user using the provided name and password.
-     *
-     * @return boolean whether the user is logged in successfully
-     */
-    public function signin()
-    {
-        if (!$this->validate()) {
-		    $error = $this->getFirstErrors();
-		    $field = key($error);
-		    $message = $error[$field];
-		    $status = $field == 'captcha' ? 401 : 400;
-			$wrongTimes = $this->wrongTimes('check');
-
-			return ['status' => $status, 'message' => $message, 'wrongTimes' => $wrongTimes];
-		}
-
-        $loginResult = Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
-		if (!$loginResult) {
-		    return ['status' => 400, 'message' => '失败'];
-		}
-
-	    $this->wrongTimes('clear');
-		return ['status' => 200, 'message' => 'OK'];
-    }
-
-    /**
-     * Finds user by [[name]]
-     *
-     * @return User|null
-     */
-    public function getUser()
-    {
-        if ($this->_user === false) {
-            $this->_user = User::findByName($this->name);
-		}
-		if (empty($this->_user)) {
-			$this->_user = User::findByEmail($this->name);
-		}
-		if (empty($this->_user)) {
-			$this->_user = User::findByMobile($this->name);
-		}
-
-        return $this->_user;
     }
 
 	public function wrongTimes($action) 
@@ -125,4 +77,26 @@ trait SigninTrait
 			return ;
 		}
 	}
+
+	public function checkCaptcha()
+	{
+		$wrongTimes = $this->wrongTimes('check');
+		if ($wrongTimes <= 5) {
+			return ;
+		}
+
+        $validator = new \yii\captcha\CaptchaValidator();
+        $valid =  $validator->validate($this->captcha);
+        if (!$valid) {
+            $this->addError('captcha', 'error captcha');
+        }
+	}
+
+    protected function getUser()
+    {
+        if (is_null($this->_user)) {
+            $this->_user = $this->getUserInfo(['mobile' => $this->mobile]);
+        }
+        return $this->_user;
+    }
 }
