@@ -2,11 +2,11 @@
 
 namespace merchant\decoration\models;
 
-use baseapp\auth\models\SigninTrait;
+use common\models\BaseModelNotable;
+use merchant\models\MerchantSigninTrait;
 use merchant\models\User;
 
-class Signin extends ModelBase
+class Signin extends BaseModelNotable
 {
-    use ModelTrait;
-    use SigninTrait;
+    use MerchantSigninTrait;
 }

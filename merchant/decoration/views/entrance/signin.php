@@ -1,10 +1,14 @@
 <?php
-use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
 
 $this->params['bodyClass'] = 'auth-back';
 Yii::$app->params['seoTitle'] = '登录-' . Yii::$app->params['seoTitle'];
+$fields = ['mobile', 'password'];
+$data = [];
+foreach ($fields as $field) {
+    $data[$field]['value'] = !isset($info[$field]) || $field == 'password' ? '' : $info[$field]['value'];
+    $data[$field]['error'] = isset($info[$field]['error']) ? $info[$field]['error'] : '';
+}
 
 ?>
 <div class="account-container">
@@ -16,12 +20,14 @@ Yii::$app->params['seoTitle'] = '登录-' . Yii::$app->params['seoTitle'];
         <div class="row site-width">
             <?php $form = ActiveForm::begin(['options' => ['id' => 'loginForm']]); ?>
                 <div class="small-12 columns">
-                    <label for="username" class="tit">账号：</label>
-                    <input type="text" class="form-text" name="username" placeholder="输入手机号" id="username" autocomplete="off" require value="" /></div>
+                    <label for="mobile" class="tit">账号：</label>
+                    <input type="text" class="form-text" name="mobile" placeholder="输入手机号" id="mobile" autocomplete="off" require value="<?= $data['mobile']['value']; ?>" />
+                    <?php if (!empty($data['mobile']['error'])) { echo "<span class='error'>{$data['mobile']['error']}</span>"; } ?>
+                </div>
                 <div class="small-12 columns">
-                    <label for="username" class="tit">密码：</label>
+                    <label for="password" class="tit">密码：</label>
                     <input type="password" class="form-text" name="password" placeholder="输入密码" id="password" autocomplete="off" require />
-                    <?php if (!empty($message)) { ?><span class="error">账号或密码错误</span><?php } ?>
+                    <?php if (!empty($data['password']['error'])) { echo "<span class='error'>{$data['password']['error']}</span>"; } ?>
                 </div>
                 <!--<div class="small-12 columns">
                     <label for="username" class="tit">人机验证：</label>
@@ -30,8 +36,8 @@ Yii::$app->params['seoTitle'] = '登录-' . Yii::$app->params['seoTitle'];
                 <div class="small-12 columns">
                     <input type="submit" class="button radius success expand" value="立即登录" />
                     <div class="reg-goto">
-                        <!--<a href='<?= Url::to(['site/signup']); ?>'>立即注册</a>&nbsp;&nbsp;&nbsp;-->
-                        <!--<a href="/forgot_password">忘了密码？</a>-->
+                        <a href='/signup.html'>立即注册</a>&nbsp;&nbsp;&nbsp;
+                        <a href="/findpwd.html">忘了密码？</a>
                     </div>
                 </div>
             <?php ActiveForm::end(); ?>
