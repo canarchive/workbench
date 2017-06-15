@@ -103,20 +103,6 @@ class Region extends PassportModel
         return $datas;
     }
 
-    /**
-     * Get the islog
-     *
-     * @return array
-     */
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '不显示',
-            '1' => '显示',
-        ];
-        return $datas;
-    }
-
     public function checkInfo($code, $level = 1)
     {
         $info = self::findOne(['code' => $code]);

@@ -140,7 +140,7 @@ class Manager extends AuthBase
         return true;
     }
 
-    public static function getStatusInfos()
+    public function getStatusInfos()
     {
         return [
             self::STATUS_ACTIVE => '正常',

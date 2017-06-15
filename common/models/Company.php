@@ -70,7 +70,7 @@ class Company extends PassportModel
         ];
     }
 
-    protected function getStatusInfos()
+    public function getStatusInfos()
     {
         $datas = [
             '0' => '筹备中',
