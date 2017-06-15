@@ -8,22 +8,19 @@ trait EntranceTrait
     public function actionSignup()
     {   
         $model = $this->getModel('signup');
-        $infos = $result = $errors = []; 
-        $result = false;
+        $result = $info = []; 
         if (Yii::$app->request->isPost) {
             $result = $model->signup();
             if ($result['status'] == 200) {
                 return Yii::$app->response->redirect($this->homeUrl)->send();
             }
-            $infos = $model->toArray();
         }
         $message = isset($result['message']) ? $result['message'] : '';
-        $errors = isset($result['errors']) ? $result['errors'] : $errors;
+        $info = isset($result['info']) ? $result['info'] : $info;
 
         return $this->render('signup', [
             'model' => $model,
-            'infos' => $infos,
-            'errors' => $errors,
+            'info' => $info,
             'message' => $message,
         ]); 
     }
@@ -132,5 +129,11 @@ trait EntranceTrait
         $model = new ResetPasswordForm();
 		$return = $model->resetPassword();
 		return $return;
+    }
+
+    protected function getHomeUrl()
+    {
+        $redirectUrl = Yii::$app->request->get('redirect_url', '/');
+        return $redirectUrl;
     }
 }
