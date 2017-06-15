@@ -12,11 +12,6 @@ trait MerchantSignupTrait
     public $truename;
     public $password;
 
-    public static function tableName()
-    {
-        return '{{%user}}';
-    }
-
     public function rules()
     {
         return [
@@ -33,7 +28,6 @@ trait MerchantSignupTrait
     public function signup()
     {
         $result = $this->_signup();
-        print_r($this);
         return $result;
     }
 
