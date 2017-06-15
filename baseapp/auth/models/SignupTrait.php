@@ -6,15 +6,6 @@ use Yii;
 
 trait SignupTrait
 {
-	public function checkCode()
-	{
-        $check = $this->checkMobileCode($this->_datas['mobile'], 'register', $this->_data['mobileCode']);
-        if ($check !== true) {
-            $this->addError('mobile_code', '手机验证码有误');
-        }
-        return false;
-	}
-
     /**
      * Signs user up.
      *
@@ -30,4 +21,13 @@ trait SignupTrait
 
         return $this->registerUser();
     }
+
+	public function checkCode()
+	{
+        $check = $this->checkMobileCode($this->_datas['mobile'], 'register', $this->_data['mobileCode']);
+        if ($check !== true) {
+            $this->addError('mobile_code', '手机验证码有误');
+        }
+        return false;
+	}
 }

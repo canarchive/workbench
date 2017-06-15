@@ -67,7 +67,6 @@ return [
             'class' => 'backend\saccount\Module',
         ],
     ],
-    'language' => 'zh-CN',
 
     'params' => $params,
 ];
