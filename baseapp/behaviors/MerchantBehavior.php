@@ -5,6 +5,7 @@ namespace baseapp\behaviors;
 use yii\base\Behavior;
 use yii\helpers\ArrayHelper;
 use baseapp\merchant\models\Merchant;
+use merchant\models\User;
 
 class MerchantBehavior extends Behavior
 {
@@ -36,5 +37,12 @@ class MerchantBehavior extends Behavior
     {
         $infos = Merchant::find()->indexBy('id')->all();
         return $infos;
+    }
+
+    public function getUserInfo($where)
+    {
+        $userModel = new User();
+        $userInfo = $userModel->getInfo($where);
+        return $userInfo;
     }
 }

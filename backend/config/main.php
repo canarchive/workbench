@@ -70,7 +70,6 @@ return [
             'class' => 'backend\subsite\Module',
         ],
     ],
-    'language' => 'zh-CN',
 
     'params' => $params,
 ];
