@@ -23,7 +23,6 @@ trait SignupTrait
     protected function _signup()
     {
         $this->load(Yii::$app->request->post(), '');
-        print_r($this->attributes);exit();
         $validate = $this->validate();
         if (empty($validate)) {
             return $this->_formatFailResult('报名失败，请您重试');
