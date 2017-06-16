@@ -124,6 +124,19 @@ class User extends AuthBase
         return true;
     }
 
+    public function getRoleInfo($where = [])
+    {
+        $where = empty($where) ? ['code' => $this->role] : $where;
+        $info = Role::find()->where($where)->one();
+        return $info;
+    }
+
+    public function getRoleStr()
+    {
+        $role = $this->roleInfo;
+        return isset($role['name']) ? $role['name'] : '';
+    }
+
     public static function getRoleInfos()
     {
         return [

@@ -7,12 +7,31 @@ use yii\web\ForbiddenHttpException;
 use yii\helpers\Url;
 use common\components\AccessControl as AccessControlBase;
 use merchant\models\Menu;
+use merchant\models\Role;
 
 class AccessControl extends AccessControlBase
 {
-    protected function _checkStatus($elem = 'lock')
+    protected $permissions;
+
+    protected function _checkStatus()
     {
-        return empty($this->identity['status']);
+        $status = $this->identity->status;
+        if ($status == 99) {
+            return '账户被锁定，请联系管理员';
+        }
+        if (empty($status)) {
+            return '您的账号还未启用！';
+        }
+
+        $role = $this->identity->role;
+        $roleInfo = Role::find()->where(['code' => $role])->one();
+        $permissions = isset($roleInfo['permission']) ? $roleInfo['permission'] : '';
+        if (empty($permissions)) {
+            return '尚未为您分配后台操作权限！';
+        }
+
+        $this->permissions = array_filter(explode(',', $permissions));
+        return true;
     }
 
     protected function _checkCurrentMenu($action)
@@ -32,9 +51,8 @@ class AccessControl extends AccessControlBase
 
         //var_dump($where);exit();
         $currentMenu = Menu::findOne($where);
-        //if (empty($currentMenu) || !$this->user->can($currentMenu['code'])) {
-        if (empty($currentMenu)) {// || !$this->user->can($currentMenu['code'])) {
-            throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
+        if (empty($currentMenu) || !in_array($currentMenu['code'], $this->permissions)) {
+            throw new ForbiddenHttpException("您没有执行 {$currentMenu['name']} 的权限");
         }
 
         return $currentMenu;
@@ -45,12 +63,12 @@ class AccessControl extends AccessControlBase
      */
     protected function _initMenus($currentMenu)
     {
-        //$menus = Menu::find()->asArray()->where(['code' => $codes])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
-        $menus = Menu::find()->asArray()->indexBy('code')->all();
+        $menus = Menu::find()->asArray()->where(['code' => $this->permissions])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
+        //$menus = Menu::find()->asArray()->indexBy('code')->all();
         $appMenus = [];
         foreach ($menus as $key => $menu) {
-            $route = '/' . trim($menu['module'] . '/' . $menu['controller'] . '/' . $menu['method'], '/');
-            $menu['url'] = Url::toRoute($route);
+            $menu['url'] = "/{$menu['module']}/{$menu['controller']}/{$menu['method']}.html";
+            //$menu['url'] = Url::toRoute($route);
             if (!empty($menu['extparam'])) {
                 $menu['url'] = $menu['url'] . '?' . $menu['extparam'];
             }
