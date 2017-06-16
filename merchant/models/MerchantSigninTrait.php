@@ -33,19 +33,4 @@ trait MerchantSigninTrait
         $result = $this->_signin();
         return $result;
     }
-
-    public function registerUser()
-    {
-        $data = [ 
-            'mobile' => $this->mobile,
-            'password' => $this->password,
-            'truename' => strip_tags($this->truename),
-        ];  
-        $model = new User($data);
-        $result = $model->insert(false);
-        if (empty($result)) {
-            return ['status' => 400, 'message' => ''];
-        }
-        return ['status' => 200, 'model' => $model];
-    }
 }
