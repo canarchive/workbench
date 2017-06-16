@@ -1,19 +1,16 @@
 <?php
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
+    //'filterModel' => $searchModel,
     'columns' => [
+        'id',
+        'code',
+        'name',
         [
-            'attribute' => 'name',
-            'label' => Yii::t('rbac-admin', 'Name'),
-        ],
-        [
-            'attribute' => 'ruleName',
-            'label' => Yii::t('rbac-admin', 'Rule Name'),
-        ],
-        [
-            'attribute' => 'description',
-            'label' => Yii::t('rbac-admin', 'Description'),
+            'attribute' => 'status',
+            'value' => function($model) {
+                return $model->statusInfos[$model->status];
+            }
         ],
     ],
 ];

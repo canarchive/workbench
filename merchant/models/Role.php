@@ -14,17 +14,12 @@ class Role extends MerchantModel
         return '{{%role}}';
     }
 
-    public function getBehaviorCodes()
-    {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
-    }
-
     public function rules()
     {
         return [
             [['name', 'code'], 'required'],
             [['status'], 'default', 'value' => 0],
-            [['privilege'], 'safe'],
+            [['permission'], 'safe'],
         ];
     }
 
@@ -35,7 +30,7 @@ class Role extends MerchantModel
             'code' => '代码',
             'name' => '名称',
             'status' => '状态',
-            'privilege' => '权限',
+            'permission' => '权限',
         ];
     }
 }
