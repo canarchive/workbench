@@ -68,8 +68,9 @@ class AccessControl extends \yii\base\ActionFilter
 
         $controller = $action->controller;
         $this->identity = $this->user->getIdentity();
-        if ($this->_checkStatus('lock')) {
-            throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+        $checkStatus = $this->_checkStatus();
+        if ($checkStatus !== true) {
+            throw new ForbiddenHttpException($checkStatus);
         }
 
         $currentMenu = $this->_checkCurrentMenu($action);
@@ -86,14 +87,13 @@ class AccessControl extends \yii\base\ActionFilter
         return true;
     }
 
-    protected function _checkStatus($elem = 'lock')
+    protected function _checkStatus()
     {
-        return false;
+        return '您没有执行该操作的权限';
     }
 
     protected function _checkCurrentMenu($action)
     {
-		echo 'ssso';exit();
         throw new ForbiddenHttpException(Yii::t('yii', 'error'));
     }
 }
