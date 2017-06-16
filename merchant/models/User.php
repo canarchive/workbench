@@ -135,11 +135,11 @@ class User extends AuthBase
         ];
     }
 
-    public static function getStatusInfos()
+    public function getStatusInfos()
     {
         return [
-            '1' => '正常',
             '0' => '没激活',
+            '1' => '正常',
             '99' => '锁定',
         ];
     }

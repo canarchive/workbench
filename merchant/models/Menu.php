@@ -22,7 +22,7 @@ class Menu extends MerchantModel
     public function getModuleInfos()
     {
         $datas = [
-            'admin' => '',
+            'admin' => '基本模块',
         ];
         return $datas;
     }

@@ -1,17 +1,15 @@
 <?php
-
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use yii\bootstrap\ActiveForm;
 
 ?>
 
-<div class="auth-item-form">
+<div class="menu-form">
     <?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 64]) ?>
-    <?= $form->field($model, 'ruleName')->dropDownList(['a' => 'b', 'c' =>'d'], ['prompt'=>'Select...']); ?>
-    <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
+    <?= $form->field($model, 'code')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'statusInfos')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
-
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>
