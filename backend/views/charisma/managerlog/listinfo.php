@@ -7,7 +7,7 @@ $gridViewParams = [
         'id',
         'manager_id',
         'manager_name',
-        'roles',
+        'role',
         'menu_code',
         'menu_name',
         [

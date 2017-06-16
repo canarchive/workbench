@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\db\ActiveRecord;
 use baseapp\auth\models\AuthBase;
 
@@ -15,7 +16,7 @@ class Manager extends AuthBase
     const STATUS_ACTIVE = 1;
     const STATUS_LOCK = 99;
 
-    public $roles;
+    public $role;
     public $password_new_repeat;
     public $oldpassword;
     public $password_new;
@@ -39,8 +40,8 @@ class Manager extends AuthBase
     public function scenarios()
     {
         return [
-            'create' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
-            'update' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
+            'create' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'role'],
+            'update' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'role'],
             'edit-info' => ['email', 'truename', 'mobile'],
             'edit-password' => ['oldpassword', 'password_new', 'password_new_repeat'],
         ];
@@ -62,7 +63,7 @@ class Manager extends AuthBase
             ['password_new', 'required', 'on' => ['create', 'edit-password']],
             ['password_new', 'string', 'min' => 6, 'when' => function($model) { return $model->password_new != ''; }],
             ['password_new', 'compare', 'on' => ['edit-password']],
-            [['truename', 'email', 'mobile', 'status', 'roles'], 'safe', 'on' => ['create', 'update']],
+            [['truename', 'email', 'mobile', 'status', 'role'], 'safe', 'on' => ['create', 'update']],
         ];
     }
 
@@ -86,7 +87,7 @@ class Manager extends AuthBase
         return [
             'id' => 'ID',
             'name' => '管理员账号',
-            'roles' => '角色',
+            'role' => '角色',
             'truename' => '真实姓名',
             'login_num' => '登录次数',
             'password' => '密码',
@@ -123,13 +124,13 @@ class Manager extends AuthBase
     {
         parent::afterSave($insert, $changedAttributes);
 
-        if (Yii::$app->controller->id == 'site' || in_array($this->scenario, ['edit-info', 'edit-password'])) {
+        if (Yii::$app->controller->id == 'entrance' || in_array($this->scenario, ['edit-info', 'edit-password'])) {
             return true;
         }
         $id = $this->attributes['id'];
         $manager = Yii::$app->getAuthManager();
         $manager->revokeAll($this->id);
-        foreach ((array) $this->roles as $roleName) {
+        foreach ((array) $this->role as $roleName) {
             if (empty($roleName)) {
                 continue;
             }
@@ -149,15 +150,15 @@ class Manager extends AuthBase
         ];
     }
 
-    public function getRolesInfos()
+    public function getRole()
     {
-        $roles = \yii\helpers\ArrayHelper::getColumn(Yii::$app->getAuthManager()->getRolesByUser($this->id), 'name');
-        return $roles;
+        $role = ArrayHelper::getColumn(Yii::$app->getAuthManager()->getRolesByUser($this->id), 'name');
+        return $role;
     }
 
-    public function getRolesStr()
+    public function getRoleStr()
     {
-        return implode(',', (array) $this->getRolesInfos());
+        return implode(',', (array) $this->getRole());
     }
 
     public function getRoleInfos()

@@ -11,14 +11,16 @@ use common\components\AccessControl as AccessControlBase;
 
 class AccessControl extends AccessControlBase
 {
-    protected function _checkStatus($elem = 'lock')
+    protected function _checkStatus()
     {
-        switch ($elem) {
-        case 'lock':
-            return $this->identity->status == Manager::STATUS_LOCK;
-        case 'noactive':
-            return $this->identity->status == Manager::STATUS_NOACTIVE;
+        $status = $this->identity->status;
+        if ($status == 99) {
+            return '账户被锁定，请联系管理员';
         }
+        if (empty($status)) {
+            return '您的账号还未启用！';
+        }
+        return true;
     }
 
     protected function _checkCurrentMenu($action)

@@ -1,11 +1,13 @@
 <?php
-$model->roles = implode(',', $model->getRolesInfos());
 $detailViewParams = [
     'model' => $model,
     'attributes' => [
         'id',
         'name',
-        'roles',
+        [
+            'attribute' => 'role',
+            'value' => $model->roleStr,
+        ],
         'login_num',
         'truename',
         'email',

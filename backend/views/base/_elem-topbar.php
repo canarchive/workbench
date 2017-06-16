@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
 
-$roleName = isset($this->params['roleName']) ? $this->params['roleName'] : '操作员';
+$managerInfo = Yii::$app->params['managerInfo'];
 ?>
 <!-- topbar starts -->
 <div class="navbar navbar-default" role="navigation">
@@ -20,7 +20,7 @@ $roleName = isset($this->params['roleName']) ? $this->params['roleName'] : '操�
         <!-- user dropdown starts -->
         <div class="btn-group pull-right">
             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"><?= $roleName; ?></span>
+            <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"><?= $managerInfo['name'] . '--' . $managerInfo['roleStr']; ?></span>
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
