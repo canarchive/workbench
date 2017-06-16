@@ -7,10 +7,9 @@ $gridViewParams = [
         'name',
         'truename',
         [
-            'attribute' => 'roles',
+            'attribute' => 'role',
             'value' => function($model) {
-                return implode(',', ($model->getRolesInfos()));
-                //return $model->roles;
+                return $model->roleStr;
             },
         ],
         'mobile',

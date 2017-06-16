@@ -12,15 +12,16 @@ trait SigninTrait
      *
      * @return boolean whether the user is logged in successfully
      */
-    public function _signin()
+    public function _signin($form = false)
     {
-        $this->load(Yii::$app->request->post(), '');
+        empty($form) ? $this->load(Yii::$app->request->post(), '') : $this->load(Yii::$app->request->post());
         $validate = $this->validate();
         if (empty($validate)) {
             return $this->_formatFailResult('登录失败，请您重试');
         }
 
-        $loginResult = Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+        $rememberMe = $this->rememberMe ? $this->rememberMe : 10;
+        $loginResult = Yii::$app->user->login($this->getUser(), $rememberMe);
 		if (!$loginResult) {
 		    return ['status' => 400, 'message' => '登录失败'];
 		}
@@ -46,7 +47,7 @@ trait SigninTrait
     {
         $user = $this->getUser();
 		if (!$user) {
-            $this->addError('mobile', '用户不存在');
+            $this->addError($this->nameField, '用户不存在');
 			return ;
 		}
 
@@ -95,8 +96,13 @@ trait SigninTrait
     protected function getUser()
     {
         if (is_null($this->_user)) {
-            $this->_user = $this->getUserInfo(['mobile' => $this->mobile]);
+            $this->_user = $this->getUserInfo([$this->nameField => $this->$nameField]);
         }
         return $this->_user;
+    }
+
+    public function getNameField()
+    {
+        return 'mobile';
     }
 }

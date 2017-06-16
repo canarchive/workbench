@@ -54,7 +54,7 @@ trait TraitActive
         $infos = [
             'manager_id' => $managerInfo['id'],
             'manager_name' => $managerInfo['name'],
-            'roles' => $managerInfo['rolesStr'],
+            'role' => $managerInfo['roleStr'],
             'menu_code' => $menuInfo['code'],
             'menu_name' => $menuInfo['name'],
             'data' => serialize($data),
