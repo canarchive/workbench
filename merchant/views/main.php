@@ -1,6 +1,5 @@
 <?php
-use yii\helpers\Url;
-use yii\helpers\Html;
+$this->params['jsGlobalStr'] = "window.MERCHANT_URL = '" .  Yii::getAlias('@web') . "';";
 
 ?>
 <?php $this->beginContent('@common/views/base/main.php'); ?>
