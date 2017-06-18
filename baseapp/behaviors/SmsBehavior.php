@@ -11,15 +11,13 @@ class SmsBehavior extends Behavior
     public function sendSmsBase($mobile, $content, $sort)
     {
         $smser = new Smser();
-        $smser->send($mobile, $content, 'decoration_valid');
-        return true;
+        return $smser->send($mobile, $content, $sort);
     }
 
     public function sendSmsCode($mobile, $sort)
     {
         $smser = new Smser();
-        $smser->send($mobile, $sort);
-        return true;
+        return $smser->sendCode($mobile, $sort);
     }
 
     public function sendSms($merchantInfo, $mobile)

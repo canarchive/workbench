@@ -14,27 +14,40 @@ trait ApiTrait
 
     public function actionValidation()
     {
-        $field = Yii::$app->request->post('field');
-        $value = Yii::$app->request->post('value');
-        $type = Yii::$app->request->post('type', '');
+		$data = $this->_formatInput(['field', 'value', 'type']);
 
-        if (empty($field) || empty($value)) {
+        if (empty($data['field']) || empty($data['value'])) {
             return ['status' => 400, 'message' => '参数错误'];
         }
         $model = $this->getModel();
-        $data = ['field' => $field, 'type' => $type, 'value' => $value];
         return $model->validateCommon($data);
     }
 
 	public function actionGenerateCode()
 	{
-		$fields = ['mobile', 'captcha', 'type'];
-		$data = [];
-		foreach ($fields as $field) {
-			$data[$field] = trim(Yii::$app->request->post($field));
-		}
+		$data = $this->_formatInput(['mobile', 'captcha', 'type']);
+
         $model = $this->getModel();
 		$result = $model->generateCode($data);
-		var_dump($result);
+		return $result;
+	}
+
+	public function actionCheckCode()
+	{
+		$data = $this->_formatInput(['mobile', 'code', 'type']);
+
+        $model = $this->getModel();
+		$result = $model->checkMobileCode($data);
+		return $result;
+	}
+
+	protected function _formatInput($fields)
+	{
+		$data = [];
+		foreach ($fields as $field) {
+			$data[$field] = trim(strip_tags(Yii::$app->request->post($field)));
+			//$data[$field] = trim(strip_tags(Yii::$app->request->get($field)));
+		}
+		return $data;
 	}
 }
