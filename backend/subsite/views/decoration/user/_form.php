@@ -26,6 +26,6 @@ foreach ($model->getMerchantAllInfos() as $key => $info) {
     <?= $form->field($model, 'note')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'message')->textarea(['rows' => 2]) ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

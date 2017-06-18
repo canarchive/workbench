@@ -45,6 +45,6 @@ $model->service_at = empty($service_at) ? time() : $service_at;
 
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>
