@@ -30,7 +30,7 @@ $model->password_new = '';
     <?php } ?>
     <?php } ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 
 </div>
