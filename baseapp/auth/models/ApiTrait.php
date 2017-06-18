@@ -6,6 +6,8 @@ use Yii;
 
 trait ApiTrait
 {
+	public $baseBehaviors = ['sms'];
+
     public function validateCommon($data)
     {
         $method = '_validate' . ucfirst($data['field']);
@@ -14,13 +16,41 @@ trait ApiTrait
         }
 
         unset($data['field']);
-        return $this->$method($data);
+        return $this->$method($data['value'], $data['type']);
     }
 
-    protected function _validateMobile($data)
+	public function generateCode($data)
+	{
+		$captcha = $this->checkCaptcha($data['captcha'], $this->captchaRequire);
+		if ($captcha !== true) {
+			//return $captcha;
+		}
+
+		$mobileCheck = $this->_validateMobile($data['mobile'], $data['type']);
+		if ($mobileCheck['status'] != 200) {
+			return $mobileCheck;
+		}
+
+        $result = $this->sendSmsCode($data['mobile'], $data['type']);
+    	$status = $result === 'OK' ? 200 : 400;
+    	$return = ['status' => $status, 'message' => $result];
+		return $return;
+	}
+
+	public function checkMobileCode($data)
+	{
+		$mobileCheck = $this->_validateMobile($data['mobile'], $data['type']);
+		if ($mobileCheck['status'] != 200) {
+			return $mobileCheck;
+		}
+
+		$result = $this->validateMobileCode($data);
+		$result = $result === true ? ['status' => 200, 'message' => 'OK'] : ['status' => 400, 'message' => '手机验证码有误'];
+		return $result;
+	}
+
+    protected function _validateMobile($value, $type)
     {
-        $type = $data['type'];
-        $value = $data['value'];
         $valid =  $this->checkMobile($value);
         if ($valid !== true) {
             return ['status' => 400, 'message' => '手机号格式有误'];
@@ -29,11 +59,9 @@ trait ApiTrait
         return $this->_checkUser(['mobile' => $value], $type);
     }
 
-    protected function _validateEmail($value)
+    protected function _validateEmail($value, $type, $allowEmpty = false)
     {
-        $type = $data['type'];
-        $value = $data['value'];
-        $valid =  $this->checkEmail($value, true);
+        $valid =  $this->checkEmail($value, $allowEmpty);
         if ($valid !== true) {
             return ['status' => 400, 'message' => '邮箱格式有误'];
         }
@@ -58,4 +86,9 @@ trait ApiTrait
 
         return ['status' => 200, 'message' => 'OK'];
     }
+
+	protected function getCaptchaRequire()
+	{
+		return true;
+	}
 }

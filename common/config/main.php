@@ -34,11 +34,12 @@ return [
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
-				['pattern' => '/upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index'],
+				['pattern' => '/captcha', 'route' => '/site/captcha'],
+                ['pattern' => '/upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index'],
             ],
         ],
         'errorHandler' => [
-            //'errorAction' => 'site/error',
+            'errorAction' => 'site/error',
         ],
         'request' => [
             'class' => 'common\components\Request',

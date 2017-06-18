@@ -7,6 +7,8 @@ $jsStr = isset($this->params['jsStr']) ? $this->params['jsStr'] : '';
 $jsFooterStr = isset($this->params['jsFooterStr']) ? $this->params['jsFooterStr'] : '';
 $statCodeStr = isset($this->params['statCodeStr']) ? $this->params['statCodeStr'] : '';
 $doctypeStr = isset($this->params['doctypeStr']) ? $this->params['doctypeStr'] : 'html';
+$jsGlobalStr = "window.CURRENT_URL = '" .  $this->context->host . "';";
+$jsGlobalStr .= isset($this->params['jsGlobalStr']) ? $this->params['jsGlobalStr'] : '';
 ?>
 <!DOCTYPE <?= $doctypeStr; ?>>
 <html lang="zh-cn">
@@ -14,6 +16,7 @@ $doctypeStr = isset($this->params['doctypeStr']) ? $this->params['doctypeStr'] :
 <?= $this->render('_meta'); ?>
 <?= $this->render('_tdk'); ?>
 <?= $cssStr; ?>
+<script><?= $jsGlobalStr; ?></script>
 <?= $jsStr; ?>
 <?= $statCodeStr; ?>
 </head>

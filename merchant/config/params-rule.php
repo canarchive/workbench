@@ -19,7 +19,7 @@ return [
     ],
     'api-validation' => [
         'data' => [
-			'pattern' => '/api-<action:(validation)>',
+			'pattern' => '/api-<action:(validation|captcha|generate-code|check-code|register)>',
     		'route'	=> '/api/<action>',
         ],
     ],

@@ -36,15 +36,15 @@ class Luosimao extends SmserAbstract
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 
         $noSendMessage = isset(\Yii::$app->params['noSendMessage']) ? \Yii::$app->params['noSendMessage'] : false;
-        $result    = $noSendMessage ? false : curl_exec($ch);
+        $result = $noSendMessage ? true : curl_exec($ch);
         //var_dump($result);exit();
-        //$res  = curl_error( $ch );
+        //$res = curl_error($ch);
         curl_close($ch);
 
         $return = $this->_formatResult($result);
         $this->_writeLog($return, $mobile, $content, $sort, $startTime);
 
-        $returnCode = $return['status'] ? 'OK' : 'SMS_SEND_FAIL';
+        $returnCode = $return['status'] || $result ? 'OK' : 'SMS_SEND_FAIL';
         return $returnCode;
     }
 
