@@ -12,6 +12,6 @@ use common\widgets\FileUploadUI;
     <?= $form->field($model, 'impression')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'account_id')->dropDownList($model->accountInfos, ['prompt' => Yii::t('admin-common', 'Select Account')]); ?>    
     <?= $form->field($model, 'plan_id')->dropDownList($model->planInfos, ['prompt' => Yii::t('admin-common', 'Select Plan')]); ?>    
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

@@ -16,6 +16,6 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'statusInfos')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

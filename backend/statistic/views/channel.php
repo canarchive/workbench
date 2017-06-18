@@ -33,4 +33,4 @@ if (in_array('channel', $searchModel->fields)) {
 echo $this->render('_nav-channel', ['model' => $searchModel]);
 echo $this->render('_nav-client', ['model' => $searchModel]);
 }
-echo $this->render('@app/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);

@@ -24,7 +24,7 @@ $model->merchant_show = array_keys($model->merchant_show);
     <?= $form->field($model, 'email') ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 
 </div>

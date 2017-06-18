@@ -13,6 +13,6 @@ $model->content = $model->getTemplateMsg($type);
     <?= $form->field($model, 'mobile')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'content')->textarea(['rows' => 2]) ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

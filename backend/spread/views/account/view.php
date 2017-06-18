@@ -30,5 +30,5 @@ $detailViewParams = [
     ],
 ];
 
-echo $this->render('@app/views/common/view', ['detailViewParams' => $detailViewParams]);
+echo $this->render('@backend/views/common/view', ['detailViewParams' => $detailViewParams]);
 

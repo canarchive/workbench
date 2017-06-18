@@ -13,6 +13,6 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'have_pc', ['inline' => true])->radioList($model->havePcInfos); ?>
     <?= $form->field($model, 'have_mobile', ['inline' => true])->radioList($model->haveMobileInfos); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>
