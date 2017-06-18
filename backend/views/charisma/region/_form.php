@@ -13,6 +13,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'orderlist'); ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

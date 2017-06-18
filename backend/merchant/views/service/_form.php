@@ -17,6 +17,6 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => Yii::t('admin-common', 'Select Status')]); ?>
     <?= $form->field($model, 'status_sendmsg')->dropDownList($model->statusSendmsgInfos, ['prompt' => Yii::t('admin-common', 'Select Status_sendmsg')]); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>
