@@ -318,6 +318,8 @@ $(function() {
                             _self.sendCodeInterval();
                         },
                         error: function(r) {
+                            $("input[name=verfCode]").val('');
+							$(".auth-image").attr('src', '/captcha.html?' + Math.random());
                             $("#warn1").html(r);
                             $("#getVerifyBtn").attr("disabled", null).val("获取验证码");
                         }
@@ -337,8 +339,9 @@ $(function() {
                 var step1FormValid = $("#step1Form").valid();
                 $("#warn1").find('.success').remove();
                 var postData = {
-                    userName: $('input[name="userName"]').val(),
-                    activeCode: $('input[name="mobileVerfyCode"]').val()
+                    mobile: $('input[name="userName"]').val(),
+					type: 'register',
+                    code: $('input[name="mobileVerfyCode"]').val()
                 };
                 if (step1FormValid) {
                     if ( !! $("input[name=checkRule]").get(0).checked) {
@@ -367,17 +370,17 @@ $(function() {
                 if (step2FormValid) {
                     var postData = {
                         action: 'ajaxReg',
-                        userName: $.trim($('input[name="userName"]').val()),
-                        activeCode: $.trim($("input[name=mobileVerfyCode]").val()),
-                        companyName: $.trim($("input[name=companyName]").val()),
-                        linkman: $.trim($("input[name=linkman]").val()),
+                        mobile: $.trim($('input[name="userName"]').val()),
+                        code: $.trim($("input[name=mobileVerfyCode]").val()),
+                        merchant_name: $.trim($("input[name=companyName]").val()),
+                        contact: $.trim($("input[name=linkman]").val()),
                         password: $.trim($("input[name=password]").val()),
                         email: $.trim($("input[name=email]").val()),
-                        recommendCode: $.trim($("input[name=recommendCode]").val()),
+                        recommend_code: $.trim($("input[name=recommendCode]").val()),
                         //邀请码
                         openId: $.trim($("input[name=openId]").val()),
                         source: $.cookie('s') || 0,
-                        businessTypeId: $("#businessTypeId").val() //,
+                        merchant_type: $("#businessTypeId").val() //,
                         //sc: register.getQueStr("sc")//推荐有礼
                     };
                     LOGIN.register(postData, {
