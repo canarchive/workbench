@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'display')->dropDownList($model->displayInfos); ?>
     <?= $form->field($model, 'extparam'); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 
 </div>
