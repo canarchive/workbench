@@ -6,7 +6,7 @@ use Yii;
 use yii\base\Behavior;
 use common\components\sms\Smser;
 
-class SmsSignupBehavior extends Behavior
+class SmsBehavior extends Behavior
 {
     public function sendSmsBase($mobile, $content, $sort)
     {
@@ -14,6 +14,14 @@ class SmsSignupBehavior extends Behavior
         $smser->send($mobile, $content, 'decoration_valid');
         return true;
     }
+
+    public function sendSmsCode($mobile, $sort)
+    {
+        $smser = new Smser();
+        $smser->send($mobile, $sort);
+        return true;
+    }
+
     public function sendSms($merchantInfo, $mobile)
     {
 		$message = isset($merchantInfo['msg']) ? $merchantInfo['msg'] : '';

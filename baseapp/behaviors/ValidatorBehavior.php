@@ -3,9 +3,7 @@
 namespace baseapp\behaviors;
 
 use yii\base\Behavior;
-use common\validators\MobileValidator;
 use common\components\sms\Smser;
-use yii\validators\EmailValidator;
 
 class ValidatorBehavior extends Behavior
 {
@@ -21,45 +19,50 @@ class ValidatorBehavior extends Behavior
         return $result;
 	}
 
-    public function checkMobile($mobile, $allowEmpty = false)
+    public function checkMobile($value, $allowEmpty = false)
     {
-        if (empty($email) && $allowEmpty) {
+		$param = [
+			'code' => 'mobile',
+			'name' => '手机号',
+			'class' => '\common\validators\MobileValidator',
+		];
+		return $this->_check($param, $value, $allowEmpty);
+	}
+
+    public function checkEmail($value, $allowEmpty = false)
+    {
+		$param = [
+			'code' => 'email',
+			'name' => '邮箱',
+			'class' => '\yii\validators\EmailValidator',
+		];
+		return $this->_check($param, $value, $allowEmpty);
+	}
+
+    public function checkCaptcha($value, $allowEmpty = false)
+    {
+		$param = [
+			'code' => 'captcha',
+			'name' => '图形验证码',
+			'class' => '\yii\captcha\CaptchaValidator',
+		];
+		return $this->_check($param, $value, $allowEmpty);
+	}
+
+	protected function _check($param, $value, $allowEmpty)
+	{
+        if (empty($value) && $allowEmpty) {
             return true;
         }
 
-        if (empty($mobile)) {
-            return ['status' => 400, 'message' => '手机号码不能为空'];
+        if (empty($value)) {
+            return ['status' => 400, 'message' => $param['name'] . '不能为空'];
         }
 
-        $validator = new MobileValidator();
-        $valid =  $validator->validate($mobile);
+        $validator = new $param['class'];
+        $valid =  $validator->validate($value);
         if (empty($valid)) {
-            return ['status' => 400, 'message' => '手机号码格式有误'];
-        }
-
-        return true;
-    }
-
-    /**
-     * 验证邮箱格式
-     *
-     * @param $email string
-     * @return boolean
-     */
-    public function checkEmail($email, $allowEmpty = false)
-    {
-        if (empty($email) && $allowEmpty) {
-            return true;
-        }
-
-        if (empty($email)) {
-            return ['status' => 400, 'message' => '邮箱不能为空'];
-        }
-
-        $validator = new EmailValidator();
-        $valid =  $validator->validate($email);
-        if (empty($valid)) {
-            return ['status' => 400, 'message' => '邮箱有误'];
+            return ['status' => 400, 'message' => $param['name'] . '格式有误'];
         }
 
         return true;

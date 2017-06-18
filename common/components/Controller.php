@@ -38,6 +38,10 @@ class Controller extends YiiController
                 'class' => 'common\components\ErrorAction',
                 'view' => '@common/views/common/error',
             ],
+			'captcha' => [
+				'class' => 'common\components\CaptchaAction',
+				'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+			],
         ];
     }
 

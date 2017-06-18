@@ -30,6 +30,7 @@ return [
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
+				['pattern' => '/captcha', 'route' => '/site/captcha'],
                 ['pattern' => '/upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index'],
             ],
         ],
@@ -38,7 +39,7 @@ return [
             'baseUrl' => '@asseturl/assets',
         ],
         'errorHandler' => [
-            //'errorAction' => 'site/error',
+            'errorAction' => 'site/error',
         ],
         'request' => [
             'class' => 'common\components\Request',
