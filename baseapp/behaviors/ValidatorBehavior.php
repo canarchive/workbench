@@ -7,14 +7,14 @@ use common\components\sms\Smser;
 
 class ValidatorBehavior extends Behavior
 {
-	public function checkMobileCode($mobile, $sort, $code)
+	public function validateMobileCode($data)
 	{
         $result = true;
 
 		$smser = new Smser();
-		$check = 'OK';//$smser->checkCode($mobile, $sort, $code);
+		$check = $smser->checkCode($data['mobile'], $data['type'], $data['code']);
         if ($check !== 'OK') {
-            $result = ['code' => 400, 'message' => '手机验证码有误'];
+            $result = ['code' => 400, 'message' => '手机验证码有误' . $check];
         }
         return $result;
 	}

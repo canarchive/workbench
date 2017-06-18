@@ -96,7 +96,8 @@ trait SigninTrait
     protected function getUser()
     {
         if (is_null($this->_user)) {
-            $this->_user = $this->getUserInfo([$this->nameField => $this->$nameField]);
+			$nameField = $this->nameField;
+            $this->_user = $this->getUserInfo([$nameField => $this->$nameField]);
         }
         return $this->_user;
     }
