@@ -6,6 +6,11 @@ use Yii;
 
 trait ApiTrait
 {
+    public function getBehaviorCodes()
+    {
+        return ['sms'];
+	}
+
     public function validateCommon($data)
     {
         $method = '_validate' . ucfirst($data['field']);
@@ -16,6 +21,24 @@ trait ApiTrait
         unset($data['field']);
         return $this->$method($data);
     }
+
+	public function generateCode($data)
+	{
+		$captcha = $this->checkCaptcha($data['captcha'], $this->captchaRequire);
+		if ($captcha !== true) {
+			return $captcha;
+		}
+
+		$data['value'] = $data['mobile'];
+		$mobile = $this->_validateMobile($data);
+		if ($mobile['status'] != 200) {
+			return $mobile;
+		}
+
+        $result = $this->sendSmsCode($data['mobile'], $data['type']);
+    	$status = $result == 'OK' ? 200 : 400;
+    	return ['status' => $status, 'message' => $result];
+	}
 
     protected function _validateMobile($data)
     {
@@ -58,4 +81,9 @@ trait ApiTrait
 
         return ['status' => 200, 'message' => 'OK'];
     }
+
+	protected function getCaptchaRequire()
+	{
+		return true;
+	}
 }
