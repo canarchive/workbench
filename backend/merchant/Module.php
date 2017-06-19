@@ -2,10 +2,9 @@
 
 namespace backend\merchant;
 
-use Yii;
-use yii\helpers\Inflector;
+use common\components\ModuleBase;
 
-class Module extends \yii\base\Module
+class Module extends ModuleBase
 {
     /**
      * @inheritdoc
