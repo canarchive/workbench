@@ -13,11 +13,12 @@ class Merchant extends MerchantModel
     public $created_at_end;
     public $updated_at_start;
     public $updated_at_end;
+    public $merchant_id;
 
     public function rules()
     {
         return [
-            [['name', 'city_code', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
+            [['name', 'merchant_id', 'city_code', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
         ];
     }
 
@@ -40,6 +41,7 @@ class Merchant extends MerchantModel
 
         $query->andFilterWhere([
             'city_code' => $this->city_code,
+            'id' => $this->merchant_id,
             'status' => $this->status,
         ]);
 

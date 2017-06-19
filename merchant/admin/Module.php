@@ -24,11 +24,11 @@ class Module extends ModuleBase
     public function initPrivInfo()
     {
         $managerInfo = Yii::$app->params['managerInfo'];
-        $merchantIds = explode(',', $managerInfo['merchant_id']);
+        $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
         $data = [
             'app' => 'merchant',
             'role' => $managerInfo['role'],
-            'merchant_id' => explode(',', $managerInfo['merchant_id']),
+            'merchant_id' => $merchantIds,
             'privFields' => [
                 'merchant_id' => $merchantIds,
             ],

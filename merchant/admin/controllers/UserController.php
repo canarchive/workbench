@@ -4,25 +4,12 @@ namespace merchant\admin\controllers;
 
 use Yii;
 use merchant\models\User;
-use merchant\components\AdminController;
+use backend\merchant\controllers\UserController as UserControllerBase;
 use backend\components\ControllerFullTrait;
 
-class UserController extends AdminController
+class UserController extends UserControllerBase
 {
-    protected $modelClass = 'merchant\models\User';
-    protected $modelSearchClass = 'merchant\models\searchs\User';
-    use ControllerFullTrait;
-
-    public function _addData()
-    {
-        return ['scenario' => 'create'];
-    }
-
-
-    protected function _getScenario()
-    {
-        return 'update';
-    }
+    use BaseTrait;
 
     public function actionEditInfo()
     {
@@ -36,7 +23,7 @@ class UserController extends AdminController
             return $this->redirect(['edit-info']);
         }
 
-        return $this->render('edit-info', ['model' => $model]);
+        return $this->render($this->viewPrefix . 'edit-info', ['model' => $model]);
     }
 
     public function actionEditPassword()
@@ -57,6 +44,6 @@ class UserController extends AdminController
             return $this->redirect('/signin.html');
         }
 
-        return $this->render('edit-password', ['model' => $model]);
+        return $this->render($this->viewPrefix . 'edit-password', ['model' => $model]);
     }
 }

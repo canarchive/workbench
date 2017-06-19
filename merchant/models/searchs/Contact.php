@@ -7,14 +7,13 @@ use merchant\models\Contact as ContactModel;
 
 class Contact extends ContactModel
 {
-
-
     public function rules()
     {
         return [
             [['merchant_id'], 'safe'],
         ];
     }
+
     public function search($params)
     {
         $query = self::find();

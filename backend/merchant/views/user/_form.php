@@ -19,7 +19,7 @@ $model->merchant_show = array_keys($model->merchant_show);
     <?= $form->field($model, 'password_new')->passwordInput() ?>
     <?php } ?>
     <?= $form->field($model, 'mobile') ?>
-    <?= $form->field($model, 'merchant_show')->dropDownList($model->merchantInfos, ['multiple' => 'multiple', 'prompt' => '']); ?>
+    <?= $form->field($model, 'merchant_show')->dropDownList($model->getMerchantInfos($this->context->privInfo), ['multiple' => 'multiple', 'prompt' => '']); ?>
     <?= $form->field($model, 'role')->dropDownList($model->roleInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'email') ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>

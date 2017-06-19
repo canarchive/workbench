@@ -21,7 +21,7 @@ class User extends AuthBase
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
+        return array_merge(parent::getBehaviorCodes(), ['merchant', 'service', 'timestamp']);
     }
 
     public static function tableName()
@@ -32,6 +32,7 @@ class User extends AuthBase
     public function scenarios()
     {
         return [
+            'default' => ['merchant_id'],
             'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id'],
             'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id'],
             //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
@@ -105,10 +106,11 @@ class User extends AuthBase
             $this->setPassword($this->password_new);
         }
 
-        $this->merchant_id = strval($this->merchant_id);
+        $merchant_id = strval($this->merchant_id);
         if (!is_null($this->merchant_show)) {
-            $this->merchant_id = implode(',', (array) $this->merchant_show);
+            $merchant_id = ',' . implode(',', (array) $this->merchant_show) . ',';
         }
+        $this->merchant_id = !empty($merchant_id) ? ',' . trim($merchant_id, ',') . ',' : '';
 
         return true;
     }
@@ -175,19 +177,6 @@ class User extends AuthBase
             }
         }
         return $datas;
-    }
-
-    public function getMerchantAllInfos()
-    {
-        $infos = Merchant::find()->indexBy('id')->all();
-        return $infos;
-    }
-
-    public function getMerchantInfos()
-    {
-        $infos = $this->getMerchantAllInfos();
-        $infos = ArrayHelper::map($infos, 'id', 'name');
-        return $infos;
     }
 
     public function getUserMerchantStr()

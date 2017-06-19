@@ -8,7 +8,7 @@ use yii\bootstrap\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'merchant_id')->dropDownList($model->merchantInfos, ['prompt' => Yii::t('admin-common', 'Select merchant')]); ?>
+    <?= $form->field($model, 'merchant_id')->dropDownList($model->getMerchantInfos($this->context->privInfo), ['prompt' => '']); ?>
     <?= $form->field($model, 'manager_id')->dropDownList($model->managerInfos, ['prompt' => Yii::t('admin-common', 'Select Manager')]); ?>
     <?= $form->field($model, 'code')->textInput() ?>
     <?= $form->field($model, 'password_user')->textInput() ?>
