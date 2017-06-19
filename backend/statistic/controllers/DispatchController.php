@@ -7,7 +7,6 @@ use backend\components\AdminController;
 class DispatchController extends AdminController
 {
     use StatisticTrait;
-    public $viewPrefix = '/';
     protected $viewCurrent = 'dispatch';
     protected $modelClass = 'baseapp\statistic\models\Dispatch';
     protected $modelSearchClass = 'baseapp\statistic\models\searchs\Dispatch';

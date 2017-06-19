@@ -23,6 +23,8 @@ class Menu extends MerchantModel
     {
         $datas = [
             'admin' => '基本模块',
+            'admin/statistic' => '统计',
+            'admin/decoration' => '家装',
         ];
         return $datas;
     }
