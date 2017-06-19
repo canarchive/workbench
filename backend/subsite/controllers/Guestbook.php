@@ -7,6 +7,6 @@ use backend\components\ControllerTraitView;
 
 class Guestbook extends AdminController
 {
-    public $viewPrefix = '/guestbook/';
+    public $viewPrefix = '@backend/subsite/views/guestbook/';
     use ControllerTraitView;
 }

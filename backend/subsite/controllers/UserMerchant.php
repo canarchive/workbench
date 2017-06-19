@@ -7,6 +7,6 @@ use backend\components\ControllerTraitView;
 
 class UserMerchant extends AdminController
 {
-    public $viewPrefix = '/user-merchant/';
     use ControllerTraitView;
+    public $viewPrefix = '@backend/subsite/views/user-merchant/';
 }

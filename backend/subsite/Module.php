@@ -2,8 +2,9 @@
 
 namespace backend\subsite;
 
+use common\components\ModuleBase;
 
-class Module extends \yii\base\Module
+class Module extends ModuleBase
 {
     public $defaultRoute = '';
 

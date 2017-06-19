@@ -7,6 +7,6 @@ use backend\components\ControllerTraitView;
 
 class Callback extends AdminController
 {
-    public $viewPrefix = '/callback/';
+    public $viewPrefix = '@backend/subsite/views/callback/';
     use ControllerTraitView;
 }

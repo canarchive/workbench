@@ -9,7 +9,6 @@ use backend\components\ControllerTraitView;
 class Dispatch extends AdminController
 {
     public $isAjax;
-    public $viewPrefix = '';//'/dispatch/';
     use ControllerTraitView;
 
     public function actionUpdate($id)
