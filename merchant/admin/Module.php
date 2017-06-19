@@ -10,6 +10,7 @@ class Module extends ModuleBase
     public function init()
     {
         parent::init();
+        $this->layout = 'main';
 
 		Yii::configure($this, require(__DIR__ . '/config/main.php'));
 		//$this->layout = '//main';
@@ -18,5 +19,21 @@ class Module extends ModuleBase
                 'class' => 'merchant\decoration\admin\Module',
             ],
         ];*/
+    }
+
+    public function initPrivInfo()
+    {
+        $managerInfo = Yii::$app->params['managerInfo'];
+        $merchantIds = explode(',', $managerInfo['merchant_id']);
+        $data = [
+            'app' => 'merchant',
+            'role' => $managerInfo['role'],
+            'merchant_id' => explode(',', $managerInfo['merchant_id']),
+            'privFields' => [
+                'merchant_id' => $merchantIds,
+            ],
+        ];
+        $_GET['merchant_id'] = $data['merchant_id'];
+        return $data;
     }
 }

@@ -5,7 +5,7 @@ use backend\components\AdminController as AdminControllerBase;
 
 class AdminController extends AdminControllerBase
 {
-    public $layout = 'main-admin';
+    //public $layout = 'main-admin';
 
     public function init()
     {

@@ -20,7 +20,7 @@ trait SignupFormTrait
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['smsSignup', 'merchant']);
+        return array_merge(parent::getBehaviorCodes(), ['sms', 'merchant']);
     }
 
     /**
