@@ -264,8 +264,7 @@ class AdminController extends Controller
 
     public function initPrivInfo()
     {
-        $data = $this->module->initPrivInfo();
-
+        $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         return $data;
     }
 
