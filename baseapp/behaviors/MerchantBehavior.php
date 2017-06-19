@@ -27,9 +27,11 @@ class MerchantBehavior extends Behavior
         return $info;
     }
 
-    public function getMerchantInfos()
+    public function getMerchantInfos($privInfo = null)
     {
-        $infos = ArrayHelper::map(Merchant::find()->select('id, name')->all(), 'id', 'name');
+        $where = isset($privInfo['merchant_id']) ? ['id' => $privInfo['merchant_id']] : null;
+        
+        $infos = ArrayHelper::map(Merchant::find()->select('id, name')->where($where)->all(), 'id', 'name');
         return $infos;
     }
 

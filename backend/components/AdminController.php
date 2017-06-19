@@ -3,6 +3,7 @@ namespace backend\components;
 
 use Yii;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 use common\components\Controller;
 
@@ -11,11 +12,13 @@ use common\components\Controller;
  */
 class AdminController extends Controller
 {
+    public $privInfo = [];
     public $menuInfos = [];
     public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
     protected $viewPrefix = '';
+    public $layout = '@backend/views/charisma/layouts/main';
 
     /**
      * @inheritdoc
@@ -94,7 +97,8 @@ class AdminController extends Controller
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass($this->_addData());
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
+            
             if ($this->_returnView()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -137,6 +141,7 @@ class AdminController extends Controller
         $return = false;
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
+            $this->_checkRecordPriv($model);
             if (!empty($model->add_mul)) {
                 $return = $model->addMul();
             }
@@ -164,7 +169,7 @@ class AdminController extends Controller
         if (!empty($scenario)) {
             $model->setScenario($scenario);
         }
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -236,5 +241,26 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
+        $privFields = (array) $this->privInfo['privFields'];
+        foreach ($privFields as $field => $value) {
+            if (empty($model->$field) || !in_array($model->$field, $value)) {
+                throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+            }
+        }
+
+        return true;
+    }
+
+    public function beforeAction($action)
+    {
+        $this->privInfo = $this->initPrivInfo();
+        return parent::beforeAction($action);
+    }
+
+    public function initPrivInfo()
+    {
+        $data = $this->module->initPrivInfo();
+
+        return $data;
     }
 }

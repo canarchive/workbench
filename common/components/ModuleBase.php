@@ -58,4 +58,9 @@ class ModuleBase extends \yii\base\Module
         $session['current_company'] = $info;
         return $info;
     }
+
+    public function initPrivInfo()
+    {
+        return false;
+    }
 }
