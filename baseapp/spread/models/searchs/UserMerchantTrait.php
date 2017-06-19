@@ -32,6 +32,7 @@ Trait UserMerchantTrait
             'status' => $this->status,
             'merchant_id' => $this->merchant_id,
         ]);
+        //$this->merchant_id = 0;
 
         $startTime = intval(strtotime($this->created_at_start));
         $endTime = $this->created_at_end > 0 ? intval(strtotime($this->created_at_end)) : time();
