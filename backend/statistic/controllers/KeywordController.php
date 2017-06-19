@@ -7,7 +7,6 @@ use backend\components\AdminController;
 class KeywordController extends AdminController
 {
     use StatisticTrait;
-    public $viewPrefix = '/';
     protected $viewCurrent = 'keyword';
     protected $modelClass = 'baseapp\statistic\models\Keyword';
     protected $modelSearchClass = 'baseapp\statistic\models\searchs\Keyword';

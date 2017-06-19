@@ -11,4 +11,9 @@ trait StatisticTrait
         $this->showSubnav = false;
         return $this->_listinfoInfo($this->viewCurrent);
     }
+
+    public function getViewPrefix()
+    {
+        return '@backend/statistic/views/';
+    }
 }
