@@ -8,9 +8,9 @@ use backend\components\ControllerFullTrait;
 
 class BankController extends AdminController
 {
+    use ControllerFullTrait;
     protected $modelClass = 'merchant\models\Bank';
     protected $modelSearchClass = 'merchant\models\searchs\Bank';
-    use ControllerFullTrait;
 
     public function _addData()
     {

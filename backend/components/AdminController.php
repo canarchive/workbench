@@ -17,7 +17,7 @@ class AdminController extends Controller
     public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
-    protected $viewPrefix = '';
+    //protected $viewPrefix = '';
     public $layout = '@backend/views/charisma/layouts/main';
 
     /**
@@ -243,7 +243,12 @@ class AdminController extends Controller
     {
         $privFields = (array) $this->privInfo['privFields'];
         foreach ($privFields as $field => $value) {
-            if (empty($model->$field) || !in_array($model->$field, $value)) {
+            $currentValue = $model->$field;
+            $currentValue = is_scalar($currentValue) ? explode(',', $currentValue) : (array) $currentValue;
+            $currentValue = array_filter($currentValue);
+            $join = array_intersect($value, $currentValue);
+            if (empty($join)) {
+            //if (empty($model->$field) || !in_array($model->$field, $value)) {
                 throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
             }
         }
@@ -262,5 +267,10 @@ class AdminController extends Controller
         $data = $this->module->initPrivInfo();
 
         return $data;
+    }
+
+    public function getViewPrefix()
+    {
+        return '';
     }
 }
