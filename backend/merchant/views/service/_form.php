@@ -8,8 +8,8 @@ use yii\bootstrap\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'merchant_id')->dropDownList($model->getMerchantInfos($this->context->privInfo), ['prompt' => '']); ?>
-    <?= $form->field($model, 'manager_id')->dropDownList($model->managerInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => $model->formatPriv('merchant_id', 'id', $this->context->privInfo)]), ['prompt' => '']); ?>
+    <?= $form->field($model, 'manager_id')->dropDownList($model->getManagerInfos(null, $this->context->privInfo), ['prompt' => '']); ?>
     <?= $form->field($model, 'code')->textInput() ?>
     <?= $form->field($model, 'password_user')->textInput() ?>
     <?= $form->field($model, 'mobile')->textInput() ?>

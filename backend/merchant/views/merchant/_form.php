@@ -13,7 +13,7 @@ $logo = $attachmentModel->getFieldInfos('merchant', 'logo');
 <div class="menu-form">
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
-    <?= $form->field($model, 'city_code')->dropDownList($model->companyInfos, ['prompt' => Yii::t('admin-common', '')]); ?>
+    <?= $form->field($model, 'city_code')->dropDownList($model->getPointInfos('company', ['where' => ['status' => 2]]), ['prompt' => '']); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'name_full')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'sort')->dropDownList($model->sortInfos, ['prompt' => Yii::t('admin-common', 'Select Sort')]); ?>

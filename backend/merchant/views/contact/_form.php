@@ -6,7 +6,7 @@ use yii\bootstrap\ActiveForm;
 
 <div class="menu-form">
     <?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, 'merchant_id')->dropDownList($model->getMerchantInfos($this->context->privInfo), ['prompt' => '']); ?>
+    <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => $model->formatPriv('merchant_id', 'id', $this->context->privInfo)]), ['prompt' => '']); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'mobile')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'wechat')->textInput(['maxlength' => 128]) ?>

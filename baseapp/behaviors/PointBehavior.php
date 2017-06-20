@@ -16,6 +16,7 @@ class PointBehavior extends Behavior
 
     public function getPointInfo($code, $where)
     {
+        $where = is_array($where) ? $where : ['id' => $where];
         return $this->getPointModel($code)->find()->where($where)->one();
     }
 
