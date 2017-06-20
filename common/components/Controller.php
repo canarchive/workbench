@@ -133,12 +133,15 @@ class Controller extends YiiController
     {
         Yii::$app->params['statUrl'] = '';
         $channelSpread = Yii::$app->request->get('qudao');
+        $cityCode = Yii::$app->request->get('city_code', '');
         if (!empty($channelSpread)) {
             $urlPre = strval(Yii::$app->request->referrer);
-            $cityCode = Yii::$app->request->get('city_code', '');
             $statUrl = '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
             //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";
+        } else if (!empty($cityCode)) {
+            $session = Yii::$app->session;
+            $session['session_city_code'] = $cityCode;
         }
 
         return parent::beforeAction($action);
