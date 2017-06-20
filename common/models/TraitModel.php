@@ -24,12 +24,6 @@ trait TraitModel
         return [];
     }
 
-    protected function getCompanyInfos()
-    {
-        $infos = ArrayHelper::map(Company::find()->select('code, name')->where(['status' => [1, 2]])->all(), 'code', 'name');
-        return $infos;
-    }
-
 	protected function _formatInfos($infos)
 	{
 		return $infos;

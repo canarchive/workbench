@@ -25,7 +25,7 @@ class Service extends MerchantModel
         return [
             [['name', 'mobile', 'merchant_id'], 'required'],
             [['merchant_id', 'manager_id', 'status', 'status_sendmsg', 'serviced_num', 'serviced_times', 'distributed_at'], 'default', 'value' => 0],
-            [['merchant_id', 'mobile'], checkUnique],
+            [['merchant_id', 'mobile'], 'checkUnique'],
             ['password_user', 'string', 'min' => 6, 'when' => function($model) { return $model->password_user != ''; }],
             [['code', 'status', 'mobile_ext', 'password_user'], 'safe'],
         ];
@@ -113,10 +113,39 @@ class Service extends MerchantModel
         return true;
     }
 
+    public function getManagerInfos($where, $privInfo)
+    {
+        $infos = $this->getPointAll('merchant-user', ['where' => $where]);
+
+        $merchantIds = isset($privInfo['merchant_id']) ? $privInfo['merchant_id'] : [];
+        if (empty($merchantIds)) {
+            return ArrayHelper::map($infos, 'id', 'mobile');
+        }
+        foreach ($infos as $key => $info) {
+            $priv = false;
+            foreach ($merchantIds as $id) {
+                $mId = $info['merchant_id'];
+                if (empty($mId)) {
+                    continue;
+                }
+                if (strpos($mId, ',' . $id . ',') !== false) {
+                    $priv = true;
+                    break;
+                }
+            }
+            if (empty($priv)) {
+               unset($infos[$key]);
+            }
+        }
+        
+        $infos = ArrayHelper::map($infos, 'id', 'mobile');
+        return $infos;
+    }
+
     public function addServiceByUser($user)
     {
         $mobile = $user->mobile;
-        $merchantIds = explode(',', $user->merchant_id);
+        $merchantIds = array_filter(explode(',', $user->merchant_id));
         if (empty($mobile) || empty($merchantIds)) {
             return ;
         }
@@ -131,6 +160,7 @@ class Service extends MerchantModel
             $data = [
                 'mobile' => $mobile,
                 'name' => $user->name,
+                'code' => $user->id,
                 'user_id' => $user->id,
                 'merchant_id' => $merchantId,
             ];
