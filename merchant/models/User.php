@@ -221,4 +221,22 @@ class User extends AuthBase
         $newModel->insert();
         return ;
     }
+
+    public function filterPriv($infos, $privInfo)
+    {
+        $merchantIds = isset($priviInfos['merchant_id']) ? $privInfo['merchant_id'] : [];
+        foreach ($infos as $key => $info) {
+            $priv = false;
+            foreach ($merchantIds as $id) {
+                if (strpos($id, $info['merchant_id']) !== false) {
+                    $priv = true;
+                    break;
+                }
+            }
+            if (empty($priv)) {
+                unset($infos[$key]);
+            }
+        }
+        return $infos;
+    }
 }

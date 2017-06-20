@@ -7,8 +7,8 @@ $detailViewParams = [
         'code',
         'name',
         [
-            'attribute' => 'status',
-            'value' => isset($model->managerInfos[$model->manager_id]) ? $model->managerInfos[$model->manager_id] : '',
+            'attribute' => 'manager_id',
+            'value' => $model->getPointName('merchant-user', $model->manager_id, 'mobile'),
         ],
         'mobile',
         [

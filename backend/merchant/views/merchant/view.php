@@ -13,7 +13,7 @@ $detailViewParams = [
         'name_full',
         [
             'attribute' => 'city_code',
-            'value' => $model->companyInfos[$model->city_code],
+            'value' => $model->getPointInfo('company', ['code' => $model->city_code]),
         ],
         [
             'attribute' => 'sort',

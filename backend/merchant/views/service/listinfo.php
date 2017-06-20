@@ -7,8 +7,7 @@ $gridViewParams = [
         [
             'attribute' => 'merchant_id',
             'value' => function($model) {
-				$name = isset($model->merchantInfos[$model->merchant_id]) ? $model->merchantInfos[$model->merchant_id] : $model->merchant_id;
-				return $name;
+                return $model->getPointName('merchant', $model->merchant_id);
             }
         ],
         'code',
@@ -16,8 +15,7 @@ $gridViewParams = [
         [
             'attribute' => 'user_id',
             'value' => function($model) {
-                $return  = isset($model->userInfos[$model->user_id]) ? $model->userInfos[$model->user_id] : '';
-                return $return;
+                return $model->getPointName('merchant-user', $model->user_id);
             }
         ],
         'mobile',
