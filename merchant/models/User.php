@@ -6,6 +6,7 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use baseapp\auth\models\AuthBase;
 use baseapp\merchant\models\Merchant;
+use baseapp\merchant\models\Service;
 
 class User extends AuthBase
 {
@@ -21,7 +22,7 @@ class User extends AuthBase
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['merchant', 'service', 'timestamp']);
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public static function tableName()
@@ -171,7 +172,7 @@ class User extends AuthBase
         }
         $ids = explode(',', $this->merchant_id);
         $datas = [];
-        foreach ($this->merchantAllInfos as $info) {
+        foreach ($this->getPointAll('merchant') as $info) {
             if (in_array($info['id'], $ids)) {
                 $datas[$info['id']] = $info['name'];
             }

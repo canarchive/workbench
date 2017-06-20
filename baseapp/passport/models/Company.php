@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace baseapp\passport\models;
 
 use Yii;
 use common\components\IP;
@@ -33,7 +33,7 @@ class Company extends PassportModel
         //print_r($_POST);exit();
         return [
             [['name', 'code'], 'required'],
-            ['code_short', 'unique', 'targetClass' => '\common\models\Company', 'message' => 'This code short has already been taken.'],
+            ['code_short', 'unique', 'targetClass' => '\baseapp\passport\models\Company', 'message' => 'This code short has already been taken.'],
             [['status', 'logo'], 'default', 'value' => 0],
             ['code_initial', 'default', 'value' => function($model, $attribute) {
                 $spell = substr(Pinyin::letter(trim($model->name)), 0, 1);
@@ -90,25 +90,6 @@ class Company extends PassportModel
         return true;
     }
 
-    public function getInfos($where = [])
-    {
-        $infos = $this->find()->where($where)->orderBy(['code_initial' => SORT_ASC])->indexBy('code')->all();
-
-        return $infos;
-    }
-
-    public function getInfoByCode($code)
-    {
-        $info = $this->findOne(['code' => $code]);
-        return $info;
-    }
-
-    public function getInfoByCodeShort($code)
-    {
-        $info = $this->findOne(['code_short' => $code]);
-        return $info;
-    }
-
     public function getInfoByIP($returnDefault = true)
     {
         $ip = Yii::$app->getRequest()->getIP();
@@ -119,6 +100,11 @@ class Company extends PassportModel
         $info = $this->findOne(['name' => $city]);
         $info = empty($info) ? $this->findOne(['code' => 'beijing']) : $info;
         return $info;
+    }
+
+    public function _getClassPrefix()
+    {
+        return "\baseapp\passport\models\\";
     }
 
     private function _somesql()

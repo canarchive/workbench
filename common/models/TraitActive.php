@@ -14,6 +14,82 @@ trait TraitActive
     use TraitAttachment;
     use TraitStatistic;
 
+    public function _newModel($code, $returnNew = false, $data = [])
+    {
+        static $models = [];
+        $code = ucfirst($code);
+        if (!isset($models[$code]) || $returnNew) {
+            $classPrefix = $this->_getClassPrefix();
+            $class = "{$classPrefix}{$code}";
+            //echo $class;exit();
+            $models[$code] = new $class($data);
+        }
+        return $models[$code];
+    }
+
+    public function search($params)
+    {
+        $query = self::find();
+        $dataProvider = new ActiveDataProvider(['query' => $query]);
+
+        return $dataProvider;
+    }
+
+    public function searchTimeElem(& $query, $field = 'created_at')
+    {
+        $startAttr = $field . '_start';
+        $endAttr = $field . '_end';
+        $startTime = strtotime($this->$startAttr);
+        $endTime = $this->$endAttr > 0 ? strtotime($this->$endAttr) : time();
+        $query->andFilterWhere(['>=', $field, $startTime]);
+        $query->andFilterWhere(['<', $field, $endTime]);
+    }
+
+    public function getSearchDatas()
+    {
+        return [];
+    }
+
+    public function updateNum($field, $type)
+    {
+        $num = $type == 'add' ? 1 : -1;
+        $this->updateCounters(['num_' . $field => $num]);
+    }
+
+	public function getInfosByPage($params = [])
+	{
+		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
+		$where = isset($params['where']) ? $params['where'] : [];
+		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
+		$groupBy = isset($params['groupBy']) && !empty($params['groupBy']) ? $params['groupBy'] : null;
+
+        $data = $this->find()->select($this->_getSelect())->where($where);
+        if (isset($params['andWhere'])) {
+            $data = $data->andWhere($params['andWhere']);
+        }
+
+        $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
+        $data = $this->find()->select($selectStr)->where($where);
+        if (isset($params['andWhere'])) {
+            $data = $data->andWhere($params['andWhere']);
+        }
+		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
+		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
+        $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
+        $noHost = isset($params['noHost']) ? $params['noHost'] : '';
+		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr, 'noHost' => $noHost]);
+		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
+		$infos = $this->_formatInfos($infos);
+
+		$return = ['infos' => $infos, 'pages' => $pages];
+		return $return;
+	}
+
+    protected function _getSelect()
+    {
+        return '*';
+    }
+
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
@@ -67,81 +143,5 @@ trait TraitActive
         $managerlogModel->insert();
 
         return true;
-    }
-
-    public function searchTimeElem(& $query, $field = 'created_at')
-    {
-        $startAttr = $field . '_start';
-        $endAttr = $field . '_end';
-        $startTime = strtotime($this->$startAttr);
-        $endTime = $this->$endAttr > 0 ? strtotime($this->$endAttr) : time();
-        $query->andFilterWhere(['>=', $field, $startTime]);
-        $query->andFilterWhere(['<', $field, $endTime]);
-    }
-
-    public function updateNum($field, $type)
-    {
-        $num = $type == 'add' ? 1 : -1;
-        $this->updateCounters(['num_' . $field => $num]);
-    }
-
-    public function _newModel($code, $returnNew = false, $data = [])
-    {
-        static $models = [];
-        $code = ucfirst($code);
-        if (!isset($models[$code]) || $returnNew) {
-            $classPrefix = $this->_getClassPrefix();
-            $class = "{$classPrefix}{$code}";
-            //echo $class;exit();
-            $models[$code] = new $class($data);
-        }
-        return $models[$code];
-    }
-
-    public function getSearchDatas()
-    {
-        return [];
-    }
-
-	public function getInfosByPage($params = [])
-	{
-		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
-		$where = isset($params['where']) ? $params['where'] : [];
-		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
-		$groupBy = isset($params['groupBy']) && !empty($params['groupBy']) ? $params['groupBy'] : null;
-
-        $data = $this->find()->select($this->_getSelect())->where($where);
-        if (isset($params['andWhere'])) {
-            $data = $data->andWhere($params['andWhere']);
-        }
-
-        $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
-        $data = $this->find()->select($selectStr)->where($where);
-        if (isset($params['andWhere'])) {
-            $data = $data->andWhere($params['andWhere']);
-        }
-		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
-		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
-        $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
-        $noHost = isset($params['noHost']) ? $params['noHost'] : '';
-		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr, 'noHost' => $noHost]);
-		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
-		$infos = $this->_formatInfos($infos);
-
-		$return = ['infos' => $infos, 'pages' => $pages];
-		return $return;
-	}
-
-    protected function _getSelect()
-    {
-        return '*';
-    }
-
-    public function search($params)
-    {
-        $query = self::find();
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        return $dataProvider;
     }
 }

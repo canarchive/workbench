@@ -23,12 +23,24 @@ class Service extends MerchantModel
     public function rules()
     {
         return [
-            [['name', 'mobile'], 'required'],
+            [['name', 'mobile', 'merchant_id'], 'required'],
             [['merchant_id', 'manager_id', 'status', 'status_sendmsg', 'serviced_num', 'serviced_times', 'distributed_at'], 'default', 'value' => 0],
+            [['merchant_id', 'mobile'], checkUnique],
             ['password_user', 'string', 'min' => 6, 'when' => function($model) { return $model->password_user != ''; }],
             [['code', 'status', 'mobile_ext', 'password_user'], 'safe'],
         ];
     }    
+
+    public function checkUnique()
+    {
+        if ($this->mobile == $this->getOldAttribute('mobile') && $this->merchant_id == $this->getOldAttribute('merchant_id')) {
+            return true;
+        }
+        $old = $this->getInfo(['merchant_id' => $this->merchant_id, 'mobile' => $this->mobile])->one();
+        if (!empty($old)) {
+            $this->addError('oldpassword', '该客服已存在!');
+        }
+    }
 
     public function attributeLabels()
     {
@@ -91,34 +103,8 @@ class Service extends MerchantModel
         return $info;
     }
 
-    public function getUserAllInfos($where = [])
-    {
-        $user = new User();
-        $infos = $user->find()->where($where)->all();//getInfos();
-
-        return $infos;
-    }
-
-    public function getManagerInfos()
-    {
-        $infos = $this->getUserAllInfos(['role' => 'service-admin']);
-        $infos = ArrayHelper::map($infos, 'id', 'name');
-        return $infos;
-    }
-
-    public function getUserInfos()
-    {
-        $infos = $this->getUserAllInfos();
-        $infos = ArrayHelper::map($infos, 'id', 'name');
-        return $infos;
-    }
-
     public function afterSave($insert, $changedAttributes)
     {
-        if (empty($insert)) {
-            return true;
-        }
-
         parent::afterSave($insert, $changedAttributes);
 
         $user = new User();

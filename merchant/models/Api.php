@@ -9,11 +9,6 @@ class Api extends BaseModelNotable
 {
     use ApiTrait;
 
-    public function getBehaviorCodes()
-    {
-        return array_merge($this->baseBehaviors, ['merchant']);
-    }
-
 	public function register($data)
 	{
 		foreach ($data as $field => $value) {

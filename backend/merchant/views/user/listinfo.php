@@ -6,6 +6,12 @@ $gridViewParams = [
         'id',
         'mobile',
         [
+            'attribute' => 'role',
+            'value' => function($model) {
+                return $model->roleStr;
+            },
+        ],
+        [
             'attribute' => 'merchant',
             'value' => function($model) {
                 return $model->userMerchantStr;

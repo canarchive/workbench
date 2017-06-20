@@ -8,7 +8,8 @@ $gridViewParams = [
         [
             'attribute' => 'merchant_id',
             'value' => function($model) {
-                return $model->merchantInfos[$model->merchant_id];
+                $info = $model->getPointInfo('merchant', $model->merchant_id);
+                return empty($info) ? '' : $info['name'];
             },
         ],
         'name',

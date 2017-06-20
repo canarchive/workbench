@@ -97,7 +97,7 @@ trait SigninTrait
     {
         if (is_null($this->_user)) {
 			$nameField = $this->nameField;
-            $this->_user = $this->getUserInfo([$nameField => $this->$nameField]);
+            $this->_user = $this->getPointInfo('merchant-user', [$nameField => $this->$nameField]);
         }
         return $this->_user;
     }

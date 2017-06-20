@@ -13,7 +13,7 @@ trait TraitModel
 
     public function behaviors()
     {
-        $behaviorCodes = array_merge(['validator'], $this->behaviorCodes);
+        $behaviorCodes = array_merge(['validator', 'point'], $this->behaviorCodes);
 
         $return = BehaviorHelper::behaviors($this->className(), $behaviorCodes);
         return $return;
@@ -113,5 +113,11 @@ trait TraitModel
             '1' => '正常',
         ];
         return $datas;
+    }
+
+    public function formatPriv($field, $key, $privInfo)
+    {
+        $info = isset($privInfo[$field]) ? [$key => $privInfo[$field]] : null;
+        return $info;
     }
 }

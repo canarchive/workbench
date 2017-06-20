@@ -122,6 +122,7 @@ class Manager extends AuthBase
 
     public function afterSave($insert, $changedAttributes)
     {
+        echo 'this';
         parent::afterSave($insert, $changedAttributes);
 
         if (Yii::$app->controller->id == 'entrance' || in_array($this->scenario, ['edit-info', 'edit-password'])) {
@@ -167,13 +168,6 @@ class Manager extends AuthBase
         $roles = $manager->getRoles();
 
         return array_combine(array_keys($roles), array_keys($roles));
-    }
-
-    public function getInfos($where = [])
-    {
-        $infos = self::find()->all();
-
-        return $infos;
     }
 
     public function getInfosByRoles($roles)
