@@ -13,11 +13,6 @@ class SpreadModel extends BaseModel
         return Yii::$app->dbSpread;
     }    
 
-    public function getBehaviorCodes()
-    {
-        return ['merchant', 'service'];
-    }
-
 	protected function getAttachmentModel()
 	{
 		return new AttachmentSpread();

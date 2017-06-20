@@ -21,7 +21,7 @@ trait UserTrait
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'merchant', 'service', 'sms']);
+        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'sms']);
     }
 
     public function attributeLabels()

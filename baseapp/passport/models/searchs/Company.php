@@ -1,11 +1,11 @@
 <?php
 
-namespace common\models\searchs;
+namespace baseapp\passport\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Company as CompanyModel;
+use baseapp\passport\models\Company as CompanyModel;
 
 class Company extends CompanyModel
 {

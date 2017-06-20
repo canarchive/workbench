@@ -13,10 +13,8 @@ class MerchantModel extends BaseModel
         return Yii::$app->dbMerchant;
     }    
 
-    public function getBehaviorCodes()
-    {
-        return ['merchant', 'service'];
-    }
+    /*public function getBehaviorCodes()
+    {}*/
 
     protected function getAttachmentModel()
     {
