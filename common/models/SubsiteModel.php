@@ -12,11 +12,6 @@ class SubsiteModel extends BaseModel
         return Yii::$app->dbSubsite;
     }    
 
-    public function getBehaviorCodes()
-    {
-        return ['merchant', 'service'];
-    }
-
 	protected function getAttachmentModel()
 	{
 		return new AttachmentSubsite();
