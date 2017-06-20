@@ -32,7 +32,7 @@ class Region extends PassportModel
             [['parent_code'], 'filterParent'],
             [['orderlist'], 'default', 'value' => 0],
             [['parent_code'], 'default', 'value' => ''],
-            [['description', 'orderlist', 'status'], 'safe'],
+            [['orderlist', 'status'], 'safe'],
         ];
     }
 

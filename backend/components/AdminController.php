@@ -241,7 +241,7 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
-        $privFields = (array) $this->privInfo['privFields'];
+        $privFields = isset($this->privInfo['privFields']) ? $this->privInfo['privFields'] : [];
         foreach ($privFields as $field => $value) {
             $currentValue = $model->$field;
             $currentValue = is_scalar($currentValue) ? explode(',', $currentValue) : (array) $currentValue;
@@ -258,11 +258,11 @@ class AdminController extends Controller
 
     public function beforeAction($action)
     {
-        $this->privInfo = $this->initPrivInfo();
+        $this->privInfo = $this->getPrivInfo();
         return parent::beforeAction($action);
     }
 
-    public function initPrivInfo()
+    public function getPrivInfo()
     {
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         return $data;

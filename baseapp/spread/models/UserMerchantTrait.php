@@ -21,7 +21,7 @@ trait UserMerchantTrait
 
     public function getBehaviorCodes()
     {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp', 'merchant', 'service']);
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function rules()
