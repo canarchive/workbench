@@ -7,6 +7,8 @@ $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['assetSor
 Yii::$app->params['tdkInfos']['title'] =  '装修报价-上海装修报价单_上海装修预算表_上海装修到底需要多少钱-兔班长装修网';
 Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
 Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';
+
+$merchantInfo = $this->context->merchantInfo;
 ?>
 <div class="site_topnav" role="navigation">
     <div class="top_nav_info">
@@ -34,7 +36,7 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
     <div class="wrap">
         <div class="jia_logo  fl">
                 <a target="_top" class="major_pop" tjjj="click_pc_head.logo.jia" tjjj_name="首页logo" href="javascript:;">
-                    <img alt="梵客家装网首页"
+                    <img alt="<?= $merchantInfo['name']; ?>网首页"
                     src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/design/<?= $this->context->merchantInfo['code']; ?>.png">
                 </a>
         </div>
@@ -75,7 +77,7 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
                     <p>
                         <em></em>
                         <a class="major_pop" tjjj="click_pc_top.menu.myqj" href="javascript:;"
-                           tjjj_name="我的梵客家装">我的梵客家装</a></p>
+                           tjjj_name="我的<?= $merchantInfo['name']; ?>">我的<?= $merchantInfo['name']; ?></a></p>
                     <i>
                     </i>
                 </div>
@@ -213,7 +215,7 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
                                 <label>
                                     <input type="radio" name="home_state"/>毛坯房装修</label></div>
                             <a href="javascript:;" class="putin_btn estimate_offer major_pop"
-                               tjjj="click_pc_top_left_bjbtn" tjjj_name="在线装修报价" apply_title="立即预约梵客家装网装修报价">立即估算报价</a>
+                               tjjj="click_pc_top_left_bjbtn" tjjj_name="在线装修报价" apply_title="立即预约<?= $merchantInfo['name']; ?>网装修报价">立即估算报价</a>
                         </div>
                         <div class="grade_price">
                             <p>经济实惠≤299元/㎡&nbsp;&nbsp;&nbsp;简约现代≥299元/㎡</p>
@@ -859,12 +861,12 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
                 <ul class="swiper-wrapper clearfix">
                     <li class="swiper-slide">
                         <a href="javascript:;" class="major_pop" shop_id="5124263" tjjj="click_pc_3F_logo_2"
-                           tjjj_name="梵客家装"><img src="http://tjasset.acanstudio.com/spread/house/third/fk.jpg"
+                           tjjj_name="<?= $merchantInfo['name']; ?>"><img src="http://tjasset.acanstudio.com/spread/house/third/fk.jpg"
                                                  draggable="false"></a>
 
                         <div class="message_r">
                             <a href="javascript:;" class="major_pop" tjjj="click_pc_3F_name_2" shop_id="5124263"
-                               title="梵客家装" tjjj_name="梵客家装">梵客家装</a>
+                               title="<?= $merchantInfo['name']; ?>" tjjj_name="<?= $merchantInfo['name']; ?>"><?= $merchantInfo['name']; ?></a>
                             <span>案例：398个</span>
                             <span>评论：1854条</span>
                             <span>口碑值：1231</span>
@@ -1014,7 +1016,7 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
     <!--famous_company end-->
     <div id="5F" class="AdPositionId clearfix">
         <a href="javascript:;" class="major_pop ad_baojia" tjjj="click_pc_Ad_left" tjjj_name="获取报价"
-           apply_title="立即预约梵客家装网装修报价">
+           apply_title="立即预约<?= $merchantInfo['name']; ?>网装修报价">
             <img src="http://tjasset.acanstudio.com/spread/house/sj/images/ad_baojia.png"/></a>
         <a href="javascript:;" class="major_pop" tjjj="click_pc_Ad_right" tjjj_name="免费申请设计方案">
             <img src="http://tjasset.acanstudio.com/spread/house/sj/images/ad_free.png"/></a>
@@ -1659,7 +1661,7 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
         </div>
         <div id="9F" class="qijia_baozhang">
             <h2 class="column_title">
-                <span>梵客家装保障</span></h2>
+                <span><?= $merchantInfo['name']; ?>保障</span></h2>
 
             <div class="safeguard_cont">
                 <ul class="clearfix">
@@ -1700,22 +1702,22 @@ Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价�
                     </li>
                 </ul>
                 <div class="terrace_referral jiabg">
-                    <h3>为什么选择梵客家装？
+                    <h3>为什么选择<?= $merchantInfo['name']; ?>？
                         <img src="http://tjasset.acanstudio.com/spread/house/sj/images/fw_terrace.png"/></h3>
 
-                    <p>1.梵客家装致力于让更多的网友体验到实实在在的装修体验</p>
+                    <p>1.<?= $merchantInfo['name']; ?>致力于让更多的网友体验到实实在在的装修体验</p>
 
-                    <p>2.梵客家装真正的建立起了业主和装修公司、材料商家互通的网上桥梁。</p>
+                    <p>2.<?= $merchantInfo['name']; ?>真正的建立起了业主和装修公司、材料商家互通的网上桥梁。</p>
 
-                    <p>3.梵客家装已成为广大业主装修青睐的装修综合门户网站</p>
+                    <p>3.<?= $merchantInfo['name']; ?>已成为广大业主装修青睐的装修综合门户网站</p>
                 </div>
                 <div class="terrace_referral shield">
-                    <h3>梵客家装网优质施工队认证标准
+                    <h3><?= $merchantInfo['name']; ?>网优质施工队认证标准
                         <img src="http://tjasset.acanstudio.com/spread/house/sj/images/jia_QA.png"/></h3>
 
-                    <p>1.必须是通过审核在梵客家装网入住的商家所属的施工队才有资格申请认证优质施工队。</p>
+                    <p>1.必须是通过审核在<?= $merchantInfo['name']; ?>网入住的商家所属的施工队才有资格申请认证优质施工队。</p>
 
-                    <p>2.优质施工队必须参加每次梵客家装网主办的施工队长培训，并经过考核。</p>
+                    <p>2.优质施工队必须参加每次<?= $merchantInfo['name']; ?>网主办的施工队长培训，并经过考核。</p>
 
                     <p>3.任何一个月中有3名业主对同一支优质施工队不满，即取消优质资格。</p>
 

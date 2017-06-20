@@ -10,6 +10,7 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/shootplat/shoot/img
 <input type="hidden" id="cid" value="<?= $this->context->merchantInfo['id']; ?>" />
 <input type="hidden" id="position" value="<?= $this->context->pagePosition; ?>" />
 <input type="hidden" id="position_name" value="<?= $this->context->pagePositionName; ?>" />
+<input type="hidden" id="returnUrl" value="<?= $this->params['returnUrl']; ?>" />
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none">
 <?php $statUrl = Yii::$app->params['statUrl']; echo $statUrl; ?>

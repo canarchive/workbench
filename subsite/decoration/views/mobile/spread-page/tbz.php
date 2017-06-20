@@ -27,7 +27,7 @@ if (isMobile == 0) {
     display: inline-block;
     height: 1.5rem;
     line-height: 1.5rem;
-    background: url("<?= Yii::getAlias('@assetself'); ?>/rabbithouse/wapprabbit/images/searchbackground.png")  no-repeat;
+    background: url("<?= Yii::getAlias('@asseturl'); ?>/spread/house/searchbackground1.png") no-repeat;
 }
 </style>
 <header class="cWhite cMdGray clearfix">
