@@ -6,7 +6,7 @@ $detailViewParams = [
         'mobile',
         [
             'attribute' => 'merchant_id',
-            'value' => isset($model->merchantInfos[$model->merchant_id]) ? $model->merchantInfos[$model->merchant_id] : '',
+            'value' => $model->getUserMerchantStr(),
         ],
         'login_num',
         'email',

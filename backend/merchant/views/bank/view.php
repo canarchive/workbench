@@ -6,7 +6,7 @@ $detailViewParams = [
         'id',
         [
             'attribute' => 'merchant_id',
-            'value' => $model->MerchantInfos[$model->merchant_id],
+            'value' => $model->getPointName('merchant', $model->merchant_id),
         ],
         'name',
         [

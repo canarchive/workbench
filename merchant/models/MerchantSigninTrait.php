@@ -12,11 +12,6 @@ trait MerchantSigninTrait
     public $rememberMe = true;
     //public $captcha;
 
-    public function getBehaviorCodes()
-    {
-        return ['merchant'];
-    }
-
     public function rules()
     {
         return [
