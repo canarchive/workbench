@@ -8,13 +8,13 @@ use backend\models\Managerlog;
 use backend\models\searchs\Managerlog as ManagerlogSearch;
 use yii\web\NotFoundHttpException;
 use backend\components\AdminController;
-use backend\components\ControllerViewTrait;
+use backend\components\ControllerTraitView;
 
 class ManagerlogController extends AdminController
 {
+    use ControllerTraitView;
     protected $modelClass = 'backend\models\Managerlog';
     protected $modelSearchClass = 'backend\models\searchs\Managerlog';
-    use ControllerViewTrait;
 
     public function actionListinfom()
     {
