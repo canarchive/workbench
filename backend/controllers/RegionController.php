@@ -10,9 +10,9 @@ use backend\components\ControllerFullTrait;
 
 class RegionController extends AdminController
 {
+    use ControllerFullTrait;
     public $modelClass = 'common\models\region\Region';
     public $modelSearchClass = 'common\models\region\searchs\Region';
-    use ControllerFullTrait;
 
     public function actionListinfo()
     {
@@ -22,10 +22,7 @@ class RegionController extends AdminController
             return $data;
         }
 
-        $searchClass = $this->modelSearchClass;
-        $searchModel = new $searchClass();
-        $searchDatas = $searchModel->getSearchDatas();
-        return $this->_listinfoInfo($searchModel, $searchDatas);
+        return $this->_listinfoInfo();
     }
 
     protected function subInfos()

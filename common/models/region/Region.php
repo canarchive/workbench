@@ -4,7 +4,7 @@ namespace common\models\region;
 
 use Yii;
 use common\helpers\Tree;
-use common\models\PassportModel;
+use baseapp\passport\models\PassportModel;
 
 class Region extends PassportModel
 {
