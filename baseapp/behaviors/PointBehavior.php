@@ -26,6 +26,7 @@ class PointBehavior extends Behavior
         $indexName = isset($params['indexName']) ? $params['indexName'] : 'id';
         $valueName = isset($params['valueName']) ? $params['valueName'] : 'name';
         $params['select'] = "{$indexName}, {$valueName}";
+        $params['indexBy'] = $indexName;
         
         $infos = ArrayHelper::map($this->getPointAll($code, $params), $indexName, $valueName);
         return $infos;
