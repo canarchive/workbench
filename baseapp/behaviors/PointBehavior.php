@@ -11,7 +11,8 @@ class PointBehavior extends Behavior
     public function getPointName($code, $where, $nameField = 'name')
     {
         $info = $this->getPointInfo($code, $where);
-        return empty($info) ? '' : $info[$nameField];
+        $default = is_scalar($where) ? $where : '';
+        return empty($info) ? $default : $info[$nameField];
     }
 
     public function getPointInfo($code, $where)
@@ -20,7 +21,7 @@ class PointBehavior extends Behavior
         return $this->getPointModel($code)->find()->where($where)->one();
     }
 
-    public function getPointInfos($code, $params)
+    public function getPointInfos($code, $params = [])
     {
         $indexName = isset($params['indexName']) ? $params['indexName'] : 'id';
         $valueName = isset($params['valueName']) ? $params['valueName'] : 'name';
