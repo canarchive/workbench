@@ -7,9 +7,7 @@ foreach ($searchModel->fields as $field) {
         $columns[] = [
             'attribute' => $field,
             'value' => function ($model) {
-                $info = $model->merchantInfo;
-                $name = isset($info['name']) ? $info['name'] : '';
-                return $name;
+                return $model->getPointName('merchant', $model->merchant_id);
             }
         ];
         break;
@@ -17,9 +15,7 @@ foreach ($searchModel->fields as $field) {
         $columns[] = [
             'attribute' => $field,
             'value' => function ($model) {
-                $info = $model->serviceInfo;
-                $name = isset($info['name']) ? $info['name'] : '';
-                return $name;
+                return $model->getPointName('service', $model->service_id);
             }
         ];
         break;

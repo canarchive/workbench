@@ -1,5 +1,5 @@
 <?php
-$infos = $model->merchantAllInfos;
+$infos = $model->getPointAll('merchant');
 $merchantId = $model->merchant_id;
 ?>
 

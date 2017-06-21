@@ -21,7 +21,7 @@ class Spreadurl extends BaseModel
         $searchDatas = $this->getSearchDatas();
         $title = "{$searchDatas['companyInfos'][$this->inputParams['cityCode']]}--{$searchDatas['merchantInfos'][$this->inputParams['merchantId']]}";
         $datas = [
-            'searchDatas' => $this->getSearchDatas(),
+            'searchDatas' => $searchDatas,
             'infos' => $this->getInfos(),
             'title' => $title,
         ];
@@ -34,7 +34,7 @@ class Spreadurl extends BaseModel
     {
         $siteInfos = $this->siteInfos();
         $siteInfos = empty($this->inputParams['siteCode']) ? $siteInfos : [$siteInfos[$this->inputParams['siteCode']]];
-        $templateInfos = $this->getRelatedInfos('template');
+        $templateInfos = $this->getPointAll('template', ['indexBy' => 'code']);
         $templateInfos = empty($this->inputParams['templateCode']) ? $templateInfos : [$templateInfos[$this->inputParams['templateCode']]];
         $channelInfos = $this->inputParams['channel'] == 'all' ? $this->channelInfos : [$this->inputParams['channel'] => $this->channelInfos[$this->inputParams['channel']]];
         $datas = [];
@@ -89,50 +89,19 @@ class Spreadurl extends BaseModel
     public function getSearchDatas()
     {
         $datas = [
-            'companyInfos' => $this->getRelatedInfos('company', true, ['status' => 2]),
-            'templateInfos' => $this->getRelatedInfos('template', true),
+            'companyInfos' => $this->getPointInfos('company', ['where' => ['status' => [1, 2]], 'indexName' => 'code']),
+            'templateInfos' => $this->getPointInfos('template', ['indexName' => 'code']),
             'siteInfos' => $this->siteInfos(true),
             'channelInfos' => $this->channelInfos,
-            'merchantInfos' => $this->merchantInfos,
+            'merchantInfos' => $this->getPointInfos('merchant'),
         ];
         $datas['channelInfos']['all'] = '全部渠道';
         return $datas;
     }
 
-    protected function getRelatedInfos($code, $keyValue = false, $where = null)
-    {
-        static $objects = [];
-        $params = [
-            'template' => [
-                'class' => '\spread\models\Template',
-                'keyField' => 'code',
-                'keyName' => 'name',
-            ],
-            'company' => [
-                'class' => '\common\models\Company',
-                'keyField' => 'code',
-                'keyName' => 'name',
-            ],
-        ];
-        $param = $params[$code];
-        if (isset($objects[$code])) {
-            $model = $objects[$code];
-        } else {
-            $class = $param['class'];
-            $model = new $class();
-        }
-
-        $infos = $model->find()->where($where)->indexBy($param['keyField'])->all();
-        if ($keyValue) {
-            $infos = ArrayHelper::map($infos, $param['keyField'], $param['keyName']);
-        }
-        return $infos;
-    }
-
     public function siteInfos($keyValue = false)
     {
-        $file = Yii::getAlias('@subsite') . "/config/params-site.php";
-        $datas = file_exists($file) ? require($file) : [];
+        $datas = require(Yii::getAlias('@spread/config/params-site.php'));
         if (empty($keyValue)) {
             return $datas;
         }
