@@ -57,7 +57,7 @@ trait TraitStatistic
             '360' => '360',
 			'zht' => '智慧推',
             'gdt' => '广点通',
-            //'sm' => '神马',
+            'sm' => '神马',
         ];
         $datas = array_merge($datas, $this->getChannelInnerInfos());
         return $datas;
