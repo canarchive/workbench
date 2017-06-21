@@ -4,12 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
 
-$merchantInfos = [];
-foreach ($model->getMerchantAllInfos() as $key => $info) {
-	if ($info['status'] == 2) {
-		$merchantInfos[$key] = $info['name'];
-	}
-}
+$merchantInfos = $model->getPointInfos('merchant', ['where' => ['status' => 2]]);
 ?>
 
 <div class="menu-form">

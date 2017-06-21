@@ -16,7 +16,7 @@ $tableName = 'guestbook';
     <tbody id="guestbook_infos">
         <?php foreach ($guestbookInfos as $model) { ?>
         <tr>
-            <td><?php $merchantName = isset($model->merchantInfo['name']) ? $model->merchantInfo['name'] : ''; echo $merchantName; ?></td>
+            <td><?= $model->getPointName('merchant', $model->merchant_id); ?></td>
             <td><?= $model->content; ?></td>
             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
             <td><?= Html::textarea('reply', $model->reply, ['rows' => 1, 'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'reply', this.value)"]); ?></td>

@@ -4,7 +4,7 @@ $columnsBase = [
     [
         'attribute' => 'merchant_id',
         'value' => function($model) {
-            return isset($model->merchantInfo['name']) ? $model->merchantInfo['name'] : $model->merchant_id;
+            return $model->getPointName('merchant', $model->merchant_id);
         },
     ],
 	//'client_type',
@@ -25,7 +25,7 @@ $columnsBase = [
     [
         'attribute' => 'service_id',
         'value' => function($model) {
-            return isset($model->serviceInfo['name']) ? $model->serviceData['name'] : $model->service_id;
+            return $model->getPointName('service', $model->service_id);
         },
     ],
     'channel',
@@ -83,6 +83,5 @@ $gridViewParams = [
     'columns' => $columns,
 ];
 echo $this->render('_nav-status', ['model' => $searchModel]);
-echo $this->render('_nav-service', ['model' => $searchModel]);
 $searchContent = $this->render('_search', array_merge($searchDatas, ['model' => $searchModel]));
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);

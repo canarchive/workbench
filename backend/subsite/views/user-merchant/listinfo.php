@@ -9,10 +9,7 @@ $gridViewParams = [
         [
             'attribute' => 'merchant_id',
             'value' => function($model) {
-                if ($model->merchant_id > 0) {
-                    return $model->merchantInfo['name'];
-                }
-                return '';
+                return $model->getPointName('merchant', $model->merchant_id);
             },
         ],
         [

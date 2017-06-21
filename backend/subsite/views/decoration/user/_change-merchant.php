@@ -10,13 +10,7 @@ use subsite\decoration\models\Service;
 } else {
     $customInfos = ArrayHelper::map(Service::find()->select('id, name')->where(['status' => 1])->all(), 'id', 'name');
 }*/
-$merchantInfos = [];
-foreach ($model->getMerchantAllInfos() as $key => $info) {
-	if ($info['status'] == 2) {
-		$merchantInfos[$key] = $info['name'];
-	}
-}
-
+$merchantInfos = $model->getPointInfos('merchant', ['where' => ['status' => 2]]);
 ?>
 
 <div class="menu-form">

@@ -2,12 +2,7 @@
 use yii\helpers\Html;
 
 $tableName = 'owner_house';
-$merchantInfos = [];
-foreach ($modelNew->getMerchantAllInfos() as $key => $info) {
-	if ($info['status'] == 3) {
-		$merchantInfos[$key] = $info['name'];
-	}
-}
+$merchantInfos = $modelNew->getPointInfos('merchant', ['where' => ['status' => 3]]);
 ?>
 <table class="table table-striped table-bordered responsive">
     <thead>

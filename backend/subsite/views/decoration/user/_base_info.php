@@ -32,7 +32,7 @@ $tableName = 'user';
                     <tbody>
                     <tr>
                         <td><?= $cModel->sort; ?></td>
-                        <td><?php $merchantName = isset($model->merchantInfo) ? $model->merchantInfo['name'] : $model->merchant_id; if ($model->merchant_id == 3) { echo "<b style='font:oblique small-caps 900 29pt 黑体;'>{$merchantName}</b>"; } else { echo $merchantName; } ?></td>
+                        <td><?php $merchantName = $cModel->getPointName('merchant', $cModel->merchant_id); if ($model->merchant_id == 3) { echo "<b style='font:oblique small-caps 900 29pt 黑体;'>{$merchantName}</b>"; } else { echo $merchantName; } ?></td>
                         <td><?= $cModel->city_code; ?></td>
                         <td><?= $cModel->client_type; ?></td>
                         <td><?= $cModel->channel; ?></td>

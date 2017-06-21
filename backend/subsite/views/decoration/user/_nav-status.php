@@ -1,7 +1,7 @@
 <?php
 $infos = $model->statusInfos;
 $statusCurrent = $model->status;
-$serviceInfos = $model->serviceInfos;
+$serviceInfos = $model->getPointInfos('service');
 $serviceId = $model->service_id;
 ?>
 
@@ -25,11 +25,11 @@ echo $subnavString;
     <ul class="breadcrumb">
 <?php
 $subnavString = '';
-foreach ($serviceInfos as $sId => $sInfo) {
+foreach ($serviceInfos as $sId => $sName) {
 	if (!in_array($sId, [27, 28, 31])) { continue; } 
     $styleStr =  $sId === $serviceId ? 'style="color:#009900;"' : '';
     $urlStr =  '?service_id=' . $sId . '&status=' . $statusCurrent;
-    $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$sInfo['name']}</a></li>";
+    $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$sName}</a></li>";
 }
 echo $subnavString;
 ?>

@@ -18,7 +18,7 @@ $tableName = 'user_merchant';
     <tbody id="user_merchant_infos">
         <?php foreach ($userMerchantInfos as $model) { ?>
         <tr>
-            <td><?php $merchantName = isset($model->merchantInfos[$model->merchant_id]) ? $model->merchantInfos[$model->merchant_id] : ''; echo $merchantName; ?></td>
+            <td><?= $model->getPointName('merchant', $model->merchant_id); ?></td>
             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
             <td><?= date('Y-m-d H:i:s', $model->view_at); ?></td>
             <td>
