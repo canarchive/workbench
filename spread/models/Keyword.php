@@ -44,22 +44,4 @@ class Keyword extends BaseModel
             'status' => '状态',
         ];
     }
-
-    protected function getUnitInfos()
-    {
-        $infos = ArrayHelper::map(Unit::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
-
-    protected function getPlanInfos()
-    {
-        $infos = ArrayHelper::map(Plan::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
-    
-    protected function getAccountInfos()
-    {
-        $infos = ArrayHelper::map(Account::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
 }

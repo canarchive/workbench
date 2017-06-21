@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Inflector;
 use baseapp\behaviors\BehaviorHelper;
 
 trait TraitModel
@@ -113,5 +114,15 @@ trait TraitModel
     {
         $info = isset($privInfo[$field]) ? [$key => $privInfo[$field]] : null;
         return $info;
+    }
+
+    public function getKeyName($key, $value, $datas = null)
+    {
+        if (is_null($datas)) {
+            $key = Inflector::id2camel($key, '_');
+            $keyDatas = "{$key}Infos";
+            $infos = $this->$keyDatas;
+        }
+        return isset($infos[$value]) ? $infos[$value] : $value;
     }
 }

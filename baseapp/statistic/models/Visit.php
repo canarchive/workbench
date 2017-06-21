@@ -223,7 +223,14 @@ class Visit extends BaseModel
                 $urlPre = Yii::$app->request->get('url_pre', '');
                 $keywordSearch = substr($urlPre, strpos($urlPre, '?') + 3);
             }
+            break;
         default:
+            $keywordSearch = Yii::$app->request->get('q', '');
+            if (empty($keywordSearch)) {
+                $urlPre = Yii::$app->request->get('url_pre', '');
+                $keywordSearch = substr($urlPre, strpos($urlPre, '?') + 3);
+            }
+            break;
         }
         $data['keyword_search'] = $this->_formatutf8Code($keywordSearch);
     }

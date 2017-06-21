@@ -44,18 +44,6 @@ class Planfee extends BaseModel
         ];
     }
 
-    public function getAccountInfos()
-    {
-        $infos = ArrayHelper::map(Account::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
-
-    public function getPlanInfos()
-    {
-        $infos = ArrayHelper::map(Plan::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
-
     public function import()
     {   
         if (empty($this->channel) || !in_array($this->channel, array_keys($this->channelInfos))) {

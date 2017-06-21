@@ -22,7 +22,7 @@ class Unit extends BaseModel
         return [
             [['name','plan_id','account_id'], 'required'],
             [['status',], 'default', 'value' => 0],
-            [[' '], 'safe'],
+            //[[' '], 'safe'],
         ];
     }
 
@@ -37,17 +37,5 @@ class Unit extends BaseModel
             'updated_at' => '更新时间',
             'status' => '状态',
         ];
-    }
-
-    protected function getPlanInfos()
-    {
-        $infos = ArrayHelper::map(Plan::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
-    
-    protected function getAccountInfos()
-    {
-        $infos = ArrayHelper::map(Account::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
     }
 }

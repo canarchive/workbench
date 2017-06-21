@@ -8,19 +8,19 @@ $detailViewParams = [
         'code',
         [
             'attribute' => 'merchant_id',
-            'value' => empty($model->merchantInfo) ? '' : $model->merchantInfo['name'],
+            'value' => $model->getPointName('merchant', $model->merchant_id),
         ],
         [
             'attribute' => 'have_pc',
-            'value' => !empty($model->have_pc) ? $model->havePcInfos[$model->have_pc] : '',
+            'value' => $model->getKeyName('have_pc', $model->have_pc),
         ],
         [
             'attribute' => 'have_mobile',
-            'value' => !empty($model->have_mobile) ? $model->haveMobileInfos[$model->have_mobile] : '',
+            'value' => $model->getKeyName('have_mobile', $model->have_mobile),
         ],
         [
             'attribute' => 'status',
-            'value' => !empty($model->status) ? $model->statusInfos[$model->status] : '',
+            'value' => $model->getKeyName('status', $model->status),
         ],
     ],
 ];

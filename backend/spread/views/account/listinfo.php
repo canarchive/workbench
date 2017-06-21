@@ -8,7 +8,7 @@ $gridViewParams = [
         [
             'attribute' => 'channel',
             'value' => function($model) {
-                $name = isset($model->channelInfos[$model->channel]) ? $model->channelInfos[$model->channel] : $model->channel;
+                $name = $model->getKeyName('channel', $model->channel);
                 return $name;
             }
         ],
@@ -17,8 +17,7 @@ $gridViewParams = [
         [
             'attribute' => 'merchant',
             'value' => function($model) {
-                $name = isset($model->companyInfos[$model->merchant]) ? $model->companyInfos[$model->merchant] : $model->merchant;
-                return $name;
+                return $model->getPointName('merchant', $model->merchant);
             }
         ],
         [
@@ -36,7 +35,7 @@ $gridViewParams = [
         [
             'attribute' => 'status',
             'value' => function($model) {
-                return $model->statusInfos[$model->status];
+                return $model->getKeyName('status', $model->status);
             }
         ],
 

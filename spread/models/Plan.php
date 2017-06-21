@@ -41,9 +41,4 @@ class Plan extends BaseModel
             'status' => '状态',
         ];
     }
-    protected function getAccountInfos()
-    {
-        $infos = ArrayHelper::map(Account::find()->select('id, name')->all(), 'id', 'name');
-        return $infos;
-    }
 }
