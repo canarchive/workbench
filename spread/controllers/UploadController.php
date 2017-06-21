@@ -2,10 +2,10 @@
 
 namespace spread\controllers;
 
-use common\components\UploadController;
+use common\components\UploadController as UploadControllerBase;
 use spread\models\Attachment;
 
-class SpreadUploadController extends UploadController
+class UploadController extends UploadControllerBase
 {
     public $enableCsrfValidation = false;
 

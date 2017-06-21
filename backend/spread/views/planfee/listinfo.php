@@ -8,29 +8,25 @@ $gridViewParams = [
         [
             'attribute' => 'client_type',
             'value' => function($model) {
-                $name = isset($model->clientTypeInfos[$model->client_type]) ? $model->clientTypeInfos[$model->client_type] : $model->client_type;
-                return $name;
+                return $model->getKeyName('client_type', $model->client_type);
             }
         ],
         [
             'attribute' => 'channel',
             'value' => function($model) {
-                $name = isset($model->channelInfos[$model->channel]) ? $model->channelInfos[$model->channel] : $model->channel;
-                return $name;
+                return $model->getKeyName('channel', $model->channel);
             }
         ],
         [
             'attribute' => 'account_id',
             'value' => function($model) {
-                $name = isset($model->accountInfos[$model->account_id]) ? $model->accountInfos[$model->account_id] : $model->account_id;
-                return $name;
+                return $model->getPointName('account', $model->account_id);
             }
         ],
         [
             'attribute' => 'plan_id',
             'value' => function($model) {
-                $name = isset($model->planInfos[$model->plan_id]) ? $model->planInfos[$model->plan_id] : $model->plan_id;
-                return $name;
+                return $model->getPointName('plan', $model->plan_id);
             }
         ],
         'show_num',

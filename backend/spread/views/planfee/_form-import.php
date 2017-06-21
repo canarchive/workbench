@@ -19,7 +19,7 @@ $import = $attachmentModel->getFieldInfos('planfee', 'import');
     <?= FileUploadUI::widget([
         'model' => $attachmentModel,
         'attribute' => 'files[import]',
-        'url' => ['/spread-upload/index', 'table' => 'planfee', 'field' => 'import', 'id' => $model->id],
+        'url' => Yii::getAlias('@spreadurl') . "/upload/planfee/import.html?id={$model->id}",
         'gallery' => true,
         'fieldOptions' => [
             'isSingle' => $import['isSingle'],

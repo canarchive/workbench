@@ -1,5 +1,5 @@
 <?php
-$infos = $model->merchantAllInfos;
+$infos = $model->getPointInfos('merchant');
 $merchantId = $model->merchant_id;
 ?>
 
@@ -7,10 +7,10 @@ $merchantId = $model->merchant_id;
     <ul class="breadcrumb">
 <?php
 $subnavString = '';
-foreach ($infos as $mId => $mInfo) {
+foreach ($infos as $mId => $mName) {
     $styleStr =  $mId == $merchantId ? 'style="color:#009900;"' : '';
     $urlStr =  '?merchant_id=' . $mId . '&field_hit=' . $model->field_hit;
-    $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$mInfo['name']}</a></li>";
+    $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$mName}</a></li>";
 }
 echo $subnavString;
 ?>
