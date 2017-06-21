@@ -8,15 +8,13 @@ $gridViewParams = [
         [
             'attribute' => 'account_id',
             'value' => function($model) {
-                $name = isset($model->accountInfos[$model->account_id]) ? $model->accountInfos[$model->account_id] : $model->account_id;
-                return $name;
+                return $model->getPointName('account', $model->account_id);
             }
         ],
         [
             'attribute' => 'merchant_id',
             'value' => function($model) {
-                $name = isset($model->merchantInfos[$model->merchant_id]) ? $model->merchantInfos[$model->merchant_id] : $model->merchant_id;
-                return $name;
+                return $model->getPointName('merchant', $model->merchant_id);
             }
         ],
         'put_at',
@@ -24,7 +22,7 @@ $gridViewParams = [
         [
             'attribute' => 'status',
             'value' => function($model) {
-                return $model->statusInfos[$model->status];
+                return $model->getKeyName('status', $model->status);
             }
         ],
 

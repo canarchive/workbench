@@ -8,10 +8,7 @@ $detailViewParams = [
         // 'account_id',
         [
             'attribute' => 'plan_id',
-            'value' => function($model) {
-                $name = isset($model->planInfos[$model->plan_id]) ? $model->planInfos[$model->plan_id] : $model->plan_id;
-                return $name;
-            }
+            'value' => $model->getPointName('plan', $model->plan_id),
         ],
         [
             'attribute' => 'created_at',
@@ -23,7 +20,7 @@ $detailViewParams = [
         ],
         [
             'attribute' => 'status',
-            'value' => $model->statusInfos[$model->status],
+            'value' => $model->getKeyName('status', $model->status),
         ],
     ],
 ];

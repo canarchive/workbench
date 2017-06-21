@@ -8,12 +8,12 @@ $detailViewParams = [
         'domain',
         [
             'attribute' => 'channel',
-            'value' => isset($model->domainInfos[$model->channel]) ? $model->domainInfos[$model->channel] : $model->channel,
+            'value' => $model->getKeyName('channel', $model->channel),
         ],
         'password',
         [
             'attribute' => 'merchant',
-            'value' => isset($model->merchantInfos[$model->merchant]) ? $model->merchantInfos[$model->merchant] : $model->merchant,
+            'value' => $model->getKeyName('merchant', $model->merchant),
         ],
         [
             'attribute' => 'created_at',
@@ -25,7 +25,7 @@ $detailViewParams = [
         ],
         [
             'attribute' => 'status',
-            'value' => $model->statusInfos[$model->status],
+            'value' => $model->getKeyName('status', $model->status),
         ],
     ],
 ];

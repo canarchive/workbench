@@ -8,7 +8,7 @@ use common\widgets\FileUploadUI;
 <div class="menu-form">
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'account_id')->dropDownList($model->accountInfos, ['prompt' => Yii::t('admin-common', 'Select Account')]); ?>    
+    <?= $form->field($model, 'account_id')->dropDownList($model->getPointInfos('account'), ['prompt' => '']); ?>    
     <?= $form->field($model, 'put_at')->textInput(); ?>
     <script type="text/javascript ">
         $(function () {
@@ -20,8 +20,9 @@ use common\widgets\FileUploadUI;
         $(function () {
             $('#plan-put_end').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
         });
-    </script><?= $form->field($model, 'merchant_id')->dropDownList([$model->merchantInfos], ['company' => Yii::t('admin-common', 'Select Merchant')]); ?>
-    <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => Yii::t('admin-common', 'Select Status')]); ?>
+    </script>
+    <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => ['status' => 2]]), ['prompt' => '']); ?>
+    <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

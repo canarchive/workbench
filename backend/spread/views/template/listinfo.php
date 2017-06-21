@@ -9,26 +9,25 @@ $gridViewParams = [
         [
             'attribute' => 'merchant_id',
             'value' => function($model) {
-                $merchantInfo = $model->merchantInfo;
-                return empty($merchantInfo) ? '' : $merchantInfo['name'];
+                return $model->getPointName('merchant', $model->merchant_id);
             }
         ],
         [
             'attribute' => 'have_pc',
             'value' => function($model) {
-                return !empty($model->have_pc) ? $model->havePcInfos[$model->have_pc] : '';
+                return $model->getKeyName('have_pc', $model->have_pc);
             }
         ],
         [
             'attribute' => 'have_mobile',
             'value' => function($model) {
-                return !empty($model->have_mobile) ? $model->haveMobileInfos[$model->have_mobile] : '';
+                return $model->getKeyName('have_mobile', $model->have_mobile);
             }
         ],
         [
             'attribute' => 'status',
             'value' => function($model) {
-                return !empty($model->status) ? $model->statusInfos[$model->status] : '';
+                return $model->getKeyName('status', $model->status);
             }
         ],
     ],
