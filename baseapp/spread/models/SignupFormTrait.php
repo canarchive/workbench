@@ -60,8 +60,9 @@ trait SignupFormTrait
         $serviceInfo = $userInfo->dealService();
         $userInfo->updateAfterInsert($conversionInfo);
 
-        $this->sendSms($userInfo->merchantInfoPoint($userInfo->merchant_id), $datas['mobile']);
-        $this->sendSmsService($userInfo->merchantInfoPoint($userInfo->merchant_id), $datas, $serviceInfo);
+        $merchantInfo = $this->getPointInfo('merchant', $userInfo->merchant_id);
+        $this->sendSms($merchantInfo, $datas['mobile']);
+        $this->sendSmsService($merchantInfo, $datas, $serviceInfo);
         return ['status' => 200, 'message' => 'OK'];
     }
 

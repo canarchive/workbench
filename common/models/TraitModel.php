@@ -125,4 +125,14 @@ trait TraitModel
         }
         return isset($infos[$value]) ? $infos[$value] : $value;
     }
+
+    public function maskMobile($mobile)
+    {
+        return substr_replace($mobile, '******', 3, 6);
+    }
+
+    public function formatTimestamp($timestamp, $format = 'Y-m-d H:i:s')
+    {
+        return  date($format, $timestamp);
+    }
 }
