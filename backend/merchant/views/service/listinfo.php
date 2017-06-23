@@ -10,7 +10,7 @@ $gridViewParams = [
                 return $model->getPointName('merchant', $model->merchant_id);
             }
         ],
-        'code',
+        //'code',
         'name',
         [
             'attribute' => 'user_id',
@@ -19,7 +19,7 @@ $gridViewParams = [
             }
         ],
         'mobile',
-        'serviced_num',
+        //'serviced_num',
         'serviced_times',
         [
             'attribute' => 'distributed_at',

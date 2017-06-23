@@ -31,7 +31,7 @@ class Merchant extends MerchantModel
             //'sort' => ['attributes' => ['num_owner', 'status']],
         ]);
 
-        if ($this->load($params, '') && !$this->validate()) {
+        if (!$this->load($params, '') || !$this->validate()) {
             return $dataProvider;
         }
         $this->load($params);
