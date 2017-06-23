@@ -6,16 +6,22 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
+        'sort',
         'city_code',
         'client_type',
-		'merchant_id',
+        [
+		    'attribute' => 'merchant_id',
+            'value' => function ($model) {
+                return $model->getPointName('merchant', $model->merchant_id);
+            }
+        ],
         'name',
-    [
-        'attribute' => 'mobile',
-        'value' => function ($model) {
-            return substr_replace($model['mobile'], '******', 3, 6);
-        }
-    ],
+        [
+            'attribute' => 'mobile',
+            'value' => function ($model) {
+                return $model->maskMobile($model->mobile);
+            }
+        ],
         'channel',
         'client_type',
         'sem_account',
@@ -38,7 +44,7 @@ $gridViewParams = [
         [
             'attribute' => 'created_at',
             'value' => function($model) {
-                return  date('Y-m-d H:i:s',$model->created_at);
+                return $model->formatTimestamp($model->created_at);
             },
         ],
     ],
