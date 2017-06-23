@@ -25,7 +25,7 @@ class Managerlog extends ManagerlogModel
         $query = ManagerlogModel::find();
         $dataProvider = new ActiveDataProvider(['query' => $query]);
 
-        if ($this->load($params) && !$this->validate()) {
+        if (!($this->load($params) || !$this->validate())) {
             return $dataProvider;
         }
 
