@@ -19,7 +19,7 @@ class Manager extends ManagerModel
     {
         return [
             [['id', 'created_at', 'updated_at'], 'integer'],
-            [['phone', 'email', 'notes', 'status'], 'safe'],
+            [['mobile', 'email', 'status'], 'safe'],
         ];
     }
 
@@ -48,7 +48,7 @@ class Manager extends ManagerModel
             'sort' => ['attributes' => ['name', 'login_num', 'create_time', 'last_time', 'status']],
         ]);
 
-        if (!($this->load($params) && $this->validate())) {
+        if (!($this->load($params) || !$this->validate())) {
             return $dataProvider;
         }
 

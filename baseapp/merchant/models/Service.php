@@ -45,14 +45,19 @@ class Service extends MerchantModel
     public function attributeLabels()
     {
         return [
-            'id' => '客服ID',
+            'id' => 'ID',
+			'user_id' => '用户ID',
+			'manager_id' => '主管ID',
             'merchant_id' => '商家ID',
             'name' => '名字',
             'code' => '代码',
             'mobile' => '手机号',
             'mobile_ext' => '抄送手机号',
+			'serviced_num' => '服务人数',
+			'serviced_times' => '服务次数',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
+			'distributed_at' => '分配时间',
             'status' => '状态',
             'status_sendmsg' => '报名通知',
 
