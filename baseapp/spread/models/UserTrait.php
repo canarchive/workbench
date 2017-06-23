@@ -54,8 +54,8 @@ trait UserTrait
 
     public function addUser($data, $serviceId = null)
     {
-        $serviceInfo = !is_null($serviceId) ? $this->getServiceModel()->findOne($serviceId) : null;
-        $serviceInfo = empty($serviceInfo) ? $this->getServiceModel()->getDispatchService(['merchant_id' => $data['merchant_id']]) : $serviceInfo;
+        $serviceInfo = !is_null($serviceId) ? $this->getPointInfo('service', $serviceId) : null;
+        $serviceInfo = empty($serviceInfo) ? $this->getPointModel('service')->getDispatchService(['merchant_id' => $data['merchant_id']]) : $serviceInfo;
 
         $data['service_id'] = empty($serviceInfo) ? 1 : $serviceInfo->id;
         $data = $this->_formatData($data);
