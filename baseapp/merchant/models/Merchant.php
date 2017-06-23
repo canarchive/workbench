@@ -2,6 +2,8 @@
 
 namespace baseapp\merchant\models;
 
+use Yii;
+
 class Merchant extends MerchantModel
 {
     public static function tableName()
@@ -61,11 +63,7 @@ class Merchant extends MerchantModel
 
     protected function getSortInfos()
     {
-        $datas = [
-            'decoration' => '装修',
-            'shoot' => '摄影',
-        ];
-        return $datas;
+		return require(Yii::getAlias('@baseapp/config/params-sort-local.php'));
     }
 
     public function afterSave($insert, $changedAttributes)
