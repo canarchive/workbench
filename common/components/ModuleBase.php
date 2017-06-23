@@ -4,7 +4,7 @@ namespace common\components;
 
 use Yii;
 use yii\helpers\Url;
-use common\models\Company;
+use baseapp\passport\models\Company;
 
 class ModuleBase extends \yii\base\Module
 {
@@ -50,7 +50,7 @@ class ModuleBase extends \yii\base\Module
             return $info;
         }
 
-        $info = $company->getInfoByCode($code);
+        $info = $company->getPointInfo('company', ['code' => $code]);
         if (empty($info)) {
             $this->cityCodeValid = false;
             $info = $company->getInfoByIP();
