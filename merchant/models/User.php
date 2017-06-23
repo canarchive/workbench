@@ -33,7 +33,7 @@ class User extends AuthBase
     public function scenarios()
     {
         return [
-            'default' => ['merchant_id'],
+            'default' => ['merchant_id', 'role', 'status'],
             'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id'],
             'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id'],
             //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],

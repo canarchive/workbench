@@ -4,6 +4,7 @@ $detailViewParams = [
     'attributes' => [
         'id',
         'mobile',
+		'name',
         [
             'attribute' => 'merchant_id',
             'value' => $model->getUserMerchantStr(),

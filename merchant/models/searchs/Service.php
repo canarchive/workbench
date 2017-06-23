@@ -21,7 +21,7 @@ class Service extends ServiceModel
 
         $dataProvider = new ActiveDataProvider(['query' => $query]);
 
-        if ($this->load($params, '') && !$this->validate()) {
+        if (!$this->load($params, '') || !$this->validate()) {
             return $dataProvider;
         }
 		$query->andFilterWhere([
