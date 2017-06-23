@@ -6,6 +6,7 @@ use yii\data\ActiveDataProvider;
 
 Trait UserTrait
 {
+	use UserTemplate;
     public $created_at_start;
     public $created_at_end;
 
