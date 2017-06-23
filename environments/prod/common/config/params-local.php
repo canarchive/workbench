@@ -1,12 +1,16 @@
 <?php
 return [
-    'baseDomain' => 'alyee.biz',
+    'baseDomain' => '91zuiai.com',
     'pathParams' => [
-        'default' => 'e:/www/common/upload',
-        'website' => 'e:/www/common/website',
-    ],
+        'default' => '/data/htmlwww/common/upload',
+        'website' => '/data/htmlwww/common/website',
+    ],  
     'urlParams' => [
-        'default' => 'http://127.0.0.1/common/upload',
+        'default' => 'http://60.205.145.0/common/upload',
+        //'default' => 'http://sj.shedaojia.com/',
         'website' => 'http://upload.alyee.com',
-    ],
+    ],  
+    'luosimaoCaptcha' => [
+        'siteKey' => 'a956b500af71f19bfaa79a1a9241ae26',
+    ],  
 ];
