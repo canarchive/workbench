@@ -16,6 +16,11 @@ return [
                     'sourceLanguage' => 'en',
                     'basePath' => '@common/messages'
                 ];
+                Yii::$app->i18n->translations['common'] = [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en',
+                    'basePath' => '@common/messages'
+                ];
             }
         }
     ],
@@ -36,6 +41,7 @@ return [
             'rules' => [
 				['pattern' => '/captcha', 'route' => '/site/captcha'],
                 ['pattern' => '/upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index'],
+				'debug/<controller>/<action>' => 'debug/<controller>/<action>',
             ],
         ],
         'errorHandler' => [

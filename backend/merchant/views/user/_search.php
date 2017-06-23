@@ -1,6 +1,5 @@
 <?php
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $currentMenu = $this->context->menuInfos['currentMenu'];
@@ -22,39 +21,47 @@ $formName = $model->formName();
             ]);
             ?>
             <div class="form-group form-group-sm">
-                <label class="control-label col-md-1">录入时间</label>
-                <div class="col-md-2">
-                    <input class="form-control" type="text" id="created_at_start" name="<?= "{$formName}[created_at_start]"; ?>" >
-                    <script type="text/javascript">
-                        $(function () {
-                            $('#created_at_start').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
-                        });
-                    </script>
-                </div>
-                <div class="col-md-2">
-                    <input class="form-control" type="text" id="created_at_end" name="<?= "{$formName}[created_at_end]"; ?>" >
-                    <script type="text/javascript">
-                        $(function () {
-                            $('#created_at_end').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
-                        });
-                    </script>
-                </div>
-                <?php if (!isset(Yii::$app->params['currentManager'])) { ?>
-                <label class="control-label col-md-1">管理员</label>
+                <label class="control-label col-md-1">商家</label>
                 <div class="col-md-2">
                     <?= Html::dropDownList(
-                        "{$formName}[manager_id]",
-                        0,
-                        $managerInfos,
+                        'merchant_id',
+                        null,
+                        $model->getPointInfos('merchant', ['where' => $model->formatPriv('merchant_id', 'id', $this->context->privInfo)]),
+                        [
+							'class' => '',
+                            'prompt' => '全部',
+							'size' => 4,
+							'height' => '60px',
+                            'multiple' => 'multiple',
+                        ]
+                    ) ?>
+                </div>
+                <label class="control-label col-md-1">角色</label>
+                <div class="col-md-2">
+                    <?= Html::dropDownList(
+                        'role',
+                        null,
+                        $model->getPointInfos('merchant-role', ['indexName' => 'code']),
                         [
                             'prompt' => '全部',
                             'class' => 'form-control',
                         ]
                     ) ?>
                 </div>
-                <?php } ?>
+                <label class="control-label col-md-1">状态</label>
                 <div class="col-md-2">
-                    <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
+                    <?= Html::dropDownList(
+                        'status',
+                        null,
+                        $model->statusInfos,
+                        [
+                            'prompt' => '全部',
+                            'class' => 'form-control',
+                        ]
+                    ) ?>
+                </div>
+                <div class="col-md-2">
+                    <?= Html::submitButton(Yii::t('common', 'Search'), ['class' => 'btn btn-primary']) ?>
                 </div>
             </div>
             <?php ActiveForm::end(); ?>
