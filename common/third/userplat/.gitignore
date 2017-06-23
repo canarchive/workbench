@@ -1,5 +1,4 @@
 !.gitignore
 weibo/config.php
-weixin/config.php
-qq/comm/inc.php
-douban/config.php
+wechat/config.php
+qq/config.php
