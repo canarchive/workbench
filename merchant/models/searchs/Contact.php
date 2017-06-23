@@ -19,7 +19,7 @@ class Contact extends ContactModel
         $query = self::find();
         $dataProvider = new ActiveDataProvider(['query' => $query]);
 
-        if ($this->load($params, '') && !$this->validate()) {
+        if (!$this->load($params, '') || !$this->validate()) {
             return $dataProvider;
         }
 
