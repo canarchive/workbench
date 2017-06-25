@@ -4,12 +4,12 @@ namespace backend\controllers;
 
 use common\helpers\Tree;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class MenuController extends AdminController
 {
     protected $modelClass = 'backend\models\Menu';
-    use ControllerFullTrait;
+    use ControllerTraitFull;
 
     public function behaviors()
     {
