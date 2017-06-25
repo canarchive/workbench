@@ -4,12 +4,12 @@ namespace backend\merchant\controllers;
 
 use common\helpers\Tree;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class MenuController extends AdminController
 {
     protected $modelClass = 'merchant\models\Menu';
-    use ControllerFullTrait;
+    use ControllerTraitFull;
 
     public $viewPrefix = '//menu/';
 

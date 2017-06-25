@@ -3,11 +3,11 @@
 namespace backend\merchant\controllers;
 
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class ContactController extends AdminController
 {
-    use ControllerFullTrait;
+    use ControllerTraitFull;
     protected $modelClass = 'merchant\models\Contact';
     protected $modelSearchClass = 'merchant\models\searchs\Contact';
 }
