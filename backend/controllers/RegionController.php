@@ -6,11 +6,11 @@ use Yii;
 use yii\web\Response;
 use yii\helpers\ArrayHelper;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class RegionController extends AdminController
 {
-    use ControllerFullTrait;
+    use ControllerTraitFull;
     public $modelClass = 'common\models\region\Region';
     public $modelSearchClass = 'common\models\region\searchs\Region';
 

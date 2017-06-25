@@ -4,7 +4,7 @@ namespace backend\components;
 
 use Yii;
 
-Trait ControllerFullTrait
+Trait ControllerTraitFull
 {
 	use ControllerTraitAdd;
 	use ControllerTraitAddMul;
