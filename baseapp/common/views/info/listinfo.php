@@ -5,7 +5,7 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
-		'name',
+        'name',
 		'code',
         [   
             'format' => 'raw',
@@ -17,14 +17,17 @@ $gridViewParams = [
             },  
         ],
 		[
-			'attribute' => 'sort_code'
+			'attribute' => 'sort',
 			'value' => function($model) {
-				return $model->sortCodeName;
+				return $model->getKeyName('sort', $model->sort);
 			},
 		],
-		'meta_title',
-		'meta_keyword',
-
+		[
+			'attribute' => 'status',
+			'value' => function($model) {
+				return $model->getKeyName('status', $model->status);
+			},
+		],
     ],
 ];
 
