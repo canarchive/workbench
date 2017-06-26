@@ -17,7 +17,7 @@ class RuleFormat
         foreach ($datas as $data) {
 
             $siteCodes = $onlySite ? [$onlySite] : (isset($data['only']) && !empty($data['only']) ? $data['only'] : array_keys($siteInfos));
-            $ruleDataOrigin = $data['data'];
+            $ruleDataOrigin = $ruleData = $data['data'];
         
             foreach ($siteCodes as $siteCode) {
 				$domains = (array) $siteInfos[$siteCode]['domains'];
