@@ -60,7 +60,7 @@ trait UserTrait
         }
         //print_r($datas);exit();
 
-        return $this->render('update', ['datas' => $datas]);
+        return $this->render('update', $datas);
     }
 
     protected function _userInfos($id)
@@ -101,46 +101,35 @@ trait UserTrait
         $result = $this->$method($userModel, $operationType, $params);
     }
 
-    protected function _houseOperation($userModel, $operationType, $params = [])
-    {
-            $fields = ['mobile', 'service_id', 'region', 'address', 'house_area', 'house_sort', 'house_type', 'renovation_budget'];
-            $model = $userModel->_newModel('house', true);
-            $model->insert(false);
-    }
-
     protected function _callbackOperation($userModel, $operationType)
     {
-            //$fields = ['mobile', 'content', 'note'];
-            $fields = ['mobile', 'service_id', 'content'];
-            $model = $userModel->_newModel('callback', true);
-            $model->insert(false);
-            $content = $this->renderPartial('_user_house', ['model' => $model]);
+        //$fields = ['mobile', 'content', 'note'];
+        $fields = ['mobile', 'service_id', 'content'];
+        $model = $userModel->_newModel('callback', true);
+        $model->insert(false);
+        $content = $this->renderPartial('_user_house', ['model' => $model]);
     }
 
     protected function _user_merchantOperation($userModel, $operationType)
     {
-            $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
-            $model = $userModel->_newModel('userMerchant', true);
+        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
+        $model = $userModel->_newModel('userMerchant', true);
 
-            $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
-            if ($oldInfo) {
-                return ['status' => 400, 'message' => '已派单'];
-            }
-            $model->insert(false);
-            $userModel->sendSmsValid($model, $userInfo);
-            $noteData = [
-                'user_merchant_id' => $model->id,
-                'reply' => Yii::$app->request->post('note'),
-                'reply_at' => Yii::$app->params['currentTime'],
-            ];
-            $guestbook = $userModel->_newModel('guestbook', true, $noteData);
-            $guestbook->insert(false);
-            $model->note = $noteData['reply'];
-            $content = $this->renderPartial('_user_merchant_info', ['model' => $model]);
-    }
-
-    protected function _houseOperation($userModel, $operationType)
-    {
+        $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
+        if ($oldInfo) {
+            return ['status' => 400, 'message' => '已派单'];
+        }
+        $model->insert(false);
+        $userModel->sendSmsValid($model, $userInfo);
+        $noteData = [
+            'user_merchant_id' => $model->id,
+            'reply' => Yii::$app->request->post('note'),
+            'reply_at' => Yii::$app->params['currentTime'],
+        ];
+        $guestbook = $userModel->_newModel('guestbook', true, $noteData);
+        $guestbook->insert(false);
+        $model->note = $noteData['reply'];
+        $content = $this->renderPartial('_user_merchant_info', ['model' => $model]);
     }
 
     protected function _initFields($model, $fields)
@@ -151,7 +140,7 @@ trait UserTrait
         return $model;
     }
 
-        $content = '';
+        /*$content = '';
         if ($table === 'house') {
         } else if ($table == 'user_merchant') {
         }
@@ -165,7 +154,7 @@ trait UserTrait
         ];
 
         return $return;
-    }
+}*/
 
     protected function _update($userModel)
     {
