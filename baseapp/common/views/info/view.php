@@ -4,20 +4,19 @@ $detailViewParams = [
     'model' => $model,
     'attributes' => [
 		'id',
-		'name',
+        'name',
 		'code',
 		[
-			'attribute' => 'sort_code',
-			'value' => $model->sortCodeName,
+			'attribute' => 'sort',
+			'value' => $model->getKeyName('sort', $model->sort),
 		],
-		'orderlist',
-		'meta_title',
-		'meta_keyword',
-		'meta_description',
+        'orderlist',
 		[
 			'attribute' => 'status',
 			'value' => $model->getKeyName('status', $model->status),
 		],
+		'description',
+		'content',
     ],
 ];
 

@@ -7,7 +7,7 @@ use yii\bootstrap\ActiveForm;
 
 <div class="menu-form">
     <?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, 'sort_code')->dropDownList($model->getPointInfos('tag-sort-shopf', ['indexName' => 'code']), ['prompt' => '']); ?>
+    <?= $form->field($model, 'sort_code')->dropDownList($model->sortCodeInfos, ['prompt' => '']); ?>
     <?php if (isset($addMul) && $addMul) { ?>
     <?= $form->field($model, 'add_mul')->textarea(['rows' => 10]) ?>
 	<?php } else { ?>
