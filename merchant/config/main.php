@@ -22,7 +22,7 @@ return [
         'user' => [
             'identityClass' => 'merchant\models\User',
             'enableAutoLogin' => true,
-            'loginUrl' => ['/site/signin'],
+            'loginUrl' => '/signin.html',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
