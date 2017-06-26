@@ -13,7 +13,7 @@ default:
 $columns = $searchModel->getColumnsUser($ignores);
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
+    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
 
