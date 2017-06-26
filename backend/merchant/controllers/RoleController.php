@@ -5,13 +5,13 @@ namespace backend\merchant\controllers;
 use Yii;
 use merchant\models\Menu as MenuModel;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class RoleController extends AdminController
 {
     protected $modelClass = 'merchant\models\Role';
     protected $modelSearchClass = 'merchant\models\searchs\Role';
-    use ControllerFullTrait;
+    use ControllerTraitFull;
 
     public function actionView($id)
     {

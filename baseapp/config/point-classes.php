@@ -11,5 +11,8 @@ return [
     'plan' => '\spread\models\Plan',
     'unit' => '\spread\models\Unit',
     'template' => '\spread\models\Template',
+
+	// shop flower
+	'tag-sort-shopf' => '\shop\flower\models\TagSort',
 ];
 

@@ -4,11 +4,11 @@ namespace backend\merchant\controllers;
 
 use Yii;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class BankController extends AdminController
 {
-    use ControllerFullTrait;
+    use ControllerTraitFull;
     protected $modelClass = 'merchant\models\Bank';
     protected $modelSearchClass = 'merchant\models\searchs\Bank';
 

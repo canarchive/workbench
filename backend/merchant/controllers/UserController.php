@@ -4,13 +4,13 @@ namespace backend\merchant\controllers;
 
 use Yii;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class UserController extends AdminController
 {
     protected $modelClass = 'merchant\models\User';
     protected $modelSearchClass = 'merchant\models\searchs\User';
-	use ControllerFullTrait;
+	use ControllerTraitFull;
 
     public function actionUpdate($id = 0)
     {
