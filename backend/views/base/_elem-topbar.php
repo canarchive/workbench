@@ -26,7 +26,7 @@ $managerInfo = Yii::$app->params['managerInfo'];
             <ul class="dropdown-menu">
                 <!--<li><a href="">Profile</a></li>-->
                 <li class="divider"></li>
-                <li><a href="<?= Yii::getAlias('@backendurl') . Url::to(['/entrance/logout']); ?>">退出</a></li>
+                <li><a href="/logout.html">退出</a></li>
             </ul>
         </div>
         <!-- user dropdown ends -->
