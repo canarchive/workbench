@@ -16,10 +16,10 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                         <div class="menu right">
                             <?php if (Yii::$app->user->isGuest) { ?>
                             <a rel="nofollow" href="/signin.html" class="button tiny radius success" title="登录">登录</a>
-                            <!--<a rel="nofollow" href="<?= Url::to(['/site/signup']); ?>" class="button tiny radius info" title="注册tuanjiahui会员">注册</a>-->
+                            <!--<a rel="nofollow" href="/signup.html" class="button tiny radius info" title="注册会员">注册</a>-->
                             <?php } else { ?>
                             <span class="is-login">
-                                <a rel="nofollow" href="<?= Url::to(['/info/index']); ?>" class="button radius success tiny" title="进入管理中心">进入管理中心</a>
+                                <a rel="nofollow" href="/admin/" class="button radius success tiny" title="进入管理中心">进入管理中心</a>
                             </span>
                             <?php } ?>
                         </div>
