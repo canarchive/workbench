@@ -2,6 +2,7 @@
 return [
     'adminindex' => [
         'data' => [
+			'suffix' => '/',
             'pattern' => '/admin',
             'route' => '/admin/home/index', 
         ],
