@@ -33,7 +33,7 @@ $gridViewParams = [
             'attribute' => 'operation',
             'value'=> function($model){
                 $mobileId = $model->mobileId;
-                $url = '/subsite/owner-dispatch/update.html?id=' . $mobileId;
+                $url = '/subsite/decoration/dispatch/update.html?id=' . $mobileId;
                 return "<a href='{$url}' target='_blank'>备注</a>";
             },
         ],

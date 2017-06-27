@@ -1,7 +1,7 @@
 <?php
 echo $this->render('_base_info', ['model' => $model]);
 echo $this->render('_listinfo_house', ['modelUser' => $model, 'houseInfos' => $houseInfos, 'userMerchantInfos' => $userMerchantInfos]);
-echo $this->render('_listinfo_callback', ['modelUser' => $model, 'callbackInfos' => $callbackInfos]);
+echo $this->render('@baseapp/spread/views/user/_listinfo_callback', ['modelUser' => $model, 'callbackInfos' => $callbackInfos]);
 ?>
 <script type="text/javascript">
 

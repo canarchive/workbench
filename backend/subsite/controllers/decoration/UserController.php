@@ -16,6 +16,7 @@ class UserController extends AdminController
     {
         //$tables = ['user_house', 'callback'];
         $tables = ['user', 'house', 'callback', 'user_merchant'];
+        return $tables;
     }
 
     protected function _userInfoExts($model)
@@ -24,10 +25,24 @@ class UserController extends AdminController
 		return ['houseInfos' => $houseInfos];
 	}
 
-    protected function _houseOperation($userModel, $operationType, $params = [])
+    protected function _houseOperation($userModel, $operationType, $params)
     {
-            $fields = ['mobile', 'service_id', 'region', 'address', 'house_area', 'house_sort', 'house_type', 'renovation_budget'];
-            $model = $userModel->_newModel('house', true);
-            $model->insert(false);
+        $model = $userModel->_newModel('house', true);
+        if ($operationType == 'update') {
+            return $this->_update($model, $params);
+        }
+
+        $fields = ['mobile', 'service_id', 'region', 'address', 'house_area', 'house_sort', 'house_type', 'renovation_budget'];
+        $this->_initFields($model, $fields);
+        $r = $model->insert(false);
+
+        $return = [
+            'status' => 200,
+            'message' => 'OK',
+            'id' => $model->id,
+            'created_at' => date('Y-m-m H:i:s', $model->created_at),
+            'content' => $this->renderPartial('_user_house', ['model' => $model]),
+        ];
+        return $return;
     }
 }

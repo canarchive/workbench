@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 
-$tableName = 'owner_house';
+$tableName = 'house';
 $merchantInfos = $modelNew->getPointInfos('merchant', ['where' => ['status' => 3]]);
 ?>
 <table class="table table-striped table-bordered responsive">

@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 
-$tableName = 'owner_house';
+$tableName = 'house';
 ?>
         <tr>
             <td><input type="text" name="region" value="<?= $model->region; ?>" onchange="updateElemForUser('<?= $tableName; ?>', <?= $model->id; ?>, 'region', this.value)"/></td>

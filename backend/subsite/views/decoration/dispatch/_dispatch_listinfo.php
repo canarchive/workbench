@@ -34,7 +34,7 @@ $tableName = 'user_merchant';
             ); ?>
             </td>
             <!--<td><?= Html::textarea('note', $model->note, ['rows' => 2, 'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'note', this.value)"]); ?></td>-->
-            <td><a href="javascript: void(0);" onclick="$('#guestbook_merchant_name').text('<?= $merchantName; ?>'); $('#user_merchant_id').val(<?= $model->id; ?>); $('#add_guestbook').show();">备注</a></td>
+            <td><a href="javascript: void(0);" onclick="$('#guestbook_merchant_name').text('<?= $model->getPointName('merchant', $model->merchant_id); ?>'); $('#user_merchant_id').val(<?= $model->id; ?>); $('#add_guestbook').show();">备注</a></td>
         </tr>
         <?php } ?>
     </tbody>

@@ -29,7 +29,24 @@ $gridViewParams = [
             'value' => function($model) {
                 return $model->statusInfos[$model->status];
             }
-        ]
+        ],
+        [
+			'format' => 'raw',
+            'attribute' => 'operation',
+			'value' => function($model) {
+                $menus = $this->context->menuInfos['menus'];
+				$menu = isset($menus['subsite_decoration_dispatch_update']) ? $menus['subsite_decoration_dispatch_update'] : [];
+                if (empty($menu)) {
+                    return '';
+                }
+                $dInfo = $model->dispatchInfo;
+                if (empty($dInfo)) {
+                    return '';
+                }
+				$opeStr = "<a href='{$menu['url']}?id={$model->dispatchInfo['id']}'>编辑</a><br />";
+                return $opeStr;
+			},
+        ],
     ],
 ];
 
