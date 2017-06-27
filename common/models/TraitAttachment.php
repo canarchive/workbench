@@ -2,6 +2,9 @@
 
 namespace common\models;
 
+use yii\helpers\Html;
+use common\widgets\FileUploadUI;
+
 trait TraitAttachment
 {
 	public $attachmentCode = 'attachment';
@@ -12,7 +15,7 @@ trait TraitAttachment
 
     public function getAttachmentImg($id, $pointSize = true, $options = [])
     {
-        $model = $this->_newModel($this->attachmentCode);
+        $model = $this->attachmentModel;
         $info = $model->findOne($id);
         if ($info) {
             $info->getUrl();
@@ -28,7 +31,7 @@ trait TraitAttachment
 
     public function getAttachmentUrl($id)
     {
-        $model = $this->_newModel($this->attachmentCode);
+        $model = $this->attachmentModel;
         //$model = $this->getAttachmentModel();
         $info = $model->findOne($id);
         return empty($info) ? '' : $info->getUrl();
@@ -39,7 +42,7 @@ trait TraitAttachment
 
     protected function _updateSingleAttachment($table, $fields, $extData = [])
     {
-        $attachment = $this->_newModel($this->attachmentCode);
+        $attachment = $this->attachmentModel;
         foreach ($fields as $field) {
             $attachment->updateInfo($this->$field, $this->id, $extData);
 
@@ -52,7 +55,7 @@ trait TraitAttachment
 
     protected function _updateMulAttachment($table, $field, $extData = [])
     {
-        $attachment = $this->_newModel($this->attachmentCode);
+        $attachment = $this->attachmentModel;
         $ids = array_filter(explode(',', $this->$field));
         foreach ($ids as $id) {
             $attachment->updateInfo($id, $this->id, $extData);
@@ -63,4 +66,25 @@ trait TraitAttachment
 
         return ;
     }
+
+	public function uploadElem($table, $field)
+	{
+		$attachment = $this->attachmentModel;
+        $fieldElem = $attachment->getFieldInfos($table, $field);
+        return FileUploadUI::widget([
+            'model' => $attachment,
+            'attribute' => "files[{$field}]",
+            'url' => $this->uploadUrl($table, $field, $this->id), 
+    		'gallery' => true,
+            'fieldOptions' => [
+    			'isSingle' => $fieldElem['isSingle'],
+    			'idField' => Html::getInputId($this, $field),
+                'accept' => 'image/*'
+            ],
+            'clientOptions' => [
+    		    //'dataType' => 'json',
+    			'maxFileSize' => $fieldElem['maxSize'] * 1024,
+            ],
+        ]);
+	}
 }
