@@ -168,7 +168,7 @@ $urls = $this->context->navUrls;
     <a href="<?= $urls['quote']; ?>" rel="nofollow">装修报价</a>
 </div>
 <div class="footer_info">
-	<p class=""><?= $this->context->copyStr . '  ' . $this->context->icpStr; ?></p>
+	<p class=""><?= $this->context->currentSiteInfo['copy'] . '  ' . $this->context->currentSiteInfo['icp']; ?></p>
 	<p class="">兔班长装修网隶属北京维纳亚科技有限公司</p>
 	<p class=""><?= Yii::$app->params['siteAddressInfo']; ?></p>
 	<p class="">联系电话：<?= Yii::$app->params['siteHotline']; ?></p>

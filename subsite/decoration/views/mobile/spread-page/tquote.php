@@ -12,6 +12,10 @@ $jsFiles = [
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/tobj/js/']);
 $this->params['formPosition'] = 'hd-tobj';
 $this->params['formPositionName'] = '活动-报价详情';
+
+Yii::$app->params['tdkInfos']['title'] =  '装修报价-装修预算表_装修到底需要多少钱';
+Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
+Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集整理了大量2017装修报价单，装修预算表，装修到底需要多少钱，让您家装修更省钱！';
 ?>
 <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
 <meta content="telephone=no" name="format-detection" />
@@ -453,5 +457,5 @@ body{
     <a href="tel:4008032163">电话咨询</a>
 </aside>-->
 <p style="text-align:center;color:#ccc;font-size:12px; margin-bottom: 5px">
-    <?= $this->context->copyStr; ?>
+    <?= $this->context->currentSiteInfo['copy']; ?>
 </p>

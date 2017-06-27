@@ -105,8 +105,8 @@ if (isMobile == 1) {
             <a hidefocus="" href="<?= $urls['contactus']; ?>" rel="nofollow">联系我们</a>
         </p>
         <p>免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。</p>
-        <p><?= $this->context->copyStr; ?></p>
-        <p>兔班长装修网(隶属北京维纳亚科技有限公司）<?= $this->context->icpStr; ?></p>
+        <p><?= $this->context->currentSiteInfo['copy']; ?></p>
+        <p>兔班长装修网(隶属北京维纳亚科技有限公司）<?= $this->context->currentSiteInfo['icp']; ?></p>
 		<p><?= Yii::$app->params['siteAddressInfo']; ?></p>
     </div>
 </footer>
@@ -173,7 +173,6 @@ if (isMobile == 1) {
         var housePrice=$('.house_price option:selected').val();
         var visitedName=$('input[name=visited_time]:checked').val();
         var note = '装修公司：'+companyName+';'+'户型结构:'+houseStyle+';'+'装修预算:'+housePrice+';'+'回访时间：'+visitedName;
-        alert(note);
 
     var $data = {
         'name': uname,

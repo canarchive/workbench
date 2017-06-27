@@ -9,8 +9,6 @@ use spread\models\Template;
 class SpreadPageController extends Controller
 {
 	public $merchantInfo;
-    public $copyStr;
-    public $icpStr;
 
     public function init()
     {
@@ -30,6 +28,7 @@ class SpreadPageController extends Controller
 		$cid = (int) Yii::$app->request->get('cid', 2);
         $merchantInfo = $model->getPointInfo('merchant', $cid);
         $this->merchantInfo = empty($merchantInfo) ? $model->getPointInfo('merchant', 2) : $merchantInfo;
+        //var_dump($this->merchantInfo);exit();
 
         $datas = [
             'code' => $code,
@@ -38,6 +37,18 @@ class SpreadPageController extends Controller
         $this->layout = 'main';
 
         return $this->render($code, $datas);   
+    }
+
+    protected function getReturnUrl()
+    {
+        $default = [
+            'returnUrl' => 'http://www.tu8zhang.com',
+            'returnUrlMobile' => 'http://m.tu8zhang.com',
+        ];
+        $extInfos = require(Yii::getAlias('@subsite/config/decoration/merchant.php'));
+        $extInfo = isset($extInfos[$this->merchantInfo['code']]) ? $extInfos[$this->merchantInfo['code']] : $default;
+        $returnUrl = $this->clientType == 'pc' ? $extInfo['returnUrl'] : $extInfo['returnUrlMobile'];
+        return $returnUrl;
     }
 
     protected function _getTemplateInfos()

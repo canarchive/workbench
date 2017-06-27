@@ -185,7 +185,7 @@ if (isMobile == 0) {
 			<a href="<?= $urls['quote']; ?>" rel="nofollow">装修报价</a></li>
         </ul>
     </nav>
-	<p class="f12"><?= $this->context->copyStr . '  ' . $this->context->icpStr; ?></p>
+	<p class="f12"><?= $this->context->currentSiteInfo['copy'] . '  ' . $this->context->currentSiteInfo['icp']; ?></p>
 	<p class="f12">兔班长装修网隶属北京维纳亚科技有限公司</p>
 	<p class="f12">地址：北京市昌平区科星西路106号楼407室</p>
 	<p class="f12">联系电话：400-8032-163</p>

@@ -155,8 +155,8 @@ $owners = $this->context->ownerInfos;
             <a hidefocus="" href="<?= $urls['contactus']; ?>" rel="nofollow">联系我们</a>
         </p>
         <p>免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系。</p>
-        <p><?= $this->context->copyStr; ?></p>
-        <p><?= $this->context->icpStr; ?></p>
+        <p><?= $this->context->currentSiteInfo['copy']; ?></p>
+        <p><?= $this->context->currentSiteInfo['icp']; ?></p>
     </div>
 </footer>
 <script src="<?= Yii::getAlias('@assetself'); ?>/common/js/jquery-1.11.3.min.js"></script>

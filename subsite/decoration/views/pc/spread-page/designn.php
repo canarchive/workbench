@@ -4,9 +4,9 @@ use yii\helpers\Url;
 $cssFiles = ['swiper.min', 'style'];
 $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['assetSort' => 'assetself', 'files' => $cssFiles, 'path' => 'design/css/']);
 
-Yii::$app->params['tdkInfos']['title'] =  '装修报价-上海装修报价单_上海装修预算表_上海装修到底需要多少钱-兔班长装修网';
-Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
-Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';
+Yii::$app->params['tdkInfos']['title'] = '装修免费设计，免费量房';
+Yii::$app->params['tdkInfos']['description'] = '装修设计,量房';
+Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
 
 $merchantInfo = $this->context->merchantInfo;
 ?>
@@ -1731,9 +1731,8 @@ $merchantInfo = $this->context->merchantInfo;
 
 <div id="jia_footer">
     <div class="jia_foot_info">
-        <p>Copyright 北京维纳亚科技有限公司 2010-2017, All Rights Reserved</p>
-
-        <p>京ICP备17003882号</p>
+        <p><?= $this->context->currentSiteInfo['copy']; ?></p>
+        <p><?= $this->context->currentSiteInfo['icp']; ?></p>
     </div>
 </div>
 <!--返回顶部-->
@@ -2237,15 +2236,13 @@ function phoneCheck($obj, num) {
         } else {
             $form.find('.add_tip').text('');
         }
-        $.ajax({
-            type:'post',
-            success:function(){
-                console.log('success');
-            },
-            error:function(){
-                console.log('error');
-            }
-        })
+
+        var $data = {}; 
+        $data.name = uname;
+        $data.mobile = phone;
+        $data.city_input = '';//data.province + data.city;
+        $data.area_input = uname;
+        signupApply($data);
     }
     if (num == 3) {
         uname = $.trim($form.find('#user_name').val());
@@ -2267,15 +2264,15 @@ function phoneCheck($obj, num) {
         }else {
             $form.find("input[name='mobile']").css("border", "1px solid #fff");
         }
-        $.ajax({
-            type:'post',
-            success:function(){
-                console.log('success');
-            },
-            error:function(){
-                console.log('error');
-            }
-        })
+        var cityInput = $form.find('.infor_city').val();
+        var village = $form.find("input[name='village']").val();
+
+        var $data = {}; 
+        $data.name = uname;
+        $data.mobile = phone;
+        $data.city_input = cityInput + '-' + village;
+        //$data.area_input = uname;
+        signupApply($data);
     }
     if (num == 2) {
         uname = $.trim($form.find('#user_name').val());
@@ -2296,17 +2293,17 @@ function phoneCheck($obj, num) {
         } else {
             $form.find('#mobile_tips').text('');
         }
-        $.ajax({
-            type:'post',
-            success:function(){
-                console.log('success');
-            },
-            error:function(){
-                console.log('error');
-            }
-        })
+
+        var cityInput = $form.find('.infor_city').val();
+        var $data = {}; 
+        $data.name = uname;
+        $data.mobile = phone;
+        $data.city_input = cityInput;
+        //$data.area_input = uname;
+        signupApply($data);
     }
     if (num == 1) {
+        var cityInput = $form.find('.infor_city').val();
         uname = $.trim($form.find('#user_name').val());
         phone = $.trim($form.find('#mobile').val());
         console.log(uname);
@@ -2326,16 +2323,13 @@ function phoneCheck($obj, num) {
         } else {
             $form.find('#user_phone_tips').text('');
         }
-        $.ajax({
-            type:'post',
-            success:function(){
-                console.log('success');
-            },
-            error:function(){
-                console.log('error');
-            }
-        })
 
+        var $data = {}; 
+        $data.name = uname;
+        $data.mobile = phone;
+        $data.city_input = cityInput;
+        //$data.area_input = uname;
+        signupApply($data);
     }
 
 }
@@ -2387,4 +2381,32 @@ $('.apply_close').click(function(){
     $('.layer_shade').hide();
     $('#apply_form').hide();
 })
+
+function signupApply($data)
+{
+    var positionName = $('#position_name').val();
+    $data.position = $('#position').val();
+    $data.position_name = positionName;
+    $data.cid = $("#cid").val();
+    $data._csrf = $("#_csrf").val();
+    console.log($data);
+    $.ajax({
+        type: 'POST',
+        data: $data,
+        url: window.signupUrl,// + '/jz-signup.html',
+        dataType: "json",
+        success:function(data){
+            if(data.status == 200){
+                var returnUrl = $('#returnUrl').val();
+                window.location.href = returnUrl;
+            }else if ( data.status == 400 ) {
+                alert(data.message);
+            } else {
+                alert('报名失败，请您重新报名！');
+            }
+        }//end success
+
+    })// end ajax
+    return false;
+}
 </script>

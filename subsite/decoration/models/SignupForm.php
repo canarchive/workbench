@@ -8,6 +8,7 @@ use baseapp\spread\models\SignupFormTrait;
 class SignupForm extends BaseModel
 {
     use SignupFormTrait;
+    public $currentSort = 'decoration';
 
     public function init()
     {

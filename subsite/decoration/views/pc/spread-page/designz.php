@@ -302,8 +302,8 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
             <div class="copyright">
                 <ul>
                     <li>免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系</li>
-                    <li><?= $this->context->copyStr; ?></li>
-                    <li><?= $this->context->icpStr; ?></li>
+                    <li><?= $this->context->currentSiteInfo['copy']; ?></li>
+                    <li><?= $this->context->currentSiteInfo['icp']; ?></li>
             </div>
             <div class="icpico">
                 <a href="javascript:;" class="ico1"></a>
