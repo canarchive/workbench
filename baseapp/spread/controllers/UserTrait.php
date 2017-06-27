@@ -55,8 +55,9 @@ trait UserTrait
         if (Yii::$app->getRequest()->method == 'POST') {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             $operation = Yii::$app->request->post('operation');
+            $operation = $operation == 'add' ? 'add' : 'update';
             $userModel = $datas['model'];
-            return $this->_operationInfo($userModel, $operation);
+            return $this->_operations($userModel, $operation);
         }
         //print_r($datas);exit();
 
@@ -86,41 +87,67 @@ trait UserTrait
     {
         $table = Yii::$app->request->post('table');
         $method = "_{$table}Operation";
-        if (!method_exists($method, $this)) {
+        if (!method_exists($this, $method)) {
             return ['status' => 400, 'message' => "{$table}有误"];
         }
         $params = [];
         if ($operationType == 'update') {
-            $infoId = Yii::$app->request->post('info_id');
-            $field = Yii::$app->request->post('field');
-            $value = Yii::$app->request->post('value');
-            if (empty($table) || !in_array($table, $tables) || empty($infoId) || empty($field)) {
+            $infoId = $params['infoId'] = Yii::$app->request->post('info_id');
+            $field = $params['field'] = Yii::$app->request->post('field');
+            $value = $params['value'] = Yii::$app->request->post('value');
+            if (empty($table) || !in_array($table, $this->tableInfos) || empty($infoId) || empty($field)) {
                 return ['status' => 400, 'message' => '参数错误'];
             }
         }
         $result = $this->$method($userModel, $operationType, $params);
+        return $result;
     }
 
-    protected function _callbackOperation($userModel, $operationType)
+    protected function _userOperation($userModel, $operationType, $params)
     {
-        //$fields = ['mobile', 'content', 'note'];
-        $fields = ['mobile', 'service_id', 'content'];
+        if ($operationType == 'update') {
+            return $this->_update($userModel, $params);
+        }
+        return ['status' => 400, 'message' => 'user error'];
+    }
+
+    protected function _callbackOperation($userModel, $operationType, $params)
+    {
         $model = $userModel->_newModel('callback', true);
-        $model->insert(false);
-        $content = $this->renderPartial('_user_house', ['model' => $model]);
+        if ($operationType == 'update') {
+            return $this->_update($model, $params);
+        }
+
+        $fields = ['mobile', 'service_id', 'content'];
+        $this->_initFields($model, $fields);
+        $r = $model->insert(false);
+
+        $return = [
+            'status' => 200,
+            'message' => 'OK',
+            'id' => $model->id,
+            'created_at' => date('Y-m-m H:i:s', $model->created_at),
+            'content' => '',
+        ];
+        return $return;
     }
 
-    protected function _user_merchantOperation($userModel, $operationType)
+    protected function _user_merchantOperation($userModel, $operationType, $params)
     {
-        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
         $model = $userModel->_newModel('userMerchant', true);
+        if ($operationType == 'update') {
+            return $this->_update($model, $params);
+        }
 
+        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
+        $this->_initFields($model, $fields);
         $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
         if ($oldInfo) {
             return ['status' => 400, 'message' => '已派单'];
         }
+
         $model->insert(false);
-        $userModel->sendSmsValid($model, $userInfo);
+        $userModel->sendSmsValid($model, $userModel);
         $noteData = [
             'user_merchant_id' => $model->id,
             'reply' => Yii::$app->request->post('note'),
@@ -130,20 +157,6 @@ trait UserTrait
         $guestbook->insert(false);
         $model->note = $noteData['reply'];
         $content = $this->renderPartial('_user_merchant_info', ['model' => $model]);
-    }
-
-    protected function _initFields($model, $fields)
-    {
-        foreach ($fields as $field) {
-            $model->$field = Yii::$app->request->post($field);
-        }
-        return $model;
-    }
-
-        /*$content = '';
-        if ($table === 'house') {
-        } else if ($table == 'user_merchant') {
-        }
 
         $return = [
             'status' => 200,
@@ -154,40 +167,29 @@ trait UserTrait
         ];
 
         return $return;
-}*/
+    }
 
-    protected function _update($userModel)
+    protected function _initFields($model, $fields)
     {
-        $tables = ['user', 'house', 'callback', 'user_merchant'];
-        $table = Yii::$app->request->post('table');
-        $infoId = Yii::$app->request->post('info_id');
-        $field = Yii::$app->request->post('field');
-        $value = Yii::$app->request->post('value');
-        if (empty($table) || !in_array($table, $tables) || empty($infoId) || empty($field)) {
-            return ['status' => 400, 'message' => '参数错误'];
+        foreach ($fields as $field) {
+            $model->$field = Yii::$app->request->post($field);
         }
+        return $model;
+    }
 
-        $modelClass = $this->modelClass;
-        $userModel = new $modelClass();
-        switch ($table) {
-        case 'user':
-            $model = $this->findModel($infoId);
-            if ($field == 'callback_again') {
-                $value = !empty($value) ? strtotime($value) : $model->callback_again;
-            }
-            break;
-        case 'house':
-            $model = $userModel->_newModel('house')->findOne($infoId);
-            break;
-        case 'user_merchant':
-            $model = $userModel->_newModel('userMerchant')->findOne($infoId);
-            break;
-        case 'callback':
-            $model = $userModel->_newModel('callback')->findOne($infoId);
-            break;
+    protected function _update($model, $params)
+    {
+        $info = $model->findOne($params['infoId']);
+        if (empty($info)) {
+            return ['status' => 400, 'message' => '信息不存在'];
         }
-        $model->$field = $value;
-        $r =$model->update(false);
+        $field = $params['field'];
+        $value = $params['value'];
+        if ($field == 'callback_again') {
+            $value = !empty($value) ? strtotime($value) : $model->callback_again;
+        }
+        $info->$field = $value;
+        $r =$info->update(false);
 
         return ['status' => 200, 'message' => 'OK'];
     }
