@@ -82,6 +82,7 @@ trait SignupFormTrait
 
         $datas['merchant_id'] = intval($datas['cid']);
         $datas['client_type'] = $this->isMobile ? 'h5' : 'pc';
+        $datas['sort'] = $this->currentSort;
         //print_R($datas);exit();
         $this->_datas = $datas;
         return ;
