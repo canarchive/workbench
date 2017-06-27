@@ -16,7 +16,7 @@ trait UserTrait
         $model = $this->findModel($id);
         $this->_handlerUpdate('change');
 
-        return $this->render('change-merchant', [
+        return $this->render($this->viewPrefix . 'change-merchant', [
             'model' => $model,
         ]);
     }
@@ -27,7 +27,7 @@ trait UserTrait
         $model = new $modelClass();
         $this->_handlerUpdate('admin');
 
-        return $this->render('add', [
+        return $this->render($this->viewPrefix . 'add', [
             'model' => $model,
         ]);
     }
@@ -61,7 +61,7 @@ trait UserTrait
         }
         //print_r($datas);exit();
 
-        return $this->render('update', $datas);
+        return $this->render($this->viewPrefix . 'update', $datas);
     }
 
     protected function _userInfos($id)
