@@ -156,7 +156,7 @@ trait UserTrait
         $guestbook = $userModel->_newModel('guestbook', true, $noteData);
         $guestbook->insert(false);
         $model->note = $noteData['reply'];
-        $content = $this->renderPartial('_user_merchant_info', ['model' => $model]);
+        $content = $this->renderPartial($this->viewPrefix . '_user_merchant_info', ['model' => $model]);
 
         $return = [
             'status' => 200,
