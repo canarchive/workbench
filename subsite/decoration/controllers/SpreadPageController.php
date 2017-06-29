@@ -29,12 +29,13 @@ class SpreadPageController extends Controller
         $code = Yii::$app->request->get('tcode');
         $tInfos = $this->_getTemplateInfos();
         if (!in_array($code, array_keys($tInfos))) {
-            $code = $this->formatCode($code);
+            $code = $this->formatOldCode($code);
         }
         if (!in_array($code, array_keys($tInfos))) {
             return $this->redirect('/')->send();
         }
         $tInfo = $tInfos[$code];
+        $code = $this->formatCode($code, $tInfo);
         $model = new SignupForm();
 		$cid = (int) Yii::$app->request->get('cid', 2);
         $merchantInfo = $model->getPointInfo('merchant', $cid);
@@ -110,7 +111,18 @@ class SpreadPageController extends Controller
         return $owners;
     }
 
-    protected function formatCode($code)
+    protected function formatCode($code, $tInfo)
+    {
+        $clientType = $this->clientType;
+        if ($clientType == 'pc') {
+            $code = $tInfo['have_pc'] ? $code : 'designz';
+        } else if ($clientType != 'pc') {
+            $code = $tInfo['have_mobile'] ? $code : 'tquote';
+        }
+        return $code;
+    }
+
+    protected function formatOldCode($code)
     {
         $currentDate = date('Y-m-d');
         $channel = Yii::$app->request->get('qudao', '');
