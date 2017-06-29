@@ -41,7 +41,7 @@ class UserController extends AdminController
             'message' => 'OK',
             'id' => $model->id,
             'created_at' => date('Y-m-m H:i:s', $model->created_at),
-            'content' => $this->renderPartial('_user_house', ['model' => $model]),
+            'content' => $this->renderPartial($this->viewPrefix . '_user_house', ['model' => $model]),
         ];
         return $return;
     }

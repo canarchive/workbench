@@ -45,7 +45,7 @@ return [
 
     'page' => [
         'data' => [
-			'pattern' => '/baom-<tcode:\w+>-<city_code:\w+>',
+			'pattern' => '/bm-<tcode:\w+>-<city_code:\w+>',
     		'route'	=> '/{{SORT}}/spread-page/index',
         ],
     ],

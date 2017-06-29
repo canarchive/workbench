@@ -16,10 +16,21 @@ class SpreadPageController extends Controller
 
     }
 
+    public function actionHome()
+    {
+        $_GET['cid'] = 2;
+        $_GET['city_code'] = 'beijing';
+        $_GET['tcode'] = 'designz';
+        return $this->actionIndex();
+    }
+
     public function actionIndex()
     {
         $code = Yii::$app->request->get('tcode');
         $tInfos = $this->_getTemplateInfos();
+        if (!in_array($code, array_keys($tInfos))) {
+            $code = $this->formatCode($code);
+        }
         if (!in_array($code, array_keys($tInfos))) {
             return $this->redirect('/')->send();
         }
@@ -97,5 +108,32 @@ class SpreadPageController extends Controller
             $owners[] = $owner;
         }
         return $owners;
+    }
+
+    protected function formatCode($code)
+    {
+        $currentDate = date('Y-m-d');
+        $channel = Yii::$app->request->get('qudao', '');
+        $content = "{$code}-{$channel}-{$currentDate}\n";
+        file_put_contents('/tmp/log-spreadold.txt', $content, FILE_APPEND);
+
+        if ($code == 'jzsj') {
+            return 'designn';
+        }
+        $tCodes = [
+            'jzsj' => 'designz', 
+            'tbj' => 'tquote', 
+            'sj' => 'designn', 
+            'nbj' => 'quoten', 
+            'pcbj' => 'quote', 
+            'bj' => 'quote'
+        ];
+        $codes = [
+            'ypj', 'jjjz', 'aikj', 'op', 'jsy', 'md', 'fk', 'lzz', 'jinz', 'ldou', 'jkj', 'j50', 'dzr', 'yzf', 'jrzj', 'ts', 'yzw', 'mzk', 'tbz'
+        ];
+
+        $code = str_replace($codes, '', $code);
+        $code = isset($tCodes[$code]) ? $tCodes[$code] : '';
+        return $code;
     }
 }
