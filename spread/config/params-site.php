@@ -94,7 +94,7 @@ foreach ($sites as $key => & $site) {
     $site['sort'] = 'decoration';
 }
 //echo $domainTest;
-//echo $domainStr;
+//echo $domainStr;exit();
 //print_r($sites);exit();
 
 return \common\helpers\SiteFormat::formatRule('subsite', $sites);

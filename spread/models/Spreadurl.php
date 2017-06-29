@@ -73,7 +73,7 @@ class Spreadurl extends BaseModel
         }
         $siteInfo = $params['siteInfo'];
         $domain = $isPc ? $siteInfo['domains']['pc'] : $siteInfo['domains']['m'];
-        $url = $domain . "/baom-{$template->code}-{$this->inputParams['cityCode']}.html";
+        $url = $domain . "/bm-{$template->code}-{$this->inputParams['cityCode']}.html";
         $url .= '?cid=' . $this->inputParams['merchantId'];
         if ($this->inputParams['showFull']) {
             foreach ($this->inputParams['attrs'] as $pKey => $pInfo) {
