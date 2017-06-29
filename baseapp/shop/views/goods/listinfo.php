@@ -17,7 +17,7 @@ $gridViewParams = [
 		[
             'attribute' => 'sort',
 			'value' => function($model) {
-				return $model->getPointName('shop-sort', $model->sort);
+				return $model->getPointName('shop-sort-flower', $model->sort);
 			},
 		],
 		[
