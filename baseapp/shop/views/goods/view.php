@@ -15,7 +15,7 @@ $detailViewParams = [
 		'price_market',
 		[
 			'attribute' => 'sort',
-			'value' => $model->getPointName('shop-sort', $model->sort),
+			'value' => $model->getPointName('shop-sort-flower', $model->sort),
 		],		
         'orderlist',
 		[
