@@ -25,6 +25,11 @@ trait TraitModel
         return [];
     }
 
+	protected function _formatInfo($info)
+	{
+		return $info;
+	}
+
 	protected function _formatInfos($infos)
 	{
 		return $infos;
