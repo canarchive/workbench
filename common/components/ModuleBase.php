@@ -26,7 +26,7 @@ class ModuleBase extends \yii\base\Module
         static $datas = null;
         if (is_null($datas)) {
             $company = new Company();
-            $datas = $company->getInfos(['status' => [1, 2]]);
+            $datas = $company->getPointAll('company', ['indexBy' => 'code', 'where' => ['status' => [1, 2]]]);
         }
 
         return $datas;
