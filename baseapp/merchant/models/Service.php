@@ -36,7 +36,7 @@ class Service extends MerchantModel
         if ($this->mobile == $this->getOldAttribute('mobile') && $this->merchant_id == $this->getOldAttribute('merchant_id')) {
             return true;
         }
-        $old = $this->getInfo(['merchant_id' => $this->merchant_id, 'mobile' => $this->mobile])->one();
+        $old = $this->getInfo(['merchant_id' => $this->merchant_id, 'mobile' => $this->mobile]);
         if (!empty($old)) {
             $this->addError('oldpassword', '该客服已存在!');
         }
@@ -100,12 +100,6 @@ class Service extends MerchantModel
         $this->updateCounters(['serviced_num' => 1]);
         
         return ;
-    }
-
-    public function getInfo($where)
-    {
-        $info = $this->findOne($where);
-        return $info;
     }
 
     public function afterSave($insert, $changedAttributes)

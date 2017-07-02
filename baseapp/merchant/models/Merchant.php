@@ -76,17 +76,6 @@ class Merchant extends MerchantModel
         return true;
     }
 
-	public function getInfo($where)
-	{
-		$info = static::find()->where($where)->one();//->toArray();
-		if (empty($info)) {
-			return [];
-		}
-
-		$info['logo'] = $info->getAttachmentUrl($info['logo']);
-		return $info;
-	}
-
     public function getSpreadModel($modelName)
     {
         $sort = $this->sort;
