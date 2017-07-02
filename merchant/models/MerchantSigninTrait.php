@@ -9,7 +9,6 @@ trait MerchantSigninTrait
     use SigninTrait;
     public $mobile;
     public $password;
-    public $rememberMe = true;
     //public $captcha;
 
     public function rules()

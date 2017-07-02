@@ -22,7 +22,7 @@ class Spreadurl extends BaseModel
         $title = "{$searchDatas['companyInfos'][$this->inputParams['cityCode']]}--{$searchDatas['merchantInfos'][$this->inputParams['merchantId']]}";
         $datas = [
             'searchDatas' => $searchDatas,
-            'infos' => $this->getInfos(),
+            'infos' => $this->getUrlInfos(),
             'title' => $title,
         ];
 
@@ -30,7 +30,7 @@ class Spreadurl extends BaseModel
 
     }
 
-    protected function getInfos()
+    protected function getUrlInfos()
     {
         $siteInfos = $this->siteInfos();
         $siteInfos = empty($this->inputParams['siteCode']) ? $siteInfos : [$siteInfos[$this->inputParams['siteCode']]];
