@@ -10,7 +10,6 @@ class Signin extends BaseModelNotable
 	use SigninTrait;
     public $name;
     public $password;
-    public $rememberMe;
 
     public function rules()
     {
