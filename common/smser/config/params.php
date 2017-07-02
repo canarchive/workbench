@@ -6,6 +6,6 @@ $configInfo = [
         'pwd' => '',
     ],
 ];
-$configLocal = require(__DIR__ . '/config-local.php');
+$configLocal = require(__DIR__ . '/params-local.php');
 
 return array_merge($configInfo, $configLocal);

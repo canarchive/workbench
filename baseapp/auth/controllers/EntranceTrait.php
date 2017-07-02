@@ -5,6 +5,8 @@ use Yii;
 
 trait EntranceTrait
 {
+	public $returnJson;
+
     public function actionSignup()
     {   
         $result = $this->_signMethod('signup');
@@ -17,9 +19,15 @@ trait EntranceTrait
     public function actionSignin()
     {
         $result = $this->_signMethod('signin');
+		if (isset($this->returnJson) && isset($result['isAjax']) && $result['isAjax']) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+			return $result;
+			exit();
+		}
         if ($result['status'] == 200 && isset($result['homeUrl'])) {
             return Yii::$app->response->redirect($result['homeUrl'])->send();
         }
+
         return $this->render('signin', $result);
     }
 

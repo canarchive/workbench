@@ -6,6 +6,7 @@ use Yii;
 trait SigninTrait
 {
     protected $_user;
+	public $rememberMe;
 
     /**
      * Logs in a user using the provided name and password.
@@ -23,7 +24,7 @@ trait SigninTrait
         $rememberMe = $this->rememberMe ? $this->rememberMe : 10;
         $loginResult = Yii::$app->user->login($this->getUser(), $rememberMe);
 		if (!$loginResult) {
-		    return ['status' => 400, 'message' => '登录失败'];
+		    return ['status' => 400, 'isAjax' => true, 'message' => '登录失败'];
 		}
 
         $identity = Yii::$app->user->getIdentity();
@@ -33,7 +34,7 @@ trait SigninTrait
         $identity->update(false);
 
 	    $this->wrongTimes('clear');
-		return ['status' => 200, 'message' => 'OK', 'identity' => $identity];
+		return ['status' => 200, 'isAjax' => true, 'message' => 'OK', 'identity' => $identity];
     }
 
     /**
@@ -92,15 +93,6 @@ trait SigninTrait
             $this->addError('captcha', 'error captcha');
         }
 	}
-
-    protected function getUser()
-    {
-        if (is_null($this->_user)) {
-			$nameField = $this->nameField;
-            $this->_user = $this->getPointInfo('merchant-user', [$nameField => $this->$nameField]);
-        }
-        return $this->_user;
-    }
 
     public function getNameField()
     {

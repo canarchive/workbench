@@ -4,7 +4,7 @@ namespace baseapp\behaviors;
 
 use Yii;
 use yii\base\Behavior;
-use common\components\sms\Smser;
+use common\smser\Smser;
 
 class SmsBehavior extends Behavior
 {
