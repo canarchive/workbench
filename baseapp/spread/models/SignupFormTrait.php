@@ -37,7 +37,7 @@ trait SignupFormTrait
         }
 
         $datas = $this->_datas;
-        $infoExist = false;//$this->getUserModel()->findOne(['merchant_id' => $datas['merchant_id'], 'mobile' => $datas['mobile']]);
+        $infoExist = $this->getUserModel()->findOne(['merchant_id' => $datas['merchant_id'], 'mobile' => $datas['mobile']]);
         if ($infoExist) {
             $infoExist->signup_at = Yii::$app->params['currentTime'];
             $infoExist->signup_num = $infoExist->signup_num + 1;
