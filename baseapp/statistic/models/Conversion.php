@@ -27,7 +27,7 @@ class Conversion extends Visit
             unset($spreadInfo['time']);
         }
         $data = $this->_formatData($data);
-        $insertInfo = array_merge($spreadInfo, $data);
+        $insertInfo = $this->_mergeData($spreadInfo, $data);
         if (empty($insertInfo['city_code'])) {
             $insertInfo['city_code'] = isset($session['session_city_code']) ? $session['session_city_code'] : '';
         }
@@ -37,6 +37,17 @@ class Conversion extends Visit
         $this->statisticRecord($conversion->toArray(), 'signup');
 
         return $conversion;
+    }
+
+    protected function _mergeData($spreadInfo, $data)
+    {
+        foreach ($spreadInfo as $key => $value) {
+            if (!empty($data[$key])) {
+                continue;
+            }
+            $data[$key] = $value;
+        }
+        return $data;
     }
 
     public function _getDatasForFormat()
