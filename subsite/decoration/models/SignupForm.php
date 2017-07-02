@@ -1,11 +1,11 @@
 <?php
 namespace subsite\decoration\models;
 
-use common\models\BaseModel;
+use common\models\BaseModelNotable;
 use common\models\QuoteHouse;
 use baseapp\spread\models\SignupFormTrait;
 
-class SignupForm extends BaseModel
+class SignupForm extends BaseModelNotable
 {
     use SignupFormTrait;
     public $currentSort = 'decoration';
@@ -47,6 +47,8 @@ class SignupForm extends BaseModel
 
         if (empty($result)) {
             $result = $this->_formatFailResult('报名失败，请您重试！');
+            unset($result['info']);
+            $result['status'] = $this->existUser ? 200 : $result['status'];
         }
         $result['quoteInfo'] = $quoteInfo;
 

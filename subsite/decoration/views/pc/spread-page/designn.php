@@ -866,7 +866,7 @@ $merchantInfo = $this->context->merchantInfo;
 
                         <div class="message_r">
                             <a href="javascript:;" class="major_pop" tjjj="click_pc_3F_name_2" shop_id="5124263"
-                               title="<?= $merchantInfo['name']; ?>" tjjj_name="<?= $merchantInfo['name']; ?>"><?= $merchantInfo['name']; ?></a>
+                               title="<?= $merchantInfo['name']; ?>" tjjj_name="<?= $merchantInfo['name']; ?>"><?php //echo $merchantInfo['name']; ?>梵客家装</a>
                             <span>案例：398个</span>
                             <span>评论：1854条</span>
                             <span>口碑值：1231</span>
