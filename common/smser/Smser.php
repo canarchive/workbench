@@ -30,7 +30,7 @@ class Smser extends \yii\base\Component
      */
     public function send($mobile, $content, $sort = '')
     {
-        $returnCode = $this->smser->send($mobile, $content, $sort);
+        $resultCode = $this->smser->send($mobile, $content, $sort);
 		return $this->formatResult($resultCode);
     }
 

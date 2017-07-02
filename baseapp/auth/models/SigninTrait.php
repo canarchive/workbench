@@ -21,7 +21,7 @@ trait SigninTrait
             return $this->_formatFailResult('登录失败，请您重试');
         }
 
-        $rememberMe = $this->rememberMe ? $this->rememberMe : 10;
+        $rememberMe = $this->rememberMe ? $this->rememberMe : 3600;
         $loginResult = Yii::$app->user->login($this->getUser(), $rememberMe);
 		if (!$loginResult) {
 		    return ['status' => 400, 'isAjax' => true, 'message' => '登录失败'];

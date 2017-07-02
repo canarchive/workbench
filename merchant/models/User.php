@@ -160,11 +160,6 @@ class User extends AuthBase
         ];
     }
 
-    public function getInfo($where)
-    {
-        return static::findOne($where);
-    }
-
     public function getUserMerchantInfos()
     {
         if (empty($this->merchant_id)) {

@@ -59,10 +59,4 @@ class Template extends BaseModel
         ];
         return $datas;
     }
-
-    public function getInfo($where)
-    {
-        $info = $this->findOne($where);
-        return $info;
-    }
 }
