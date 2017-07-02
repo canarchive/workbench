@@ -1,18 +1,17 @@
 <?php
 
-namespace common\components\sms;
+namespace common\smser;
 
 use Yii;
-use common\components\ResponseCode;
 
-class VerificationCode extends \yii\base\Object
+class Verification extends \yii\base\Object
 {
     protected $configInfos;
     protected $currentTime;
 
     public function __construct($config = [])
     {
-        $this->configInfos = require(__DIR__ . '/smser/config-verification.php');
+        $this->configInfos = require(__DIR__ . '/config/params-verification.php');
         $this->currentTime = time();
 
         parent::__construct($config);

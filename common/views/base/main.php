@@ -20,6 +20,7 @@ $jsGlobalStr .= isset($this->params['jsGlobalStr']) ? $this->params['jsGlobalStr
 <?= $jsStr; ?>
 <?= $statCodeStr; ?>
 </head>
+<?php $this->beginBody() ?>
 <body <?php if (isset($this->params['bodyClass'])) { echo $this->params['bodyClass']; } ?>>
 <?= $content; ?>
 <?= $jsFooterStr; ?>
@@ -27,5 +28,6 @@ $jsGlobalStr .= isset($this->params['jsGlobalStr']) ? $this->params['jsGlobalStr
 <input type="hidden" id="position_name" value="<?= $this->context->pagePositionName; ?>" />
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <div style="position:absolute; width:0px; height:0px; z-index:1; display:none"></div>
+<?php $this->endBody() ?>
 </body>
 </html>

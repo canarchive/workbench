@@ -6,7 +6,10 @@ use Yii;
 
 trait ApiTrait
 {
-	public $baseBehaviors = ['sms'];
+	public function getBehaviorCodes()
+	{
+		return array_merge(parent::getBehaviorCodes(), ['sms']);
+	}
 
     public function validateCommon($data)
     {
@@ -23,7 +26,7 @@ trait ApiTrait
 	{
 		$captcha = $this->checkCaptcha($data['captcha'], $this->captchaRequire);
 		if ($captcha !== true) {
-			//return $captcha;
+			return $captcha;
 		}
 
 		$mobileCheck = $this->_validateMobile($data['mobile'], $data['type']);
@@ -71,16 +74,16 @@ trait ApiTrait
 
     protected function _checkUser($where, $type)
     {
-        if (!in_array($type, ['login', 'register'])) {
+        if (!in_array($type, ['signin', 'signup'])) {
             return ['status' => 200, 'message' => 'OK'];
         }
 
         $userInfo = $this->getUserInfo($where);
-        if ($type == 'login' && empty($userInfo)) {
+        if ($type == 'signin' && empty($userInfo)) {
             return ['status' => 400, 'message' => '用户不存在，请先注册'];
         }
 
-        if ($type == 'register' && !empty($userInfo)) {
+        if ($type == 'signup' && !empty($userInfo)) {
             return ['status' => 400, 'message' => '用户已存在，请直接登录'];
         }
 

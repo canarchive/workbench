@@ -24,7 +24,7 @@ trait SignupTrait
 
 	public function checkCode()
 	{
-        $check = $this->checkMobileCode($this->_datas['mobile'], 'register', $this->_data['mobileCode']);
+        $check = $this->checkMobileCode($this->_datas['mobile'], 'signup', $this->_data['mobileCode']);
         if ($check !== true) {
             $this->addError('mobile_code', '手机验证码有误');
         }

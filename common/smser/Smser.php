@@ -1,6 +1,6 @@
 <?php
 
-namespace common\components\sms;
+namespace common\smser;
 
 use Yii;
 use yii\helpers\FileHelper;
@@ -12,10 +12,10 @@ class Smser extends \yii\base\Component
 
     public function __construct($plat = null, $config = [])
     {
-        $platInfos = require(__DIR__ . '/smser/config.php');
+        $platInfos = require(__DIR__ . '/config/params.php');
         $plat = is_null($plat) || !in_array($plat, array_keys($platInfos)) ? 'luosimao' : $plat;
 
-        $smser = 'common\components\sms\smser\\' . ucfirst($plat);
+        $smser = 'common\smser\smser\\' . ucfirst($plat);
         $this->smser = new $smser($platInfos[$plat]);
 
         parent::__construct($config);

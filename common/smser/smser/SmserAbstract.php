@@ -1,6 +1,6 @@
 <?php
 
-namespace common\components\sms\smser;
+namespace common\smser\smser;
 
 abstract class SmserAbstract
 {
