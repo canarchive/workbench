@@ -28,4 +28,13 @@ trait MerchantSigninTrait
         $result = $this->_signin();
         return $result;
     }
+
+    protected function getUser()
+    {
+        if (is_null($this->_user)) {
+			$nameField = $this->nameField;
+            $this->_user = $this->getPointInfo('merchant-user', [$nameField => $this->$nameField]);
+        }
+        return $this->_user;
+    }
 }

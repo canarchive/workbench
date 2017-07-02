@@ -54,12 +54,12 @@ trait TraitStatistic
             'bd' => '百度',
             'bdxxl' => '百度信息流',
             'sg' => '搜狗',
-            '360' => '360',
 			'zht' => '智慧推',
             'gdt' => '广点通',
             'sm' => '神马',
         ];
         $datas = array_merge($datas, $this->getChannelInnerInfos());
+        $datas['360'] = '360';
         return $datas;
     }    
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace common\components\sms\smser;
+namespace common\smser\smser;
 
 abstract class SmserAbstract
 {
@@ -29,7 +29,7 @@ abstract class SmserAbstract
         $return = $this->_formatResult($result);
         $this->_writeLog($return, $mobile, $content, $sort, $startTime);
 
-        $returnCode = $return['status'] ? 'OK' : 'SMS_SEND_FAIL';
+        $returnCode = $return['status'] ? 'ok' : 'sendFail';
         return $returnCode;
     }
 

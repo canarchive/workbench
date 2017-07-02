@@ -26,8 +26,8 @@ class Conversion extends Visit
         if (isset($spreadInfo['time'])) {
             unset($spreadInfo['time']);
         }
+        $data = $this->_formatData($data);
         $insertInfo = array_merge($spreadInfo, $data);
-        $insertInfo = $this->_formatData($insertInfo);
         if (empty($insertInfo['city_code'])) {
             $insertInfo['city_code'] = isset($session['session_city_code']) ? $session['session_city_code'] : '';
         }

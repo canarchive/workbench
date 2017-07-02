@@ -58,31 +58,58 @@ trait TraitActive
 
 	public function getInfosByPage($params = [])
 	{
+		$infosObj = $this->getInfosObj($params);
 		$pageSize = isset($params['pageSize']) ? $params['pageSize'] : 20;
+        $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
+        $noHost = isset($params['noHost']) ? $params['noHost'] : '';
+		$pages = new Pagination(['totalCount' => $infosObj->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr, 'noHost' => $noHost]);
+
+		$params['offset'] = $pages->offset;
+		$params['limit'] = $pages->limit;
+		$infos = $this->getInfos($params, $infosObj);
+
+		$return = ['infos' => $infos, 'pages' => $pages];
+		return $return;
+	}
+
+	public function getInfos($params = [], $infosObj = null)
+	{
+		$infosObj = is_null($infosObj) ? $this->getInfosObj($params) : $infosObj;
+		$offset = isset($params['offset']) ? $params['offset'] : 0;
+		$limit = isset($params['limit']) ? $params['limit'] : 500;
+		$infos = $infosObj->offset($offset)->limit($limit)->all();
+		$infos = $this->_formatInfos($infos);
+		return $infos;
+	}
+
+	protected function getInfosObj($params = [])
+	{
 		$where = isset($params['where']) ? $params['where'] : [];
 		$orderBy = isset($params['orderBy']) ? $params['orderBy'] : ['id' => SORT_DESC];
 		$groupBy = isset($params['groupBy']) && !empty($params['groupBy']) ? $params['groupBy'] : null;
 
-        $data = $this->find()->select($this->_getSelect())->where($where);
-        if (isset($params['andWhere'])) {
-            $data = $data->andWhere($params['andWhere']);
-        }
-
         $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
-        $data = $this->find()->select($selectStr)->where($where);
+        $infosObj = $this->find()->select($selectStr)->where($where);
         if (isset($params['andWhere'])) {
-            $data = $data->andWhere($params['andWhere']);
+            $infosObj = $infosObj->andWhere($params['andWhere']);
         }
-		$data = !empty($orderBy) ? $data->orderBy($orderBy) : $data;
-		$data = !empty($groupBy) ? $data->groupBy($groupBy) : $data;
-        $pagePreStr = isset($params['pagePreStr']) ? $params['pagePreStr'] : '';
-        $noHost = isset($params['noHost']) ? $params['noHost'] : '';
-		$pages = new Pagination(['totalCount' => $data->count(), 'pageSize' => $pageSize, 'defaultPageSize' => $pageSize, 'pagePreStr' => $pagePreStr, 'noHost' => $noHost]);
-		$infos = $data->offset($pages->offset)->limit($pages->limit)->all();
-		$infos = $this->_formatInfos($infos);
 
-		$return = ['infos' => $infos, 'pages' => $pages];
-		return $return;
+		$infosObj = !empty($orderBy) ? $infosObj->orderBy($orderBy) : $infosObj;
+		$infosObj = !empty($groupBy) ? $infosObj->groupBy($groupBy) : $infosObj;
+		return $infosObj;
+	}
+
+	public function getInfo($where, $keyField = 'id')
+	{
+		$where = is_array($where) ? $where : [$keyField => $where];
+		$info = $this->find()->where($where)->one();
+		if (empty($info)) {
+			return $info;
+		}
+
+		$info = $this->_formatInfo($info);
+        //\Yii::$app->cacheRedis->set($key, $info);
+		return $info;
 	}
 
     protected function _getSelect()

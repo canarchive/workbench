@@ -2,6 +2,13 @@
 $commonCopy = 'Copyright 北京维纳亚科技有限公司 2010-2017, All Rights Reserved';
 $commonIcp = '京ICP备17003882号-2';
 $sites = [
+    'default' => [
+        'name' => '默认',
+        'copy' => $commonCopy,
+        'icp' => $commonIcp,
+        'pc' => 'http://hd.1-2580.com',
+        'm' => 'http://m.hd.1-2580.com',
+    ],
     'tbz-sh' => [
         'name' => '兔班长上海',
         'copy' => $commonCopy,
