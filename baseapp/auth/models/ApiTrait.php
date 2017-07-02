@@ -26,7 +26,7 @@ trait ApiTrait
 	{
 		$captcha = $this->checkCaptcha($data['captcha'], $this->captchaRequire);
 		if ($captcha !== true) {
-			return $captcha;
+			//return $captcha;
 		}
 
 		$mobileCheck = $this->_validateMobile($data['mobile'], $data['type']);
@@ -35,9 +35,7 @@ trait ApiTrait
 		}
 
         $result = $this->sendSmsCode($data['mobile'], $data['type']);
-    	$status = $result === 'OK' ? 200 : 400;
-    	$return = ['status' => $status, 'message' => $result];
-		return $return;
+		return $result;
 	}
 
 	public function checkMobileCode($data)

@@ -25,6 +25,6 @@ $configInfo = [
         'expire' => 10000,
     ],
 ];
-$configLocal = require_once(__DIR__ . '/config-verification-local.php');
+$configLocal = require_once(__DIR__ . '/params-verification-local.php');
 
 return array_merge($configInfo, $configLocal);

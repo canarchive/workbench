@@ -6,109 +6,110 @@ use Yii;
 
 class Verification extends \yii\base\Object
 {
-    protected $configInfos;
+	protected $sort;
+	protected $isTest;
+    protected $configInfo;
     protected $currentTime;
 
-    public function __construct($config = [])
+    public function __construct($sort, $config = [])
     {
-        $this->configInfos = require(__DIR__ . '/config/params-verification.php');
+        $configInfos = require(__DIR__ . '/config/params-verification.php');
+		$this->isTest = isset($configInfo['isTest']) ? $configInfo['isTest'] : false;
+		$this->sort = $sort;
+		$this->configInfo = isset($configInfos[$sort]) ? $configInfos[$sort] : null;
         $this->currentTime = time();
 
         parent::__construct($config);
     }
 
-    public function sendCode($mobile, $sort)
+    public function sendCode($mobile)
     {
-        $oldInfo = $this->_initCode($mobile, $sort, true);
-        if (!is_array($oldInfo)) {
-            return $oldInfo;
-        }
+		if (empty($this->configInfo)) {
+			return 'paramError';
+		}
+
+        $oldInfo = $this->_getCode($mobile);
+		$checkInfo = $this->_checkSend($oldInfo);
+		if ($checkInfo !== true) {
+			return $checkInfo;
+		}
 
         if (!empty($oldInfo) && date('Ymd', $oldInfo['createdAt']) != date('Ymd', $this->currentTime)) {
             $oldInfo['createdAt'] = $this->currentTime;
             $oldInfo['count'] = 0;
         }
 
-        $info = $this->_generateCode($mobile, $sort, $oldInfo);
+        $info = $this->_generateCode($mobile, $oldInfo);
         return $info;
     }
 
-    public function checkCode($mobile, $sort, $code)
+    public function checkCode($mobile, $code)
     {
-        $codeInfo = $this->_initCode($mobile, $sort);
-        if (!is_array($codeInfo)) {
-            return $codeInfo;
-        }
+		if (empty($this->configInfo)) {
+			return 'paramError';
+		}
 
-        $return = $code == $codeInfo['code'] ? 'OK' : 'SMS_VERIFY_CODE_ERROR';
-        return $return ;
+        $info = $this->_getCode($mobile);
+		$checkInfo = $this->_checkCode($info, $code);
+		return $checkInfo;
     }
 
-    protected function _initCode($mobile, $sort, $generate = false)
-    {
-        $configInfo = isset($this->configInfos[$sort]) ? $this->configInfos[$sort] : null;
-        if (empty($configInfo)) {
-            return 'SMS_GETCODE_PARAM_ERROR';
-        }
-
-        $codeInfo = $this->_getCode($mobile, $sort);
-        $checkResult = $this->_checkInfo($codeInfo, $configInfo, $generate);
-
-        return $checkResult === true ? $codeInfo : $checkResult;
-    }
-
-    protected function _getCode($mobile, $sort)
+    protected function _getCode($mobile)
     {
         $cache = Yii::$app->cache;
-        $key = "sms_{$mobile}_{$sort}";
+        $key = "sms_{$mobile}_{$this->sort}";
         $info = $cache->get($key);
         $info = empty($info) ? [] : $info;
 
         return $info;
     }
 
-    protected function _checkInfo($info, $configInfo, $isSend = true)
+    protected function _checkSend($info)
     {
         if (empty($info)) {
-            $return = $isSend ? true : 'SMS_NO_CODE';
-            return $return;
+			return true;
         }
 
-        if ($isSend) {
-            $sendTimes = isset($configInfo['sendTimes']) ? $configInfo['sendTimes'] : 5;
-            if ($isSend && $info['sendTimes'] > $sendTimes) {
-                return 'SMS_SEND_TIMES_OVER';
-            }
-
-            $sleep = isset($configInfo['sleep']) ? $configInfo['sleep'] : 60;
-            if ($isSend && $this->currentTime - $info['updatedAt'] < $sleep) {
-                return 'SMS_SEND_FAST';
-            }
-
-            return true;
+        $sendTimes = isset($this->configInfo['sendTimes']) ? $this->configInfo['sendTimes'] : 5;
+        if ($info['sendTimes'] > $sendTimes) {
+            return 'timesOver';
         }
 
-        $expire = isset($configInfo['expire']) ? $configInfo['expire'] : 300;
-        if ($this->currentTime > $info['updatedAt'] + $expire) {
-            return 'SMS_SEND_EXPIRE';
+        $sleep = isset($this->configInfo['sleep']) ? $this->configInfo['sleep'] : 60;
+        if ($this->currentTime - $info['updatedAt'] < $sleep) {
+            return 'tooFast';
         }
+
         return true;
+	}
+
+	protected function _checkCode($info, $code)
+	{
+		if (empty($info)) {
+			return 'noCode';
+		}
+
+		if ($info['code'] != $code) {
+			$return = $this->isTest ? 'codeError-' . $info['code'] : 'codeError';
+			return 'codeError';
+		}
+        $expire = isset($this->configInfo['expire']) ? $this->configInfo['expire'] : 300;
+        if ($this->currentTime > $info['updatedAt'] + $expire) {
+            return 'codeExpire';
+        }
+        return 'ok';
     }
 
-    protected function _generateCode($mobile, $sort, $oldInfo)
+    protected function _generateCode($mobile, $oldInfo = [])
     {
         $cache = Yii::$app->cache;
 
-        $length = isset($configInfo['length']) ? $configInfo['length'] : 4;
+        $length = isset($this->configInfo['length']) ? $this->configInfo['length'] : 4;
         $length = is_array($length) ? mt_rand($length[0], $length[1]) : $length;
 
         $code = '';
-        if (isset($this->configInfos['fixedCode']) && !empty($this->configInfos['fixedCode'])) {
-            $code = $this->configInfos['fixedCode'];
-        } else {
-            for($i = 0; $i < $length; $i++) {
-                $code .= mt_rand(0, 9);
-            }
+        for($i = 0; $i < $length; $i++) {
+            $code .= mt_rand(0, 9);
         }
         $info = [
             'code' => $code,
@@ -117,7 +118,7 @@ class Verification extends \yii\base\Object
             'sendTimes' => isset($oldInfo['sendTimes']) ? $oldInfo['sendTimes'] + 1 : 1,
             'count' => 0,
         ];
-        $key = "sms_{$mobile}_{$sort}";
+        $key = "sms_{$mobile}_{$this->sort}";
         $cache->set($key, $info, 86400);
 
         return $info;

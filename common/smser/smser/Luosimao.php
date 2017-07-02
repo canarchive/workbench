@@ -44,7 +44,7 @@ class Luosimao extends SmserAbstract
         $return = $this->_formatResult($result);
         $this->_writeLog($return, $mobile, $content, $sort, $startTime);
 
-        $returnCode = $return['status'] || $result ? 'OK' : 'SMS_SEND_FAIL';
+        $returnCode = $return['status'] || $result ? 'ok' : 'sendFail';
         return $returnCode;
     }
 

@@ -90,6 +90,7 @@ trait TraitModel
 
         $data = [
             'status' => '400',
+			'isAjax' => true,
             'message' => $message,
             'info' => $eInfo,
         ];
