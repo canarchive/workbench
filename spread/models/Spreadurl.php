@@ -89,7 +89,7 @@ class Spreadurl extends BaseModel
     public function getSearchDatas()
     {
         $datas = [
-            'companyInfos' => $this->getPointInfos('company', ['where' => ['status' => [1, 2]], 'indexName' => 'code']),
+            'companyInfos' => $this->getPointInfos('company', ['where' => ['status' => [2]], 'indexName' => 'code']),
             'templateInfos' => $this->getPointInfos('template', ['indexName' => 'code']),
             'siteInfos' => $this->siteInfos(true),
             'channelInfos' => $this->channelInfos,
