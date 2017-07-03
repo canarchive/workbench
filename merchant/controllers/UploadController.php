@@ -2,10 +2,10 @@
 
 namespace merchant\controllers;
 
-use common\components\UploadController;
+use common\components\UploadController as UploadControllerBase;
 use merchant\models\Attachment;
 
-class UploadController extends UploadController
+class UploadController extends UploadControllerBase
 {
     public $enableCsrfValidation = false;
 
