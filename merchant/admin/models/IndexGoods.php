@@ -54,18 +54,4 @@ class IndexGoods extends ShopModel
 		$datas = ArrayHelper::map(IndexSort::find()->all(), 'id', 'name');
 		return $datas;
 	}
-
-	public function getInfos()
-	{
-		$sortInfos = IndexSort::find()->where(['status' => 1])->orderBy(['orderlist' => SORT_DESC])->indexBy('id')->asArray()->all();
-
-		$infos = self::find()->where(['category_id' => array_keys($sortInfos)])->orderBy(['orderlist' => SORT_DESC])->all();
-		foreach ($infos as $key => $info) {
-			$info['thumb'] = $info->getAttachmentUrl($info->thumb);
-			$info['picture'] = $info->getAttachmentUrl($info->picture);
-			$sortInfos[$info['category_id']]['infos'][] = $info->toArray();
-		}
-
-		return $sortInfos;
-	}
 }
