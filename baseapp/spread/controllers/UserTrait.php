@@ -70,7 +70,7 @@ trait UserTrait
 
         $mobile = $model->mobile;
         $callbackInfos = $model->_newModel('callback')->findAll(['mobile' => $mobile]);
-        $userMerchantInfos = $model->_newModel('userMerchant')->getInfos(['mobile' => $model->mobile]);
+        $userMerchantInfos = $model->_newModel('userMerchant')->getInfos(['where' => ['mobile' => $model->mobile]]);
 
         $datas = [
             'model' => $model,
