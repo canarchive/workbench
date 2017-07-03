@@ -25,4 +25,9 @@ class MerchantModel extends BaseModel
     {
         return '\merchant\models\\';
     }
+
+    public function uploadUrl($table, $field, $id)
+    {
+        return Yii::getAlias('@merchanturl') . "/upload/{$table}/{$field}.html?mparam=merchant&id={$id}";
+    }
 }
