@@ -14,7 +14,7 @@ $managerInfo = Yii::$app->params['managerInfo'];
         </button>
         <a class="navbar-brand" href="/">
             <img alt="Charisma Logo" src="<?= Yii::getAlias('@asseturl/backend/'); ?>img/logo20.png" class="hidden-xs"/>
-            <span>Charisma</span>
+			<span><?= Yii::$app->params['siteNameBase']; ?></span>
         </a>
 
         <!-- user dropdown starts -->
