@@ -67,18 +67,6 @@ trait GoodsTrait
 		return $datas;
 	}	
 
-	public function getInfo($id)
-	{
-		$info = self::findOne($id);
-		if (empty($info)) {
-			return $info;
-		}
-
-		$info = $this->_formatInfo($info);
-
-		return $info;
-	}
-
 	/**
 	 * 格式化商品信息，获取图片的url地址等
 	 */
