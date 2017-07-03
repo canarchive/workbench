@@ -246,10 +246,4 @@ class Planfee extends BaseModel
         $existDatas[$cMark]['fee'] = isset($existDatas[$cMark]['fee']) ? $existDatas[$cMark]['fee'] : 0;
         return $existDatas[$cMark][$type];
     }
-
-    public function getInfo($where)
-    {
-        $info = $this->findOne($where);
-        return $info;
-    }
 }
