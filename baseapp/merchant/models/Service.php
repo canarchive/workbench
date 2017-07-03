@@ -118,7 +118,7 @@ class Service extends MerchantModel
 
         $merchantIds = isset($privInfo['merchant_id']) ? $privInfo['merchant_id'] : [];
         if (empty($merchantIds)) {
-            return ArrayHelper::map($infos, 'id', 'mobile');
+            return ArrayHelper::map($infos, 'id', 'name');
         }
         foreach ($infos as $key => $info) {
             $priv = false;
