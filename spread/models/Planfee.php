@@ -140,8 +140,8 @@ class Planfee extends BaseModel
                     'G' => 'show_num',
                     //'H' => '',
                     //'I' => '',
-                    'J' => 'keyword_rank',
-                    'K' => 'keyword_cost',
+                    //'J' => 'keyword_rank',
+                    'J' => 'keyword_cost',
                 ],
             ],
             '360' => [

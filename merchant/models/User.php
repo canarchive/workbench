@@ -14,6 +14,7 @@ class User extends AuthBase
     public $password_old;
     public $password_new;
     public $merchant_show;
+    public $create_service;
 
     public static function getDb()
     {
@@ -34,8 +35,8 @@ class User extends AuthBase
     {
         return [
             'default' => ['merchant_id', 'role', 'status'],
-            'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id'],
-            'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id'],
+            'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id', 'create_service'],
+            'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id', 'create_service'],
             //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
             'edit-info' => ['email'],//, 'mobile'],
             'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
@@ -59,8 +60,8 @@ class User extends AuthBase
             ['password_new', 'string', 'min' => 6, 'when' => function($model) { return $model->password_new != ''; }],
             ['password_new', 'compare', 'on' => ['edit-password']],
 
-            [['email', 'mobile', 'password_new', 'password_new_repeat'], 'safe', 'on' => ['edit']],
-            [['email', 'mobile', 'status', 'merchant_show', 'merchant_id'], 'safe', 'on' => ['create', 'update']],
+            [['email', 'mobile', 'password_new', 'password_new_repeat', 'create_service'], 'safe', 'on' => ['edit']],
+            [['email', 'mobile', 'status', 'merchant_show', 'merchant_id', 'create_service'], 'safe', 'on' => ['create', 'update']],
         ];
     }
 
@@ -90,6 +91,7 @@ class User extends AuthBase
             'mobile' => '手机号',
             'email' => '邮箱',
             'status' => '状态',
+            'create_service' => '是否自动生成客服',
         ];
     }
 
@@ -119,7 +121,7 @@ class User extends AuthBase
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
-        if (in_array($this->role, ['service', 'service-admin']) && !empty($this->mobile)) {
+        if (!empty($this->create_service) && in_array($this->role, ['service', 'service-admin']) && !empty($this->mobile)) {
             $service = new Service();
             $service->addServiceByUser($this);
         }
@@ -206,6 +208,7 @@ class User extends AuthBase
         $data = [
             'merchant_id' => $merchantId,
             'role' => 'service',
+            'name' => $this->name,
             'mobile' => $mobile,
         ];
         if (!empty($passwordUser)) {
@@ -233,5 +236,14 @@ class User extends AuthBase
             }
         }
         return $infos;
+    }
+
+    public function getCreateServiceInfos()
+    {
+        $datas = [
+            '0' => '不生成',
+            '1' => '生成',
+        ];
+        return $datas;
     }
 }
