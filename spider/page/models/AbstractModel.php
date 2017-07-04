@@ -40,11 +40,11 @@ class AbstractModel extends ModelBase
         if (strpos($url, 'http') !== false) {
             return $url;
         }
-        /*if (!isset($this->urlInfo)) {
+        if (!isset($this->urlInfo)) {
             echo $this->url;
             print_r($this);
             exit();
-        }*/
+        }
         if (substr($url, 0, 1) == '/') {
             $url = $this->urlInfo['scheme'] . '://' . $this->urlInfo['host'] . $url;
             //echo "<a href='{$url}' target='_blank'>{$url}</a>--{$urlBase}=={$this->url}<br />";

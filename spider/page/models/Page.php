@@ -78,6 +78,10 @@ class Page extends AbstractModel
             echo $fileDeal . '---exists<br />';
             return ;
         }
+		if (!file_exists($file)) {
+			echo $file . '---no exists<br />';
+			return ;
+		}
 
         $content = file_get_contents($file);
         $assets = $this->getAssets($content);

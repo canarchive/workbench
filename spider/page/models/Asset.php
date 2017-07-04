@@ -60,6 +60,7 @@ class Asset extends AbstractModel
 
     public function deal()
     {
+        $this->urlInfo = parse_url($this->url);
         if ($this->name_ext != 'css') {
             return ;
         }
@@ -87,6 +88,9 @@ class Asset extends AbstractModel
                 continue;
             }
             $aData = $this->_getAsset()->findOne(['url_base' => $data['url_base']]);
+			if (empty($aData['code'])) {
+				var_dump($data['url_base']);
+			}
             $rDatas[$asset] = $aData['sort'] == 'page' ? '../img/' . $aData['code'] : '../images/' . $aData['code'];
             $this->status = 2;
             //$this->update(false);
@@ -117,6 +121,7 @@ class Asset extends AbstractModel
             }
         } else {
             //echo filesize($file) . '<br />';
+			$this->status = 1;
         }
         $this->update(false);
         //print_r($this);exit();

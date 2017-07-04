@@ -1,19 +1,11 @@
 <?php
 return [
-    'djh' => [
-        'code' => 'groupon',
-        'name' => '大件会',
+    'salesys' => [
+        'code' => 'merchant',
+        'name' => '销售系统',
     ],
-    'nuoshi' => [
-        'code' => 'nsflower',
-        'name' => 'FLOWER',
-    ],
-    'heiguang' => [
-        'code' => 'shooth',
-        'name' => '黑光',
-    ],
-    'kids' => [
-        'code' => 'hulian',
-        'name' => '可嘟儿',
+    'flower' => [
+        'code' => 'huasl',
+        'name' => '花加',
     ],
 ];
