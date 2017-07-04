@@ -12,7 +12,4 @@ return [
     'shoot' => [
         'name' => 'shoot样片',
     ],
-    'snews' => [
-        'name' => 'shoot资讯',
-    ],
 ];
