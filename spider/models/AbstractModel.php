@@ -23,7 +23,7 @@ class AbstractModel extends SpiderModel
 
     public function getContent($file)
     {
-        $file = $this->getFile($file);//Yii::$app->params['spiderPath'] . 'source/' . $file;
+        $file = $this->getFile($file);
         $content = file_get_contents($file);
         return $content;
     }

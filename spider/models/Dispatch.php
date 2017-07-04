@@ -41,7 +41,6 @@ class Dispatch extends SpiderModel
     {
         $attachmentClass = "\spider\models\\{$this->code}\Attachment";
         $model = new $attachmentClass();
-        //$where = ['source_status' => [-1, -2]];
         $where = ['source_status' => 0];
         $infos = $model->find()->where($where)->limit(1000)->all();
         //$pathBase = Yii::$app->params['pathParams']['default'] . '/';

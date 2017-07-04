@@ -1,5 +1,8 @@
 <?php
 return [
+	'flowerplus' => [
+		'name' => '花加',
+	],
     'merchant' => [
         'name' => '装修公司',
     ],
