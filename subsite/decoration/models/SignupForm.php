@@ -1,11 +1,11 @@
 <?php
 namespace subsite\decoration\models;
 
-use common\models\BaseModelNotable;
+use common\models\BaseModel;
 use common\models\QuoteHouse;
 use baseapp\spread\models\SignupFormTrait;
 
-class SignupForm extends BaseModelNotable
+class SignupForm extends BaseModel
 {
     use SignupFormTrait;
     public $currentSort = 'decoration';
