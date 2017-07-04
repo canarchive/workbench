@@ -57,19 +57,4 @@ class Info extends ShopModel
 		];	
 		return $datas;
 	}	
-
-	public function getInfos()
-	{
-		$infos = self::find()->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->asArray()->all();
-		$datas = [];
-		foreach ($infos as $key => $info) {
-			$sort = $info['sort'];
-			if (!isset($datas[$sort])) {
-				$datas[$sort]['name'] = $this->sortInfos[$sort];
-			}
-
-			$datas[$sort]['infos'][$key] = $info;
-		}
-		return $datas;
-	}
 }

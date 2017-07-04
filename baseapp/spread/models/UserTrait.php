@@ -187,7 +187,7 @@ trait UserTrait
 
     protected function _sendSms($data, $serviceInfo)
     {
-        $merchantInfo = $this->getMerchantInfo();
+        $merchantInfo = $this->getPointInfo('merchant', $this->merchant_id);
         if (empty($merchantInfo)) {
             return ;
         }

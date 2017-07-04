@@ -30,14 +30,27 @@ class Module extends ModuleBase
         $data = [
             'merchant_id' => $merchantIds,
         ];
-        if ($role == 'service' || $role == 'service-admin') {
+
+        $serviceRoles = ['service', 'service-admin', 'admin'];
+        if (in_array($role, $serviceRoles)) {
             $model = new Service();
-            $where = ['mobile' => $managerInfo['mobile']];
-            if ($role == 'service-admin') {
-                $where = ['or', ['manager_id' => $managerInfo['id']], $where];
+            $whereBase = ['merchant_id' => $merchantIds];
+            switch ($role) {
+            case 'service':
+                $where = ['and', ['user_id' => $managerInfo['id']], $whereBase];
+                break;
+            case 'service-admin':
+                $where = ['or', ['user_id' => $managerInfo['id']], ['manager_id' => $managerInfo['id']]];
+                $where = ['and', $where ,$whereBase];
+                break;
+            case 'admin':
+                $where = $whereBase;
+                break;
             }
+            var_dump($where);exit();
             $serviceInfos = $model->find()->where($where)->indexBy('id')->all();
             $serviceIds = array_keys($serviceInfos);
+            var_dump($serviceIds);exit();
             $_GET['service_id'] = $serviceIds;
             $data['service_id'] = $serviceIds;
         }

@@ -16,7 +16,7 @@ class LoginedController extends AdminController
         parent::init();
         $this->userInfo = Yii::$app->user->getIdentity();
         $merchant = new Merchant();
-        $this->merchantInfo = $merchant->getInfo(['id' => $this->userInfo['merchant_id']]);
+        $this->merchantInfo = $merchant->getInfo($this->userInfo['merchant_id']);
         //print_r($this->userInfo);
         //print_r($this->merchantInfo);
     }

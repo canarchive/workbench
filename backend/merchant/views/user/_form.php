@@ -23,6 +23,7 @@ $model->merchant_show = array_keys($model->merchant_show);
     <?= $form->field($model, 'role')->dropDownList($model->roleInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'email') ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'create_service')->dropDownList($model->createServiceInfos, ['prompt' => '']); ?>
 
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

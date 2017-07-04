@@ -1,0 +1,1 @@
+UPDATE `wm_service` AS `s`, `wm_user` AS `u` SET `s`.`user_id` = `u`.`id` WHERE `s`.`mobile` = `u`.`mobile` AND (CONCAT(`s`.`merchant_id`, '') = `u`.`merchant_id` OR CONCAT(',', `s`.`merchant_id`, ',') = `u`.`merchant_id`);
