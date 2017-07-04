@@ -3,9 +3,9 @@
 namespace backend\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\db\ActiveRecord;
-use yii\behaviors\TimestampBehavior;
-use common\models\AuthBase;
+use baseapp\auth\models\AuthBase;
 
 /**
  * This is the model class for table "manager".
@@ -16,31 +16,15 @@ class Manager extends AuthBase
     const STATUS_ACTIVE = 1;
     const STATUS_LOCK = 99;
 
-    public $roles;
+    public $role;
     public $password_new_repeat;
     public $oldpassword;
     public $password_new;
 
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
-
-    /*public function behaviors()
-    {
-        return [
-            [
-                'class' => TimestampBehavior::className(),
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'last_time'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => ['last_time'],
-                ],
-            ],
-        ];
-    }*/
 
     /**
      * @inheritdoc
@@ -56,8 +40,8 @@ class Manager extends AuthBase
     public function scenarios()
     {
         return [
-            'create' => ['username', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
-            'update' => ['username', 'email', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'roles'],
+            'create' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'role'],
+            'update' => ['name', 'email', 'truename', 'password_new', 'password_new_repeat', 'status', 'auth_role', 'role'],
             'edit-info' => ['email', 'truename', 'mobile'],
             'edit-password' => ['oldpassword', 'password_new', 'password_new_repeat'],
         ];
@@ -69,17 +53,17 @@ class Manager extends AuthBase
     public function rules()
     {
         return [
-            ['username', 'filter', 'filter' => 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\backend\models\Manager', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['name', 'filter', 'filter' => 'trim'],
+            ['name', 'required'],
+            ['name', 'unique', 'targetClass' => '\backend\models\Manager', 'message' => 'This name has already been taken.'],
+            ['name', 'string', 'min' => 2, 'max' => 255],
 
             [['oldpassword'], 'required'],
             [['oldpassword'], 'checkOldPassword', 'on' => ['edit-password']],
             ['password_new', 'required', 'on' => ['create', 'edit-password']],
             ['password_new', 'string', 'min' => 6, 'when' => function($model) { return $model->password_new != ''; }],
             ['password_new', 'compare', 'on' => ['edit-password']],
-            [['truename', 'email', 'mobile', 'status', 'roles'], 'safe', 'on' => ['create', 'update']],
+            [['truename', 'email', 'mobile', 'status', 'role'], 'safe', 'on' => ['create', 'update']],
         ];
     }
 
@@ -102,8 +86,8 @@ class Manager extends AuthBase
     {
         return [
             'id' => 'ID',
-            'username' => '管理员账号',
-            'roles' => '角色',
+            'name' => '管理员账号',
+            'role' => '角色',
             'truename' => '真实姓名',
             'login_num' => '登录次数',
             'password' => '密码',
@@ -138,15 +122,16 @@ class Manager extends AuthBase
 
     public function afterSave($insert, $changedAttributes)
     {
+        echo 'this';
         parent::afterSave($insert, $changedAttributes);
 
-        if (Yii::$app->controller->id == 'site' || in_array($this->scenario, ['edit-info', 'edit-password'])) {
+        if (Yii::$app->controller->id == 'entrance' || in_array($this->scenario, ['edit-info', 'edit-password'])) {
             return true;
         }
         $id = $this->attributes['id'];
         $manager = Yii::$app->getAuthManager();
         $manager->revokeAll($this->id);
-        foreach ((array) $this->roles as $roleName) {
+        foreach ((array) $this->role as $roleName) {
             if (empty($roleName)) {
                 continue;
             }
@@ -157,7 +142,7 @@ class Manager extends AuthBase
         return true;
     }
 
-    public static function getStatusInfos()
+    public function getStatusInfos()
     {
         return [
             self::STATUS_ACTIVE => '正常',
@@ -166,10 +151,15 @@ class Manager extends AuthBase
         ];
     }
 
-    public function getRoles()
+    public function getRole()
     {
-        $roles = \yii\helpers\ArrayHelper::getColumn(Yii::$app->getAuthManager()->getRolesByUser($this->id), 'name');
-        return $roles;
+        $role = ArrayHelper::getColumn(Yii::$app->getAuthManager()->getRolesByUser($this->id), 'name');
+        return $role;
+    }
+
+    public function getRoleStr()
+    {
+        return implode(',', (array) $this->getRole());
     }
 
     public function getRoleInfos()
@@ -178,13 +168,6 @@ class Manager extends AuthBase
         $roles = $manager->getRoles();
 
         return array_combine(array_keys($roles), array_keys($roles));
-    }
-
-    public function getInfos($where = [])
-    {
-        $infos = self::find()->all();
-
-        return $infos;
     }
 
     public function getInfosByRoles($roles)

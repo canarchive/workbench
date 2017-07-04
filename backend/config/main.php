@@ -10,29 +10,15 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'viewPath' => '@backend/views/charisma',
-    'bootstrap' => ['log'],
-        'bootstrap' => [
+    'bootstrap' => [
         'log',
-        function () {
-            if (!isset(Yii::$app->i18n->translations['rbac-admin'])) {
-                Yii::$app->i18n->translations['rbac-admin'] = [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
-                    'basePath' => '@backend/messages'
-                ];
-                Yii::$app->i18n->translations['admin-common'] = [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
-                    'basePath' => '@backend/messages'
-                ];
-            }
-        }
     ],
     'controllerNamespace' => 'backend\controllers',
     'components' => [
         'user' => [
             'identityClass' => 'backend\models\Manager',
             'enableAutoLogin' => true,
+			'loginUrl' => '/signin.html',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -49,14 +35,18 @@ return [
         'authManager' => [
             //'class' => 'yii\rbac\PhpManager',
             'class' => 'yii\rbac\DbManager',
-        ]
+        ],
+		'urlManager' => [
+			'rules' => [
+				'/<action:(signin|logout)>' => 'entrance/<action>',
+			],
+		],
     ],
 
     'as access' => [
         'class' => 'backend\components\AccessControl',
         'allowActions' => [
-            'site/login',
-            'site/logout',
+            'entrance/*',
             'site/error',
             'backend-upload/*',
             'debug/*',
@@ -65,7 +55,6 @@ return [
 
     'modules' => [
     ],
-    'language' => 'zh-CN',
 
     'params' => $params,
 ];

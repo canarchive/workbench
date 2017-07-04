@@ -4,7 +4,7 @@ namespace common\models\region;
 
 use Yii;
 use common\helpers\Tree;
-use common\models\PassportModel;
+use baseapp\passport\models\PassportModel;
 
 class Region extends PassportModel
 {
@@ -32,7 +32,7 @@ class Region extends PassportModel
             [['parent_code'], 'filterParent'],
             [['orderlist'], 'default', 'value' => 0],
             [['parent_code'], 'default', 'value' => ''],
-            [['description', 'orderlist', 'status'], 'safe'],
+            [['orderlist', 'status'], 'safe'],
         ];
     }
 
@@ -100,20 +100,6 @@ class Region extends PassportModel
         }
 
         $datas = $this->getLevelInfos($infos, 'code', 'parent_code', 'name', '');
-        return $datas;
-    }
-
-    /**
-     * Get the islog
-     *
-     * @return array
-     */
-    public function getStatusInfos()
-    {
-        $datas = [
-            '0' => '不显示',
-            '1' => '显示',
-        ];
         return $datas;
     }
 

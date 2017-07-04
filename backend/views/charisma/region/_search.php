@@ -35,7 +35,6 @@ $formName = $model->formName();
                                 $.each(data, function(i, v) {
                                     htmlContent += "<option value=\"" + i + "\">" + v + "</option>";
                                 });
-alert(htmlContent);
 
                                 $("#level_second_content").html(htmlContent);
                             });',

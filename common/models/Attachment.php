@@ -78,7 +78,7 @@ class Attachment extends BaseModel
 
             [['type'], 'string', 'max' => 32],
             [['type'], 'default', 'value' => function() {
-                $type = FileHelper::getMimeType($this->file->tempName);
+                $type = isset($this->file->type) && !empty($this->file->type) ? $this->file->type : FileHelper::getMimeType($this->file->tempName);
                 return $type == null ? 'image/jpeg' : $type;
             }],
             [['type'], 'filterType'],
@@ -90,7 +90,7 @@ class Attachment extends BaseModel
 
             [['filepath'], 'string', 'max' => 256],
             [['filepath'], 'default', 'value' => function() {
-                $key = md5($this->file->name);
+                $key = md5($this->file->name . rand(0, 1000));
                 $base = "{$this->filePre}{$this->info_table}/{$this->info_field}";
                 if ($this->directoryLevel > 0) {
                     for ($i = 0; $i < $this->directoryLevel; ++$i) {
@@ -227,7 +227,7 @@ class Attachment extends BaseModel
     {
         $filePath = $this->getPathBase($this->path_prefix) . '/' . $this->filepath;
         if (file_exists($filePath)) {
-            unlink($filePath);
+            //unlink($filePath);
         }
         return true;
     }
@@ -312,15 +312,19 @@ class Attachment extends BaseModel
             }
         }
         // 处理附件的常用属性，名称、排序和描述
-        $attrs = ['filename', 'orderlist', 'description'];
+        $attrs = ['filename', 'is_master', 'orderlist', 'description'];
+        $requestObj = \Yii::$app->request;
+        if (\Yii::$app->id != 'app-console') {
         foreach ($attrs as $attr) {
             $params = \Yii::$app->request->post('attachment_' . $attr, '');
             $value = isset($params[$id]) ? $params[$id] : '';
             $value = $attr == 'orderlist' ? intval($value) : $value;
+            $value = $attr == 'is_master' ? intval($value) : $value;
             $info->$attr = $value;
         }
-        //print_r($info);exit();
-           return $info->update(false);
+        }
+        $info->update(false);
+        return $info['is_master'];
     }
 
     /**
@@ -328,7 +332,6 @@ class Attachment extends BaseModel
      */
     public function deleteInfo($where, $noDeleteIds)
     {
-        return ;
         $infos = $this->find()->where($where)->all();
         foreach ($infos as $info) {
             if (in_array($info->id, (array) $noDeleteIds)) {

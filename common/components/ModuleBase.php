@@ -4,7 +4,7 @@ namespace common\components;
 
 use Yii;
 use yii\helpers\Url;
-use common\models\Company;
+use baseapp\passport\models\Company;
 
 class ModuleBase extends \yii\base\Module
 {
@@ -26,7 +26,7 @@ class ModuleBase extends \yii\base\Module
         static $datas = null;
         if (is_null($datas)) {
             $company = new Company();
-            $datas = $company->getInfos(['status' => [1, 2]]);
+            $datas = $company->getPointAll('company', ['indexBy' => 'code', 'where' => ['status' => [1, 2]]]);
         }
 
         return $datas;
@@ -50,12 +50,17 @@ class ModuleBase extends \yii\base\Module
             return $info;
         }
 
-        $info = $company->getInfoByCode($code);
+        $info = $company->getPointInfo('company', ['code' => $code]);
         if (empty($info)) {
             $this->cityCodeValid = false;
             $info = $company->getInfoByIP();
         }
         $session['current_company'] = $info;
         return $info;
+    }
+
+    public function initPrivInfo()
+    {
+        return false;
     }
 }

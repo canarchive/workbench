@@ -25,7 +25,7 @@ class Managerlog extends ManagerlogModel
         $query = ManagerlogModel::find();
         $dataProvider = new ActiveDataProvider(['query' => $query]);
 
-        if ($this->load($params) && !$this->validate()) {
+        if (!($this->load($params) || !$this->validate())) {
             return $dataProvider;
         }
 
@@ -43,7 +43,7 @@ class Managerlog extends ManagerlogModel
 
     public function getSearchDatas()
     {
-        $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'username');
+        $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'name');
         $datas = [
             'managerInfos' => $managerInfos,
         ];

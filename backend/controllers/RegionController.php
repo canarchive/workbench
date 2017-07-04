@@ -6,13 +6,13 @@ use Yii;
 use yii\web\Response;
 use yii\helpers\ArrayHelper;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class RegionController extends AdminController
 {
+    use ControllerTraitFull;
     public $modelClass = 'common\models\region\Region';
     public $modelSearchClass = 'common\models\region\searchs\Region';
-    use ControllerFullTrait;
 
     public function actionListinfo()
     {
@@ -22,10 +22,7 @@ class RegionController extends AdminController
             return $data;
         }
 
-        $searchClass = $this->modelSearchClass;
-        $searchModel = new $searchClass();
-        $searchDatas = $searchModel->getSearchDatas();
-        return $this->_listinfoInfo($searchModel, $searchDatas);
+        return $this->_listinfoInfo();
     }
 
     protected function subInfos()

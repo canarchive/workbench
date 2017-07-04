@@ -1,11 +1,13 @@
 <?php
-$model->roles = implode(',', $model->getRoles());
 $detailViewParams = [
     'model' => $model,
     'attributes' => [
         'id',
-        'username',
-        'roles',
+        'name',
+        [
+            'attribute' => 'role',
+            'value' => $model->roleStr,
+        ],
         'login_num',
         'truename',
         'email',
@@ -25,5 +27,5 @@ $detailViewParams = [
     ],
 ];
 
-echo $this->render('@app/views/common/view', ['detailViewParams' => $detailViewParams]);
+echo $this->render('@backend/views/common/view', ['detailViewParams' => $detailViewParams]);
 

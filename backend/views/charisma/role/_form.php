@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'ruleName')->dropDownList(['a' => 'b', 'c' =>'d'], ['prompt'=>'Select...']); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
 
     <?php ActiveForm::end(); ?>
 </div>

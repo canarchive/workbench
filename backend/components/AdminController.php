@@ -3,6 +3,7 @@ namespace backend\components;
 
 use Yii;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 use common\components\Controller;
 
@@ -11,10 +12,13 @@ use common\components\Controller;
  */
 class AdminController extends Controller
 {
+    public $privInfo = [];
     public $menuInfos = [];
+    public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
-    protected $viewPrefix = '';
+    //protected $viewPrefix = '';
+    public $layout = '@backend/views/charisma/layouts/main';
 
     /**
      * @inheritdoc
@@ -60,7 +64,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Lists all Menu models.
+     * Lists tree infos,
      * @return mixed
      */
     public function _listinfoTree($model)
@@ -93,7 +97,8 @@ class AdminController extends Controller
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass($this->_addData());
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
+            
             if ($this->_returnView()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -115,13 +120,16 @@ class AdminController extends Controller
         return true;
     }
 
-    protected function _importInfo($model)
+    protected function _importInfo()
     {
+        $modelClass = $this->modelClass;
+        $model = new $modelClass();
         if ($model->load(Yii::$app->request->post()) && $model->import()) {
             return $this->redirect(['listinfo']);
         }
 
         return $this->render('import', [
+            'number' => 0,
             'model' => $model,
         ]);
     }
@@ -133,6 +141,7 @@ class AdminController extends Controller
         $return = false;
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
+            $this->_checkRecordPriv($model);
             if (!empty($model->add_mul)) {
                 $return = $model->addMul();
             }
@@ -160,7 +169,7 @@ class AdminController extends Controller
         if (!empty($scenario)) {
             $model->setScenario($scenario);
         }
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -232,5 +241,35 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
+        $privFields = !empty($this->privInfo) ? $this->privInfo : [];
+        foreach ($privFields as $field => $value) {
+            $currentValue = $model->$field;
+            $currentValue = is_scalar($currentValue) ? explode(',', $currentValue) : (array) $currentValue;
+            $currentValue = array_filter($currentValue);
+            $join = array_intersect($value, $currentValue);
+            if (empty($join)) {
+            //if (empty($model->$field) || !in_array($model->$field, $value)) {
+                throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+            }
+        }
+
+        return true;
+    }
+
+    public function beforeAction($action)
+    {
+        $this->privInfo = $this->getPrivInfo();
+        return parent::beforeAction($action);
+    }
+
+    public function getPrivInfo()
+    {
+        $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
+        return $data;
+    }
+
+    public function getViewPrefix()
+    {
+        return '';
     }
 }

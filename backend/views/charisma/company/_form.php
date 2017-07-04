@@ -41,6 +41,6 @@ $logo = $attachmentModel->getFieldInfos('company', 'logo');
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => Yii::t('admin-common', 'Select Status')]); ?>
 
-    <?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+    <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

@@ -2,7 +2,7 @@
 
 namespace backend\models;
 
-use common\models\PassportModel;
+use baseapp\passport\models\PassportModel;
 
 class Managerlog extends PassportModel
 {
@@ -31,7 +31,7 @@ class Managerlog extends PassportModel
         return [
             'id' => '日志ID',
             'manager_id' => '管理员ID',
-            'manager_username' => '管理员帐号',
+            'manager_name' => '管理员帐号',
             'role_id' => '角色ID',
             'role_name' => '角色名称',
             'menu_code' => '菜单代码',

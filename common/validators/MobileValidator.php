@@ -20,7 +20,7 @@ class MobileValidator extends Validator
         parent::init();
 
         if ($this->message === null) {
-            $this->message = Yii::t('yii', '{attribute} is not a valid phone.');
+            $this->message = '手机号码格式有误';
         }
     }
 

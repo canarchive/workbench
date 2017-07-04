@@ -5,13 +5,13 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Manager;
 use backend\components\AdminController;
-use backend\components\ControllerFullTrait;
+use backend\components\ControllerTraitFull;
 
 class ManagerController extends AdminController
 {
     protected $modelClass = 'backend\models\Manager';
     protected $modelSearchClass = 'backend\models\searchs\Manager';
-    use ControllerFullTrait;
+    use ControllerTraitFull;
 
     public function _addData()
     {

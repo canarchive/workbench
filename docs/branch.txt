@@ -2,12 +2,6 @@ master
 backend
 wechat
 
-
-================== old =============================
-master
-backend
-wechat
-
 merchant     merchant-house     merchant-shoot
 spider
 gallerycms   gallerycms-house   gallerycms-shoot

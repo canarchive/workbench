@@ -3,76 +3,29 @@
 namespace backend\components;
 
 use Yii;
-use yii\base\Module;
-use yii\web\ForbiddenHttpException;
-use yii\web\User;
-use yii\di\Instance;
 use yii\helpers\Url;
+use yii\web\ForbiddenHttpException;
 use backend\models\Manager;
 use backend\models\Menu;
+use common\components\AccessControl as AccessControlBase;
 
-class AccessControl extends \yii\base\ActionFilter
+class AccessControl extends AccessControlBase
 {
-    /**
-     * @var User User for check access.
-     */
-    private $_user = 'user';
-
-    /**
-     * @var array List of action that not need to check access.
-     */
-    public $allowActions = [];
-
-    /**
-     * Get user
-     * @return User
-     */
-    public function getUser()
+    protected function _checkStatus()
     {
-        if (!$this->_user instanceof User) {
-            $this->_user = Instance::ensure($this->_user, User::className());
+        $status = $this->identity->status;
+        if ($status == 99) {
+            return '账户被锁定，请联系管理员';
         }
-        return $this->_user;
+        if (empty($status)) {
+            return '您的账号还未启用！';
+        }
+        return true;
     }
 
-    /**
-     * Set user
-     * @param User|string $user
-     */
-    public function setUser($user)
+    protected function _checkCurrentMenu($action)
     {
-        $this->_user = $user;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function beforeAction($action)
-    {
-        $controller = $action->controller;
         $actionId = $action->getUniqueId();
-
-        // Allowed actions return true
-        foreach ($this->allowActions as $allowAction) {
-            if ($allowAction == $actionId) {
-                return true;
-            }
-            $allowAction = rtrim($allowAction, "*");
-            if (strpos($actionId, $allowAction) === 0) {
-                return true;
-            }
-        }
-
-        // Whether logined
-        $user = $this->getUser();
-        if ($user->getIsGuest()) {
-            $user->loginRequired();
-            return false;
-        }
-        $identity = $user->getIdentity();
-        if ($identity->status == Manager::STATUS_LOCK) {
-            throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
-        }
 
         // Get the current route infos, get the current menu
         $routeData = explode('/', $actionId);
@@ -86,44 +39,33 @@ class AccessControl extends \yii\base\ActionFilter
         ];
 
         $currentMenu = Menu::findOne($where);
-        if (empty($currentMenu) || !$user->can($currentMenu['code'])) {
-            throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
+        if (empty($currentMenu) || !$this->user->can($currentMenu['code'])) {
+            //throw new ForbiddenHttpException(Yii::t('yii', 'You are not allowed to perform this action.'));
         }
-        if ($identity->status == Manager::STATUS_NOACTIVE && $currentMenu['controller'] != 'document' && $currentMenu['method'] != 'edit-password') {
+        if ($this->identity->status == Manager::STATUS_NOACTIVE && $currentMenu['controller'] != 'document' && $currentMenu['method'] != 'edit-password') {
             $url = Url::to(['/manager/edit-password']);
             return Yii::$app->response->redirect($url)->send();
         }
 
-        $manager = Yii::$app->getAuthManager();
-        $permissions = $manager->getPermissionsByUser($user->id);
-        $codes = array_keys($permissions);
-        $controller->menuInfos = $this->getMenuInfos($codes, $currentMenu);
-
-        if ($currentMenu['extparam'] == 'modal') {
-            Yii::$app->layout = null;
-        }
-
-        // Get the current manager info, include the roles
-        $userInfo = $user->getIdentity()->toArray();
-        $roles = \yii\helpers\ArrayHelper::getColumn($manager->getRolesByUser($user->id), 'name');
-        $userInfo['roles'] = implode(',', $roles);
-        Yii::$app->params['currentMenu'] = $currentMenu->toArray();
-        Yii::$app->params['managerInfo'] = $userInfo;
-
-        return true;
+        return $currentMenu;
     }
 
     /**
      * Get the menus of current manager
      */
-    protected function getMenuInfos($codes, $currentMenu)
+    protected function _initMenus($currentMenu)
     {
+        $manager = Yii::$app->getAuthManager();
+        $permissions = $manager->getPermissionsByUser($this->user->id);
+        $codes = array_keys($permissions);
+
         $menus = Menu::find()->asArray()->where(['code' => $codes])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
         //$menus = Menu::find()->asArray()->indexBy('code')->all();
         $appMenus = [];
+		$baseUrl = Yii::getAlias('@backendurl');
         foreach ($menus as $key => $menu) {
             $route = '/' . trim($menu['module'] . '/' . $menu['controller'] . '/' . $menu['method'], '/');
-            $menu['url'] = Url::toRoute($route);
+            $menu['url'] = empty($menu['controller']) ? '' : $baseUrl . Url::toRoute($route);
             if (!empty($menu['extparam'])) {
                 $menu['url'] = $menu['url'] . '?' . $menu['extparam'];
             }
@@ -153,7 +95,6 @@ class AccessControl extends \yii\base\ActionFilter
             'appMenus' => $appMenus,
             'menus' => $menus,
         ];
-        //print_r($menuInfos);exit();
         return $menuInfos;
     }
 }

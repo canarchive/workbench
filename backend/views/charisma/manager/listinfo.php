@@ -4,13 +4,12 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
-        'username',
+        'name',
         'truename',
         [
-            'attribute' => 'roles',
+            'attribute' => 'role',
             'value' => function($model) {
-                return implode(',', ($model->getRoles()));
-                //return $model->roles;
+                return $model->roleStr;
             },
         ],
         'mobile',
@@ -49,4 +48,4 @@ $gridViewParams = [
     ],
 ];
 
-echo $this->render('@app/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
