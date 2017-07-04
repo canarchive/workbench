@@ -14,7 +14,7 @@ trait UserTrait
     public function actionChangeMerchant($id)
     {
         $model = $this->findModel($id);
-        $this->_handlerUpdate('change');
+        $this->_handlerUpdate('change', $model);
 
         return $this->render($this->viewPrefix . 'change-merchant', [
             'model' => $model,
@@ -25,14 +25,14 @@ trait UserTrait
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass();
-        $this->_handlerUpdate('admin');
+        $this->_handlerUpdate('admin', $model);
 
         return $this->render($this->viewPrefix . 'add', [
             'model' => $model,
         ]);
     }
 
-    public function _handlerUpdate($sort)
+    public function _handlerUpdate($sort, $model)
     {
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();

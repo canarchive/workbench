@@ -9,6 +9,7 @@ use merchant\models\User;
 class Service extends MerchantModel
 {
     public $password_user;
+    public $create_user;
 
     public static function tableName()
     {
@@ -27,7 +28,7 @@ class Service extends MerchantModel
             [['merchant_id', 'manager_id', 'status', 'status_sendmsg', 'serviced_num', 'serviced_times', 'distributed_at'], 'default', 'value' => 0],
             [['merchant_id', 'mobile'], 'checkUnique'],
             ['password_user', 'string', 'min' => 6, 'when' => function($model) { return $model->password_user != ''; }],
-            [['code', 'status', 'mobile_ext', 'password_user'], 'safe'],
+            [['code', 'status', 'mobile_ext', 'password_user', 'create_user'], 'safe'],
         ];
     }    
 
@@ -106,8 +107,10 @@ class Service extends MerchantModel
     {
         parent::afterSave($insert, $changedAttributes);
 
-        $user = new User();
-        $user->addUserByService($this);
+        if (!empty($this->create_user)) {
+            $user = new User();
+            $user->addUserByService($this);
+        }
 
         return true;
     }
@@ -166,5 +169,14 @@ class Service extends MerchantModel
             $newModel = new self($data);
             $newModel->insert(false);
         }
+    }
+
+    public function getCreateUserInfos()
+    {
+        $datas = [
+            '0' => '不生成',
+            '1' => '生成',
+        ];
+        return $datas;
     }
 }
