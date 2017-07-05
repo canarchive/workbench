@@ -21,7 +21,7 @@ echo $subnavString;
 </div>
 
 
-<div>
+<!--<div>
     <ul class="breadcrumb">
 <?php
 $subnavString = '';
@@ -31,7 +31,7 @@ foreach ($serviceInfos as $sId => $sName) {
     $urlStr =  '?service_id=' . $sId . '&status=' . $statusCurrent;
     $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$sName}</a></li>";
 }
-echo $subnavString;
+//echo $subnavString;
 ?>
     </ul>
-</div>
+</div>-->

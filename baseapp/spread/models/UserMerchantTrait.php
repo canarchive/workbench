@@ -64,7 +64,7 @@ trait UserMerchantTrait
         return true;
     }    
 
-    public function viewInfo($merchantId, $ids)
+    public function viewInfo($merchantIds, $ids)
     {
         $ids = explode(',', $ids);
         if (count($ids) > 50) {
@@ -72,15 +72,15 @@ trait UserMerchantTrait
         }
         $infos = $this->find()->where(['id' => $ids])->indexBy('id')->all();
         foreach ($infos as $id => $info) {
-            if ($info['merchant_id'] != $merchantId) {
+            if (!in_array($info['merchant_id'], $merchantIds)) {
                 return ['status' => 400, 'message' => '你没有查看这些信息的权限'];
             }
         }
         $datas = [];
         foreach ($infos as $id => $info) {
             if (!$info->view_at) {
-            $info->view_at = Yii::$app->params['currentTime'];
-            $info->update(false);
+                $info->view_at = Yii::$app->params['currentTime'];
+                $info->update(false);
             }
             $datas[$id]['mobile'] = $info['mobile'];
             $datas[$id]['viewAt'] = date('Y-m-d H:i:s', $info->view_at);
@@ -119,5 +119,15 @@ trait UserMerchantTrait
         }
 
 		return $infos;
+	}
+
+	public function getUserModel()
+	{
+        return $this->_newModel('user')->find()->where(['mobile' => $this->mobile])->orderBy(['id' => SORT_DESC])->one();
+	}
+
+	public function getGuestbookModel()
+	{
+        return $guestbookModel->find()->where(['user_merchant_id' => $info['id']])->orderBy('reply_at DESC')->one();
 	}
 }
