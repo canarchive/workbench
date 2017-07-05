@@ -2,12 +2,10 @@
 
 namespace subsite\decoration\models;
 
-use common\models\SubsiteModel;
 use baseapp\spread\models\UserMerchantTrait;
 
-class UserMerchant extends SubsiteModel
+class UserMerchant extends ModelBase
 {
-    use ModelTrait;
     use UserMerchantTrait;
 
 	public function getHouseModel()

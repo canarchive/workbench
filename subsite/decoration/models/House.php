@@ -2,11 +2,8 @@
 
 namespace subsite\decoration\models;
 
-use common\models\SubsiteModel;
-
-class House extends SubsiteModel
+class House extends ModelBase
 {
-    use ModelTrait;
     public static function tableName()
     {
         return '{{%house}}';

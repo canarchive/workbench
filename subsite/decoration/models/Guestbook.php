@@ -2,9 +2,9 @@
 
 namespace subsite\decoration\models;
 
-use subsite\models\Guestbook as GuestbookBase;
+use baseapp\spread\models\GuestbookTrait;
 
-class Guestbook extends GuestbookBase
+class Guestbook extends ModelBase
 {
-    use ModelTrait;
+    use GuestbookTrait;
 }

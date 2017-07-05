@@ -2,12 +2,10 @@
 
 namespace subsite\decoration\models;
 
-use common\models\SubsiteModel;
 use baseapp\spread\models\UserTrait;
 
-class User extends SubsiteModel
+class User extends ModelBase
 {
-    use ModelTrait;
     use UserTrait;
 
     public function handleFieldExts()

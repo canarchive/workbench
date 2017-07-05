@@ -77,15 +77,10 @@ $gridViewParams = [
             'attribute' => 'operation',
 			'value' => function($model) {
                 $menus = $this->context->menuInfos['menus'];
-				$menu = isset($menus['subsite_decoration_dispatch_update']) ? $menus['subsite_decoration_dispatch_update'] : [];
-                if (empty($menu)) {
-                    return '';
-                }
-                $dInfo = $model->dispatchInfo;
-                if (empty($dInfo)) {
-                    return '';
-                }
-				$opeStr = "<a href='{$menu['url']}?id={$model->dispatchInfo['id']}'>编辑</a><br />";
+				$menu = isset($menus['subsite_decoration_user-merchant_updateout']) ? $menus['subsite_decoration_user-merchant_updateout'] : [];
+				$opeStr = "<a href='{$menu['url']}?id={$model->id}'>编辑订单</a><br />";
+				$menuGuestbook = isset($menus['subsite_decoration_guestbook_listinfo']) ? $menus['subsite_decoration_guestbook_listinfo'] : [];
+				$opeStr .= empty($menuGuestbook) ? '' : "<a href='{$menuGuestbook['url']}?id={$model->mobile}'>查看备注</a>";
                 return $opeStr;
 			},
         ],

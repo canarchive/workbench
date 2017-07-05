@@ -6,27 +6,32 @@ $gridViewParams = [
     'columns' => [
         'id',
         [
-            'attribute' => 'owner_merchant_id',
+            'attribute' => 'merchant_id',
             'value' => function ($model) {
-                $merchantInfo = $model->merchantInfo;
-                $return = empty($merchantInfo) ? '' : $merchantInfo['name'];
-                return $return;
+                return $model->getPointName('merchant', $model->merchant_id);
             }
         ],
         [
-            'attribute' => 'owner_merchant_id',
+            'attribute' => 'mobile',
             'value' => function ($model) {
-                $mobile = $model->mobile;
-                $return = empty($mobile) ? '' : $mobile;
-                return $return;
+                return $model->maskMobile($model->mobile);
             }
         ],
-        'content',
         [
-            'attribute' => 'created_at',
-            'value'=> function($model){
-                return  date('Y-m-d H:i:s',$model->created_at);
-            },
+            'format' => 'raw',
+            'attribute' => 'content',
+            'value' => function($model) {
+                $cTime = $model->formatTimestamp($model->created_at);
+                return "<b>{$cTime}</b>  {$model->content}";
+            }
+        ],
+        [
+            'format' => 'raw',
+            'attribute' => 'reply',
+            'value' => function($model) {
+                $cTime = $model->formatTimestamp($model->reply_at);
+                return "<b>{$cTime}</b>  {$model->reply}";
+            }
         ],
         [
             'format' => 'raw',

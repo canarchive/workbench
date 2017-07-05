@@ -1,3 +1,8 @@
+UPDATE  `wd_guestbook` AS `g`, `wd_user_merchant` AS `m` SET `g`.`mobile` = `m`.`mobile`, `g`.`merchant_id` = `m`.`merchant_id` WHERE `g`.`user_merchant_id`  = `m`.`id`  ;
+
+
+
+
 ALTER TABLE `wm_user` DROP `encrypt`;
 ALTER TABLE `wm_user` DROP `truename`;
 ALTER TABLE `wm_user` DROP `service_id`;

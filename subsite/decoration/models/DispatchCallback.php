@@ -2,9 +2,9 @@
 
 namespace subsite\decoration\models;
 
-use subsite\models\DispatchCallback as DispatchCallbackBase;
+use baseapp\spread\models\DispatchCallbackTrait;
 
-class DispatchCallback extends DispatchCallbackBase
+class DispatchCallback extends ModelBase
 {
-    use ModelTrait;
+    use DispatchCallbackTrait;
 }

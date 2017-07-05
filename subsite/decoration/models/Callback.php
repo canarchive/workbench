@@ -5,8 +5,7 @@ namespace subsite\decoration\models;
 use common\models\SubsiteModel;
 use baseapp\spread\models\CallbackTrait;
 
-class Callback extends SubsiteModel
+class Callback extends ModelBase
 {
-    use ModelTrait;
     use CallbackTrait;
 }

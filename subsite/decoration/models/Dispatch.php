@@ -2,9 +2,9 @@
 
 namespace subsite\decoration\models;
 
-use subsite\models\Dispatch as DispatchBase;
+use baseapp\spread\models\DispatchTrait;
 
-class Dispatch extends DispatchBase
+class Dispatch extends ModelBase
 {
-    use ModelTrait;
+    use DispatchTrait;
 }

@@ -2,11 +2,13 @@
 
 namespace backend\subsite\controllers\decoration;
 
-use backend\subsite\controllers\Guestbook;
+use backend\components\AdminController;
+use backend\components\ControllerTraitView;
 
-class GuestbookController extends Guestbook
+class GuestbookController extends AdminController
 {
+    use ControllerTraitView;
+    public $viewPrefix = '@backend/subsite/views/guestbook/';
     protected $modelClass = 'subsite\decoration\models\Guestbook';
     protected $modelSearchClass = 'subsite\decoration\models\searchs\Guestbook';
-
 }

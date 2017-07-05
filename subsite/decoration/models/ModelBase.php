@@ -3,14 +3,10 @@
 namespace subsite\decoration\models;
 
 use Yii;
+use common\models\SubsiteModel;
 
-trait ModelTrait
+class ModelBase extends SubsiteModel
 {
-    public static function getDb()
-    {
-        return Yii::$app->dbSubsite;
-    }    
-
     public function _getClassPrefix()
     {
         return "\subsite\decoration\models\\";
