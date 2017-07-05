@@ -139,6 +139,9 @@ trait TraitModel
 
     public function formatTimestamp($timestamp, $format = 'Y-m-d H:i:s')
     {
+        if (empty($timestamp)) {
+            return '';
+        }
         return  date($format, $timestamp);
     }
 }
