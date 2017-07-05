@@ -126,8 +126,13 @@ trait UserMerchantTrait
         return $this->_newModel('user')->find()->where(['mobile' => $this->mobile])->orderBy(['id' => SORT_DESC])->one();
 	}
 
+	public function getGuestbookInfos()
+	{
+        return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->all();
+	}
+
 	public function getGuestbookModel()
 	{
-        return $guestbookModel->find()->where(['user_merchant_id' => $info['id']])->orderBy('reply_at DESC')->one();
+        return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->one();
 	}
 }
