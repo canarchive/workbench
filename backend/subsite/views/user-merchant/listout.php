@@ -36,6 +36,36 @@ $gridViewParams = [
 				return $model->userModel->name;
 			}
         ],
+		[
+			'attribute' => 'houseAddress',
+			'value' => function($model) {
+				return $model->houseModel->region . '-' . $model->houseModel->address;
+			}
+        ],
+		[
+			'attribute' => 'houseArea',
+			'value' => function($model) {
+				return $model->houseModel->house_area;
+			}
+        ],
+		[
+			'attribute' => 'houseType',
+			'value' => function($model) {
+				return $model->houseModel->getKeyName('house_type', $model->houseModel->house_type);
+			}
+        ],
+		[
+			'attribute' => 'houseSort',
+			'value' => function($model) {
+				return $model->houseModel->getKeyName('house_sort', $model->houseModel->house_sort);
+			}
+        ],
+        [
+            'attribute' => 'note',
+            'value' => function($model) {
+                return $model->guestbookModel->reply;
+            }
+        ],
         [
             'attribute' => 'status',
             'value' => function($model) {

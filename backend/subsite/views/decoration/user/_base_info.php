@@ -3,6 +3,7 @@ use yii\helpers\Html;
 
 $model->callback_again = $model->callback_again > 0 ? $model->callback_again : time();
 $tableName = 'user';
+$changeMerchantUrl = isset($this->context->menuInfos['menus']['subsite_decoration_user_change-merchant']) ? $this->context->menuInfos['menus']['subsite_decoration_user_change-merchant']['url'] : '';
 ?>
 <div class="row">
     <div class="box col-md-12">
@@ -74,7 +75,7 @@ $tableName = 'user';
                         <th><?= $model->getAttributeLabel('status'); ?></th>
                         <th><?= $model->getAttributeLabel('invalid_status'); ?></th>
                         <th><?= $model->getAttributeLabel('callback_again'); ?></th>
-                        <th>指派其他商家</th>
+						<?php if (!empty($changeMerchantUrl)) { echo '<th>指派其他商家</th>'; } ?>
                     </tr>
                     </thead>
                     <tbody>
@@ -115,7 +116,7 @@ $tableName = 'user';
                         });
                     </script>
                         </td>
-                        <td><?= "<a href='/subsite/decoration/user/change-merchant.html?id={$model->id}'>指派其他商家</a>"; ?></td>
+						<?php if (!empty($changeMerchantUrl)) { echo "<td><a href='{$changeMerchantUrl}?id={$model->id}'>指派其他商家</a></td>"; } ?>
                     </tr>
                     </tbody>
                 </table>

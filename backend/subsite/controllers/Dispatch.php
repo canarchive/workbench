@@ -19,7 +19,7 @@ class Dispatch extends AdminController
         }
         //print_r($data);exit();
 
-        return $this->render('update', $data);
+        return $this->render($this->viewPrefix . 'update', $data);
     }
 
     protected function _userInfos($id)
