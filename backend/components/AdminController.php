@@ -243,6 +243,9 @@ class AdminController extends Controller
     {
         $privFields = !empty($this->privInfo) ? $this->privInfo : [];
         foreach ($privFields as $field => $value) {
+            if (!$model->hasProperty($field)) {
+                continue;
+            }
             $currentValue = $model->$field;
             $currentValue = is_scalar($currentValue) ? explode(',', $currentValue) : (array) $currentValue;
             $currentValue = array_filter($currentValue);
