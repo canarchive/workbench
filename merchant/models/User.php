@@ -150,6 +150,9 @@ class User extends AuthBase
 			'valid' => '看有效信息',
 			'service' => '客服',
 			'service-admin' => '客服主管',
+			'admin-inner' => '管理员（内部）',
+			'service-inner' => '客服（内部）',
+			'service-admin-inner' => '客服主管（内部）',
         ];
     }
 
