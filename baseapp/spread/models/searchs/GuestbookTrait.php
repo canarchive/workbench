@@ -17,7 +17,7 @@ Trait GuestbookTrait
 
     public function search($params)
     {
-        $query = self::find();
+        $query = self::find()->orderBy('id DESC');
 
         $dataProvider = new ActiveDataProvider(['query' => $query]);
         if (!$this->load($params, '') || !$this->validate()) {
