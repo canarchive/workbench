@@ -14,6 +14,7 @@ class EntranceController extends Controller
     {
 		parent::init();
 		$this->layout = 'main-base';
+        $this->returnUrl = '/admin/';
     }
 
 	public function getModel($sort)

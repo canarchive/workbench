@@ -33,13 +33,13 @@ foreach ($fields as $field) {
                     <label for="username" class="tit">人机验证：</label>
                     <div class="l-captcha" data-site-key="<?= Yii::$app->params['luosimaoCaptcha']['siteKey']; ?>" data-width="100%" style="margin-bottom:10px;" data-callback="getRegResponse"></div>
                 </div>-->
-                <div class="small-12 columns">
+                <!--<div class="small-12 columns">
                     <input type="submit" class="button radius success expand" value="立即登录" />
                     <div class="reg-goto">
                         <a href='/signup.html'>立即注册</a>&nbsp;&nbsp;&nbsp;
                         <a href="/findpwd.html">忘了密码？</a>
                     </div>
-                </div>
+                </div>-->
             <?php ActiveForm::end(); ?>
         </div>
     </div>
