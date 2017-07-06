@@ -17,11 +17,11 @@ trait SigninTrait
     {
         empty($form) ? $this->load(Yii::$app->request->post(), '') : $this->load(Yii::$app->request->post());
         $validate = $this->validate();
-        if (empty($validate)) {
+        ef (empty($validate)) {
             return $this->_formatFailResult('登录失败，请您重试');
         }
 
-        $rememberMe = $this->rememberMe ? $this->rememberMe : 3600;
+        $rememberMe = $this->rememberMe ? $this->rememberMe : 86400;
         $loginResult = Yii::$app->user->login($this->getUser(), $rememberMe);
 		if (!$loginResult) {
 		    return ['status' => 400, 'isAjax' => true, 'message' => '登录失败'];
