@@ -40,6 +40,13 @@ trait UserMerchantTrait
             'updated_at' => '更新时间',
             'note' => '备注',
             'status' => '状态',
+			'userName' => '姓名',
+			'houseAddress' => '房屋地址',
+			'houseRegion' => '区县',
+			'houseArea' => '房屋面积',
+			'houseType' => '户型',
+			'houseSort' => '房屋类别',
+			'view_at' => '查看时间',
             'name' => '名称',
         ];
     }
