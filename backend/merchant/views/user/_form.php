@@ -20,10 +20,10 @@ $model->merchant_show = array_keys($model->merchant_show);
     <?php } ?>
     <?= $form->field($model, 'mobile') ?>
     <?= $form->field($model, 'merchant_show')->dropDownList($model->getPointInfos('merchant', ['where' => $model->formatPriv('merchant_id', 'id', $this->context->privInfo)]), ['multiple' => 'multiple', 'prompt' => '']); ?>
-    <?= $form->field($model, 'role')->dropDownList($model->roleInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'role')->dropDownList($model->getPointInfos('merchant-role', ['indexName' => 'code'])); ?>
     <?= $form->field($model, 'email') ?>
-    <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
-    <?= $form->field($model, 'create_service')->dropDownList($model->createServiceInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
+    <?= $form->field($model, 'create_service')->dropDownList($model->createServiceInfos); ?>
 
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

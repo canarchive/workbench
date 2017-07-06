@@ -142,20 +142,6 @@ class User extends AuthBase
         return isset($role['name']) ? $role['name'] : '';
     }
 
-    public static function getRoleInfos()
-    {
-        return [
-            '' => '访客',
-			'admin' => '管理员',
-			'valid' => '看有效信息',
-			'service' => '客服',
-			'service-admin' => '客服主管',
-			'admin-inner' => '管理员（内部）',
-			'service-inner' => '客服（内部）',
-			'service-admin-inner' => '客服主管（内部）',
-        ];
-    }
-
     public function getStatusInfos()
     {
         return [
