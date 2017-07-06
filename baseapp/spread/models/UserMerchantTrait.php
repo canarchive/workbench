@@ -26,6 +26,7 @@ trait UserMerchantTrait
 
     public function rules()
     {
+        return [];
     }
 
     public function attributeLabels()
@@ -135,4 +136,23 @@ trait UserMerchantTrait
 	{
         return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->one();
 	}
+
+    public function addGuestbook($data)
+    {
+        $data['mobile'] = $this->mobile;
+        $data['merchant_id'] = $this->merchant_id;
+        $data['user_merchant_id'] = $this->id;
+        $data['created_at'] = Yii::$app->params['currentTime'];
+        $model = $this->_newModel('guestbook', true, $data);
+        $model->insert(false);
+    }
+
+    public function getIsLock()
+    {
+        $diff = ($this->created_at + 86400) - Yii::$app->params['currentTime'];
+        if ($diff > 0) {
+            return $this->formatTimestampShow($diff);
+        }
+        return true;
+    }
 }
