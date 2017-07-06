@@ -22,8 +22,30 @@ trait UserMerchantTrait
         return $this->_listinfoInfo('listout');
 	}
 
-    public function actionUpdateout()
+    public function actionUpdateout($id = 0)
     {
+        $model = $this->findModel($id);
+        if (Yii::$app->getRequest()->method == 'POST') {
+            $listUrl = $this->menuInfos['menus']['subsite_decoration_user-merchant_listout']['url'];
+		    $merchantIds = isset($this->privInfo['merchant_id']) ? $this->privInfo['merchant_id'] : [];
+            if (empty($merchantIds)) {
+                return Yii::$app->response->redirect($listUrl)->send($listUrl);
+                exit();
+            }
+
+            $content = strip_tags(Yii::$app->request->post('content'));
+            $model->addGuestbook(['content' => $content]);
+
+            $status = Yii::$app->request->post('status', '');
+            if (in_array($status, ['', 'back_reply'])) {// && $model->isLock !== true) {
+                $model->status = $status;
+                $model->update(false);
+            }
+            return Yii::$app->response->redirect($listUrl)->send($listUrl);
+            exit();
+        }
+
+        return $this->render($this->viewPrefix . 'updateout', ['model' => $model]);
     }
 
     protected function _viewMethod()
