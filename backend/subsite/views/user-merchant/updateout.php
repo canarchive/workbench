@@ -11,9 +11,8 @@ $model->houseSort = $model->houseModel->getKeyName('house_sort', $model->houseMo
 $model->note = $model->guestbookModel->content;
 $model->merchant_id = $model->getPointName('merchant', $model->merchant_id);
 
-$isLock = $model->isLock;
-$minutes = $model->isLock === true ? 0 : $model->isLock;
-$statusLabel = empty($minutes) ? '状态 (超过24小时，您无法更改订单状态)' : '状态 （距离锁定订单状态还有' . $minutes . ')';
+$minutes = $model->isLock === true ? true : $model->isLock;
+$statusLabel = $minutes === true ? '状态 (超过24小时，您无法更改订单状态)' : '状态 （距离锁定订单状态还有' . $minutes . ')';
 $statusInfos = $model->statusInfos;
 unset($statusInfos['back_confirm']);
 $statusOption = $minutes === true ? ['name' => 'status', 'prompt' => '', 'disabled' => true] : ['name' => 'status'];

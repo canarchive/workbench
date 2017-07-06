@@ -33,7 +33,7 @@ $gridViewParams = [
                 return "<b>{$cTime}</b>  {$model->reply}";
             }
         ],
-        [
+        /*[
             'format' => 'raw',
             'attribute' => 'operation',
             'value'=> function($model){
@@ -41,7 +41,7 @@ $gridViewParams = [
                 $url = '/subsite/decoration/dispatch/update.html?id=' . $mobileId;
                 return "<a href='{$url}' target='_blank'>备注</a>";
             },
-        ],
+		],*/
     ],
 ];
 
