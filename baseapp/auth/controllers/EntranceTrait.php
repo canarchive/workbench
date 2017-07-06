@@ -34,6 +34,7 @@ trait EntranceTrait
     protected function _signMethod($action)
     {
         if (!Yii::$app->user->isGuest) {
+            print_r($this);exit();
             return ['status' => 200, 'message' => 'return', 'homeUrl' => $this->homeUrl];
         }
             
