@@ -11,6 +11,11 @@ trait UserTrait
         return $this->_listinfoInfo();
     }
 
+    public function actionListout()
+    {
+        return $this->_listinfoInfo('listout');
+    }
+
     public function actionChangeMerchant($id)
     {
         $model = $this->findModel($id);
