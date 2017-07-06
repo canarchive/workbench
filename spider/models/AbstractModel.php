@@ -9,6 +9,11 @@ class AbstractModel extends SpiderModel
 {
     public $code;
 
+    public static function tableName()
+    {
+        return '{{%page}}';
+    }
+
     public function fileExist($file)
     {
         $file = Yii::$app->params['spiderPath'] . 'source/' . $file;

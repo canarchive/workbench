@@ -1,0 +1,2 @@
+UPDATE `ws_goods` AS `g`, (SELECT `info_id`, COUNT(*) AS `count` FROM `ws_attachment` WHERE `info_field` = 'slide' GROUP BY `info_id`) AS `a` SET `g`.`inventory` = `a`.`count` WHERE `g`.`id` = `a`.`info_id` ;
+UPDATE `ws_goods` AS `g`, (SELECT `info_id`, COUNT(*) AS `count` FROM `ws_attachment` WHERE `info_field` = 'picture' GROUP BY `info_id`) AS `a` SET `g`.`orderlist` = `a`.`count` WHERE `g`.`id` = `a`.`info_id` ;

@@ -1,6 +1,6 @@
 <?php
 
-namespace spider\models\shoot;
+namespace spider\models\flowerplus;
 
 use Yii;
 use common\models\SpiderModel;

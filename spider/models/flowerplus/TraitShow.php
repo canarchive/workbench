@@ -1,115 +1,129 @@
 <?php
-namespace spider\models\shoot;
+namespace spider\models\flowerplus;
 
-use Yii;
 use Symfony\Component\DomCrawler\Crawler;
 
 Trait TraitShow
 {
+	protected function getFiles()
+	{
+		$dir = '/data/htmlwww/filesys/spider/source/flowerplus/show/';
+		$files = [];
+        if ($handle = opendir($dir)) {
+            while ($file = readdir($handle)) {
+				if ($file != '.' && $file != '..') {
+					$files[] = $dir . $file;
+				}
+            }
+            closedir($handle);
+        }
+		return $files;
+    }
+	
+	public function pictureDeal()
+	{
+        $where = ['inventory' => 0];
+        $infos = $this->_getShowInfos($where, 500);
+		$dir = '/data/htmlwww/filesys/spider/source/flowerplus/show/';
+		foreach ($infos as $info) {
+            $crawler = new Crawler();
+			$file = $dir . $info['source_id'] . '.html';
+			echo $file;
+			$content = file_get_contents($file);
+            $crawler->addContent($content);
 
-    public function showSpider()
-    {
-        $where = ['source_status' => 0];
-        $infos = $this->_getShowInfos($where, 200);
-        $num = $this->_showSpider($infos);
-        echo $num;
+			echo $info['id'];
+			echo $content;
+			exit();
+			$slides = [];
+
+            $crawler->filter('#swip img')->each(function ($node) use (& $slides) {
+                $img = $node->filter('img')->attr('src');
+				$slides[] = $img;
+            });
+			/*if (empty($slides)) {
+				$sImg = $crawler->filter('#main_pic')->attr('data-src');
+				$slides[] = $sImg;
+			}*/
+			if (empty($slides)) {
+				echo $info['id'] . '-noslide<br />';
+			}
+			print_r($slides);
+			//$this->_addPicture($slides, 'slide', $info);
+			continue;
+
+			$pictures = [];
+            $pattern = '@<p><img .*src=.*"(?P<img>.*)" .*></p>@Us';
+            preg_match_all($pattern, $content, $infos);
+            $pictures = $infos['img'];
+			if (empty($pictures)) {
+			    $pattern = '@{"type":"image","content":"(?P<img>.*)"}@Us';
+                preg_match_all($pattern, $content, $infos);
+                $pictures = $infos['img'];
+			}
+			foreach ($pictures as & $picture) {
+				$picture = str_replace('\\', '', $picture);
+			}
+			if (empty($pictures)) {
+				echo $info['id'] . 'nopicture<br />';
+			}
+
+			//$this->_addPicture($pictures, 'picture', $info);
+        }
     }
 
     public function showDeal()
     {
-        $where = ['source_status' => 1];
-        $infos = $this->_getShowInfos($where, 500);
-        foreach ($infos as $info) {
-            $file = $info->showFile();
-            if (!$this->fileExist($file)) {
-                $info->source_status = 0;
-                $info->update(false);
-                continue;
-            }
+		return ;
+		$files = $this->getFiles();
+		$i = 0;
+        foreach ($files as $file) {
             $crawler = new Crawler();
-            $crawler->addContent($this->getContent($file));
-            //echo $file;exit();
+			$content = file_get_contents($file);
+            $crawler->addContent($content);
 
+            $name = $crawler->filter('.produt-title');//->text();
+			if (count($name) == 0) {
+				echo filesize($file) . '--' . $file . '<br />';
+				continue;
+			}
+			$name = $name->text();
+            $brief = $crawler->filter('.produt-subtitle')->text();
+            $priceRange = $crawler->filter('#price')->text();
+			$data = [
+				'name' => trim($name),
+			    'brief' => trim($brief),
+				'price_range' => trim($priceRange),
+				'source_site' => 'flowerplus',
+				'source_id' => str_replace('.html', '', basename($file)),
+				'source_status' => 0,
+			];
+			$i++;
 
-            $method = in_array($info['source_site_code'], ['toteme', 'jingshan', 'hanhan']) ? 'dede' : $info['source_site_code'];
-            if ($method != 'dede') {
-                continue;
-            }
-            $method = $method . 'DealShow';
-            $r = $this->$method($crawler, $info);
-            $info->status = 2;
-            if ($r) {
-                $info->update(false);
-            }
-        }
-    }
+			$info = new Goods($data);
+			$info->insert(false);
+			continue;
+		}
+	}
 
-    protected function shouxiDealShow($crawler, $info)
+    protected function _addPicture($imgs, $field, $info)
     {
-        $crawler->filter('.list img')->each(function ($node) use ($info) {
-            $img = $node->filter('img')->attr('src');
-            $img = 'http://shouxiphotos.com/' . $img;
-            if (!empty($img)) {
-                $aData = [
-                    'source_url' => $img,
-                    'name' => $info['name'],
-                    'info_table' => 'sample',
-                    'info_field' => 'picture',
-                    'source_site_code' => $info['source_site_code'],
-                    'source_id' => $info['source_id'],
-                ];
-                $this->_addAttachment(new Attachment($aData));
-            }
-        });
-        return true;
-    }
-
-    protected function honggDealShow($crawler, $info)
-    {
-        $infos = $crawler->filter('.zhanshi_box');
-        $name = $infos->filter('h1')->text();
-        $crawler->filter('tbody img')->each(function ($node) use ($info) {
-            $img = $node->filter('img')->attr('src');
-            if (!empty($img)) {
-                $aData = [
-                    'source_url' => $img,
-                    'name' => $info['name'],
-                    'info_table' => 'sample',
-                    'info_field' => 'picture',
-                    'source_site_code' => $info['source_site_code'],
-                    'source_id' => $info['source_id'],
-                ];
-                $this->_addAttachment(new Attachment($aData));
-            }
-        });
-        return true;
-    }
-
-    protected function dedeDealShow($crawler, $info)
-    {
-        $urlBases = [
-            'hanhan' => 'http://www.hanhanstudio.com/',
-            'jingshan' => 'http://www.jingshanwenhua.com/',
-            'toteme' => 'http://www.toteme.cn/',
-        ];
-        $urlBase = $urlBases[$info['source_site_code']];
-        $name = $crawler->filter('.biaoti')->text();
-        $crawler->filter('.space li img')->each(function ($node) use ($info, $urlBase) {
-            $img = $urlBase . $node->filter('img')->attr('src');
-            if (!empty($img)) {
-                $aData = [
-                    'source_url' => $img,
-                    'name' => $info['name'],
-                    'info_table' => 'sample',
-                    'info_field' => 'picture',
-                    'source_site_code' => $info['source_site_code'],
-                    'source_id' => $info['source_id'],
-                ];
-                $this->_addAttachment(new Attachment($aData));
-            }
-        });
-        $info->name = $name;
-        $info->update(false);
+		foreach ($imgs as $img) {
+			$img = str_replace('\\', '', $img);
+			if (empty($img)) {
+				continue;
+			}
+            $aData = [
+                'source_url' => $img,
+                'name' => $info['name'],
+                'info_table' => 'goods',
+                'info_field' => $field,
+    			'info_id' => $info['id'],
+                'source_site_code' => 'flowerplus',
+                'source_id' => $info['source_id'],
+            ];
+            $this->_addAttachment(new Attachment($aData));
+		}
         return true;
     }
 }

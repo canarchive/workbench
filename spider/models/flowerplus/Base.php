@@ -10,14 +10,9 @@ class Base extends AbstractModel
 {
     //use TraitPre;
     //use TraitList;
-    //use TraitShow;
+    use TraitShow;
 
     private $configInfo;
-
-    public static function tableName()
-    {
-        return '{{%site}}';
-    }
 
     /**
      * 构造方法，初始化采集网站属性
@@ -31,7 +26,7 @@ class Base extends AbstractModel
 
     protected function _getShowInfos($where, $limit = 100)
     {
-        $model = new Article();
+        $model = new Goods();
         $infos = $model->find()->where($where)->limit($limit)->all();
 
         return $infos;
