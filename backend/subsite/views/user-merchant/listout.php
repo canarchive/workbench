@@ -80,14 +80,15 @@ $gridViewParams = [
 				$menu = isset($menus['subsite_decoration_user-merchant_updateout']) ? $menus['subsite_decoration_user-merchant_updateout'] : [];
 				$opeStr = "<a href='{$menu['url']}?id={$model->id}'>编辑订单</a><br />";
 				$menuGuestbook = isset($menus['subsite_decoration_guestbook_listinfo']) ? $menus['subsite_decoration_guestbook_listinfo'] : [];
-				$opeStr .= empty($menuGuestbook) ? '' : "<a href='{$menuGuestbook['url']}?id={$model->mobile}'>查看备注</a>";
+				$opeStr .= empty($menuGuestbook) ? '' : "<a href='{$menuGuestbook['url']}?mobile={$model->mobile}'>查看留言</a>";
                 return $opeStr;
 			},
         ],
     ],
 ];
 
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
+$searchContent = $this->render('@baseapp/spread/views/_search', array_merge($searchDatas, ['model' => $searchModel]));
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
 ?>
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <script>
