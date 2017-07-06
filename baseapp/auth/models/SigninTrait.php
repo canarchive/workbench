@@ -17,7 +17,7 @@ trait SigninTrait
     {
         empty($form) ? $this->load(Yii::$app->request->post(), '') : $this->load(Yii::$app->request->post());
         $validate = $this->validate();
-        ef (empty($validate)) {
+        if (empty($validate)) {
             return $this->_formatFailResult('登录失败，请您重试');
         }
 

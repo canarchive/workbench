@@ -36,7 +36,7 @@ class Dispatch extends DispatchModel
 			$query->orderBy(['created_day' => SORT_DESC]);
 		}
 
-		$serviceIds = empty($this->service_id) ? [27, 28, 31] : $this->service_id;
+		$serviceIds = empty($this->service_id) ? null : $this->service_id;
         $query->andFilterWhere([
             'service_id' => $serviceIds,
         ]);
