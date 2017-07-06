@@ -26,6 +26,7 @@ trait UserMerchantTrait
 
     public function rules()
     {
+        return [];
     }
 
     public function attributeLabels()
@@ -39,6 +40,13 @@ trait UserMerchantTrait
             'updated_at' => '更新时间',
             'note' => '备注',
             'status' => '状态',
+			'userName' => '姓名',
+			'houseAddress' => '房屋地址',
+			'houseRegion' => '区县',
+			'houseArea' => '房屋面积',
+			'houseType' => '户型',
+			'houseSort' => '房屋类别',
+			'view_at' => '查看时间',
             'name' => '名称',
         ];
     }
@@ -126,8 +134,32 @@ trait UserMerchantTrait
         return $this->_newModel('user')->find()->where(['mobile' => $this->mobile])->orderBy(['id' => SORT_DESC])->one();
 	}
 
+	public function getGuestbookInfos()
+	{
+        return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->all();
+	}
+
 	public function getGuestbookModel()
 	{
-        return $guestbookModel->find()->where(['user_merchant_id' => $info['id']])->orderBy('reply_at DESC')->one();
+        return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->one();
 	}
+
+    public function addGuestbook($data)
+    {
+        $data['mobile'] = $this->mobile;
+        $data['merchant_id'] = $this->merchant_id;
+        $data['user_merchant_id'] = $this->id;
+        $data['created_at'] = Yii::$app->params['currentTime'];
+        $model = $this->_newModel('guestbook', true, $data);
+        $model->insert(false);
+    }
+
+    public function getIsLock()
+    {
+        $diff = ($this->created_at + 86400) - Yii::$app->params['currentTime'];
+        if ($diff > 0) {
+            return $this->formatTimestampShow($diff);
+        }
+        return true;
+    }
 }

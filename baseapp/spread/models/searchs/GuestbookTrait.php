@@ -4,15 +4,14 @@ namespace baseapp\spread\models\searchs;
 
 use yii\data\ActiveDataProvider;
 
-Trait UserMerchantTrait
+Trait GuestbookTrait
 {
     public $created_at_start;
     public $created_at_end;
-
     public function rules()
     {
         return [
-            [['created_at_start', 'created_at_end', 'status', 'mobile', 'merchant_id'], 'safe'],
+            [['mobile', 'merchant_id', 'created_at_start', 'created_at_end'], 'safe'],
         ];
     }
 
@@ -21,26 +20,19 @@ Trait UserMerchantTrait
         $query = self::find()->orderBy('id DESC');
 
         $dataProvider = new ActiveDataProvider(['query' => $query]);
-        if ($this->load($params, '') && !$this->validate()) {
+        if (!$this->load($params, '') || !$this->validate()) {
             return $dataProvider;
         }
-        if (!empty($this->mobile)) {
-            $query->andFilterWhere(['like', 'mobile', $this->mobile]);
-        }
-
-        $query->andFilterWhere([
-            'merchant_id' => $this->merchant_id,
-        ]);
-        $this->status = $this->status == 'all' ? null : $this->status;
-		if ($this->status !== null) {
-			$query->andWhere(['status' => $this->status]);
-		}
-        //$this->merchant_id = 0;
+		$query->andFilterWhere([
+			'merchant_id' => $this->merchant_id,
+            'mobile' => $this->mobile,
+		]);
 
         $startTime = intval(strtotime($this->created_at_start));
         $endTime = $this->created_at_end > 0 ? intval(strtotime($this->created_at_end)) : time();
         $query->andFilterWhere(['>=', 'created_at', $startTime]);
         $query->andFilterWhere(['<', 'created_at', $endTime]);
+
         return $dataProvider;
     }
 }

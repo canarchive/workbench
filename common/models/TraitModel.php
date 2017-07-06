@@ -139,6 +139,20 @@ trait TraitModel
 
     public function formatTimestamp($timestamp, $format = 'Y-m-d H:i:s')
     {
+        if (empty($timestamp)) {
+            return '';
+        }
         return  date($format, $timestamp);
+    }
+
+    public function formatTimestampShow($timestamp)
+    {
+        $day = floor($timestamp / 86400);
+        $hour = floor(($timestamp - ($day * 86400)) / 3600);
+        $minite = ceil(($timestamp - ($day * 86400) - ($hour * 3600)) / 60);
+        $str = $day ? $day . '天 ' : '';
+        $str .= $hour ? $hour . '小时 ' : '';
+        $str .= $minite . '分钟';
+        return $str;
     }
 }

@@ -78,7 +78,6 @@ Trait UserTemplate
 		foreach ($ignores as $ignore) {
 			unset($columns[$ignore]);
 		}
-
-		return array_values($columns);
+		return $columns;
 	}
 }

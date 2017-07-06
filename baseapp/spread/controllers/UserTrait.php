@@ -11,6 +11,11 @@ trait UserTrait
         return $this->_listinfoInfo();
     }
 
+    public function actionListout()
+    {
+        return $this->_listinfoInfo('listout');
+    }
+
     public function actionChangeMerchant($id)
     {
         $model = $this->findModel($id);
@@ -42,9 +47,11 @@ trait UserTrait
             $model->notice_user = isset($data[$scope]['notice_user']) ? $data[$scope]['notice_user'] : '';
             $newModel = $model->addHandle($sort);
 
-            if ($newModel) {
+            /*if ($newModel) {
                 return $this->redirect(['update', 'id' => $newModel->id]);
-            }
+            }*/
+        return Yii::$app->response->redirect($this->clientUrl)->send($this->clientUrl);
+        exit();
         }
         return ;
     }
