@@ -6,6 +6,33 @@ Yii::$app->params['tdkInfos'] = [
     'keyword' => 'weinaya，维纳亚，北京维纳亚科技有限公司',
     'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，国内首家专注装修建材行业CPA效果营销推广服务商。',
 ];
+$merchants = [
+    'jzjz' => '极装吉住',
+    'yzf' => '业之峰',
+    'tszs' => '天盛装饰',
+    'mzk' => '美宅客',
+    'jkj' => '九空间',
+    'ldjz' => '绿豆家装',
+    'op' => '欧派',
+    'aikj' => '爱空间',
+    'jjjz' => '就近家装',
+    'ypj' => '优品家',
+    'jrzj' => '居然之家',
+    'tbz' => '兔班长',
+    '50j' => '50家',
+    'dzr' => '大自然',
+    'fkjz' => '梵客家居',
+    'jfe' => '居范儿',
+    'jsy' => '金三优',
+    //'jzzs' => '今朝装饰',
+    'mdzs' => '闽东装饰',
+    'sfzf' => '盛发装饰',
+    'zkx' => '宅快修',
+    'sdzs' => '圣点装饰',
+    'yqzxw' => '一起装修网',
+    'lzz' => '中宅装饰',
+    'yzw' => '悦装网',
+];
 ?>
 <?= $this->render('../_banner'); ?>
 <div class="main-service scrollme">
@@ -75,7 +102,7 @@ Yii::$app->params['tdkInfos'] = [
 <div class="main-partner scrollme">
     <h4>合作案例</h4>
     <div class="row site-width animateme" data-translatey="800" data-scale="2" data-opacity="0" data-to="0" data-from="0.5" data-when="view">
-        <?php foreach (['jzjz' => '极装吉住', 'yzf' => '业之峰', 'tszs' => '天盛装饰', 'mzk' => '美宅客', 'jkj' => '九空间', 'ldjz' => '绿豆家装', 'jrzj' => '居然之家', 'tbz' => '兔班长', 'sfzf' => '盛发装饰', 'sdzs' => '圣点装饰', 'yqzxw' => '一起装修网', 'yzw' => '悦装网'] as $code => $sName) { ?>
+        <?php foreach ($merchants as $code => $sName) { ?>
         <div class="small-6 medium-4 large-2 columns">
             <a rel="nofollow" href="javascript: void(0);" title="<?= $sName; ?>">
             <img src="<?= Yii::getAlias('@asseturl') . '/merchant/adview/images/' . $code . '.png'; ?>" alt="<?= $sName; ?>" style="width=170px;"/></a>
