@@ -11,9 +11,4 @@ class GuestbookController extends AdminController
     public $viewPrefix = '@backend/subsite/views/guestbook/';
     protected $modelClass = 'subsite\decoration\models\Guestbook';
     protected $modelSearchClass = 'subsite\decoration\models\searchs\Guestbook';
-
-    protected function privGetIgnore()
-    {
-        return ['merchant_id', 'service_id'];
-    }
 }
