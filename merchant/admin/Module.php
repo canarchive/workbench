@@ -55,12 +55,10 @@ class Module extends ModuleBase
             $serviceIds = array_keys($serviceInfos);
             //var_dump($serviceIds);exit();
 			if ($role != 'admin') {
-                $_GET['service_id'] = $serviceIds;
                 $data['service_id'] = $serviceIds;
 			}
         }
 
-        $_GET['merchant_id'] = $merchantIds;
         return $data;
     }
 }
