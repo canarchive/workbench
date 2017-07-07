@@ -1,6 +1,7 @@
 <?php
 namespace merchant\decoration\controllers;
 
+use Yii;
 use merchant\decoration\models\Signin;
 use merchant\decoration\models\Signup;
 use merchant\components\Controller;
@@ -14,7 +15,6 @@ class EntranceController extends Controller
     {
 		parent::init();
 		$this->layout = 'main-base';
-        $this->returnUrl = '/admin/';
     }
 
 	public function getModel($sort)
@@ -28,4 +28,10 @@ class EntranceController extends Controller
 			break;
 		}
 	}
+
+    protected function getHomeUrl()
+    {
+        $redirectUrl = Yii::$app->request->get('redirect_url', '/admin/');
+        return $redirectUrl;
+    }
 }
