@@ -61,4 +61,9 @@ trait UserMerchantTrait
 
         return $datas;
     }
+
+    protected function privGetIgnore()
+    {
+        return ['merchant_id'];
+    }
 }

@@ -265,9 +265,30 @@ class AdminController extends Controller
         return parent::beforeAction($action);
     }
 
+    protected function privGetIgnore()
+    {
+        return [];
+    }
+
     public function getPrivInfo()
     {
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
+        //$_GET['merchant_id'] = '2';
+        foreach ($data as $key => & $value) {
+            if (in_array($key, $this->privGetIgnore())) {
+                unset($data[$key]);
+                continue;
+            }
+            $getSource = Yii::$app->request->get($key);
+            if (!is_null($getSource)) {
+                $diff = array_intersect((array) $getSource, $value);
+                if (empty($diff)) {
+                    throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+                }
+                $value = $getSource;
+            }
+            $_GET[$key] = $value;
+        }
         return $data;
     }
 
