@@ -272,7 +272,7 @@ class AdminController extends Controller
 
     public function getPrivInfo()
     {
-        $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
+        $data = $this->module->initPrivInfo();
         //$_GET['merchant_id'] = '2';
         foreach ($data as $key => & $value) {
             if (in_array($key, $this->privGetIgnore())) {

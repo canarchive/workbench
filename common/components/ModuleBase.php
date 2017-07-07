@@ -61,6 +61,6 @@ class ModuleBase extends \yii\base\Module
 
     public function initPrivInfo()
     {
-        return false;
+        return [];
     }
 }
