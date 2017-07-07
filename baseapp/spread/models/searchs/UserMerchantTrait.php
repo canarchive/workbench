@@ -12,7 +12,7 @@ Trait UserMerchantTrait
     public function rules()
     {
         return [
-            [['created_at_start', 'created_at_end', 'status', 'mobile', 'merchant_id'], 'safe'],
+            [['created_at_start', 'created_at_end', 'status', 'mobile', 'merchant_id', 'service_id'], 'safe'],
         ];
     }
 
@@ -30,6 +30,7 @@ Trait UserMerchantTrait
 
         $query->andFilterWhere([
             'merchant_id' => $this->merchant_id,
+            'service_id' => $this->service_id,
         ]);
         $this->status = $this->status == 'all' ? null : $this->status;
 		if ($this->status !== null) {
