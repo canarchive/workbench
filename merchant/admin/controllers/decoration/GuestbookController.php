@@ -7,4 +7,9 @@ use backend\subsite\controllers\decoration\GuestbookController as GuestbookContr
 class GuestbookController extends GuestbookControllerBase
 {
     use BaseTrait;
+
+    protected function privGetIgnore()
+    {
+        return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
+    }
 }
