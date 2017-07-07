@@ -17,7 +17,7 @@ trait PositionTrait
     public function rules()
     {
         return [
-            [['name', 'type'], 'required'],
+            [['name', 'sort'], 'required'],
             [['orderlist', 'status', 'picture', 'picture_mobile', 'picture_ext'], 'default', 'value' => 0],
 			[['description', 'url', 'name_ext'], 'safe'],
         ];
@@ -29,7 +29,7 @@ trait PositionTrait
             'id' => 'ID',
             'name' => '名称',
 			'name_ext' => '名称-预留',
-			'type' => '类型',
+			'sort' => '类型',
 			'url' => 'URL',
 			'orderlist' => '排序',
 			'picture' => '图片',
@@ -51,16 +51,9 @@ trait PositionTrait
 		return $datas;
 	}
 
-	public function getTypeInfos()
+	public function getSortInfos()
 	{
 		$datas = [
-			'index_slice' => '首页-幻灯(619X649,1920X1049)',
-			'index_goods' => '首页-商品(559X311)',
-			'index_goods_text' => '首页-图文商品(559X311)',
-			'index_sample' => '首页-样片(500X500)',
-			'list_left' => '列表页-左侧(770X365)',
-			'list_right' => '列表页-右侧(400X738',
-			'list_mobile' => '列表页-移动端(1080X897)',
 		];
 		return $datas;
 	}
