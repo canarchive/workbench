@@ -16,3 +16,9 @@ SELECT `id`, `merchant_id`, `service_id`, `status`, `status`, 0, `created_at`, u
 ------------------
 INSERT `wd_user_service` (`user_id`, `merchant_id`, `service_id`, `note`, `status`, `status_change`, `is_first`, `created_at`, `created_at_point`)
 SELECT `id`, `merchant_id`, `service_id`, `service_num`, '', `status`, 1, `created_at`, `created_at` FROM `wd_user`;
+
+
+
+SELECT `service_id`, COUNT(*), COUNT(DISTINCT(`mobile`)) FROM `wd_user_merchant` WHERE `created_day` >= 20170601 AND `created_day` <= 20170630 GROUP BY `service_id`;
+SELECT `service_id`, COUNT(*), COUNT(DISTINCT(`mobile`)) FROM `wd_user_merchant` WHERE `created_day` >= 20170601 AND `created_day` <= 20170630 AND `status` = '' GROUP BY `service_id`;
+SELECT `service_id`, COUNT(*), COUNT(DISTINCT(`mobile`)) FROM `wd_user_merchant` WHERE `created_day` >= 20170601 AND `created_day` <= 20170630 AND `status` = '' AND `merchant_id` IN (667, 669, 671, 682, 689) GROUP BY `service_id`;

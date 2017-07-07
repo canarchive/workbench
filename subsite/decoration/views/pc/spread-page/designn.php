@@ -428,7 +428,7 @@ $merchantInfo = $this->context->merchantInfo;
         <div class="topm_among">
             <div class="big_graph">
                 <a href="javascript:;" class="major_pop" tjjj="click_pc_top_nndxj" tjjj_name="暖暖的新家">
-                    <img src="http://tjasset.acanstudio.com/spread/house/third/pc_banner_fk.jpg"/></a>
+                    <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/pc_banner_tbz.jpg"/></a>
             </div>
             <div class="free_fuwu clearfix">
                 <a href="javascript:;" class="major_pop" tjjj="click_pc_free_lf" tjjj_name="免费量房">
