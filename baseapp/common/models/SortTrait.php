@@ -43,4 +43,9 @@ trait SortTrait
 
 		return true;
 	}	
+
+	public function getThumbUrl()
+	{
+		return $this->_getThumb('sort', 'thumb');
+	}
 }
