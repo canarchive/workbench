@@ -13,6 +13,9 @@ trait TraitAttachment
      */
     public $deleteAttachment = false;
 
+    protected function getAttachmentModel()
+    {}
+
     public function getAttachmentImg($id, $pointSize = true, $options = [])
     {
         $model = $this->attachmentModel;
@@ -37,8 +40,27 @@ trait TraitAttachment
         return empty($info) ? '' : $info->getUrl();
     }
 
-    protected function getAttachmentModel()
-    {}
+    protected function _getThumb($table, $field)
+    {
+		$thumbUrl = $this->getAttachmentUrl($this->attachmentWhere($table, $field));
+        if (empty($thumbUrl)) {
+		    $thumbUrl = $this->getAttachmentUrl($this->attachmentWhere($table, $field, false));
+        }
+        return $thumbUrl;
+    }
+    public function attachmentWhere($table, $field, $isMaster = true)
+    {
+        $condition = [ 
+            'info_table' => $table,
+            'info_field' => $field,
+            'info_id' => $this->id,
+            'in_use' => 1,
+        ];  
+        if ($isMaster) {
+            $condition['is_master'] = 1;
+        }
+        return $condition;
+    }
 
     protected function _updateSingleAttachment($table, $fields, $extData = [])
     {

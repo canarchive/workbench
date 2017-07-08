@@ -97,26 +97,8 @@ trait GoodsTrait
 		return $info;
 	}
 
-    protected function getThumb()
-    {
-		$thumbUrl = $this->getAttachmentUrl($this->attachmentWhere());
-        if (empty($thumbUrl)) {
-		    $thumbUrl = $this->getAttachmentUrl($this->attachmentWhere(false));
-        }
-        return $thumbUrl;
-    }
-
-    public function attachmentWhere($isMaster = true)
-    {
-        $condition = [ 
-            'info_table' => 'sample',
-            'info_field' => 'picture',
-            'info_id' => $this->id,
-            'in_use' => 1,
-        ];  
-        if ($isMaster) {
-            $condition['is_master'] = 1;
-        }
-        return $condition;
-    }
+	public function getThumbUrl()
+	{
+		return $this->_getThumb('goods', 'slide');
+	}
 }
