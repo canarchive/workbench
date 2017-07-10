@@ -4,6 +4,7 @@ return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'language' => 'zh-CN',
 	'bootstrap' => [
+        'log',
         function () {
             if (!isset(Yii::$app->i18n->translations['rbac-admin'])) {
                 Yii::$app->i18n->translations['rbac-admin'] = [
@@ -43,6 +44,15 @@ return [
         'assetManager' => [
             'basePath' => '@assetcustom/assets',
             'baseUrl' => '@asseturl/assets',
+        ],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning'],
+                ],
+            ],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
