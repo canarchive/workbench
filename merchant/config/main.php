@@ -6,12 +6,9 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
-$routeRules = [];//array_merge(
-	//require(__DIR__ . '/module/rule.php')
-//);
-//print_r($routeRules);exit();
+$currentMain = require(__DIR__ . '/main-current.php');
 
-return [
+return yii\helpers\ArrayHelper::merge([
     'id' => 'app-merchant',
     'basePath' => dirname(__DIR__),
     //'viewPath' => '@merchant/views',
@@ -22,9 +19,6 @@ return [
             'enableAutoLogin' => true,
             'loginUrl' => '/signin.html',
         ],
-        'urlManager' => [
-            'rules' => $routeRules,
-        ],
     ],
 
     'modules' => [
@@ -34,4 +28,4 @@ return [
     ],
 
     'params' => $params,
-];
+], $currentMain);
