@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 $routeRules = [];//array_merge(
-	//require(__DIR__ . '/decoration/rule.php')
+	//require(__DIR__ . '/module/rule.php')
 //);
 //print_r($routeRules);exit();
 
@@ -15,8 +15,6 @@ return [
     'id' => 'app-merchant',
     'basePath' => dirname(__DIR__),
     //'viewPath' => '@merchant/views',
-    //'layout' => null,
-    'bootstrap' => ['log'],
     'controllerNamespace' => 'merchant\controllers',
     'components' => [
         'user' => [
@@ -24,27 +22,12 @@ return [
             'enableAutoLogin' => true,
             'loginUrl' => '/signin.html',
         ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'errorHandler' => [
-            //'errorAction' => 'site/error',
-        ],
         'urlManager' => [
             'rules' => $routeRules,
         ],
     ],
 
     'modules' => [
-        'decoration' => [
-            'class' => 'merchant\decoration\Module',
-        ],
         'admin' => [
             'class' => 'merchant\admin\Module',
         ],
