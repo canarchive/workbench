@@ -10,9 +10,6 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'viewPath' => '@backend/views/charisma',
-    'bootstrap' => [
-        'log',
-    ],
     'controllerNamespace' => 'backend\controllers',
     'components' => [
         'user' => [
@@ -20,20 +17,7 @@ return [
             'enableAutoLogin' => true,
 			'loginUrl' => '/signin.html',
         ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
         'authManager' => [
-            //'class' => 'yii\rbac\PhpManager',
             'class' => 'yii\rbac\DbManager',
         ],
 		'urlManager' => [
