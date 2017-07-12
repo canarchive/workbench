@@ -20,6 +20,7 @@ class Base extends AbstractModel
     public function __construct()
     {
         $this->code = 'flowerplus';
+		exit();
         //$file = Yii::getAlias('@spider') . '/config/jia/jia-urls.php';
         //$this->configInfo = require $file;
     }
