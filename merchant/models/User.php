@@ -36,7 +36,7 @@ class User extends AuthBase
         return [
             'default' => ['merchant_id', 'role', 'status'],
             'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id', 'create_service'],
-            'update' => ['name', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id', 'create_service'],
+            'update' => ['name', 'mobile', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id', 'create_service'],
             //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
             'edit-info' => ['email'],//, 'mobile'],
             'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
