@@ -10,8 +10,6 @@ $jsFiles = [
     'jquery.min', 'to8torsas', 'zbcommon',
 ];
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/tobj/js/']);
-$this->params['formPosition'] = 'hd-tobj';
-$this->params['formPositionName'] = '活动-报价详情';
 
 Yii::$app->params['tdkInfos']['title'] =  '装修报价-装修预算表_装修到底需要多少钱';
 Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';

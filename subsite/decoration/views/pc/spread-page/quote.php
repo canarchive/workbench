@@ -195,8 +195,8 @@ $owners = $this->context->ownerInfos;
                 city_input: ''
             };
             //$("#pro").val() + $("#city").val(),
-            $data.position = 'pcbj';
-            $data.position_name = 'pc报价页';
+            $data.position = $("#poistion").val();
+            $data.position_name = $("#poistion_name").val();
             $data.cid = $("#cid").val();
             $data._csrf = $("#_csrf").val();
             $.ajax({

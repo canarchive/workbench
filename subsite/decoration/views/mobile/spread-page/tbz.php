@@ -8,8 +8,6 @@ $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' =
 $jsFiles = ['jquery-1.11.3.min'];
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/baojia/js/']);
 $this->params['bodyClass'] = 'bg-f2';
-$this->params['formPosition'] = 'hd-bjnew';
-$this->params['formPositionName'] = '活动推广-报价new';
 Yii::$app->params['tdkInfos']['title'] =  '装修报价-上海装修报价单_上海装修预算表_上海装修到底需要多少钱-兔班长装修网';
 Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
 Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';

@@ -8,8 +8,6 @@ $cssFiles = [
 $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'spread/house/znbj/css/']);
 $this->params['bodyClass'] = 'narrow_980';
 $this->params['currentNav'] = 'free';
-$this->params['formPosition'] = 'hd-baojia';
-$this->params['formPositionName'] = '活动-报价';
 
 $urls = $this->context->navUrls;
 

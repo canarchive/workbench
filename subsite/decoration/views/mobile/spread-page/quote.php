@@ -9,8 +9,6 @@ $jsFiles = ['jquery-1.11.3.min'];
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/baojia/js/']);
 
 $this->params['bodyClass'] = 'bg-f2';
-$this->params['formPosition'] = 'hd-bjnew';
-$this->params['formPositionName'] = '活动推广-报价new';
 $currentCode = $this->context->merchantInfo['code'];
 ?>
 <script>

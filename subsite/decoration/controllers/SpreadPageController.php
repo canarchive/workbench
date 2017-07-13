@@ -35,6 +35,9 @@ class SpreadPageController extends Controller
             return $this->redirect('/')->send();
         }
         $tInfo = $tInfos[$code];
+        $this->pagePosition = $code;
+        $this->pagePositionName = $tInfo['name'];
+
         $code = $this->formatCode($code, $tInfo);
         $model = new SignupForm();
 		$cid = (int) Yii::$app->request->get('cid', 2);
