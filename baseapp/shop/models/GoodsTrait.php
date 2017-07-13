@@ -5,6 +5,7 @@ namespace baseapp\shop\models;
 trait GoodsTrait
 {
 	public $picture;
+	public $slide;
 
     public static function tableName()
     {
@@ -34,9 +35,11 @@ trait GoodsTrait
             'brand_id' => '品牌ID',
             'name' => '产品名称',
 			'brief' => '摘要',
+			'slide' => '轮播图',
             'period' => '期数',
             'orderlist' => '排序',
             'price_market' => '市场价格',
+            'price_range' => '价格区间',
             'price' => '本站价格',
             'inventory' => '商品库存',
             'keyword' => '商品关键词',
@@ -94,26 +97,8 @@ trait GoodsTrait
 		return $info;
 	}
 
-    protected function getThumb()
-    {
-		$thumbUrl = $this->getAttachmentUrl($this->attachmentWhere());
-        if (empty($thumbUrl)) {
-		    $thumbUrl = $this->getAttachmentUrl($this->attachmentWhere(false));
-        }
-        return $thumbUrl;
-    }
-
-    public function attachmentWhere($isMaster = true)
-    {
-        $condition = [ 
-            'info_table' => 'sample',
-            'info_field' => 'picture',
-            'info_id' => $this->id,
-            'in_use' => 1,
-        ];  
-        if ($isMaster) {
-            $condition['is_master'] = 1;
-        }
-        return $condition;
-    }
+	public function getThumbUrl()
+	{
+		return $this->_getThumb('goods', 'slide');
+	}
 }

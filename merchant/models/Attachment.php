@@ -2,7 +2,6 @@
 
 namespace merchant\models;
 
-use common\models\WebsiteModel;
 use common\models\Attachment as AttachmentBase;
 
 class Attachment extends AttachmentBase
