@@ -79,6 +79,7 @@ trait SignupFormTrait
             $datas[$field] = in_array($field, $this->_intFields) ? intval($value) : $value;
             //$datas[$field] = trim(strip_tags(Yii::$app->request->get($field)));
         }
+        $datas['note'] .= trim(strip_tags(Yii::$app->request->post('position_name', '')));
 
         $datas['merchant_id'] = intval($datas['cid']);
         $datas['client_type'] = $this->isMobile ? 'h5' : 'pc';
