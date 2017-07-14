@@ -153,6 +153,13 @@ trait UserTrait
             return ['status' => 400, 'message' => '已派单'];
         }
 
+        $time = Yii::$app->params['currentTime'];
+        $model->created_month = date('Ym', $time);
+        $model->created_day = date('Ymd', $time);
+        $model->created_week = date('W', $time);
+        $model->created_weekday = date('N', $time);
+        $model->user_id = $userModel->id;
+
         $model->insert(false);
         $userModel->sendSmsValid($model, $userModel);
         $noteData = [
