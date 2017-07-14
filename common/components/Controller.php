@@ -19,6 +19,7 @@ class Controller extends YiiController
     public $currentSiteInfo;
     public $currentPage;
     public $currentElem;
+    public $menuInfos = [];
 
     /**
      * @inheritdoc

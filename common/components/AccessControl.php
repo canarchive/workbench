@@ -6,7 +6,6 @@ use Yii;
 use yii\web\ForbiddenHttpException;
 use yii\web\User;
 use yii\di\Instance;
-use yii\helpers\Url;
 
 class AccessControl extends \yii\base\ActionFilter
 {
@@ -74,7 +73,7 @@ class AccessControl extends \yii\base\ActionFilter
         }
 
         $currentMenu = $this->_checkCurrentMenu($action);
-        if ($currentMenu['extparam'] == 'modal') {
+        if (isset($currentMenu['extparam']) && $currentMenu['extparam'] == 'modal') {
             Yii::$app->layout = null;
         }
 

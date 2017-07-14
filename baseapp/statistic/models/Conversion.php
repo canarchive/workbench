@@ -60,6 +60,7 @@ class Conversion extends Visit
             'mobile' => ['default' => ''], 
             'name' => ['default' => ''], 
             'channel' => ['default' => ''], 
+            'position' => ['default' => ''],
             'note' => ['default' => ''], 
         ];
         return $fields;
