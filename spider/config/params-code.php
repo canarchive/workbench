@@ -3,6 +3,9 @@ return [
 	'flowerplus' => [
 		'name' => '花加',
 	],
+    'dnflower' => [
+        'name' => '花材',
+    ],
     'merchant' => [
         'name' => '装修公司',
     ],
