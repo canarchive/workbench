@@ -142,8 +142,8 @@ trait UserTrait
         if (!empty($this->merchant_id)) {
             $this->_sendSms($data, $newUser->serviceInfo);
         }
-		$sDatas = $conversion->toArray();
-        $this->statisticRecord($sDatas, 'signup');
+		//$sDatas = $conversion->toArray();
+        //$this->statisticRecord($sDatas, 'signup');
 
         return $newUser;
     }
