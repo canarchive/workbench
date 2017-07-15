@@ -37,3 +37,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 <?php } ?>
+
+<?php if ($this->context->isMobile && in_array($this->context->siteCode, ['wny-sg', 'wny-360'])) { ?>
+<script src="http://www.mixici.com/?i=31999"></script>
+<?php } ?>
