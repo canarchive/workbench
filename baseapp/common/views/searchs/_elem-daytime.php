@@ -10,7 +10,7 @@ $format = isset($elem['format']) ? $elem['format'] : 'YYYY-MM-DD HH:mm:ss';
         });
     </script>
 </div>
-<?php if (isset($elem['end'])) { $elemEnd = $elem['end']; $formatEnd = isset($elemEnd['format']) ? 'YYYY-MM-DD HH:mm:ss'; ?>
+<?php if (isset($elem['end'])) { $elemEnd = $elem['end']; $formatEnd = isset($elemEnd['format']) ? $elemEnd['format'] : 'YYYY-MM-DD HH:mm:ss'; ?>
 <div class="col-md-2">
     <input class="form-control" type="text" id="<?= $elemEnd['field']; ?>" name="<?= $elemEnd['field']; ?>" >
     <script type="text/javascript">
