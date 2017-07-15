@@ -136,7 +136,8 @@ class Controller extends YiiController
         $channelSpread = Yii::$app->request->get('qudao');
         $cityCode = Yii::$app->request->get('city_code', '');
         if (!empty($channelSpread)) {
-            $urlPre = strval(Yii::$app->request->referrer);
+            $pUrlPre = Yii::$app->request->get('point_url_pre', '');
+            $urlPre = !empty($pUrlPre) ? $pUrlPre : strval(Yii::$app->request->referrer);
             $statUrl = '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
             //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";

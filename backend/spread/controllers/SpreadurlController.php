@@ -21,6 +21,7 @@ class SpreadurlController extends AdminController
             'siteCode' => Yii::$app->request->get('site_code'),
             'templateCode' => Yii::$app->request->get('template'),
             'channel' => Yii::$app->request->get('channel'),
+            'siteRedirect' => Yii::$app->request->get('site_redirect'),
             'attrs' => $this->dealParams($model->attributeParams),
         ];
         $params['channel'] = empty($params['channel']) ? 'bd' : $params['channel'];

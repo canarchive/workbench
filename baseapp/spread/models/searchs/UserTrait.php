@@ -54,4 +54,31 @@ Trait UserTrait
 
         return $dataProvider;
     }
+
+    public function getSearchDatas()
+    {
+        $list = [
+            [
+                'name' => '商家',
+                'field' => 'merchant_id',
+                'infos' => $this->getPointInfos('merchant'),
+            ],
+        ];
+        $form = [
+        [
+            [
+                'name' => '手机号',
+                'field' => 'mobile',
+                'type' => 'text',
+            ],
+            [
+                'name' => '创建时间',
+                'field' => 'created_at_start',
+                'type' => 'daytime',
+            ],
+        ],
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
+    }
 }

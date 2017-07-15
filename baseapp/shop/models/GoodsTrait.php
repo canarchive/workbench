@@ -23,7 +23,7 @@ trait GoodsTrait
             [['name', 'sort', 'price'], 'required'],
             [['orderlist', 'status', 'price_market'], 'default', 'value' => 0],
             [['price', 'price_market'], 'double'],
-			[['brief', 'picture', 'keyword', 'description', 'content'], 'safe'],
+			[['book_month', 'brief', 'picture', 'keyword', 'description', 'content'], 'safe'],
         ];
     }
 
