@@ -54,6 +54,24 @@ class SpreadPageController extends Controller
         return $this->render($code, $datas);   
     }
 
+    public function actionSiteRedirect()
+    {
+        $rdomain = Yii::$app->request->get('rdomain', '');
+        $siteInfos = $this->siteInfos;
+        $rdomain = in_array($rdomain, array_keys($siteInfos)) ? $rdomain : '';
+        //echo $this->clientUrl;
+        //print_r($this->siteInfos);exit();
+        $clientType = $this->clientType == 'pc' ? 'pc' : 'm';
+        $domain = $siteInfos[$rdomain]['domains'][$clientType];
+        $clientUrl = str_replace("/sr-{$rdomain}", '', $this->clientUrl);
+        $url = $domain . $clientUrl;
+        $url .= strpos($url, '?') === false ? '?' : '';
+
+        $urlPre = strval(Yii::$app->request->referrer);
+        $url .= $url . '&point_url_pre=' . $urlPre;
+        header("Location:$url");
+    }
+
     protected function getReturnUrl()
     {
         $default = [

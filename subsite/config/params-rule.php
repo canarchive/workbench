@@ -43,6 +43,12 @@ return [
         ],
     ],
 
+    'redirect' => [
+        'data' => [
+			'pattern' => '/sr-<rdomain>/bm-<tcode:\w+>-<city_code:\w+>',
+    		'route'	=> '/{{SORT}}/spread-page/site-redirect',
+        ],
+    ],
     'page' => [
         'data' => [
 			'pattern' => '/bm-<tcode:\w+>-<city_code:\w+>',

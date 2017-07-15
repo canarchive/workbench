@@ -17,6 +17,7 @@ $gridViewParams = [
     'columns' => $columns,
 ];
 
-echo $this->render('@baseapp/spread/views/user/_nav-status', ['model' => $searchModel]);
-$searchContent = $this->render('@baseapp/spread/views/user/_search', array_merge($searchDatas, ['model' => $searchModel]));
+//echo $this->render('@baseapp/spread/views/user/_nav-status', ['model' => $searchModel]);
+//$searchContent = $this->render('@baseapp/spread/views/user/_search', array_merge($searchDatas, ['model' => $searchModel]));
+$searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);

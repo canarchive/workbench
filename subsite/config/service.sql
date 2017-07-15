@@ -1,3 +1,5 @@
+SELECT `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d'), COUNT(*) FROM `wd_user` WHERE FROM_UNIXTIME(`created_at`, '%Y%m%d') >= 20170701 AND `merchant_id` = 2 GROUP BY FROM_UNIXTIME(`created_at`, '%Y%m%d'), `service_id`;
+
 UPDATE `wd_user` AS `u`, `wd_user_merchant` AS `m` SET `m`.`user_id` = `u`.`id` WHERE `m`.`user_id` = 0 AND `m`.`mobile` = `u`.`mobile` AND `u`.`merchant_id` = 2;
 
 UPDATE `wd_user` AS `u`, `wd_user_merchant` AS `m` SET `u`.`status` = 'valid-back' WHERE `u`.`id` = `m`.`user_id`;
