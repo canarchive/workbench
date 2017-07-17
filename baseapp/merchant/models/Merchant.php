@@ -20,9 +20,9 @@ class Merchant extends MerchantModel
     {
         return [
             [['name', 'city_code'], 'required'],
-            [['status', 'orderlist'], 'integer'],
-            [['status', 'orderlist'], 'default', 'value' => '0'],
-            [['msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+            [['orderlist'], 'integer'],
+            [['orderlist'], 'default', 'value' => '0'],
+            [['status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
         ];
     }
 
