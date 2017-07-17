@@ -5,47 +5,26 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
-        [
-            'attribute' => 'merchant_id',
-            'value' => function($model) {
-                return $model->getPointName('merchant', $model->merchant_id);
-            },
-        ],
         'name',
-        'bank_account',
-        [
-            'attribute' => 'bank_name',
-            'value' => function($model) {
-                return $model->bankNameInfos[$model->bank_name];
-            }
-        ],
-        'bank_opening',
-        [
-            'attribute' => 'type',
-            'value' => function($model) {
-                return isset($model->typeInfos[$model->type]) ? $model->typeInfos[$model->type] : '';
-            }
-        ],
-        'orderlist',
+        'mobile',
         [
             'attribute' => 'created_at',
             'value'=> function($model){
-                return  date('Y-m-d H:i:s',$model->created_at);
+                return $model->formatTimestamp($model->created_at);
             },
         ],
         [
             'attribute' => 'updated_at',
             'value'=> function($model){
-                return  date('Y-m-d H:i:s',$model->updated_at);
+                return $model->formatTimestamp($model->updated_at);
             },
         ],
         [
             'attribute' => 'status',
             'value' => function($model) {
-                return $model->statusInfos[$model->status];
+                return $model->getKeyName('status', $model->status);
             }
         ],
-        'description',
     ],
 ];
 
