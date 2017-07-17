@@ -16,6 +16,7 @@ $merchantInfos = $model->getPointInfos('merchant', ['where' => ['status' => 2]])
     <?= $form->field($model, 'city_code')->dropDownList($model->getPointInfos('company', ['indexName' => 'code', 'where' => ['status' => 2]]), ['prompt' => '']); ?>
     <?= $form->field($model, 'channel')->dropDownList($model->channelInnerInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($merchantInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'service_id')->dropDownList($model->getPointInfos('service', ['where' => ['status' => 1]]), ['prompt' => '']); ?>
     <?= $form->field($model, 'notice_merchant')->dropDownList($model->noticeMerchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'notice_user')->dropDownList($model->noticeUserInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'note')->textarea(['rows' => 2]) ?>
