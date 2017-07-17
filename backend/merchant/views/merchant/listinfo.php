@@ -6,22 +6,17 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
-        'name',
-        'name_full',
         [
-            'format' => 'raw',
-            'attribute' => 'logo',
+            'attribute' => 'sort',
             'value' => function($model) {
-                return $model->getAttachmentImg($model->logo);
-            }
-        ],
-        /*'city_code',
-        [
-            'attribute' => 'sort_id',
-            'value' => function($model) {
-                $return = isset($model->sortInfos[$model->sort]) ? $model->sortInfos[$model->sort] : '';
+                return $model->getKeyName('sort', $model->sort);
             },
-        ],*/
+        ],
+        'code',
+        'name',
+        //'name_full',
+        'city_code',
+        'region',
         [
             'format' => 'raw',
             'attribute' => 'orderlist',
@@ -34,13 +29,19 @@ $gridViewParams = [
         [
             'attribute' => 'created_at',
             'value'=> function($model){
-                return  date('Y-m-d H:i:s',$model->created_at);
+                return  $model->formatTimestamp($model->created_at);
+            },
+        ],
+        [
+            'attribute' => 'updated_at',
+            'value'=> function($model){
+                return  $model->formatTimestamp($model->updated_at);
             },
         ],
         [
             'attribute' => 'status',
             'value' => function($model) {
-                return $model->statusInfos[$model->status];
+                return $model->getKeyName('status', $model->status);
             }
         ],
     ],

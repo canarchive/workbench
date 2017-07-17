@@ -5,36 +5,36 @@ $detailViewParams = [
     'attributes' => [
         'id',
         [
-            'format' => 'raw',
-            'attribute' => 'logo',
-            'value' => $model->getAttachmentImg($model->logo, false),
+            'attribute' => 'sort',
+            'value' => $model->getKeyName('sort', $model->sort),
         ],
+        'code',
         'name',
         'name_full',
         [
             'attribute' => 'city_code',
             'value' => $model->getPointName('company', ['code' => $model->city_code]),
         ],
-        [
-            'attribute' => 'sort',
-            'value' => $model->getKeyName('sort', $model->sort),
-        ],
+        'region',
+        'orderlist',
         'hotline',
         'postcode',
         'address',
+        'homeurl',
         [
             'attribute' => 'status',
-            'value' => $model->statusInfos[$model->status],
+            'value' => $model->getKeyName('status', $model->status),
         ],
         [
             'attribute' => 'created_at',
-            'value'=> date('Y-m-d H:i:s',$model->created_at),
+            'value'=> $model->formatTimestamp($model->created_at),
         ],
         [
             'attribute' => 'updated_at',
-            'value'=> date('Y-m-d H:i:s',$model->updated_at),
+            'value'=> $model->formatTimestamp($model->updated_at),
         ],
         'brief',
+        'msg',
         'description',
     ],
 ];
