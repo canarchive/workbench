@@ -20,8 +20,8 @@ class Merchant extends MerchantModel
     {
         return [
             [['name', 'city_code'], 'required'],
-            [['logo', 'status', 'orderlist'], 'integer'],
-            [['logo', 'status', 'orderlist'], 'default', 'value' => '0'],
+            [['status', 'orderlist'], 'integer'],
+            [['status', 'orderlist'], 'default', 'value' => '0'],
             [['msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
         ];
     }
@@ -35,7 +35,6 @@ class Merchant extends MerchantModel
             'city_code' => '分站代码',
             'sort' => '类别',
             'orderlist' => '排序',
-            'logo' => 'LOGO',
             'hotline' => '电话',
             'postcode' => '邮编',
             'address' => '地址',
@@ -70,21 +69,6 @@ class Merchant extends MerchantModel
     {
         parent::afterSave($insert, $changedAttributes);
 
-        $fields = ['logo'];
-        $this->_updateSingleAttachment('merchant', $fields);
-
         return true;
-    }
-
-    public function getSpreadModel($modelName)
-    {
-        $sort = $this->sort;
-        if (empty($sort)) {
-            return null;
-        }
-
-        $modelName = ucfirst($modelName);
-        $class = "\spread\\{$sort}\models\searchs\\{$modelName}";
-        return new $class();
     }
 }

@@ -47,11 +47,10 @@ trait UserTrait
             $model->notice_user = isset($data[$scope]['notice_user']) ? $data[$scope]['notice_user'] : '';
             $newModel = $model->addHandle($sort);
 
-            /*if ($newModel) {
-                return $this->redirect(['update', 'id' => $newModel->id]);
-            }*/
-        return Yii::$app->response->redirect($this->clientUrl)->send($this->clientUrl);
-        exit();
+            if ($newModel) {
+                $url = $this->menuInfos['appMenus']['listinfo']['url'];
+                return $this->redirect($url);
+            }
         }
         return ;
     }
