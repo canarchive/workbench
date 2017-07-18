@@ -4,7 +4,7 @@ Yii::$app->params['tdkInfos'] = [
     'keyword' => '合作商家助手，SEM账户托管合作,装修公司CPA合作',
     'description' => '合作商家助手',
 ];
-$this->params['currentElem'] = 'ask';
+$this->params['currentElem'] = 'material';
 ?>
 <div class="captcha-banner">
     <div class="row site-width">

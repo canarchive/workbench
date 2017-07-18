@@ -2,6 +2,14 @@
 use yii\helpers\Url;
 
 $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'] : 'index';
+$navDatas = [
+    'cpa' => 'CPA服务',
+    'sem' => '竞价托管',
+    'seo' => '网站SEO',
+    'customizing' => '企业定制',
+    'ask' => '合作须知',
+    'material' => '合作商家助手',
+];
 ?>
 <?php $this->beginContent('@merchant/decoration/views/layouts/main-base.php'); ?>
 <div class="off-canvas-wrap">
@@ -25,12 +33,9 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
                         </div>
                         <nav class="nav right">
                             <a href="<?= Yii::getAlias('@web'); ?>" title="<?= Yii::$app->params['siteNameBase']; ?>" <?php if ($currentElem == 'index') { echo 'class="active"'; } ?>>首页</a>
-                            <a href="/sp-cpa.html" title="CPA服务" <?php if ($currentElem == 'cpa') { echo 'class="active"'; } ?>>CPA服务</a>
-                            <a href="/sp-sem.html" title="竞价托管" <?php if ($currentElem == 'sem') { echo 'class="active"'; } ?>>竞价托管</a>
-                            <a href="/sp-seo.html" title="网站SEO" <?php if ($currentElem == 'seo') { echo 'class="active"'; } ?>>网站SEO</a>
-                            <a href="/sp-customizing.html" title="企业定制" <?php if ($currentElem == 'customizing') { echo 'class="active"'; } ?>>企业定制</a>
-                            <a href="/sp-ask.html" title="合作须知" <?php if ($currentElem == 'ask') { echo 'class="active"'; } ?>>合作须知</a>
-                            <a href="/sp-material.html" title="合作商家助手" <?php if ($currentElem == 'material') { echo 'class="active"'; } ?>>合作商家助手</a>
+                            <?php foreach ($navDatas as $nav => $nName) { ?>
+                            <a href="/sp-<?= $nav; ?>.html" title="<?= $nName; ?>" <?php if ($currentElem == $nav) { echo 'class="active"'; } ?>><?= $nName; ?></a>
+                            <?php } ?>
                         </nav>
                     </div>
                 </div>
