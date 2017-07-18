@@ -8,11 +8,13 @@ use baseapp\statistic\models\Dispatch as DispatchModel;
 class Dispatch extends DispatchModel
 {
     public $field_hit;
+	public $created_at_start;
+	public $created_at_end;
 
     public function rules()
     {
         return [
-            [['service_id', 'field_hit', 'created_day', 'merchant_id'], 'safe'],
+            [['service_id', 'field_hit', 'created_day', 'created_at_start', 'created_at_end', 'merchant_id'], 'safe'],
         ];
     }
 
@@ -44,6 +46,10 @@ class Dispatch extends DispatchModel
         $query->andFilterWhere([
             'merchant_id' => $this->merchant_id,
         ]);
+        $startTime = intval($this->created_at_start);
+        $endTime = $this->created_at_end > 0 ? intval($this->created_at_end) : date('Ymd');
+        $query->andFilterWhere(['>=', 'created_day', $startTime]);
+        $query->andFilterWhere(['<=', 'created_day', $endTime]);
 
         return $dataProvider;        
     }    
@@ -62,5 +68,35 @@ class Dispatch extends DispatchModel
             }
         }
         return $fields;
+    }
+
+    public function getSearchDatas()
+    {
+        $list = [];
+        /*[
+            [
+                'name' => '商家',
+                'field' => 'merchant_id',
+                'infos' => $this->getPointInfos('merchant'),
+            ],
+        ];*/
+        $form = [
+        [
+            [
+                'name' => '派单时间',
+                'field' => 'created_at_start',
+                'type' => 'daytime',
+                'format' => 'YYYYMMDD',
+                'end' => [
+                    'name' => '创建时间',
+                    'field' => 'created_at_end',
+                    'type' => 'daytime',
+                    'format' => 'YYYYMMDD',
+                ],
+            ],
+        ],
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }
