@@ -22,7 +22,7 @@ class Merchant extends MerchantModel
             [['name', 'city_code'], 'required'],
             [['orderlist'], 'integer'],
             [['orderlist'], 'default', 'value' => '0'],
-            [['status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+            [['callback_next', 'saleman_id', 'callback_num', 'interview_num', 'status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
         ];
     }
 
