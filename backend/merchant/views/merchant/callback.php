@@ -1,6 +1,7 @@
 <?php
 echo $this->render('_base_info', ['model' => $model]);
 //echo $this->render('_listinfo_interview', ['merchantModel' => $model, 'interviewInfos' => $interviewInfos, 'contactInfos' => $contactInfos]);
+echo $this->render('_listinfo_contact', ['merchantModel' => $model, 'contactInfos' => $contactInfos]);
 echo $this->render('_listinfo_callback', ['merchantModel' => $model, 'callbackInfos' => $callbackInfos, 'contactInfos' => $contactInfos]);
 ?>
 <script type="text/javascript">
