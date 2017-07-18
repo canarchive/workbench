@@ -22,16 +22,16 @@ $form = ActiveForm::begin([
     <?php foreach ($elemLists as $elem) { echo $this->render('_elem-list', ['elem' => $elem, 'model' => $model]); } ?> 
     <div class="box-inner">
         <div class="box-create">
-            <?php foreach ($elemForms as $elemSubs) { ?>
+            <?php $i = 1; $num = count($elemForms); foreach ($elemForms as $elemSubs) { ?>
             <div class="form-group form-group-sm">
                 <?php foreach ($elemSubs as $elem) { $eView = "_elem-{$elem['type']}"; echo $this->render($eView, ['elem' => $elem, 'model' => $model]); } ?>
-            </div>
-            <?php } ?>
-            <div class="form-group form-group-sm">
+                <?php if ($i == $num) { ?>
                 <div class="col-md-2">
                     <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
                 </div>
+                <?php } ?>
             </div>
+            <?php $i++; } ?>
         </div>
     </div>
 </div>

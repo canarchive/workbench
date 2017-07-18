@@ -75,6 +75,11 @@ Trait UserTrait
                 'name' => '创建时间',
                 'field' => 'created_at_start',
                 'type' => 'daytime',
+                'end' => [
+                    'name' => '创建时间',
+                    'field' => 'created_at_end',
+                    'type' => 'daytime',
+                ],
             ],
         ],
         ];
