@@ -13,6 +13,11 @@ class NewMerchantController extends AdminController
     protected $modelClass = 'merchant\models\NewMerchant';
     protected $modelSearchClass = 'merchant\models\searchs\NewMerchant';
 
+    public function actionImport()
+    {
+    	return $this->_importInfo();
+    }
+
     public function actionCallback($id)
     {
         $datas = $this->_datas($id);

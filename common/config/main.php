@@ -41,7 +41,7 @@ return [
             'suffix' => '.html',
             'rules' => [
 				['pattern' => '/captcha', 'route' => '/site/captcha'],
-                ['pattern' => '/upload/<table:\w+>/<field:\w+>', 'route' => '/upload/index'],
+                ['pattern' => '/upload/<table>/<field>', 'route' => '/upload/index'],
 				'debug/<controller>/<action>' => 'debug/<controller>/<action>',
             ],
         ],

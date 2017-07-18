@@ -22,7 +22,7 @@ class Contact extends MerchantModel
         return [
             [['name', 'merchant_id', 'mobile'], 'required'],
             [['orderlist', 'status'], 'default', 'value' => 0],
-            [['type', 'description', 'wechat'], 'safe'],
+            [['title', 'description', 'wechat'], 'safe'],
         ];
     }
 
@@ -34,21 +34,12 @@ class Contact extends MerchantModel
             'name' => '名字',
             'mobile' => '手机号',
             'wechat' => '微信号',
-            'type' => '类型',
+            'title' => '头衔',
             'orderlist' => '排序',
             'status' => '是否显示',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
             'description' => '描述',
         ];
-    }
-
-    public function getTypeInfos()
-    {
-        $datas = [
-            'order' => '订单联系人',
-            'money' => '汇款联系人',
-        ];
-        return $datas;
     }
 }
