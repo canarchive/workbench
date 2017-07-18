@@ -7,4 +7,5 @@ use backend\subsite\controllers\decoration\DispatchController as DispatchControl
 class DispatchController extends DispatchControllerBase
 {
     use BaseTrait;
+    public $limitSearch = true;
 }
