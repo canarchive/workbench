@@ -8,9 +8,9 @@ use yii\bootstrap\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => $model->formatPriv('merchant_id', 'id', $this->context->privInfo)]), ['prompt' => '']); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'mobile')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'wechat')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'type')->dropDownList($model->typeInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'orderlist')->textInput() ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>

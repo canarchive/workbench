@@ -12,14 +12,9 @@ $gridViewParams = [
             },
         ],
         'name',
+        'title',
         'mobile',
         'wechat',
-        [
-            'attribute' => 'type',
-            'value' => function($model) {
-                return isset($model->typeInfos[$model->type]) ? $model->typeInfos[$model->type] : '';
-            }
-        ],
         'orderlist',
         [
             'attribute' => 'created_at',
