@@ -27,6 +27,7 @@ class NewCallback extends MerchantModel
             'id' => '统计信息ID',
             'mobile' => '手机号',
             'service_id' => '客服ID',
+            'status' => '状态',
             'content' => '回访纪要',
             'created_at' => '创建时间',
             'update_at' => '更新时间',
