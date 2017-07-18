@@ -20,10 +20,11 @@ $modelNew = $merchantModel->_newModel('newCallback');
                         <td>
                         <?= Html::dropDownList(
                             "status",
-                            '',
+                            $merchantModel->status,
                             $modelNew->statusInfos,
                             [
                                 'prompt' => '全部',
+                                'id' => 'callback_status',
                                 'class' => 'form-control',
                             ]
                         ); ?>
@@ -44,6 +45,7 @@ $modelNew = $merchantModel->_newModel('newCallback');
             <table class="table table-striped table-bordered responsive">
                 <thead>
                     <tr>
+                        <th><?= $modelNew->getAttributeLabel('status'); ?></th>
                         <th><?= $modelNew->getAttributeLabel('content'); ?></th>
                         <th><?= $modelNew->getAttributeLabel('created_at'); ?></th>
                     </tr>
@@ -51,6 +53,7 @@ $modelNew = $merchantModel->_newModel('newCallback');
                 <tbody id="callback_infos">
                 <?php foreach ($callbackInfos as $model) { ?>
                     <tr>
+                        <td><?= $model->getKeyName('status', $model->status); ?></td>
                         <td><?= $model->content; ?></td>
                         <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
                     </tr>
@@ -76,7 +79,7 @@ function addCallback()
         'operation': 'add',
         'table': '<?= $tableName; ?>',
         'content': content,
-        'note': $("#callback_note").val()
+        'status': $("#callback_status").val()
     };
 
     addElemForUser(data);

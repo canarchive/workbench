@@ -55,11 +55,15 @@ class NewMerchantController extends AdminController
             return ['status' => 400, 'message' => "{$table}有误"];
         }
         $params = [];
+        $tables = ['callback', 'merchant', 'interview'];
+        if (!in_array($table, $tables)) {
+            return ['status' => 400, 'message' => "{$table}有误"];
+        }
         if ($operationType == 'update') {
             $infoId = $params['infoId'] = Yii::$app->request->post('info_id');
             $field = $params['field'] = Yii::$app->request->post('field');
             $value = $params['value'] = Yii::$app->request->post('value');
-            if (empty($table) || !in_array($table, $this->tableInfos) || empty($infoId) || empty($field)) {
+            if (empty($infoId) || empty($field)) {
                 return ['status' => 400, 'message' => '参数错误'];
             }
         }
@@ -77,7 +81,7 @@ class NewMerchantController extends AdminController
 
     protected function _callbackOperation($merchantModel, $operationType, $params)
     {
-        $model = $this->_getModel('callback');
+        $model = $this->_getModel('newCallback');
         if ($operationType == 'update') {
             return $this->_update($model, $params);
         }
@@ -136,7 +140,7 @@ class NewMerchantController extends AdminController
         }
         $field = $params['field'];
         $value = $params['value'];
-        if ($field == 'callback_again') {
+        if ($field == 'callback_next') {
             $value = !empty($value) ? strtotime($value) : $model->callback_again;
         }
         $info->$field = $value;

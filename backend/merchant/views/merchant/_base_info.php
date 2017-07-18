@@ -54,6 +54,7 @@ $tableName = 'merchant';
                 </thead>
                 <tbody>
                 <tr>
+                    <td><?= $model->getKeyName('status', $model->status); ?></td>
                     <td><?= $model->interview_num; ?></td>
                     <td><?= $model->callback_num; ?></td>
                     <td>
