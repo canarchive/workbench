@@ -89,7 +89,7 @@ trait TraitAttachment
         return ;
     }
 
-	public function uploadElem($table, $field)
+	public function uploadElem($table, $field, $accept = 'image/*')
 	{
 		$attachment = $this->attachmentModel;
         $fieldElem = $attachment->getFieldInfos($table, $field);
@@ -101,7 +101,7 @@ trait TraitAttachment
             'fieldOptions' => [
     			'isSingle' => $fieldElem['isSingle'],
     			'idField' => Html::getInputId($this, $field),
-                'accept' => 'image/*'
+                'accept' => $accept
             ],
             'clientOptions' => [
     		    //'dataType' => 'json',
@@ -109,4 +109,30 @@ trait TraitAttachment
             ],
         ]);
 	}
+
+    public function _importDatas()
+    {   
+        $aId = $this->import;
+        if (empty($aId)) {
+            $this->addError('error', '参数错误');
+            return false;
+        }   
+
+        $attachment = $this->attachmentModel->findOne($aId);
+        if (empty($attachment)) {
+            $this->addError('error', '指定的文件参数有误，请重新上传');
+            return false;
+        }   
+        $file = $attachment->getPathBase($attachment->path_prefix) . '/' . $attachment->filepath;
+        if (!file_exists($file)) {
+            $this->addError('error', '指定的文件不存在，请重新上传');
+            return false;
+        }   
+        $datas = $this->importDatas($file);
+        if (empty($datas)) {
+            $this->addError('import', '没有数据');
+            return false;
+        }
+        return $datas;
+    }
 }

@@ -127,7 +127,7 @@ class AdminController extends Controller
             return $this->redirect(['listinfo']);
         }
 
-        return $this->render('import', [
+        return $this->render($this->viewPrefix . 'import', [
             'number' => 0,
             'model' => $model,
         ]);
