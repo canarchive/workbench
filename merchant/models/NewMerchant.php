@@ -8,7 +8,7 @@ class NewMerchant extends Merchant
 {
     public static function tableName()
     {
-        return '{{%merchant}}';
+        return '{{%new_merchant}}';
     }
 
     public function getStatusInfos()
