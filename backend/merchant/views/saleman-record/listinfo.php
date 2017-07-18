@@ -5,25 +5,15 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => [
         'id',
-        'mobile',
         [
-            'attribute' => 'created_at',
-            'value'=> function($model){
-                return $model->formatTimestamp($model->created_at);
-            },
-        ],
-        [
-            'attribute' => 'updated_at',
-            'value'=> function($model){
-                return $model->formatTimestamp($model->updated_at);
-            },
-        ],
-        [
-            'attribute' => 'status',
+            'attribute' => 'saleman_id',
             'value' => function($model) {
-                return $model->getKeyName('status', $model->status);
+                return $model->getPointName('saleman', $model->saleman_id);
             }
         ],
+        'created_day',
+        'record',
+        'reply',
     ],
 ];
 
