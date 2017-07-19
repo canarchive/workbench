@@ -33,6 +33,7 @@ Trait UserMerchantTrait
             'service_id' => $this->service_id,
         ]);
         $this->status = $this->status == 'all' ? null : $this->status;
+        $this->status = $this->status == 'back' ? ['back_reply', 'back_confirm'] : $this->status;
 		if ($this->status !== null) {
 			$query->andWhere(['status' => $this->status]);
 		}
