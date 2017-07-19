@@ -23,14 +23,14 @@ $columns = [
             return $model->getCurrentUrl('valid', $menus);
         }
     ],
-    'num_real' => 'num_real',
+    //'num_real' => 'num_real',
     'num_current' => [
         'attribute' => 'num_current',
         'value' => function($model){
             return $model->_numCurrent();
         }
     ],
-    'num_back' => 'num_back',
+    //'num_back' => 'num_back',
     'num_back_current' => [
         'attribute' => 'num_back_current',
         'value' => function($model){
