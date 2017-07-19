@@ -23,10 +23,8 @@ $detailViewParams = [
         ],
         'fee',
         'num',
-        'num_real',
         'num_current',
         'num_back',
-        'num_back_current',
         'note',
         'record',
         [

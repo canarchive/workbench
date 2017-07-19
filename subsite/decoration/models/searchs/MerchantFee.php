@@ -28,4 +28,18 @@ class MerchantFee extends MerchantFeeModel
 
         return $dataProvider;
     }
+
+    public function getSearchDatas()
+    {
+        $list = [
+            [
+                'name' => '商家',
+                'field' => 'merchant_id',
+                'infos' => $this->getPointInfos('merchant', ['where' => ['id' => ['667', '669', '671', '692']]]),
+            ],
+        ];
+        $form = [];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
+    }
 }

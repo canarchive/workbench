@@ -20,11 +20,11 @@ class MerchantFee extends ModelBase
     {
         return [
             [['merchant_id', 'merchant_id'], 'required'],
-            [['status', 'fee', 'num', 'num_real', 'num_back'], 'default', 'value' => 0],
+            [['status', 'fee', 'num'], 'default', 'value' => 0],
             [['day_start', 'day_end'], 'filter', 'filter' => function($value) {
                 return strtotime($value);
             }],
-            [['merchant_sort', 'day_fee', 'num', 'num_real', 'num_back', 'num_back_current', 'note', 'record',], 'safe'],
+            [['merchant_sort', 'day_fee', 'num', 'note', 'record',], 'safe'],
         ];
     }
 
@@ -36,10 +36,8 @@ class MerchantFee extends ModelBase
             'merchant_sort' => '合作类型',
             'day_fee' => '付费日期',
             'num' => '信息数',
-            'num_real' => '实际信息数',
-            'num_current' => '实时信息数',
+            'num_current' => '派发信息数',
             'num_back' => '退单数',
-            'num_back_current' => '实时退单数',
             'day_start' => '信息派发起始时间',
             'day_end' => '信息派发截止时间',
             'note' => '备注',
@@ -56,38 +54,76 @@ class MerchantFee extends ModelBase
         return $merchant->statusInfos;
     }
 
-    public function _numCurrent()
+    public function _getNum($type)
     {
-        if ($this->merchant_sort == 2) {
-            return $this->num_real;
-        }
-
-        return $this->_getNum('valid');
-    }
-
-    public function _numBackCurrent()
-    {
-        if ($this->merchant_sort == 2) {
-            return $this->num_real;
-        }
-
-        return $this->_getNum('back');
-    }
-
-    public function _getNum($sort)
-    {
-        $model = new UserMerchant();
-        $status = $sort == 'valid' ? ['=', 'status', ''] : ['!=', 'status', ''];
+        $sort = $this->merchant_sort;
+        $merchant = ['=', 'merchant_id', $this->merchant_id];
+        $start = ['>=', 'created_at', $this->day_start];
         $end = $this->day_end > 0 ? ['<=', 'created_at', $this->day_end]: [];
+
+        if ($sort == 2) {
+            if ($type != 'valid') {
+                return 0;
+            }
+            $model = new User();
+            $where = [
+                'and',
+                $merchant,
+                $start,
+                $end,
+            ];
+            return $model->find()->where($where)->count();
+        }
+
+        $model = new UserMerchant();
+        $status = $type == 'valid' ? ['=', 'status', ''] : ['!=', 'status', ''];
         $where = [
             'and', 
             $status,
-            ['=', 'merchant_id', $this->merchant_id], 
-            ['>=', 'created_at', $this->day_start],
+            $merchant,
+            $start,
             $end,
         ];
 
         return $model->find()->where($where)->count();
+    }
+
+    public function getCurrentUrl($type, $menus)
+    {
+        $sort = $this->merchant_sort == 3 ? 'cps' : 'cpa';
+        $method = "_{$sort}Url";
+        return $this->$method($type, $menus);
+    }
+
+    public function _cpsUrl($type, $menus)
+    {
+        $key = 'subsite_decoration_user-merchant_listinfo';
+        $key1 = 'subsite_decoration_user-merchant_listout';
+		$menu = isset($menus[$key1]) ? $menus[$key1] : (isset($menus[$key]) ? $menus[$key] : '');
+        $num = $this->_getNum($type);
+        if (empty($menu) || empty($num)) {
+            return $num;
+        }
+        $status = $type == 'valid' ? '' : 'back';
+        $start = $this->formatTimestamp($this->day_start);
+        $end = empty($this->day_end) ? $this->formatTimestamp(time()) : $this->formatTimestamp($this->day_end);
+        $opeStr = "<a href='{$menu['url']}?merchant_id={$this->merchant_id}&created_at_start={$start}&created_at_end={$end}&status={$status}'>{$num}</a>";
+        return $opeStr;
+    }
+
+    public function _cpaUrl($type, $menus)
+    {
+        $key = 'subsite_decoration_user_listinfo';
+        $key1 = 'subsite_decoration_user_listout';
+		$menu = isset($menus[$key1]) ? $menus[$key1] : (isset($menus[$key]) ? $menus[$key] : '');
+        $num = $this->_getNum($type);
+        if (empty($menu) || empty($num)) {
+            return $num;
+        }
+        $start = $this->formatTimestamp($this->day_start);
+        $end = empty($this->day_end) ? $this->formatTimestamp(time()) : $this->formatTimestamp($this->day_end);
+        $opeStr = "<a href='{$menu['url']}?merchant_id={$this->merchant_id}&created_at_start={$start}&created_at_end={$end}'>{$num}</a>";
+        return $opeStr;
     }
 
     public function getStatusInfos()
@@ -98,19 +134,5 @@ class MerchantFee extends ModelBase
             '2' => '未付费-已完成',
             '3' => '已付费-已完成',
         ];
-    }
-
-    public function getCurrentUrl($type, $menus)
-    {
-            $key = 'subsite_decoration_user-merchant_listinfo';
-            $key1 = 'subsite_decoration_user-merchant_listout';
-			$menu = isset($menus[$key1]) ? $menus[$key1] : (isset($menus[$key]) ? $menus[$key] : '');
-            if (empty($menu)) {
-                return $this->num;
-            }
-            $start = $this->formatTimestamp($this->day_start);
-            $end = empty($this->day_end) ? $this->formatTimestamp(time()) : $this->formatTimestamp($this->day_end);
-            $opeStr = "<a href='{$menu['url']}?merchant_id={$this->merchant_id}&created_at_start={$start}&created_at_end={$end}&status='>{$this->num}</a>";
-            return $opeStr;
     }
 }

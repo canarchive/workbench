@@ -22,8 +22,6 @@ $model->day_end = empty($model->day_end) ? time() : $model->formatTimestamp($mod
 
     <?= $form->field($model, 'fee')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'num')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'num_real')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'num_back')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'day_start')->textInput(); ?>
     <script type="text/javascript">
         $(function () {

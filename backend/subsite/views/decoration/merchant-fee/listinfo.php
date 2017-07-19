@@ -15,26 +15,21 @@ $columns = [
     ],
     'day_fee' => 'day_fee',
     'fee' => 'fee',
-    'num' => [
+    'num',
+    'num_current' => [
         'format' => 'raw',
-        'attribute' => 'num',
+        'attribute' => 'num_current',
         'value' => function($model) {
             $menus = $this->context->menuInfos['menus'];
             return $model->getCurrentUrl('valid', $menus);
         }
     ],
-    //'num_real' => 'num_real',
-    'num_current' => [
-        'attribute' => 'num_current',
+    'num_back' => [
+        'format' => 'raw',
+        'attribute' => 'num_back',
         'value' => function($model){
-            return $model->_numCurrent();
-        }
-    ],
-    //'num_back' => 'num_back',
-    'num_back_current' => [
-        'attribute' => 'num_back_current',
-        'value' => function($model){
-            return $model->_numBackCurrent();
+            $menus = $this->context->menuInfos['menus'];
+            return $model->getCurrentUrl('back', $menus);
         }
     ],
     'day_start' => [
@@ -56,9 +51,8 @@ $columns = [
         }
     ],
 ];
-if (isset($this->limitList)) {
-    unset($columns['num_current']);
-    unset($columns['num_back_current']);
+if (isset($this->context->limitSearch)) {
+    unset($columns['id']);
 }
 $gridViewParams = [
     'dataProvider' => $dataProvider,
@@ -66,4 +60,10 @@ $gridViewParams = [
     'columns' => $columns,
 ];
 
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
+if (isset($this->context->limitSearch)) {
+    $searchContent = '';
+} else {
+    $searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
+}
+
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
