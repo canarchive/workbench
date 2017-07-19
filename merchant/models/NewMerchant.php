@@ -12,6 +12,16 @@ class NewMerchant extends Merchant
         return '{{%new_merchant}}';
     }
 
+    public function rules()
+    {
+        return [
+            [['name', 'city_code'], 'required'],
+            [['orderlist'], 'integer'],
+            [['orderlist'], 'default', 'value' => '0'],
+            [['import', 'callback_next', 'saleman_id', 'callback_num', 'interview_num', 'status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+        ];
+    }
+
     public function getStatusInfos()
     {
         $datas = [
