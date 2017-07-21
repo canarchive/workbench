@@ -47,6 +47,12 @@ if ($this->context->id == 'new-merchant') {
         unset($columns[$ignore]);
     }
     $columns = array_merge($columns, [
+		[
+			'attribute' => 'saleman_id',
+			'value' => function($model) {
+				return $model->getPointName('saleman', $model->saleman_id);
+			}
+        ],
         [   
             'format' => 'raw',
             'attribute' => 'op-contact',

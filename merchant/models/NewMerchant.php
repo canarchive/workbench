@@ -26,6 +26,9 @@ class NewMerchant extends Merchant
     {
         $datas = [
             '' => '新录入',
+			'empty' => '空号',
+			'follow' => '跟进',
+			'mismatch' => '不匹配',
             'no-purpose' => '无意向',
             'latent' => '潜在',
             'purpose' => '有意向',

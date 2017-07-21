@@ -30,8 +30,9 @@ class Module extends ModuleBase
         $data = [
             'merchant_id' => $merchantIds,
         ];
+		//$managerInfo['id'] = $managerInfo['id'] == 1 ? 42 : $managerInfo['id'];
 
-        $serviceRoles = ['service', 'service-admin', 'admin', 'service-inner', 'service-admin-inner', 'admin-inner'];
+        $serviceRoles = ['service', 'service-admin', 'admin', 'service-inner', 'service-admin-inner', 'admin-inner', 'service-saleman'];
         if (in_array($role, $serviceRoles)) {
             $model = new Service();
             $whereBase = ['merchant_id' => $merchantIds];
@@ -42,6 +43,7 @@ class Module extends ModuleBase
                 break;
             case 'service-admin':
             case 'service-admin-inner':
+			case 'service-saleman':
                 $where = ['or', ['user_id' => $managerInfo['id']], ['manager_id' => $managerInfo['id']]];
                 $where = ['and', $where ,$whereBase];
                 break;
@@ -55,7 +57,7 @@ class Module extends ModuleBase
             $serviceIds = array_keys($serviceInfos);
             //var_dump($serviceIds);exit();
 			if ($role != 'admin') {
-                $data['service_id'] = $serviceIds;
+                $data['service_id'] = empty($serviceIds) ? ['no'] : $serviceIds;
 			}
         }
 
