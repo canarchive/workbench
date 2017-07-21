@@ -63,6 +63,11 @@ Trait UserTrait
                 'field' => 'merchant_id',
                 'infos' => $this->getPointInfos('merchant'),
             ],
+			[
+				'name' => '状态',
+				'field' => 'status',
+				'infos' => $this->statusInfos,
+			],
         ];
         $form = [
         [
