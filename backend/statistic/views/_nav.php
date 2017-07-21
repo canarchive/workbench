@@ -3,6 +3,7 @@ $elems = [
     'channel' => [
 		'created_day' => '每日',
         'channel-created_day' => '渠道每日',
+        'channel-sem_account-created_day' => '渠道账户每日',
         'merchant_id' => '商家',
         'merchant_id-created_day' => '商家每日',
         'merchant_id-channel' => '商家渠道',
