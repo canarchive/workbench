@@ -13,7 +13,6 @@ use common\components\Controller;
 class AdminController extends Controller
 {
     public $privInfo = [];
-    public $menuInfos = [];
     public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
@@ -128,7 +127,7 @@ class AdminController extends Controller
             return $this->redirect(['listinfo']);
         }
 
-        return $this->render('import', [
+        return $this->render($this->viewPrefix . 'import', [
             'number' => 0,
             'model' => $model,
         ]);
@@ -243,6 +242,9 @@ class AdminController extends Controller
     {
         $privFields = !empty($this->privInfo) ? $this->privInfo : [];
         foreach ($privFields as $field => $value) {
+            if (!$model->hasProperty($field)) {
+                continue;
+            }
             $currentValue = $model->$field;
             $currentValue = is_scalar($currentValue) ? explode(',', $currentValue) : (array) $currentValue;
             $currentValue = array_filter($currentValue);
@@ -262,9 +264,29 @@ class AdminController extends Controller
         return parent::beforeAction($action);
     }
 
+    protected function privGetIgnore()
+    {
+        return [];
+    }
+
     public function getPrivInfo()
     {
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
+        foreach ($data as $key => & $value) {
+            if (in_array($key, $this->privGetIgnore())) {
+                unset($data[$key]);
+                continue;
+            }
+            $getSource = Yii::$app->request->get($key);
+            if (!is_null($getSource)) {
+                $diff = array_intersect((array) $getSource, $value);
+                if (empty($diff)) {
+                    throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+                }
+                $value = $getSource;
+            }
+            $_GET[$key] = $value;
+        }
         return $data;
     }
 

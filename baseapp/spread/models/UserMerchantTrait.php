@@ -26,6 +26,7 @@ trait UserMerchantTrait
 
     public function rules()
     {
+        return [];
     }
 
     public function attributeLabels()
@@ -39,6 +40,13 @@ trait UserMerchantTrait
             'updated_at' => '更新时间',
             'note' => '备注',
             'status' => '状态',
+			'userName' => '姓名',
+			'houseAddress' => '房屋地址',
+			'houseRegion' => '区县',
+			'houseArea' => '房屋面积',
+			'houseType' => '户型',
+			'houseSort' => '房屋类别',
+			'view_at' => '查看时间',
             'name' => '名称',
         ];
     }
@@ -64,7 +72,7 @@ trait UserMerchantTrait
         return true;
     }    
 
-    public function viewInfo($merchantId, $ids)
+    public function viewInfo($merchantIds, $ids)
     {
         $ids = explode(',', $ids);
         if (count($ids) > 50) {
@@ -72,15 +80,15 @@ trait UserMerchantTrait
         }
         $infos = $this->find()->where(['id' => $ids])->indexBy('id')->all();
         foreach ($infos as $id => $info) {
-            if ($info['merchant_id'] != $merchantId) {
+            if (!in_array($info['merchant_id'], $merchantIds)) {
                 return ['status' => 400, 'message' => '你没有查看这些信息的权限'];
             }
         }
         $datas = [];
         foreach ($infos as $id => $info) {
             if (!$info->view_at) {
-            $info->view_at = Yii::$app->params['currentTime'];
-            $info->update(false);
+                $info->view_at = Yii::$app->params['currentTime'];
+                $info->update(false);
             }
             $datas[$id]['mobile'] = $info['mobile'];
             $datas[$id]['viewAt'] = date('Y-m-d H:i:s', $info->view_at);
@@ -120,4 +128,38 @@ trait UserMerchantTrait
 
 		return $infos;
 	}
+
+	public function getUserModel()
+	{
+        return $this->_newModel('user')->find()->where(['mobile' => $this->mobile])->orderBy(['id' => SORT_DESC])->one();
+	}
+
+	public function getGuestbookInfos()
+	{
+        return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->all();
+	}
+
+	public function getGuestbookModel()
+	{
+        return $this->_newModel('guestbook', true)->find()->where(['user_merchant_id' => $this->id])->orderBy('reply_at DESC')->one();
+	}
+
+    public function addGuestbook($data)
+    {
+        $data['mobile'] = $this->mobile;
+        $data['merchant_id'] = $this->merchant_id;
+        $data['user_merchant_id'] = $this->id;
+        $data['created_at'] = Yii::$app->params['currentTime'];
+        $model = $this->_newModel('guestbook', true, $data);
+        $model->insert(false);
+    }
+
+    public function getIsLock()
+    {
+        $diff = ($this->created_at + 86400) - Yii::$app->params['currentTime'];
+        if ($diff > 0) {
+            return $this->formatTimestampShow($diff);
+        }
+        return true;
+    }
 }

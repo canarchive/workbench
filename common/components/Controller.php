@@ -19,6 +19,7 @@ class Controller extends YiiController
     public $currentSiteInfo;
     public $currentPage;
     public $currentElem;
+    public $menuInfos = [];
 
     /**
      * @inheritdoc
@@ -50,7 +51,19 @@ class Controller extends YiiController
         parent::init();
 
         $this->host = Yii::$app->request->hostInfo;
-        $this->clientUrl = Yii::$app->request->url;
+        $this->clientUrl = $url = Yii::$app->request->url;
+        if (strpos($url, '.html') === false && strpos($url, '.xml') === false) {
+            $pos = strpos($this->clientUrl, '?');
+            $query = $pos !== false ? substr($url, $pos) : '';
+            $urlBase = str_replace($query, '', $url);
+            $lastChar = substr($url, -1);
+            if ($lastChar != '/') {
+                $rUrl = "{$this->host}{$urlBase}/{$query}";
+                //header("Location: {$url}");
+                return Yii::$app->response->redirect($rUrl, 301)->send();
+                exit();
+            }
+        }
         if (strpos($this->clientUrl, 'index.php') !== false) {
             return Yii::$app->response->redirect($this->host)->send();
             exit();
@@ -135,7 +148,8 @@ class Controller extends YiiController
         $channelSpread = Yii::$app->request->get('qudao');
         $cityCode = Yii::$app->request->get('city_code', '');
         if (!empty($channelSpread)) {
-            $urlPre = strval(Yii::$app->request->referrer);
+            $pUrlPre = Yii::$app->request->get('point_url_pre', '');
+            $urlPre = !empty($pUrlPre) ? $pUrlPre : strval(Yii::$app->request->referrer);
             $statUrl = '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
             //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";

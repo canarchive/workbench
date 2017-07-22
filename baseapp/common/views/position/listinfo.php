@@ -7,12 +7,9 @@ $gridViewParams = [
         'id',
 		'name',
 		[
-			'attribute' => 'type',
+			'attribute' => 'sort',
 			'value' => function($model) {
-				if (!empty($model->type)) {
-					return $model->typeInfos[$model->type];
-				}
-				return '';
+				return $model->getKeyName('sort', $model->sort);
 			},
 		],
 		[

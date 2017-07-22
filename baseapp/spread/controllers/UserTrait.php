@@ -11,10 +11,15 @@ trait UserTrait
         return $this->_listinfoInfo();
     }
 
+    public function actionListout()
+    {
+        return $this->_listinfoInfo('listout');
+    }
+
     public function actionChangeMerchant($id)
     {
         $model = $this->findModel($id);
-        $this->_handlerUpdate('change');
+        $this->_handlerUpdate('change', $model);
 
         return $this->render($this->viewPrefix . 'change-merchant', [
             'model' => $model,
@@ -25,14 +30,14 @@ trait UserTrait
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass();
-        $this->_handlerUpdate('admin');
+        $this->_handlerUpdate('admin', $model);
 
         return $this->render($this->viewPrefix . 'add', [
             'model' => $model,
         ]);
     }
 
-    public function _handlerUpdate($sort)
+    public function _handlerUpdate($sort, $model)
     {
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
@@ -43,7 +48,8 @@ trait UserTrait
             $newModel = $model->addHandle($sort);
 
             if ($newModel) {
-                return $this->redirect(['update', 'id' => $newModel->id]);
+                $url = $this->menuInfos['appMenus']['listinfo']['url'];
+                return $this->redirect($url);
             }
         }
         return ;
@@ -145,6 +151,13 @@ trait UserTrait
         if ($oldInfo) {
             return ['status' => 400, 'message' => '已派单'];
         }
+
+        $time = Yii::$app->params['currentTime'];
+        $model->created_month = date('Ym', $time);
+        $model->created_day = date('Ymd', $time);
+        $model->created_week = date('W', $time);
+        $model->created_weekday = date('N', $time);
+        $model->user_id = $userModel->id;
 
         $model->insert(false);
         $userModel->sendSmsValid($model, $userModel);

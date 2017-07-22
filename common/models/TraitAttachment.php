@@ -13,6 +13,9 @@ trait TraitAttachment
      */
     public $deleteAttachment = false;
 
+    protected function getAttachmentModel()
+    {}
+
     public function getAttachmentImg($id, $pointSize = true, $options = [])
     {
         $model = $this->attachmentModel;
@@ -37,8 +40,27 @@ trait TraitAttachment
         return empty($info) ? '' : $info->getUrl();
     }
 
-    protected function getAttachmentModel()
-    {}
+    protected function _getThumb($table, $field)
+    {
+		$thumbUrl = $this->getAttachmentUrl($this->attachmentWhere($table, $field));
+        if (empty($thumbUrl)) {
+		    $thumbUrl = $this->getAttachmentUrl($this->attachmentWhere($table, $field, false));
+        }
+        return $thumbUrl;
+    }
+    public function attachmentWhere($table, $field, $isMaster = true)
+    {
+        $condition = [ 
+            'info_table' => $table,
+            'info_field' => $field,
+            'info_id' => $this->id,
+            'in_use' => 1,
+        ];  
+        if ($isMaster) {
+            $condition['is_master'] = 1;
+        }
+        return $condition;
+    }
 
     protected function _updateSingleAttachment($table, $fields, $extData = [])
     {
@@ -67,7 +89,7 @@ trait TraitAttachment
         return ;
     }
 
-	public function uploadElem($table, $field)
+	public function uploadElem($table, $field, $accept = 'image/*')
 	{
 		$attachment = $this->attachmentModel;
         $fieldElem = $attachment->getFieldInfos($table, $field);
@@ -79,7 +101,7 @@ trait TraitAttachment
             'fieldOptions' => [
     			'isSingle' => $fieldElem['isSingle'],
     			'idField' => Html::getInputId($this, $field),
-                'accept' => 'image/*'
+                'accept' => $accept
             ],
             'clientOptions' => [
     		    //'dataType' => 'json',
@@ -87,4 +109,30 @@ trait TraitAttachment
             ],
         ]);
 	}
+
+    public function _importDatas()
+    {   
+        $aId = $this->import;
+        if (empty($aId)) {
+            $this->addError('error', '参数错误');
+            return false;
+        }   
+
+        $attachment = $this->attachmentModel->findOne($aId);
+        if (empty($attachment)) {
+            $this->addError('error', '指定的文件参数有误，请重新上传');
+            return false;
+        }   
+        $file = $attachment->getPathBase($attachment->path_prefix) . '/' . $attachment->filepath;
+        if (!file_exists($file)) {
+            $this->addError('error', '指定的文件不存在，请重新上传');
+            return false;
+        }   
+        $datas = $this->importDatas($file);
+        if (empty($datas)) {
+            $this->addError('import', '没有数据');
+            return false;
+        }
+        return $datas;
+    }
 }

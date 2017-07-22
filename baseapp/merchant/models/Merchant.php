@@ -20,9 +20,9 @@ class Merchant extends MerchantModel
     {
         return [
             [['name', 'city_code'], 'required'],
-            [['logo', 'status', 'orderlist'], 'integer'],
-            [['logo', 'status', 'orderlist'], 'default', 'value' => '0'],
-            [['msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+            [['orderlist'], 'integer'],
+            [['orderlist'], 'default', 'value' => '0'],
+            [['status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
         ];
     }
 
@@ -30,12 +30,13 @@ class Merchant extends MerchantModel
     {
         return [
             'id' => 'ID',
+            'code' => '代码',
             'name' => '名称',
             'name_full' => '全称',
             'city_code' => '分站代码',
+            'region' => '所在区县',
             'sort' => '类别',
             'orderlist' => '排序',
-            'logo' => 'LOGO',
             'hotline' => '电话',
             'postcode' => '邮编',
             'address' => '地址',
@@ -43,9 +44,15 @@ class Merchant extends MerchantModel
 			'msg' => '通知短信',
 			'homeurl' => '官网地址',
             'description' => '描述',
-            'status' => '是否显示',
+            'status' => '状态',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
+            'interview_num' => '回访次数',
+            'callback_num' => '面谈次数',
+            'callback_next' => '下次回访时间',
+
+            'op-contact' => '联系人',
+            'op-callback' => '回访操作',
         ];
     }
 
@@ -70,21 +77,6 @@ class Merchant extends MerchantModel
     {
         parent::afterSave($insert, $changedAttributes);
 
-        $fields = ['logo'];
-        $this->_updateSingleAttachment('merchant', $fields);
-
         return true;
-    }
-
-    public function getSpreadModel($modelName)
-    {
-        $sort = $this->sort;
-        if (empty($sort)) {
-            return null;
-        }
-
-        $modelName = ucfirst($modelName);
-        $class = "\spread\\{$sort}\models\searchs\\{$modelName}";
-        return new $class();
     }
 }

@@ -4,6 +4,8 @@ return [
     'service' => '\baseapp\merchant\models\Service',
     'merchant-user' => '\merchant\models\User',
     'merchant-role' => '\merchant\models\Role',
+    'merchant-role' => '\merchant\models\Role',
+    'saleman' => '\merchant\models\Saleman',
     'company' => '\baseapp\passport\models\Company',
 
     // spread

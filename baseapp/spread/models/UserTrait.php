@@ -128,6 +128,7 @@ trait UserTrait
             'merchant_id' => $this->merchant_id,
             'channel' => $this->channel,
             'mobile' => $this->mobile,
+            'service_id' => $this->service_id,
             'name' => $this->name,
             'note' => $this->note,
             'message' => $this->message,
@@ -137,13 +138,14 @@ trait UserTrait
 
         $conversion = $this->conversionSuccessLog($data);
         $data['conversion_id'] = $conversion->id;
-        $newUser = $this->addUser($data);
+        $serviceId = empty($data['service_id']) ? null : intval($data['service_id']);
+        $newUser = $this->addUser($data, $serviceId);
 
         if (!empty($this->merchant_id)) {
             $this->_sendSms($data, $newUser->serviceInfo);
         }
-		$sDatas = $conversion->toArray();
-        $this->statisticRecord($sDatas, 'signup');
+		//$sDatas = $conversion->toArray();
+        //$this->statisticRecord($sDatas, 'signup');
 
         return $newUser;
     }
@@ -187,7 +189,7 @@ trait UserTrait
 
     protected function _sendSms($data, $serviceInfo)
     {
-        $merchantInfo = $this->getMerchantInfo();
+        $merchantInfo = $this->getPointInfo('merchant', $this->merchant_id);
         if (empty($merchantInfo)) {
             return ;
         }
