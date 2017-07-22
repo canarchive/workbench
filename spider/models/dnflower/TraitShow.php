@@ -1,5 +1,5 @@
 <?php
-namespace spider\models\news;
+namespace spider\models\dnflower;
 
 use Yii;
 use Symfony\Component\DomCrawler\Crawler;

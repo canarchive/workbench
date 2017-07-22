@@ -8,7 +8,6 @@ use Overtrue\Pinyin\Pinyin;
 
 class Base extends AbstractModel
 {
-    use TraitPre;
     use TraitList;
     use TraitShow;
 
