@@ -38,4 +38,18 @@ class NewCallback extends MerchantModel
     {
         return $this->_newModel('newMerchant')->statusInfos;
     }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        $model = new NewMerchant();
+        $mInfo = $model->findOne($this->merchant_id);
+        if (empty($mInfo)) {
+            return true;
+        }
+        $mInfo->status = $this->status;
+        $mInfo->update(false);
+
+        return true;
+    }
 }
