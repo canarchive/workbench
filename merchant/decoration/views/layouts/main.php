@@ -6,6 +6,8 @@ $navDatas = [
     'cpa' => 'CPA服务',
     'sem' => '竞价托管',
     'seo' => '网站SEO',
+    //'opinion' => '舆情监控',
+    //'semopen' => '渠道开户',
     'customizing' => '企业定制',
     'ask' => '合作须知',
     'material' => '合作商家助手',
@@ -32,7 +34,7 @@ $navDatas = [
                             <?php } ?>
                         </div>
                         <nav class="nav right">
-                            <a href="<?= Yii::getAlias('@web'); ?>" title="<?= Yii::$app->params['siteNameBase']; ?>" <?php if ($currentElem == 'index') { echo 'class="active"'; } ?>>首页</a>
+                            <a href="/" title="<?= Yii::$app->params['siteNameBase']; ?>" <?php if ($currentElem == 'index') { echo 'class="active"'; } ?>>首页</a>
                             <?php foreach ($navDatas as $nav => $nName) { ?>
                             <a href="/sp-<?= $nav; ?>.html" title="<?= $nName; ?>" <?php if ($currentElem == $nav) { echo 'class="active"'; } ?>><?= $nName; ?></a>
                             <?php } ?>
@@ -55,12 +57,9 @@ $navDatas = [
                         <li>
                             <a href="<?= Yii::getAlias('@web'); ?>" title="首页">首页</a>
                         </li>
-                        <li><a href="/sp-cpa.html" title="CPA服务" >CPA服务</a></li>
-                        <li><a href="/sp-sem.html" title="竞价托管" >竞价托管</a></li>
-                        <li><a href="/sp-seo.html" title="网站SEO" >网站SEO</a></li>
-                        <li><a href="/sp-customizing.html" title="企业定制" >企业定制</a></li>
-                        <li><a href="/sp-ask.html" title="合作须知" >合作须知</a></li>
-                        <li><a href="/sp-material.html" title="合作商家助手">合作商家助手</a></li>
+                        <?php foreach ($navDatas as $nav => $nName) { ?>
+                        <li><a href="/sp-<?= $nav; ?>.html" title="<?= $nName; ?>"><?= $nName; ?></a></li>
+                        <?php } ?>
                         <?php if (Yii::$app->user->isGuest) { ?>
                         <li>
                             <a href="/signin.html" class="button small radius success expand" title="登录">登录</a>
