@@ -121,6 +121,8 @@ trait UserTrait
             $this->addError('mobile', '手机号已存在');
             return false;
         }
+        $this->service_id = $statusInput == 'admin' ? $this->service_id : null;
+        //var_dump($this->service_id);exit();
 
         $data = [
             'city_code' => $this->city_code,
