@@ -2,6 +2,7 @@
 
 namespace merchant\models\searchs;
 
+use yii\data\ActiveDataProvider;
 use merchant\models\NewCallback as NewCallbackModel;
 
 class NewCallback extends NewCallbackModel
