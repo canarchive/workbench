@@ -40,30 +40,21 @@
                     <li>
                         <a href="javascript:void(0);" title="" style="display:block; height:325px;" ad_need_click="true" ad_id="21579">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/d5fa1-6867.jpg" alt="2017年建博会12.1" /></a>
-                        <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
+                        <!--<span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
                             <a href="javascript:void(0);">
-                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt=""></a></span>
+                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt=""></a></span>-->
                     </li>
                     <li>
                         <a href="javascript: void(0);" title="" style="display:block; height:325px;" ad_need_click="true" ad_id="23650">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/3df9b-6035.jpg" alt="" /></a>
-                        <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
-                            <a href="javascript: void(0);">
-                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt=""></a></span>
                     </li>
                     <li>
                         <a href="javascript: void(0);" title="" style="display:block; height:325px;" ad_need_click="true" ad_id="23701">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/68533-1612.jpg" alt="" /></a>
-                        <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
-                            <a href="javascript: void(0);">
-                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt=""></a></span>
                     </li>
                     <li>
                         <a href="javascript: void(0);" title="" style="display:block; height:325px;" ad_need_click="true" ad_id="26513">
                             <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/54870-8832.jpg" alt="" /></a>
-                        <span id="advert" style="height: 13px;width: 24px;position: absolute;bottom: 0;left: 0;overflow:hidden;">
-                            <a href="javascript: void(0);">
-                                <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/4cc6f-7890.png" style="float: left; width: auto;height: auto;" alt=""></a></span>
                     </li>
                 </ul>
                 <div class="num">

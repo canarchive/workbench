@@ -19,7 +19,7 @@ class QuoteUpdate extends Quote
         $id = $newModel->id;
         $length = 12 - strlen($id);
         //$code = Yii::$app->getSecurity()->generatePasswordHash($id);
-        $code = strtolower(Yii::$app->getSecurity()->generateRandomString($length));
+        $code = str_replace(['-', '_'], ['', ''], strtolower(Yii::$app->getSecurity()->generateRandomString($length)));
         $newModel->code = $code . $id;
         $newModel->save();
     }
@@ -31,7 +31,7 @@ class QuoteUpdate extends Quote
         $sKey = $sInfos[$sIndex];
         $hInfos = array_keys($this->houseTypeInfos);
         $hIndex = rand(0, count($hInfos) - 1);
-        $hKey = $sInfos[$sIndex];
+        $hKey = $hInfos[$hIndex];
 
         $cModel = new CommunityBase();
         $cInfo = $cModel->find()->where(['city_code' => $cityCode])->orderBy('num_quote ASC, orderlist DESC')->one();

@@ -73,9 +73,10 @@ class Quote extends GallerycmsModel
 		return true;
 	}	
 
-	public function getInfo($id)
+	public function getInfo($where)
 	{
-		$info = static::find()->where(['id' => $id])->one();//->toArray();
+		$where = is_array($where) ? $where : ['id' => $where];
+		$info = static::find()->where($where)->one();//->toArray();
 		if (empty($info)) {
 			return $info;
 		}

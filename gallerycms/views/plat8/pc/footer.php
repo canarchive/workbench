@@ -49,7 +49,7 @@ $footerNavs = $this->context->footerNavs;
             </div>
             <div class="fbc_copyright"><?= $footerNavs['disclaimer']; ?></div>
             <div class="fbc_copyright"><?= $footerNavs['copyRight']; ?></div>
-            <div class="fbc_copyright">地址：<?= Yii::$app->params['siteAddressInfo']; ?></div>
+            <div class="fbc_copyright">总部地址：<?= Yii::$app->params['siteAddressInfo']; ?></div>
 			<div class="fbc_icp"><?= Yii::$app->params['siteName']; ?>
                 <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow"><?= $footerNavs['icpInfo']; ?></a>
             </div>

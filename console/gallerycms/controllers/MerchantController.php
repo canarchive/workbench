@@ -13,16 +13,21 @@ class MerchantController extends Controller
 	public function actionQuote()
 	{
 		$model = new QuoteUpdate();
-        $cInfos = $this->getCompanyInfos(['status' => [1, 2, 99]]);
+        //$cInfos = $this->getCompanyInfos(['status' => [1, 2, 99]]);
+        $cInfos = $this->getCompanyInfos(['status' => 0]);
+		$i = 0;
 		foreach ($cInfos as $cInfo) {
+			$cInfo['description'] = time();
+			$cInfo->update(false);
 			$cityCode = $cInfo['code'];
 			$model->quoteUpdate($cityCode);
+			$i++;
 		}
 	}
 
     public function actionMerchant()
     {
-        $cInfos = $this->getCompanyInfos(['status' => [1]]);
+        $cInfos = $this->getCompanyInfos(['status' => [0]]);
         $cityCodes = array_keys($cInfos);
         $cityCode = $cityCodes[array_rand($cityCodes)];
         $model = new Merchant();
@@ -60,7 +65,7 @@ class MerchantController extends Controller
     protected function getCompanyInfos($where)
     {
         $company = new Company();
-        $datas = $company->getInfos($where);
+        $datas = $this->find()->where($where)->orderBy(['updated_at' => SORT_ASC])->indexBy('code')->all();
         return $datas;
     }
 }
