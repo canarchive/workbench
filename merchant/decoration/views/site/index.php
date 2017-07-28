@@ -44,7 +44,7 @@ $merchants = [
                 <span class="sms-view"></span>
             </div>
             <h5>CPA服务</h5>
-            <p class="summary">以CPA效果付费的合作模式，目前北京地区CPA每条按300元，外地二三线城市每条按200元结算。</p>
+            <p class="summary">以CPA效果付费的合作模式，有效降低装修企业获客成本。</p>
             <p class="sub"><a href="/sp-cpa.html" class="button success radius tiny" title="">了解详情</a></p>
         </div>
         <div class="small-12 medium-3 columns animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity=".3" data-translatey="50" data-rotatez="0">

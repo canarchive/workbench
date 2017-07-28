@@ -1,8 +1,8 @@
 <?php
 Yii::$app->params['tdkInfos'] = [
-    'title' => '舆情监控-维纳亚营销公司',
-    'keyword' => '舆情监控',
-    'description' => '维纳亚网络营销公司是最专业的舆情监控',
+    'title' => '各大搜索引擎开户-维纳亚营销公司',
+    'keyword' => '各大搜索引擎开户',
+    'description' => '维纳亚网络营销公司是最专业的搜索引擎开户',
 ];
 $this->params['currentElem'] = 'semopen';
 ?>
@@ -50,7 +50,7 @@ $this->params['currentElem'] = 'semopen';
                         <i class="i-experience"></i>
                     </div>
                     <h3 class="focus">搜狗</h3>
-                    <div class="summary">神马搜索-是UC和阿里2013年已经成立合资公司推出的移动搜索引擎。2014年4月28日，UC（优视）正式宣布与阿里巴巴合作共同发布旗下移动搜索引擎品牌――神马搜索。</div></li>
+                    <div class="summary">搜狗搜索拥有包括QQ聊天、搜狗输入法、腾讯网、搜狐网、搜狗浏览器、QQ浏览器等强势入口，PC端+无线，覆盖超过五亿用户、各种人群，一份投入网罗更多潜在客户！</div></li>
                 <li>
                     <div class="icon">
                         <i class="i-data"></i>

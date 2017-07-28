@@ -9,7 +9,7 @@ $this->params['currentElem'] = 'cpa';
 <div class="captcha-banner">
     <div class="row site-width">
         <div class="small-12 columns">
-            <h1>装修行业获客成本200-300元/户</h1>
+            <h1>有效降低装修企业获客成本</h1>
             <h2>国内首家专注装修建材企业CPA效果营销服务商</h2>
             <div class="sub">
             <?= $this->render('../_banner-button'); ?>
