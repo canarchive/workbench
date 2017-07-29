@@ -12,4 +12,14 @@ class UserMerchant extends ModelBase
 	{
         return $this->_newModel('house')->findOne($this->house_id);
 	}
+
+    public function getSortInfos()
+    {
+        $datas = [
+            'overall' => '整装',
+            'part' => '局装',
+            'office' => '工装',
+        ];
+        return $datas;
+    }
 }
