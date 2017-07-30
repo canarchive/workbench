@@ -2,6 +2,7 @@
 
 namespace backend\statistic\controllers;
 
+use Yii;
 use backend\components\AdminController;
 
 class DispatchController extends AdminController
@@ -17,5 +18,14 @@ class DispatchController extends AdminController
         $controllerId = $this->id;
 
         return parent::beforeAction($action);
+    }
+
+    public function actionUpdate()
+    {
+        $updateType = Yii::$app->request->get('update_type', '');
+        $class = $this->modelClass;
+        $model = new $class();
+        $model->updateType = $updateType;
+        echo $model->dispatchSql();
     }
 }
