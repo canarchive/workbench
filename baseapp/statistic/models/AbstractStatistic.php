@@ -9,6 +9,7 @@ use spread\models\Planfee;
 
 class AbstractStatistic extends SpreadModel
 {
+    use HitInfosTrait;
     public $fields;
     public $where;
     
