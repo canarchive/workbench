@@ -3,8 +3,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$elemLists = (array) $elems['list'];
-$elemForms = (array) $elems['form'];
+$elemLists = isset($elems['list']) ? (array) $elems['list'] : [];
+$elemForms = isset($elems['form']) ? (array) $elems['form'] : [];
 ?>
 <div class="row">
 <?php
@@ -20,6 +20,7 @@ $form = ActiveForm::begin([
             <h2><i class="glyphicon glyphicon-edit"></i>检索条件</h2>
         </div>
     <?php foreach ($elemLists as $elem) { echo $this->render('_elem-list', ['elem' => $elem, 'model' => $model]); } ?> 
+    <?php //echo foreach ($elemLists as $elem) { echo $this->render('_elem-checkbox', ['elem' => $elem, 'model' => $model]); } ?> 
     <div class="box-inner">
         <div class="box-create">
             <?php $i = 1; $num = count($elemForms); foreach ($elemForms as $elemSubs) { ?>

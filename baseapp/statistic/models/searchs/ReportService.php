@@ -9,11 +9,12 @@ class ReportService extends ReportServiceModel
 {
     public $field_hit;
     public $data_type;
+    public $show_type;
 
     public function rules()
     {
         return [
-            [['service_id', 'field_hit', 'data_type', 'created_day', 'channel', 'client_type'], 'safe'],
+            [['service_id', 'field_hit', 'data_type', 'show_type', 'created_day'], 'safe'],
         ];
     }
 
@@ -36,7 +37,7 @@ class ReportService extends ReportServiceModel
                 $fieldsStr .= ", SUM(`{$field}`) AS `{$field}`,";
             }
         }
-		$serviceIds = empty($this->service_id) ? [27, 28, 31] : $this->service_id;
+		$serviceIds = empty($this->service_id) ? [27, 28, 31, 46, 47] : $this->service_id;
         $query->andFilterWhere([
             'service_id' => $serviceIds,
         ]);
@@ -57,11 +58,11 @@ class ReportService extends ReportServiceModel
             return [];
         }
         
-        $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $fields = explode('-', trim($this->field_hit, '-'));
+        $datas = ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
-                return ['channel', 'created_day'];
+                return ['created_day'];
             }
         }
         return $fields;
