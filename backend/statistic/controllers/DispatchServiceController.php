@@ -2,14 +2,15 @@
 
 namespace backend\statistic\controllers;
 
+use Yii;
 use backend\components\AdminController;
 
-class ChannelController extends AdminController
+class DispatchServiceController extends AdminController
 {
     use StatisticTrait;
-    protected $viewCurrent = 'channel';
-    protected $modelClass = 'baseapp\statistic\models\Report';
-    protected $modelSearchClass = 'baseapp\statistic\models\searchs\Report';
+    protected $viewCurrent = 'dispatch';
+    protected $modelClass = 'baseapp\statistic\models\DispatchService';
+    protected $modelSearchClass = 'baseapp\statistic\models\searchs\DispatchService';
     protected $showInfo = false;
 
     public function beforeAction($action)

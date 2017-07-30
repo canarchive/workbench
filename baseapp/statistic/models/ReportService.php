@@ -4,6 +4,8 @@ namespace baseapp\statistic\models;
 
 class ReportService extends AbstractStatistic
 {
+    use UpdateServiceTrait;
+
     public static function tableName()
     {
         return '{{%service_origin}}';
@@ -13,13 +15,15 @@ class ReportService extends AbstractStatistic
     {
         $data = [
             'id' => 'ID',
-            'day' => '日期',
-            'week' => '周',
-            'client_type' => '客户端',
+            'created_day' => '日期',
+            'created_week' => '周',
+            'created_month' => '月',
+            'merchant_id' => '商家',
         ];
 
         $dataTypes = $this->dataTypes;
-        foreach ($this->baseFields(true) as $field => $value) {
+        $showType = 'all';
+        foreach ($this->baseFields($showType, true) as $field => $value) {
             foreach ($dataTypes as $type => $tValue) {
                 $cField = $type == 'old' ? 'old_' . $field : $field;
                 $data[$cField] = $value;
@@ -52,13 +56,14 @@ class ReportService extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['sort', 'city_code', 'merchant_id', 'service_id', 'channel', 'created_month', 'created_week', 'created_weekday', 'created_day'];
+        $fields = ['sort', 'merchant_id', 'service_id', 'created_month', 'created_week', 'created_weekday', 'created_day'];
         return $fields;
     }
 
     public function getServiceBaseColumns()
     {
-        $fields = $this->baseFields();
+        $showType = $this->show_type;
+        $fields = $this->baseFields($showType);
         $columns = [];
         $dataType = $this->data_type;
         foreach ($fields as $field) {
@@ -114,28 +119,45 @@ class ReportService extends AbstractStatistic
         return $columns;
     }
 
-    protected function baseFields($returnValue = false)
+    protected function baseFields($showType = 'base', $returnValue = false)
     {
+        $showType = in_array($showType, ['all', 'base', 'bad', 'out']) ? $showType : 'base';
         $fields = [
-            'visit_num_success' => '信息数', 
-            'callback_num' => '回访次数',
-            'new_num' => '未回访数', 
-            'valid_num' => '有效数', 
-            'valid_part_num' => '有效局装数', 
-            'validout_num' => '无法派单数',
-            //'validdispatch_num',
-            'follow_num' => '跟进数', 
-            'followplan_num' => '期房跟进数',
-            //'weigh_num', 'order_num',
-            'bad_num' => '废单数', 
-            'badnew_num' => '未知废单数', 
-            'badnoneed_num' => '无需求废单数', 
-            'badbooked_num' => '已装修废单数',
-            'badtest_num' => '测试废单数', 
+            'visit_num_success' => ['name' => '信息数', 'type' => ['bad', 'out', 'base']],
+            //'callback_num' => '回访次数',
+            'valid_num' => ['name' => '有效数', 'type' => ['bad', 'out', 'base']], 
+            'valid_back_num' => ['name' => '退单数', 'type' => ['base', 'bad', 'out']], 
+            'bad_num' => ['name' => '废单数', 'type' => ['bad', 'base']], 
+            'valid_part_num' => ['name' => '有效局装数', 'type' => 'base'], 
+            'new_num' => ['name' => '未回访数', 'type' => 'base'], 
+            'follow_num' => ['name' => '跟进数', 'type' => 'base'], 
+            'followplan_num' => ['name' => '期房跟进数', 'type' => 'base'],
+            'badnew_num' => ['name' => '未知废单数', 'type' => 'bad'], 
+            'badnocall_num' => ['name' => '空号废单数', 'type' => 'bad'], 
+            'badnoneed_num' => ['name' => '无需求废单数', 'type' => 'bad'], 
+            'badbooked_num' => ['name' => '已装修废单数', 'type' => 'bad'],
+            'badtest_num' => ['name' => '测试废单数', 'type' => 'bad'], 
+            'validout_num' => ['name' => '无法派单数', 'type' => ['base', 'out']],
+            'outnew_num' => ['name' => '未知数', 'type' => 'out'], 
+            'outout_num' => ['name' => '外地数', 'type' => 'out'], 
+            'outpart_num' => ['name' => '局装数', 'type' => 'out'], 
+            'outsmall_num' => ['name' => '小面积整装数', 'type' => 'out'], 
+            'outshop_num' => ['name' => '公数', 'type' => 'out'], 
+            'outsoft_num' => ['name' => '软装数', 'type' => 'out'], 
         ];
-
-        $return = $returnValue ? $fields : array_keys($fields);
-        return $return;
+        $datas = [];
+        foreach ($fields as $key => $value) {
+            $type = (array) $value['type'];
+            if ($showType != 'all' && !in_array($showType, $type)) {
+                continue;
+            }
+            if ($returnValue) {
+                $datas[$key] = $value['name'];
+            } else {
+                $datas[] = $key;
+            }
+        }
+        return $datas;
     }
 
     protected function getDataTypes()
