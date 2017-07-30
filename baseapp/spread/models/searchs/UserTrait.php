@@ -77,6 +77,11 @@ Trait UserTrait
                 'type' => 'text',
             ],
             [
+                'name' => '状态',
+                'field' => 'status',
+                'type' => 'dropdown',
+            ],
+            [
                 'name' => '创建时间',
                 'field' => 'created_at_start',
                 'type' => 'daytime',
