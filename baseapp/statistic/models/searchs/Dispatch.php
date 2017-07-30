@@ -72,14 +72,18 @@ class Dispatch extends DispatchModel
 
     public function getSearchDatas()
     {
-        $list = [];
-        /*[
+        $list = [
             [
                 'name' => '商家',
                 'field' => 'merchant_id',
-                'infos' => $this->getPointInfos('merchant'),
+                'infos' => $this->getPointInfos('merchant', ['where' => ['status_ext' => [1]]]),
             ],
-        ];*/
+            [
+                'name' => '客服',
+                'field' => 'service_id',
+                'infos' => $this->getPointInfos('service', ['where' => ['status_ext' => [1]]]),
+            ],
+        ];
         $form = [
         [
             [

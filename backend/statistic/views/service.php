@@ -23,7 +23,6 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
-$searchContent = '';//$this->render('_search', array_merge($searchDatas, ['model' => $searchModel]));
 echo $this->render('_nav', ['view' => 'service', 'fields' => $searchModel->fields]);
-echo $this->render('_nav-service', ['model' => $searchModel]);
+$searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);

@@ -1,14 +1,16 @@
 <?php
 use yii\helpers\Html;
 ?>
+<div>
 <label class="control-label col-md-1"><?= $elem['name']; ?></label>
-<div class="col-md-2">
+    <ul class="breadcrumb">
     <?= Html::checkboxList(
         $elem['field'],
-        $elem['value'],
+        null,
         $elem['infos'],
         [
             'inline' => true,
         ]
     ) ?>
+    </ul>
 </div>

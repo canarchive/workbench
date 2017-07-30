@@ -2,6 +2,7 @@
 
 namespace baseapp\statistic\models\searchs;
 
+use Yii;
 use yii\data\ActiveDataProvider;
 use baseapp\statistic\models\ReportService as ReportServiceModel;
 
@@ -54,6 +55,9 @@ class ReportService extends ReportServiceModel
 
     protected function _getCheckedFields()
     {
+        if ($this->field_hit === null) {
+            $this->field_hit = Yii::$app->request->get('field_hit', '');
+        }
         if ($this->field_hit == 'all') {
             return [];
         }
@@ -66,5 +70,43 @@ class ReportService extends ReportServiceModel
             }
         }
         return $fields;
+    }
+
+    public function getSearchDatas()
+    {
+        $list = [
+            [
+                'name' => '商家',
+                'field' => 'merchant_id',
+                'infos' => $this->getPointInfos('merchant', ['where' => ['status_ext' => [1]]]),
+            ],
+            [
+                'name' => '客服',
+                'field' => 'service_id',
+                'infos' => $this->getPointInfos('service', ['where' => ['status_ext' => [1]]]),
+            ],
+        ];
+        if (in_array('created_day', $this->_getCheckedFields())) {
+            $form = [[[
+                'name' => '派单时间',
+                'field' => 'created_at_start',
+                'type' => 'daytime',
+                'format' => 'YYYYMMDD',
+                'end' => [
+                    'name' => '创建时间',
+                    'field' => 'created_at_end',
+                    'type' => 'daytime',
+                    'format' => 'YYYYMMDD',
+                ],
+            ]]];
+        }
+        $form[0][1] = [
+            'name' => '检索类别',
+            'field' => 'field_hit',
+            'type' => 'hidden',
+            'value' => $this->field_hit,
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }

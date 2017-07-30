@@ -30,9 +30,5 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
-if (isset($this->limitSearch)) {
-echo $this->render('_nav', ['view' => 'dispatch', 'fields' => $searchModel->fields]);
-echo $this->render('_nav-dispatch', ['model' => $searchModel]);
-}
 $searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
