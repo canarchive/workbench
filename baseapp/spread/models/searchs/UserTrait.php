@@ -63,11 +63,12 @@ Trait UserTrait
                 'field' => 'merchant_id',
                 'infos' => $this->getPointInfos('merchant'),
             ],
-			[
-				'name' => '状态',
-				'field' => 'status',
+            [
+                'name' => '状态',
+                'field' => 'status',
+                'type' => 'checkbox',
 				'infos' => $this->statusInfos,
-			],
+            ],
         ];
         $form = [
         [
@@ -75,11 +76,6 @@ Trait UserTrait
                 'name' => '手机号',
                 'field' => 'mobile',
                 'type' => 'text',
-            ],
-            [
-                'name' => '状态',
-                'field' => 'status',
-                'type' => 'dropdown',
             ],
             [
                 'name' => '创建时间',
