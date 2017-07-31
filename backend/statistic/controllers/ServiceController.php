@@ -12,6 +12,7 @@ class ServiceController extends AdminController
     protected $modelClass = 'baseapp\statistic\models\ReportService';
     protected $modelSearchClass = 'baseapp\statistic\models\searchs\ReportService';
     protected $showInfo = false;
+    public $showSubnav = false;
 
     public function beforeAction($action)
     {

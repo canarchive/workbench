@@ -26,15 +26,15 @@ trait TraitSearchParam
         ];
     }
 
-    public function _sStartParam()
+    public function _sStartParam($name = '时间')
     {
         return [
-            'name' => '报名时间',
+            'name' => $name,
             'field' => 'created_at_start',
             'type' => 'daytime',
             'format' => 'YYYYMMDD',
             'end' => [
-                'name' => '创建时间',
+                'name' => $name,
                 'field' => 'created_at_end',
                 'type' => 'daytime',
                 'format' => 'YYYYMMDD',
