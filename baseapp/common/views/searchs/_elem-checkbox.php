@@ -6,7 +6,7 @@ use yii\helpers\Html;
     <ul class="breadcrumb">
     <?= Html::checkboxList(
         $elem['field'],
-        null,
+        $elem['value'],
         $elem['infos'],
         [
             'inline' => true,

@@ -172,4 +172,23 @@ class AbstractStatistic extends SpreadModel
         $rate .= '元';
         return $rate;
     }
+
+    protected function _getCheckedFields()
+    {
+        if ($this->field_hit === null) {
+            $this->field_hit = Yii::$app->request->get('field_hit', '');
+        }
+        if ($this->field_hit == 'all') {
+            return [];
+        }
+        
+        $fields = explode('-', trim($this->field_hit, '-'));
+        $datas = $this->fieldHitInfos;
+        foreach ($fields as $field) {
+            if (!in_array($field, $datas['fields'])) {
+                return [$datas['default']];
+            }
+        }
+        return $fields;
+    }
 }
