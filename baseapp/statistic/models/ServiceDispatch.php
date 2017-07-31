@@ -2,11 +2,11 @@
 
 namespace baseapp\statistic\models;
 
-class DispatchService extends AbstractStatistic
+class ServiceDispatch extends AbstractStatistic
 {
     public static function tableName()
     {
-        return '{{%dispatch_service_origin}}';
+        return '{{%service_dispatch_origin}}';
     }
 
     public function attributeLabels()
@@ -17,14 +17,12 @@ class DispatchService extends AbstractStatistic
             'back_reply_num' => '申请退单数',
             'back_confirm_num' => '确认退单数',
             'service_id' => '客服',
-            'day' => '日期',
-            'week' => '周',
         ];
     }
 
     public function getFieldInfos()
     {
-        $fields = ['service_id', 'created_month', 'created_week', 'created_weekday', 'created_day', 'created_hour'];
+        $fields = ['service_id', 'created_month'];
         return $fields;
     }
 }
