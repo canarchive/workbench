@@ -5,7 +5,7 @@ use yii\helpers\Html;
 <div class="col-md-2">
     <?= Html::dropDownList(
         $elem['field'],
-        '',//$elem['value'],
+        $elem['value'],
         $elem['infos'],
         [
             'prompt' => '全部',

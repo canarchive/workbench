@@ -53,62 +53,27 @@ class ReportService extends ReportServiceModel
         return $dataProvider;        
     }    
 
-    protected function _getCheckedFields()
-    {
-        if ($this->field_hit === null) {
-            $this->field_hit = Yii::$app->request->get('field_hit', '');
-        }
-        if ($this->field_hit == 'all') {
-            return [];
-        }
-        
-        $fields = explode('-', trim($this->field_hit, '-'));
-        $datas = ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day'];
-        foreach ($fields as $field) {
-            if (!in_array($field, $datas)) {
-                return ['created_day'];
-            }
-        }
-        return $fields;
-    }
-
     public function getSearchDatas()
     {
         $list = [
-            [
-                'name' => '商家',
-                'field' => 'merchant_id',
-                'infos' => $this->getPointInfos('merchant', ['where' => ['status_ext' => [1]]]),
-            ],
-            [
-                'name' => '客服',
-                'field' => 'service_id',
-                'infos' => $this->getPointInfos('service', ['where' => ['status_ext' => [1]]]),
-            ],
+            //$this->_sMerchantParam(['status_ext' => [1]]),
+            $this->_sServiceParam(['status_ext' => [1]]),
         ];
         $form = [
         [
-            [
-                'name' => '报名时间',
-                'field' => 'created_at_start',
-                'type' => 'daytime',
-                'format' => 'YYYYMMDD',
-                'end' => [
-                    'name' => '创建时间',
-                    'field' => 'created_at_end',
-                    'type' => 'daytime',
-                    'format' => 'YYYYMMDD',
-                ],
-            ],
-            [
-                'name' => '检索类别',
-                'field' => 'field_hit',
-                'type' => 'hidden',
-                'value' => $this->field_hit,
-            ],
+            $this->_sStartParam(),
+            $this->_sFieldHitParam(),
         ]
         ];
         $datas = ['list' => $list, 'form' => $form];
         return $datas;
+    }
+
+    public function getFieldHitInfos()
+    {
+        return [
+            'fields' => ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day'],
+            'default' => 'created_day',
+        ];
     }
 }

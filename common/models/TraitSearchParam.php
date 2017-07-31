@@ -11,6 +11,7 @@ trait TraitSearchParam
         return [
             'name' => '商家',
             'field' => 'merchant_id',
+            'value' => $this->merchant_id,
             'infos' => $this->getPointInfos('merchant', ['where' => $where]),
         ];
     }
@@ -20,6 +21,7 @@ trait TraitSearchParam
         return [
             'name' => '客服',
             'field' => 'service_id',
+            'value' => $this->service_id,
             'infos' => $this->getPointInfos('service', ['where' => $where]),
         ];
     }
@@ -40,13 +42,13 @@ trait TraitSearchParam
         ];
     }
 
-    public function _sFieldHitParam($fieldHit)
+    public function _sFieldHitParam()
     {
         return [
             'name' => '检索类别',
             'field' => 'field_hit',
             'type' => 'hidden',
-            'value' => $fieldHit,
+            'value' => $this->field_hit,
         ];
     }
 }
