@@ -84,9 +84,8 @@ class Dispatch extends DispatchModel
                 'infos' => $this->getPointInfos('service', ['where' => ['status_ext' => [1]]]),
             ],
         ];
-        $form = [
-        [
-            [
+        if (in_array('created_day', $this->_getCheckedFields())) {
+            $form = [[[
                 'name' => '派单时间',
                 'field' => 'created_at_start',
                 'type' => 'daytime',
@@ -97,8 +96,13 @@ class Dispatch extends DispatchModel
                     'type' => 'daytime',
                     'format' => 'YYYYMMDD',
                 ],
-            ],
-        ],
+            ]]];
+        }
+        $form[0][1] = [
+            'name' => '检索类别',
+            'field' => 'field_hit',
+            'type' => 'hidden',
+            'value' => $this->field_hit,
         ];
         $datas = ['list' => $list, 'form' => $form];
         return $datas;
