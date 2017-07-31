@@ -9,6 +9,7 @@ use baseapp\behaviors\BehaviorHelper;
 
 trait TraitModel
 {
+    use TraitSearchParam;
     use TraitLevel;
     use TraitPHPExcel;
 
