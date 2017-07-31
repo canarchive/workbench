@@ -9,67 +9,39 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-	'viewPath' => '@backend/views/charisma',
-    'bootstrap' => ['log'],
-		'bootstrap' => [
-		'log',
-		function () {
-            if (!isset(Yii::$app->i18n->translations['rbac-admin'])) {
-                Yii::$app->i18n->translations['rbac-admin'] = [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
-                    'basePath' => '@backend/messages'
-                ];
-                Yii::$app->i18n->translations['admin-common'] = [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en',
-                    'basePath' => '@backend/messages'
-                ];
-            }
-            //user did not define the Navbar?
-        }
-	],
+    'viewPath' => '@backend/views/charisma',
     'controllerNamespace' => 'backend\controllers',
     'components' => [
         'user' => [
             'identityClass' => 'backend\models\Manager',
             'enableAutoLogin' => true,
-        ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
+			'loginUrl' => '/signin.html',
         ],
         'authManager' => [
-            //'class' => 'yii\rbac\PhpManager',
             'class' => 'yii\rbac\DbManager',
-        ]
+        ],
+		'urlManager' => [
+			'rules' => [
+				'/<action:(signin|logout)>' => 'entrance/<action>',
+			],
+		],
     ],
 
-    //'layout' => 'left-menu',
     'as access' => [
         'class' => 'backend\components\AccessControl',
         'allowActions' => [
-			'site/login',
-			'site/logout',
-			'site/error',
+            'entrance/*',
+            'site/error',
+            'backend-upload/*',
             'debug/*',
         ]
     ],
 
-	'modules' => [
-		'gallerycms' => [
-			'class' => 'backend\gallerycms\Module',
+    'modules' => [
+		'demo' => [
+			'class' => 'backend\demo\Module',
 		],
-	],
-	'language' => 'zh-CN',
+    ],
 
     'params' => $params,
 ];
