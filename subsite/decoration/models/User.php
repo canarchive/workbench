@@ -61,7 +61,6 @@ class User extends ModelBase
             'follow' => '跟进',
             'follow-plan' => '期房跟进',
 			'valid' => '有效',
-			'valid-part' => '有效-局装',
             'valid-back' => '已退单',
 			'valid-out' => '承接范围外-无效',
             'bad' => '废单',
