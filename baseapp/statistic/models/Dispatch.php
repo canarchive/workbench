@@ -12,16 +12,11 @@ class Dispatch extends AbstractStatistic
 
     public function attributeLabels()
     {
-        return [
-            'id' => 'ID',
+        return array_merge($this->attributeBase(), [
             'dispatch_num' => '派单数',
             'back_reply_num' => '申请退单数',
             'back_confirm_num' => '确认退单数',
-            'service_id' => '客服',
-            'merchant_id' => '商家',
-            'day' => '日期',
-            'week' => '周',
-        ];
+        ]);
     }
 
     public function recordDetail($data, $info, $type)

@@ -10,6 +10,7 @@ use spread\models\Planfee;
 class AbstractStatistic extends SpreadModel
 {
     use HitInfosTrait;
+    public $show_field;
     public $fields;
     public $where;
     
@@ -190,5 +191,17 @@ class AbstractStatistic extends SpreadModel
             }
         }
         return $fields;
+    }
+
+    public function attributeBase()
+    {
+        return [
+            'id' => 'ID',
+            'service_id' => '客服',
+            'merchant_id' => '商家',
+            'created_day' => '日期',
+            'created_month' => '月份',
+            'created_week' => '周',
+        ];
     }
 }
