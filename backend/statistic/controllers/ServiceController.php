@@ -11,9 +11,6 @@ class ServiceController extends AdminController
     protected $viewCurrent = 'service';
     protected $modelClass = 'baseapp\statistic\models\ReportService';
     protected $modelSearchClass = 'baseapp\statistic\models\searchs\ReportService';
-
-    protected $modelWageClass = 'baseapp\statistic\models\ServiceWage';
-    protected $modelSearchWageClass = 'baseapp\statistic\models\searchs\ServiceWage';
     protected $showInfo = false;
 
     public function beforeAction($action)
@@ -30,13 +27,28 @@ class ServiceController extends AdminController
         echo $model->serviceSql();
     }
 
-    public function actionWage()
+    public function actionDispatch()
     {
-        $searchClass = $this->modelSearchWageClass;
+        //$modelDispatchClass = 'baseapp\statistic\models\ServiceDispatch';
+        $searchClass = $modelSearchDispatchClass = 'baseapp\statistic\models\searchs\ServiceDispatch';
         $searchModel = new $searchClass();
         $searchDatas = $searchModel->getSearchDatas();
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
-        return $this->render($this->viewPrefix . 'wage', [
+        return $this->render($this->viewPrefix . 'service-dispatch', [
+            'dataProvider' => $dataProvider,
+            'searchModel' => $searchModel,
+            'searchDatas' => $searchDatas,
+        ]);
+    }
+
+    public function actionWage()
+    {
+        //$modelWageClass = 'baseapp\statistic\models\ServiceWage';
+        $searchClass = $modelSearchWageClass = 'baseapp\statistic\models\searchs\ServiceWage';
+        $searchModel = new $searchClass();
+        $searchDatas = $searchModel->getSearchDatas();
+        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        return $this->render($this->viewPrefix . 'service-wage', [
             'dataProvider' => $dataProvider,
             'searchModel' => $searchModel,
             'searchDatas' => $searchDatas,
