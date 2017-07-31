@@ -44,6 +44,11 @@ $elems = [
         'service_id' => '客服',
         'service_id-created_day' => '客服每日',
     ],
+    'dispatch-service' => [
+        'created_day' => '每日',
+        'service_id' => '客服',
+        'service_id-created_day' => '客服每日',
+    ],
 ];
 $keyController = basename($this->context->id);
 $currentElem = implode($fields, '-');

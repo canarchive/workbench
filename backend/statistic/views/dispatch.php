@@ -30,5 +30,6 @@ $gridViewParams = [
     //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
+echo $this->render('_nav', ['view' => 'dispatch', 'fields' => $searchModel->fields]);
 $searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);

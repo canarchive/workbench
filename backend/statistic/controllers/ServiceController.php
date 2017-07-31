@@ -23,6 +23,13 @@ class ServiceController extends AdminController
         return parent::beforeAction($action);
     }
 
+    public function actionUpdate()
+    {
+        $class = $this->modelClass;
+        $model = new $class();
+        echo $model->serviceSql();
+    }
+
     public function actionWage()
     {
         $searchClass = $this->modelSearchWageClass;
