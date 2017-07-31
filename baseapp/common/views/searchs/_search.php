@@ -8,7 +8,7 @@ $elemForms = isset($elems['form']) ? (array) $elems['form'] : [];
 
 $menuInfos = $this->context->menuInfos;
 $currentUrl = $menuInfos['currentMenu']['url'];
-$currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
+$currentUrl = strpos($currentUrl, '?') !== false ? substr($currentUrl, 0, strpos($currentUrl, '?')) : $currentUrl;
 ?>
 <div class="row">
 <?php
