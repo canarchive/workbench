@@ -74,6 +74,7 @@ $changeMerchantUrl = isset($this->context->menuInfos['menus']['subsite_decoratio
                         <th><?= $model->getAttributeLabel('area_input'); ?></th>
                         <th><?= $model->getAttributeLabel('status'); ?></th>
                         <th><?= $model->getAttributeLabel('invalid_status'); ?></th>
+                        <th><?= $model->getAttributeLabel('out_status'); ?></th>
                         <th><?= $model->getAttributeLabel('callback_again'); ?></th>
 						<?php if (!empty($changeMerchantUrl)) { echo '<th>指派其他商家</th>'; } ?>
                     </tr>
@@ -82,30 +83,9 @@ $changeMerchantUrl = isset($this->context->menuInfos['menus']['subsite_decoratio
                     <tr>
                         <td><?= $model->city_input; ?></td>
                         <td><?= $model->area_input; ?></td>
-                        <td>
-                        <?= Html::dropDownList(
-                            "status",
-                            $model->status,
-                            $model->statusInfos,
-                            [
-                                'prompt' => '全部',
-                                'class' => 'form-control',
-                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'status', this.value)",
-                            ]
-                        ); ?>
-                        </td>
-                        <td>
-                        <?= Html::dropDownList(
-                            "invalid_status",
-                            $model->invalid_status,
-                            $model->invalidStatusInfos,
-                            [
-                                'prompt' => '全部',
-                                'class' => 'form-control',
-                                'onchange' => "updateElemForUser('{$tableName}', {$model->id}, 'invalid_status', this.value)",
-                            ]
-                        ); ?>
-                        </td>
+                        <td id="userinfo_status"><?= $model->getKeyName('status', $model->status); ?></td>
+                        <td id="userinfo_invalid_status"><?= $model->getKeyName('invalid_status', $model->invalid_status); ?></td>
+                        <td id="userinfo_out_status"><?= $model->getKeyName('out_status', $model->out_status); ?></td>
                         <td>
                         <input type="hidden" id="callback_again_old" value="<?= date('Y-m-d H:i:s', $model->callback_again); ?>" />
                         <input class="form-control" type="text" id="callback_again" onblur="changeDate('<?= $tableName; ?>', <?= $model->id; ?>, 'callback_again', this.value)" value="<?= date('Y-m-d H:i:s', $model->callback_again); ?>">

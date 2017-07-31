@@ -18,9 +18,15 @@ function addElemForUser(data)
             if (status == 200) {
                 if (table == 'callback') {
                     var newContent = "<tr>"
+                        + "<td>" + response.data.status + "</td>"
+                        + "<td>" + response.data.invalid_status + "</td>"
+                        + "<td>" + response.data.out_status + "</td>"
                         + "<td>" + data.content + "</td>"
-                        + "<td>" + response.created_at + "</td>"
+                        + "<td>" + response.data.created_at + "</td>"
                         + "</tr>";
+                    $("#userinfo_status").text(response.data.status);
+                    $("#userinfo_invalid_status").text(response.data.invalid_status);
+                    $("#userinfo_out_status").text(response.data.out_status);
                 } else if (table == 'house' || table == 'user_merchant') {
                     var newContent = response.content;
                 }
