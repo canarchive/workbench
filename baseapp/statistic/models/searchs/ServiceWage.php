@@ -28,8 +28,7 @@ class ServiceWage extends ServiceWageModel
 
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`dispatch_num`) AS `dispatch_num`, SUM(`back_reply_num`) AS `back_reply_num`, SUM(`back_confirm_num`) AS `back_confirm_num`";
-        //echo $fieldsStr;exit();
+        $fieldsStr .= $this->getFieldsStr('wage');
         $query->select($fieldsStr);
         $query->groupBy($fields);
 		if (in_array('created_month', $this->fields)) {

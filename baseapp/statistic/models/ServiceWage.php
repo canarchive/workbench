@@ -4,25 +4,28 @@ namespace baseapp\statistic\models;
 
 class ServiceWage extends AbstractStatistic
 {
+    use ServiceTrait;
+
     public static function tableName()
     {
         return '{{%service_wage_origin}}';
-    }
-
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'dispatch_num' => '派单数',
-            'back_reply_num' => '申请退单数',
-            'back_confirm_num' => '确认退单数',
-            'service_id' => '客服',
-        ];
     }
 
     public function getFieldInfos()
     {
         $fields = ['service_id', 'created_month'];
         return $fields;
+    }
+
+    public function getShowFields()
+    {
+        $datas = [];
+        foreach ($this->_fieldsInfos() as $field => $value) {
+            $type = $value['type'];
+            if (in_array('wage', $type)) {
+                $datas[] = $field;
+            }
+        }
+        return $datas;
     }
 }

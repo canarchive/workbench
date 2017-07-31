@@ -28,12 +28,11 @@ class ServiceDispatch extends ServiceDispatchModel
 
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`dispatch_num`) AS `dispatch_num`, SUM(`back_reply_num`) AS `back_reply_num`, SUM(`back_confirm_num`) AS `back_confirm_num`";
-        //echo $fieldsStr;exit();
+        $fieldsStr .= $this->getFieldsStr('dispatch');
         $query->select($fieldsStr);
         $query->groupBy($fields);
-		if (in_array('created_month', $this->fields)) {
-			$query->orderBy(['created_month' => SORT_DESC]);
+		if (in_array('created_day', $this->fields)) {
+			$query->orderBy(['created_day' => SORT_DESC]);
 		}
 
 		$serviceIds = empty($this->service_id) ? null : $this->service_id;
@@ -44,19 +43,27 @@ class ServiceDispatch extends ServiceDispatchModel
         return $dataProvider;        
     }    
 
-    protected function _getCheckedFields()
+    public function getFieldHitInfos()
     {
-        if ($this->field_hit == 'all') {
-            return [];
-        }
-        
-        $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['service_id', 'created_month'];
-        foreach ($fields as $field) {
-            if (!in_array($field, $datas)) {
-                return ['created_month'];
-            }
-        }
-        return $fields;
+        return [
+            'fields' => ['service_id', 'created_month', 'created_week', 'created_day'],
+            'default' => 'created_day',
+        ];
+    }
+
+    public function getSearchDatas()
+    {
+        $this->_getCheckedFields();
+        $list = [
+            $this->_sServiceParam(['status_ext' => [1]]),
+        ];
+        $form = [
+        [
+            $this->_sStartParam(),
+            $this->_sFieldHitParam(),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }
