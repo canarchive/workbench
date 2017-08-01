@@ -59,6 +59,7 @@ trait UserTrait
 
         $data['service_id'] = empty($serviceInfo) ? 1 : $serviceInfo->id;
         $data = $this->_formatData($data);
+        $data['service_id_first'] = $data['service_id'];
 
         $newModel = $this->_newModel('user', true, $data);
         $insert = $newModel->save();

@@ -35,6 +35,7 @@ trait UserMerchantTrait
             'id' => 'ID',
             'merchant_id' => '商家',
             'mobile' => '手机号',
+            'sort' => '装修类别',
             'house_id' => '房屋',
             'created_at' => '派单时间',
             'updated_at' => '更新时间',

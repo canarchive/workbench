@@ -61,11 +61,13 @@ Trait UserTrait
             [
                 'name' => '商家',
                 'field' => 'merchant_id',
+                'value' => $this->merchant_id,
                 'infos' => $this->getPointInfos('merchant'),
             ],
             [
                 'name' => '状态',
                 'field' => 'status',
+                'value' => $this->status,
                 'type' => 'checkbox',
 				'infos' => $this->statusInfos,
             ],
@@ -74,6 +76,7 @@ Trait UserTrait
         [
             [
                 'name' => '手机号',
+                'value' => $this->mobile,
                 'field' => 'mobile',
                 'type' => 'text',
             ],
