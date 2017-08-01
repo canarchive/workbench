@@ -4,13 +4,11 @@ namespace baseapp\statistic\models;
 
 trait UpdateDispatchTrait
 {
-    public $updateType = '';
     public $merchantStr;
-    public $tableStr;
     public function dispatchSql()
     {
-        $this->merchantStr = $this->updateType == 'service' ? '' : '`merchant_id`,';
-        $this->tableStr = $this->updateType == 'service' ? 'ws_dispatch_service_origin' : 'ws_dispatch_origin';
+        $this->merchantStr = '`merchant_id`,';
+        $this->tableStr = 'ws_dispatch_origin';
         $sql = $this->_dispatchBase();
         $sql .= $this->_dispatchStatus();
         return $sql;
@@ -23,23 +21,27 @@ trait UpdateDispatchTrait
             'back_reply' => 'back_reply_num',
             'back_confirm' => 'back_confirm_num',
         ];
+        $pres = ['', 'overall', 'office', 'part'];
 
         $sql = '';
-        foreach ($elems as $elem => $elemField) {
-            $where = "`status` = '{$elem}'";
-            $sql .= $this->_dispatchSql($where, $elemField);
+        foreach ($pres as $pre) {
+            foreach ($elems as $elem => $elemField) {
+                $field = $pre === '' ? $elemField : $pre . '_' . $elemField;
+                $where = $pre === '' ? "`status` = '{$elem}'" : "`status` = '{$elem}' AND `sort` = '{$pre}'";
+                $sql .= $this->_dispatchSql($where, $field);
+            }
         }
         return $sql;
     }
 
     protected function _dispatchSql($where, $field)
     {
-        $merchantWhereStr = $this->updateType == 'service' ? '' : '`a`.`merchant_id` = `b`.`merchant_id` AND ';
+        $merchantWhereStr = '`a`.`merchant_id` = `b`.`merchant_id` AND ';
 
         $sqlBase = "UPDATE `workplat_statistic`.`{$this->tableStr}` AS `a`, 
-            (SELECT {$this->merchantStr} `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user_merchant` WHERE {{WHERE}} GROUP BY {$this->merchantStr} `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`) AS `b` 
+            (SELECT {$this->merchantStr} `service_id`, `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user_merchant` WHERE {{WHERE}} GROUP BY {$this->merchantStr} `service_id`, `created_day`) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
-            WHERE {$merchantWhereStr} `a`.`service_id` = `b`.`service_id` AND `a`.`created_month` = `b`.`created_month` AND `a`.`created_week` = `b`.`created_week` AND `a`.`created_weekday` = `b`.`created_weekday` AND `a`.`created_day` = `b`.`created_day`;";
+            WHERE {$merchantWhereStr} `a`.`service_id` = `b`.`service_id` AND `a`.`created_day` = `b`.`created_day`;";
         $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br />';
         return $sql;
     }

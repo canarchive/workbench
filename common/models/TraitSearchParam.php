@@ -51,4 +51,24 @@ trait TraitSearchParam
             'value' => $this->field_hit,
         ];
     }
+
+    public function _sStatusParam()
+    {
+        return [
+            'name' => '状态',
+            'field' => 'status',
+            'value' => $this->status,
+			'infos' => $this->statusInfos,
+        ];
+    }
+
+    public function _sMobileParam()
+    {
+        return [
+            'name' => '手机号',
+            'field' => 'mobile',
+            'value' => $this->mobile,
+            'type' => 'text',
+        ];
+    }
 }

@@ -6,23 +6,10 @@ trait UpdateServiceTrait
 {
     public function serviceSql()
     {
-        $sql = $this->_serviceUser();
-        $sql .= $this->_serviceBase();
+        $sql = $this->_serviceBase();
         $sql .= $this->_serviceStatus();
         $sql .= $this->_serviceBad();
         $sql .= $this->_serviceOut();
-        return $sql;
-    }
-
-    protected function _serviceUser()
-    {
-        $sqlBase = "UPDATE `wd_user` AS `u`, `wd_user_merchant` AS `m` SET `u`.`status` = ";
-        $whereBase = "WHERE `u`.`id` = `m`.`user_id` AND";
-        $sql = "{$sqlBase} `u`.`status` = 'valid-back', `status_sort` = '' WHERE `service_id` IN ({$serviceIds}) AND `status` IN ('valid', 'valid-part');";
-        $sql .= "{$sqlBase} `u`.`status` = 'valid' {$whereBase} `status` = '';";
-        $sql .= "{$sqlBase} 'u`.`status_sort` = `part` {$whereBase} `status` = '' AND `sort` = 'part';";
-        $sql .= "{$sqlBase} 'u`.`status_sort` = `overall` {$whereBase} `status` = '' AND `sort` = 'overall';";
-        $sql .= "{$sqlBase} 'u`.`status_sort` = `office` {$whereBase} `status` = '' AND `sort` = 'office';";
         return $sql;
     }
 
