@@ -25,7 +25,10 @@ class DispatchController extends AdminController
         $updateType = Yii::$app->request->get('update_type', '');
         $class = $this->modelClass;
         $model = new $class();
-        $model->updateType = $updateType;
-        echo $model->dispatchSql();
+        if ($updateType == 'service') {
+            echo $model->serviceDispatchSql();
+        } else {
+            echo $model->dispatchSql();
+        } 
     }
 }
