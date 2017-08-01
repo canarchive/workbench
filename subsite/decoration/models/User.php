@@ -34,7 +34,6 @@ class User extends ModelBase
 			'part' => '局部装修',
 			'small' => '50平米以下整装',
 			'shop' => '商铺',
-			'we_part' => '水电改造',
 			'soft' => '软装',
         ];
 
@@ -98,12 +97,14 @@ class User extends ModelBase
         }
         $noticeMobiles = [
             '667' => '17316278360',
+            '672' => '15116958221',
             //'671' => '15110125766',
 			'671' => '15010202641',
 			'682' => '18600063835',
 			'669' => '13717716106',//'13581522034',
 			'684' => '18614242810',
 			'686' => '15801558634',
+            '694' => '13810901261',
         ];
         $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
         if (empty($mobile)) {
