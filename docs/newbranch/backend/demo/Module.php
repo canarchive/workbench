@@ -1,18 +1,13 @@
 <?php
+namespace backend\demo;
 
-namespace backend\gallerycms;
+use common\components\ModuleBase;
 
-use Yii;
-use yii\helpers\Inflector;
-
-class Module extends \yii\base\Module
+class Module extends ModuleBase
 {
-    /**
-     * @inheritdoc
-     */
-
     public function init()
-    {
+    {   
         parent::init();
-    }
+
+    }   
 }
