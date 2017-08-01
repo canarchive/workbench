@@ -9,6 +9,7 @@ $merchantInfos = $modelNew->getPointInfos('merchant', ['where' => ['status' => 3
         <tr>
             <th><?= $modelNew->getAttributeLabel('house_id'); ?></th>
             <th><?= $modelNew->getAttributeLabel('merchant_id'); ?></th>
+            <th><?= $modelNew->getAttributeLabel('sort'); ?></th>
             <th><?= $modelNew->getAttributeLabel('note'); ?></th>
         </tr>
     </thead>
@@ -24,6 +25,17 @@ $merchantInfos = $modelNew->getPointInfos('merchant', ['where' => ['status' => 3
                     'prompt' => '全部',
                     'class' => 'form-control',
                     'id' => 'merchant_id',
+                ]
+            ); ?>
+            </td>
+            <td>
+            <?= Html::dropDownList(
+                'sort',
+                'overall',
+                $modelNew->sortInfos,
+                [
+                    'class' => 'form-control',
+                    'id' => 'sort',
                 ]
             ); ?>
             </td>

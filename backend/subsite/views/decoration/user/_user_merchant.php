@@ -7,6 +7,7 @@ $tableName = 'user_merchant';
     <thead>
         <tr>
             <th><?= $modelNew->getAttributeLabel('merchant_id'); ?></th>
+            <th><?= $modelNew->getAttributeLabel('sort'); ?></th>
             <th><?= $modelNew->getAttributeLabel('created_at'); ?></th>
             <th><?= $modelNew->getAttributeLabel('status'); ?></th>
             <th><?= $modelNew->getAttributeLabel('note'); ?></th>
@@ -16,6 +17,7 @@ $tableName = 'user_merchant';
         <?php foreach ($houseInfos as $model) { ?>
         <tr>
             <td><?= $model->getPointName('merchant', $model->merchant_id); ?></td>
+            <td><?= $model->getKeyName('sort', $model->sort); ?></td>
             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
             <td>
             <?php if ($model->status == 0 && time() - $model->created_at < 600) { echo Html::dropDownList(

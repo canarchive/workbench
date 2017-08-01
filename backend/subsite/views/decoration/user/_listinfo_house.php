@@ -85,7 +85,7 @@ function addHouseInfo()
 
 function addMerchantInfo()
 {
-    var fields = ['house_id', 'note', 'merchant_id'];
+    var fields = ['house_id', 'note', 'merchant_id', 'sort'];
     var dataValues = [];
     for (var i = 0; i < fields.length; i++) {
     //for (var field in fields) {

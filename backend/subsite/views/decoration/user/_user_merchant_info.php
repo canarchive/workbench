@@ -5,6 +5,7 @@ $tableName = 'user_merchant';
 ?>
         <tr>
             <td><?= $model->getPointName('merchant', $model->merchant_id); ?></td>
+            <td><?= $model->getKeyName('sort', $model->sort); ?></td>
             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
             <td>
             <?php if ($model->status == 0 && time() - $model->created_at < 600) { echo Html::dropDownList(
