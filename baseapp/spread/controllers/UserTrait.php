@@ -156,7 +156,7 @@ trait UserTrait
             return $this->_update($model, $params);
         }
 
-        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
+        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code', 'sort'];
         $this->_initFields($model, $fields);
         $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
         if ($oldInfo) {
@@ -174,6 +174,7 @@ trait UserTrait
         $userModel->sendSmsValid($model, $userModel);
         $noteData = [
             'user_merchant_id' => $model->id,
+            'merchant_id' => $model->merchant_id,
             'reply' => Yii::$app->request->post('note'),
             'reply_at' => Yii::$app->params['currentTime'],
         ];

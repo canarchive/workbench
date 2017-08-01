@@ -49,40 +49,15 @@ Trait UserMerchantTrait
     public function getSearchDatas()
     {
         $list = [
-            [
-                'name' => '商家',
-                'field' => 'merchant_id',
-                'infos' => $this->getPointInfos('merchant', ['where' => ['status_ext' => [1]]]),
-            ],
-            [
-                'name' => '客服',
-                'field' => 'service_id',
-                'infos' => $this->getPointInfos('service', ['where' => ['status_ext' => [1]]]),
-            ],
-            [
-                'name' => '状态',
-                'field' => 'status',
-				'infos' => $this->statusInfos,
-            ],
+            $this->_sMerchantParam(['status_ext' => [1]]),
+            $this->_sServiceParam(['status_ext' => [1]]),
+            $this->_sStatusParam(),
         ];
         $form = [
         [
-            [
-                'name' => '手机号',
-                'field' => 'mobile',
-                'type' => 'text',
-            ],
-            [
-                'name' => '创建时间',
-                'field' => 'created_at_start',
-                'type' => 'daytime',
-                'end' => [
-                    'name' => '创建时间',
-                    'field' => 'created_at_end',
-                    'type' => 'daytime',
-                ],
-            ],
-        ],
+            $this->_sMobileParam(),
+            $this->_sStartParam(),
+        ]
         ];
         $datas = ['list' => $list, 'form' => $form];
         return $datas;

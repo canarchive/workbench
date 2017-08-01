@@ -35,15 +35,15 @@ trait ServiceTrait
 
     public function getShowFields()
     {
-        $showField = Yii::$app->request->get('show_field', '');
-        $showField = empty($showField) ? ['base'] : explode('-', $showField);
+        $showFieldBase = Yii::$app->request->get('show_field', '');
+        $showField = empty($showFieldBase) ? ['base'] : explode('-', $showFieldBase);
         $showFields = ['base', 'mobile', 'back', 'dispatch', 'part', 'overall', 'office'];
 
         $showField = $showField == array_intersect($showField, $showFields) ? $showField : ['base'];
         $datas = [];
         foreach ($this->_fieldsInfos() as $field => $value) {
             $type = $value['type'];
-            if (!empty(array_intersect($showField, $type))) {
+            if ($showFieldBase == 'all' || !empty(array_intersect($showField, $type))) {
                 $datas[] = $field;
             }
         }
