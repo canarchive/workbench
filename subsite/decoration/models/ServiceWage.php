@@ -107,7 +107,10 @@ class ServiceWage extends ModelBase
             $sql .= str_replace('{{WHERE}}', $where, $sqlUpdate);
 
             $info->$field = $this->db->createCommand($sql)->queryScalar();
+            echo $field . '--';
+            echo $info->$field . '<br />';
         }
+        print_r($info);
         $info->update(false);
         return ;
     }

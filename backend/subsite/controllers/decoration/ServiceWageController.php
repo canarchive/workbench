@@ -12,7 +12,7 @@ class ServiceWageController extends AdminController
     protected $modelClass = 'subsite\decoration\models\ServiceWage';
     protected $modelSearchClass = 'subsite\decoration\models\searchs\ServiceWage';
 
-    public function actionLsistinfo()
+    public function actionAdd()
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass();

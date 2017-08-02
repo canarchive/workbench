@@ -8,9 +8,17 @@ $columns = [
             return $model->getPointName('service', $model->service_id);
         }
     ],
-    'info_num',
     'wage',
+    'mobile_num',
+    'overall_mobile_num',
+    'office_mobile_num',
+    'part_mobile_num',
     'wage_ext',
+    'info_num',
+    'info_valid_num',
+    'info_valid_overall_num',
+    'info_valid_part_num',
+    'info_valid_office_num',
     'status' => [
         'attribute' => 'status',
         'value' => function($model) {
