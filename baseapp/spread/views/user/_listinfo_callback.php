@@ -22,7 +22,7 @@ $modelNew = $modelUser->_newModel('callback');
                         <td>
                         <?= Html::dropDownList(
                             "status",
-                            $modelNew->status,
+                            $modelUser->status,
                             $modelNew->statusInfos,
                             [
                                 'prompt' => '全部',
@@ -36,7 +36,7 @@ $modelNew = $modelUser->_newModel('callback');
                         <td>
                         <?= Html::dropDownList(
                             "invalid_status",
-                            $modelNew->invalid_status,
+                            $modelUser->invalid_status,
                             $modelNew->invalidStatusInfos,
                             [
                                 'prompt' => '全部',
@@ -50,7 +50,7 @@ $modelNew = $modelUser->_newModel('callback');
                         <td>
                         <?= Html::dropDownList(
                             "out_status",
-                            $modelNew->out_status,
+                            $modelUser->out_status,
                             $modelNew->outStatusInfos,
                             [
                                 'prompt' => '全部',
