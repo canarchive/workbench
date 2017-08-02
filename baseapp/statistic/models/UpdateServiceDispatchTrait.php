@@ -20,7 +20,7 @@ trait UpdateServiceDispatchTrait
         $serviceIds = implode(',', $this->serviceIds);
         $sqlBase = "UPDATE `workplat_subsite`.`wd_user` AS `u`, `workplat_subsite`.`wd_user_merchant` AS `m` SET ";
         $whereBase = "WHERE `u`.`id` = `m`.`user_id` AND";
-        $sql = "UPDATE `workplat_subsite`.`wd_user` SET `status` = 'valid-back', `status_sort` = '' WHERE `service_id` IN ({$serviceIds}) AND `status` IN ('valid', 'valid-part');<br />";
+        $sql = "UPDATE `workplat_subsite`.`wd_user` SET `status` = 'valid-back', `status_sort` = '' WHERE `service_id` IN ({$serviceIds}) AND `status` = 'valid';<br />";
         $sql .= "{$sqlBase} `u`.`status` = 'valid' {$whereBase} `m`.`status` = '';<br />";
         $sql .= "{$sqlBase} `u`.`status_sort` = 'part' {$whereBase} `m`.`status` = '' AND `sort` = 'part';<br />";
         $sql .= "{$sqlBase} `u`.`status_sort` = 'overall' {$whereBase} `m`.`status` = '' AND `sort` = 'overall';<br />";
