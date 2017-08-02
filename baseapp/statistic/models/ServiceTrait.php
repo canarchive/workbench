@@ -35,19 +35,35 @@ trait ServiceTrait
 
     public function getShowFields()
     {
-        $showField = Yii::$app->request->get('show_field', '');
-        $showField = empty($showField) ? ['base'] : explode('-', $showField);
+        $showFieldBase = Yii::$app->request->get('show_field', '');
+        $showField = empty($showFieldBase) ? ['base'] : explode('-', $showFieldBase);
         $showFields = ['base', 'mobile', 'back', 'dispatch', 'part', 'overall', 'office'];
 
         $showField = $showField == array_intersect($showField, $showFields) ? $showField : ['base'];
         $datas = [];
         foreach ($this->_fieldsInfos() as $field => $value) {
             $type = $value['type'];
-            if (!empty(array_intersect($showField, $type))) {
-                $datas[] = $field;
+            if ($showFieldBase == 'all' || !empty(array_intersect($showField, $type))) {
+                $datas[] = $this->_formatField($field);
             }
         }
         return $datas;
+    }
+
+    protected function _formatField($field)
+    {
+        switch ($field) {
+        case 'info_valid_num':
+            return [
+                'attribute' => 'info_valid_num',
+                'value' => function($model) {
+                    return $model->info_valid_num . $model->formatPercent($model->info_valid_num, $model->info_num);
+                }
+            ];
+            break;
+        default:
+            return $field;
+        }
     }
 
     protected function _fieldsInfos()

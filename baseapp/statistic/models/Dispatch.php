@@ -5,6 +5,9 @@ namespace baseapp\statistic\models;
 class Dispatch extends AbstractStatistic
 {
     use UpdateDispatchTrait;
+    use UpdateServiceDispatchTrait;
+    public $tableStr;
+
     public static function tableName()
     {
         return '{{%dispatch_origin}}';
