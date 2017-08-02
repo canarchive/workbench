@@ -27,6 +27,13 @@ $form = ActiveForm::begin([
     <?php foreach ($elemLists as $elem) { echo $this->render('_elem-checkbox', ['elem' => $elem, 'model' => $model]); } ?> 
     <div class="box-inner">
         <div class="box-create">
+            <?php if (empty($elemForms)) { ?>
+            <div class="form-group form-group-sm">
+                <div class="col-md-2">
+                    <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
+                </div>
+            </div>
+            <?php } ?>
             <?php $i = 1; $num = count($elemForms); foreach ($elemForms as $elemSubs) { ?>
             <div class="form-group form-group-sm">
                 <?php foreach ($elemSubs as $elem) { $eView = "_elem-{$elem['type']}"; echo $this->render($eView, ['elem' => $elem, 'model' => $model]); } ?>
