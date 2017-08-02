@@ -175,6 +175,8 @@ trait UserTrait
         $noteData = [
             'user_merchant_id' => $model->id,
             'merchant_id' => $model->merchant_id,
+            'mobile' => $model->mobile,
+            'service_id' => $model->service_id,
             'reply' => Yii::$app->request->post('note'),
             'reply_at' => Yii::$app->params['currentTime'],
         ];

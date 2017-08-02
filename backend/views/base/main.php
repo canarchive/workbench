@@ -7,7 +7,7 @@ $this->params['currentMenu'] = $this->context->menuInfos['currentMenu'];
 $this->params['parentMenu'] = $this->context->menuInfos['parentMenu'];
 $this->params['identityInfo'] = Yii::$app->params['managerInfo'];
 
-$this->params['bodyClass'] = ($this->params['identityInfo']['name'] != 'wangcanliang') ? 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"' : '';
+$this->params['bodyClass'] = '';//($this->params['identityInfo']['name'] != 'wangcanliang') ? 'ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false"' : '';
 ?>
 <?php $this->beginContent('@backend/views/base/main-base.php'); ?>
 <?php echo $this->render('_elem-topbar'); ?>

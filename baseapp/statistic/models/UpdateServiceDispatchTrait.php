@@ -4,6 +4,7 @@ namespace baseapp\statistic\models;
 
 trait UpdateServiceDispatchTrait
 {
+    protected $serviceIds = [1, 27, 28, 31, 46, 47];
     public function serviceDispatchSql()
     {
         $this->tableStr = 'ws_service_dispatch_origin';
@@ -16,8 +17,7 @@ trait UpdateServiceDispatchTrait
 
     protected function _serviceUserPre()
     {
-        $serviceIds = [1, 27, 28, 31, 46, 47];
-        $serviceIds = implode(',', $serviceIds);
+        $serviceIds = implode(',', $this->serviceIds);
         $sqlBase = "UPDATE `workplat_subsite`.`wd_user` AS `u`, `workplat_subsite`.`wd_user_merchant` AS `m` SET ";
         $whereBase = "WHERE `u`.`id` = `m`.`user_id` AND";
         $sql = "UPDATE `workplat_subsite`.`wd_user` SET `status` = 'valid-back', `status_sort` = '' WHERE `service_id` IN ({$serviceIds}) AND `status` IN ('valid', 'valid-part');<br />";
@@ -63,12 +63,11 @@ trait UpdateServiceDispatchTrait
 
     protected function _serviceUser()
     {
-        $serviceIds = [1, 27, 28, 31, 46, 47];
-        $serviceIds = implode(',', $serviceIds);
+        $serviceIds = implode(',', $this->serviceIds);
         $sqlBase = "UPDATE `workplat_statistic`.`{$this->tableStr}` AS `a`, 
-            (SELECT `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(DISTINCT(`mobile`)) AS `count` FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN ({$serviceIds}) AND {{WHERE}} GROUP BY FROM_UNIXTIME(`created_at`, '%Y%m%d'), `service_id`) AS `b` 
+            (SELECT `service_id_first`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(DISTINCT(`mobile`)) AS `count` FROM `workplat_subsite`.`wd_user` WHERE `service_id_first` IN ({$serviceIds}) AND {{WHERE}} GROUP BY FROM_UNIXTIME(`created_at`, '%Y%m%d'), `service_id_first`) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
-            WHERE `a`.`service_id` = `b`.`service_id` AND `a`.`created_day` = `b`.`created_day`;";
+            WHERE `a`.`service_id` = `b`.`service_id_first` AND `a`.`created_day` = `b`.`created_day`;";
         $sort = ['overall', 'part', 'office'];
         $datas = [
             'info_num' => '1',
