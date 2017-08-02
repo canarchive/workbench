@@ -14,7 +14,7 @@ trait BaseTrait
     public function getStrictPriv()
     {
         $role = Yii::$app->params['managerInfo']->role;
-        if (in_array($role, ['admin-inner', 'service-inner', 'service-admin-inner'])) {
+        if (in_array($role, ['admin-inner', 'service-inner', 'service-admin-inner', 'service-saleman'])) {
             return false;
         }
         return true;
