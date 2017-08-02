@@ -35,8 +35,8 @@ class ServiceWage extends ModelBase
 
             'mobile_num' => '手机数',
             'overall_mobile_num' => '整装手机数',
-            'office_mobile_num' => '局装手机数',
-            'part_mobile_num' => '公装手机数',
+            'office_mobile_num' => '公装手机数',
+            'part_mobile_num' => '局装手机数',
 
             'note' => '备注',
             'status' => '状态',
@@ -104,7 +104,9 @@ class ServiceWage extends ModelBase
         $sqlUpdate = "UPDATE `wd_user_merchant` SET `status_ext` = 1 WHERE {{WHERE}};";
         foreach ($datas as $field => $where) {
             $sql = str_replace('{{WHERE}}', $where, $sqlBase);
-            $sql .= str_replace('{{WHERE}}', $where, $sqlUpdate);
+            if ($field != 'mobile_num') {
+                $sql .= str_replace('{{WHERE}}', $where, $sqlUpdate);
+            }
 
             $info->$field = $this->db->createCommand($sql)->queryScalar();
             echo $field . '--';

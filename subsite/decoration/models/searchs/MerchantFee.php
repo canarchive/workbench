@@ -32,13 +32,12 @@ class MerchantFee extends MerchantFeeModel
     public function getSearchDatas()
     {
         $list = [
-            [
-                'name' => '商家',
-                'field' => 'merchant_id',
-                'infos' => $this->getPointInfos('merchant', ['where' => ['id' => ['667', '669', '671', '692']]]),
-            ],
+            $this->_sMerchantParam(['status' => 2]),
+            $this->_sMerchantParam(['status' => 3]),
+            $this->_sMerchantParam(['status' => 99]),
         ];
-        $form = [];
+        $form = [[
+        ]];
         $datas = ['list' => $list, 'form' => $form];
         return $datas;
     }
