@@ -146,6 +146,13 @@ trait TraitModel
         return  date($format, $timestamp);
     }
 
+    public function formatPercent($num, $num2, $haveBracket = true, $precision = 4)
+    {
+        $result = $num2 == 0 ? '-' : (number_format($num / $num2, $precision) * 100) . '%';
+        $result = $haveBracket ? " ( {$result} )" : $result;
+        return $result;
+    }
+
     public function formatTimestampShow($timestamp)
     {
         $day = floor($timestamp / 86400);
