@@ -1,7 +1,6 @@
 <?php
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
     'columns' => [
         [
             'attribute' => 'name',
@@ -18,4 +17,4 @@ $gridViewParams = [
     ],
 ];
 
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'showFilter' => true]);

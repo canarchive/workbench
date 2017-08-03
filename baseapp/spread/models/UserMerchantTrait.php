@@ -34,6 +34,7 @@ trait UserMerchantTrait
         return [
             'id' => 'ID',
             'merchant_id' => '商家',
+            'service_id' => '客服',
             'mobile' => '手机号',
             'sort' => '装修类别',
             'house_id' => '房屋',

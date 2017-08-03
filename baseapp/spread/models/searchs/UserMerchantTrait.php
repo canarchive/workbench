@@ -46,16 +46,16 @@ Trait UserMerchantTrait
         return $dataProvider;
     }
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
         $list = [
-            $this->_sMerchantParam(['status_ext' => [1]]),
-            $this->_sServiceParam(['status_ext' => [1]]),
-            $this->_sStatusParam(),
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+            $this->_sKeyParam(['field' => 'status']),
         ];
         $form = [
         [
-            $this->_sMobileParam(),
+            $this->_sTextParam(['field' => 'mobile']),
             $this->_sStartParam(),
         ]
         ];

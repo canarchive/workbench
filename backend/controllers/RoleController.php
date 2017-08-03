@@ -26,7 +26,6 @@ class RoleController extends AdminController
 
         return $this->render('listinfo', [
             'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
         ]);
     }
 
