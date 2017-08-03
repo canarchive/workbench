@@ -1,6 +1,6 @@
 <?php
 $ignores = [];
-switch ($searchModel->status) {
+switch ($this->context->searchModel->status) {
 case 'follow-plan':
 	$ignores = ['status', 'invalid_status'];
 	break;
@@ -10,12 +10,10 @@ case 'bad':
 default:
 	$ignores = ['invalid_status', 'callback_again'];
 }
-$columns = $searchModel->getColumnsUser($ignores);
+$columns = $this->context->searchModel->getColumnsUser($ignores);
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
 
-$searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);

@@ -29,16 +29,13 @@ class MerchantFee extends MerchantFeeModel
         return $dataProvider;
     }
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
         $list = [
-            $this->_sMerchantParam(['status' => 2]),
-            $this->_sMerchantParam(['status' => 3]),
-            $this->_sMerchantParam(['status' => 99]),
+            $this->_sPointParam(['name' => 'CPA商家', 'table' => 'merchant', 'field' => 'merchant_id', 'where' => ['status' => 2]]),
+            $this->_sPointParam(['name' => 'CPS商家', 'table' => 'merchant', 'field' => 'merchant_id', 'where' => ['status' => 3]]),
+            $this->_sPointParam(['name' => '其他商家', 'table' => 'merchant', 'field' => 'merchant_id', 'where' => ['status' => 99]]),
         ];
-        $form = [[
-        ]];
-        $datas = ['list' => $list, 'form' => $form];
-        return $datas;
+        return ['list' => $list];
     }
 }

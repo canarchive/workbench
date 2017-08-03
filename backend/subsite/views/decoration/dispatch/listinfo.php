@@ -2,7 +2,6 @@
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => [
         'id',
         'mobile',

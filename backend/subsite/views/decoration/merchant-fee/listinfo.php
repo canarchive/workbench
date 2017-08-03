@@ -56,14 +56,8 @@ if (isset($this->context->limitSearch)) {
 }
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
 
-if (isset($this->context->limitSearch)) {
-    $searchContent = '';
-} else {
-    $searchContent = $this->render('@baseapp/common/views/searchs/_search', ['elems' => $searchDatas, 'model' => $searchModel]);
-}
-
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+$limitSearch = isset($this->context->limitSearch) ? true : false;
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'limitSearch' => $limitSearch]);

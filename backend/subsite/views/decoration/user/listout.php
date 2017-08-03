@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 
 $ignores = [];
-switch ($searchModel->status) {
+switch ($this->context->searchModel->status) {
 case 'follow-plan':
     $ignores = ['status', 'invalid_status'];
     break;
@@ -13,7 +13,7 @@ default:
     $ignores = ['invalid_status', 'callback_again'];
 }
 $ignores = array_merge(['channel', 'city_input', 'city'], $ignores);
-$columns = $searchModel->getColumnsUser($ignores);
+$columns = $this->context->searchModel->getColumnsUser($ignores);
 $columns['mobile'] = [
     'format' => 'raw',
     'attribute' => 'mobile',
@@ -36,13 +36,11 @@ $columns['mobile'] = 'mobile';
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
 
-echo $this->render('@baseapp/spread/views/user/_nav-status', ['model' => $searchModel]);
-$searchContent = $this->render('@baseapp/spread/views/user/_search', array_merge($searchDatas, ['model' => $searchModel]));
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('@baseapp/spread/views/user/_nav-status', ['model' => $this->context->searchModel]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
 ?>
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <script>

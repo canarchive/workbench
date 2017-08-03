@@ -3,7 +3,6 @@ use yii\helpers\Html;
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => [
         [
             'attribute' => 'created_at',
@@ -87,8 +86,7 @@ $gridViewParams = [
     ],
 ];
 
-$searchContent = $this->render('@baseapp/spread/views/_search', array_merge($searchDatas, ['model' => $searchModel]));
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
 ?>
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
 <script>
