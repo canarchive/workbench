@@ -45,11 +45,6 @@ trait TraitActive
         $query->andFilterWhere(['<', $field, $endTime]);
     }
 
-    public function getSearchDatas()
-    {
-        return [];
-    }
-
     public function updateNum($field, $type)
     {
         $num = $type == 'add' ? 1 : -1;

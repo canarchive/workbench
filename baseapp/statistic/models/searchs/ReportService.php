@@ -53,16 +53,15 @@ class ReportService extends ReportServiceModel
         return $dataProvider;        
     }    
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
         $list = [
-            //$this->_sMerchantParam(['status_ext' => [1]]),
-            $this->_sServiceParam(['status_ext' => [1]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
         ];
         $form = [
         [
             $this->_sStartParam(),
-            $this->_sFieldHitParam(),
+            $this->_sHiddenParam(['field' => ['feild_hit']]),
         ]
         ];
         $datas = ['list' => $list, 'form' => $form];

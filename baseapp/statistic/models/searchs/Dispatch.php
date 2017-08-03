@@ -54,17 +54,16 @@ class Dispatch extends DispatchModel
         return $dataProvider;        
     }    
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
-        $this->_getCheckedFields();
         $list = [
-            $this->_sMerchantParam(['status_ext' => [1]]),
-            $this->_sServiceParam(['status_ext' => [1]]),
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
         ];
         $form = [
         [
             $this->_sStartParam(),
-            $this->_sFieldHitParam(),
+            $this->_sHiddenParam(['field' => ['feild_hit']]),
         ]
         ];
         $datas = ['list' => $list, 'form' => $form];

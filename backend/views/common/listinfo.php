@@ -18,7 +18,6 @@ foreach ($menuInfos['appMenus'] as $appMenu) {
 }
 $templateMethods = trim($templateMethods);
 if (!isset($noActionColumn) && !empty($templateMethods)) {
-
     $actionColumn = [
         'class' => 'backend\components\CustomActionColumn',
         'template' => $templateMethods,
@@ -26,9 +25,12 @@ if (!isset($noActionColumn) && !empty($templateMethods)) {
     ];
     $gridViewParams['columns'][] = $actionColumn;
 }
+if (isset($showFilter)) {
+    $gridViewParams['filterModel'] = $this->context->searchModel;
+}
 
-if (isset($searchContent)) {
-    echo $searchContent;
+if (!isset($limitSearch) || empty($limitSearch)) {
+    echo $this->render('@baseapp/common/views/searchs/_search');
 }
 ?>
 <div class="index">
