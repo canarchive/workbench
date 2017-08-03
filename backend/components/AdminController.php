@@ -12,6 +12,7 @@ use common\components\Controller;
  */
 class AdminController extends Controller
 {
+    public $searchModel;
     public $privInfo = [];
     public $identityInfo;
     public $showSubnav = true;
@@ -52,13 +53,10 @@ class AdminController extends Controller
     protected function _listinfoInfo($view = 'listinfo')
     {
         $searchClass = $this->modelSearchClass;
-        $searchModel = new $searchClass();
-        $searchDatas = $searchModel->getSearchDatas();
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        $this->searchModel = new $searchClass();
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
         return $this->render($this->viewPrefix . $view, [
             'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
-            'searchDatas' => $searchDatas,
         ]);
     }
 

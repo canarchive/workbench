@@ -183,14 +183,19 @@ class Visit extends BaseModel
         return $dataProvider;
     }    
 
-    
-    public function getSearchDatas()
+    public function _searchDatasBase()
     {
-        $datas = [
-            'clientTypeInfos' => $this->clientTypeInfos,
-            'channelInfos' => $this->channelInfos,
+        $list = [
+            $this->_sKeyParam(['field' => 'client_type']),
+            $this->_sKeyParam(['field' => 'channel']),
         ];
-
+        $form = [
+        [
+            $this->_sStartParam(),
+            $this->_sHiddenParam(['field' => 'field_hit']),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
         return $datas;
     }
 

@@ -32,13 +32,10 @@ class ServiceController extends AdminController
     {
         //$modelDispatchClass = 'baseapp\statistic\models\ServiceDispatch';
         $searchClass = $modelSearchDispatchClass = 'baseapp\statistic\models\searchs\ServiceDispatch';
-        $searchModel = new $searchClass();
-        $searchDatas = $searchModel->getSearchDatas();
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        $this->searchModel = new $searchClass();
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
         return $this->render($this->viewPrefix . 'service-dispatch', [
             'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
-            'searchDatas' => $searchDatas,
         ]);
     }
 
@@ -46,13 +43,10 @@ class ServiceController extends AdminController
     {
         //$modelWageClass = 'baseapp\statistic\models\ServiceWage';
         $searchClass = $modelSearchWageClass = 'baseapp\statistic\models\searchs\ServiceWage';
-        $searchModel = new $searchClass();
-        $searchDatas = $searchModel->getSearchDatas();
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        $this->searchModel = new $searchClass();
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
         return $this->render($this->viewPrefix . 'service-wage', [
             'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
-            'searchDatas' => $searchDatas,
         ]);
     }
 }

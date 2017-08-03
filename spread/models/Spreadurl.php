@@ -18,10 +18,10 @@ class Spreadurl extends BaseModel
 
     public function createDatas()
     {
-        $searchDatas = $this->getSearchDatas();
-        $title = "{$searchDatas['companyInfos'][$this->inputParams['cityCode']]}--{$searchDatas['merchantInfos'][$this->inputParams['merchantId']]}";
+        $companyInfos = $this->getPointInfos('company', ['where' => ['status' => [2]], 'indexName' => 'code']);
+        $merchantInfos = $this->getPointInfos('merchant');
+        $title = "{$companyInfos[$this->inputParams['cityCode']]}--{$merchantInfos[$this->inputParams['merchantId']]}";
         $datas = [
-            'searchDatas' => $searchDatas,
             'infos' => $this->getUrlInfos(),
             'title' => $title,
         ];
@@ -100,6 +100,17 @@ class Spreadurl extends BaseModel
             'merchantInfos' => $this->getPointInfos('merchant'),
         ];
         $datas['channelInfos']['all'] = '全部渠道';
+        return $datas;
+        $list = [
+            $this->_sMerchantParam(['status' => [1, 2, 3]]),
+            $this->_sServiceParam(['status_ext' => [1]]),
+        ];
+        $form = [
+        [
+            $this->_sStartParam(),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
         return $datas;
     }
 
