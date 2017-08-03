@@ -1,7 +1,6 @@
 <?php
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => [
         'id',
 		'name',
@@ -47,5 +46,4 @@ $gridViewParams = [
     ],
 ];
 
-$searchContent = $this->render('_search', array_merge($searchDatas, ['model' => $searchModel]));
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);

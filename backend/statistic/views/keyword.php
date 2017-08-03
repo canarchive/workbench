@@ -1,7 +1,7 @@
 <?php
 $columns = [];
 
-foreach ($searchModel->fields as $field) {
+foreach ($this->searchModel->fields as $field) {
     switch ($field) {
     case 'merchant_id':
         $columns[] = [
@@ -19,9 +19,7 @@ $columns = array_merge($columns, ['visit_num', 'visit_num_success']);
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
-$searchContent = '';//$this->render('_search', array_merge($searchDatas, ['model' => $searchModel]));
-echo $this->render('_nav', ['view' => 'keyword', 'fields' => $searchModel->fields]);
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('_nav', ['view' => 'keyword', 'fields' => $this->context->searchModel->fields]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);

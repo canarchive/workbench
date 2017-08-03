@@ -1,7 +1,6 @@
 <?php
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => [
         'id',
         'code',
