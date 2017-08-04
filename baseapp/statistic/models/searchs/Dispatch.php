@@ -7,7 +7,6 @@ use baseapp\statistic\models\Dispatch as DispatchModel;
 
 class Dispatch extends DispatchModel
 {
-    public $field_hit;
 	public $created_at_start;
 	public $created_at_end;
 
@@ -63,7 +62,7 @@ class Dispatch extends DispatchModel
         $form = [
         [
             $this->_sStartParam(),
-            $this->_sHiddenParam(['field' => ['feild_hit']]),
+            $this->_sHiddenParam(['field' => 'field_hit']),
         ]
         ];
         $datas = ['list' => $list, 'form' => $form];

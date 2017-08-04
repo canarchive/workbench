@@ -7,7 +7,6 @@ use baseapp\statistic\models\ServiceDispatch as ServiceDispatchModel;
 
 class ServiceDispatch extends ServiceDispatchModel
 {
-    public $field_hit;
 
     public function rules()
     {

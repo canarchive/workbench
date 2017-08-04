@@ -11,6 +11,7 @@ class AbstractStatistic extends SpreadModel
 {
     use HitInfosTrait;
     public $show_field;
+    public $field_hit;
     public $fields;
     public $where;
     
