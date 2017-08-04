@@ -68,7 +68,7 @@ class SpreadPageController extends Controller
         $url .= strpos($url, '?') === false ? '?' : '';
 
         $urlPre = strval(Yii::$app->request->referrer);
-        $url .= $url . '&point_url_pre=' . $urlPre;
+        $url .= '&point_url_pre=' . $urlPre;
         header("Location:$url");
     }
 
