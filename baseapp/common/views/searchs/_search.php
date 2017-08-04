@@ -1,14 +1,18 @@
 <?php
 use yii\bootstrap\ActiveForm;
 
+$model = $this->context->searchModel;
+$elems = $model->searchDatas;
 $elemLists = isset($elems['list']) ? (array) $elems['list'] : [];
 $elemForms = isset($elems['form']) ? (array) $elems['form'] : [];
+$elemLists = array_filter($elemLists);
 $elemForms = array_filter($elemForms);
 
 $menuInfos = $this->context->menuInfos;
 $currentUrl = $menuInfos['currentMenu']['url'];
 $currentUrl = strpos($currentUrl, '?') !== false ? substr($currentUrl, 0, strpos($currentUrl, '?')) : $currentUrl;
 ?>
+<?php if (!empty($elemLists) || !empty($elemForms)) { ?>
 <div class="row">
 <?php
 $form = ActiveForm::begin([
@@ -28,7 +32,7 @@ $form = ActiveForm::begin([
             <?php if (empty($elemForms)) { echo $this->render('_elem-button', ['haveWrap' => true]); } else { ?>
             <?php $i = 1; $num = count($elemForms); foreach ($elemForms as $elemSubs) { ?>
             <div class="form-group form-group-sm">
-                <?php foreach ($elemSubs as $elem) { echo 'ppp';exit(); $eView = "_elem-{$elem['type']}"; echo $this->render($eView, ['elem' => $elem, 'model' => $model]); } ?>
+                <?php foreach ($elemSubs as $elem) { $eView = "_elem-{$elem['type']}"; echo $this->render($eView, ['elem' => $elem, 'model' => $model]); } ?>
                 <?php if ($i == $num && $elem['type'] != 'button') { echo $this->render('_elem-button'); } ?>
             </div>
             <?php $i++; } ?>
@@ -38,3 +42,4 @@ $form = ActiveForm::begin([
 </div>
 <?php ActiveForm::end(); ?>
 </div>
+<?php } ?>

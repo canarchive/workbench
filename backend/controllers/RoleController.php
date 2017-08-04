@@ -21,8 +21,8 @@ class RoleController extends AdminController
      */
     public function actionListinfo()
     {
-        $searchModel = new AuthItemSearch(['type' => Item::TYPE_ROLE]);
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        $this->searchModel = new AuthItemSearch(['type' => Item::TYPE_ROLE]);
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
 
         return $this->render('listinfo', [
             'dataProvider' => $dataProvider,

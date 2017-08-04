@@ -8,7 +8,6 @@ use baseapp\statistic\models\ReportService as ReportServiceModel;
 
 class ReportService extends ReportServiceModel
 {
-    public $field_hit;
     public $data_type;
     public $show_type;
 

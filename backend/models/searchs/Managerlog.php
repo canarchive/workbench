@@ -25,12 +25,12 @@ class Managerlog extends ManagerlogModel
         $query = ManagerlogModel::find();
         $dataProvider = new ActiveDataProvider(['query' => $query]);
 
-        if (!($this->load($params) || !$this->validate())) {
+        if (!($this->load($params, '') || !$this->validate())) {
             return $dataProvider;
         }
 
         if (!empty($this->manager_id)) {
-            $query->andFilterWhere(['=', 'manager_id', $this->manager_id]);
+            $query->andFilterWhere(['manager_id' => $this->manager_id]);
         }
 
         $startTime = strtotime($this->created_at_start);
@@ -41,13 +41,17 @@ class Managerlog extends ManagerlogModel
         return $dataProvider;
     }
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
         $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'name');
-        $datas = [
-            'managerInfos' => $managerInfos,
+        $list = [
+            $this->_sPointParam(['field' => 'manager_id', 'infos' => $managerInfos]),
         ];
-
-        return $datas;
+        $form = [
+        [
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }

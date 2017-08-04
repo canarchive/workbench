@@ -7,7 +7,6 @@ use baseapp\statistic\models\Report as ReportModel;
 
 class Report extends ReportModel
 {
-    public $field_hit;
 
     public function rules()
     {
