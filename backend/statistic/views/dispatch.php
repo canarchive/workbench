@@ -1,7 +1,7 @@
 <?php
 $columns = [];
 
-foreach ($this->searchModel->fields as $field) {
+foreach ($this->context->searchModel->fields as $field) {
     switch ($field) {
     case 'merchant_id':
         $columns[] = [
@@ -29,5 +29,5 @@ $gridViewParams = [
     'dataProvider' => $dataProvider,
     'columns' => $columns,
 ];
-echo $this->render('_nav', ['view' => 'dispatch', 'fields' => $this->searchModel->fields]);
+echo $this->render('_nav', ['view' => 'dispatch', 'fields' => $this->context->searchModel->fields]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);

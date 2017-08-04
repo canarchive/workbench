@@ -15,6 +15,8 @@ class User extends AuthBase
     public $password_new;
     public $merchant_show;
     public $create_service;
+    public $created_at_start;
+    public $created_at_end;
 
     public static function getDb()
     {
@@ -34,7 +36,7 @@ class User extends AuthBase
     public function scenarios()
     {
         return [
-            'default' => ['merchant_id', 'role', 'status'],
+            'default' => ['name', 'created_at_start', 'create_at_end', 'merchant_id', 'role', 'status'],
             'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id', 'create_service'],
             'update' => ['name', 'mobile', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id', 'create_service'],
             //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],

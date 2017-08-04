@@ -9,52 +9,77 @@ use baseapp\statistic\models\Visit;
 
 class Spreadurl extends BaseModel
 {
-    public $inputParams; 
+    public $show_full;
+    public $city_code;
+    public $merchant_id;
+    public $site_code;
+    public $template_code;
+    public $channel;
+    public $site_redirect;
 
     public static function tableName()
     {
         return '{{%visit}}';
     }
 
-    public function createDatas()
+    public function rules()
     {
-        $companyInfos = $this->getPointInfos('company', ['where' => ['status' => [2]], 'indexName' => 'code']);
-        $merchantInfos = $this->getPointInfos('merchant');
-        $title = "{$companyInfos[$this->inputParams['cityCode']]}--{$merchantInfos[$this->inputParams['merchantId']]}";
-        $datas = [
-            'infos' => $this->getUrlInfos(),
-            'title' => $title,
+        return [
+            [['city_code', 'merchant_id', 'template_code', 'channel', 'site_redirect', 'show_full', 'site_code'], 'safe']
         ];
-
-        return $datas;
-
     }
 
-    protected function getUrlInfos()
+    public function attributeLabels()
     {
+        return [
+            'show_full' => '是否显示完整URL',
+            'city_code' => '城市代码',
+            'merchant_id' => '商家',
+            'site_code' => '推广域名',
+            'template_code' => '模板',
+            'channel' => '渠道',
+            'site_redirect' => '跳转域名',
+        ];
+    }
+
+    public function initParams($params)
+    {
+        $this->load($params, '');
+        $this->city_code = empty($this->city_code) ? 'beijing' : $this->city_code;
+        $this->merchant_id = empty($this->merchant_id) ? 2 : $this->merchant_id;
+        $this->channel = empty($this->channel) ? 'bd' : $this->channel;
+    }
+
+    public function createDatas($params)
+    {
+        $this->initParams($params);
+
         $siteInfos = $this->siteInfos();
-        $siteInfos = empty($this->inputParams['siteCode']) ? $siteInfos : [$siteInfos[$this->inputParams['siteCode']]];
-        $templateInfos = $this->getPointAll('template', ['indexBy' => 'code']);
-        $templateInfos = empty($this->inputParams['templateCode']) ? $templateInfos : [$templateInfos[$this->inputParams['templateCode']]];
-        $channelInfos = $this->inputParams['channel'] == 'all' ? $this->channelInfos : [$this->inputParams['channel'] => $this->channelInfos[$this->inputParams['channel']]];
+        $templateInfos = $this->templateInfos();
+        $merchantInfos = $this->merchantInfos();
+        $channelInfos = $this->_channelInfos();
         $datas = [];
-        foreach ($siteInfos as $siteInfo) {
-            foreach ($templateInfos as $template) {
-                foreach ($channelInfos as $channel => $channelName) {
-                    $params = [
-                        'siteInfo' => $siteInfo, 
-                        'template' => $template, 
-                        'channel' => $channel
-                    ];
-                    $pcUrl = $this->getUrlSpread($params);
-                    $mobileUrl = $this->getUrlSpread($params, false);
-                    $datas[] = [
-                        'sName' => $siteInfo['name'],
-                        'tName' => $template['name'],
-                        'cName' => $channelName,
-                        'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
-                        'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
-                    ];
+        foreach ($merchantInfos as $mId => $merchantInfo) {
+            foreach ($siteInfos as $siteInfo) {
+                foreach ($templateInfos as $template) {
+                    foreach ($channelInfos as $channel => $channelName) {
+                        $params = [
+                            'merchantInfo' => $merchantInfo,
+                            'siteInfo' => $siteInfo, 
+                            'template' => $template, 
+                            'channel' => $channel
+                        ];
+                        $pcUrl = $this->getUrlSpread($params);
+                        $mobileUrl = $this->getUrlSpread($params, false);
+                        $datas[] = [
+                            'mName' => $merchantInfo['name'],
+                            'sName' => $siteInfo['name'],
+                            'tName' => $template['name'],
+                            'cName' => $channelName,
+                            'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
+                            'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
+                        ];
+                    }
                 }
             }
         }
@@ -71,16 +96,17 @@ class Spreadurl extends BaseModel
         if (!$isPc && empty($template['have_mobile'])) {
             return '';
         }
+
         $siteInfo = $params['siteInfo'];
         $domain = $isPc ? $siteInfo['domains']['pc'] : $siteInfo['domains']['m'];
-        $siteRedirect = $this->inputParams['siteRedirect'];
+        $siteRedirect = $this->site_redirect;
         $siteRedirect = is_null($siteRedirect) || $siteRedirect == 'no' ? '' : $siteRedirect;
-        $urlPath = "/bm-{$template->code}-{$this->inputParams['cityCode']}.html";
+        $urlPath = "/bm-{$template->code}-{$this->city_code}.html";
         $urlPath = empty($siteRedirect) ? $urlPath : "/sr-{$siteRedirect}" . $urlPath;
         $url = $domain . $urlPath;
-        $url .= '?cid=' . $this->inputParams['merchantId'];
-        if ($this->inputParams['showFull']) {
-            foreach ($this->inputParams['attrs'] as $pKey => $pInfo) {
+        $url .= '?cid=' . $params['merchantInfo']['id'];
+        if ($this->show_full) {
+            foreach ($this->attributeParams as $pKey => $pInfo) {
                 if ($pKey == 'merchant_id') { continue; }
                 $pValue = $pKey == 'channel' ? $params['channel'] : $pInfo['default'];
                 $url .= "&{$pInfo['param']}={$pValue}";
@@ -90,47 +116,94 @@ class Spreadurl extends BaseModel
         return $url;
     }
 
-    public function getSearchDatas()
-    {
-        $datas = [
-            'companyInfos' => $this->getPointInfos('company', ['where' => ['status' => [2]], 'indexName' => 'code']),
-            'templateInfos' => $this->getPointInfos('template', ['indexName' => 'code']),
-            'siteInfos' => $this->siteInfos(true),
-            'channelInfos' => $this->channelInfos,
-            'merchantInfos' => $this->getPointInfos('merchant'),
-        ];
-        $datas['channelInfos']['all'] = '全部渠道';
-        return $datas;
-        $list = [
-            $this->_sMerchantParam(['status' => [1, 2, 3]]),
-            $this->_sServiceParam(['status_ext' => [1]]),
-        ];
-        $form = [
-        [
-            $this->_sStartParam(),
-        ]
-        ];
-        $datas = ['list' => $list, 'form' => $form];
-        return $datas;
-    }
-
     public function siteInfos($keyValue = false)
     {
         $datas = require(Yii::getAlias('@spread/config/params-site.php'));
         if (empty($keyValue)) {
-            return $datas;
+            if (empty($this->site_code)) {
+                return $datas;
+            }
+            $rDatas = [];
+            foreach ((array) $this->site_code as $sCode) {
+                $rDatas[$sCode] = $datas[$sCode];
+            }
+            return $rDatas;
         }
+
         $infos = [];
         foreach ($datas as $code => $data) {
             $infos[$code] = $data['name'];
         }
         return $infos;
+    }
 
+    public function _channelInfos($keyValue = false)
+    {
+        $cInfos = $this->channelInfos;
+        if ($keyValue || $this->channel == 'all') {
+            return $this->channelInfos;
+        }
+        $rDatas = [];
+        foreach ((array) $this->channel as $c) {
+            $rDatas[$c] = $cInfos[$c];
+        }
+        return $rDatas;
+    }
+
+    public function merchantInfos($keyValue = false)
+    {
+        if ($keyValue) {
+            return $this->getPointInfos('merchant');
+        }
+        $datas = $this->getPointAll('merchant', ['where' => ['status' => [1, 2, 3]]]);
+        if (empty($this->merchant_id)) {
+            return $datas;
+        }
+        $rDatas = [];
+        foreach ((array) $this->merchant_id as $id) {
+            $rDatas[$id] = $datas[$id];
+        }
+        return $rDatas;
+    }
+
+    public function templateInfos($keyValue = false)
+    {
+        if ($keyValue) {
+            return $this->getPointInfos('template', ['indexBy' => 'code']);
+        }
+        $datas = $this->getPointAll('template', ['indexBy' => 'code']);
+        if (empty($this->template_code)) {
+            return $datas;
+        }
+        $rDatas = [];
+        foreach ((array) $this->template_code as $tCode) {
+            $rDatas[$tCode] = $datas[$tCode];
+        }
+        return $rDatas;
     }
 
     public function getAttributeParams()
     {
         $model = new Visit();
         return $model->attributeParams;
+    }
+
+    public function getSearchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'city_code', 'name' => '城市', 'table' => 'company', 'type' => 'radio', 'where' => ['status' => [2]], 'indexName' => 'code']),
+            $this->_sPointParam(['field' => 'site_code', 'name' => '推广域名', 'infos' => $this->siteInfos(true)]),
+            $this->_sPointParam(['field' => 'merchant_id', 'name' => '商家', 'infos' => $this->merchantInfos(true)]),
+            $this->_sPointParam(['field' => 'template_code', 'name' => '模板', 'infos' => $this->templateInfos(true)]),
+            $this->_sPointParam(['field' => 'channel', 'name' => '渠道', 'infos' => $this->channelInfos]),
+            $this->_sPointParam(['field' => 'site_redirect', 'name' => '跳转域名', 'infos' => $this->siteInfos(true)]),
+        ];
+        $form = [
+        [
+            //$this->_sStartParam(),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }
