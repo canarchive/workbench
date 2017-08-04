@@ -35,4 +35,19 @@ Trait GuestbookTrait
 
         return $dataProvider;
     }
+
+    public function getSearchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'mobile']),
+        ],
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
+    }
 }

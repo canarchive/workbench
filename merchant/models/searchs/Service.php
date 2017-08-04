@@ -10,7 +10,7 @@ class Service extends ServiceModel
     public function rules()
     {
         return [
-            [['status', 'merchant_id'], 'safe'],
+            [['name', 'status', 'merchant_id'], 'safe'],
         ];
     }
 
@@ -28,7 +28,23 @@ class Service extends ServiceModel
 			'status' => $this->status,
 			'merchant_id' => $this->merchant_id,
 		]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
+    }
+
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'name']),
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }

@@ -58,38 +58,14 @@ Trait UserTrait
     public function getSearchDatas()
     {
         $list = [
-            [
-                'name' => '商家',
-                'field' => 'merchant_id',
-                'value' => $this->merchant_id,
-                'infos' => $this->getPointInfos('merchant'),
-            ],
-            [
-                'name' => '状态',
-                'field' => 'status',
-                'value' => $this->status,
-                'type' => 'checkbox',
-				'infos' => $this->statusInfos,
-            ],
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+            $this->_sKeyParam(['field' => 'status']),
         ];
         $form = [
         [
-            [
-                'name' => '手机号',
-                'value' => $this->mobile,
-                'field' => 'mobile',
-                'type' => 'text',
-            ],
-            [
-                'name' => '创建时间',
-                'field' => 'created_at_start',
-                'type' => 'daytime',
-                'end' => [
-                    'name' => '创建时间',
-                    'field' => 'created_at_end',
-                    'type' => 'daytime',
-                ],
-            ],
+            $this->_sTextParam(['field' => 'mobile']),
+            $this->_sStartParam(),
         ],
         ];
         $datas = ['list' => $list, 'form' => $form];

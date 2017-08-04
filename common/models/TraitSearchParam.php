@@ -24,7 +24,18 @@ trait TraitSearchParam
     public function _sPointParam($data)
     {
         $data = $this->_sFormatBase($data, 'checkbox');
-        $data['infos'] = $this->getPointInfos($data['table'], ['where' => $data['where']]);
+        if (isset($data['infos'])) {
+            return $data;
+        }
+
+        $params = [];
+        if (isset($data['where'])) {
+            $params['where'] = $data['where'];
+        }
+        if (isset($data['indexName'])) {
+            $params['indexName'] = $data['indexName'];
+        }
+        $data['infos'] = isset($data['infos']) ? $data['infos'] : $this->getPointInfos($data['table'], $params);
         return $data;
     }
 

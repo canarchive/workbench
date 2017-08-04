@@ -47,4 +47,18 @@ trait MerchantTrait
 
         return $dataProvider;
     }
+
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'name']),
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
+    }
 }
