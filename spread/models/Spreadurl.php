@@ -100,7 +100,7 @@ class Spreadurl extends BaseModel
         $siteInfo = $params['siteInfo'];
         $domain = $isPc ? $siteInfo['domains']['pc'] : $siteInfo['domains']['m'];
         $siteRedirect = $this->site_redirect;
-        $siteRedirect = is_null($siteRedirect) || $siteRedirect == 'no' ? '' : $siteRedirect;
+        $siteRedirect = empty($siteRedirect) ? '' : $siteRedirect;
         $urlPath = "/bm-{$template->code}-{$this->city_code}.html";
         $urlPath = empty($siteRedirect) ? $urlPath : "/sr-{$siteRedirect}" . $urlPath;
         $url = $domain . $urlPath;
