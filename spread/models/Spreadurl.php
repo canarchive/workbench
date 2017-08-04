@@ -32,7 +32,7 @@ class Spreadurl extends BaseModel
     public function attributeLabels()
     {
         return [
-            'show_full' => '是否显示完整URL',
+            'show_full' => 'URL类型',
             'city_code' => '城市代码',
             'merchant_id' => '商家',
             'site_code' => '推广域名',
@@ -153,7 +153,7 @@ class Spreadurl extends BaseModel
     public function merchantInfos($keyValue = false)
     {
         if ($keyValue) {
-            return $this->getPointInfos('merchant');
+            return $this->getPointInfos('merchant', ['where' => ['status' => [1, 2, 3]]]);
         }
         $datas = $this->getPointAll('merchant', ['where' => ['status' => [1, 2, 3]]]);
         if (empty($this->merchant_id)) {
@@ -191,19 +191,15 @@ class Spreadurl extends BaseModel
     public function getSearchDatas()
     {
         $list = [
-            $this->_sPointParam(['field' => 'city_code', 'name' => '城市', 'table' => 'company', 'type' => 'radio', 'where' => ['status' => [2]], 'indexName' => 'code']),
-            $this->_sPointParam(['field' => 'site_code', 'name' => '推广域名', 'infos' => $this->siteInfos(true)]),
-            $this->_sPointParam(['field' => 'merchant_id', 'name' => '商家', 'infos' => $this->merchantInfos(true)]),
-            $this->_sPointParam(['field' => 'template_code', 'name' => '模板', 'infos' => $this->templateInfos(true)]),
-            $this->_sPointParam(['field' => 'channel', 'name' => '渠道', 'infos' => $this->channelInfos]),
-            $this->_sPointParam(['field' => 'site_redirect', 'name' => '跳转域名', 'infos' => $this->siteInfos(true)]),
+            $this->_sPointParam(['field' => 'city_code', 'table' => 'company', 'type' => 'radio', 'where' => ['status' => [2]], 'indexName' => 'code']),
+            $this->_sPointParam(['field' => 'site_code', 'infos' => $this->siteInfos(true)]),
+            $this->_sPointParam(['field' => 'merchant_id', 'infos' => $this->merchantInfos(true)]),
+            $this->_sPointParam(['field' => 'template_code', 'infos' => $this->templateInfos(true)]),
+            $this->_sPointParam(['field' => 'channel', 'infos' => $this->channelInfos]),
+            $this->_sPointParam(['field' => 'site_redirect', 'type' => 'radio', 'infos' => $this->siteInfos(true)]),
+            $this->_sPointParam(['field' => 'show_full', 'type' => 'radio', 'infos' => ['' => '基本url', '1' => '完整url']]),
         ];
-        $form = [
-        [
-            //$this->_sStartParam(),
-        ]
-        ];
-        $datas = ['list' => $list, 'form' => $form];
+        $datas = ['list' => $list];
         return $datas;
     }
 }
