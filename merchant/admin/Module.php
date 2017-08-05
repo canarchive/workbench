@@ -14,12 +14,6 @@ class Module extends ModuleBase
         $this->layout = 'main';
 
 		Yii::configure($this, require(__DIR__ . '/config/main.php'));
-		//$this->layout = '//main';
-        /*$this->modules = [
-            'admin' => [
-                'class' => 'merchant\decoration\admin\Module',
-            ],
-        ];*/
     }
 
     public function initPrivInfo()
@@ -27,40 +21,34 @@ class Module extends ModuleBase
         $managerInfo = Yii::$app->params['managerInfo'];
         $role = $managerInfo['role'];
         $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
-        $data = [
+        return [
             'merchant_id' => $merchantIds,
+            'service_id' => $this->_getServicePriv($role, $merchantIds),
         ];
-		//$managerInfo['id'] = $managerInfo['id'] == 1 ? 42 : $managerInfo['id'];
+    }
 
-        $serviceRoles = ['service', 'service-admin', 'admin', 'service-inner', 'service-admin-inner', 'admin-inner', 'service-saleman'];
-        if (in_array($role, $serviceRoles)) {
-            $model = new Service();
-            $whereBase = ['merchant_id' => $merchantIds];
-            switch ($role) {
-            case 'service':
-            case 'service-inner':
-                $where = ['and', ['user_id' => $managerInfo['id']], $whereBase];
-                break;
-            case 'service-admin':
-            case 'service-admin-inner':
-			case 'service-saleman':
-                $where = ['or', ['user_id' => $managerInfo['id']], ['manager_id' => $managerInfo['id']]];
-                $where = ['and', $where ,$whereBase];
-                break;
-            case 'admin':
-            case 'admin-inner':
-                $where = $whereBase;
-                break;
-            }
-            //var_dump($where);exit();
-            $serviceInfos = $model->find()->where($where)->indexBy('id')->all();
-            $serviceIds = array_keys($serviceInfos);
-            //var_dump($serviceIds);exit();
-			if ($role != 'admin') {
-                $data['service_id'] = empty($serviceIds) ? ['no'] : $serviceIds;
-			}
+    protected function _getServicePriv($role, $merchantIds)
+    {
+        if (!in_array($role, ['admin-inner'])) {
+            Yii::$app->params['noSearchServer'] = true;
+        }
+        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner'])) {
+            return null;
         }
 
-        return $data;
+        $model = new Service();
+        $whereBase = ['merchant_id' => $merchantIds];
+        if (in_array($role, ['service', 'service-inner'])) {
+            $where = ['and', ['user_id' => $managerInfo['id']], $whereBase];
+        } else if (in_array($role, ['service-admin', 'service-admin-inner'])) {
+            $where = ['or', ['user_id' => $managerInfo['id']], ['manager_id' => $managerInfo['id']]];
+            $where = ['and', $where ,$whereBase];
+        } else {
+            $where = $whereBase;
+        }
+        $serviceInfos = $model->find()->where($where)->indexBy('id')->all();
+        $serviceIds = array_keys($serviceInfos);
+        $serviceId = empty($serviceIds) ? ['no'] : $serviceIds;
+        return $serviceIds;
     }
 }

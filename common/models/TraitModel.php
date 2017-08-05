@@ -9,7 +9,7 @@ use baseapp\behaviors\BehaviorHelper;
 
 trait TraitModel
 {
-    use TraitSearchParam;
+    use TraitSearch;
     use TraitLevel;
     use TraitPHPExcel;
 
@@ -117,10 +117,18 @@ trait TraitModel
         return $datas;
     }
 
-    public function formatPriv($field, $key, $privInfo)
+    public function formatPriv($field, $key = null)
     {
+        $privInfo = $this->_privInfo();
+        $key = is_null($key) ? $field : $key;
         $info = isset($privInfo[$field]) ? [$key => $privInfo[$field]] : null;
         return $info;
+    }
+
+    protected function _privInfo()
+    {
+        $privInfo = isset(Yii::$app->params['privInfo']) ? Yii::$app->params['privInfo'] : null;
+        return $privInfo;
     }
 
     public function getKeyInfos($key)

@@ -115,8 +115,9 @@ class Service extends MerchantModel
         return true;
     }
 
-    public function getManagerInfos($where, $privInfo)
+    public function getManagerInfos($where)
     {
+        $privInfo = $this->_privInfo();
         $infos = $this->getPointAll('merchant-user', ['where' => $where]);
 
         $merchantIds = isset($privInfo['merchant_id']) ? $privInfo['merchant_id'] : [];
