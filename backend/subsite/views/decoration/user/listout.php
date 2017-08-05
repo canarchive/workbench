@@ -39,7 +39,6 @@ $gridViewParams = [
     'columns' => $columns,
 ];
 
-echo $this->render('@baseapp/spread/views/user/_nav-status', ['model' => $this->context->searchModel]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
 ?>
 <?= Html::hiddenInput(Yii::$app->request->csrfParam, Yii::$app->request->getCsrfToken(), ['id' => '_csrf']); ?>
