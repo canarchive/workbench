@@ -3,7 +3,7 @@
 namespace backend\models\searchs;
 
 use Yii;
-use yii\base\Model;
+use common\models\BaseModelNotable;
 use yii\data\ArrayDataProvider;
 use yii\rbac\Item;
 
@@ -13,7 +13,7 @@ use yii\rbac\Item;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
  */
-class AuthItem extends Model
+class AuthItem extends BaseModelNotable
 {
 
     const TYPE_ROUTE = 101;

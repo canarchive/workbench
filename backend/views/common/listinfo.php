@@ -35,7 +35,7 @@ if (!isset($limitSearch) || empty($limitSearch)) {
 ?>
 <div class="index">
     <?php
-    if (isset($this->params['noPjax'])) {
+    if (!isset($this->params['havePjax'])) {
     echo GridView::widget($gridViewParams);
     } else {
     Pjax::begin(['enablePushState'=>false]);

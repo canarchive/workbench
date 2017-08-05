@@ -13,7 +13,6 @@ use common\components\Controller;
 class AdminController extends Controller
 {
     public $searchModel;
-    public $privInfo = [];
     public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
@@ -238,9 +237,9 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
-        $privFields = !empty($this->privInfo) ? $this->privInfo : [];
-        foreach ($privFields as $field => $value) {
-            if (!$model->hasProperty($field)) {
+        $privInfo = Yii::$app->params['privInfo'];
+        foreach ((array) $privInfo as $field => $value) {
+            if (!$model->hasAttribute($field)) {
                 continue;
             }
             $currentValue = $model->$field;
@@ -248,7 +247,6 @@ class AdminController extends Controller
             $currentValue = array_filter($currentValue);
             $join = array_intersect($value, $currentValue);
             if (empty($join)) {
-            //if (empty($model->$field) || !in_array($model->$field, $value)) {
                 throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
             }
         }
@@ -258,7 +256,7 @@ class AdminController extends Controller
 
     public function beforeAction($action)
     {
-        $this->privInfo = $this->getPrivInfo();
+        $this->_privInfo();
         return parent::beforeAction($action);
     }
 
@@ -267,7 +265,7 @@ class AdminController extends Controller
         return [];
     }
 
-    public function getPrivInfo()
+    protected function _privInfo()
     {
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         foreach ($data as $key => & $value) {
@@ -285,7 +283,7 @@ class AdminController extends Controller
             }
             $_GET[$key] = $value;
         }
-        return $data;
+        Yii::$app->params['privInfo'] = $data;
     }
 
     public function getViewPrefix()
