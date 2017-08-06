@@ -239,7 +239,7 @@ class AdminController extends Controller
     {
         $privInfo = Yii::$app->params['privInfo'];
         foreach ((array) $privInfo as $field => $value) {
-            if (!$model->hasAttribute($field)) {
+            if (!$model->hasAttribute($field) || is_null($value)) {
                 continue;
             }
             $currentValue = $model->$field;
