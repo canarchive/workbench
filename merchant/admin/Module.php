@@ -23,11 +23,11 @@ class Module extends ModuleBase
         $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
         return [
             'merchant_id' => $merchantIds,
-            'service_id' => $this->_getServicePriv($role, $merchantIds),
+            'service_id' => $this->_getServicePriv($role, $managerInfo, $merchantIds),
         ];
     }
 
-    protected function _getServicePriv($role, $merchantIds)
+    protected function _getServicePriv($role, $managerInfo, $merchantIds)
     {
         if (!in_array($role, ['admin-inner'])) {
             Yii::$app->params['noSearchServer'] = true;
