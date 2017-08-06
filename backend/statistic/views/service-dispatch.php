@@ -1,7 +1,7 @@
 <?php
 $columns = [];
 
-foreach ($this->searchModel->fields as $field) {
+foreach ($this->context->searchModel->fields as $field) {
     switch ($field) {
     case 'service_id':
         $columns[] = [
@@ -15,11 +15,11 @@ foreach ($this->searchModel->fields as $field) {
         $columns[] = $field;
     }
 }
-$columns = array_merge($columns, $this->searchModel->getShowFields());
+$columns = array_merge($columns, $this->context->searchModel->getShowFields());
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
     'columns' => $columns,
 ];
-echo $this->render('_nav', ['view' => 'dispatch', 'fields' => $this->searchModel->fields]);
+echo $this->render('_nav', ['view' => 'dispatch', 'fields' => $this->context->searchModel->fields]);
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
