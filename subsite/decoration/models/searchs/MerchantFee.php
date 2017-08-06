@@ -14,7 +14,7 @@ class MerchantFee extends MerchantFeeModel
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
         return [
             ['field' => 'merchant_id', 'type' => 'common'],
