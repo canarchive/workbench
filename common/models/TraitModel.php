@@ -125,7 +125,7 @@ trait TraitModel
         return $info;
     }
 
-    protected function _privInfo()
+    public function _privInfo()
     {
         $privInfo = isset(Yii::$app->params['privInfo']) ? Yii::$app->params['privInfo'] : null;
         return $privInfo;
