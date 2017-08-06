@@ -16,17 +16,9 @@ class MerchantFee extends MerchantFeeModel
 
     public function search($params)
     {
-        $query = self::find()->orderBy('day_start DESC');
-
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-        $query->andFilterWhere([
-            'merchant_id' => $this->merchant_id,
-        ]);
-
-        return $dataProvider;
+        return [
+            ['field' => 'merchant_id', 'type' => 'common'],
+        ];
     }
 
     public function _searchDatas()
