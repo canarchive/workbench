@@ -23,6 +23,9 @@ class PointBehavior extends Behavior
 
     public function getPointInfos($code, $params = [])
     {
+        if ($code == 'service' && isset(Yii::$app->params['noSearchServer'])) {
+            return [];
+        }
         $indexName = isset($params['indexName']) ? $params['indexName'] : 'id';
         $valueName = isset($params['valueName']) ? $params['valueName'] : 'name';
         $params['select'] = "{$indexName}, {$valueName}";
@@ -35,6 +38,14 @@ class PointBehavior extends Behavior
     public function getPointAll($code, $params = [])
     {
         $where = isset($params['where']) ? $params['where'] : null;
+        if ($code == 'merchant') {
+            $wherePriv = $this->owner->formatPriv('merchant_id', 'id');
+            $where = !empty($wherePriv) ? (is_null($where) ? $wherePriv : $where + $wherePriv) : $where;
+        }
+        if ($code == 'service') {
+            $wherePriv = $this->owner->formatPriv('service_id', 'id');
+            $where = !empty($wherePriv) ? (is_null($where) ? $wherePriv : $where + $wherePriv) : $where;
+        }
         $indexBy = isset($params['indexBy']) ? $params['indexBy'] : 'id';
         $select = isset($params['select']) ? $params['select'] : '*';
         $limit = isset($params['limit']) ? $params['limit'] : 1000;

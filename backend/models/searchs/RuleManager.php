@@ -47,9 +47,4 @@ class RuleManager extends Model
             'sort' => ['attributes' => ['name', 'className', 'createdAt', 'updatedAt']],
         ]);
     }
-
-	public function getSearchDatas()
-	{
-		return [];
-	}
 }

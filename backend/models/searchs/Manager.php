@@ -12,57 +12,37 @@ use backend\models\Manager as ManagerModel;
  */
 class Manager extends ManagerModel
 {
-    /**
-     * @inheritdoc
-     */
+    public function scenarios()
+    {
+        return ['default' => ['name', 'created_at_start', 'created_at_end', 'status']];
+    }
     public function rules()
     {
         return [
-            [['id', 'created_at', 'updated_at'], 'integer'],
-            [['mobile', 'email', 'status'], 'safe'],
+            [['name', 'created_at_start', 'created_at_end', 'status'], 'safe'],
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function scenarios()
+    public function _searchElems()
     {
-        // bypass scenarios() implementation in the parent class
-        return Model::scenarios();
+        return [
+            ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
     }
 
-    /**
-     * Creates data provider instance with search query applied
-     *
-     * @param array $params
-     *
-     * @return ActiveDataProvider
-     */
-    public function search($params)
+    public function _searchDatas()
     {
-        $query = Manager::find()->orderBy('id DESC');
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'sort' => ['attributes' => ['name', 'login_num', 'create_time', 'last_time', 'status']],
-        ]);
-
-        if (!($this->load($params) || !$this->validate())) {
-            return $dataProvider;
-        }
-
-        $query->andFilterWhere([
-            'id' => $this->id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-        ]);
-
-        $query->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'notes', $this->notes])
-            ->andFilterWhere(['like', 'status', $this->status]);
-
-        return $dataProvider;
+        $list = [
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'name']),
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }

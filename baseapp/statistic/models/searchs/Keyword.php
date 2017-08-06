@@ -7,7 +7,6 @@ use baseapp\statistic\models\Keyword as KeywordModel;
 
 class Keyword extends KeywordModel
 {
-    public $field_hit;
 
     public function rules()
     {

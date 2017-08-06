@@ -7,7 +7,6 @@ use baseapp\statistic\models\ServiceDispatch as ServiceDispatchModel;
 
 class ServiceDispatch extends ServiceDispatchModel
 {
-    public $field_hit;
 
     public function rules()
     {
@@ -51,16 +50,15 @@ class ServiceDispatch extends ServiceDispatchModel
         ];
     }
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
-        $this->_getCheckedFields();
         $list = [
-            $this->_sServiceParam(['status_ext' => [1]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
         ];
         $form = [
         [
             $this->_sStartParam(),
-            $this->_sFieldHitParam(),
+            $this->_sHiddenParam(['field' => 'field_hit']),
         ]
         ];
         $datas = ['list' => $list, 'form' => $form];

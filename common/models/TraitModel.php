@@ -9,7 +9,7 @@ use baseapp\behaviors\BehaviorHelper;
 
 trait TraitModel
 {
-    use TraitSearchParam;
+    use TraitSearch;
     use TraitLevel;
     use TraitPHPExcel;
 
@@ -117,18 +117,31 @@ trait TraitModel
         return $datas;
     }
 
-    public function formatPriv($field, $key, $privInfo)
+    public function formatPriv($field, $key = null)
     {
+        $privInfo = $this->_privInfo();
+        $key = is_null($key) ? $field : $key;
         $info = isset($privInfo[$field]) ? [$key => $privInfo[$field]] : null;
         return $info;
+    }
+
+    protected function _privInfo()
+    {
+        $privInfo = isset(Yii::$app->params['privInfo']) ? Yii::$app->params['privInfo'] : null;
+        return $privInfo;
+    }
+
+    public function getKeyInfos($key)
+    {
+        $key = Inflector::id2camel($key, '_');
+        $keyDatas = "{$key}Infos";
+        return $this->$keyDatas;
     }
 
     public function getKeyName($key, $value, $datas = null)
     {
         if (is_null($datas)) {
-            $key = Inflector::id2camel($key, '_');
-            $keyDatas = "{$key}Infos";
-            $infos = $this->$keyDatas;
+            $infos = $this->getKeyInfos($key);
         }
         return isset($infos[$value]) ? $infos[$value] : $value;
     }
@@ -162,5 +175,15 @@ trait TraitModel
         $str .= $hour ? $hour . '小时 ' : '';
         $str .= $minite . '分钟';
         return $str;
+    }
+
+    public function _searchDatas()
+    {
+        return [];
+    }
+
+    public function _searchParams()
+    {
+        return null;
     }
 }

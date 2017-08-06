@@ -6,9 +6,6 @@ use yii\data\ActiveDataProvider;
 
 Trait UserMerchantTrait
 {
-    public $created_at_start;
-    public $created_at_end;
-
     public function rules()
     {
         return [
@@ -16,46 +13,27 @@ Trait UserMerchantTrait
         ];
     }
 
-    public function search($params)
+    protected function _searchElems()
     {
-        $query = self::find()->orderBy('id DESC');
-
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-        if (!empty($this->mobile)) {
-            $query->andFilterWhere(['like', 'mobile', $this->mobile]);
-        }
-
-        $query->andFilterWhere([
-            'merchant_id' => $this->merchant_id,
-            'service_id' => $this->service_id,
-        ]);
-        $this->status = $this->status == 'all' ? null : $this->status;
-        $this->status = $this->status == 'back' ? ['back_reply', 'back_confirm'] : $this->status;
-		if ($this->status !== null) {
-			$query->andWhere(['status' => $this->status]);
-		}
-        //$this->merchant_id = 0;
-
-        $startTime = intval(strtotime($this->created_at_start));
-        $endTime = $this->created_at_end > 0 ? intval(strtotime($this->created_at_end)) : time();
-        $query->andFilterWhere(['>=', 'created_at', $startTime]);
-        $query->andFilterWhere(['<', 'created_at', $endTime]);
-        return $dataProvider;
+        return [
+            ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'service_id', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
     }
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
         $list = [
-            $this->_sMerchantParam(['status_ext' => [1]]),
-            $this->_sServiceParam(['status_ext' => [1]]),
-            $this->_sStatusParam(),
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+            $this->_sKeyParam(['field' => 'status']),
         ];
         $form = [
         [
-            $this->_sMobileParam(),
+            $this->_sTextParam(['field' => 'mobile']),
             $this->_sStartParam(),
         ]
         ];

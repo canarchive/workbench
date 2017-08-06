@@ -6,8 +6,6 @@ use yii\data\ActiveDataProvider;
 
 Trait GuestbookTrait
 {
-    public $created_at_start;
-    public $created_at_end;
     public function rules()
     {
         return [
@@ -15,24 +13,28 @@ Trait GuestbookTrait
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find()->orderBy('id DESC');
+        return [
+            ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
+    }
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-        if (!$this->load($params, '') || !$this->validate()) {
-            return $dataProvider;
-        }
-		$query->andFilterWhere([
-			'merchant_id' => $this->merchant_id,
-            'mobile' => $this->mobile,
-		]);
-
-        $startTime = intval(strtotime($this->created_at_start));
-        $endTime = $this->created_at_end > 0 ? intval(strtotime($this->created_at_end)) : time();
-        $query->andFilterWhere(['>=', 'created_at', $startTime]);
-        $query->andFilterWhere(['<', 'created_at', $endTime]);
-
-        return $dataProvider;
+    public function getSearchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'mobile']),
+            $this->_sStartParam(),
+        ],
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }

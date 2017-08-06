@@ -5,7 +5,6 @@ namespace backend\models\searchs;
 use Yii;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
-use yii\data\ActiveDataProvider;
 use backend\models\Managerlog as ManagerlogModel;
 
 class Managerlog extends ManagerlogModel
@@ -20,34 +19,25 @@ class Managerlog extends ManagerlogModel
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = ManagerlogModel::find();
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if (!($this->load($params) || !$this->validate())) {
-            return $dataProvider;
-        }
-
-        if (!empty($this->manager_id)) {
-            $query->andFilterWhere(['=', 'manager_id', $this->manager_id]);
-        }
-
-        $startTime = strtotime($this->created_at_start);
-        $endTime = $this->created_at_end > 0 ? strtotime($this->created_at_end) : time();
-        $query->andFilterWhere(['>=', 'created_at', $startTime]);
-        $query->andFilterWhere(['<', 'created_at', $endTime]);
-
-        return $dataProvider;
+        return [
+            ['field' => 'manager_id', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
     }
 
-    public function getSearchDatas()
+    public function _searchDatas()
     {
         $managerInfos = ArrayHelper::map(\backend\models\Manager::find()->all(), 'id', 'name');
-        $datas = [
-            'managerInfos' => $managerInfos,
+        $list = [
+            $this->_sPointParam(['field' => 'manager_id', 'infos' => $managerInfos]),
         ];
-
-        return $datas;
+        $form = [
+        [
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }
