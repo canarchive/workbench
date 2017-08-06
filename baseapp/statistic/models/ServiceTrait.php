@@ -65,7 +65,7 @@ trait ServiceTrait
             return [
                 'attribute' => 'back_mobile_num',
                 'value' => function($model) {
-                    return $model->back_mobile_num . $model->formatPercent($model->back_mobile_num, $model->mobile_num);
+                    return $model->back_mobile_num . $model->formatPercent($model->back_mobile_num, $model->mobile_num + $model->back_mobile_num);
                 }
             ];
             break;
@@ -73,7 +73,7 @@ trait ServiceTrait
             return [
                 'attribute' => 'back_num',
                 'value' => function($model) {
-                    return $model->back_num . $model->formatPercent($model->back_num, $model->dispatch_num);
+                    return $model->back_num . $model->formatPercent($model->back_num, $model->dispatch_num + $model->back_num);
                 }
             ];
             break;
