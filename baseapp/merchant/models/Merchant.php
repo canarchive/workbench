@@ -19,7 +19,7 @@ class Merchant extends MerchantModel
     public function rules()
     {
         return [
-            [['name', 'city_code'], 'required'],
+            [['name', 'code', 'city_code'], 'required'],
             [['orderlist'], 'integer'],
             [['orderlist'], 'default', 'value' => '0'],
             [['status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],

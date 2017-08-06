@@ -15,6 +15,7 @@ class Spreadurl extends BaseModel
     public $site_code;
     public $template_code;
     public $channel;
+	public $qinfo;
     public $site_redirect;
 
     public static function tableName()
@@ -38,6 +39,7 @@ class Spreadurl extends BaseModel
             'site_code' => '推广域名',
             'template_code' => '模板',
             'channel' => '渠道',
+            'qinfo' => '渠道参数',
             'site_redirect' => '跳转域名',
         ];
     }
@@ -106,9 +108,11 @@ class Spreadurl extends BaseModel
         $url = $domain . $urlPath;
         $url .= '?cid=' . $params['merchantInfo']['id'];
         if ($this->show_full) {
+			$qinfo = Yii::$app->request->get('qinfo', '');
             foreach ($this->attributeParams as $pKey => $pInfo) {
                 if ($pKey == 'merchant_id') { continue; }
                 $pValue = $pKey == 'channel' ? $params['channel'] : $pInfo['default'];
+                $pValue = $pKey == 'channel_info' ? $qinfo : $pValue;
                 $url .= "&{$pInfo['param']}={$pValue}";
             }
         }
@@ -169,7 +173,7 @@ class Spreadurl extends BaseModel
     public function templateInfos($keyValue = false)
     {
         if ($keyValue) {
-            return $this->getPointInfos('template', ['indexBy' => 'code']);
+            return $this->getPointInfos('template', ['indexName' => 'code']);
         }
         $datas = $this->getPointAll('template', ['indexBy' => 'code']);
         if (empty($this->template_code)) {
@@ -199,7 +203,11 @@ class Spreadurl extends BaseModel
             $this->_sPointParam(['field' => 'site_redirect', 'type' => 'radio', 'infos' => $this->siteInfos(true)]),
             $this->_sPointParam(['field' => 'show_full', 'type' => 'radio', 'infos' => ['' => '基本url', '1' => '完整url']]),
         ];
-        $datas = ['list' => $list];
+		$form = [[
+            $this->_sTextParam(['field' => 'qinfo']),
+		]];
+
+        $datas = ['list' => $list, 'form' => $form];
         return $datas;
     }
 }
