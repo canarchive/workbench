@@ -15,34 +15,24 @@ class Report extends ReportModel
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();//->orderBy('id DESC');
+        return [
+            ['field' => 'client_type', 'type' => 'common'],
+            ['field' => 'channel', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'common'],
+        ];
+    }    
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-
+    protected function _searchPre(& $query)
+    {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
         $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`visit_num_real`) As `visit_num_real`, SUM(`visit_num_success`) AS `visit_num_success`";
-        //echo $fieldsStr;exit();
-		if (in_array('created_day', $this->fields)) {
-			$query->orderBy(['created_day' => SORT_DESC]);
-		}
         $query->select($fieldsStr);
         $query->groupBy($fields);
 
-        $query->andFilterWhere([
-            'client_type' => $this->client_type,
-            'channel' => $this->channel,
-            'merchant_id' => $this->merchant_id,
-        ]);
-
-        return $dataProvider;        
-    }    
+    }
 
     protected function _getCheckedFields()
     {

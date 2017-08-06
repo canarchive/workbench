@@ -13,6 +13,7 @@ trait TraitSearch
     public function search($params)
     {
         $query = self::find();
+        $this->_searchPre($query);
         $dataProvider = new ActiveDataProvider([
             'query' => $query, 
             'sort' => $this->_defaultOrder(),
@@ -34,6 +35,11 @@ trait TraitSearch
         }
 
         return $dataProvider;
+    }
+
+    protected function _searchPre(& $query)
+    {
+        return ;
     }
     
     protected function _searchWrapComma(& $query, $elem)
@@ -176,7 +182,7 @@ trait TraitSearch
     {
         return [
             'defaultOrder' => [
-                'created_at' => SORT_DESC,            
+                'id' => SORT_DESC,            
             ]
         ];
     }
