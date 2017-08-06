@@ -2,12 +2,8 @@
 
 namespace merchant\models\searchs;
 
-use yii\data\ActiveDataProvider;
-
 trait MerchantTrait
 {
-    public $created_at_start;
-    public $created_at_end;
     public $updated_at_start;
     public $updated_at_end;
     public $merchant_id;
@@ -19,32 +15,31 @@ trait MerchantTrait
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();//->orderBy('id DESC');
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            //'sort' => ['attributes' => ['num_owner', 'status']],
-        ]);
-
-        if (!$this->load($params, '') || !$this->validate()) {
-            return $dataProvider;
+        $return = [
+            ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
+        if (!empty($this->merchant_id)) {
+            $this->id = $this->merchant_id;
+            $return[] = ['field' => 'id', 'type' => 'common'];
         }
-        $this->load($params);
-        if (!empty($this->name)) {
-            $query->andFilterWhere(['like', 'name', $this->name]);
-        }
+        return $return;
+    }
 
-        $query->andFilterWhere([
-            'city_code' => $this->city_code,
-            'id' => $this->merchant_id,
-            'status' => $this->status,
-        ]);
-
-        $this->searchTimeElem($query);
-        $this->searchTimeElem($query, 'updated_at');
-
-        return $dataProvider;
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'name']),
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }

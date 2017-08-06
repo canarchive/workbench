@@ -1,11 +1,10 @@
-<?= $this->render('_search', array_merge($searchDatas)); ?>
-<?= $this->render('_nav-merchant', ['model' => $model]); ?>
+<?php echo $this->render('@baseapp/common/views/searchs/_search', ['searchModel' => $this->context->searchModel]); ?>
 
 <div id="w1" class="grid-view">
     <div class="summary">推广参数列表</div>
     <table class="table table-striped table-bordered">
         <tbody>
-            <?php $i= 0; foreach ($attrs as $field => $paramInfo) { ?>
+            <?php $i= 0; foreach ($this->context->searchModel->attributeParams as $field => $paramInfo) { ?>
             <?php if ($i / 3 == 0) { echo '<tr data-key="">'; } ?>
                 <td><?= $paramInfo['param'] . '--' . $paramInfo['default']; ?></td>
             <?php if ($i % 3 == 2) { echo '</tr>'; } ?>
@@ -15,10 +14,11 @@
     </table>
 </div>
 <div id="w1" class="grid-view">
-    <div class="summary"><b><?php echo $title; ?></b>-推广URL汇总</div>
+    <div class="summary"><b><?php //echo $title; ?></b>-推广URL汇总</div>
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
+                <th>商家</th>
                 <th>域名</th>
                 <th>模板</th>
                 <th>渠道</th>
@@ -29,6 +29,7 @@
         <tbody>
             <?php foreach ($infos as $info) { ?>
             <tr data-key="">
+                <td><?= $info['mName']; ?></td>
                 <td><?= $info['sName']; ?></td>
                 <td><?= $info['tName']; ?></td>
                 <td><?= $info['cName']; ?></td>

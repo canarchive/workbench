@@ -7,34 +7,30 @@ use merchant\models\User as UserModel;
 
 class User extends UserModel
 {
-    public function rules()
+    public function _searchElems()
     {
         return [
-            [['merchant_id', 'role', 'status'], 'safe'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'role', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'wrapComma'],
+            ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
         ];
     }
 
-    public function search($params)
+    public function _searchDatas()
     {
-        $query = self::find();
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-        if (!$this->load($params, '') || !$this->validate()) {
-            return $dataProvider;
-        }
-
-        foreach ((array) $this->merchant_id as $mId) {
-			if (empty($mId)) {
-				continue;
-			}
-            $mIdStr = ',' . $mId . ',';
-            $query->orFilterWhere(['like', 'merchant_id', $mIdStr]);
-        }
-
-        $query->andFilterWhere([
-            'status' => $this->status,
-            'role' => $this->role,
-        ]);
-
-        return $dataProvider;
+        $privInfo = $this->_privInfo();
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            !empty($privInfo) ? [] : $this->_sPointParam(['field' => 'role', 'table' => 'merchant-role', 'indexName' => 'code']),
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'name']),
+            $this->_sStartParam(),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }

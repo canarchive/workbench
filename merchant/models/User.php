@@ -15,6 +15,8 @@ class User extends AuthBase
     public $password_new;
     public $merchant_show;
     public $create_service;
+    public $created_at_start;
+    public $created_at_end;
 
     public static function getDb()
     {
@@ -34,11 +36,11 @@ class User extends AuthBase
     public function scenarios()
     {
         return [
-            'default' => ['merchant_id', 'role', 'status'],
+            'default' => ['name', 'created_at_start', 'create_at_end', 'merchant_id', 'role', 'status'],
             'create' => ['name', 'mobile', 'role', 'email', 'password', 'merchant_show', 'status', 'merchant_id', 'create_service'],
             'update' => ['name', 'mobile', 'email', 'role', 'password_new', 'merchant_show', 'status', 'merchant_id', 'create_service'],
             //'edit' => ['email', 'mobile', 'password', 'password_new_repeat', 'password_new', 'password_old'],
-            'edit-info' => ['email'],//, 'mobile'],
+            'edit-info' => ['email', 'name'],
             'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
             //'edit-password' => ['password_old', 'password_new', 'password_new_repeat'],
         ];
@@ -52,7 +54,7 @@ class User extends AuthBase
         return [
             [['mobile'], 'required'],
             ['mobile', 'unique', 'targetClass' => '\merchant\models\User', 'message' => 'This mobile has already been taken.'],
-            [['status'], 'default', 'value' => 0],
+            [['status'], 'default', 'value' => 0, 'on' => ['create', 'update']],
 
             [['password_old'], 'required', 'on' => ['edit-password']],
             [['password_old'], 'checkPasswordOld', 'on' => ['edit-password']],
@@ -209,7 +211,7 @@ class User extends AuthBase
         return ;
     }
 
-    public function filterPriv($infos, $privInfo)
+    /*public function filterPriv($infos, $privInfo)
     {
         $merchantIds = isset($priviInfos['merchant_id']) ? $privInfo['merchant_id'] : [];
         foreach ($infos as $key => $info) {
@@ -225,7 +227,7 @@ class User extends AuthBase
             }
         }
         return $infos;
-    }
+    }*/
 
     public function getCreateServiceInfos()
     {

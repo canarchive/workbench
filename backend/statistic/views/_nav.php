@@ -31,20 +31,22 @@ $elems = [
         'keyword_search-created_day-created_hour' => '关键字每日每时',
     ],
     'service' => [
-        //'merchant_id' => '商家',
         'created_month' => '每月',
         'created_month-created_week' => '每周',
         'created_day' => '每日',
         'service_id' => '客服',
-        //'service_id-created_week' => '客服每周',
+        'service_id-created_month' => '客服每月',
+        'service_id-created_week' => '客服每周',
         'service_id-created_day' => '客服每日',
     ],
     'dispatch' => [
-        'merchant_id' => '商家',
-        'merchant_id-created_day' => '商家每日',
+        'created_month' => '每月',
+        'created_week' => '每周',
         'created_day' => '每日',
-        'service_id' => '客服',
-        'service_id-created_day' => '客服每日',
+        'merchant_id' => '商家',
+        'merchant_id-created_month' => '商家每月',
+        'merchant_id-created_week' => '商家每月',
+        'merchant_id-created_day' => '商家每日',
     ],
 ];
 $keyController = basename($this->context->id);

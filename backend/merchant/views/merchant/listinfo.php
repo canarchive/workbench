@@ -83,7 +83,6 @@ if ($this->context->id == 'new-merchant') {
 }
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => $columns,
 ];
 
