@@ -61,6 +61,22 @@ trait ServiceTrait
                 }
             ];
             break;
+        case 'back_mobile_num':
+            return [
+                'attribute' => 'back_mobile_num',
+                'value' => function($model) {
+                    return $model->back_mobile_num . $model->formatPercent($model->back_mobile_num, $model->mobile_num);
+                }
+            ];
+            break;
+        case 'back_num':
+            return [
+                'attribute' => 'back_num',
+                'value' => function($model) {
+                    return $model->back_num . $model->formatPercent($model->back_num, $model->dispatch_num);
+                }
+            ];
+            break;
         default:
             return $field;
         }
@@ -76,9 +92,9 @@ trait ServiceTrait
             'info_valid_part_num' => ['name' => '报名局装有效数', 'type' => ['part']],
 
             'mobile_num' => ['name' => '手机数', 'type' => ['base', 'mobile']],
+            'back_mobile_num' => ['name' => '退单手机数', 'type' => ['back', 'mobile', 'base']],
             'dispatch_num' => ['name' => '派单数', 'type' => ['dispatch', 'base']],
             'back_num' => ['name' => '退单数', 'type' => ['back', 'base']],
-            'back_mobile_num' => ['name' => '退单手机数', 'type' => ['back', 'mobile', 'base']],
 
             'overall_mobile_num' => ['name' => '整装手机数', 'type' => ['base', 'overall', 'mobile']],
             'overall_dispatch_num' => ['name' => '整装派单数', 'type' => ['overall', 'dispatch']],
