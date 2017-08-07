@@ -41,7 +41,6 @@ trait TraitStatistic
     public function getClientTypeInfos()
     {
         $datas = [
-            '' => '全部',
             'pc' => 'PC端',
             'h5' => '移动端',
         ];
