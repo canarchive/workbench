@@ -31,6 +31,7 @@ class Module extends ModuleBase
     {
         if (!in_array($role, ['admin-inner'])) {
             Yii::$app->params['noSearchServer'] = true;
+            return null;
         }
         if (in_array($role, ['admin-cpa', 'admin', 'admin-inner'])) {
             return null;
