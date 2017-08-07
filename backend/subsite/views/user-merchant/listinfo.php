@@ -12,6 +12,12 @@ $gridViewParams = [
             },
         ],
         [
+            'attribute' => 'service_id',
+            'value' => function($model) {
+                return $model->getPointName('service', $model->service_id);
+            },
+        ],
+        [
             'attribute' => 'created_at',
             'value'=> function($model){
                 return  date('Y-m-d H:i:s',$model->created_at);
