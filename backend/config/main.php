@@ -47,9 +47,6 @@ return [
         'merchant' => [
             'class' => 'backend\merchant\Module',
         ],
-        'saccount' => [
-            'class' => 'backend\saccount\Module',
-        ],
         'subsite' => [
             'class' => 'backend\subsite\Module',
         ],

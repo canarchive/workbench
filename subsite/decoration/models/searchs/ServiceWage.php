@@ -16,6 +16,7 @@ class ServiceWage extends ServiceWageModel
 
     public function _searchElems()
     {
+        $this->created_month = empty($this->created_month) ? null : $this->created_month;
         return [
             ['field' => 'service_id', 'type' => 'common'],
             ['field' => 'created_month', 'type' => 'common'],
@@ -29,7 +30,7 @@ class ServiceWage extends ServiceWageModel
         ];
         $form = [
         [
-            $this->_sStartParam(['name' => '月份', 'format' => 'YYYYMM', 'noEnd' => true, 'field' => 'created_month']),
+            $this->_sStartParam(['name' => '月份', 'format' => 'YYYYMM', 'noEnd' => true, 'field' => 'created_month', 'noFieldSuffix' => true]),
         ],
         ];
         return ['list' => $list, 'form' => $form];

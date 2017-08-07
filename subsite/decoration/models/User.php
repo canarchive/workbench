@@ -106,6 +106,7 @@ class User extends ModelBase
 			'686' => '15801558634',
             '694' => '13810901261',
             '695' => '13611081935',
+            '696' => '18953723010',
         ];
         $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
         if (empty($mobile)) {
