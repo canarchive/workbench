@@ -1,7 +1,7 @@
 <?php
 $columns = [];
 
-foreach ($this->searchModel->fields as $field) {
+foreach ($this->context->searchModel->fields as $field) {
     switch ($field) {
     case 'merchant_id':
         $columns[] = [
