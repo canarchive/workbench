@@ -8,4 +8,9 @@ class DispatchController extends DispatchControllerBase
 {
     use BaseTrait;
     public $limitSearch = true;
+
+    protected function privGetIgnore()
+    {
+        return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
+    }
 }

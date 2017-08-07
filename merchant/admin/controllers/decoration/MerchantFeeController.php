@@ -8,4 +8,9 @@ class MerchantFeeController extends MerchantFeeControllerBase
 {
     public $limitSearch = true;
     use BaseTrait;
+
+    protected function privGetIgnore()
+    {
+        return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
+    }
 }
