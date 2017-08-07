@@ -9,12 +9,4 @@ use baseapp\passport\models\Company as CompanyModel;
 
 class Company extends CompanyModel
 {
-    public function search($params)
-    {
-        $query = CompanyModel::find();
-
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        return $dataProvider;
-    }
 }

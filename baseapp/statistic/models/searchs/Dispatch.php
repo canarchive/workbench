@@ -13,44 +13,27 @@ class Dispatch extends DispatchModel
     public function rules()
     {
         return [
-            [['service_id', 'field_hit', 'created_day', 'created_at_start', 'created_at_end', 'merchant_id'], 'safe'],
+            [['service_id', 'field_hit', 'created_at_start', 'created_at_end', 'merchant_id'], 'safe'],
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();//->orderBy('id DESC');
+        return [
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'service_id', 'type' => 'common'],
+            ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
+        ];
+    }
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-
+    protected function _searchPre(& $query)
+    {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
         $fieldsStr .= ", SUM(`dispatch_num`) AS `dispatch_num`, SUM(`back_reply_num`) AS `back_reply_num`, SUM(`back_confirm_num`) AS `back_confirm_num`";
         //echo $fieldsStr;exit();
         $query->select($fieldsStr);
         $query->groupBy($fields);
-		if (in_array('created_day', $this->fields)) {
-			$query->orderBy(['created_day' => SORT_DESC]);
-		}
-
-		$serviceIds = empty($this->service_id) ? null : $this->service_id;
-        $query->andFilterWhere([
-            'service_id' => $serviceIds,
-        ]);
-
-        $query->andFilterWhere([
-            'merchant_id' => $this->merchant_id,
-        ]);
-        $startTime = intval($this->created_at_start);
-        $endTime = $this->created_at_end > 0 ? intval($this->created_at_end) : date('Ymd');
-        $query->andFilterWhere(['>=', 'created_day', $startTime]);
-        $query->andFilterWhere(['<=', 'created_day', $endTime]);
-
-        return $dataProvider;        
     }    
 
     public function _searchDatas()

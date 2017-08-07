@@ -18,16 +18,16 @@ class ReportService extends ReportServiceModel
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();//->orderBy('id DESC');
+        return [
+            ['field' => 'service_id', 'type' => 'common'],
+            ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
+        ];
+    }
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-
+    protected function _searchPre(& $query)
+    {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
         //$fieldsStr .= ", SUM(`visit_num_success`) AS `visit_num_success`";
@@ -37,19 +37,10 @@ class ReportService extends ReportServiceModel
                 $fieldsStr .= ", SUM(`{$field}`) AS `{$field}`,";
             }
         }
-		$serviceIds = empty($this->service_id) ? [27, 28, 31, 46, 47] : $this->service_id;
-        $query->andFilterWhere([
-            'service_id' => $serviceIds,
-        ]);
-		if (in_array('created_day', $this->fields)) {
-			$query->orderBy(['created_day' => SORT_DESC]);
-		}
         $fieldsStr = rtrim($fieldsStr, ',');
         //echo $fieldsStr;exit();
         $query->select($fieldsStr);
         $query->groupBy($fields);
-
-        return $dataProvider;        
     }    
 
     public function _searchDatas()

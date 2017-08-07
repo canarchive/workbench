@@ -21,6 +21,7 @@ class Report extends ReportModel
             ['field' => 'client_type', 'type' => 'common'],
             ['field' => 'channel', 'type' => 'common'],
             ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
         ];
     }    
 
@@ -48,5 +49,22 @@ class Report extends ReportModel
             }
         }
         return $fields;
+    }
+
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            $this->_sKeyParam(['field' => 'client_type']),
+            $this->_sKeyParam(['field' => 'channel']),
+        ];
+        $form = [
+        [
+            $this->_sStartParam(),
+            $this->_sHiddenParam(['field' => 'field_hit']),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }

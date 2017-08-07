@@ -67,6 +67,9 @@ trait TraitSearch
         case 'like':
             $query->andFilterWhere(['like', $field, $value]);
             break;
+        case 'orLike':
+            $query->orFilterWhere(['like', $field, $value]);
+            break;
         default:
 		    $query->andWhere([$field => $value]);
         }
@@ -77,12 +80,12 @@ trait TraitSearch
         $field = $elem['field'];
         $startAttr = $field . '_start';
         $endAttr = $field . '_end';
-        $timestamp = isset($timestamp) ? $elem['timestamp'] : true;
-        $startTime = $timestamp ? strtotime($this->$startAttr) : $this->$startAttr;
+        $timestamp = isset($elem['timestamp']) ? $elem['timestamp'] : true;
+        $startTime = $timestamp ? (int) strtotime($this->$startAttr) : (int) $this->$startAttr;
         $query->andFilterWhere(['>=', $field, $startTime]);
 
         if ($this->$endAttr > 0) {
-            $endTime = $timestamp ? strtotime($this->$endAttr) : $this->$endAttr;
+            $endTime = $timestamp ? (int) strtotime($this->$endAttr) : (int) $this->$endAttr;
             $query->andFilterWhere(['<=', $field, $endTime]);
         }
     }
@@ -122,7 +125,8 @@ trait TraitSearch
     public function _sStartParam($data = [])
     {
         $name = isset($data['name']) ? $data['name'] : '日期时间';
-        $field = isset($data['field']) ? $data['field'] : 'created_at_start';
+        $field = isset($data['field']) ? $data['field'] : 'created_at';
+        $field .= !isset($data['noEnd']) ? '_start' : '';
         $format = isset($data['format']) ? $data['format'] : 'YYYYMMDD';
 
         $result = [
@@ -132,7 +136,8 @@ trait TraitSearch
             'format' => $format,
         ];
         if (!isset($data['noEnd'])) {
-            $fieldEnd = isset($data['field_end']) ? $data['field_end'] : 'created_at_end';
+            $fieldEnd = isset($data['field_end']) ? $data['field_end'] : 'created_at';
+            $fieldEnd .= '_end';
             $formatEnd = isset($data['format_end']) ? $data['format_end'] : 'YYYYMMDD';
             $result['end'] = [
                 'field' => $fieldEnd,
@@ -188,6 +193,11 @@ trait TraitSearch
     }
 
     protected function _defaultPagination()
+    {
+        return [];
+    }
+
+    protected function _searchElems()
     {
         return [];
     }
