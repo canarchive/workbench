@@ -19,7 +19,6 @@ class User extends UserModel
 
     public function _searchDatas()
     {
-        $privInfo = $this->_privInfo();
         $list = [
             $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
             !empty($privInfo) ? [] : $this->_sPointParam(['field' => 'role', 'table' => 'merchant-role', 'indexName' => 'code']),

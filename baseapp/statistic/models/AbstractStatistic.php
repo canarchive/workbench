@@ -14,7 +14,15 @@ class AbstractStatistic extends SpreadModel
     public $field_hit;
     public $fields;
     public $where;
+    public $created_day_start;
+    public $created_day_end;
     
+    public function init()
+    {
+        parent::init();
+        $this->field_hit = Yii::$app->request->get('field_hit', '');
+    }
+
     public static function getDb()
     {
         return Yii::$app->dbStatistic;

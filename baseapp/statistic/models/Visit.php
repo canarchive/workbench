@@ -10,6 +10,8 @@ use yii\helpers\ArrayHelper;
 class Visit extends BaseModel
 {
     public $rate;
+    public $created_day_start;
+    public $created_day_end;
 
     public static function getDb()
     {
@@ -156,47 +158,6 @@ class Visit extends BaseModel
                 'default' => '123-3-5',
             ],
         ];
-    }
-
-    protected function _search($params, $query)
-    {
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params) && !$this->validate()) {
-            return $dataProvider;
-        }
-
-        if (!empty($this->keyword)) {
-            $query->orFilterWhere(['like', 'keyword', $this->keyword]);
-            //$query->orFilterWhere(['like', 'message', $this->keyword]);
-        }
-
-        $startTime = strtotime($this->created_at_start);
-        $endTime = $this->created_at_end > 0 ? strtotime($this->created_at_end) : time();
-        $query->andFilterWhere([
-            'client_type' => $this->client_type,
-            'channel' => $this->channel,
-        ]);
-        $query->andFilterWhere(['>=', 'created_at', $startTime]);
-        $query->andFilterWhere(['<', 'created_at', $endTime]);
-
-        return $dataProvider;
-    }    
-
-    public function _searchDatasBase()
-    {
-        $list = [
-            $this->_sKeyParam(['field' => 'client_type']),
-            $this->_sKeyParam(['field' => 'channel']),
-        ];
-        $form = [
-        [
-            $this->_sStartParam(),
-            $this->_sHiddenParam(['field' => 'field_hit']),
-        ]
-        ];
-        $datas = ['list' => $list, 'form' => $form];
-        return $datas;
     }
 
     protected function _searchEngineDatas(& $data)
