@@ -269,13 +269,13 @@ class AdminController extends Controller
     {
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         foreach ($data as $key => & $value) {
-            if (in_array($key, $this->privGetIgnore())) {
+            if (in_array($key, $this->privGetIgnore()) || is_null($value)) {
                 unset($data[$key]);
                 continue;
             }
             $getSource = Yii::$app->request->get($key);
             if (!is_null($getSource)) {
-                $diff = array_intersect((array) $getSource, $value);
+                $diff = array_intersect((array) $getSource, (array) $value);
                 if (empty($diff)) {
                     throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
                 }
