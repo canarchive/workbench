@@ -31,7 +31,7 @@ class Module extends ModuleBase
     {
         if (!in_array($role, ['admin-inner'])) {
             Yii::$app->params['noSearchServer'] = true;
-            return null;
+            //return null;
         }
         if (in_array($role, ['admin-cpa', 'admin', 'admin-inner'])) {
             return null;
@@ -49,7 +49,8 @@ class Module extends ModuleBase
         }
         $serviceInfos = $model->find()->where($where)->indexBy('id')->all();
         $serviceIds = array_keys($serviceInfos);
-        $serviceId = empty($serviceIds) ? ['no'] : $serviceIds;
+        $serviceIds = empty($serviceIds) ? ['no'] : $serviceIds;
+		//var_dump($serviceIds);
         return $serviceIds;
     }
 }
