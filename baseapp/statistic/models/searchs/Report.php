@@ -11,7 +11,7 @@ class Report extends ReportModel
     public function rules()
     {
         return [
-            [['merchant_id', 'field_hit', 'created_day', 'channel', 'client_type'], 'safe'],
+            [['merchant_id', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
         ];
     }
 
@@ -60,7 +60,7 @@ class Report extends ReportModel
         ];
         $form = [
         [
-            $this->_sStartParam(),
+            $this->_sStartParam(['field' => 'created_day']),
             $this->_sHiddenParam(['field' => 'field_hit']),
         ]
         ];
