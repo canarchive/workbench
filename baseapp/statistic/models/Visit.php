@@ -10,8 +10,6 @@ use yii\helpers\ArrayHelper;
 class Visit extends BaseModel
 {
     public $rate;
-    public $created_day_start;
-    public $created_day_end;
 
     public static function getDb()
     {

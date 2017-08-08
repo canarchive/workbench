@@ -7,4 +7,9 @@ use backend\statistic\controllers\DispatchController as DispatchControllerBase;
 class DispatchController extends DispatchControllerBase
 {
     use BaseTrait;
+
+    protected function privGetIgnore()
+    {
+        return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
+    }
 }
