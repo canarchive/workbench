@@ -10,7 +10,8 @@ use subsite\decoration\models\Service;
 } else {
     $customInfos = ArrayHelper::map(Service::find()->select('id, name')->where(['status' => 1])->all(), 'id', 'name');
 }*/
-$merchantInfos = $model->getPointInfos('merchant', ['where' => ['status' => 2]]);
+//$merchantInfos = $model->getPointInfos('merchant', ['where' => ['status' => 2]]);
+$merchantInfos = $model->getPointInfos('merchant', ['noPriv' => true, 'where' => ['status' => 2]]);
 ?>
 
 <div class="menu-form">
