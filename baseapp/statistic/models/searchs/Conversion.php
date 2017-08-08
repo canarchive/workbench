@@ -9,7 +9,7 @@ class Conversion extends ConversionModel
     public function rules()
     {
         return [
-            [['mobile', 'merchant_id', 'keyword', 'created_day_start', 'created_day_end', 'client_type', 'channel'], 'safe'],
+            [['mobile', 'merchant_id', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
         ];
     }
 
