@@ -213,4 +213,20 @@ class AbstractStatistic extends SpreadModel
             'created_week' => '周',
         ];
     }
+
+    protected function _defaultOrder()
+    {
+        return [
+            'defaultOrder' => [
+                'created_day' => SORT_DESC,
+            ]
+        ];
+    }
+
+    protected function _defaultPagination()
+    {
+        return [
+            'pageSize' => 100,
+        ];
+    }
 }

@@ -10,6 +10,6 @@ class DispatchController extends DispatchControllerBase
 
     protected function privGetIgnore()
     {
-        return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
+        return $this->strictPriv ? ['service_id'] : ['merchant_id'];
     }
 }
