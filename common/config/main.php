@@ -60,5 +60,8 @@ return [
         'request' => [
             'class' => 'common\components\Request',
         ],
+        'view' => [
+            'class' => 'common\components\View',
+        ],
     ],
 ];
