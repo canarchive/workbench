@@ -59,5 +59,5 @@ $gridViewParams = [
     'columns' => $columns,
 ];
 
-$limitSearch = isset($this->context->limitSearch) ? true : false;
+$limitSearch = isset($this->context->limitSearch) ? $this->context->limitSearch : false;
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'limitSearch' => $limitSearch]);
