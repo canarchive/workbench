@@ -2,6 +2,7 @@
 
 namespace merchant\admin\controllers\decoration;
 
+use Yii;
 use backend\subsite\controllers\decoration\MerchantFeeController as MerchantFeeControllerBase;
 
 class MerchantFeeController extends MerchantFeeControllerBase
@@ -11,6 +12,10 @@ class MerchantFeeController extends MerchantFeeControllerBase
 
     protected function privGetIgnore()
     {
+        $role = Yii::$app->params['managerInfo']->role;
+        if ($role == 'admin-inner') {
+            $this->limitSearch = false;
+        }
         return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
     }
 }
