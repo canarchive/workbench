@@ -177,13 +177,17 @@ trait TraitModel
         return $str;
     }
 
-    public function _searchDatas()
-    {
-        return [];
-    }
-
-    public function _searchParams()
-    {
-        return null;
-    }
+	public function randomString($length, $params = [])
+	{
+		$prefix = isset($params['prefix']) ? $params['prefix'] : '';
+		$suffix = isset($params['suffix']) ? $params['suffix'] : '';
+		$length = $length - strlen($prefix) - strlen($suffix);
+		$lowerUpper = isset($params['lowerUpper']) ? $params['lowerUpper'] : 'strtolower';
+		$onlyLetterNum = isset($params['onlyLetterNum']) ? $params['onlyLetterNum'] : true;
+		$string = $lowerUpper(Yii::$app->getSecurity()->generateRandomString($length));
+		if ($onlyLetterNum) {
+			$string = str_replace(['-', '_'], ['a', '1'], $string);
+		}
+		return $prefix . $string . $suffix;
+	}
 }

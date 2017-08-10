@@ -36,7 +36,8 @@ $(document).ready(function(){
     //ShowErrorMessage("Hello error!", 5000);
 });
 $(document).ready(function(){
-  var current_theme = $.cookie('current_theme')==null ? 'cerulean' :$.cookie('current_theme');
+  var current_theme = '<?= $this->getPointParam('themeCss', ''); ?>' != '' ? '<?= $this->getPointParam('themeCss'); ?>' : $.cookie('current_theme');
+  current_theme = !current_theme ? 'cerulean' : current_theme;
   switch_theme(current_theme);
 
   $('#themes a[data-value="'+current_theme+'"]').find('i').addClass('icon-ok');
