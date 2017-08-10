@@ -85,10 +85,17 @@ trait UpdateServiceDispatchTrait
 
     public function _serviceDispatchBase()
     {
+        $serviceIds = implode(',', $this->serviceIds);
         $sql = "TRUNCATE `workplat_statistic`.`{$this->tableStr}`;";
+        $sql .= "INSERT INTO `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_day`, `created_weekday`, `created_week`)
+            SELECT `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m'), FROM_UNIXTIME(`created_at`, '%Y%m%d'), FROM_UNIXTIME(`created_at`, '%w'), FROM_UNIXTIME(`created_at`, '%u') FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d');<br />";
+        return $sql;
+
+
+        /*$sql = "TRUNCATE `workplat_statistic`.`{$this->tableStr}`;";
         $sql .= "INSERT INTO `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`)
             SELECT `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day` FROM `workplat_subsite`.`wd_user_merchant` GROUP BY `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`;<br />";
-        return $sql;
+        return $sql;*/
         //UPDATE `wd_user_merchant` SET `created_month` = FROM_UNIXTIME(`created_at`, "%Y%m"), `created_day` = FROM_UNIXTIME(`created_at`, "%Y%m%d"), `created_weekday` = FROM_UNIXTIME(`created_at`, "%w") + 1, `created_week` = FROM_UNIXTIME(`created_at`, "%u") WHERE 1 ;
     }
 }
