@@ -48,7 +48,7 @@ trait TraitSearchForm
 
         $result = [
             'name' => $name,
-            'field' => $field,
+            'field' => $fieldStart,
             'type' => 'daytime',
             'format' => $format,
         ];
