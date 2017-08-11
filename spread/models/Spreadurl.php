@@ -15,7 +15,6 @@ class Spreadurl extends BaseModel
     public $site_code;
     public $template_code;
     public $channel;
-	public $qinfo;
     public $site_redirect;
 
     public static function tableName()
@@ -39,7 +38,6 @@ class Spreadurl extends BaseModel
             'site_code' => '推广域名',
             'template_code' => '模板',
             'channel' => '渠道',
-            'qinfo' => '渠道参数',
             'site_redirect' => '跳转域名',
         ];
     }
@@ -59,29 +57,71 @@ class Spreadurl extends BaseModel
         $siteInfos = $this->siteInfos();
         $templateInfos = $this->templateInfos();
         $merchantInfos = $this->merchantInfos();
-        $channelInfos = $this->_channelInfos();
+        if (empty($this->show_full)) {
+            return $this->_createSimpleDatas($siteInfos, $templateInfos, $merchantInfos);
+        } else {
+            $params = [
+                'merchantInfo' => array_pop($merchantInfos),
+                'siteInfo' => array_pop($siteInfos), 
+                'template' => array_pop($templateInfos), 
+            ];
+            $pcUrl = $this->getUrlSpread($params);
+            $mobileUrl = $this->getUrlSpread($params, false);
+        
+            return $this->_createFullDatas($pcUrl, $mobileUrl);
+        }
+    }
+
+    protected function _createFullDatas($pcUrl, $mobileUrl)
+    {
+        $urlBase = '';
+        foreach ($this->attributeParams as $pKey => $pInfo) {
+            if ($pKey == 'merchant_id') { continue; }
+            $pValue = $pKey == 'channel' ? '{{CHANNEL}}' : $pInfo['default'];
+            $pValue = $pKey == 'channel_info' ? '{{CHANNELINFO}}' : $pValue;
+            $urlBase .= "&{$pInfo['param']}={$pValue}";
+        }
+        $pcUrl = empty($pcUrl) ? '' : $pcUrl . $urlBase;
+        $mobileUrl = empty($mobileUrl) ? '' : $mobileUrl . $urlBase;
+
+        $datas = [];
+        $accountInfos = $this->_accountInfos();
+        foreach ($accountInfos as $aInfo) {
+            $planInfos = $aInfo->getPlanInfos();
+            foreach ($planInfos as $pInfo) {
+                $channelInfo = $aInfo['id'] . '-' . $pInfo['id'];
+                $datas[] = [
+                    'channel' => $this->getKeyName('channel', $aInfo['channel']),
+                    'account_name' => $aInfo['name'],
+                    'plan_name' => $pInfo['name'],
+                    'pcUrl' => str_replace(['{{CHANNEL}}', '{{CHANNELINFO}}'], [$aInfo['channel'], $channelInfo], $pcUrl),
+                    'mobileUrl' => str_replace(['{{CHANNEL}}', '{{CHANNELINFO}}'], [$aInfo['channel'], $channelInfo], $mobileUrl),
+                ];
+            }
+        }
+        return $datas;
+    }
+
+    protected function _createSimpleDatas($siteInfos, $templateInfos, $merchantInfos)
+    {
         $datas = [];
         foreach ($merchantInfos as $mId => $merchantInfo) {
             foreach ($siteInfos as $siteInfo) {
                 foreach ($templateInfos as $template) {
-                    foreach ($channelInfos as $channel => $channelName) {
-                        $params = [
-                            'merchantInfo' => $merchantInfo,
-                            'siteInfo' => $siteInfo, 
-                            'template' => $template, 
-                            'channel' => $channel
-                        ];
-                        $pcUrl = $this->getUrlSpread($params);
-                        $mobileUrl = $this->getUrlSpread($params, false);
-                        $datas[] = [
-                            'mName' => $merchantInfo['name'],
-                            'sName' => $siteInfo['name'],
-                            'tName' => $template['name'],
-                            'cName' => $channelName,
-                            'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
-                            'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
-                        ];
-                    }
+                    $params = [
+                        'merchantInfo' => $merchantInfo,
+                        'siteInfo' => $siteInfo, 
+                        'template' => $template, 
+                    ];
+                    $pcUrl = $this->getUrlSpread($params);
+                    $mobileUrl = $this->getUrlSpread($params, false);
+                    $datas[] = [
+                        'mName' => $merchantInfo['name'],
+                        'sName' => $siteInfo['name'],
+                        'tName' => $template['name'],
+                        'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
+                        'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
+                    ];
                 }
             }
         }
@@ -107,15 +147,6 @@ class Spreadurl extends BaseModel
         $urlPath = empty($siteRedirect) ? $urlPath : "/sr-{$siteRedirect}" . $urlPath;
         $url = $domain . $urlPath;
         $url .= '?cid=' . $params['merchantInfo']['id'];
-        if ($this->show_full) {
-			$qinfo = Yii::$app->request->get('qinfo', '');
-            foreach ($this->attributeParams as $pKey => $pInfo) {
-                if ($pKey == 'merchant_id') { continue; }
-                $pValue = $pKey == 'channel' ? $params['channel'] : $pInfo['default'];
-                $pValue = $pKey == 'channel_info' ? $qinfo : $pValue;
-                $url .= "&{$pInfo['param']}={$pValue}";
-            }
-        }
         
         return $url;
     }
@@ -170,6 +201,22 @@ class Spreadurl extends BaseModel
         return $rDatas;
     }
 
+    public function _accountInfos($keyValue = false)
+    {
+        if ($keyValue) {
+            return $this->getPointInfos('account');
+        }
+        $datas = $this->getPointAll('account');
+        if (empty($this->account_id)) {
+            return $datas;
+        }
+        $rDatas = [];
+        foreach ((array) $this->account_id as $tCode) {
+            $rDatas[$tCode] = $datas[$tCode];
+        }
+        return $rDatas;
+    }
+
     public function templateInfos($keyValue = false)
     {
         if ($keyValue) {
@@ -199,12 +246,17 @@ class Spreadurl extends BaseModel
             $this->_sPointParam(['field' => 'site_code', 'infos' => $this->siteInfos(true)]),
             $this->_sPointParam(['field' => 'merchant_id', 'infos' => $this->merchantInfos(true)]),
             $this->_sPointParam(['field' => 'template_code', 'infos' => $this->templateInfos(true)]),
-            $this->_sPointParam(['field' => 'channel', 'infos' => $this->channelInfos]),
+            //$this->_sPointParam(['field' => 'channel', 'infos' => $this->channelInfos]),
             $this->_sPointParam(['field' => 'site_redirect', 'type' => 'radio', 'infos' => $this->siteInfos(true)]),
-            $this->_sPointParam(['field' => 'show_full', 'type' => 'radio', 'infos' => ['' => '基本url', '1' => '完整url']]),
         ];
 		$form = [[
-            $this->_sTextParam(['field' => 'qinfo']),
+            $this->_sHiddenParam(['field' => 'show_full']),
+            $this->_sButtonParam([
+                'buttons' => [
+                    ['name' => '基本链接'],
+                    ['name' => '完整链接', 'option' => ['onclick' => "$('#show_full_field').val(1); "]],
+                ],
+            ]),
 		]];
 
         $datas = ['list' => $list, 'form' => $form];

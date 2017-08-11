@@ -22,7 +22,7 @@ class Account extends BaseModel
         return [
             [['name','merchant'], 'required'],
             [['status',], 'default', 'value' => 0],
-            [['channel','password', 'created_at','updated_at', 'domain'], 'safe'],
+            [['channel','domain', 'domain_mobile'], 'safe'],
         ];
     }
 
@@ -31,12 +31,11 @@ class Account extends BaseModel
         return [
             'id' => 'ID',
             'channel' => '渠道',
+            'code' => '代码',
             'name' => '账户名',
             'merchant' => '所属公司',
-            'domain' => '推广域名',
-            'password' => '密码',
-            'created_at' => '创建时间',
-            'updated_at' => '更新时间',
+            'domain' => '域名',
+            'domain_mobile' => '移动端域名',
             'status' => '状态',
         ];
     }
@@ -52,5 +51,26 @@ class Account extends BaseModel
             'cjhl' => '诚聚互联',
         ];
         return $datas;
+    }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'channel' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'merchant' => ['type' => 'key'],
+            'domain' => ['type' => 'common'],
+            'domain_mobile' => ['type' => 'common'],
+            'status' => ['type' => 'key'],
+        ];
+    }
+
+    public function getPlanInfos()
+    {
+        $model = new Plan();
+        $infos = $model->getInfos(['where' => ['account_id' => $this->id, 'status' => 0]]);
+        return $infos;
     }
 }

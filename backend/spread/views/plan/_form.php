@@ -9,16 +9,16 @@ use common\widgets\FileUploadUI;
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'account_id')->dropDownList($model->getPointInfos('account'), ['prompt' => '']); ?>    
-    <?= $form->field($model, 'put_at')->textInput(); ?>
+    <?= $form->field($model, 'start_at')->textInput(); ?>
     <script type="text/javascript ">
         $(function () {
-            $('#plan-put_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
+            $('#plan-start_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
         });
     </script>
-    <?= $form->field($model, 'put_end')->textInput(['maxlength' => 128]); ?>
+    <?= $form->field($model, 'end_end')->textInput(['maxlength' => 128]); ?>
     <script type="text/javascript ">
         $(function () {
-            $('#plan-put_end').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
+            $('#plan-end_end').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
         });
     </script>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => ['status' => 2]]), ['prompt' => '']); ?>

@@ -13,17 +13,12 @@ class Plan extends BaseModel
         return '{{%sem_plan}}';
     }
 
-    public function getBehaviorCodes()
-    {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
-    }
-
     public function rules()
     {
         return [
-            [['name','account_id','merchant_id','put_at','put_end'], 'required'],
+            [['name', 'account_id'], 'required'],
             [['status',], 'default', 'value' => 0],
-            [['created_at','updated_at',], 'safe'],
+            [['code', 'merchant_id', 'start_at', 'end_end', 'channe',], 'safe'],
         ];
     }
 
@@ -32,13 +27,28 @@ class Plan extends BaseModel
         return [
             'id' => 'ID',
             'name' => '计划名',
-            'account_id' => '帐目名',
+            'code' => '代码',
+            'channel' => '渠道',
+            'account_id' => '帐户Id',
             'merchant_id' => '公司ID',
-            'put_at' => '投放时间',
-            'put_end' => '投放结束',
-            'created_at' => '创建时间',
-            'updated_at' => '更新时间',
+            'start_at' => '开始时间',
+            'end_at' => '最近投放时间',
             'status' => '状态',
+        ];
+    }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'channel' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'account_id' => ['type' => 'point', 'table' => 'account'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
+            'start_at' => ['type' => 'timestamp'],
+            'end_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
         ];
     }
 }

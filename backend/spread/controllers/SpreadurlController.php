@@ -14,6 +14,7 @@ class SpreadurlController extends AdminController
         $this->searchModel = new Spreadurl();
         $datas = $this->searchModel->createDatas(Yii::$app->request->getQueryParams());
 
-        return $this->render('/spreadurl/listinfo', ['infos' => $datas]);
+        $view = $this->searchModel->show_full ? 'detail' : 'listinfo';
+        return $this->render('/spreadurl/' . $view, ['infos' => $datas]);
     }
 }
