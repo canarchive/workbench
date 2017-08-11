@@ -74,6 +74,12 @@ trait TraitSearchForm
         return $this->_sFormatBase($data, 'text');
     }
 
+    public function _sButtonParam($data)
+    {
+        $data['field'] = $data['value'] = 'no';
+        return $this->_sFormatBase($data, 'button');
+    }
+
     public function _sKeyParam($data)
     {
         $data = $this->_sFormatBase($data, 'checkbox');
@@ -83,8 +89,14 @@ trait TraitSearchForm
 
     protected function _sFormatBase($data, $type)
     {
+        //'field' => 'account_id', 
+        //'infos' => [], 
+        //'option' => [],
+        //'wrapClass' => 'hidden',
+        //'forceShow' => true, 
+        //'ajax' => ['menuCode' => 'spreadaccount_baseinfo_account_listinfo', 'targetField' => 'account_id'],
         $field = $data['field'];
-        $data['value'] = $this->$field;
+        $data['value'] = isset($data['value']) ? $data['value'] : $this->$field;
         $data['type'] = isset($data['type']) ? $data['type'] : $type;
         $data['name'] = isset($data['name']) ? $data['name'] : $this->getAttributeLabel($data['field']);
         return $data;
@@ -92,7 +104,7 @@ trait TraitSearchForm
 
     protected function _prefixInfos($data)
     {
-        if (count($data['infos']) <= 1) {
+        if (count($data['infos']) <= 1 && !isset($data['forceShow'])) {
             return [];
         }
         $data['infos'] = ['all-search' => '全部'] + $data['infos'];

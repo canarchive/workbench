@@ -49,4 +49,32 @@ class View extends ViewBase
 
 		return $data[$indexName];
 	}
+
+    public function getOptionInfo($elem, $optionDefault)
+    {
+        $optionDefault = array_merge([
+            'id' => $elem['field'] . '_field',
+        ], $optionDefault);
+        $option = isset($elem['option']) ? array_merge($optionDefault, $elem['option']) : $optionDefault;
+        if (!isset($elem['ajax'])) {
+            return $option;
+        }
+
+        $data = $elem['ajax'];
+        $menu = $this->getMenuData($data['menuCode']);
+        if (empty($menu)) {
+            return $option;
+        }
+        $url = $menu['url'];
+        $option['onchange'] = '$.get("' . $menu['url'] . '?action=infoAjax&' . $elem['field'] . '="+$(this).val(),function(data){
+            var htmlContent = "";
+            $.each(data, function(i, v) {
+                htmlContent += "<option value=\"" + i + "\">" + v + "</option>";
+            });
+            $("#' . $data['targetField'] . '_wrap").removeClass("hidden");
+
+            $("#' . $data['targetField'] . '_field").html(htmlContent);
+        });';
+        return $option;
+    }
 }

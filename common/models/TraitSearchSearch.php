@@ -82,11 +82,11 @@ trait TraitSearchSearch
         $endAttr = $field . '_end';
         $timestamp = isset($timestamp) ? $elem['timestamp'] : true;
         $startTime = $timestamp ? strtotime($this->$startAttr) : $this->$startAttr;
-        $query->andFilterWhere(['>=', $field, $startTime]);
+        $query->andFilterWhere(['>=', $field, (int) $startTime]);
 
         if ($this->$endAttr > 0) {
             $endTime = $timestamp ? strtotime($this->$endAttr) : $this->$endAttr;
-            $query->andFilterWhere(['<=', $field, $endTime]);
+            $query->andFilterWhere(['<=', $field, (int) $endTime]);
         }
     }
 
