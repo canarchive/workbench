@@ -13,6 +13,7 @@ class Spreadurl extends BaseModel
     public $city_code;
     public $merchant_id;
     public $site_code;
+    public $account_id;
     public $template_code;
     public $channel;
     public $site_redirect;
@@ -25,7 +26,7 @@ class Spreadurl extends BaseModel
     public function rules()
     {
         return [
-            [['city_code', 'merchant_id', 'template_code', 'channel', 'site_redirect', 'show_full', 'site_code'], 'safe']
+            [['city_code', 'merchant_id', 'template_code', 'account_id', 'channel', 'site_redirect', 'show_full', 'site_code'], 'safe']
         ];
     }
 
@@ -38,6 +39,7 @@ class Spreadurl extends BaseModel
             'site_code' => '推广域名',
             'template_code' => '模板',
             'channel' => '渠道',
+            'account_id' => '推广账户',
             'site_redirect' => '跳转域名',
         ];
     }
@@ -72,30 +74,39 @@ class Spreadurl extends BaseModel
         }
     }
 
-    protected function _createFullDatas($pcUrl, $mobileUrl)
+    protected function _createFullDatas($pcUrlBase, $mobileUrlBase)
     {
-        $urlBase = '';
-        foreach ($this->attributeParams as $pKey => $pInfo) {
-            if ($pKey == 'merchant_id') { continue; }
-            $pValue = $pKey == 'channel' ? '{{CHANNEL}}' : $pInfo['default'];
-            $pValue = $pKey == 'channel_info' ? '{{CHANNELINFO}}' : $pValue;
-            $urlBase .= "&{$pInfo['param']}={$pValue}";
-        }
-        $pcUrl = empty($pcUrl) ? '' : $pcUrl . $urlBase;
-        $mobileUrl = empty($mobileUrl) ? '' : $mobileUrl . $urlBase;
-
         $datas = [];
-        $accountInfos = $this->_accountInfos();
+        $accountInfos = $this->accountInfos();
         foreach ($accountInfos as $aInfo) {
+            $channel = $aInfo['channel'];
+
+            $urlBase = '';
+            foreach ($this->attributeParams as $pKey => $pInfo) {
+                if (!in_array($channel, $pInfo['channel'])) {
+                    continue;
+                }
+                if ($pKey == 'merchant_id') { continue; }
+                $pValue = $pKey == 'channel' ? $channel : $pInfo['default'];
+                $pValue = $pKey == 'channel_info' ? '{{CHANNELINFO}}' : $pValue;
+                $urlBase .= "&{$pInfo['param']}={$pValue}";
+            }
+            $pcUrlBase1 = empty($pcUrlBase) ? '' : $pcUrlBase . $urlBase;
+            $mobileUrlBase1 = empty($mobileUrlBase) ? '' : $mobileUrlBase . $urlBase;
+
             $planInfos = $aInfo->getPlanInfos();
             foreach ($planInfos as $pInfo) {
                 $channelInfo = $aInfo['id'] . '-' . $pInfo['id'];
+                $pcUrl = str_replace('{{CHANNELINFO}}', $channelInfo, $pcUrlBase1);
+                $mobileUrl = str_replace('{{CHANNELINFO}}', $channelInfo, $mobileUrlBase1);
+                $button = empty($pcUrl) ? '' : "<button class='copy-btn' data-clipboard-action='copy' data-clipboard-text='{$pcUrl}'>点我复制</button>";
+                $buttonMobile = empty($mobileUrl) ? '' : "<button class='copy-btn' data-clipboard-action='copy' data-clipboard-text='{$mobileUrl}'>点我复制</button>";
                 $datas[] = [
-                    'channel' => $this->getKeyName('channel', $aInfo['channel']),
+                    'channel' => $this->getKeyName('channel', $channel),
                     'account_name' => $aInfo['name'],
                     'plan_name' => $pInfo['name'],
-                    'pcUrl' => str_replace(['{{CHANNEL}}', '{{CHANNELINFO}}'], [$aInfo['channel'], $channelInfo], $pcUrl),
-                    'mobileUrl' => str_replace(['{{CHANNEL}}', '{{CHANNELINFO}}'], [$aInfo['channel'], $channelInfo], $mobileUrl),
+                    'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a> {$button}",
+                    'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a> {$buttonMobile}",
                 ];
             }
         }
@@ -115,12 +126,14 @@ class Spreadurl extends BaseModel
                     ];
                     $pcUrl = $this->getUrlSpread($params);
                     $mobileUrl = $this->getUrlSpread($params, false);
+                    $button = empty($pcUrl) ? '' : "<button class='copy-btn' data-clipboard-action='copy' data-clipboard-text='{$pcUrl}'>点我复制</button>";
+                    $buttonMobile = empty($mobileUrl) ? '' : "<button class='copy-btn' data-clipboard-action='copy' data-clipboard-text='{$mobileUrl}'>点我复制</button>";
                     $datas[] = [
                         'mName' => $merchantInfo['name'],
                         'sName' => $siteInfo['name'],
                         'tName' => $template['name'],
-                        'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a>",
-                        'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a>",
+                    'pcUrl' => "<a href='{$pcUrl}' target='_blank'>{$pcUrl}</a> {$button}",
+                    'mobileUrl' => "<a href='{$mobileUrl}' target='_blank'>{$mobileUrl}</a> {$buttonMobile}",
                     ];
                 }
             }
@@ -201,7 +214,7 @@ class Spreadurl extends BaseModel
         return $rDatas;
     }
 
-    public function _accountInfos($keyValue = false)
+    public function accountInfos($keyValue = false)
     {
         if ($keyValue) {
             return $this->getPointInfos('account');
@@ -241,6 +254,7 @@ class Spreadurl extends BaseModel
 
     public function getSearchDatas()
     {
+        if (!$this->show_full) {
         $list = [
             $this->_sPointParam(['field' => 'city_code', 'table' => 'company', 'type' => 'radio', 'where' => ['status' => [2]], 'indexName' => 'code']),
             $this->_sPointParam(['field' => 'site_code', 'infos' => $this->siteInfos(true)]),
@@ -249,14 +263,19 @@ class Spreadurl extends BaseModel
             //$this->_sPointParam(['field' => 'channel', 'infos' => $this->channelInfos]),
             $this->_sPointParam(['field' => 'site_redirect', 'type' => 'radio', 'infos' => $this->siteInfos(true)]),
         ];
+        } else {
+        $list = [
+            $this->_sPointParam(['field' => 'city_code', 'table' => 'company', 'type' => 'radio', 'where' => ['status' => [2]], 'indexName' => 'code']),
+            $this->_sPointParam(['field' => 'site_code', 'type' => 'radio', 'infos' => $this->siteInfos(true)]),
+            $this->_sPointParam(['field' => 'merchant_id', 'type' => 'radio', 'infos' => $this->merchantInfos(true)]),
+            $this->_sPointParam(['field' => 'template_code', 'type' => 'radio', 'infos' => $this->templateInfos(true)]),
+            $this->_sPointParam(['field' => 'account_id', 'infos' => $this->accountInfos(true)]),
+            //$this->_sPointParam(['field' => 'channel', 'infos' => $this->channelInfos]),
+            $this->_sPointParam(['field' => 'site_redirect', 'type' => 'radio', 'infos' => $this->siteInfos(true)]),
+        ];
+        }
 		$form = [[
             $this->_sHiddenParam(['field' => 'show_full']),
-            $this->_sButtonParam([
-                'buttons' => [
-                    ['name' => '基本链接'],
-                    ['name' => '完整链接', 'option' => ['onclick' => "$('#show_full_field').val(1); "]],
-                ],
-            ]),
 		]];
 
         $datas = ['list' => $list, 'form' => $form];
