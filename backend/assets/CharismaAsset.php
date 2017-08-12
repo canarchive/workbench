@@ -56,6 +56,7 @@ class CharismaAsset extends \yii\web\AssetBundle
         //'backend/js/jquery.treetable.js',
         //'backend/js/jquery.treeview.js',
         'backend/js/common.js',
+        'bower_components/clipboard.js/dist/clipboard.min.js',
     ];
 
     public $depends = [

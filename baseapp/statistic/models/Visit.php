@@ -134,26 +134,32 @@ class Visit extends BaseModel
             'merchant_id' => [
                 'param' => 'cid',
                 'default' => '0',
+                'channel' => array_keys($this->channelInfos),
             ],
             'semer_qq' => [
                 'param' => 'semtuiguang_QQ',
                 'default' => '1298115377',
+                'channel' => array_keys($this->channelInfos),
             ],
             'channel' => [
                 'param' => 'qudao',
                 'default' => 'bd',
+                'channel' => ['bd'],
             ],
             'keyword' => [
                 'param' => 'wny',
                 'default' => '{keyword}',
+                'channel' => ['bd'],
             ],
             'param_info' => [
                 'param' => 'pinfos',
                 'default' => '{pagenum}-{adposition}-{matchtype}-{dongtai}-{bidurl}-{haoci}',
+                'channel' => ['bd'],
             ],
             'channel_info' => [
                 'param' => 'qinfo',
                 'default' => '123-3-5',
+                'channel' => array_keys($this->channelInfos),
             ],
         ];
     }
