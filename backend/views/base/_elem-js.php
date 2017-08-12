@@ -157,4 +157,13 @@ function changeDate(table, modelId, field, value)
     }
     $("#" + field + '_old').val(value);
 }
+var clipboard = new Clipboard('.copy-btn');
+
+clipboard.on('success', function(e) {
+    //console.log(e);
+});
+
+clipboard.on('error', function(e) {
+    //console.log(e);
+});
 </script>
