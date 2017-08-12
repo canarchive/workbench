@@ -11,10 +11,19 @@ class SpreadurlController extends AdminController
 {
     public function actionListinfo()
     {
+        $_GET['show_full'] = 0;
         $this->searchModel = new Spreadurl();
         $datas = $this->searchModel->createDatas(Yii::$app->request->getQueryParams());
 
-        $view = $this->searchModel->show_full ? 'detail' : 'listinfo';
-        return $this->render('/spreadurl/' . $view, ['infos' => $datas]);
+        return $this->render('/spreadurl/listinfo', ['infos' => $datas]);
+    }
+
+    public function actionDetail()
+    {
+        $_GET['show_full'] = 1;
+        $this->searchModel = new Spreadurl();
+        $datas = $this->searchModel->createDatas(Yii::$app->request->getQueryParams());
+
+        return $this->render('/spreadurl/detail', ['infos' => $datas]);
     }
 }
