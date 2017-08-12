@@ -70,7 +70,7 @@ function setLeftNav(parentCode)
   var currentController = '';
   var currentMethod = '';
   $.each(menuJsons, function(i,n) {
-    if (n.parent_code == parentCode) {
+    if (n.parent_code == parentCode && n.display <= 2) {
       subMenuStr += '<li class="nav-header hidden-tablet">' + n.name + '</li>';
       $.each(menuJsons, function(i1, n1) {
         if (n1.parent_code == n.code && n1.display == 2) {
