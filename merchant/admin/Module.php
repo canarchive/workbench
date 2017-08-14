@@ -50,7 +50,6 @@ class Module extends ModuleBase
         $serviceInfos = $model->find()->where($where)->indexBy('id')->all();
         $serviceIds = array_keys($serviceInfos);
         $serviceIds = empty($serviceIds) ? ['no'] : $serviceIds;
-		var_dump($serviceIds);
         return $serviceIds;
     }
 }
