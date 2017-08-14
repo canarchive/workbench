@@ -60,7 +60,7 @@ class NewMerchantController extends AdminController
             return ['status' => 400, 'message' => "{$table}有误"];
         }
         $params = [];
-        $tables = ['callback', 'newMerchant', 'interview'];
+        $tables = ['newCallback', 'newMerchant', 'newContact', 'newInterview'];
         if (!in_array($table, $tables)) {
             return ['status' => 400, 'message' => "{$table}有误"];
         }
@@ -84,6 +84,26 @@ class NewMerchantController extends AdminController
         return ['status' => 400, 'message' => 'user error'];
     }
 
+    protected function _newContactOperation($merchantModel, $operationType, $params)
+    {
+        $model = $this->_getModel('newContact');
+        if ($operationType == 'update') {
+            return $this->_update($model, $params);
+        }
+
+        $fields = ['merchant_id', 'name', 'mobile', 'title', 'description', 'orderlist'];
+        $this->_initFields($model, $fields);
+        $model->orderlist = (int) $model->orderlist;
+        $r = $model->insert(false);
+
+        $return = [
+            'status' => 200,
+            'message' => 'OK',
+            'content' => $this->renderForAjax($model),
+        ];
+        return $return;
+    }
+
     protected function _callbackOperation($merchantModel, $operationType, $params)
     {
         $model = $this->_getModel('newCallback');
@@ -98,9 +118,7 @@ class NewMerchantController extends AdminController
         $return = [
             'status' => 200,
             'message' => 'OK',
-            'id' => $model->id,
-            'created_at' => date('Y-m-m H:i:s', $model->created_at),
-            'content' => '',
+            'content' => $this->renderForAjax($model),
         ];
         return $return;
     }
@@ -121,9 +139,7 @@ class NewMerchantController extends AdminController
         $return = [
             'status' => 200,
             'message' => 'OK',
-            'id' => $model->id,
-            'created_at' => date('Y-m-m H:i:s', $model->created_at),
-            'content' => $content,
+            'content' => $this->renderForAjax($model),
         ];
 
         return $return;
