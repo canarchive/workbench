@@ -88,7 +88,7 @@ $changeMerchantUrl = isset($this->context->menuInfos['menus']['subsite_decoratio
                         <td id="userinfo_out_status"><?= $model->getKeyName('out_status', $model->out_status); ?></td>
                         <td>
                         <input type="hidden" id="callback_again_old" value="<?= date('Y-m-d H:i:s', $model->callback_again); ?>" />
-                        <input class="form-control" type="text" id="callback_again" onblur="changeDate('<?= $tableName; ?>', <?= $model->id; ?>, 'callback_again', this.value)" value="<?= date('Y-m-d H:i:s', $model->callback_again); ?>">
+                        <input class="form-control" type="text" id="callback_again" onblur="changeDate('', '<?= $tableName; ?>', <?= $model->id; ?>, 'callback_again', this.value)" value="<?= date('Y-m-d H:i:s', $model->callback_again); ?>">
                     <script type="text/javascript">
                         $(function () {
                             $('#callback_again').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});

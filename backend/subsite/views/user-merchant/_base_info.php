@@ -49,7 +49,7 @@ $tableName = 'owner_merchant';
                     <tr>
                         <td>
                         <input type="hidden" id="weigh_book_old" value="<?= date('Y-m-d H:i:s', $model->weigh_book); ?>" />
-                        <input class="form-control" type="text" id="weigh_book" onblur="changeDate('<?= $tableName; ?>', <?= $model->id; ?>, 'weigh_book', this.value)" value="<?= date('Y-m-d H:i:s', $model->weigh_book); ?>">
+                        <input class="form-control" type="text" id="weigh_book" onblur="changeDate('', '<?= $tableName; ?>', <?= $model->id; ?>, 'weigh_book', this.value)" value="<?= date('Y-m-d H:i:s', $model->weigh_book); ?>">
                         <script type="text/javascript">
                             $(function () {
                                 $('#weigh_book').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
@@ -58,7 +58,7 @@ $tableName = 'owner_merchant';
                         </td>
                         <td>
                         <input type="hidden" id="weigh_at_old" value="<?= date('Y-m-d H:i:s', $model->weigh_at); ?>" />
-                        <input class="form-control" type="text" id="weigh_at" onblur="changeDate('<?= $tableName; ?>', <?= $model->id; ?>, 'weigh_at', this.value)" value="<?= date('Y-m-d H:i:s', $model->weigh_at); ?>">
+                        <input class="form-control" type="text" id="weigh_at" onblur="changeDate('', '<?= $tableName; ?>', <?= $model->id; ?>, 'weigh_at', this.value)" value="<?= date('Y-m-d H:i:s', $model->weigh_at); ?>">
                         <script type="text/javascript">
                             $(function () {
                                 $('#weigh_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
@@ -83,7 +83,7 @@ $tableName = 'owner_merchant';
                     <tr>
                         <td>
                         <input type="hidden" id="order_at_old" value="<?= date('Y-m-d H:i:s', $model->order_at); ?>" />
-                        <input class="form-control" type="text" id="order_at" onblur="changeDate('<?= $tableName; ?>', <?= $model->id; ?>, 'order_at', this.value)" value="<?= date('Y-m-d H:i:s', $model->order_at); ?>">
+                        <input class="form-control" type="text" id="order_at" onblur="changeDate('', '<?= $tableName; ?>', <?= $model->id; ?>, 'order_at', this.value)" value="<?= date('Y-m-d H:i:s', $model->order_at); ?>">
                         <script type="text/javascript">
                             $(function () {
                                 $('#order_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
