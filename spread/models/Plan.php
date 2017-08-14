@@ -18,7 +18,7 @@ class Plan extends BaseModel
         return [
             [['name', 'account_id'], 'required'],
             [['status',], 'default', 'value' => 0],
-            [['code', 'merchant_id', 'start_at', 'end_end', 'channe',], 'safe'],
+            [['code', 'merchant_id', 'start_at', 'end_at', 'channel',], 'safe'],
         ];
     }
 
@@ -35,6 +35,18 @@ class Plan extends BaseModel
             'end_at' => '最近投放时间',
             'status' => '状态',
         ];
+    }
+
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+        if ($this->account_id != $this->getOldAttribute('account_id')) {
+            $accountInfo = $this->getPointInfo('account', $this->account_id);
+            $this->channel = $accountInfo['channel'];
+        }
+        return true;
     }
 
     protected function _getTemplateFields()

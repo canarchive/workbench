@@ -80,7 +80,7 @@ trait TraitSearchSearch
         $field = $elem['field'];
         $startAttr = $field . '_start';
         $endAttr = $field . '_end';
-        $timestamp = isset($timestamp) ? $elem['timestamp'] : true;
+        $timestamp = isset($elem['timestamp']) ? $elem['timestamp'] : true;
         $startTime = $timestamp ? strtotime($this->$startAttr) : $this->$startAttr;
         $query->andFilterWhere(['>=', $field, (int) $startTime]);
 
