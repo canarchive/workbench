@@ -54,13 +54,13 @@ class NewMerchantController extends AdminController
 
     protected function _operations($merchantModel, $operationType)
     {
-        $table = Yii::$app->request->post('table');
+        $table = lcfirst(Yii::$app->request->post('table'));
         $method = "_{$table}Operation";
         if (!method_exists($this, $method)) {
             return ['status' => 400, 'message' => "{$table}有误"];
         }
         $params = [];
-        $tables = ['callback', 'merchant', 'interview'];
+        $tables = ['callback', 'newMerchant', 'interview'];
         if (!in_array($table, $tables)) {
             return ['status' => 400, 'message' => "{$table}有误"];
         }
@@ -76,7 +76,7 @@ class NewMerchantController extends AdminController
         return $result;
     }
 
-    protected function _merchantOperation($merchantModel, $operationType, $params)
+    protected function _newMerchantOperation($merchantModel, $operationType, $params)
     {
         if ($operationType == 'update') {
             return $this->_update($merchantModel, $params);
