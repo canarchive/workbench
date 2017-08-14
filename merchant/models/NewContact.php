@@ -10,4 +10,15 @@ class NewContact extends Contact
     {
         return '{{%new_contact}}';
     }
+
+    public function getGatherListElems()
+    {
+        return [
+            'name' => ['sort' => 'change'],
+            'mobile' => ['sort' => 'change'],
+            'title' => ['sort' => 'change'],
+            'orderlist' => ['sort' => 'change'],
+            'description' => ['sort' => 'change'],
+        ];
+    }
 }

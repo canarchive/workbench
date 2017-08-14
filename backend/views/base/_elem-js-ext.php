@@ -24,11 +24,12 @@ function updateElemByAjax(url, table, info_id, field, value)
 
 function changeDate(url, table, info_id, field, value)
 {
-    var valueOld = $("#" + field + '_old').val();
+    var elemIndex = table + '_' + field + '_' + info_id + '_old';
+    var valueOld = $("#" + elemIndex).val();
     if (value != valueOld) {
         updateElemByAjax(url, table, info_id, field, value);
     }
-    $("#" + field + '_old').val(value);
+    $("#" + elemIndex).val(value);
 }
 
 function operationForSelected(url)
@@ -40,7 +41,6 @@ function operationForSelected(url)
             selections += ',' + $(this).val();
         }
     });
-    alert(selections);
 
     $.ajax({
         type: "POST",
@@ -53,10 +53,8 @@ function operationForSelected(url)
     });
 }
 
-function addElemForUser(data)
+function addElemByAjax(url, data, appendElem)
 {
-    var url = '';
-    var table = data.table;
     $.ajax({
         type: "POST",
         url: url,
@@ -64,16 +62,8 @@ function addElemForUser(data)
         success: function(response) {
             var status = response.status;
             if (status == 200) {
-                if (table == 'callback') {
-                    var newContent = "<tr>"
-                        + "<td>" + data.content + "</td>"
-                        + "<td>" + response.created_at + "</td>"
-                        + "</tr>";
-                } else if (table == 'house' || table == 'user_merchant') {
-                    var newContent = response.content;
-                }
                 ShowSuccessMessage("信息添加成功", 3000);
-                $("#" + table + "_infos").prepend(newContent);
+                $("#" + appendElem).prepend(response.content);
             } else {
                 ShowErrorMessage(response.message, 3000);
             }
