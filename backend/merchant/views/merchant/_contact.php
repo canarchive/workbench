@@ -8,30 +8,24 @@ $modelNew = $merchantModel->_newModel('newContact');
 <div class="box col-md-12">
     <div class="box-inner">
         <div data-original-title="" class="box-header well">
+            <h2>添加联系人</h2>
+            <div class="box-icon">
+                 <a class="btn btn-minimize btn-round btn-default" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+            </div>
+        </div>
+        <div class="box-content" id="houseAdd" style="display: none;">
+            <?php echo $this->render('_contact_add', ['modelNew' => $modelNew]); ?>
+        </div>
+    </div>
+    <div class="box-inner">
+        <div data-original-title="" class="box-header well">
             <h2>联系人信息</h2>
             <div class="box-icon">
                  <a class="btn btn-minimize btn-round btn-default" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
             </div>
         </div>
         <div class="box-content">
-            <table class="table table-striped table-bordered responsive">
-                <thead>
-                    <tr>
-                        <th><?= $modelNew->getAttributeLabel('name'); ?></th>
-                        <th><?= $modelNew->getAttributeLabel('title'); ?></th>
-                        <th><?= $modelNew->getAttributeLabel('mobile'); ?></th>
-                    </tr>
-                </thead>
-                <tbody id="contact_infos">
-                <?php foreach ($contactInfos as $model) { ?>
-                    <tr>
-                        <td><?= $model->name; ?></td>
-                        <td><?= $model->title; ?></td>
-                        <td><?= $model->mobile; ?></td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
+            <?php echo $this->render('_contact_list', ['contactInfos' => $contactInfos, 'modelNew' => $modelNew]); ?>
         </div>
     </div>
 </div>
