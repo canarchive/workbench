@@ -24,7 +24,7 @@ $displays = $model->getDisplayInfos();
     <tr id='node-<?= $info['id']; ?>' class="<?= $info['parentNode']; ?>">
         <td style='padding-left:30px;'><?= $info['name'] . '( ' . $info['id'] . ' )'; ?></td>
         <td>
-            <input type="text" onchange="updateElemByAjax('<?= $updateUrl; ?>', <?= $info['id']; ?>, 'orderlist', this.value);" class="input-text-c" value="<?= $info['orderlist']; ?>" style="width:30px;" name="orderlist">
+            <input type="text" onchange="updateElemByAjax('<?= $updateUrl; ?>', '', <?= $info['id']; ?>, 'orderlist', this.value);" class="input-text-c" value="<?= $info['orderlist']; ?>" style="width:30px;" name="orderlist">
         </td>
         <td align='center'><?= $info['code']; ?></td>
         <td align='center'><?= $modules[$info['module']]; ?></td>

@@ -151,12 +151,14 @@ trait TraitModel
         return substr_replace($mobile, '******', 3, 6);
     }
 
-    public function formatTimestamp($timestamp, $format = 'Y-m-d H:i:s')
+    public function formatTimestamp($timestamp, $format = null)
     {
         if (empty($timestamp)) {
             return '';
         }
-        return  date($format, $timestamp);
+        $format = is_null($format) ? 'Y-m-d H:i:s' : $format;
+        $return = date($format, $timestamp);
+        return $return;
     }
 
     public function formatPercent($num, $num2, $haveBracket = true, $precision = 4)
