@@ -15,10 +15,10 @@ use common\widgets\FileUploadUI;
             $('#plan-start_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
         });
     </script>
-    <?= $form->field($model, 'end_end')->textInput(['maxlength' => 128]); ?>
+    <?= $form->field($model, 'end_at')->textInput(['maxlength' => 128]); ?>
     <script type="text/javascript ">
         $(function () {
-            $('#plan-end_end').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
+            $('#plan-end_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
         });
     </script>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => ['status' => 2]]), ['prompt' => '']); ?>
