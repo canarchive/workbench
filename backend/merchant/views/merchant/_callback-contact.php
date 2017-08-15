@@ -46,7 +46,6 @@ function addContact()
         'title': $('#' + table + '_title_0').val(),
         'orderlist': $('#' + table + '_orderlist_0').val()
     };
-    console.log(data);
 
     addElemByAjax('', data, table + '_infos');
 }

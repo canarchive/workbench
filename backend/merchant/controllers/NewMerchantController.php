@@ -38,9 +38,9 @@ class NewMerchantController extends AdminController
         $model = $this->findModel($id);
 
         $merchantId = $model->id;
-        $callbackInfos = $this->_getModel('newCallback')->findAll(['merchant_id' => $merchantId]);
-        $interviewInfos = $this->_getModel('newInterview')->findAll(['merchant_id' => $merchantId]);
-        $contactInfos = $this->_getModel('newContact')->findAll(['merchant_id' => $merchantId]);
+        $callbackInfos = $this->_getModel('newCallback')->getInfos(['where' => ['merchant_id' => $merchantId]]);
+        $interviewInfos = $this->_getModel('newInterview')->getInfos(['where' => ['merchant_id' => $merchantId]]);
+        $contactInfos = $this->_getModel('newContact')->getInfos(['where' => ['merchant_id' => $merchantId]]);
 
         $datas = [
             'model' => $model,
@@ -104,7 +104,7 @@ class NewMerchantController extends AdminController
         return $return;
     }
 
-    protected function _callbackOperation($merchantModel, $operationType, $params)
+    protected function _newCallbackOperation($merchantModel, $operationType, $params)
     {
         $model = $this->_getModel('newCallback');
         if ($operationType == 'update') {
@@ -123,19 +123,18 @@ class NewMerchantController extends AdminController
         return $return;
     }
 
-    protected function _interviewOperation($merchantModel, $operationType, $params)
+    protected function _newInterviewOperation($merchantModel, $operationType, $params)
     {
-        $model = $merchantModel->_newModel('userMerchant', true);
+        $model = $merchantModel->_newModel('newInterview', true);
         if ($operationType == 'update') {
             return $this->_update($model, $params);
         }
 
-        $fields = ['merchant_id', 'saleman_id', 'contact_id', 'interview_at', 'note_pre', 'status'];
+        $fields = ['merchant_id', 'saleman_id', 'saleman_interview', 'contact_id', 'interview_at', 'note_pre'];
         $this->_initFields($model, $fields);
+        $model->interview_at = strtotime($model->interview_at);
 
         $model->insert(false);
-        $content = $this->renderPartial($this->viewPrefix . '_user_merchant_info', ['model' => $model]);
-
         $return = [
             'status' => 200,
             'message' => 'OK',
