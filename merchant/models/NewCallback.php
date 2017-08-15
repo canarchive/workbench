@@ -52,4 +52,13 @@ class NewCallback extends MerchantModel
 
         return true;
     }
+
+    public function getGatherListElems()
+    {
+        return [
+            'status' => ['valueType' => 'key'],
+            'content' => [],
+            'created_at' => ['valueType' => 'timestamp'],
+        ];
+    }
 }
