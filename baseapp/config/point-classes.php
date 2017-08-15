@@ -6,6 +6,7 @@ return [
     'merchant-role' => '\merchant\models\Role',
     'merchant-role' => '\merchant\models\Role',
     'new-merchant' => '\merchant\models\NewMerchant',
+    'new-contact' => '\merchant\models\NewContact',
     'saleman' => '\merchant\models\Saleman',
     'company' => '\baseapp\passport\models\Company',
 

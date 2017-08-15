@@ -3,6 +3,7 @@
 namespace common\components;
 
 use Yii;
+use yii\helpers\Html;
 use yii\web\View as ViewBase;
 
 class View extends ViewBase
@@ -52,13 +53,17 @@ class View extends ViewBase
 
     protected function _getViewValue($model, $field, $elem)
     {
+        if (isset($elem['value'])) {
+            return $elem['value'];
+        }
+
         $valueType = isset($elem['valueType']) ? $elem['valueType'] : 'common';
         switch ($valueType) {
         case 'key':
             $value = $model->getKeyName($field, $model->$field);
             break;
         case 'point':
-            $value = $model->getPointName($field, $model->$field);
+            $value = $model->getPointName($elem['table'], $model->$field);
             break;
         case 'timestamp':
             $format = isset($elemValue['format']) ? $elemValue['format'] : null;
@@ -88,6 +93,41 @@ class View extends ViewBase
                 </script>";
         $str .= '</td>';
         return $str;
+    }
+
+    protected function _dropdownView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+
+        $option = isset($elem['option']) ? $elem['option'] : [];
+        $option = array_merge($option, [
+            'prompt' => '全部',
+            'onchange' => $onchange,
+            'id' => $idClass,
+            'class' => 'form-control',
+        ]);
+        $elem = Html::dropDownList($field, $value, $elem['elemInfos'], $option);
+        return "<td>{$elem}</td>";
+    }
+
+    protected function _textareaView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $option = isset($elem['option']) ? $elem['option'] : [];
+        $option = array_merge([
+            'id' => $idClass,
+            'rows' => 3,
+            'cols' => '100',
+            'onchange' => $onchange,
+        ], $option);
+        $elem = Html::textarea($field, $value, $option);
+        return "<td>{$elem}</td>";
     }
 
     protected function _commonView($value, $model, $field, $elem, $isNew)
