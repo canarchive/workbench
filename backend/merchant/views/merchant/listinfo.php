@@ -19,7 +19,7 @@ $columns = [
         'value' => function($model) {
             $appMenus = $this->context->menuInfos['appMenus'];
             $updateUrl = isset($appMenus['update']) ? $appMenus['update']['url'] : '';
-            return '<input name="orderlist" type="text" style="width:50px;" value="' . $model->orderlist . '" class="input-text-c" onchange="updateElemByAjax(\'' . $updateUrl . '\', ' . $model->id . ', \'orderlist\', this.value);">';
+            return '<input name="orderlist" type="text" style="width:50px;" value="' . $model->orderlist . '" class="input-text-c" onchange="updateElemByAjax(\'' . $updateUrl . '\', \'\', ' . $model->id . ', \'orderlist\', this.value);">';
         },
     ],
     'created_at' => [
