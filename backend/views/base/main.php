@@ -19,3 +19,4 @@ $this->params['bodyClass'] = '';//'ondragstart="window.event.returnValue=false" 
 </div>
 <?php $this->endContent(); ?>
 <?= $this->render('_elem-js'); ?>
+<?= $this->render('_elem-js-ext'); ?>

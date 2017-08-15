@@ -3,6 +3,7 @@
 namespace common\components;
 
 use Yii;
+use yii\helpers\Html;
 use yii\web\View as ViewBase;
 
 class View extends ViewBase
@@ -36,6 +37,107 @@ class View extends ViewBase
 	{
 		return $this->_appContextDatas($code, 'context', $indexName);
 	}
+
+    public function getElemView($model, $field, $elem, $isNew = false)
+    {
+        $sort = isset($elem['sort']) ? $elem['sort'] : 'show';
+        $value = $this->_getViewValue($model, $field, $elem);
+        if ($sort == 'show') {
+            return "<td>{$value}</td>";
+        }
+
+        $type = isset($elem['type']) ? $elem['type'] : 'common';
+        $method = "_{$type}View";
+        return $this->$method($value, $model, $field, $elem, $isNew);
+    }
+
+    protected function _getViewValue($model, $field, $elem)
+    {
+        if (isset($elem['value'])) {
+            return $elem['value'];
+        }
+
+        $valueType = isset($elem['valueType']) ? $elem['valueType'] : 'common';
+        switch ($valueType) {
+        case 'key':
+            $value = $model->getKeyName($field, $model->$field);
+            break;
+        case 'point':
+            $value = $model->getPointName($elem['table'], $model->$field);
+            break;
+        case 'timestamp':
+            $format = isset($elemValue['format']) ? $elemValue['format'] : null;
+            $value = $model->formatTimestamp($model->$field, $format);
+            break;
+        default:
+            $value = $model->$field;
+        }
+        return $value;
+    }
+
+    protected function _timestampView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $onblur = $isNew ? '' : "changeDate(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $format = isset($elem['format']) ? $elem['format'] : 'Y-m-d H:i:s';
+        $formatFront = isset($elem['formatFront']) ? $elem['formatFront'] : 'YYYY-MM-DD HH:mm:ss';
+        $value = !empty($value) ? $value : date($format);
+        $str = "<td><input type='hidden' id='{$idClass}_old' value='{$value}' />";
+        $str .= "<input class='form-control' type='text' id='{$idClass}' onblur='{$onblur}' value='{$value}' />";
+        $str .= "<script type='text/javascript'>
+                    $(function () {
+                        $('#{$idClass}').datetimepicker({locale: 'zh-CN', format: '{$formatFront}'});
+                    });
+                </script>";
+        $str .= '</td>';
+        return $str;
+    }
+
+    protected function _dropdownView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+
+        $option = isset($elem['option']) ? $elem['option'] : [];
+        $option = array_merge($option, [
+            'prompt' => '全部',
+            'onchange' => $onchange,
+            'id' => $idClass,
+            'class' => 'form-control',
+        ]);
+        $elem = Html::dropDownList($field, $value, $elem['elemInfos'], $option);
+        return "<td>{$elem}</td>";
+    }
+
+    protected function _textareaView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $option = isset($elem['option']) ? $elem['option'] : [];
+        $option = array_merge([
+            'id' => $idClass,
+            'rows' => 3,
+            'cols' => '100',
+            'onchange' => $onchange,
+        ], $option);
+        $elem = Html::textarea($field, $value, $option);
+        return "<td>{$elem}</td>";
+    }
+
+    protected function _commonView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        return "<td><input type='text' id='{$idClass}' name='{$field}' value='{$value}' onchange='{$onchange}' /></td>";
+    }
 
 	public function _appContextDatas($code, $sort, $indexName)
 	{

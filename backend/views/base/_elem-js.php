@@ -70,7 +70,7 @@ function setLeftNav(parentCode)
   var currentController = '';
   var currentMethod = '';
   $.each(menuJsons, function(i,n) {
-    if (n.parent_code == parentCode) {
+    if (n.parent_code == parentCode && n.display <= 2) {
       subMenuStr += '<li class="nav-header hidden-tablet">' + n.name + '</li>';
       $.each(menuJsons, function(i1, n1) {
         if (n1.parent_code == n.code && n1.display == 2) {
@@ -103,58 +103,5 @@ setLeftNav('<?php $baseMenu = isset($this->params['parentMenu']['code']) ? $this
 var showCatType = typeof(showCat);
 if (showCatType == 'function') {
     showCat();
-}
-
-function updateElemByAjax(url, info_id, field, value)
-{
-    var data = {
-        'info_id': info_id,
-        'field': field,
-        'value': value
-    };
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: data,
-        success: function(data,status) {
-            if (status == 'success') {
-                ShowSuccessMessage("信息编辑成功", 3000);
-            } else {
-                ShowErrorMessage(data.message, 3000);
-            }
-        }
-    });
-}
-
-function operationForSelected(url)
-{
-    var elems = $("input[name='selection[]']");
-    var selections = '';
-    elems.each(function(index,item) {
-        if ($(this).prop('checked')) {
-            selections += ',' + $(this).val();
-        }
-    });
-    alert(selections);
-
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: {selections: selections},
-        success: function(data,status) {
-            //alert("Data: " + data + "\nStatus: " + status);
-            ShowSuccessMessage("信息编辑成功", 3000);
-        }
-    });
-}
-</script>
-<script>
-function changeDate(table, modelId, field, value)
-{
-    var valueOld = $("#" + field + '_old').val();
-    if (value != valueOld) {
-        updateElemForUser(table, modelId, field, value);
-    }
-    $("#" + field + '_old').val(value);
 }
 </script>

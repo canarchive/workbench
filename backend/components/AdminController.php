@@ -290,4 +290,9 @@ class AdminController extends Controller
     {
         return '';
     }
+
+    public function renderForAjax($model)
+    {
+        return $this->renderPartial('@baseapp/common/views/change-gather/_ajax', ['model' => $model]);
+    }
 }
