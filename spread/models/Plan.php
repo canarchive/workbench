@@ -17,8 +17,8 @@ class Plan extends BaseModel
     {
         return [
             [['name', 'account_id'], 'required'],
-            [['status',], 'default', 'value' => 0],
-            [['code', 'merchant_id', 'start_at', 'end_at', 'channel',], 'safe'],
+            [['status', 'start_at', 'end_at',], 'default', 'value' => 0],
+            [['code', 'merchant_id', 'channel',], 'safe'],
         ];
     }
 

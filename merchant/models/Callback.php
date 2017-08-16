@@ -5,11 +5,11 @@ namespace merchant\models;
 use baseapp\merchant\models\MerchantModel;
 use baseapp\merchant\models\Merchant;
 
-class NewCallback extends MerchantModel
+class Callback extends MerchantModel
 {
     public static function tableName()
     {
-        return '{{%new_callback}}';
+        return '{{%callback}}';
     }
 
     public function rules()

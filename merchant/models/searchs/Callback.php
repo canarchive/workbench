@@ -3,9 +3,9 @@
 namespace merchant\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use merchant\models\NewCallback as NewCallbackModel;
+use merchant\models\Callback as CallbackModel;
 
-class NewCallback extends NewCallbackModel
+class Callback extends CallbackModel
 {
     public function search($params)
     {
