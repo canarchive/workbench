@@ -5,11 +5,11 @@ namespace merchant\models;
 use baseapp\merchant\models\MerchantModel;
 use baseapp\merchant\models\Merchant;
 
-class NewInterview extends MerchantModel
+class Interview extends MerchantModel
 {
     public static function tableName()
     {
-        return '{{%new_interview}}';
+        return '{{%interview}}';
     }
 
     public function attributeLabels()
