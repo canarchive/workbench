@@ -8,6 +8,17 @@ use yii\web\View as ViewBase;
 
 class View extends ViewBase
 {
+    public function getCurrentTitle()
+    {
+        if (!empty($this->title)) {
+            return $this->title;
+        }
+		$title = $this->contextDatas('menuInfos', 'menuTitle');
+        $title = empty($title) ? $this->appDatas('siteName') : $title;
+        $this->title = $title;
+        return $title;
+    }
+
 	public function getMenuData($code)
 	{
 		$menus = $this->contextDatas('menuInfos', 'menus');
@@ -50,7 +61,7 @@ class View extends ViewBase
 
 		$data = isset($datas[$code]) ? $data[$code] : ($sort == 'app' ? Yii::$app->params[$code] : $this->context->$code);
 		$datas[$sort][$code] = $data;
-		if (is_null($indexName)) {
+		if (is_null($indexName) || !isset($data[$indexName])) {
 			return $data;
 		}
 

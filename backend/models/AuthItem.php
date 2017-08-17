@@ -57,9 +57,9 @@ class AuthItem extends \yii\base\Model
     public function rules()
     {
         return [
-            [['ruleName'], 'in',
+            /*[['ruleName'], 'in',
                 'range' => array_keys(Yii::$app->authManager->getRules()),
-                'message' => 'Rule not exists'],
+                'message' => 'Rule not exists'],*/
             [['name', 'type'], 'required'],
             [['name'], 'unique', 'when' => function() {
                 return $this->isNewRecord || ($this->_item->name != $this->name);

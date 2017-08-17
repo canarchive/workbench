@@ -5,9 +5,15 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 
 $menuInfos = $this->context->menuInfos;
-$this->title = $menuInfos['menuTitle'];
 $templateMethods = '';
 $options = [];
+
+if (!isset($gridViewParams)) {
+$gridViewParams = [
+    'dataProvider' => $dataProvider,
+    'columns' => $this->context->searchModel->formatTemplateDatas('list', $this),
+];
+}
 foreach ($menuInfos['appMenus'] as $appMenu) {
     if ($appMenu['display'] == 4) {
         $templateMethods .= "{{$appMenu['method']}} ";
@@ -25,7 +31,7 @@ if (!isset($noActionColumn) && !empty($templateMethods)) {
     ];
     $gridViewParams['columns'][] = $actionColumn;
 }
-if (isset($showFilter)) {
+if (!empty($this->context->showFilter)) {
     $gridViewParams['filterModel'] = $this->context->searchModel;
 }
 

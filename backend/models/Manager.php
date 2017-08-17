@@ -182,4 +182,22 @@ class Manager extends AuthBase
 
         return $infos;
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'truename' => ['type' => 'common'],
+            'role' => ['type' => 'inline', 'method' => 'getRoleStr'],
+            'mobile' => ['type' => 'common'],
+            'login_num' => ['type' => 'common'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp'],
+            'last_at' => ['type' => 'timestamp'],
+            'last_ip' => ['type' => 'common', 'listNo' => true],
+            'email' => ['type' => 'common', 'listNo' => true],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }
