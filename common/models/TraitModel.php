@@ -192,4 +192,9 @@ trait TraitModel
 		}
 		return $prefix . $string . $suffix;
 	}
+
+    protected function _getTemplateFields()
+    {
+        return [];
+    }
 }

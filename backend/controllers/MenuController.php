@@ -3,10 +3,9 @@
 namespace backend\controllers;
 
 use common\helpers\Tree;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class MenuController extends AdminController
+class MenuController extends Controller
 {
     protected $modelClass = 'backend\models\Menu';
     use ControllerTraitFull;
