@@ -1,5 +1,5 @@
 <?php
-$modelNew = $merchantModel->_newModel('newInterview');
+$modelNew = $merchantModel->_newModel('interview');
 
 $baseInfos = [
     [
@@ -9,7 +9,7 @@ $baseInfos = [
         'modelNew' => $modelNew,
         'elems' => [
             [
-                'contact_id' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $modelNew->getPointInfos('new-contact', ['where' => ['merchant_id' => $merchantModel->id]])],
+                'contact_id' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $modelNew->getPointInfos('merchant-contact', ['where' => ['merchant_id' => $merchantModel->id]])],
                 'saleman_interview' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $modelNew->getPointInfos('saleman')],
                 'interview_at' => ['sort' => 'change', 'type' => 'timestamp'],
                 'note_pre' => ['sort' => 'change', 'type' => 'textarea'],

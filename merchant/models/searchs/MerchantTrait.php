@@ -11,7 +11,7 @@ trait MerchantTrait
     public function rules()
     {
         return [
-            [['name', 'merchant_id', 'city_code', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
+            [['name', 'merchant_id', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
         ];
     }
 

@@ -11,13 +11,10 @@ $baseInfos = [
                 'name' => ['sort' => 'change'],
                 'name_full' => ['sort' => 'change'],
                 'region' => ['sort' => 'change'],
-                'hotline' => ['sort' => 'change'],
                 'address' => ['sort' => 'change'],
             ],
             [
                 'status' => ['valueType' => 'key'],
-                'interview_num' => [],
-                'callback_num' => [],
                 'callback_next' => ['sort' => 'change', 'type' => 'timestamp', 'valueType' => 'timestamp'],
                 'created_at' => ['valueType' => 'timestamp'],
                 'updated_at' => ['valueType' => 'timestamp'],

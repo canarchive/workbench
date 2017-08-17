@@ -50,7 +50,7 @@ class Interview extends MerchantModel
     public function getGatherListElems($params = [])
     {
         return [
-            'contact_id' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $this->getPointInfos('new-contact', ['where' => $params])],
+            'contact_id' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $this->getPointInfos('merchant-contact', ['where' => $params])],
             'saleman_interview' => ['sort' => 'change', 'type' => 'dropdown', 'table' => 'saleman', 'elemInfos' => $this->getPointInfos('saleman')],
             'interview_at' => ['sort' => 'change', 'valueType' => 'timestamp', 'type' => 'timestamp'],
             'status' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $this->statusInfos],

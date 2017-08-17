@@ -2,9 +2,7 @@
 
 namespace merchant\models;
 
-use baseapp\merchant\models\Merchant;
-
-class Contact extends Contact
+class Contact extends BaseModel
 {
     public static function tableName()
     {
