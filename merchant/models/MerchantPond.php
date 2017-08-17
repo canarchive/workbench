@@ -4,12 +4,12 @@ namespace merchant\models;
 
 use baseapp\merchant\models\Merchant;
 
-class NewMerchant extends Merchant
+class MerchantPond extends Merchant
 {
     public $import;
     public static function tableName()
     {
-        return '{{%new_merchant}}';
+        return '{{%merchant_pond}}';
     }
 
     public function rules()

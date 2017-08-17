@@ -5,11 +5,13 @@ namespace backend\merchant\controllers;
 use Yii;
 use yii\web\ForbiddenHttpException;
 use backend\components\AdminController;
-use backend\components\ControllerTraitFull;
+use backend\components\ControllerTraitView;
+use backend\components\ControllerTraitUpdate;
 
 class MerchantController extends AdminController
 {
-    use ControllerTraitFull;
+    use ControllerTraitView;
+    use ControllerTraitUpdate;
     protected $modelClass = 'baseapp\merchant\models\Merchant';
     protected $modelSearchClass = 'merchant\models\searchs\Merchant';
 

@@ -6,21 +6,22 @@ use Yii;
 use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class NewMerchantController extends AdminController
+class MerchantPondController extends AdminController
 {
     use ControllerTraitFull;
     public $viewPrefix = '@backend/merchant/views/merchant/';
-    protected $modelClass = 'merchant\models\NewMerchant';
-    protected $modelSearchClass = 'merchant\models\searchs\NewMerchant';
+    protected $modelClass = 'merchant\models\MerchantPond';
+    protected $modelSearchClass = 'merchant\models\searchs\MerchantPond';
 
     public function actionImport()
     {
     	return $this->_importInfo();
     }
 
-    public function actionCallback($id)
+    public function actionCallback($merchant_id)
     {
-        $datas = $this->_datas($id);
+        $datas = $this->_datas($merchant_id);
+        print_r($datas);
         if (Yii::$app->getRequest()->method == 'POST') {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             $operation = Yii::$app->request->post('operation');
@@ -33,14 +34,13 @@ class NewMerchantController extends AdminController
         return $this->render($this->viewPrefix . 'callback', $datas);
     }
 
-    protected function _datas($id)
+    protected function _datas($merchantId)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($merchantId);
 
-        $merchantId = $model->id;
-        $callbackInfos = $this->_getModel('newCallback')->getInfos(['where' => ['merchant_id' => $merchantId]]);
-        $interviewInfos = $this->_getModel('newInterview')->getInfos(['where' => ['merchant_id' => $merchantId]]);
-        $contactInfos = $this->_getModel('newContact')->getInfos(['where' => ['merchant_id' => $merchantId]]);
+        $callbackInfos = $this->_getModel('callback')->getInfos(['where' => ['merchant_id' => $merchantId]]);
+        $interviewInfos = $this->_getModel('interview')->getInfos(['where' => ['merchant_id' => $merchantId]]);
+        $contactInfos = $this->_getModel('contact')->getInfos(['where' => ['merchant_id' => $merchantId]]);
 
         $datas = [
             'model' => $model,

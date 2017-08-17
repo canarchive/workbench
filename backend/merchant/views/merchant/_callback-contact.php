@@ -1,5 +1,5 @@
 <?php
-$modelNew = $merchantModel->_newModel('newContact');
+$modelNew = $merchantModel->_newModel('contact');
 
 $baseInfos = [
     [

@@ -1,5 +1,5 @@
 <?php
-$modelNew = $merchantModel->_newModel('newCallback');
+$modelNew = $merchantModel->_newModel('callback');
 
 $baseInfos = [
     [

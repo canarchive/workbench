@@ -14,6 +14,12 @@ class View extends ViewBase
 		return isset($menus[$code]) ? $menus[$code] : [];
 	}
 
+	public function getMenuApp($method)
+	{
+		$menus = $this->contextDatas('menuInfos', 'appMenus');
+		return isset($menus[$method]) ? $menus[$method] : [];
+	}
+
 	public function getPointParam($code, $default = '')
 	{
 		return isset($this->params[$code]) ? $this->params[$code] : $default;
@@ -38,6 +44,19 @@ class View extends ViewBase
 		return $this->_appContextDatas($code, 'context', $indexName);
 	}
 
+	public function _appContextDatas($code, $sort, $indexName)
+	{
+		static $datas;
+
+		$data = isset($datas[$code]) ? $data[$code] : ($sort == 'app' ? Yii::$app->params[$code] : $this->context->$code);
+		$datas[$sort][$code] = $data;
+		if (is_null($indexName)) {
+			return $data;
+		}
+
+		return $data[$indexName];
+	}
+
     public function getElemView($model, $field, $elem, $isNew = false)
     {
         $sort = isset($elem['sort']) ? $elem['sort'] : 'show';
@@ -48,7 +67,21 @@ class View extends ViewBase
 
         $type = isset($elem['type']) ? $elem['type'] : 'common';
         $method = "_{$type}View";
-        return $this->$method($value, $model, $field, $elem, $isNew);
+        $elemValue = $this->$method($value, $model, $field, $elem, $isNew);
+        if (isset($elem['noWrap'])) {
+            return $elemValue;
+        }
+        return "<td>{$elemValue}</td>";
+    }
+
+    protected function _getElemUrl($elem)
+    {
+        if (!isset($elem['menuCode'])) {
+            return '';
+        }
+        $menu = $this->getMenuData($elem['menuCode']);
+        $menu = empty($menu) ? $this->getMenuApp($elem['menuCode']) : $menu;
+        return isset($menu['url']) ? $menu['url'] : '';
     }
 
     protected function _getViewValue($model, $field, $elem)
@@ -80,18 +113,18 @@ class View extends ViewBase
         $id = (int) $model->id;
         $fName = $model->formName();
         $idClass = "{$fName}_{$field}_{$id}";
-        $onblur = $isNew ? '' : "changeDate(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $url = $this->_getElemUrl($elem);
+        $onblur = $isNew ? '' : "changeDate(\"{$url}\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
         $format = isset($elem['format']) ? $elem['format'] : 'Y-m-d H:i:s';
         $formatFront = isset($elem['formatFront']) ? $elem['formatFront'] : 'YYYY-MM-DD HH:mm:ss';
         $value = !empty($value) ? $value : date($format);
-        $str = "<td><input type='hidden' id='{$idClass}_old' value='{$value}' />";
+        $str = "<input type='hidden' id='{$idClass}_old' value='{$value}' />";
         $str .= "<input class='form-control' type='text' id='{$idClass}' onblur='{$onblur}' value='{$value}' />";
         $str .= "<script type='text/javascript'>
                     $(function () {
                         $('#{$idClass}').datetimepicker({locale: 'zh-CN', format: '{$formatFront}'});
                     });
                 </script>";
-        $str .= '</td>';
         return $str;
     }
 
@@ -100,7 +133,8 @@ class View extends ViewBase
         $id = (int) $model->id;
         $fName = $model->formName();
         $idClass = "{$fName}_{$field}_{$id}";
-        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $url = $this->_getElemUrl($elem);
+        $onchange = $isNew ? '' : "updateElemByAjax(\"{$url}\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
 
         $option = isset($elem['option']) ? $elem['option'] : [];
         $option = array_merge($option, [
@@ -109,8 +143,7 @@ class View extends ViewBase
             'id' => $idClass,
             'class' => 'form-control',
         ]);
-        $elem = Html::dropDownList($field, $value, $elem['elemInfos'], $option);
-        return "<td>{$elem}</td>";
+        return Html::dropDownList($field, $value, $elem['elemInfos'], $option);
     }
 
     protected function _textareaView($value, $model, $field, $elem, $isNew)
@@ -118,7 +151,8 @@ class View extends ViewBase
         $id = (int) $model->id;
         $fName = $model->formName();
         $idClass = "{$fName}_{$field}_{$id}";
-        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $url = $this->_getElemUrl($elem);
+        $onchange = $isNew ? '' : "updateElemByAjax(\"{$url}\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
         $option = isset($elem['option']) ? $elem['option'] : [];
         $option = array_merge([
             'id' => $idClass,
@@ -126,8 +160,7 @@ class View extends ViewBase
             'cols' => '100',
             'onchange' => $onchange,
         ], $option);
-        $elem = Html::textarea($field, $value, $option);
-        return "<td>{$elem}</td>";
+        return Html::textarea($field, $value, $option);
     }
 
     protected function _commonView($value, $model, $field, $elem, $isNew)
@@ -135,22 +168,11 @@ class View extends ViewBase
         $id = (int) $model->id;
         $fName = $model->formName();
         $idClass = "{$fName}_{$field}_{$id}";
-        $onchange = $isNew ? '' : "updateElemByAjax(\"\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
-        return "<td><input type='text' id='{$idClass}' name='{$field}' value='{$value}' onchange='{$onchange}' /></td>";
+        $url = $this->_getElemUrl($elem);
+        $onchange = $isNew ? '' : "updateElemByAjax(\"{$url}\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $width = isset($elem['width']) ? "style='width: {$elem['width']}px' " : '';
+        return "<input type='text' id='{$idClass}' name='{$field}' {$width}value='{$value}' onchange='{$onchange}' />";
     }
-
-	public function _appContextDatas($code, $sort, $indexName)
-	{
-		static $datas;
-
-		$data = isset($datas[$code]) ? $data[$code] : ($sort == 'app' ? Yii::$app->params[$code] : $this->context->$code);
-		$datas[$sort][$code] = $data;
-		if (is_null($indexName)) {
-			return $data;
-		}
-
-		return $data[$indexName];
-	}
 
     public function getOptionInfo($elem, $optionDefault)
     {
