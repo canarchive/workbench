@@ -21,7 +21,6 @@ class MerchantPondController extends AdminController
     public function actionCallback($merchant_id)
     {
         $datas = $this->_datas($merchant_id);
-        print_r($datas);
         if (Yii::$app->getRequest()->method == 'POST') {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             $operation = Yii::$app->request->post('operation');
@@ -60,7 +59,7 @@ class MerchantPondController extends AdminController
             return ['status' => 400, 'message' => "{$table}有误"];
         }
         $params = [];
-        $tables = ['newCallback', 'newMerchant', 'newContact', 'newInterview'];
+        $tables = ['callback', 'merchantPond', 'contact', 'interview'];
         if (!in_array($table, $tables)) {
             return ['status' => 400, 'message' => "{$table}有误"];
         }
@@ -76,7 +75,7 @@ class MerchantPondController extends AdminController
         return $result;
     }
 
-    protected function _newMerchantOperation($merchantModel, $operationType, $params)
+    protected function _merchantPondOperation($merchantModel, $operationType, $params)
     {
         if ($operationType == 'update') {
             return $this->_update($merchantModel, $params);
@@ -84,9 +83,9 @@ class MerchantPondController extends AdminController
         return ['status' => 400, 'message' => 'user error'];
     }
 
-    protected function _newContactOperation($merchantModel, $operationType, $params)
+    protected function _contactOperation($merchantModel, $operationType, $params)
     {
-        $model = $this->_getModel('newContact');
+        $model = $this->_getModel('contact');
         if ($operationType == 'update') {
             return $this->_update($model, $params);
         }
@@ -104,9 +103,9 @@ class MerchantPondController extends AdminController
         return $return;
     }
 
-    protected function _newCallbackOperation($merchantModel, $operationType, $params)
+    protected function _callbackOperation($merchantModel, $operationType, $params)
     {
-        $model = $this->_getModel('newCallback');
+        $model = $this->_getModel('callback');
         if ($operationType == 'update') {
             return $this->_update($model, $params);
         }
@@ -123,9 +122,9 @@ class MerchantPondController extends AdminController
         return $return;
     }
 
-    protected function _newInterviewOperation($merchantModel, $operationType, $params)
+    protected function _interviewOperation($merchantModel, $operationType, $params)
     {
-        $model = $merchantModel->_newModel('newInterview', true);
+        $model = $merchantModel->_newModel('interview', true);
         if ($operationType == 'update') {
             return $this->_update($model, $params);
         }

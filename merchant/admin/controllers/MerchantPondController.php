@@ -2,9 +2,9 @@
 
 namespace merchant\admin\controllers;
 
-use backend\merchant\controllers\NewMerchantController as NewMerchantControllerBase;
+use backend\merchant\controllers\MerchantPondController as MerchantPondControllerBase;
 
-class NewMerchantController extends NewMerchantControllerBase
+class MerchantPondController extends MerchantPondControllerBase
 {
     use BaseTrait;
 

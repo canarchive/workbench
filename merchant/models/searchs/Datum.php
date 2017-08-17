@@ -3,9 +3,9 @@
 namespace merchant\models\searchs;
 
 use yii\data\ActiveDataProvider;
-use merchant\models\Bank as BankModel;
+use merchant\models\Datum as DatumModel;
 
-class Bank extends BankModel
+class Datum extends DatumModel
 {
     public function rules()
     {

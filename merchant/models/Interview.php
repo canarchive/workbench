@@ -59,4 +59,28 @@ class Interview extends MerchantModel
             'note_after' => ['sort' => 'change', 'type' => 'textarea', 'option' => ['cols' => 20]],
         ];
     }
+
+    protected function _getTemplateFields()
+    {
+        $operation = [
+            'formatView' => 'raw',
+            'type' => 'operation',
+            'qParams' => [
+                'merchant_id' => ['field' => 'merchant_id', 'value' => null],
+            ],
+            'menuCodes' => [
+                ['code' => 'merchant_follow_merchant-pond_callback', 'name' => '回访'],
+            ]
+        ];
+        return [
+            'id' => ['type' => 'common'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant-pond'],
+            'saleman_id' => ['type' => 'point', 'table' => 'saleman'],
+            'contact_id' => ['type' => 'point', 'table' => 'merchant-contact'],
+            'saleman_interview' => ['type' => 'point', 'table' => 'saleman'],
+            'interview_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
+            'operation' => $operation,
+        ];
+    }
 }
