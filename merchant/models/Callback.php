@@ -14,6 +14,7 @@ class Callback extends MerchantModel
 
     public function rules()
     {
+        return [];
     }
 
     public function getBehaviorCodes()
@@ -36,13 +37,13 @@ class Callback extends MerchantModel
 
     public function getStatusInfos()
     {
-        return $this->_newModel('newMerchant')->statusInfos;
+        return $this->_newModel('merchantPond')->statusInfos;
     }
 
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
-        $model = new NewMerchant();
+        $model = new MerchantPond();
         $mInfo = $model->findOne($this->merchant_id);
         if (empty($mInfo)) {
             return true;

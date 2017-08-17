@@ -2,40 +2,7 @@
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    'columns' => [
-        'id',
-        [
-            'attribute' => 'merchant_id',
-            'value' => function($model) {
-                return $model->getPointName('merchant-pond', $model->merchant_id);
-            },
-        ],
-        [
-            'attribute' => 'saleman_id',
-            'value' => function($model) {
-                return $model->getPointName('saleman', $model->saleman_id);
-            },
-        ],
-        [
-            'attribute' => 'created_at',
-            'value'=> function($model){
-                return  date('Y-m-d H:i:s',$model->created_at);
-            },
-        ],
-        [
-            'attribute' => 'updated_at',
-            'value'=> function($model){
-                return  date('Y-m-d H:i:s',$model->updated_at);
-            },
-        ],
-        [
-            'attribute' => 'status',
-            'value' => function($model) {
-                return $model->statusInfos[$model->status];
-            }
-        ],
-        'content',
-    ],
+    'columns' => $this->context->searchModel->formatTemplateDatas('list', $this),
 ];
 
 echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);
