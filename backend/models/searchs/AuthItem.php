@@ -91,4 +91,11 @@ class AuthItem extends BaseModelNotable
         ]);
     }
 
+    protected function _getTemplateFields()
+    {
+        return [
+            'name' => ['type' => 'common'],
+            'description' => ['type' => 'common'],
+        ];
+    }
 }

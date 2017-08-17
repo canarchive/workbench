@@ -16,6 +16,7 @@ class AdminController extends Controller
     public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
+    public $showFilter;
     //protected $viewPrefix = '';
     public $layout = '@backend/views/charisma/layouts/main';
 
@@ -54,9 +55,19 @@ class AdminController extends Controller
         $searchClass = $this->modelSearchClass;
         $this->searchModel = new $searchClass();
         $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
-        return $this->render($this->viewPrefix . $view, [
+        return $this->render($this->listinfoView, [
             'dataProvider' => $dataProvider,
         ]);
+    }
+
+    protected function getListinfoView()
+    {
+        return '@backend/views/common/listinfo';
+    }
+
+    protected function _returnView()
+    {
+        return true;
     }
 
     /**
@@ -67,63 +78,11 @@ class AdminController extends Controller
     {
         $infos = $model->getFormatedInfos();
 
-        return $this->render($this->viewPrefix . 'listinfo', [
+        return $this->render('@backend/views/common/listinfo_tree', [
             'model' => $model,
+            'currentView' => $this->viewPrefix,
             'infos' => $infos,
         ]);
-    }
-
-    /**
-     * Displays a single info.
-     * @param  string $id
-     * @return mixed
-     */
-    protected function _viewInfo($id)
-    {
-        $model = $this->findModel($id);
-        return $this->render($this->viewView, ['model' => $model]);
-    }
-
-    protected function getViewView()
-    {
-        return '@backend/views/common/listinfo';
-    }
-
-    protected function getViewView()
-    {
-        return '@backend/views/common/view';
-    }
-
-    /**
-     * Creates a new info.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    protected function _addInfo($returnView = true)
-    {
-        $modelClass = $this->modelClass;
-        $model = new $modelClass($this->_addData());
-        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
-            
-            if ($this->_returnView()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
-            return $this->redirect(['listinfo']);
-        }
-
-        return $this->render($this->viewPrefix . 'add', [
-            'model' => $model,
-        ]);
-    }
-
-    protected function _addData()
-    {
-        return [];
-    }
-
-    protected function _returnView()
-    {
-        return true;
     }
 
     protected function _importInfo()
@@ -160,26 +119,6 @@ class AdminController extends Controller
             'addMul' => true,
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Updates an existing info.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param  string $id
-     * @return mixed
-     */
-    protected function _updateInfo($id)
-    {
-        $scenario = $this->_getScenario();
-        $model = $this->findModel($id);
-        if (!empty($scenario)) {
-            $model->setScenario($scenario);
-        }
-        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render($this->viewPrefix . 'update', ['model' => $model]);
     }
 
     protected function _getScenario()
