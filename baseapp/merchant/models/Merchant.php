@@ -20,9 +20,8 @@ class Merchant extends MerchantModel
     {
         return [
             [['name', 'code', 'city_code'], 'required'],
-            [['orderlist'], 'integer'],
-            [['orderlist'], 'default', 'value' => '0'],
-            [['status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
+            [['callback_next', 'orderlist'], 'default', 'value' => '0'],
+            [['status', 'region', 'name_full', 'sort', 'status_ext', 'status_contract', 'address', 'description'], 'safe'],
         ];
     }
 
@@ -37,18 +36,14 @@ class Merchant extends MerchantModel
             'region' => '所在区县',
             'sort' => '类别',
             'orderlist' => '排序',
-            'hotline' => '电话',
-            'postcode' => '邮编',
             'address' => '地址',
-            'breif' => '简介',
-			'msg' => '通知短信',
-			'homeurl' => '官网地址',
             'description' => '描述',
             'status' => '状态',
+            'status_ext' => '额外状态',
+            'status_contract' => '合同状态',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
-            'interview_num' => '回访次数',
-            'callback_num' => '面谈次数',
+            'saleman_id' => '销售ID',
             'callback_next' => '下次回访时间',
 
             'op-contact' => '联系人',
@@ -56,14 +51,24 @@ class Merchant extends MerchantModel
         ];
     }
 
+    public function getStatusContractInfos()
+    {
+        $datas = [
+			'elec' => '发电子版合同',
+            'selfsign' => '单方签章快递',
+            'finish' => '已完成',
+        ];
+        return $datas;
+    }
+
     public function getStatusInfos()
     {
         $datas = [
-            '0' => '关注',
-            '1' => 'SEM托管合作',
-            '2' => 'CPA合作',
-            '3' => 'CPS合作',
-			'99' => '暂停合作',
+			'cooperation' => '合作',
+            'sem' => 'SEM托管合作',
+            'cpa' => 'CPA合作',
+            'cps' => 'CPS合作',
+			'pause' => '暂停合作',
         ];
         return $datas;
     }
@@ -78,5 +83,47 @@ class Merchant extends MerchantModel
         parent::afterSave($insert, $changedAttributes);
 
         return true;
+    }
+
+    protected function _getTemplateFields()
+    {
+        $operation = [
+            'formatView' => 'raw',
+            'type' => 'operation',
+            'qParams' => [
+                'merchant_id' => ['field' => 'id', 'value' => null],
+            ],
+            'menuCodes' => [
+                ['code' => 'merchant_follow_contact_listinfo'],
+                ['code' => 'merchant_datum_view', 'name' => '相关资料'],
+            ]
+        ];
+        $follow = [
+            'formatView' => 'raw',
+            'type' => 'operation',
+            'qParams' => [
+                'merchant_id' => ['field' => 'id', 'value' => null],
+            ],
+            'menuCodes' => [
+                ['code' => 'merchant_follow_merchant-pond_callback', 'name' => '回访'],
+                ['code' => 'merchant_follow_callback_listinfo'],
+                ['code' => 'merchant_follow_interview_listinfo'],
+            ]
+        ];
+        return [
+            'id' => ['type' => 'common'],
+            'sort' => ['type' => 'key'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'city_code' => ['type' => 'common'],
+            'region' => ['type' => 'common', 'listNo' => true],
+            'orderlist' => ['type' => 'change', 'menuCode' => 'merchant_follow_merchant-pond_update', 'formatView' => 'raw', 'width' => '50'],
+            //'created_at' => ['type' => 'timestamp'],
+            //'updated_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
+            //'code' => ['type' => 'inline', 'method' => 'getCode', 'listNo' => true],
+            'operation' => $operation,
+            'follow' => $follow,
+        ];
     }
 }
