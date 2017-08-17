@@ -119,7 +119,7 @@ class Merchant extends MerchantModel
             'region' => ['type' => 'common', 'listNo' => true],
             'orderlist' => ['type' => 'change', 'menuCode' => 'merchant_follow_merchant-pond_update', 'formatView' => 'raw', 'width' => '50'],
             //'created_at' => ['type' => 'timestamp'],
-            //'updated_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp'],
             'status' => ['type' => 'key'],
             //'code' => ['type' => 'inline', 'method' => 'getCode', 'listNo' => true],
             'operation' => $operation,

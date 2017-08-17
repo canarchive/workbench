@@ -81,7 +81,17 @@ class AdminController extends Controller
     protected function _viewInfo($id)
     {
         $model = $this->findModel($id);
-        return $this->render($this->viewPrefix . 'view', ['model' => $model]);
+        return $this->render($this->viewView, ['model' => $model]);
+    }
+
+    protected function getViewView()
+    {
+        return '@backend/views/common/listinfo';
+    }
+
+    protected function getViewView()
+    {
+        return '@backend/views/common/view';
     }
 
     /**
