@@ -2,11 +2,9 @@
 
 namespace backend\merchant\controllers;
 
-use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitView;
 
-class CallbackController extends AdminController
+class CallbackController extends Controller
 {
     use ControllerTraitView;
     protected $modelClass = 'merchant\models\Callback';

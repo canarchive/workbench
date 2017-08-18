@@ -3,10 +3,9 @@
 namespace backend\merchant\controllers;
 
 use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class ContactController extends AdminController
+class ContactController extends Controller
 {
     use ControllerTraitFull;
     protected $modelClass = 'merchant\models\Contact';

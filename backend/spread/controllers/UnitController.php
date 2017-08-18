@@ -2,13 +2,11 @@
 
 namespace backend\spread\controllers;
 
-use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class UnitController extends AdminController
+class UnitController extends Controller
 {
+    use ControllerTraitFull;
     protected $modelClass = 'spread\models\Unit';
     protected $modelSearchClass = 'spread\models\searchs\Unit';
-    use ControllerTraitFull;
 }

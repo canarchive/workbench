@@ -3,10 +3,9 @@
 namespace backend\merchant\controllers;
 
 use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class MerchantPondController extends AdminController
+class MerchantPondController extends Controller
 {
     use ControllerTraitFull;
     public $viewPrefix = '@backend/merchant/views/merchant/';

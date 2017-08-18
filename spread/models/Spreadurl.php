@@ -201,9 +201,9 @@ class Spreadurl extends BaseModel
     public function merchantInfos($keyValue = false)
     {
         if ($keyValue) {
-            return $this->getPointInfos('merchant', ['where' => ['status' => [1, 2, 3]]]);
+            return $this->getPointInfos('merchant', ['where' => ['status' => ['sem', 'cpa', 'cps']]]);
         }
-        $datas = $this->getPointAll('merchant', ['where' => ['status' => [1, 2, 3]]]);
+        $datas = $this->getPointAll('merchant', ['where' => ['status' => ['sem', 'cpa', 'cps']]]);
         if (empty($this->merchant_id)) {
             return $datas;
         }

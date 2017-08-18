@@ -3,11 +3,9 @@
 namespace backend\spread\controllers;
 
 use Yii;
-use yii\helpers\ArrayHelper;
-use backend\components\AdminController;
 use spread\models\Spreadurl;
 
-class SpreadurlController extends AdminController
+class SpreadurlController extends Controller
 {
     public function actionListinfo()
     {

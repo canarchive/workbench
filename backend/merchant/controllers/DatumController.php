@@ -2,11 +2,9 @@
 
 namespace backend\merchant\controllers;
 
-use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class DatumController extends AdminController
+class DatumController extends Controller
 {
     use ControllerTraitFull;
     protected $modelClass = 'merchant\models\Datum';

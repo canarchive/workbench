@@ -25,9 +25,9 @@ class Keyword extends BaseModel
     public function rules()
     {
         return [
-            [['account_id','plan_id','unit_id','name',], 'required'],
-            [['status',], 'default', 'value' => 0],
-            [['created_at','updated_at',], 'safe'],
+            [['account_id','plan_id','name',], 'required'],
+            [['status', 'unit_id'], 'default', 'value' => 0],
+            //[], 'safe'],
         ];
     }
 
@@ -42,6 +42,15 @@ class Keyword extends BaseModel
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
             'status' => '状态',
+        ];
+    }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'status' => ['type' => 'key'],
         ];
     }
 }

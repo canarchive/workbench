@@ -2,10 +2,9 @@
 
 namespace backend\merchant\controllers;
 
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class ServiceController extends AdminController
+class ServiceController extends Controller
 {
     use ControllerTraitFull;
     protected $modelClass = 'baseapp\merchant\models\Service';

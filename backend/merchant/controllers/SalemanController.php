@@ -2,11 +2,9 @@
 
 namespace backend\merchant\controllers;
 
-use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class SalemanController extends AdminController
+class SalemanController extends Controller
 {
     use ControllerTraitFull;
     protected $modelClass = 'merchant\models\Saleman';

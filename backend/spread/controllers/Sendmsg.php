@@ -3,9 +3,8 @@
 namespace backend\spread\controllers;
 
 use Yii;
-use backend\components\AdminController;
 
-class Sendmsg extends AdminController
+class Sendmsg extends Controller
 {
     protected $modelClass = 'subsite\decoration\models\Sendmsg';
     public $viewPrefix = '/sendmsg/';
