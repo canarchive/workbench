@@ -12,13 +12,13 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'bank_name')->dropDownList($model->bankNameInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'bank_opening')->textInput() ?>
     <?= $form->field($model, 'bank_account')->textInput() ?>
-    <?= $form->field($model, 'type')->dropDownList($model->typeInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'sort')->dropDownList($model->sortInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'orderlist')->textInput() ?>
     <?= $form->field($model, 'address')->textInput() ?>
     <?= $form->field($model, 'address_reg')->textInput() ?>
     <?= $form->field($model, 'homeurl')->textInput() ?>
     <?= $form->field($model, 'homeurl_mobile')->textInput() ?>
-    <?= $form->field($model, 'statusInfos')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
+    <?php //echo $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
 
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
