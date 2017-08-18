@@ -4,10 +4,9 @@ namespace backend\merchant\controllers;
 
 use Yii;
 use merchant\models\Menu as MenuModel;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class RoleController extends AdminController
+class RoleController extends Controller
 {
     protected $modelClass = 'merchant\models\Role';
     protected $modelSearchClass = 'merchant\models\searchs\Role';

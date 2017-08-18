@@ -33,4 +33,14 @@ class Role extends MerchantModel
             'permission' => '权限',
         ];
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }

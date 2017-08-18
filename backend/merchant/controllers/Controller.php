@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers;
+namespace backend\merchant\controllers;
 
 use backend\components\AdminController;
 
@@ -8,7 +8,7 @@ abstract class Controller extends AdminController
 {
     public function getViewPrefix()
     {
-        return "@backend/views/charisma/{$this->id}/";
+        return "@backend/merchant/views/{$this->id}/";
     }
 
 }

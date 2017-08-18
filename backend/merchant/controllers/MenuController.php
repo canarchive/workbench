@@ -3,14 +3,12 @@
 namespace backend\merchant\controllers;
 
 use common\helpers\Tree;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class MenuController extends AdminController
+class MenuController extends Controller
 {
-    protected $modelClass = 'merchant\models\Menu';
     use ControllerTraitFull;
-
+    protected $modelClass = 'merchant\models\Menu';
     public $viewPrefix = '//menu/';
 
     public function behaviors()

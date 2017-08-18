@@ -12,11 +12,6 @@ class Account extends BaseModel
         return '{{%sem_account}}';
     }
 
-    public function getBehaviorCodes()
-    {
-        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
-    }
-
     public function rules()
     {
         return [

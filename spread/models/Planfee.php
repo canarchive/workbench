@@ -246,4 +246,19 @@ class Planfee extends BaseModel
         $existDatas[$cMark]['fee'] = isset($existDatas[$cMark]['fee']) ? $existDatas[$cMark]['fee'] : 0;
         return $existDatas[$cMark][$type];
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'created_day' => ['type' => 'common'],
+            'channel' => ['type' => 'key'],
+            'client_type' => ['type' => 'key'],
+            'account_id' => ['type' => 'common'],
+            'plan_id' => ['type' => 'common'],
+            'show_num' => ['type' => 'common'],
+            'hit_num' => ['type' => 'common'],
+            'fee' => ['type' => 'common'],
+        ];
+    }
 }

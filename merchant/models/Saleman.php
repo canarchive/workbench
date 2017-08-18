@@ -47,4 +47,17 @@ class Saleman extends MerchantModel
         ];
         return $datas;
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'mobile' => ['type' => 'common'],
+            'role' => ['type' => 'key'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }

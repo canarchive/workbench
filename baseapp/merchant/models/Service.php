@@ -180,4 +180,24 @@ class Service extends MerchantModel
         ];
         return $datas;
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'mobile' => ['type' => 'common'],
+            'user_id' => ['type' => 'point', 'table' => 'merchant-user'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
+            'manager_id' => ['type' => 'point', 'table' => 'merchant-user'],
+            'distributed_at' => ['type' => 'timestamp'],
+            //'mobile_ext' => ['type' => 'common', 'listNo' => true],
+            'serviced_num' => ['type' => 'common', 'listNo' => true],
+            'serviced_times' => ['type' => 'common', 'listNo' => true],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }

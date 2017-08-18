@@ -237,4 +237,22 @@ class User extends AuthBase
         ];
         return $datas;
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'role' => ['type' => 'inline', 'method' => 'getRoleStr'],
+            'mobile' => ['type' => 'common'],
+            'merchant_id' => ['type' => 'inline', 'method' => 'getUserMerchantStr'],
+            'login_num' => ['type' => 'common'],
+            'email' => ['type' => 'common', 'listNo' => true],
+            'last_ip' => ['type' => 'common', 'listNo' => true],
+            'last_at' => ['type' => 'timestamp'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }

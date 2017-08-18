@@ -38,4 +38,17 @@ class Unit extends BaseModel
             'status' => '状态',
         ];
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'account_id' => ['type' => 'point', 'table' => 'account'],
+            'plan_id' => ['type' => 'point', 'table' => 'plan'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }

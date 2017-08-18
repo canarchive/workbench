@@ -2,13 +2,11 @@
 
 namespace backend\merchant\controllers;
 
-use Yii;
 use yii\web\ForbiddenHttpException;
-use backend\components\AdminController;
 use backend\components\ControllerTraitView;
 use backend\components\ControllerTraitUpdate;
 
-class MerchantController extends AdminController
+class MerchantController extends Controller
 {
     use ControllerTraitView;
     use ControllerTraitUpdate;

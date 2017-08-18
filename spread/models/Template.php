@@ -59,4 +59,19 @@ class Template extends BaseModel
         ];
         return $datas;
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
+            'have_pc' => ['type' => 'key'],
+            'have_mobile' => ['type' => 'key'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }
