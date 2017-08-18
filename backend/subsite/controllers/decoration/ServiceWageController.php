@@ -2,13 +2,11 @@
 
 namespace backend\subsite\controllers\decoration;
 
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class ServiceWageController extends AdminController
+class ServiceWageController extends Controller
 {
     use ControllerTraitFull;
-    public $viewPrefix = '@backend/subsite/views/decoration/service-wage/';
     protected $modelClass = 'subsite\decoration\models\ServiceWage';
     protected $modelSearchClass = 'subsite\decoration\models\searchs\ServiceWage';
 

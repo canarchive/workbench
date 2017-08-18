@@ -3,10 +3,9 @@
 namespace backend\subsite\controllers\decoration;
 
 use Yii;
-use backend\components\AdminController;
 use backend\components\ControllerTraitView;
 
-class DispatchController extends AdminController
+class DispatchController extends Controller
 {
     use ControllerTraitView;
     protected $modelClass = 'subsite\decoration\models\Dispatch';

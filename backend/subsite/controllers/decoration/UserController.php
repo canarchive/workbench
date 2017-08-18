@@ -2,10 +2,9 @@
 
 namespace backend\subsite\controllers\decoration;
 
-use backend\components\AdminController;
 use baseapp\spread\controllers\UserTrait;
 
-class UserController extends AdminController
+class UserController extends Controller
 {
     use UserTrait;
 
@@ -44,5 +43,10 @@ class UserController extends AdminController
             'content' => $this->renderPartial($this->viewPrefix . '_user_house', ['model' => $model]),
         ];
         return $return;
+    }
+
+    protected function getListinfoView()
+    {
+        return '@backend/subsite/views/decoration/user/listinfo';
     }
 }

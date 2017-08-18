@@ -16,6 +16,7 @@ class House extends ModelBase
 
     public function rules()
     {
+        return [];
     }
 
     public function attributeLabels()
@@ -29,7 +30,7 @@ class House extends ModelBase
             'house_type' => '户型',
             'house_sort' => '房屋类别',
             'house_area' => '房屋面积',
-            'created_at' => '注册时间',
+            'created_at' => '添加时间',
             'updated_at' => '更新时间',
             'decoration_id' => '团购会ID',
             'renovation_at' => '装修时间',
@@ -140,5 +141,22 @@ class House extends ModelBase
         ];
 
         return $datas;
+    }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'service_id' => ['type' => 'point', 'table' => 'service'],
+            'mobile' => ['type' => 'common'],
+            'region' => ['type' => 'common'],
+            'address' => ['type' => 'common'],
+            'house_type' => ['type' => 'key'],
+            'house_sort' => ['type' => 'key'],
+            'house_area' => ['type' => 'common'],
+            'renovation_budget' => ['type' => 'common'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+        ];
     }
 }
