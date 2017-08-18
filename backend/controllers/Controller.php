@@ -2,7 +2,6 @@
 
 namespace backend\controllers;
 
-use Yii;
 use backend\components\AdminController;
 
 abstract class Controller extends AdminController
