@@ -22,7 +22,7 @@ class Datum extends BaseModel
         return [
             [['merchant_id'], 'required'],
             [['orderlist', 'status'], 'default', 'value' => 0],
-            [['name', 'bank_name', 'bank_account', 'taxnumber', 'address', 'address_reg', 'homeurl', 'homeurl_mobile', 'type', 'description', 'bank_opening'], 'safe'],
+            [['name', 'bank_name', 'bank_account', 'taxnumber', 'address', 'address_reg', 'homeurl', 'homeurl_mobile', 'sort', 'description', 'bank_opening'], 'safe'],
         ];
     }
 
@@ -38,7 +38,7 @@ class Datum extends BaseModel
             'taxnumber' => '税号',
             'address' => '地址',
             'address_reg' => '注册地址',
-            'type' => '类型',
+            'sort' => '类型',
             'orderlist' => '排序',
             'status' => '状态',
             'homeurl' => '官网',
@@ -49,13 +49,9 @@ class Datum extends BaseModel
         ];
     }
 
-    public function getTypeInfos()
+    public function getSortInfos()
     {
-        $datas = [
-            'inuse' => '常用',
-            'bak' => '备用',
-        ];
-        return $datas;
+        return $this->getMerchantStatusParams();
     }
 
     public function getBankNameInfos()
@@ -67,9 +63,22 @@ class Datum extends BaseModel
     {
         return [
             'id' => ['type' => 'common'],
-            'merchant_id' => ['type' => 'point', 'table' => 'merchant-pond'],
-            'created_at' => ['type' => 'timestamp'],
-            'status' => ['type' => 'key'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
+            'name' => ['type' => 'common'],
+            'sort' => ['type' => 'key'],
+            'bank_name' => ['type' => 'key'],
+            'bank_opening' => ['type' => 'common', 'listNo' => true],
+            'bank_account' => ['type' => 'common', 'listNo' => true],
+            'taxnumber' => ['type' => 'common'],
+            'orderlist' => ['type' => 'common', 'listNo' => true],
+            'address' => ['type' => 'common', 'listNo' => true],
+            'address_reg' => ['type' => 'common', 'listNo' => true],
+            'homeurl' => ['type' => 'common', 'listNo' => true],
+            'homeurl_mobile' => ['type' => 'common', 'listNo' => true],
+
+            'created_at' => ['type' => 'timestamp', 'listNo' => true],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            //'status' => ['type' => 'key'],
         ];
     }
 }

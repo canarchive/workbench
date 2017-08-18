@@ -7,27 +7,35 @@ use merchant\models\Contract as ContractModel;
 
 class Contract extends ContractModel
 {
+    public $created_day_start;
+    public $created_day_end;
+
     public function rules()
     {
         return [
-            [['merchant_id'], 'safe'],
+            [['merchant_id', 'created_day_start', 'created_day_end'], 'safe'],
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();
+        return [
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'created_day', 'type' => 'rangeTime'],
+        ];
+    }
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if (!$this->load($params, '') || !$this->validate()) {
-            return $dataProvider;
-        }
-		$query->andFilterWhere([
-			'status' => $this->status,
-			'merchant_id' => $this->merchant_id,
-		]);
-
-        return $dataProvider;
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sStartParam(['name' => '签署日期', 'format' => 'YYYYMMDD', 'field' => 'created_day', 'noFieldSuffix' => true]),
+        ]
+        ];
+        return ['list' => $list, 'form' => $form];
     }
 }
