@@ -53,6 +53,7 @@ class Merchant extends MerchantModel
 
     public function getStatusContractInfos()
     {
+        return $this->getMerchantStatusParams();
         $datas = [
 			'elec' => '发电子版合同',
             'selfsign' => '单方签章快递',
@@ -63,19 +64,12 @@ class Merchant extends MerchantModel
 
     public function getStatusInfos()
     {
-        $datas = [
-			'cooperation' => '合作',
-            'sem' => 'SEM托管合作',
-            'cpa' => 'CPA合作',
-            'cps' => 'CPS合作',
-			'pause' => '暂停合作',
-        ];
-        return $datas;
+        return $this->getMerchantStatusParams();
     }
 
     protected function getSortInfos()
     {
-		return require(Yii::getAlias('@baseapp/config/params-sort-local.php'));
+		return $this->getSortParams();
     }
 
     public function afterSave($insert, $changedAttributes)
@@ -95,6 +89,7 @@ class Merchant extends MerchantModel
             ],
             'menuCodes' => [
                 ['code' => 'merchant_follow_contact_listinfo'],
+                ['code' => 'merchant_contract_add', 'name' => '添加合同'],
                 ['code' => 'merchant_datum_view', 'name' => '相关资料'],
             ]
         ];
