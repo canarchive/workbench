@@ -11,6 +11,7 @@ trait CallbackTrait
 
     public function rules()
     {
+        return [];
     }
 
     public function getBehaviorCodes()
