@@ -4,11 +4,11 @@ namespace subsite\decoration\models;
 
 use baseapp\merchant\models\Merchant;
 
-class MerchantFee extends ModelBase
+class MerchantDecoration extends ModelBase
 {
     public static function tableName()
     {
-        return '{{%merchant_fee}}';
+        return '{{%merchant_decoration}}';
     }
 
     public function getBehaviorCodes()
@@ -133,26 +133,6 @@ class MerchantFee extends ModelBase
             '1' => '已付费-未完成',
             '2' => '未付费-已完成',
             '3' => '已付费-已完成',
-        ];
-    }
-
-    protected function _getTemplateFields()
-    {
-        return [
-            'id' => ['type' => 'common'],
-            'day_fee' => ['type' => 'common'],
-            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
-            'merchant_sort' => ['type' => 'key'],
-            'num' => ['type' => 'common'],
-            'num_current' => ['type' => 'inline', 'method' => 'getCurrentUrl'],
-            'num_back' => ['type' => 'inline', 'method' => 'getCurrentUrl'],
-            'day_start' => ['type' => 'timestamp'],
-            'day_end' => ['type' => 'timestamp'],
-            'created_at' => ['type' => 'timestamp', 'listNo' => true],
-            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
-            'note' => ['type' => 'common', 'listNo' => true],
-            'record' => ['type' => 'common', 'listNo' => true],
-            'status' => ['type' => 'key'],
         ];
     }
 }
