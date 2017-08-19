@@ -17,15 +17,10 @@ foreach ($fields as $field) {
 }
 
 ?>
-<div class="header">
-    <div class="header-wrap">
-        <h1 class="header-logo">
-            <a href="https://www.dinghuo123.com">易订货</a></h1>
-    </div>
-</div>
+<?= $this->render('_logo.php'); ?>
 <div class="container">
     <div class="link-con">
-        <a id="loginLink" target="_blank" style="background: url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/c5bd6-1160.png) center right no-repeat;" href="https://www.dinghuo123.com/topics/20170417.html"></a>
+        <a id="loginLink" target="_blank" style="background: url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/c5bd6-1160.png) center right no-repeat;" href="/"></a>
     </div>
     <div class="form-con">
         <div class="my-form">
@@ -43,18 +38,16 @@ foreach ($fields as $field) {
                         <img src="" title="点击刷新图片" height="40" width="105" class="auth-image" /></div>
                     <div class="control-form o-form">
                         <label class="remember-name">
-                            <input type="checkbox" tabIndex="3" name="rememberName" value="1" />
-                            <span>记住用户名</span></label>
-                        <a class="forget-pwd" href="https://sso.dinghuo123.com/user/password_retrieve">忘记密码？</a></div>
+                            <input type="checkbox" tabIndex="3" name="rememberName" value="1" /><span>记住用户名</span>
+                        </label>
+                        <a class="forget-pwd" href="/findpwd.html">忘记密码？</a></div>
                     <div class="control-form">
                         <input type="button" id="loginBtn" class="ui-btn ui-btn-blue" tabIndex="4" value="登录"></div>
                 </div>
             </form>
             <div class="down-con">
-                <a class="down-a" href="https://www.dinghuo123.com/product/productDownload.html#c">
-                    <em class="ui-icon-phone"></em>手机下载</a>
-                <a class="register-a" href="https://sso.dinghuo123.com/apply/apply">
-                    <em class="ui-icon-register"></em>注册</a>
+                <!--<a class="down-a" href="/download.html#c"><em class="ui-icon-phone"></em>手机下载</a>-->
+                <a class="register-a" href="/signup.html"><em class="ui-icon-register"></em>注册</a>
             </div>
         </div>
     </div>
