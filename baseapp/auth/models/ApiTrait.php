@@ -45,9 +45,7 @@ trait ApiTrait
 			return $mobileCheck;
 		}
 
-		$result = $this->validateMobileCode($data);
-		$result = $result === true ? ['status' => 200, 'message' => 'OK'] : ['status' => 400, 'message' => '手机验证码有误'];
-		return $result;
+		return $this->validateMobileCode($data);
 	}
 
     protected function _validateMobile($value, $type)
