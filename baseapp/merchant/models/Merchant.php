@@ -90,7 +90,7 @@ class Merchant extends MerchantModel
             'menuCodes' => [
                 ['code' => 'merchant_follow_contact_listinfo'],
                 ['code' => 'merchant_contract_add', 'name' => '添加合同'],
-                ['code' => 'merchant_datum_view', 'name' => '相关资料'],
+                //['code' => 'merchant_datum_view', 'name' => '相关资料'],
             ]
         ];
         $follow = [
