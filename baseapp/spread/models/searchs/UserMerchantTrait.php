@@ -40,4 +40,18 @@ Trait UserMerchantTrait
         $datas = ['list' => $list, 'form' => $form];
         return $datas;
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'mobile' => ['type' => 'common'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
+            'service_id' => ['type' => 'point', 'table' => 'service'],
+            'created_at' => ['type' => 'timestamp'],
+            'view_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'status' => ['type' => 'key'],
+        ];
+    }
 }
