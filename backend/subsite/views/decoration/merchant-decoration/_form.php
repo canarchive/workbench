@@ -9,7 +9,7 @@ use yii\bootstrap\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => ['sort' => 'decoration']]), ['prompt' => '']); ?>
-    <?= $form->field($model, 'merchant_sort')->dropDownList($model->merchantSortInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'sort')->dropDownList($model->sortInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'mobile_cps')->textInput() ?>
 
     <?= $form->field($model, 'msg')->textarea(['rows' => 2]) ?>
@@ -18,7 +18,9 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'advantage')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'scope_sort')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'scope_area')->textarea(['rows' => 2]) ?>
+    <?= $form->field($model, 'scope_note')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'scope_ext')->textarea(['rows' => 2]) ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
 
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
