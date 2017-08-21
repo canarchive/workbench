@@ -104,7 +104,7 @@ trait TraitMenu
 
     public function _getModuleDatas($index)
     {
-		$datas = require(Yii::getAlias('@baseapp/config/params-menu-modules.php');
+		$datas = require(Yii::getAlias('@baseapp/config/params-menu-modules.php'));
 		return $datas[$index];
     }
 
