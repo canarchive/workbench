@@ -146,8 +146,9 @@ trait TraitModel
         return isset($infos[$value]) ? $infos[$value] : $value;
     }
 
-    public function maskMobile($mobile)
+    public function maskMobile($mobile = null)
     {
+        $mobile = is_null($mobile) && isset($this->mobile) ? $this->mobile : $mobile;
         return substr_replace($mobile, '******', 3, 6);
     }
 
