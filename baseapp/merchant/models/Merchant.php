@@ -110,6 +110,7 @@ class Merchant extends MerchantModel
             'sort' => ['type' => 'key'],
             'code' => ['type' => 'common'],
             'name' => ['type' => 'common'],
+            'saleman_id' => ['type' => 'point', 'table' => 'saleman'],
             'city_code' => ['type' => 'common'],
             'region' => ['type' => 'common', 'listNo' => true],
             'orderlist' => ['type' => 'change', 'menuCode' => 'merchant_follow_merchant-pond_update', 'formatView' => 'raw', 'width' => '50'],
