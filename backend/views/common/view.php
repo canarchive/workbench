@@ -2,10 +2,12 @@
 
 use yii\widgets\DetailView;
 
+if (!isset($detailViewParams)) {
 $detailViewParams = [
     'model' => $model,
     'attributes' => $model->formatTemplateDatas('show'),
 ];
+}
 
 $menuInfos = $this->context->menuInfos;
 ?>
