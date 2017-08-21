@@ -102,14 +102,10 @@ trait TraitMenu
         return $datas;
     }
 
-    /**
-     * Get the module
-     *
-     * @return array
-     */
-    public function getModuleInfos()
+    public function _getModuleDatas($index)
     {
-        return Yii::$app->params['moduleInfos'];
+		$datas = require(Yii::getAlias('@baseapp/config/params-menu-modules.php');
+		return $datas[$index];
     }
 
     /**

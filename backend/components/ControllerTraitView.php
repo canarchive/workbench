@@ -9,6 +9,12 @@ Trait ControllerTraitView
         return $this->_listinfoInfo();
     }
 
+    public function actionListinfoTree()
+    {
+        $modelClass = $this->modelClass;
+        return $this->_listinfoTree(new $modelClass());
+    }
+
     public function actionView($id)
     {
         return $this->_viewInfo($id);
