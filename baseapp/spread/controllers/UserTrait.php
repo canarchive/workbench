@@ -13,7 +13,7 @@ trait UserTrait
 
     public function actionListout()
     {
-        return $this->_listinfoInfo('listout');
+        return $this->_listinfoInfo($this->viewPrefix . 'listout');
     }
 
     public function actionChangeMerchant($id)
