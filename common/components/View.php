@@ -61,11 +61,10 @@ class View extends ViewBase
 
 		$data = isset($datas[$code]) ? $data[$code] : ($sort == 'app' ? Yii::$app->params[$code] : $this->context->$code);
 		$datas[$sort][$code] = $data;
-		if (is_null($indexName) || !isset($data[$indexName])) {
+		if (is_null($indexName)) {
 			return $data;
 		}
-
-		return $data[$indexName];
+		return isset($data[$indexName]) ? $data[$indexName] : '';
 	}
 
     public function getElemView($model, $field, $elem, $isNew = false)

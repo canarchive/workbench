@@ -19,12 +19,12 @@ class Api extends BaseModelNotable
 				return ['status' => 400, 'message' => "密码最少6位"];
 			}
 		}
-		$checkEmail = $this->_validateEmail($data['email'], 'register');
+		$checkEmail = $this->_validateEmail($data['email'], 'signup');
 		if ($checkEmail['status'] != 200) {
 			return $checkEmail;
 		}
 
-		$checkCode = $this->checkMobileCode(['mobile' => $data['mobile'], 'type' => 'register', 'code' => $data['code']]);
+		$checkCode = $this->checkMobileCode(['mobile' => $data['mobile'], 'type' => 'signup', 'code' => $data['code']]);
 		if ($checkCode['status'] != 200) {
 			return $checkCode;
 		}
@@ -44,4 +44,11 @@ class Api extends BaseModelNotable
         }
         return ['status' => 200, 'model' => $model];
     }
+
+	public function getUserInfo($where)
+	{
+        $model = new User();
+		$userInfo = $model->getInfo($where);
+		return $userInfo;
+	}
 }

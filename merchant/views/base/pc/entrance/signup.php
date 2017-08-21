@@ -17,12 +17,7 @@ foreach ($fields as $field) {
 }
 
 ?>
-
-<div class="header">
-    <div class="header-wrap">
-        <h1 class="header-logo"><a href="/"><?= Yii::$app->params['siteName']; ?></a></h1>
-    </div>
-</div>
+<?= $this->render('_logo.php'); ?>
 <div class="container">
     <div class="link-con">
         <a id="registerLink" target="_blank" style="background: url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/85195-5460.png) center right no-repeat;"></a>
@@ -51,8 +46,7 @@ foreach ($fields as $field) {
                     <div class="control-form">
                         <input type="button" id="registerBtn1" tabIndex="6" class="ui-btn" value="免费开通"></div>
                     <div class="down-con">
-                        <a class="down-a" href="https://sso.dinghuo123.com/login">
-                            <em class="ui-icon-phone"></em>登录</a>
+                        <a class="down-a" href="/signin.html"><em class="ui-icon-phone"></em>登录</a>
                     </div>
                 </div>
             </form>
@@ -136,8 +130,8 @@ foreach ($fields as $field) {
 </div>
 </body>
 <input type="hidden" value="" name="openId" id="openId" />
-<input type="hidden" id="appUrl" value="https://sso.dinghuo123.com" />
-<input type="hidden" id="service" value="ydh-web" />
+<input type="hidden" id="appUrl" value="" />
+<input type="hidden" id="service" value="web" />
 <input type="hidden" id="relayState" value="" />
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/jquery.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/jquery.defaultvalue.js"></script>
@@ -182,7 +176,7 @@ $(function() {
             function(value, element) {
                 var inputElem = $('input[name="userName"]'),
                 data = {
-					'type': 'register',
+					'type': 'signup',
 					'field': 'mobile',
                     'value': inputElem.val(),
 					'_csrf': $("#_csrf").val(),
@@ -307,7 +301,7 @@ $(function() {
                 $("#warn1").find('.success').remove();
                 var postData = {
                     mobile: $.trim($("input[name=userName]").val()),
-					type: 'register',
+					type: 'signup',
                     captcha: $.trim($("input[name=verfCode]").val())
                 };
                 if (step1FormValid) {
@@ -340,7 +334,7 @@ $(function() {
                 $("#warn1").find('.success').remove();
                 var postData = {
                     mobile: $('input[name="userName"]').val(),
-					type: 'register',
+					type: 'signup',
                     code: $('input[name="mobileVerfyCode"]').val()
                 };
                 if (step1FormValid) {
