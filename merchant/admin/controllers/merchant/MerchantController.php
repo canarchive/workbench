@@ -1,6 +1,6 @@
 <?php
 
-namespace merchant\admin\controllers;
+namespace merchant\admin\controllers\merchant;
 
 use backend\merchant\controllers\MerchantController as MerchantControllerBase;
 

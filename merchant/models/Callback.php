@@ -25,10 +25,13 @@ class Callback extends MerchantModel
     public function attributeLabels()
     {
         return [
-            'id' => '统计信息ID',
-            'mobile' => '手机号',
-            'service_id' => '客服ID',
+            'id' => 'ID',
+            'merchant_id' => '商家ID',
+            'saleman_id' => '销售ID',
+            'contact_id' => '联系人ID',
+            'sort' => '类别',
             'status' => '状态',
+            'status_contract' => '合同状态',
             'content' => '回访纪要',
             'created_at' => '创建时间',
             'update_at' => '更新时间',
@@ -36,8 +39,14 @@ class Callback extends MerchantModel
     }
 
     public function getStatusInfos()
+    { return $this->_newModel('merchantPond')->statusInfos; } protected function getSortInfos()
     {
-        return $this->_newModel('merchantPond')->statusInfos;
+		return $this->getSortParams();
+    }
+
+    protected function getStatusContractInfos()
+    {
+		return $this->getContractParams();
     }
 
     public function afterSave($insert, $changedAttributes)

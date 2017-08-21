@@ -35,4 +35,19 @@ class Callback extends CallbackModel
         ];
         return ['list' => $list, 'form' => $form];
     }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant-pond'],
+            'saleman_id' => ['type' => 'point', 'table' => 'saleman'],
+            'sort' => ['type' => 'key'],
+            'status' => ['type' => 'key'],
+            'status_contract' => ['type' => 'key'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'content' => ['type' => 'common'],
+        ];
+    }
 }
