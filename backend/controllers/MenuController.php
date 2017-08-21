@@ -14,10 +14,4 @@ class MenuController extends Controller
     {
         return [];
     }
-
-    public function actionListinfo()
-    {
-        $modelClass = $this->modelClass;
-        return $this->_listinfoTree(new $modelClass());
-    }
 }
