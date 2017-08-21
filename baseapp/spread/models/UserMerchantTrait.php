@@ -108,6 +108,11 @@ trait UserMerchantTrait
         return $info;
     }
 
+    public function getDispatch_id()
+    {
+        return $this->dispatchInfo['id'];
+    }
+
 	protected function _formatInfos($infos)
 	{
         $guestbookModel = $this->_newModel('guestbook', true);

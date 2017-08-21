@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 if (!isset($detailViewParams)) {
 $detailViewParams = [
     'model' => $model,
-    'attributes' => $model->formatTemplateDatas('show'),
+    'attributes' => $model->formatTemplateDatas('show', $this),
 ];
 }
 
