@@ -76,7 +76,7 @@ class User extends ModelBase
 
     public function _getPushData($data)
     {
-
+        return ;
         $fields = ['signup_at', 'name', 'mobile', 'city_input', 'channel', 'area_input', 'keyword', 'signup_city', 'note', 'signup_ip'];
         $datas = [];
         foreach ($fields as $field) {
