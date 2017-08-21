@@ -2,10 +2,9 @@
 
 namespace baseapp\merchant\models;
 
-use Yii;
-
 class Merchant extends MerchantModel
 {
+    public $import;
     public static function tableName()
     {
         return '{{%merchant}}';
@@ -19,9 +18,9 @@ class Merchant extends MerchantModel
     public function rules()
     {
         return [
-            [['name', 'code', 'city_code'], 'required'],
-            [['callback_next', 'orderlist'], 'default', 'value' => '0'],
-            [['status', 'region', 'name_full', 'sort', 'status_ext', 'status_contract', 'address', 'description'], 'safe'],
+            [['name'], 'required'],
+            [['status_ext', 'callback_next', 'saleman_id', 'orderlist'], 'default', 'value' => '0'],
+            [['import', 'code', 'city_code', 'status', 'msg', 'region', 'name_full', 'sort', 'address', 'description'], 'safe'],
         ];
     }
 
