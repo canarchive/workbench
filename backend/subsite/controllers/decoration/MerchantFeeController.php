@@ -14,4 +14,9 @@ class MerchantFeeController extends Controller
     {
         return '@backend/subsite/views/decoration/merchant-fee/listinfo';
     }
+
+    public function getViewView()
+    {
+        return '@backend/subsite/views/decoration/merchant-fee/view';
+    }
 }

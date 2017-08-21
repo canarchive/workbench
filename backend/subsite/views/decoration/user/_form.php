@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\bootstrap\ActiveForm;
 
-$merchantInfos = $model->getPointInfos('merchant', ['noPriv' => true, 'where' => ['status' => 2]]);
+$merchantInfos = $model->getPointInfos('merchant', ['noPriv' => true, 'where' => ['status' => 'cpa']]);
 ?>
 
 <div class="menu-form">
