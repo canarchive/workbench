@@ -140,6 +140,19 @@ trait TraitSearchTemplate
     		$value = function($model) use ($menus) {
                 $urlStr = '';
                 foreach ($menus as $menu) {
+                    if (isset($menu['condition'])) {
+                        $continue = false;
+                        foreach ($menu['condition'] as $cField => $cValue) {
+                            if ($model->$cField != $cValue) {
+                                $continue = true;
+                                continue;
+                            }
+                        }
+                        if ($continue) {
+                            continue;
+                        }
+                    }
+
                     $queryStr = '';
                     foreach ($menu['qParams'] as $field => $qParam) {
                         $qField = $qParam['field'];

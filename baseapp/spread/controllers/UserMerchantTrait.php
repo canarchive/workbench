@@ -46,7 +46,7 @@ trait UserMerchantTrait
             exit();
         }
 
-        return $this->render($this->viewPrefix . 'updateout', ['model' => $model]);
+        return $this->render('@backend/subsite/views/user-merchant/updateout', ['model' => $model]);
     }
 
     protected function _viewMethod()
