@@ -6,20 +6,9 @@ use baseapp\merchant\models\Merchant;
 
 class MerchantPond extends Merchant
 {
-    public $import;
     public static function tableName()
     {
         return '{{%merchant_pond}}';
-    }
-
-    public function rules()
-    {
-        return [
-            [['name', 'city_code'], 'required'],
-            [['orderlist'], 'integer'],
-            [['orderlist'], 'default', 'value' => '0'],
-            [['import', 'callback_next', 'saleman_id', 'callback_num', 'interview_num', 'status', 'region', 'msg', 'homeurl', 'name_full', 'sort', 'hotline', 'postcode', 'brief', 'address', 'description'], 'safe'],
-        ];
     }
 
     public function getStatusInfos()
@@ -39,10 +28,7 @@ class MerchantPond extends Merchant
 
     protected function getSortInfos()
     {
-        $datas = [
-            'decoration' => '家装公司',
-        ];
-        return $datas;
+		return $this->getSortParams();
     }
 
     public function import()

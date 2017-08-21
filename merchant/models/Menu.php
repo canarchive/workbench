@@ -14,20 +14,9 @@ class Menu extends MerchantModel
         return '{{%menu}}';
     }
 
-    /**
-     * Get the module
-     *
-     * @return array
-     */
     public function getModuleInfos()
     {
-        $datas = [
-            'admin' => '基本模块',
-            'admin/statistic' => '统计',
-            'admin/merchant' => '商家',
-            'admin/decoration' => '家装',
-        ];
-        return $datas;
+		return $this->_getModuleDatas('merchant');
     }
 
     protected function _getTemplateFields()
