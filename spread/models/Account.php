@@ -65,7 +65,7 @@ class Account extends BaseModel
     public function getPlanInfos()
     {
         $model = new Plan();
-        $infos = $model->getInfos(['where' => ['account_id' => $this->id, 'status' => 0]]);
+        $infos = $model->getInfos(['where' => ['account_id' => $this->id, 'status' => 1]]);
         return $infos;
     }
 }

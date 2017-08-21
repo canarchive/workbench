@@ -9,6 +9,13 @@ $sites = [
         'pc' => 'http://hd.1-2580.com',
         'm' => 'http://m.hd.1-2580.com',
     ],
+    'hlyx' => [
+        'name' => '互联影像家装',
+        'copy' => $commonCopy,
+        'icp' => $commonIcp,
+        'pc' => 'http://jz.hulianyingxiang.cn',
+        'm' => 'http://m.jz.hulianyingxiang.cn',
+    ],
     'tbz-sh' => [
         'name' => '兔班长上海',
         'copy' => $commonCopy,

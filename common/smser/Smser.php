@@ -62,6 +62,7 @@ class Smser extends \yii\base\Component
         $codes = [
             'ok' => 'OK',
 			'paramError' => '参数错误',
+			'codeError' => '验证码错误',
         	'verifyError' => '验证码错误！',
         	'noCode' => '没有向该手机号发送验证码，请重新操作',
 			'codeExpire' => '验证码已过期，请重新操作',
