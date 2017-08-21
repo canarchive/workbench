@@ -2,8 +2,6 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-//$companyInfos = $model->getPointInfos('company', ['indexName' => 'code', 'where' => ['status' => 2]]);
-//var_dump($companyInfos);exit();
 ?>
 
 <div class="menu-form">
