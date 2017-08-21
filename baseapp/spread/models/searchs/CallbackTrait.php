@@ -11,7 +11,7 @@ Trait CallbackTrait
             'id' => ['type' => 'common'],
             'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
             'service_id' => ['type' => 'point', 'table' => 'service'],
-            'mobile' => ['type' => 'common'],
+            'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
             'note' => ['type' => 'common', 'listNo' => true],
             'created_at' => ['type' => 'timestamp'],
             'updated_at' => ['type' => 'timestamp', 'listNo' => true],

@@ -19,7 +19,7 @@ trait UserMerchantTrait
             exit();
         }
 
-        return $this->_listinfoInfo('listout');
+        return $this->_listinfoInfo('@backend/subsite/views/user-merchant/listout');
 	}
 
     public function actionUpdateout($id = 0)
