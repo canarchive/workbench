@@ -45,8 +45,8 @@ class Merchant extends MerchantModel
             'saleman_id' => '销售ID',
             'callback_next' => '下次回访时间',
 
-            'op-contact' => '联系人',
-            'op-callback' => '回访操作',
+            'operation' => '操作',
+            'follow' => '拓展和回访',
         ];
     }
 
@@ -89,7 +89,6 @@ class Merchant extends MerchantModel
             'menuCodes' => [
                 ['code' => 'merchant_follow_contact_listinfo'],
                 ['code' => 'merchant_contract_add', 'name' => '添加合同'],
-                //['code' => 'merchant_datum_view', 'name' => '相关资料'],
             ]
         ];
         $follow = [

@@ -71,4 +71,15 @@ class MerchantPond extends Merchant
         exit();
         return $i;
     }
+
+    protected function _getTemplateFields()
+    {
+        $datas = parent::_getTemplateFields();
+        $datas['operation']['menuCodes'][] = [
+            'code' => 'merchant_merchant_conew', 
+            'name' => '转为合作',
+            'condition' => ['status' => 'cooperation'],
+        ];
+        return $datas;
+    }
 }
