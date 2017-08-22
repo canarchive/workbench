@@ -25,8 +25,8 @@ Trait TagTrait
     {
         return [
             'id' => 'ID',
+			'code' => '代码',
             'name' => '名称',
-            'parent_id' => '父栏目ID',
             'orderlist' => '排序',
 			'sort_code' => '分类',
             'meta_title' => 'SEO名称',

@@ -19,5 +19,6 @@ return [
 	// shop flower
 	'tag-sort-shopf' => '\shop\flower\models\TagSort',
 	'shop-sort-flower' => '\shop\flower\models\Sort',
+	'shop-type' => '\shop\models\Type',
 ];
 
