@@ -15,6 +15,7 @@ trait TraitSearchTemplate
 			if (isset($info[$sort . 'No'])) {
 				continue;
 			}
+	
 			if (!isset($info['type'])) {
 				$datas[$field] = $info;
 				continue;
@@ -40,12 +41,13 @@ trait TraitSearchTemplate
 	protected function _pointTemplate($field, $info, $sort, $view)
 	{
 		$table = $info['table'];
+		$pointField = isset($info['pointField']) ? $info['pointField'] : $field;
 		if ($sort == 'list') {
-    		$value = function($model) use ($field, $table) {
-                return $model->getPointName($table, $model->$field);
+    		$value = function($model) use ($field, $table, $pointField) {
+                return $model->getPointName($table, [$pointField => $model->$field]);
             };
 		} else {
-			$value = $this->getPointName($table, $this->$field);
+			$value = $this->getPointName($table, [$pointField => $this->$field]);
 		}
 		return $value;
 	}
