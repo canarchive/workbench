@@ -8,5 +8,9 @@ use backend\components\ControllerTraitFull;
 trait SortTrait
 {
     use ControllerTraitFull;
-    public $viewPrefix = '@baseapp/common/views/sort/';
+
+	public function getViewPrefix()
+	{
+        return '@baseapp/common/views/sort/';
+    }
 }

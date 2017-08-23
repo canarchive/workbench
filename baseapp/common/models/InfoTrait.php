@@ -9,6 +9,11 @@ Trait InfoTrait
         return '{{%info}}';
     }
 
+    public function getBehaviorCodes()
+    {
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
+    }
+
     public function attributeLabels()
     {
         return [
@@ -19,6 +24,8 @@ Trait InfoTrait
             'sort' => '类别',
             'orderlist' => '排序',
 			'content' => '内容',
+			'created_at' => '创建时间',
+			'updated_at' => '更新时间',
             'status' => '状态',
         ];
     }
@@ -54,4 +61,19 @@ Trait InfoTrait
 		];	
 		return $datas;
 	}	
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'sort' => ['type' => 'key'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp'],
+            'status' => ['type' => 'key'],
+            'content' => ['type' => 'common', 'formatView' => 'raw', 'listNo' => true],
+        ];
+	}
 }
