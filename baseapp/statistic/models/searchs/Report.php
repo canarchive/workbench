@@ -11,7 +11,7 @@ class Report extends ReportModel
     public function rules()
     {
         return [
-            [['merchant_id', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
+            [['merchant_id', 'sem_account', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
         ];
     }
 
@@ -20,6 +20,7 @@ class Report extends ReportModel
         return [
             ['field' => 'client_type', 'type' => 'common'],
             ['field' => 'channel', 'type' => 'common'],
+            ['field' => 'sem_account', 'type' => 'common'],
             ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
         ];
@@ -42,7 +43,7 @@ class Report extends ReportModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
                 return ['merchant_id', 'created_day'];
@@ -57,6 +58,7 @@ class Report extends ReportModel
             $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
             $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
+            $this->_sPointParam(['field' => 'sem_account', 'table' => 'account']),
         ];
         $form = [
         [
