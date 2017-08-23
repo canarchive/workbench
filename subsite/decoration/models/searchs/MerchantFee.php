@@ -10,7 +10,7 @@ class MerchantFee extends MerchantFeeModel
     public function rules()
     {
         return [
-            [['merchant_id'], 'safe'],
+            [['merchant_id', 'status'], 'safe'],
         ];
     }
 
@@ -18,6 +18,7 @@ class MerchantFee extends MerchantFeeModel
     {
         return [
             ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'status', 'type' => 'common'],
         ];
     }
 
@@ -27,6 +28,7 @@ class MerchantFee extends MerchantFeeModel
             $this->_sPointParam(['name' => 'CPA商家', 'table' => 'merchant', 'field' => 'merchant_id', 'where' => ['status' => 2]]),
             $this->_sPointParam(['name' => 'CPS商家', 'table' => 'merchant', 'field' => 'merchant_id', 'where' => ['status' => 3]]),
             $this->_sPointParam(['name' => '其他商家', 'table' => 'merchant', 'field' => 'merchant_id', 'where' => ['status' => 99]]),
+            $this->_sKeyParam(['field' => 'status']),
         ];
         return ['list' => $list];
     }
