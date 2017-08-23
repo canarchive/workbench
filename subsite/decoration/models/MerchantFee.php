@@ -61,7 +61,7 @@ class MerchantFee extends ModelBase
         $start = ['>=', 'created_at', $this->day_start];
         $end = $this->day_end > 0 ? ['<=', 'created_at', $this->day_end]: [];
 
-        if ($sort == 2) {
+        if ($sort == 'cpa') {
             if ($type != 'valid') {
                 return 0;
             }
@@ -90,7 +90,7 @@ class MerchantFee extends ModelBase
 
     public function getCurrentUrl($type, $menus)
     {
-        $sort = $this->merchant_sort == 3 ? 'cps' : 'cpa';
+        $sort = $this->merchant_sort == 'cps' ? 'cps' : 'cpa';
         $method = "_{$sort}Url";
         return $this->$method($type, $menus);
     }
