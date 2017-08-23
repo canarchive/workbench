@@ -198,4 +198,26 @@ trait TraitModel
     {
         return [];
     }
+
+	public function formatAtag($field, $info)
+	{
+		$type = isset($info['urlType']) ? $info['urlType'] : '';
+		switch ($type) {
+		case 'inline':
+			$method = $info['urlMethod'];
+			$url = $this->$method();
+			break;
+		default:
+			$url = $this->$field;
+		}
+		$name = isset($info['urlName']) ? $info['urlName'] : $this->$field;
+		$target = isset($info['urlTarget']) ? '' : 'target="_blank" ';
+		$str = "<a href='{$url}' {$target}>{$name}</a>";
+		return $str;
+	}
+
+	public function formatImgtag($field, $info)
+	{
+		return $this->$field;
+	}
 }
