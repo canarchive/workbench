@@ -89,6 +89,7 @@ trait TraitSearchTemplate
         $menuUrl = $menu['url'];
         $info['sort'] = 'change';
         $info['type'] = isset($info['typeView']) ? $info['typeView'] : 'common';
+		$info['menuCode'] = $menu['code'];
         $info['noWrap'] = true;
         return function ($model) use ($field, $info, $view) {
             return $view->getElemView($model, $field, $info);

@@ -65,19 +65,4 @@ class Menu extends PassportModel
 
         return ;
     }
-
-    protected function _getTemplateFields()
-    {
-        return [
-            'id' => ['type' => 'common'],
-            'code' => ['type' => 'common'],
-            'name' => ['type' => 'common'],
-            'parent_code' => ['type' => 'common'],
-            'module' => ['type' => 'key'],
-            'controller' => ['type' => 'common'],
-            'method' => ['type' => 'common'],
-            'display' => ['type' => 'key'],
-            'extparam' => ['type' => 'common'],
-        ];
-    }
 }

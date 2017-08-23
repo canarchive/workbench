@@ -1,14 +1,11 @@
 <?php
 
-namespace shop\models;
+namespace baseapp\common\models;
 
 use common\helpers\Tree;
-use yii\helpers\ArrayHelper;
 
-class Category extends BaseModel
+trait CategoryTrait
 {
-	public $brand_code;
-
     public static function tableName()
     {
         return '{{%category}}';
@@ -64,42 +61,23 @@ class Category extends BaseModel
 	 */
 	public function getFormatedInfos()
 	{
-    	$infos = $this->find()->indexBy('id')->asArray()->all();
-		foreach ($infos as $id => $info) {
-			$parentId = $info['parent_id'];
-			$parentNode = $parentId ? 'child-of-node-' . $parentId : '';
-			$info['parentNode'] = $parentNode;
-			$infos[$id] = $info;
-		}
-
-        $categoryTree = new Tree($infos, 'id', 'parent_id', 'name');
-        $formatedInfos = $categoryTree->getTree(0);
-
-        return $formatedInfos;
+		$infos = $this->find()->indexBy('code')->asArray()->all();
+		//var_dump($infos);exit();
+		$formatedInfos = $this->getTreeInfos($infos, 'code', 'parent_code', 'name', '');
+		return $formatedInfos;
 	}
 
 	public function afterSave($insert, $changedAttributes)
 	{
         parent::afterSave($insert, $changedAttributes);
 
-		$id = $this->attributes['id'];
-		$categoryBrand = new CategoryBrand();
-		$categoryBrand->deleteAll("category_id = {$id}");
-		$this->brand_code;
-		foreach ((array) $this->brand_code as $code) {
-			$data = ['category_id' => $id, 'brand_code' => $code];
-			$categoryBrand->category_id = $id;
-			$categoryBrand->brand_code = $code;
-			$categoryBrand->insert($data);
-		}
-
 		return true;
 	}
 
 	public function getSelectInfos()
 	{
-    	$infos = $this->find()->select(['id', 'name', 'parent_id'])->indexBy('id')->asArray()->all();
-		$datas = $this->getLevelInfos($infos, 'id', 'parent_id', 'name');
+    	$infos = $this->find()->select(['code', 'name', 'parent_code'])->indexBy('code')->asArray()->all();
+		$datas = $this->getLevelInfos($infos, 'code', 'parent_code', 'name', '');
 		return $datas;
 	}
 
@@ -123,4 +101,20 @@ class Category extends BaseModel
 
 		return $datas;
 	}
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'parent_code' => ['type' => 'common'],
+            'brief' => ['type' => 'common'],
+            'orderlist' => ['type' => 'common'],
+            'description' => ['type' => 'common'],
+            'meta_title' => ['type' => 'common'],
+            'meta_keyword' => ['type' => 'common'],
+            'meta_description' => ['type' => 'common'],
+        ];
+    }
 }
