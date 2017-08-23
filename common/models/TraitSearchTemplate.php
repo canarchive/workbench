@@ -73,13 +73,27 @@ trait TraitSearchTemplate
 	protected function _pointTemplate($field, $info, $sort, $view)
 	{
 		$table = $info['table'];
-		$pointField = isset($info['pointField']) ? $info['pointField'] : $field;
+		$pointField = isset($info['pointField']) ? $info['pointField'] : 'id';
 		if ($sort == 'list') {
     		$value = function($model) use ($field, $table, $pointField) {
                 return $model->getPointName($table, [$pointField => $model->$field]);
             };
 		} else {
 			$value = $this->getPointName($table, [$pointField => $this->$field]);
+		}
+		return $value;
+	}
+
+	protected function _conditionTemplate($field, $info, $sort, $view)
+	{
+        $method = "_conditionElem";
+		if ($sort == 'list') {
+    		$value = function($model) use ($field, $method, $view) {
+                return $model->$method($field, $view);
+                //return $model->getKeyName($field, $model->$field);
+            };
+		} else {
+            $value = $this->$method($field, $view);
 		}
 		return $value;
 	}

@@ -71,6 +71,24 @@ function addElemByAjax(url, data, appendElem)
     });
 }
 
+function sendMsg(url)
+{
+    //var data = {};
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {},
+        success: function(response) {
+            var status = response.status;
+            if (status == 200) {
+                ShowSuccessMessage("发送成功", 3000);
+            } else {
+                ShowErrorMessage(response.message, 3000);
+            }
+        }
+    });
+}
+
 var clipboard = new Clipboard('.copy-btn');
 
 clipboard.on('success', function(e) {

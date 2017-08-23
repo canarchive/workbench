@@ -2,6 +2,7 @@
 
 namespace baseapp\spread\models\searchs;
 
+use Yii;
 use yii\data\ActiveDataProvider;
 
 Trait UserMerchantTrait
@@ -61,8 +62,33 @@ Trait UserMerchantTrait
             'created_at' => ['type' => 'timestamp'],
             'view_at' => ['type' => 'timestamp'],
             'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'sendmsg_at' => ['type' => 'condition', 'formatView' => 'raw'],
             'status' => ['type' => 'key'],
             'operation' => $operation,
         ];
+    }
+
+    public function _conditionElem($field, $view)
+    {
+        if ($field != 'sendmsg_at') {
+            return '';
+        }
+
+        if ($this->$field > 0) {
+            return $this->formatTimestamp($this->$field);
+        }
+        if ((Yii::$app->params['currentTime'] - $this->created_at) >= 3600) {
+            return '超过1小时';
+        }
+
+        $code = 'subsite_decoration_sendmsg_send';
+        $menu = $view->getMenuData($code);
+        
+        if (empty($menu)) {
+            return '';
+        }
+        $url = $menu['url'] . "?sort=merchant&id={$this->id}";
+        $str = "<a onclick='sendMsg(\"{$url}\")'>{$menu['name']}</a>";
+        return $str;
     }
 }
