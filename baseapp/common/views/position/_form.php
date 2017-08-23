@@ -4,10 +4,10 @@ use yii\bootstrap\ActiveForm;
 ?>
 <div class="menu-form">
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'name_ext')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'name')->textInput() ?>
+    <?= $form->field($model, 'name_ext')->textInput() ?>
     <?= $form->field($model, 'sort')->dropDownList($model->sortInfos); ?>
-    <?= $form->field($model, 'url')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'url')->textInput() ?>
     <?= $form->field($model, 'orderlist')->textInput() ?>
     <?= $form->field($model, 'picture')->hiddenInput(); ?>
 	<?= $model->uploadElem('position', 'picture'); ?>

@@ -15,37 +15,71 @@ trait TraitSearchTemplate
 			if (isset($info[$sort . 'No'])) {
 				continue;
 			}
-			if (!isset($info['type'])) {
+	
+			/*if (!isset($info['type'])) {
 				$datas[$field] = $info;
 				continue;
-			}
-			$type = $info['type'];
-			if ($type == 'common') {
-				$datas[$field] = $field;
-				continue;
-			}
+			}*/
+			$type = isset($info['type']) ? $info['type'] : 'common';
 			$method = "_{$type}Template";
 			$data = [
 				'attribute' => $field,
 				'value' => $this->$method($field, $info, $sort, $view),
 			];
-            if (isset($info['formatView'])) {
-                $data['format'] = $info['formatView'];
+            if (isset($info['formatView']) || in_array($type, ['atag', 'imgtag'])) {
+                $data['format'] = isset($info['formatView']) ? $info['formatView'] : 'raw';
             }
 			$datas[$field] = $data;
 		}
 		return $datas;
 	}
 
+	protected function _atagTemplate($field, $info, $sort, $view)
+	{
+		if ($sort == 'list') {
+    		$value = function($model) use ($field, $info) {
+				return $model->formatAtag($field, $info);
+            };
+		} else {
+			$value = $this->formatAtag($field, $info);
+		}
+		return $value;
+	}
+
+	protected function _imgtagTemplate($field, $info, $sort, $view)
+	{
+		if ($sort == 'list') {
+    		$value = function($model) use ($field, $info) {
+				return $model->formatImgtag($field, $info);
+            };
+		} else {
+			$value = $this->formatImgtag($field, $info);
+		}
+		return $value;
+	}
+
+	protected function _commonTemplate($field, $info, $sort, $view)
+	{
+		if ($sort == 'list') {
+    		$value = function($model) use ($field) {
+				return $model->$field;
+            };
+		} else {
+			$value = $this->$field;
+		}
+		return $value;
+	}
+
 	protected function _pointTemplate($field, $info, $sort, $view)
 	{
 		$table = $info['table'];
+		$pointField = isset($info['pointField']) ? $info['pointField'] : $field;
 		if ($sort == 'list') {
-    		$value = function($model) use ($field, $table) {
-                return $model->getPointName($table, $model->$field);
+    		$value = function($model) use ($field, $table, $pointField) {
+                return $model->getPointName($table, [$pointField => $model->$field]);
             };
 		} else {
-			$value = $this->getPointName($table, $this->$field);
+			$value = $this->getPointName($table, [$pointField => $this->$field]);
 		}
 		return $value;
 	}
@@ -87,6 +121,7 @@ trait TraitSearchTemplate
         $menuUrl = $menu['url'];
         $info['sort'] = 'change';
         $info['type'] = isset($info['typeView']) ? $info['typeView'] : 'common';
+		$info['menuCode'] = $menu['code'];
         $info['noWrap'] = true;
         return function ($model) use ($field, $info, $view) {
             return $view->getElemView($model, $field, $info);

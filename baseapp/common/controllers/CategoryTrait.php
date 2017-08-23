@@ -2,15 +2,14 @@
 
 namespace baseapp\common\controllers;
 
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-trait TagTrait
+trait CategoryTrait
 {
     use ControllerTraitFull;
 
 	public function getViewPrefix()
 	{
-        return '@baseapp/common/views/tag/';
-    }
+        return '@baseapp/common/views/category/';
+	}
 }
