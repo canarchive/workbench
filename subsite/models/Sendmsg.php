@@ -30,19 +30,21 @@ class Sendmsg extends BaseModelNotable
         $info->update(false);
 
         $mStr = '';
+		$i = 0;
         foreach ($merchantInfos as $mInfo) {
             if ($mInfo['sendmsg_at'] > 0) {
                 continue;
             }
-            $mStr .= $mInfo->getPointName('merchant', $mInfo->merchant_id);
+            $mStr .= '“' . $mInfo->getPointName('merchant', $mInfo->merchant_id) . '”、';
             $mInfo['sendmsg_at'] = Yii::$app->params['currentTime'];
             $mInfo->update(false);
+			$i++;
         }
         if (empty($mStr)) {
             return ['status' => 400, 'message' => '短信已发送'];
         }
 
-        return $this->_sendSms($info['mobile'], $mStr);
+        return $this->_sendSms($info['mobile'], $mStr, $i);
     }
 
     public function merchantSend($id)
@@ -58,14 +60,24 @@ class Sendmsg extends BaseModelNotable
         $info['sendmsg_at'] = Yii::$app->params['currentTime'];
         $info->update(false);
 
-        return $this->_sendSms($info['mobile'], $info->getPointName('merchant', $info->merchant_id));
+        return $this->_sendSms($info['mobile'], '“' . $info->getPointName('merchant', $info->merchant_id) . '”');
     }
 
-    protected function _sendSms($mobile, $mStr)
+    protected function _sendSms($mobile, $mStr, $i = 1)
     {
-        $content = '兔班长装修网温馨提示：{{MNAME}}将为您提供免费量房、预算设计服务。如有任何问题请致电：4008032163 咨询，我们将随时为您服务！';
+		$mStr = rtime($mStr, '、');
+		switch ($i) {
+		case 2:
+			$mStr .= '两家';
+			break;
+		case 3:
+			$mStr .= '三家';
+		default:
+		}
+
+        $content = '温馨提示：稍后将有{{MANME}}装饰公司，为您提供家装咨询服务。请保持电话畅通，如有任何疑问请致电：4008032163，我们将竭诚为您服务！【兔班长装修网】';
         $content = str_replace('{{MNAME}}', $mStr, $content);
-        $this->sendSmsBase($mobile, $content, 'dispatch');
+        //$this->sendSmsBase($mobile, $content, 'dispatch');
         return ['status' => 200, 'message' => "已通知业主{$mStr}沟通量房"];
     }
 }
