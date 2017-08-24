@@ -69,7 +69,7 @@ Trait InfoTrait
             'sort' => ['type' => 'key'],
             'code' => ['type' => 'common'],
             'name' => ['type' => 'common'],
-            'orderlist' => ['type' => 'change', 'menuCode' => 'merchant_follow_merchant-pond_update', 'formatView' => 'raw', 'width' => '50'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
             'created_at' => ['type' => 'timestamp'],
             'updated_at' => ['type' => 'timestamp'],
             'status' => ['type' => 'key'],
