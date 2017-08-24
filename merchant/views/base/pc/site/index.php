@@ -6,7 +6,7 @@ $cssFiles = [
 ];
 $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'merchant/shop/css/']);
 $jsFiles = [
-    'js/growingio-portal',
+    //'js/growingio-portal',
 ];
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'merchant/shop/']);
 //$urls = $this->context->navUrls;

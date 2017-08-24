@@ -143,7 +143,7 @@ foreach ($fields as $field) {
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/dialog-plus-min.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/login-util.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/statistics.js"></script>
-<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-pc.js"></script>
+<!--<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-pc.js"></script>-->
 <script type="text/javascript">
 var THISPAGE = {};
 $(function() {
