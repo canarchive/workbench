@@ -74,11 +74,11 @@ Trait UserMerchantTrait
             return '';
         }
 
-        if ($this->$field > 0) {
+        if ($this->$field > 0 || $this->status !== '') {
             return $this->formatTimestamp($this->$field);
         }
         if ((Yii::$app->params['currentTime'] - $this->created_at) >= 3600) {
-            return '超过1小时';
+            return '已超过1小时';
         }
 
         $code = 'subsite_decoration_sendmsg_send';

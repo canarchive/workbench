@@ -34,11 +34,15 @@ trait TraitAttachment
 
     public function getAttachmentUrl($id)
     {
-        $model = $this->attachmentModel;
-        //$model = $this->getAttachmentModel();
-        $info = $model->findOne($id);
+		$info = $this->getAttachmentInfo($id);
         return empty($info) ? '' : $info->getUrl();
     }
+
+	public function getAttachmentInfo($id)
+	{
+        $model = $this->attachmentModel;
+        return $model->findOne($id);
+	}
 
     protected function _getThumb($table, $field)
     {
