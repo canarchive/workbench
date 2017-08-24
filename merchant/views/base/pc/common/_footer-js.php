@@ -3,7 +3,7 @@
 <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/r2.js"></script>
 <script type="text/javascript">NProgress.start();</script>
 <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/statistics.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-portal.js"></script>
+<!--<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-portal.js"></script>-->
 <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/common.v2.js"></script>
 <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/floatservice.js"></script>
 <link rel="stylesheet" href="http://42.96.194.225/filesys/spider/pages/asset/merchant/css/c8328-4059.css">

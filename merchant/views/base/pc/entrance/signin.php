@@ -66,7 +66,7 @@ foreach ($fields as $field) {
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/jquery.validate.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/icheck.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-pc.js"></script>
+<!--<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-pc.js"></script>-->
 <script type="text/javascript">var THISPAGE = {};
 $(function() {
     THISPAGE = {

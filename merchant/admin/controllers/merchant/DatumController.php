@@ -10,6 +10,6 @@ class DatumController extends DatumControllerBase
 
     protected function privGetIgnore()
     {
-        return ['merchant_id'];
+        return ['merchant_id', 'service_id'];
     }
 }
