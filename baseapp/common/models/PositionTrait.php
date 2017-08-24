@@ -4,6 +4,10 @@ namespace baseapp\common\models;
 
 trait PositionTrait
 {
+	public $picture;
+	public $picture_mobile;
+	public $picture_ext;
+
     public static function tableName()
     {
         return '{{%position}}';
@@ -17,9 +21,9 @@ trait PositionTrait
     public function rules()
     {
         return [
-            [['name', 'sort'], 'required'],
-            [['orderlist', 'status', 'picture', 'picture_mobile', 'picture_ext'], 'default', 'value' => 0],
-			[['description', 'url', 'name_ext'], 'safe'],
+            [['name'], 'required'],
+            [['orderlist', 'status'], 'default', 'value' => 0],
+			[['sort', 'description', 'url', 'name_ext', 'picture', 'picture_mobile', 'picture_ext'], 'safe'],
         ];
     }
 
@@ -42,15 +46,6 @@ trait PositionTrait
         ];
     }
 
-	public function getStatusInfos()
-	{
-		$datas = [
-			'0' => '停用',
-			'1' => '正常',
-		];
-		return $datas;
-	}
-
 	public function getSortInfos()
 	{
 		$datas = [
@@ -67,4 +62,20 @@ trait PositionTrait
 
 		return true;
 	}	
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'name_ext' => ['type' => 'common'],
+            'picture' => ['type' => 'imgtag'],
+            'url' => ['type' => 'atag'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
+            'description' => ['type' => 'common', 'listNo' => true],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+			'status' => ['type' => 'key'],
+        ];
+    }
 }

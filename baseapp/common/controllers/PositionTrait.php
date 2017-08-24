@@ -7,5 +7,9 @@ use backend\components\ControllerTraitFull;
 trait PositionTrait
 {
     use ControllerTraitFull;
-    public $viewPrefix = '@baseapp/common/views/position/';
+
+	public function getViewPrefix()
+	{
+        return '@baseapp/common/views/position/';
+    }
 }

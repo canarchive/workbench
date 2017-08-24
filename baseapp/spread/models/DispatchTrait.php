@@ -18,6 +18,7 @@ trait DispatchTrait
 
     public function rules()
     {
+        return [];
     }
 
     public function attributeLabels()
@@ -54,8 +55,7 @@ trait DispatchTrait
     {
         parent::afterSave($insert, $changedAttributes);
 
-        if ($insert || $this->statusChange) {
-        }
+        //if ($insert || $this->statusChange) {}
 
         return true;
     }    
