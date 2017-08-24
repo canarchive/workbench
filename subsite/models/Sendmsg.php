@@ -21,13 +21,13 @@ class Sendmsg extends BaseModelNotable
         if (empty($info)) {
             return ['status' => 400, 'message' => '信息有误'];
         }
+        $info['sendmsg_at'] = Yii::$app->params['currentTime'];
+        $info->update(false);
         $mModel = new UserMerchant();
         $merchantInfos = $mModel->getInfos(['where' => ['mobile' => $info['mobile'], 'status' => '']]);
         if (empty($merchantInfos)) {
-            return ['status' => 400, 'message' => '商家有误'];
+            return ['status' => 400, 'message' => '没有可通知信息'];
         }
-        $info['sendmsg_at'] = Yii::$app->params['currentTime'];
-        $info->update(false);
 
         $mStr = '';
 		$i = 0;
@@ -65,7 +65,7 @@ class Sendmsg extends BaseModelNotable
 
     protected function _sendSms($mobile, $mStr, $i = 1)
     {
-		$mStr = rtime($mStr, '、');
+		$mStr = rtrim($mStr, '、');
 		switch ($i) {
 		case 2:
 			$mStr .= '两家';
@@ -75,7 +75,7 @@ class Sendmsg extends BaseModelNotable
 		default:
 		}
 
-        $content = '温馨提示：稍后将有{{MANME}}装饰公司，为您提供家装咨询服务。请保持电话畅通，如有任何疑问请致电：4008032163，我们将竭诚为您服务！【兔班长装修网】';
+        $content = '温馨提示：稍后将有{{MNAME}}装饰公司，为您提供家装咨询服务。请保持电话畅通，如有任何疑问请致电：4008032163，我们将竭诚为您服务！【兔班长装修网】';
         $content = str_replace('{{MNAME}}', $mStr, $content);
         //$this->sendSmsBase($mobile, $content, 'dispatch');
         return ['status' => 200, 'message' => "已通知业主{$mStr}沟通量房"];

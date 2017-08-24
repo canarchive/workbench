@@ -42,12 +42,13 @@ Trait DispatchTrait
             return '';
         }
 
-        if ($this->$field > 0) {
+        /*if ($this->$field > 0) {
             return $this->formatTimestamp($this->$field);
         }
         if ((Yii::$app->params['currentTime'] - $this->created_at) >= 3600) {
-            return '超过1小时';
-        }
+            return '已超过1小时';
+        }*/
+        $lastTime = $this->formatTimestamp($this->$field);
 
         $code = 'subsite_decoration_sendmsg_send';
         $menu = $view->getMenuData($code);
@@ -56,7 +57,7 @@ Trait DispatchTrait
             return '';
         }
         $url = $menu['url'] . "?sort=dispatch&id={$this->id}";
-        $str = "<a onclick='sendMsg(\"{$url}\")'>{$menu['name']}</a>";
+        $str = "<a onclick='sendMsg(\"{$url}\")'>{$menu['name']}({$lastTime})</a>";
         return $str;
     }
 }
