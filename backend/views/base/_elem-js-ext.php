@@ -81,7 +81,7 @@ function sendMsg(url)
         success: function(response) {
             var status = response.status;
             if (status == 200) {
-                ShowSuccessMessage("发送成功", 3000);
+                ShowSuccessMessage("发送成功" + response.message, 3000);
             } else {
                 ShowErrorMessage(response.message, 3000);
             }
