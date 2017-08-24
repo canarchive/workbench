@@ -73,7 +73,7 @@
         <div class="contrain"></div>
         </div>
         /footer -->
-        <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-pc.js"></script>
+        <!--<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-pc.js"></script>-->
         <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/jquery.js"></script>
         <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/jquery.validator.js"></script>
         <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/zh-cn.js"></script>
