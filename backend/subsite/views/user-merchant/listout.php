@@ -32,7 +32,9 @@ $gridViewParams = [
 		[
 			'attribute' => 'userName',
 			'value' => function($model) {
-				return $model->userModel->name;
+				$userModel = $model->userModel;
+				return empty($userModel) ? '匿名' : $userModel->name;
+				//return $model->userModel->name;
 			}
         ],
 		[
