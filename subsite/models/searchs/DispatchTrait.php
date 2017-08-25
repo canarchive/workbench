@@ -10,13 +10,15 @@ Trait DispatchTrait
     public function rules()
     {
         return [
-            [['mobile', 'created_at_start', 'created_at_end',], 'safe'],
+            [['mobile', 'service_id', 'created_at_start', 'created_at_end',], 'safe'],
         ];
     }
 
     protected function _searchElems()
     {
-        return [];
+		return [
+            ['field' => 'service_id', 'type' => 'common'],
+		];
     }
 
     protected function _getTemplateFields()
@@ -26,7 +28,8 @@ Trait DispatchTrait
             'city_code' => ['type' => 'common'],
             //'house_id' => ['type' => 'point', 'table' => 'merchant'],
             'service_id' => ['type' => 'point', 'table' => 'service', 'pointField' => 'id'],
-            'mobile' => ['type' => 'common'],
+            'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
+            //'mobile' => ['type' => 'common'],
             'num_merchant' => ['type' => 'common'],
             'note' => ['type' => 'common', 'listNo' => true],
 

@@ -2,6 +2,7 @@
 
 namespace merchant\admin\controllers\decoration;
 
+use Yii;
 use backend\subsite\controllers\decoration\DispatchController as DispatchControllerBase;
 
 class DispatchController extends DispatchControllerBase
@@ -11,6 +12,10 @@ class DispatchController extends DispatchControllerBase
 
     protected function privGetIgnore()
     {
-        return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
+        $role = Yii::$app->params['managerInfo']->role;
+        if ($role == 'admin-inner') {
+			return ['merchant_id', 'service_id'];
+        }
+		return ['merchant_id'];
     }
 }

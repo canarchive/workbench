@@ -22,7 +22,7 @@ class Sendmsg extends BaseModelNotable
             return ['status' => 400, 'message' => '信息有误'];
         }
         $info['sendmsg_at'] = Yii::$app->params['currentTime'];
-        $info->update(false);
+        $info->update(false, ['sendmsg_at']);
         $mModel = new UserMerchant();
         $merchantInfos = $mModel->getInfos(['where' => ['mobile' => $info['mobile'], 'status' => '']]);
         if (empty($merchantInfos)) {
@@ -41,7 +41,7 @@ class Sendmsg extends BaseModelNotable
             }
             $mStr .= '“' . $mInfo->getPointName('merchant', $mInfo->merchant_id) . '”、';
             $mInfo['sendmsg_at'] = Yii::$app->params['currentTime'];
-            $mInfo->update(false);
+            $info->update(false, ['sendmsg_at']);
 			$i++;
         }
         if (empty($mStr)) {
@@ -65,7 +65,7 @@ class Sendmsg extends BaseModelNotable
             return ['status' => 400, 'message' => '已超过1个小时'];
         }
         $info['sendmsg_at'] = Yii::$app->params['currentTime'];
-        $info->update(false);
+        $info->update(false, ['sendmsg_at']);
 
         return $this->_sendSms($info['mobile'], '“' . $info->getPointName('merchant', $info->merchant_id) . '”');
     }
