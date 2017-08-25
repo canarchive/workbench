@@ -118,18 +118,18 @@ trait TraitAttachment
     {   
         $aId = $this->import;
         if (empty($aId)) {
-            $this->addError('error', '参数错误');
+            $this->addError('import', '参数错误');
             return false;
         }   
 
         $attachment = $this->attachmentModel->findOne($aId);
         if (empty($attachment)) {
-            $this->addError('error', '指定的文件参数有误，请重新上传');
+            $this->addError('import', '指定的文件参数有误，请重新上传');
             return false;
         }   
         $file = $attachment->getPathBase($attachment->path_prefix) . '/' . $attachment->filepath;
         if (!file_exists($file)) {
-            $this->addError('error', '指定的文件不存在，请重新上传');
+            $this->addError('import', '指定的文件不存在，请重新上传');
             return false;
         }   
         $datas = $this->importDatas($file);
