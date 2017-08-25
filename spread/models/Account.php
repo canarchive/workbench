@@ -26,8 +26,8 @@ class Account extends BaseModel
         return [
             'id' => 'ID',
             'channel' => '渠道',
-            'code' => '代码',
-            'name' => '账户名',
+            'code' => '账户名',
+            'name' => '名称',
             'merchant' => '所属公司',
             'domain' => '域名',
             'domain_mobile' => '移动端域名',
@@ -48,13 +48,25 @@ class Account extends BaseModel
         return $datas;
     }
 
+    public function formatName()
+    {
+        if (!empty($this->name)) {
+            return $this->name;
+        }
+
+        $ext = $this->getKeyName('channel', $this->channel);
+        $this->name = $this->code . " ( {$ext} )";
+        $this->update(false);
+        return $this->name;
+    }
+
     protected function _getTemplateFields()
     {
         return [
             'id' => ['type' => 'common'],
-            'channel' => ['type' => 'common'],
+            'channel' => ['type' => 'key'],
             'code' => ['type' => 'common'],
-            'name' => ['type' => 'common'],
+            'name' => ['type' => 'inline', 'method' => 'formatName'],
             'merchant' => ['type' => 'key'],
             'domain' => ['type' => 'common'],
             'domain_mobile' => ['type' => 'common'],
