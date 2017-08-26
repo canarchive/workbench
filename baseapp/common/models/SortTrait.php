@@ -4,6 +4,8 @@ namespace baseapp\common\models;
 
 trait SortTrait
 {
+	public $thumb;
+
     public static function tableName()
     {
         return '{{%sort}}';
@@ -48,4 +50,21 @@ trait SortTrait
 	{
 		return $this->_getThumb('sort', 'thumb');
 	}
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'thumb' => ['type' => 'imgtag'],
+            'brief' => ['type' => 'atag'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
+            'description' => ['type' => 'common', 'listNo' => true],
+            'meta_title' => ['type' => 'common', 'listNo' => true],
+            'meta_keyword' => ['type' => 'common', 'listNo' => true],
+            'meta_description' => ['type' => 'common', 'listNo' => true],
+			'status' => ['type' => 'key'],
+        ];
+    }
 }
