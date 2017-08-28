@@ -16,6 +16,14 @@ class SpreadPageController extends Controller
 
     }
 
+    public function actionBdztc()
+    {
+        $_GET['cid'] = 2;
+        $_GET['city_code'] = 'beijing';
+        $_GET['tcode'] = 'tquote';
+        return $this->actionIndex();
+    }
+
     public function actionHome()
     {
         $_GET['cid'] = 2;
