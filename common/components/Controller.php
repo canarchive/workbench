@@ -56,7 +56,7 @@ class Controller extends YiiController
             $pos = strpos($this->clientUrl, '?');
             $query = $pos !== false ? substr($url, $pos) : '';
             $urlBase = str_replace($query, '', $url);
-            $lastChar = substr($url, -1);
+			$lastChar = substr($urlBase, -1);
             if ($lastChar != '/') {
                 $rUrl = "{$this->host}{$urlBase}/{$query}";
                 //header("Location: {$url}");

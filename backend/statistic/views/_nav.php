@@ -19,8 +19,8 @@ $elems = [
 		'created_month' => '每月',
 		'created_day' => '每日',
         'channel-created_day' => '渠道每日',
-        'channel-sem_account-created_day' => '渠道账户每日',
-        'channel-sem_account-plan_id-created_day' => '渠道账户计划每日',
+        'channel-account_id-created_day' => '渠道账户每日',
+        'channel-account_id-plan_id-created_day' => '渠道账户计划每日',
     ],
     'channel-merchant' => [
         /*'merchant_id' => '商家',
