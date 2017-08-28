@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use Yii;
 use yii\helpers\Html;
 use common\widgets\FileUploadUI;
 
@@ -23,11 +24,11 @@ trait TraitAttachment
         if ($info) {
             $info->getUrl();
             $optionsDefault = [
-                'style' => ['width' => '80px', 'height' => '40px'],
+                'style' => ['width' => '100px', 'height' => '80px'],
                 'onclick' => 'window.open(this.src);',
             ];
             $options = $pointSize && empty($options) ? $optionsDefault : $options;
-            return \Yii::$app->formatter->asImage($info->getUrl(), $options);
+            return Yii::$app->formatter->asImage($info->getUrl(), $options);
         }
         return '';
     }
@@ -37,6 +38,22 @@ trait TraitAttachment
 		$info = $this->getAttachmentInfo($id);
         return empty($info) ? '' : $info->getUrl();
     }
+
+	public function getAttachmentImgtag($table, $field, $forceMain = false, $pointSize = true, $options = null)
+	{
+		$info = $this->getAttachmentInfo($this->attachmentWhere($table, $field));
+		$info = !empty($info) ? $info : ($forceMain ? $info : $this->getAttachmentInfo($this->attachmentWhere($table, $field, false)));
+        if ($info) {
+            $info->getUrl();
+            $optionsDefault = [
+                'style' => ['width' => '80px', 'height' => '40px'],
+                'onclick' => 'window.open(this.src);',
+            ];
+            $options = $pointSize && empty($options) ? $optionsDefault : $options;
+            return Yii::$app->formatter->asImage($info->getUrl(), $options);
+        }
+        return '';
+	}
 
 	public function getAttachmentInfo($id)
 	{
