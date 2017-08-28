@@ -43,7 +43,7 @@ class ChannelFee extends ChannelFeeModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['city_code', 'client_type', 'channel', 'account_id', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['client_type', 'channel', 'account_id', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
                 return ['account_id', 'created_day'];
