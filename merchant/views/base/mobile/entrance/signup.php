@@ -13,7 +13,7 @@ foreach ($fields as $field) {
 
 ?>
 <?= $this->render('_signup-jstop'); ?>
-<link rel="stylesheet" href="http://42.96.194.225/filesys/spider/pages/asset/merchant/m/css/32ceb-5815.css"></head>
+<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/css/32ceb-5815.css"></head>
 
 <div class="container">
     <div class="iphone-header hidden" id="iphoneHead"></div>
@@ -109,12 +109,11 @@ foreach ($fields as $field) {
 <input type="hidden" id="recommendCode" value="" />
 <input type="hidden" id="wid" value="" />
 <!-- 万达蓝海wid,用于绑定 --></body>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/m/js/zepto.min.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/m/js/zepto.cookie.min.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/m/js/common.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/m/js/register2.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/statistics.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-pc.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/zepto.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/zepto.cookie.min.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/common.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/register2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/statistics.js"></script>
 <script type="text/javascript">if (location.search.indexOf('Android') != -1 || location.search.indexOf('iOS') != -1) {
     $(".h5-login").hide();
 }</script>

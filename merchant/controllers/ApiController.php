@@ -15,7 +15,7 @@ class ApiController extends Controller
 
     public function actionRegister()
     {
-		$fields = ['mobile', 'code', 'password', 'email'];
+		$fields = ['mobile', 'code', 'password', 'email', 'merchant_name', 'name', 'merchant_sort'];
 		$data = $this->_formatInput($fields);
 
         $model = $this->getModel();

@@ -11,7 +11,7 @@
                     <a href="/signin.html">登录</a></li>
                 <?php } else { ?>
                 <li class="experience">
-                    <a href="/admin/" class="btn-experience">立即体验</a></li>
+                    <a href="/admin/" class="">立即体验</a></li>
                 <?php } ?>
 				<!--<li class="contact-ways"><i></i><span></span></li>-->
             </ul>

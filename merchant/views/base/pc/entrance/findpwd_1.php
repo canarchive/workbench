@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>找回密码</title>
-        <link rel="stylesheet" href="http://42.96.194.225/filesys/spider/pages/asset/merchant/css/b114f-8129.css" />
-        <link rel="stylesheet" href="http://42.96.194.225/filesys/spider/pages/asset/merchant/css/099cf-3805.css" /></head>
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/css/b114f-8129.css" />
+        <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/css/099cf-3805.css" /></head>
     
     <body>
         <div class="header">
@@ -73,10 +73,10 @@
         <div class="contrain"></div>
         </div>
         /footer -->
-        <!--<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-pc.js"></script>-->
-        <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/jquery.js"></script>
-        <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/jquery.validator.js"></script>
-        <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/zh-cn.js"></script>
+        <!--<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-pc.js"></script>-->
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/jquery.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/jquery.validator.js"></script>
+        <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/zh-cn.js"></script>
         <script type="text/javascript">$(function() {
                 //
                 var retrievePwd = {
@@ -346,6 +346,6 @@
                 retrievePwd.init();
 
             });</script>
-        <!-- <script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/statistics.js"></script> --></body>
+        <!-- <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/statistics.js"></script> --></body>
 
 </html>

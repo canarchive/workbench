@@ -8,7 +8,7 @@
             <div class="ydh-head-video-content ydh-video">
                 <!-- <div class="mask"></div> -->
                 <!-- <div class="ydh-video-c"> -->
-                <video id="head-video0" class="video-js" controls preload="none" width="757" height="455" oncontextmenu="return false;" data-setup="{}" poster="http://42.96.194.225/filesys/spider/pages/asset/merchant/img/ea0c2-7481.jpg">
+                <video id="head-video0" class="video-js" controls preload="none" width="757" height="455" oncontextmenu="return false;" data-setup="{}" poster="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/ea0c2-7481.jpg">
                     <!-- <source src="https://ydhres.oss-cn-hangzhou.aliyuncs.com/video/ydh.mp4" type='video/mp4'> -->
                     <source src="https://ydhres.oss-cn-hangzhou.aliyuncs.com/video/ydh_link.mp4" type='video/mp4'>
                         <p class="vjs-no-js">不支持此浏览器</p></video>
