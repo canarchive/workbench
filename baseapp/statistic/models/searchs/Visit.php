@@ -7,24 +7,37 @@ use baseapp\statistic\models\Visit as VisitModel;
 
 class Visit extends VisitModel
 {
+    public $is_precision;
     public function rules()
     {
         return [
-            [['merchant_id', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
+            [['merchant_id', 'is_precision', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
         ];
     }
 
     protected function _searchElems()
     {
         $this->keyword_search = $this->keyword;
-        return [
-            ['field' => 'keyword', 'type' => 'common', 'sort' => 'like'],
-            ['field' => 'keyword_search', 'type' => 'common', 'sort' => 'orLike'],
+        $isPrecision = $this->is_precision;
+        $elems = [];
+        if ($isPrecision) {
+            $elems = [
+                ['field' => 'keyword', 'type' => 'common'],
+                ['field' => 'keyword_search', 'type' => 'common', 'sort' => 'orEqual'],
+            ];
+        } else {
+            $elems = [
+                ['field' => 'keyword', 'type' => 'common', 'sort' => 'like'],
+                ['field' => 'keyword_search', 'type' => 'common', 'sort' => 'orLike'],
+            ];
+        }
+
+        return array_merge($elems, [
             ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'client_type', 'type' => 'common'],
             ['field' => 'channel', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
-        ];
+        ]);
     }
 
     public function _searchDatas()
@@ -34,9 +47,11 @@ class Visit extends VisitModel
             $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
         ];
+
         $form = [
         [
             $this->_sTextParam(['field' => 'keyword']),
+            $this->_sKeyParam(['name' => '', 'noAll' => true, 'field' => 'is_precision', 'type' => 'checkbox-form', 'forceShow' => true, 'infos' => ['1' => '精确匹配']]),
             $this->_sStartParam(),
         ]
         ];
