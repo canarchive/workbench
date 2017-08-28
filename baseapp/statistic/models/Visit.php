@@ -144,7 +144,7 @@ class Visit extends BaseModel
             'channel' => [
                 'param' => 'qudao',
                 'default' => 'bd',
-                'channel' => ['bd'],
+                'channel' => array_keys($this->channelInfos),
             ],
             'keyword' => [
                 'param' => 'wny',
