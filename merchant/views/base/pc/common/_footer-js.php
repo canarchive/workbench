@@ -1,13 +1,13 @@
 <input type="hidden" id="currentMenu" value="index">
 <input type="hidden" id="currentMenu3" value="">
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/r2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/r2.js"></script>
 <script type="text/javascript">NProgress.start();</script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/statistics.js"></script>
-<!--<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/growingio-portal.js"></script>-->
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/common.v2.js"></script>
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/floatservice.js"></script>
-<link rel="stylesheet" href="http://42.96.194.225/filesys/spider/pages/asset/merchant/css/c8328-4059.css">
-<script type="text/javascript" src="http://42.96.194.225/filesys/spider/pages/asset/merchant/js/video.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/statistics.js"></script>
+<!--<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-portal.js"></script>-->
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/common.v2.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/floatservice.js"></script>
+<link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/css/c8328-4059.css">
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/video.js"></script>
 <script type="text/javascript">$(function() {
         //小易视频控制
         /*var myPlayer = videojs("my-video");

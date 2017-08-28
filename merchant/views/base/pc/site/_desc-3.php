@@ -55,19 +55,19 @@
                 <ul class="img-list">
                     <li>
                         <div class="img-wrap">
-                            <img src="http://42.96.194.225/filesys/spider/pages/asset/merchant/img/a3432-7902.png"></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/a3432-7902.png"></div>
                     </li>
                     <li>
                         <div class="img-wrap">
-                            <img src="http://42.96.194.225/filesys/spider/pages/asset/merchant/img/3bcfa-9046.png"></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/3bcfa-9046.png"></div>
                     </li>
                     <li>
                         <div class="img-wrap">
-                            <img src="http://42.96.194.225/filesys/spider/pages/asset/merchant/img/3a11f-6360.png"></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/3a11f-6360.png"></div>
                     </li>
                     <li>
                         <div class="img-wrap">
-                            <img src="http://42.96.194.225/filesys/spider/pages/asset/merchant/img/b3f3e-9060.png"></div>
+                            <img src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/b3f3e-9060.png"></div>
                     </li>
                 </ul>
                 <div class="banner-btn banner-prev-btn"></div>

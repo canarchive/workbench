@@ -107,7 +107,9 @@ trait TraitSearchForm
         if (count($data['infos']) <= 1 && !isset($data['forceShow'])) {
             return [];
         }
-        $data['infos'] = ['all-search' => '全部'] + $data['infos'];
+        if (!isset($data['noAll'])) {
+            $data['infos'] = ['all-search' => '全部'] + $data['infos'];
+        }
         return $data;
     }
 

@@ -39,8 +39,8 @@ foreach ($fields as $field) {
                         <label class="agree-rule">
                             <input type="checkbox" tabIndex="5" name="checkRule" checked="true" value="1" />
                             <span>我已同意
-                                <a target="_blank" href="https://www.dinghuo123.com/product/productService.html#f">服务条款</a>，以及
-                                <a target="_blank" href="https://www.dinghuo123.com/product/productService.html#e">隐私政策</a></span>
+                                <a target="_blank" href="javascript: void(0);">服务条款</a>，以及
+                                <a target="_blank" href="javascript: void(0);">隐私政策</a></span>
                         </label>
                     </div>
                     <div class="control-form">
@@ -65,36 +65,15 @@ foreach ($fields as $field) {
                     </div>
                     <div class="control-form">
                         <input type="text" name="email" tabIndex="10" class="ui-input" placeholder="邮箱" autocomplete="off"></div>
-                    <div class="control-form">
-                        <!-- <input type="text" name="loginName" class="ui-input" placeholder="选择行业"> -->
+                    <!--<div class="control-form">
+                        <input type="text" name="loginName" class="ui-input" placeholder="选择行业">
                         <select class="business-type" tabIndex="11" name="businessTypeId" id="businessTypeId">
                             <option value="0">选择行业</option>
                             <option value="1">汽车用品（汽车电子、车载电器、汽配车饰）</option>
-                            <option value="2">图书、音像</option>
-                            <option value="3">办公用品（办公设备、办公文仪）</option>
-                            <option value="4">手机、数码、电脑</option>
-                            <option value="5">食品、饮料、酒水</option>
-                            <option value="6">电子、机电、机械</option>
-                            <option value="7">数字商品（软件、游戏）</option>
-                            <option value="8">家用电器</option>
-                            <option value="9">化妆品、个人洗护、美妆工具</option>
-                            <option value="10">珠宝</option>
-                            <option value="11">玩具、礼品、乐器</option>
-                            <option value="12">家居、家具、家装、厨具</option>
-                            <option value="13">服饰鞋帽、箱包</option>
-                            <option value="14">通讯设备、计算机设备</option>
-                            <option value="15">培训、咨询服务</option>
-                            <option value="17">日用百货</option>
-                            <option value="18">母婴用品</option>
-                            <option value="19">农贸产品</option>
-                            <option value="20">餐饮连锁</option>
-                            <option value="22">保健用品</option>
-                            <option value="23">钟表</option>
-                            <option value="24">医药行业</option>
                             <option value="16">其他行业</option></select>
-                    </div>
-                    <div class="control-form">
-                        <input type="text" name="recommendCode" tabIndex="12" class="ui-input" placeholder="邀请码（可不填）" value="" autocomplete="off"></div>
+                    </div>-->
+                    <!--<div class="control-form">
+                        <input type="text" name="recommendCode" tabIndex="12" class="ui-input" placeholder="邀请码（可不填）" value="" autocomplete="off"></div>-->
                     <div class="control-form">
                         <input type="button" id="registerBtn2" tabIndex="13" class="ui-btn" value="提交"></div>
                 </div>
@@ -143,7 +122,6 @@ foreach ($fields as $field) {
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/dialog-plus-min.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/login-util.js"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/statistics.js"></script>
-<!--<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/js/growingio-pc.js"></script>-->
 <script type="text/javascript">
 var THISPAGE = {};
 $(function() {
@@ -367,20 +345,29 @@ $(function() {
                         mobile: $.trim($('input[name="userName"]').val()),
                         code: $.trim($("input[name=mobileVerfyCode]").val()),
                         merchant_name: $.trim($("input[name=companyName]").val()),
-                        contact: $.trim($("input[name=linkman]").val()),
+                        name: $.trim($("input[name=linkman]").val()),
                         password: $.trim($("input[name=password]").val()),
                         email: $.trim($("input[name=email]").val()),
-                        recommend_code: $.trim($("input[name=recommendCode]").val()),
+                        //recommend_code: $.trim($("input[name=recommendCode]").val()),
                         //邀请码
-                        openId: $.trim($("input[name=openId]").val()),
-                        source: $.cookie('s') || 0,
-                        merchant_type: $("#businessTypeId").val() //,
+                        //openId: $.trim($("input[name=openId]").val()),
+                        //source: $.cookie('s') || 0,
+                        //merchant_sort: $("#businessTypeId").val() //,
                         //sc: register.getQueStr("sc")//推荐有礼
                     };
                     LOGIN.register(postData, {
                         success: function(data) {
-                            _self.setBaiduConversion(data);
-                            _self.toStep3();
+							console.log(data);
+                            //_self.setBaiduConversion(data);
+							if (data.status == '200') {
+								alert('恭喜您，注册成功');
+                                window.location.href = '/signin.html';
+							} else {
+                                //$("#warn2").html(data.message + '请您重新操作');
+								alert(data.message + '请您重新操作');
+								location.reload();
+							}
+                            //_self.toStep3();
                         },
                         error: function(r) {
                             $("#warn2").html(r);
@@ -428,9 +415,9 @@ $(function() {
                         required: true,
                         pwdValid: true
                     },
-                    businessTypeId: {
+                    /*businessTypeId: {
                         businessValid: true
-                    },
+				    },*/
                     email: {
                         required: true,
                         email: true
@@ -530,7 +517,7 @@ $(function() {
                 }
             }
             _url += "?username=" + data.userName + "&dbid=" + data.dbid;
-            var _iframe = '<iframe src="' + _url + '" style="display:none" />';
+            var _iframe = '<iframe src="' + _url + '" style="display:" />';
             $("body").prepend(_iframe);
             $(".r1bg").hide();
             $("#step3").show();

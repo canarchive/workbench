@@ -70,6 +70,9 @@ trait TraitSearchSearch
 		case 'orLike':
 			$query->orFilterWhere(['like', $field, $value]);
 			break;
+		case 'orEqual':
+			$query->orFilterWhere(['=', $field, $value]);
+			break;
         default:
 		    $query->andWhere([$field => $value]);
         }
