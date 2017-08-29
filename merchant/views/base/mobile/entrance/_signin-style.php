@@ -31,7 +31,7 @@ input:focus, textarea:focus{ outline:none; border:none; }
 }
 .ui-input::-webkit-input-placeholder { color:#fff; vertical-align:middle; padding-top:3px; }
 .bb{ border-bottom:1px solid rgba(202,227,239,0.7); padding: 1.2rem 12px 1rem 40px;}
-.ic{ position:absolute; width:20px; height:20px;margin: 0 0 0 -30px;background:url(css/img/login-icon.png?v=20151126) 0 0 no-repeat; background-size:60px 20px; }
+.ic{ position:absolute; width:20px; height:20px;margin: 0 0 0 -30px;background:url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/img/login-icon.png) 0 0 no-repeat; background-size:60px 20px; }
 .ic_2{ background-position:-20px 0; }
 .ic_3{ background-position:-40px 0 ; }
 .ui-btn{ font-size:1.2rem; border:none; background:#fff; padding:1rem 0; color:#444; width:100%;border-radius: 2px;}
@@ -63,7 +63,7 @@ footer{
 .logo{
 	width:10rem;
 	height:3.6rem;
-	background:url('css/img/logo.png') center center no-repeat;
+	background:url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/img/logo.png) center center no-repeat;
 	background-size:contain;
     margin: 0 auto;
 }

@@ -12,14 +12,14 @@ class Api extends BaseModelNotable
 	public function register($data)
 	{
 		foreach ($data as $field => $value) {
-			if (empty($value) && !in_array($field, ['merchant_sort'])) {
+			if (empty($value) && !in_array($field, ['merchant_sort', 'email'])) {
 				return ['status' => 400, 'message' => "{$field}不能为空"];
 			}
 			if ($field == 'password' && strlen($value) < 6) {
 				return ['status' => 400, 'message' => "密码最少6位"];
 			}
 		}
-		$checkEmail = $this->_validateEmail($data['email'], 'signup');
+		$checkEmail = $this->_validateEmail($data['email'], 'signup', true);
 		if ($checkEmail['status'] != 200) {
 			return $checkEmail;
 		}
@@ -54,6 +54,7 @@ class Api extends BaseModelNotable
 
     public function registerUser($data)
     {
+		$data['role'] = 'guest';
         $model = new User($data);
         $result = $model->insert(false);
         if (empty($result)) {

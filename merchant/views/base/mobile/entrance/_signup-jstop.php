@@ -114,7 +114,7 @@
     }
 })(window, window["lib"] || (window["lib"] = {}));
 
-var _czc = _czc || [];
-_czc.push(["_setAccount", "1253299897"]);
-var _hmt = _hmt || [];
+//var _czc = _czc || [];
+//_czc.push(["_setAccount", "1253299897"]);
+//var _hmt = _hmt || [];
 </script>
