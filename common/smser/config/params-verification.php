@@ -24,6 +24,12 @@ $configInfo = [
         'sendTimes' => 100,
         'expire' => 10000,
     ],
+    'presell' => [
+        'length' => 4,
+        'sleep' => 1,
+        'sendTimes' => 100,
+        'expire' => 10000,
+    ],
 ];
 $configLocal = require_once(__DIR__ . '/params-verification-local.php');
 
