@@ -3,6 +3,8 @@ namespace baseapp\auth\controllers;
 
 use Yii;
 use yii\web\BadRequestHttpException;
+use yii\helpers\ArrayHelper;
+use common\models\region\Region;
 
 trait ApiTrait
 {
@@ -39,6 +41,15 @@ trait ApiTrait
         $model = $this->getModel();
 		$result = $model->checkMobileCode($data);
 		return $result;
+	}
+
+	public function actionCityCode()
+	{
+		$pCode = Yii::$app->request->get('id', '');
+		$region = new Region();
+		$infos = $region->getSubInfos($pCode, false);
+        //$infos = ArrayHelper::map($infos, 'code', 'name');
+		return ['status' => 200, 'message' => 'OK', 'data' => $infos];
 	}
 
 	protected function _formatInput($fields)
