@@ -73,18 +73,38 @@ class ChannelFee extends ChannelFeeModel
 
     public function getReportBaseColumns()
     {
-        $base = ['visit_num'];
         $columns = [
             'fee',
             'show_num',
-            'hit_num',
-            /*'visit_num_success',
-            'success_rate' => [
-                'attribute' => 'success_rate',
-                'value' => function ($model) {
-                    return $model->getSuccessRate();
-                },
-                ],*/
+            [
+                'attribute' => 'visit_num',
+                'label' => '访问数',
+                'value' => function($model) {
+                    $diff = $model->visit_num - $model->hit_num;
+                    return $model->visit_num . "( {$diff} )";
+                }
+            ],
+            [
+                'attribute' => 'hit_num',
+                'label' => '点击数-点击率-点击费用',
+                'value' => function($model) {
+                    return $model->hit_num . $model->formatPercent($model->hit_num, $model->show_num) . $model->formatDivisor($model->fee, $model->hit_num);
+                }
+            ],
+            [
+                'attribute' => 'success_num',
+                'label' => '报名数-报名率-报名单价',
+                'value' => function($model) {
+                    return $model->success_num . $model->formatPercent($model->success_num, $model->hit_num) . $model->formatDivisor($model->fee, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'valid_num',
+                'label' => '有效数-有效率-有效单价',
+                'value' => function($model) {
+                    return $model->valid_num . $model->formatPercent($model->valid_num, $model->success_num) . $model->formatDivisor($model->fee, $model->valid_num);
+                }
+            ],
         ];
         return $columns;
     }
