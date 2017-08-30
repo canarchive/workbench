@@ -42,7 +42,10 @@ trait EntranceTrait
         if ($result['status'] == 200 && isset($result['homeUrl'])) {
             return Yii::$app->response->redirect($result['homeUrl'])->send();
         }
-
+        if (Yii::$app->getRequest()->method == 'POST') {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+			return $result;
+		}
         return $this->render('signin', $result);
     }
 

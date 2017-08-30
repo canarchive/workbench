@@ -16,10 +16,10 @@ class Region extends PassportModel
         return '{{%region}}';
     }
 
-    public static function getDb()
+    /*public static function getDb()
     {
         return Yii::$app->dbCommon;
-    }
+	}*/
 
     /**
      * @inheritdoc
