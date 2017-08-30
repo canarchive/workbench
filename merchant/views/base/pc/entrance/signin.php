@@ -206,7 +206,7 @@ $(function() {
                                     domain: 'dinghuo123.com'
                                 });
                             }
-                            $("#loginForm").submit();
+                            //$("#loginForm").submit();
                         },
                         error: function(code, r) {
                             var e = $("#warn");
