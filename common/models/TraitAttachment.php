@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use Yii;
 use yii\helpers\Html;
 use common\widgets\FileUploadUI;
 
@@ -23,11 +24,11 @@ trait TraitAttachment
         if ($info) {
             $info->getUrl();
             $optionsDefault = [
-                'style' => ['width' => '80px', 'height' => '40px'],
+                'style' => ['width' => '100px', 'height' => '80px'],
                 'onclick' => 'window.open(this.src);',
             ];
             $options = $pointSize && empty($options) ? $optionsDefault : $options;
-            return \Yii::$app->formatter->asImage($info->getUrl(), $options);
+            return Yii::$app->formatter->asImage($info->getUrl(), $options);
         }
         return '';
     }
@@ -37,6 +38,22 @@ trait TraitAttachment
 		$info = $this->getAttachmentInfo($id);
         return empty($info) ? '' : $info->getUrl();
     }
+
+	public function getAttachmentImgtag($table, $field, $forceMain = false, $pointSize = true, $options = null)
+	{
+		$info = $this->getAttachmentInfo($this->attachmentWhere($table, $field));
+		$info = !empty($info) ? $info : ($forceMain ? $info : $this->getAttachmentInfo($this->attachmentWhere($table, $field, false)));
+        if ($info) {
+            $info->getUrl();
+            $optionsDefault = [
+                'style' => ['width' => '80px', 'height' => '40px'],
+                'onclick' => 'window.open(this.src);',
+            ];
+            $options = $pointSize && empty($options) ? $optionsDefault : $options;
+            return Yii::$app->formatter->asImage($info->getUrl(), $options);
+        }
+        return '';
+	}
 
 	public function getAttachmentInfo($id)
 	{
@@ -118,18 +135,18 @@ trait TraitAttachment
     {   
         $aId = $this->import;
         if (empty($aId)) {
-            $this->addError('error', '参数错误');
+            $this->addError('import', '参数错误');
             return false;
         }   
 
         $attachment = $this->attachmentModel->findOne($aId);
         if (empty($attachment)) {
-            $this->addError('error', '指定的文件参数有误，请重新上传');
+            $this->addError('import', '指定的文件参数有误，请重新上传');
             return false;
         }   
         $file = $attachment->getPathBase($attachment->path_prefix) . '/' . $attachment->filepath;
         if (!file_exists($file)) {
-            $this->addError('error', '指定的文件不存在，请重新上传');
+            $this->addError('import', '指定的文件不存在，请重新上传');
             return false;
         }   
         $datas = $this->importDatas($file);
