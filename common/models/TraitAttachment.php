@@ -12,7 +12,7 @@ trait TraitAttachment
     /**
      * 附件类型的字段信息更新时，是否删除旧的附件，默认删除
      */
-    public $deleteAttachment = false;
+    public $deleteAttachment = true;
 
     protected function getAttachmentModel()
     {}
@@ -156,4 +156,9 @@ trait TraitAttachment
         }
         return $datas;
     }
+
+	public function getAttachmentIds($table, $field)
+	{
+		return $this->attachmentModel->getFieldIds($table, $field, $this->id);
+	}
 }
