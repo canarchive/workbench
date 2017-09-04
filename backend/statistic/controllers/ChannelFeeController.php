@@ -2,6 +2,7 @@
 
 namespace backend\statistic\controllers;
 
+use Yii;
 use backend\components\AdminController;
 
 class ChannelFeeController extends AdminController
@@ -15,6 +16,14 @@ class ChannelFeeController extends AdminController
     public function beforeAction($action)
     {
         $controllerId = $this->id;
+
+        $update = Yii::$app->request->get('action-sort');
+        if ($update == 'update-sql') {
+            $class = $this->modelClass;
+            $model = new $class();
+            echo $model->channelFeeSql();
+            exit();
+        }
 
         return parent::beforeAction($action);
     }
