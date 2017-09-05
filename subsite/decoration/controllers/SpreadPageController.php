@@ -18,8 +18,8 @@ class SpreadPageController extends Controller
 
     public function actionBdztc()
     {
-        $_GET['cid'] = 2;
-        $_GET['city_code'] = 'beijing';
+        $_GET['cid'] = Yii::$app->request->get('cid', 2);
+        $_GET['city_code'] = Yii::$app->request->get('city_code', 'beijing');
         $_GET['tcode'] = 'tquote';
         return $this->actionIndex();
     }
