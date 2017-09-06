@@ -337,7 +337,10 @@ class Attachment extends BaseModel
             if (in_array($info->id, (array) $noDeleteIds)) {
                 continue;
             }
-            $info->delete();
+            $info->noFile = true;
+			$info->in_use = 0;
+			$info->update(false, ['in_use']);
+            //$info->delete();
         }
         return ;
     }

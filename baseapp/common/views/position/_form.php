@@ -1,6 +1,7 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
+$model->picture = $model->getAttachmentIds('position', 'picture');
 ?>
 <div class="menu-form">
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
@@ -16,6 +17,6 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
 
-	<?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+	<?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>
