@@ -2,6 +2,7 @@
 $elems = [
     'channel' => [
 		'created_day' => '每日',
+		'created_hour' => '每时',
         'channel-created_day' => '渠道每日',
         'channel-sem_account-created_day' => '渠道账户每日',
         'channel-sem_account-plan_id-created_day' => '渠道账户计划每日',
