@@ -37,7 +37,7 @@ trait PositionTrait
 			'url' => 'URL',
 			'orderlist' => '排序',
 			'picture' => '图片',
-			'picture_mobile' => '图片-H5',
+			'picture_mobile' => '图片-小图',
 			'picture_ext' => '图片-预留',
 			'created_at' => '创建时间',
 			'updated_at' => '更新时间',
@@ -63,12 +63,31 @@ trait PositionTrait
 		return true;
 	}	
 
+	public function getPictureUrl()
+	{
+		return $this->_getThumb('position', 'picture');
+	}
+
+	public function getPositionUrl()
+	{
+		if (empty($this->url)) {
+			return 'javascript: void(0);';
+		}
+		return $this->url;
+	}
+
+	public function formatImgtag($field = null, $info = [])
+	{
+		return $this->getAttachmentImgtag('position', 'picture');
+	}
+
     protected function _getTemplateFields()
     {
         return [
             'id' => ['type' => 'common'],
             'name' => ['type' => 'common'],
             'name_ext' => ['type' => 'common'],
+			'sort' => ['type' => 'key'],
             'picture' => ['type' => 'imgtag'],
             'url' => ['type' => 'atag'],
             'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],

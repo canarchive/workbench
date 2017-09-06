@@ -42,7 +42,7 @@ foreach ($fields as $field) {
             </div>
         </form>
         <button class="btn-signup" id="nextStep" type="button">下一步</button>
-        <a class="h5-login" href="/app/login?client=h5">已有账号，点此登录</a></section>
+        <a class="h5-login" href="/signin.html">已有账号，点此登录</a></section>
     <!-- 第二步 公司基本信息 -->
     <section class="register-step2 hidden" id="step2">
         <form class="step2-field">

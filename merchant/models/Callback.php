@@ -39,7 +39,11 @@ class Callback extends MerchantModel
     }
 
     public function getStatusInfos()
-    { return $this->_newModel('merchantPond')->statusInfos; } protected function getSortInfos()
+	{ 
+		return $this->_newModel('merchantPond')->statusInfos; 
+	}
+	
+	protected function getSortInfos()
     {
 		return $this->getSortParams();
     }
