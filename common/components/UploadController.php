@@ -93,7 +93,7 @@ class UploadController extends \yii\web\Controller
             'info_id' => $params['info_id'],
             'in_use' => 1,
         ];
-        $infos = $this->getAttachment()->find()->where($condition)->all();
+        $infos = $this->getAttachment()->find()->where($condition)->orderBy(['orderlist' => SORT_DESC])->all();
         $datas = [];
         foreach ($infos as $key => $info) {
             $url = $info->getUrl();
