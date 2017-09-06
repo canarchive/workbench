@@ -55,10 +55,11 @@ trait TraitAttachment
         return '';
 	}
 
-	public function getAttachmentInfo($id)
+	public function getAttachmentInfo($where)
 	{
+		$where = is_array($where) ? $where : ['id' => $where];
         $model = $this->attachmentModel;
-        return $model->findOne($id);
+        return $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->one();
 	}
 
     protected function _getThumb($table, $field)

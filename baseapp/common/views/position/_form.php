@@ -1,6 +1,7 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
+$model->picture = $model->getAttachmentIds('position', 'picture');
 ?>
 <div class="menu-form">
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
