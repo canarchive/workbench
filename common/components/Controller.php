@@ -150,7 +150,14 @@ class Controller extends YiiController
         if (!empty($channelSpread)) {
             $pUrlPre = Yii::$app->request->get('point_url_pre', '');
             $urlPre = !empty($pUrlPre) ? $pUrlPre : strval(Yii::$app->request->referrer);
-            $statUrl = '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
+            $queryStr = '';
+            if ($channelSpread == 'bdztc') {
+                if (!isset($_GET['cid'])) {
+                    $queryStr = '&cid=2';
+                }
+                $cityCode = empty($cityCode) ? 'beijing' : $cityCode;
+            }
+            $statUrl = '/stat.html?' . Yii::$app->request->queryString . $queryStr . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
             //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";
         } else if (!empty($cityCode)) {

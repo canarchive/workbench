@@ -174,6 +174,7 @@ class Visit extends BaseModel
         $keywordSearch = '';
         switch ($channel) {
         case 'bd':
+        case 'bdztc':
             $keywordSearch = Yii::$app->request->get('word');
             $keywordSearch = empty($keywordSearch) ? Yii::$app->request->get('wd') : $keywordSearch;
             break;

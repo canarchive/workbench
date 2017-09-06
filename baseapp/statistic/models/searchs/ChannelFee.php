@@ -30,7 +30,7 @@ class ChannelFee extends ChannelFeeModel
     {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`fee`) AS `fee`, SUM(`show_num`) As `show_num`, SUM(`hit_num`) AS `hit_num`";
+        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`success_num`) AS `success_num`, SUM(`valid_num`) AS `valid_num`, SUM(`fee`) AS `fee`, SUM(`show_num`) As `show_num`, SUM(`hit_num`) AS `hit_num`";
         $query->select($fieldsStr);
         $query->groupBy($fields);
 
