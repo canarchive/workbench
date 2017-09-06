@@ -18,7 +18,7 @@ foreach ($fields as $field) {
         <!--<h1></h1>--> 
         <h3 class="logo"></h3> 
     </header> 
-    <form id="myForm" action="/app/login" method="post"> 
+    <form id="myForm" method="post"> 
     <section> 
          <input type="hidden" id="loginErrorCount" value="" /> 
          <div class="writeBox"> 
@@ -43,7 +43,7 @@ foreach ($fields as $field) {
     </footer> 
     </form> 
 </div> 
-<a class="forget-pwd" id="forgetPwd" href="https://sso.dinghuo123.com/forgetpwd/index">忘记密码？</a> 
+<a class="forget-pwd" id="forgetPwd" href="/findpwd.html">忘记密码？</a> 
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/zepto.min.js"></script> 
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/common.js?v=20151126"></script> 
 <script>
@@ -77,7 +77,7 @@ $('#login').click(function(e){
     postData._csrf = $('#_csrf').val();
     $.ajax({
         type: "POST",
-        url:"/signin.html",
+        url:"/signin-api.html",
         dataType: "json",
         data: postData,
 

@@ -171,7 +171,7 @@ trait TraitModel
         return $result;
     }
 
-    public function formatDivisor($num, $num2, $haveBracket = true, $precision = 4)
+    public function formatDivisor($num, $num2, $haveBracket = true, $precision = 2)
     {
         $result = $num2 == 0 ? '-' : number_format($num / $num2, $precision);
         $result = $haveBracket ? " ( {$result} )" : $result;

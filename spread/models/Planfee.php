@@ -22,7 +22,7 @@ class Planfee extends BaseModel
     {
         return [
             [['created_day', 'channel', 'account_id', 'plan_id'], 'required'],
-            [['import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'rate_click', 'cost_click', 'times_visit', 'times_visit_success', 'rate_visit_success', 'rate_click_success', 'cost_success', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
+            [['created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
         ];
     }
 
@@ -230,7 +230,6 @@ class Planfee extends BaseModel
         static $datas = [];
         $key = md5($this->channel . $account . $plan);
         if (isset($datas[$key])) {
-            echo 'sss';
             return $datas[$key];
         }
 

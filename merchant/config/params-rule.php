@@ -25,7 +25,7 @@ return [
     ],
     'user-operation' => [
         'data' => [
-			'pattern' => '/<action:(signin|signup|logout|findpwd)>',
+			'pattern' => '/<action:(signin|signin-api|signup|logout|findpwd)>',
     		'route'	=> '/{{SORT}}/entrance/<action>',
         ],
     ],
