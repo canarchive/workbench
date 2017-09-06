@@ -3,6 +3,7 @@
 namespace baseapp\statistic\models;
 
 use Yii;
+use spread\models\Account;
 
 class ChannelFee extends AbstractStatistic
 {
@@ -46,6 +47,7 @@ class ChannelFee extends AbstractStatistic
 
     public function channelFeeSql()
     {
+        $this->channelFeeSqlExt();
         $vTable = '`workplat_spread`.`wd_visit`';
         $cTable = '`workplat_spread`.`wd_conversion`';
         $uTable = '`workplat_subsite`.`wd_user`';
@@ -62,8 +64,36 @@ class ChannelFee extends AbstractStatistic
         $sql .= "UPDATE ({$mid1}) as `a`, {$pTable} as `b` SET `b`.`visit_num` = `a`.`count` WHERE {$where};<br /><br />";
         $sql .= "UPDATE ({$mid2}) as `a`, {$pTable} as `b` SET `b`.`success_num` = `a`.`count` WHERE {$where};<br /><br />";
         $sql .= "UPDATE ({$mid3}) as `a`, {$pTable} as `b` SET `b`.`valid_num` = `a`.`count` WHERE {$where};<br /><br />";
-        echo $sql;
 
         return $sql;
+    }
+
+    protected function channelFeeSqlExt()
+    {
+        $sql = 'INSERT INTO `workplat_spread`.`wd_planfee` (`created_month`, `created_day`, `created_week`, `created_weekday`, `client_type`, `channel`, `account_id`) VALUES';
+        $sqlDetail = '';
+        
+        $days = ['20170820', '20170821', '20170822', '20170823', '20170824', '20170825', '20170826', '20170827', '20170828', '20170829', '20170830', '20170831', '20170901', '20170902', '20170903'];
+        $aModel = new Account();
+        foreach ($days as $day) {
+            $time = strtotime($day);
+            $month = date('Ym', $time);
+            $week = date('W', $time);
+            $weekday = date('N', $time);
+
+            $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '', '0'),<br />";
+            $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '', '0'),<br />";
+            foreach ($this->channelInfos as $channel => $cInfo) {
+                $accountInfos = $aModel->getInfos(['where' => ['channel' => $channel]]);
+                //print_r($accountInfos);
+                $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '{$channel}', '0'),<br />";
+                $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '{$channel}', '0'),<br />";
+                foreach ($accountInfos as $aInfo) {
+                    $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '{$channel}', '{$aInfo['id']}'),<br />";
+                    $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '{$channel}', '{$aInfo['id']}'),<br />";
+                }
+            }
+        }
+        echo $sql . $sqlDetail;
     }
 }
