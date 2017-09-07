@@ -28,7 +28,8 @@ class SpreadPageController extends Controller
     {
         $_GET['cid'] = 2;
         $_GET['city_code'] = 'beijing';
-        $_GET['tcode'] = 'designz';
+        $_GET['tcode'] = 'home';
+
         return $this->actionIndex();
     }
 
