@@ -106,7 +106,9 @@ class View extends ViewBase
             $value = $model->getKeyName($field, $model->$field);
             break;
         case 'point':
-            $value = $model->getPointName($elem['table'], $model->$field);
+			$pField = empty($elem['pointField']) ? 'id' : $elem['pointField'];
+			$where = [$pField => $model->$field];
+            $value = $model->getPointName($elem['table'], $where);
             break;
         case 'timestamp':
             $format = isset($elemValue['format']) ? $elemValue['format'] : null;
