@@ -41,7 +41,10 @@ class Smser extends \yii\base\Component
             return $this->formatResult($info);
         }
 
-        $resultCode = $this->smser->send($mobile, $info['code'], $sort);
+        $cTemplates = require(__DIR__ . '/config/params-code-template.php');
+		$content = isset($cTemplates[$sort]) ? $cTemplates[$sort] : $info['code'];
+		$content = str_replace('{{CODE}}', $info['code'], $content);
+        $resultCode = $this->smser->send($mobile, $content, $sort);
 		return $this->formatResult($resultCode);
     }
 

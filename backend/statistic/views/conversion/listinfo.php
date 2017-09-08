@@ -24,7 +24,12 @@ $gridViewParams = [
         'channel',
         'client_type',
         'sem_account',
-        'plan_id',
+		[
+			'attribute' => 'plan_id',
+			'value' => function ($model) {
+				return $model->getPointName('plan', $model->plan_id) . " ( {$model->plan_id} )";
+			}
+        ],
         'unit_id',
         'keyword',
         'keyword_search',
