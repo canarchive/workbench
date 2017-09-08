@@ -4,9 +4,9 @@ $commonIcp = '京ICP备17003882号-2';
 $sites = [
     'default' => [
         'name' => '默认',
-        'copy' => $commonCopy,
-        'icp' => $commonIcp,
-        'pc' => 'http://hd.1-2580.com',
+        'copy' => '北京诚途教育咨询有限公司',
+        'icp' => '备案号：闽ICP备16011816号-1 ',
+        'pc' => 'http://rfmve.cn/',
         'm' => 'http://m.hd.1-2580.com',
     ],
     'hlyx' => [
@@ -22,6 +22,13 @@ $sites = [
         'icp' => $commonIcp,
         'pc' => 'http://hdsh.tu8zhang.com',
         'm' => 'http://m.hdsh.tu8zhang.com',
+    ],
+    'other-360' => [
+        'name' => '第三方360',
+        'copy' => '北京诚途教育咨询有限公司',
+        'icp' => '备案号：闽ICP备16011816号-1 ',
+        'pc' => 'http://www.rfmve.cn',
+        'm' => 'http://hd3.rfmve.cn',
     ],
     'tbz-bj' => [
         'name' => '兔班长北京',

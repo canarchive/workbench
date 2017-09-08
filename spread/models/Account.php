@@ -15,9 +15,9 @@ class Account extends BaseModel
     public function rules()
     {
         return [
-            [['name','merchant'], 'required'],
+            [['code'], 'required'],
             [['status',], 'default', 'value' => 0],
-            [['channel','domain', 'domain_mobile'], 'safe'],
+            [['name', 'merchant', 'channel', 'domain', 'domain_mobile'], 'safe'],
         ];
     }
 
