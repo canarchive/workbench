@@ -238,7 +238,7 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
                 <br>出设计图</li>
             <li>帮你制定
                 <br>预算规划</li></ul>
-        <p class="phone-attention">注意接听您的专属装修顾问的电话哦</p></div>
+        <p class="phone-attention">注意接听装修顾问的电话哦</p></div>
     <div class="biao_feiyong">
         <p class="fei_title">您的装修报价结果</p>
         <p class="fei_word fei_word1">您家装修价格约为：
@@ -273,8 +273,7 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
     <input type="hidden" value="" name="biao_fengge" class="biao_fengge" />
     <input type="hidden" value="" name="biao_phone" class="biao_phone" /></form>
 <a href="javascript:;" class="a-txt" style="text-align: center; display: block;">
-    <?= $this->context->currentSiteInfo['copy']; ?>
-    <br><?= $this->context->currentSiteInfo['icp']; ?>
+    <!--<?= $this->context->currentSiteInfo['copy']; ?><br>--><?= $this->context->currentSiteInfo['icp']; ?>
 </a>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/m/js/zepto.min.js"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/m/js/zxbj.js"></script>
