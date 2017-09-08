@@ -33,7 +33,7 @@ class Module extends ModuleBase
             Yii::$app->params['noSearchServer'] = true;
             //return null;
         }
-        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner'])) {
+        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner', 'service-saleman'])) {
             return null;
         }
 
