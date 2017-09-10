@@ -2,17 +2,12 @@
 
 namespace ifeed\models;
 
-use Yii;
+use baseapp\ifeed\models\IfeedModel;
 
-trait EaleTrait
+class BaseModel extends IfeedModel
 {
-    public static function getDb()
-    {
-        return Yii::$app->dbEale;
-    }    
-
     public function _getClassPrefix()
     {
-        return '\ifeed\eale\models\\';
+        return '\ifeed\models\\';
     }
 }

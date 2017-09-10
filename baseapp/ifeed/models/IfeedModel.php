@@ -1,6 +1,8 @@
 <?php
 
-namespace common\models;
+namespace baseapp\ifeed\models;
+
+use common\models\BaseModel;
 
 class IfeedModel extends BaseModel
 {
