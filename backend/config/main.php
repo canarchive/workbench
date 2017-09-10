@@ -32,12 +32,16 @@ return [
         'allowActions' => [
             'entrance/*',
             'site/error',
+            //'ifeed/*/sample/upload',
             'backend-upload/*',
             'debug/*',
         ]
     ],
 
     'modules' => [
+        'ifeed' => [
+            'class' => 'backend\ifeed\Module',
+        ],
     ],
 
     'params' => $params,
