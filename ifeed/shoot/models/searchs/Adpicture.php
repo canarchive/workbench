@@ -1,0 +1,35 @@
+<?php
+
+namespace ifeed\shoot\models\searchs;
+
+use yii\data\ActiveDataProvider;
+use ifeed\shoot\models\Adpicture as AdpictureModel;
+
+class Adpicture extends AdpictureModel
+{
+    public function rules()
+    {
+        return [
+            [['site_code', 'position'], 'safe'],
+        ];
+    }
+
+    public function search($params)
+    {
+        $query = self::find();
+
+        $dataProvider = new ActiveDataProvider(['query' => $query]);
+
+        if ($this->load($params, '') && !$this->validate()) {
+            return $dataProvider;
+        }
+
+		$query->andFilterWhere([
+			'site_code' => $this->site_code,
+			//'page' => $this->page,
+			'position' => $this->position,
+		]);
+
+        return $dataProvider;
+    }
+}
