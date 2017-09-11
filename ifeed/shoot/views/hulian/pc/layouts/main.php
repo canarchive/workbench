@@ -10,19 +10,19 @@ if (in_array($siteCode, ['shoot', 'toteme'])) {
 }
 $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['assetSort' => 'assetself', 'files' => $cssFiles, 'path' => 'hulian/assets/css/']);
 ?>
-<?php $this->beginContent('@gallerycms/shoot/views/main.php'); ?>
+<?php $this->beginContent('@ifeed/shoot/views/main.php'); ?>
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';
 if (isMobile == 1) {
-    window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
+    //window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
 }
 </script>
 <a name="top" id="top"></a>
-<?= $this->render('@gallerycms/shoot/views/hulian/pc/common/_header'); ?>
+<?= $this->render('@ifeed/shoot/views/hulian/pc/common/_header'); ?>
 <?= $content; ?>
-<?= $this->render('@gallerycms/shoot/views/hulian/pc/common/_footer'); ?>
-<?php //echo $this->render('@gallerycms/shoot/views/hulian/pc/common/_footer-signup'); ?>
-<?= $this->render('@gallerycms/shoot/views/hulian/pc/common/_footer-js'); ?>
+<?= $this->render('@ifeed/shoot/views/hulian/pc/common/_footer'); ?>
+<?php //echo $this->render('@ifeed/shoot/views/hulian/pc/common/_footer-signup'); ?>
+<?= $this->render('@ifeed/shoot/views/hulian/pc/common/_footer-js'); ?>
 <div class="slide_help" style="display: block;">
     <a class="attention">
 	    <img src="<?= Yii::getAlias('@assetself'); ?>/hulian/assets/images/wx.png" width="68px" height="72px" alt="">

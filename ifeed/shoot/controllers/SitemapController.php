@@ -1,10 +1,10 @@
 <?php
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
 use Yii;
-use gallerycms\components\ShootController;
+use ifeed\components\ShootController;
 use common\components\SitemapTrait;
-use gallerycms\shoot\models\Info;
+use ifeed\shoot\models\Info;
 
 class SitemapController extends ShootController
 {
@@ -54,7 +54,7 @@ class SitemapController extends ShootController
     {
         $urls = [];
         $baseUrl = $this->_getBaseUrl();
-        $urlBases = require Yii::getAlias('@gallerycms') . '/config/shoot/url.php';
+        $urlBases = require Yii::getAlias('@ifeed') . '/config/shoot/url.php';
         foreach ($urlBases as $urlBase) {
             if (isset($urlBase['no-sitemap']) && $urlBase['no-sitemap']) {
                 continue;

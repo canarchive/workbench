@@ -6,7 +6,7 @@
             <span>> </span>
             <a href="/case/" title="<?= $this->context->currentSiteInfo['name'] . '作品展示'; ?>">作品展示</a>
             <span>> </span>
-            <a href="/case_<?= $info['sort']; ?>/" title="<?= $this->context->currentSortInfos[$info['sort']]['name'] . '作品展示'; ?>"><?= $this->context->currentSortInfos[$info['sort']]['name']; ?>作品展示</a>
+            <a href="/case_<?= $info['sort']; ?>/" title="<?= $this->context->sortInfos[$info['sort']]['name'] . '作品展示'; ?>"><?= $this->context->currentSortInfos[$info['sort']]['name']; ?>作品展示</a>
             <span>> </span>
             <a class="last_child" href="javascript:void(0);"><?= $info['name']; ?></a>
         </div>

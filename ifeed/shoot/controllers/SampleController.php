@@ -1,11 +1,11 @@
 <?php
 
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
 use Yii;
 use yii\web\NotFoundHttpException;
-use gallerycms\components\ShootController;
-use gallerycms\shoot\models\Sample;
+use ifeed\components\ShootController;
+use ifeed\shoot\models\Sample;
 
 class SampleController extends ShootController
 {
@@ -24,8 +24,8 @@ class SampleController extends ShootController
 		$this->currentElem = 'case';//$sort;
 		$this->currentSubElem = $sort;
 
-        $sortName = empty($sort) ? $this->currentSiteInfo['name'] : $this->currentSortInfos[$sort]['name'];
-        $sortBrief = empty($sort) ? 'brief' : $this->currentSortInfos[$sort]['brief'];
+        $sortName = empty($sort) ? $this->currentSiteInfo['name'] : $this->sortInfos[$sort]['name'];
+        $sortBrief = empty($sort) ? 'brief' : $this->sortInfos[$sort]['brief'];
         $where = empty($sort) ? ['status' => 1, 'site_code' => $this->siteCode] : ['status' => 1, 'site_code' => $this->siteCode, 'sort' => $sort];
 		$model = new Sample();
         $orderBy = ['orderlist' => SORT_DESC];
@@ -47,9 +47,9 @@ class SampleController extends ShootController
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$tdkInfo = [];
 		if (!empty($sort)) {
-        $tdkInfo['title'] = $this->currentSortInfos[$sort]['meta_title'];
-        $tdkInfo['keyword'] = $this->currentSortInfos[$sort]['meta_keyword'];
-        $tdkInfo['description'] = $this->currentSortInfos[$sort]['meta_description'];
+        $tdkInfo['title'] = $this->sortInfos[$sort]['meta_title'];
+        $tdkInfo['keyword'] = $this->sortInfos[$sort]['meta_keyword'];
+        $tdkInfo['description'] = $this->sortInfos[$sort]['meta_description'];
 		}
 		$this->getTdkInfos('sample-index', $dataTdk, $tdkInfo);
 		return $this->render('/sample/index', $datas);
@@ -65,7 +65,7 @@ class SampleController extends ShootController
 		}
 
 		$this->currentElem = $info['sort'];
-		$sortName = isset($this->currentSortInfos[$info['sort']]) ? $this->currentSortInfos[$info['sort']]['name'] : '';
+		$sortName = isset($this->sortInfos[$info['sort']]) ? $this->sortInfos[$info['sort']]['name'] : '';
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{SORTNAME}}' => $sortName];
 		$this->getTdkInfos('sample-show', $dataTdk);

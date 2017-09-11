@@ -1,6 +1,6 @@
 <?php
 $adParams = ['site_code' => $this->context->siteCode, 'position' => 'slide-pc'];
-$adInfos = $this->context->getAdDatas($adParams);
+$adInfos = [];//$this->context->getAdDatas($adParams);
 ?>
 <div class="swiper-container1 pre">
     <div class="swiper-wrapper sobox soChange" style="height:600px;">

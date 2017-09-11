@@ -1,20 +1,17 @@
 <?php
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
 use Yii;
-use gallerycms\components\Controller as ControllerBase;
-use gallerycms\shoot\models\Friendlink;
-use gallerycms\shoot\models\Site;
-use gallerycms\shoot\models\Sort;
-use gallerycms\shoot\models\Adpicture;
+use ifeed\components\Controller as ControllerBase;
+use ifeed\shoot\models\Sort;
 
 class Controller extends Controllerbase
 {
-    public $siteCode;
-    public $currentSiteInfo;
-    public $currentPage;
-    public $clientType;
-    public $currentSortInfos;
+    use ControllerTrait;
+
+    public $currentSort;
+    public $currentSortInfo;
+    public $sortInfos;
     public $currentElem;
     public $currentSubElem;
 
@@ -22,33 +19,9 @@ class Controller extends Controllerbase
     {
         parent::init();
 
-        $host = Yii::$app->request->hostInfo;
-        foreach ($this->siteInfos as $siteCode => $info) {
-            if (empty($this->siteCode) && $info['domain'] == $host) {
-                $this->clientType = 'pc';
-                $this->siteCode = $siteCode;
-            }
-            if (empty($this->siteCode) && $info['domain_mobile'] == $host) {
-                $this->clientType = 'mobile';
-                $this->siteCode = $siteCode;
-            }
-        }
-
-        $this->host = $host;
-        $this->currentSiteInfo = $this->siteInfos[$this->siteCode];
-        $this->currentSortInfos = $this->sortInfos[$this->siteCode];
-        Yii::$app->params['siteName'] = $this->currentSiteInfo['name'];
-        Yii::$app->params['siteNameBase'] = $this->currentSiteInfo['name'];
-        Yii::$app->params['siteQQ'] = '2376816784';
-        //Yii::$app->params['siteCopyRightInfo'] = "Coptyright&nbsp;&copy;&nbsp;2009-2017&nbsp;{$this->currentSiteInfo['domain']},All&nbsp;rights&nbsp;reserved.&nbsp;";
-        Yii::$app->params['siteIcpInfo'] = $this->currentSiteInfo['icp'];
-        $this->clientType == 'mobile' ? true : false;
-        $this->isMobile = $this->clientIsMobile();
-        if (isset($this->module->viewPath)) {
-            $this->module->viewPath .= $this->clientType == 'mobile' ? '/hulian/mobile' : '/hulian/pc';
-        }
-		$this->pcMappingUrl = $this->currentSiteInfo['domain'] . Yii::$app->request->url;
-		$this->mobileMappingUrl = $this->currentSiteInfo['domain_mobile'] . Yii::$app->request->url;
+        $this->initSort();
+		//$this->pcMappingUrl = $this->currentSiteInfo['domain'] . Yii::$app->request->url;
+        //$this->mobileMappingUrl = $this->currentSiteInfo['domain_mobile'] . Yii::$app->request->url;
     }
 
 	protected function _redirectRule()
@@ -60,101 +33,53 @@ class Controller extends Controllerbase
 
     protected function _getTdkInfos()
     {
-        $fileTdk = Yii::getAlias('@gallerycms') . "/config/shoot/tdk-{$this->siteCode}.php";
+        $fileTdk = Yii::getAlias('@ifeed') . "/config/shoot/tdk-{$this->siteCode}.php";
         $tdkInfos = require($fileTdk);
         return $tdkInfos;
     }
 
-    public function getFriendLinkInfos($where = [])
+    protected function initSort()
     {
-        $model = new Friendlink();
-        $infos = $model->find()->where($where)->orderBy(['orderlist' => SORT_DESC])->limit(100)->asArray()->all();
-        return $infos;
-    }
-
-    protected function getCategoryInfos()
-    {
-        $datas = Category::find()->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
-
-        return $datas;
-    }
-
-    public function getNavDatas()
-    {
-        $datas = [
-            'index' => [
-                'url' => '/',
-                'name' => '首页',
-            ],
-            'case' => [
-                'url' => '/case/',
-                'name' => '摄影作品',
-                'subDatas' => [],
-            ],
-        ];
-        foreach ($this->currentSortInfos as $sort => $sInfo) {
-            if (empty($sort)) {
-                continue;
-            }
-            $datas['case']['subDatas'][$sort] = [
-                'url' => "/case_{$sort}/",
-                'name' => $sInfo['name'],
-            ];
-        }
-        $datas['flow'] = ['url' => '/flow.html', 'name' => '拍摄流程'];
-        $datas['guarantee'] = ['url' => '/guarantee.html', 'name' => '服务保障'];
-        $datas['aboutus'] = ['url' => '/aboutus.html', 'name' => '关于我们'];
-        $datas['contactus'] = ['url' => '/contactus.html', 'name' => '联系我们'];
-
-        return $datas;
-    }
-
-    public function getRelatedInfos($model)
-    {
-        $preInfo = $model->find()->select('id, name, created_at, sort')->where(['and', "sort='{$model->sort}'", ['<', 'created_at', $model->created_at]])->orderBy('id DESC')->one();
-        $nextInfo = $model->find()->select('id, name, created_at, sort')->where(['and', "sort='{$model->sort}'", ['>', 'created_at', $model->created_at]])->one();
-        $rInfos = $model->getInfos(['site_code' => $this->siteCode, 'sort' => $model->sort], 5);
-        if (count($rInfos) < 5) {
-            $ext = $model->getInfos(['site_code' => $this->siteCode], (5 - count($rInfos)));
-            $rInfos = array_merge($rInfos, $ext);
-        }
-        $rInfoFormated = [];
-        $i = 1;
-        foreach ($rInfos as $key => $info) {
-            if ($info['id'] != $model->id && $i < 5) {
-                $rInfoFormated[] = $info;
-                $i++;
-            }
-        }
-        $datas = [
-            'preInfo' => $preInfo,
-            'nextInfo' => $nextInfo,
-            'rInfos' => $rInfoFormated,
-        ];
-        return $datas;
-    }
-
-    public function getAdDatas($params)
-    {
-        $model = new Adpicture();
-        $datas = $model->getInfos($params);
-        return $datas;
-    }
-
-    protected function getSiteInfos()
-    {
-        $infos = Site::find()->indexBy('code')->all();
-        return $infos;
-    }
-
-    protected function getSortInfos()
-    {
-        $infos = Sort::find()->all();
+        $sort = Yii::$app->request->get('scode');
+        $infos = Sort::find()->indexBy('code')->all();
+        $sorts = isset($this->currentSiteInfo['sort']) ? $this->currentSiteInfo['sort'] : [];
         $datas = [];
-        foreach ($infos as $info) {
-            $datas[$info['site_code']][$info['code']] = $info;
+        foreach ($sorts as $sort) {
+            $datas[$sort] = $infos[$sort];
         }
-
-        return $datas;
+        $sort = in_array($sort, array_keys($datas)) ? $sort : null;
+        if (!empty($sort)) {
+            $this->currentSort = $sort;
+            $this->currentSortInfo = $datas[$sort];
+        }
+        $this->sortInfos = $datas;
     }
+
+	protected function initSiteInfo()
+	{
+        $siteCode = Yii::$app->request->get('mcode');
+        var_dump($siteCode);exit();
+        if (!in_array($siteCode, array_keys($this->siteInfos))) {
+            $siteCode = in_array($this->host, [Yii::getAlias('@shoot.ifeedurl'), Yii::getAlias('@m.shoot.ifeedurl')]) ? 'shoot' : false;
+        }
+        if (empty($siteCode)) {
+           exit('404' . $siteCode);
+        }
+        $this->currentSiteInfo = $this->siteInfos[$siteCode];
+        $this->clientType = $this->host == Yii::getAlias('@m.shoot.ifeedurl') ? 'mobile' : 'pc';
+        $this->module->viewPath .= '/hulian';
+
+        Yii::$app->params['siteName'] = $this->currentSiteInfo['name'];
+        Yii::$app->params['siteNameBase'] = $this->currentSiteInfo['name'];
+        Yii::$app->params['siteQQ'] = '2376816784';
+        Yii::$app->params['siteIcpInfo'] = $this->currentSiteInfo['icp'];
+		return ;
+	}
+
+	protected function getSiteInfos()
+	{
+        $file = Yii::getAlias('@app') . "/config/params-sitelist.php";
+        $datas = file_exists($file) ? require($file) : [];
+        return $datas;
+	}
 }

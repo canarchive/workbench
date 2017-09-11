@@ -1,7 +1,7 @@
 <?php
 $siteCode = $this->context->siteCode;
 $adParams = ['site_code' => $siteCode, 'position' => 'slide-mobile'];
-$adInfos = $this->context->getAdDatas($adParams);
+$adInfos = [];//$this->context->getAdDatas($adParams);
 ?>
 <nav class="index_banner swiper-container" style="width: 100%;margin-top: 0rem">
     <ul class="swiper-wrapper">

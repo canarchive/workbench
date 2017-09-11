@@ -1,12 +1,12 @@
 <?php
 
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
 use Yii;
 use yii\helpers\Url;
-use gallerycms\components\ShootController;
-use gallerycms\shoot\models\Guestbook;
-use gallerycms\shoot\models\Sample;
+use ifeed\components\ShootController;
+use ifeed\shoot\models\Guestbook;
+use ifeed\shoot\models\Sample;
 
 class ApplyController extends ShootController
 {

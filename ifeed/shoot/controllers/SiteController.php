@@ -1,13 +1,11 @@
 <?php
 
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
-use Yii;
-use gallerycms\components\ShootController;
-use gallerycms\shoot\models\Sample;
-use gallerycms\shoot\models\Info;
+use ifeed\shoot\models\Sample;
+use ifeed\shoot\models\Info;
 
-class SiteController extends ShootController
+class SiteController extends Controller
 {
 
 	public function actionIndex()
@@ -17,9 +15,9 @@ class SiteController extends ShootController
 			'sampleInfos' => $this->getSampleInfos(),
 		];
         $tdkData = [
-            'title' => $this->currentSiteInfo['meta_title'],
-            'keyword' => $this->currentSiteInfo['meta_keyword'],
-            'description' => $this->currentSiteInfo['meta_description'],
+            'title' => $this->currentSiteInfo['title'],
+            'keyword' => $this->currentSiteInfo['keyword'],
+            'description' => $this->currentSiteInfo['description'],
         ];
 		$this->getTdkInfos('site-index', [], $tdkData);
 		$this->currentElem = 'index';
@@ -30,7 +28,7 @@ class SiteController extends ShootController
     protected function getSampleInfos()
     {
 		$model = new Sample();
-        $model->sortInfos = $this->currentSortInfos;
+        $model->sortInfos = $this->sortInfos;
         $model->siteCode = $this->siteCode;
 		$infos = $model->getIndexInfos([], 20);
 		return $infos;

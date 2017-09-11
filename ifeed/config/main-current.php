@@ -1,6 +1,6 @@
 <?php
 $routeRules = array_merge(
-	[]//require(__DIR__ . '//rule.php')
+	require(__DIR__ . '/shoot/rule.php')
 );
 //print_r($routeRules);exit();
 return [
@@ -10,8 +10,8 @@ return [
 		],
 	],
     'modules' => [
-        '' => [
-            'class' => 'merchant\\Module',
+        'shoot' => [
+            'class' => 'ifeed\shoot\Module',
         ],
     ],
 ];

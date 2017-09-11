@@ -1,9 +1,9 @@
 <?php
 
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
 use Yii;
-use gallerycms\shoot\models\SignupForm;
+use ifeed\shoot\models\SignupForm;
 
 class SignupController extends Controller
 {

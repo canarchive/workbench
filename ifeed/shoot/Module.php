@@ -1,6 +1,6 @@
 <?php
 
-namespace gallerycms\shoot;
+namespace ifeed\shoot;
 
 use common\components\ModuleBase;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace gallerycms\shoot\controllers;
+namespace ifeed\shoot\controllers;
 
 use Yii;
 use yii\web\NotFoundHttpException;
 use yii\helpers\StringHelper;
-use gallerycms\components\ShootController;
-use gallerycms\shoot\models\Info;
-use gallerycms\shoot\models\Category;
+use ifeed\components\ShootController;
+use ifeed\shoot\models\Info;
+use ifeed\shoot\models\Category;
 
 class InfoController extends ShootController
 {
