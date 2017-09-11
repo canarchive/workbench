@@ -2,7 +2,7 @@
 
 namespace ifeed\shoot\models\searchs;
 
-use ifeed\models\searchs\FriendlinkTrait;
+use baseapp\ifeed\models\searchs\FriendlinkTrait;
 use ifeed\shoot\models\Friendlink AS FriendlinkModel;
 
 class Friendlink extends FriendlinkModel

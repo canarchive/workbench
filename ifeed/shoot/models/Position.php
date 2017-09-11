@@ -2,9 +2,9 @@
 
 namespace ifeed\shoot\models;
 
-use ifeed\models\Position as PositionBase;
+use baseapp\common\models\PositionTrait;
 
-class Position extends PositionBase
+class Position extends BaseModel
 {
-    use ModelTrait;
+    use PositionTrait;
 }

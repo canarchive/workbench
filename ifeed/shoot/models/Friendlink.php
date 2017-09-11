@@ -2,9 +2,9 @@
 
 namespace ifeed\shoot\models;
 
-use ifeed\models\Friendlink as FriendlinkBase;
+use baseapp\ifeed\models\FriendlinkTrait;
 
-class Friendlink extends FriendlinkBase
+class Friendlink extends BaseModel
 {
-    use ModelTrait;
+    use FriendlinkTrait;
 }

@@ -2,17 +2,10 @@
 
 namespace ifeed\shoot\models\searchs;
 
-use yii\data\ActiveDataProvider;
-use ifeed\shoot\models\Sort as SortModel;
+use baseapp\common\models\searchs\SortTrait;
+use ifeed\shoot\models\Sort AS SortModel;
 
 class Sort extends SortModel
 {
-    public function search($params)
-    {
-        $query = self::find();
-
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        return $dataProvider;
-    }
+    use SortTrait;
 }

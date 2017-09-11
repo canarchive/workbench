@@ -111,4 +111,26 @@ class Sample extends BaseModel
     {
 		return $this->_getThumb('sample', 'picture');
     }
+
+    public function nameByUrl()
+    {
+        return '';
+    }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'atag', 'urlType' => 'inline', 'urlMethod' => 'nameByUrl'],
+            'title' => ['type' => 'common'],
+			'site_code' => ['type' => 'key'],
+			'sort' => ['type' => 'key'],
+            'picture' => ['type' => 'imgtag'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
+            'description' => ['type' => 'common', 'listNo' => true],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+			'status' => ['type' => 'key'],
+        ];
+    }
 }
