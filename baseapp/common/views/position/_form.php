@@ -7,6 +7,7 @@ $model->picture = $model->getAttachmentIds('position', 'picture');
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
     <?= $form->field($model, 'name')->textInput() ?>
     <?= $form->field($model, 'name_ext')->textInput() ?>
+    <?= $form->field($model, 'site_code')->dropDownList($model->siteCodeInfos); ?>
     <?= $form->field($model, 'sort')->dropDownList($model->sortInfos); ?>
     <?= $form->field($model, 'url')->textInput() ?>
     <?= $form->field($model, 'orderlist')->textInput() ?>
