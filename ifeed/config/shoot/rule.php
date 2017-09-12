@@ -1,13 +1,45 @@
 <?php
 $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
     'index' => [
+		'ignoreDomain' => true,
         'data' => [
 			'suffix' => '',
-            'pattern' => '/',
+            'pattern' => Yii::getAlias('@shoot.ifeedurl'),
             'route' => '/shoot/site/index', 
         ],
     ],
-    'sample-show' => [
+    'sort' => [
+		'ignoreDomain' => true,
+        'data' => [
+			'suffix' => '',
+            'pattern' => Yii::getAlias('@sort.ifeedurl'),
+            'route' => '/shoot/sample/index', 
+        ],
+    ],
+    'merchant' => [
+		'ignoreDomain' => true,
+        'data' => [
+			'suffix' => '',
+            'pattern' => Yii::getAlias('@merchant.ifeedurl'),
+            'route' => '/shoot/site/index', 
+        ],
+    ],
+    'merchantsort' => [
+		'ignoreDomain' => true,
+        'data' => [
+			'suffix' => '',
+            'pattern' => Yii::getAlias('@merchantsort.ifeedurl'),
+            'route' => '/shoot/site/index', 
+        ],
+    ],
+    'sitemap' => [
+        'data' => [
+            'suffix' => '.xml',
+            'pattern' => '/sitemap',
+            'route' => '/shoot/sitemap/index', 
+        ],
+    ],
+    /*'sample-show' => [
         'data' => [
             'suffix' => '.html',
     		'pattern' => '/caseshow_<id:\d+>',
@@ -28,7 +60,7 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
             'route' => '/shoot/aboutus/index', 
         ],
     ],
-    /*'presell-signup' => [
+    'presell-signup' => [
         'data' => [
             'pattern' => '/pre-signup',
             'route' => '/{{SORT}}/presell/signup',

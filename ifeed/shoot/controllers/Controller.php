@@ -17,6 +17,7 @@ class Controller extends Controllerbase
 
     public function init()
     {
+        $this->currentSort = Yii::$app->request->get('scode');
         parent::init();
 
         $this->initSort();
@@ -40,17 +41,15 @@ class Controller extends Controllerbase
 
     protected function initSort()
     {
-        $sort = Yii::$app->request->get('scode');
         $infos = Sort::find()->indexBy('code')->all();
         $sorts = isset($this->currentSiteInfo['sort']) ? $this->currentSiteInfo['sort'] : [];
         $datas = [];
         foreach ($sorts as $sort) {
             $datas[$sort] = $infos[$sort];
         }
-        $sort = in_array($sort, array_keys($datas)) ? $sort : null;
-        if (!empty($sort)) {
-            $this->currentSort = $sort;
-            $this->currentSortInfo = $datas[$sort];
+        $this->currentSort = in_array($this->currentSort, array_keys($datas)) ? $this->currentSort : null;
+        if (!empty($this->currentSort)) {
+            $this->currentSortInfo = $datas[$this->currentSort];
         }
         $this->sortInfos = $datas;
     }
@@ -58,13 +57,15 @@ class Controller extends Controllerbase
 	protected function initSiteInfo()
 	{
         $siteCode = Yii::$app->request->get('mcode');
-        //var_dump($siteCode);exit();
         if (!in_array($siteCode, array_keys($this->siteInfos))) {
             $siteCode = in_array($this->host, [Yii::getAlias('@shoot.ifeedurl'), Yii::getAlias('@m.shoot.ifeedurl')]) ? 'shoot' : false;
+			$siteCode = empty($siteCode) && !empty($this->currentSort) ? 'shoot' : false;
         }
         if (empty($siteCode)) {
            exit('404' . $siteCode);
         }
+		$this->siteCode = $siteCode;
+        //var_dump($siteCode);exit();
         $this->currentSiteInfo = $this->siteInfos[$siteCode];
         $this->clientType = $this->host == Yii::getAlias('@m.shoot.ifeedurl') ? 'mobile' : 'pc';
         $this->module->viewPath .= '/hulian';

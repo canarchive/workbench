@@ -18,7 +18,8 @@ return [
         'description' => '【右视觉官网】-北京明星写真摄影机构，于2009年成立，旗下主营业务：明星写真,个人艺术写真，,个人写真,写真摄影,男士写真,肖像摄影, 个人写真照，全国客服热线：400-090-1916。',
     ],
     'hstudio' => [
-        'name' => '',
+        'name' => '韩涵工作室',
+		'sort' => ['commercial', 'portrait', 'wedding', 'auto'],
         'icp' => '',
         'title' => '',
         'keyword' => '',
