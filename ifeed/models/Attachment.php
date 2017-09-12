@@ -2,11 +2,17 @@
 
 namespace ifeed\models;
 
+use Yii;
 use common\models\IfeedModel;
 use common\models\Attachment as AttachmentBase;
 
 class Attachment extends AttachmentBase
 {
+    public static function getDb()
+    {
+        return Yii::$app->dbShoot;
+    }    
+
     /**
      * @inheritdoc
      */
