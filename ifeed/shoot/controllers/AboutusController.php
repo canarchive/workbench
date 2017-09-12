@@ -4,10 +4,9 @@ namespace ifeed\shoot\controllers;
 
 use Yii;
 use yii\helpers\Url;
-use ifeed\components\ShootController;
 use ifeed\shoot\models\Guestbook;
 
-class AboutusController extends ShootController
+class AboutusController extends Controller
 {
 	public function actionIndex()
 	{

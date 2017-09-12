@@ -4,10 +4,9 @@ namespace ifeed\shoot\controllers;
 
 use Yii;
 use yii\web\NotFoundHttpException;
-use ifeed\components\ShootController;
 use ifeed\shoot\models\Sample;
 
-class SampleController extends ShootController
+class SampleController extends Controller
 {
     public function init()
     {

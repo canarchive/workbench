@@ -58,7 +58,7 @@ class Controller extends Controllerbase
 	protected function initSiteInfo()
 	{
         $siteCode = Yii::$app->request->get('mcode');
-        var_dump($siteCode);exit();
+        //var_dump($siteCode);exit();
         if (!in_array($siteCode, array_keys($this->siteInfos))) {
             $siteCode = in_array($this->host, [Yii::getAlias('@shoot.ifeedurl'), Yii::getAlias('@m.shoot.ifeedurl')]) ? 'shoot' : false;
         }
