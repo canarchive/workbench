@@ -14,7 +14,7 @@
                 <ul>
                     <?php foreach ($data['infos'] as $info) { ?>
                     <li>
-                        <a href="<?= "/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+                        <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
                             <div class="viimg pre">
                                 <i class="xj"></i>
 								<img src="<?= $info->resizePic('thumb', 293, 450); ?>" alt="<?= $info['name']; ?>摄影图片"/>

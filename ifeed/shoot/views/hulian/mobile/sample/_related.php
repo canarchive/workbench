@@ -2,7 +2,7 @@
 <ul class="category">
     <?php foreach ($infos['rInfos'] as $info) { ?>
     <li>
-        <a href="<?= "/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+        <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
             <div>
                 <img src="<?= $info->resizePic('thumb', 280, 440); ?>" alt="<?= $info['name']; ?>" />
             </div>
@@ -22,7 +22,7 @@
 <div class="biaoda">
         <?php foreach ($infos['rInfos'] as $info) { ?>
     <div class="biaodan">
-        <a href="<?= "/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+        <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
             <div class="tupian">
                 <img src="<?= $info->resizePic('thumb', 280, 440); ?>" alt="<?= $info['name']; ?>" />
             </div>

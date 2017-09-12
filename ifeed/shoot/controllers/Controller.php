@@ -9,6 +9,7 @@ class Controller extends Controllerbase
 {
     use ControllerTrait;
 
+	public $currentDomain;
     public $currentSort;
     public $currentSortInfo;
     public $sortInfos;
@@ -59,7 +60,7 @@ class Controller extends Controllerbase
         $siteCode = Yii::$app->request->get('mcode');
         if (!in_array($siteCode, array_keys($this->siteInfos))) {
             $siteCode = in_array($this->host, [Yii::getAlias('@shoot.ifeedurl'), Yii::getAlias('@m.shoot.ifeedurl')]) ? 'shoot' : false;
-			$siteCode = empty($siteCode) && !empty($this->currentSort) ? 'shoot' : false;
+			$siteCode = !empty($siteCode) ? $siteCode : (!empty($this->currentSort) ? 'shoot' : false);
         }
         if (empty($siteCode)) {
            exit('404' . $siteCode);
@@ -69,6 +70,13 @@ class Controller extends Controllerbase
         $this->currentSiteInfo = $this->siteInfos[$siteCode];
         $this->clientType = $this->host == Yii::getAlias('@m.shoot.ifeedurl') ? 'mobile' : 'pc';
         $this->module->viewPath .= '/hulian';
+
+		if ($this->clientType == 'mobile') {
+			$this->currentDomain = Yii::getAlias('@m.shoot.ifeedurl');
+		} else {
+			$domainBase = Yii::getAlias('@domain-base');
+			$this->currentDomain = $this->siteCode == 'shoot' ? Yii::getAlias('@shoot.ifeedurl') : "http://sj{$this->siteCode}.{$domainBase}";
+		}
 
         Yii::$app->params['siteName'] = $this->currentSiteInfo['name'];
         Yii::$app->params['siteNameBase'] = $this->currentSiteInfo['name'];

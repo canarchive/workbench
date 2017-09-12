@@ -1,6 +1,7 @@
 <?php
 namespace ifeed\shoot\controllers;
 
+use Yii;
 use ifeed\shoot\models\Friendlink;
 use ifeed\shoot\models\Adpicture;
 
@@ -17,11 +18,11 @@ trait ControllerTrait
     {
         $datas = [
             'index' => [
-                'url' => '/',
+                'url' => $this->currentDomain,
                 'name' => '首页',
             ],
             'case' => [
-                'url' => '/case/',
+                'url' => $this->getSortUrl('all'),
                 'name' => '摄影作品',
                 'subDatas' => [],
             ],
@@ -31,23 +32,33 @@ trait ControllerTrait
                 continue;
             }
             $datas['case']['subDatas'][$sort] = [
-                'url' => "/case_{$sort}/",
+                'url' => $this->getSortUrl($sort),
                 'name' => $sInfo['name'],
             ];
         }
-        $datas['flow'] = ['url' => '/flow.html', 'name' => '拍摄流程'];
-        $datas['guarantee'] = ['url' => '/guarantee.html', 'name' => '服务保障'];
-        $datas['aboutus'] = ['url' => '/aboutus.html', 'name' => '关于我们'];
-        $datas['contactus'] = ['url' => '/contactus.html', 'name' => '联系我们'];
+        $datas['flow'] = ['url' => $this->currentDomain . '/flow.html', 'name' => '拍摄流程'];
+        $datas['guarantee'] = ['url' => $this->currentDomain . '/guarantee.html', 'name' => '服务保障'];
+        $datas['aboutus'] = ['url' => $this->currentDomain . '/aboutus.html', 'name' => '关于我们'];
+        $datas['contactus'] = ['url' => $this->currentDomain . '/contactus.html', 'name' => '联系我们'];
 
         return $datas;
     }
 
+	public function getSortUrl($sort)
+	{
+		if ($this->clientType == 'mobile') {
+			return $this->currentDomain . "/sj{$this->siteCode}-lm{$sort}/";
+		} else {
+			$domainBase = Yii::getAlias('@domain-base');
+			return $this->siteCode == 'shoot' ? "http://lm{$sort}.{$domainBase}/" : "http://sj{$this->siteCode}-lm{$sort}.{$domainBase}/";
+		}
+	}
+
     public function getRelatedInfos($model)
     {
-        $preInfo = $model->find()->select('id, name, created_at, sort')->where(['and', "sort='{$model->sort}'", ['<', 'created_at', $model->created_at]])->orderBy('id DESC')->one();
-        $nextInfo = $model->find()->select('id, name, created_at, sort')->where(['and', "sort='{$model->sort}'", ['>', 'created_at', $model->created_at]])->one();
-        $rInfos = $model->getInfos(['site_code' => $this->siteCode, 'sort' => $model->sort], 5);
+        $preInfo = $model->find()->select('id, name, created_at, sort')->where(['and', ['and', "site_code='{$this->siteCode}'", "sort='{$model->sort}'"], ['<', 'created_at', $model->created_at]])->orderBy('id DESC')->one();
+        $nextInfo = $model->find()->select('id, name, created_at, sort')->where(['and', ['and', "site_code='{$this->siteCode}'", "sort='{$model->sort}'"], ['>', 'created_at', $model->created_at]])->one();
+        $rInfos = $model->getInfos(['where' => ['site_code' => $this->siteCode, 'sort' => $model->sort], 'limit' => 5]);
         if (count($rInfos) < 5) {
             $ext = $model->getInfos(['site_code' => $this->siteCode], (5 - count($rInfos)));
             $rInfos = array_merge($rInfos, $ext);

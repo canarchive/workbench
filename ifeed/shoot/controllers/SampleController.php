@@ -17,8 +17,8 @@ class SampleController extends Controller
 	public function actionIndex()
 	{
         $page = Yii::$app->request->get('page');
-        $page = str_replace('_', '', $page);
-        $sort = strval(substr(Yii::$app->request->get('sort'), 1));
+        //$page = str_replace('_', '', $page);
+        $sort = $this->currentSort;
         $this->currentPage = 'sample-' . $sort;
 		$this->currentElem = 'case';//$sort;
 		$this->currentSubElem = $sort;
@@ -28,7 +28,7 @@ class SampleController extends Controller
         $where = empty($sort) ? ['status' => 1, 'site_code' => $this->siteCode] : ['status' => 1, 'site_code' => $this->siteCode, 'sort' => $sort];
 		$model = new Sample();
         $orderBy = ['orderlist' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12, 'pagePreStr' => '_']);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
 		$datas = [
             'sort' => $sort,
             'sortName' => $sortName,

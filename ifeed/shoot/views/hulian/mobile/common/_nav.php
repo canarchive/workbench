@@ -1,10 +1,10 @@
 <?php
 //$navDatas = $this->context->navDatas;
 $navDatas = [
-    'index' => ['url' => '/', 'name' => '首页HOME'],
+    'index' => ['url' => $this->context->currentDomain, 'name' => '首页HOME'],
     'location' => ['url' => '/case/', 'name' => '作品欣赏'],
-    'container' => ['url' => '/aboutus.html', 'nofollow' => true, 'name' => '公司简介'],
-    'nav' => ['url' => '/contactus.html', 'nofollow' => true, 'name' => '联系我们'],
+    'container' => ['url' => $this->context->currentDomain . '/aboutus.html', 'nofollow' => true, 'name' => '公司简介'],
+    'nav' => ['url' => $this->context->currentDomain . '/contactus.html', 'nofollow' => true, 'name' => '联系我们'],
 ];
 $caseDatas = $this->context->navDatas['case']['subDatas'];
 ?>

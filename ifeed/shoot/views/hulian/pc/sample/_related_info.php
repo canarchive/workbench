@@ -1,10 +1,10 @@
 <?php
 $preInfo = $infos['preInfo'];
-$preUrl = empty($preInfo) ? 'javascript: void(0)' : "/caseshow_{$preInfo['id']}.html";
+$preUrl = empty($preInfo) ? 'javascript: void(0)' : "{$this->context->currentDomain}/caseshow_{$preInfo['id']}.html";
 $preName = empty($preInfo) ? '没有了' : $preInfo['name'];
 $preThumb = empty($preInfo) ? '' : "<img src='" . $preInfo->resizePic('thumb', 124, 88) . "' class='fl' title='{$preName}' />";
 $nextInfo = $infos['nextInfo'];
-$nextUrl = empty($nextInfo) ? 'javascript: void(0)' : "/caseshow_{$nextInfo['id']}.html";
+$nextUrl = empty($nextInfo) ? 'javascript: void(0)' : "{$this->context->currentDomain}/caseshow_{$nextInfo['id']}.html";
 $nextName = empty($nextInfo) ? '没有了' : $nextInfo['name'];
 $nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb', 124, 88) . "' class='fr' title='{$nextName}' />";
 ?>
@@ -36,7 +36,7 @@ $nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb'
 <ul class="swiper-wrapper cf">
         <?php foreach ($infos['rInfos'] as $info) { ?>
     <li class="swiper-slide">
-        <a href="<?= "/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+		<a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
             <div class="viimgz ">
             <img src="<?= $info->resizePic('thumb', 280, 440); ?>" data-cache="true" width="280" height="440" alt="<?= $info['name']; ?>" /></div>
             <p class="fs22 pt20"><?= $info['name']; ?></p>

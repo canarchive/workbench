@@ -10,7 +10,7 @@
     <ul class="clearfix">
         <?php foreach ($data['infos'] as $info) { ?>
         <li>
-            <a href="<?= "/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+            <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
                 <img src="<?= $info->resizePic('thumb', 280, 417); ?>" border="0" alt="<?= $info['name']; ?>"/></a>
         </li>
         <?php } ?>

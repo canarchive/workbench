@@ -14,7 +14,7 @@
     <ul class="index_list" style="margin-top: 7.5rem">
         <?php foreach ($infos as $info) { ?>
         <li>
-            <a href="<?= "/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+            <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
                 <div class="main_img">
                     <img src="<?= $info->resizePic('thumb', 500, 433); ?>" alt="<?= $info['name']; ?>摄影图片"/>
                 </div>
