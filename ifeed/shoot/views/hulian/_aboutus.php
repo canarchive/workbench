@@ -1,3 +1,8 @@
+<?php switch ($this->context->siteCode) { case 'eale': ?>
+abc
+<?php break; case 'hstudio': ?>
+hstudio
+<?php break; default: ?>
 <p>
 <a href="http://www.hulianyingxiang.cn">互联影像(http://www.hulianyingxiang.cn)</a>，隶属于北京维纳亚科技有限公司，是国内第一家专注产品商业广告拍摄的口碑摄影平台。涵盖电器产品拍摄，服装画册摄影，美食菜谱摄影制作，汽车广告摄影，地产广告宣传片拍摄等几大门类，集中了各个领域的精英摄影团队与摄影机构。给广大服务商家提供专业高效、高品质的影像输出服务。
 </p>
@@ -10,3 +15,4 @@
 <p>
 已经服务过的公司品牌：奔驰 宝马 奥迪 雷克萨斯 一汽大众 上海大众 北汽 联想 海尔 美的 西门子 万科 华润 金地 远洋 中粮 吉野家 DQ……
 </p>
+<?php } ?>

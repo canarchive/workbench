@@ -44,12 +44,12 @@ class Controller extends Controllerbase
     {
 		$sModel = new Sort();
 		$datas = $sModel->getInfosBySite();
+		$this->sortInfos = $sortInfos = isset($datas[$this->siteCode]) ? $datas[$this->siteCode] : [];
 
-        $this->currentSort = in_array($this->currentSort, array_keys($datas)) ? $this->currentSort : null;
+        $this->currentSort = in_array($this->currentSort, array_keys($sortInfos)) ? $this->currentSort : null;
         if (!empty($this->currentSort)) {
-            $this->currentSortInfo = $datas[$this->currentSort];
+            $this->currentSortInfo = $sortInfos[$this->currentSort];
         }
-        $this->sortInfos = $datas[$this->siteCode];
     }
 
 	protected function initSiteInfo()

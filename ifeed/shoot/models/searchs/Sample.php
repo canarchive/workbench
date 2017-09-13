@@ -7,12 +7,27 @@ use ifeed\shoot\models\Sample as SampleModel;
 
 class Sample extends SampleModel
 {
-    public function search($params)
+    public function rules()
     {
-        $query = self::find()->orderBy('id DESC');
-
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        return $dataProvider;
+        return [
+            [['site_code', 'sort'], 'safe'],
+        ];
     }
+
+    public function _searchElems()
+    {
+        return [
+            ['field' => 'site_code', 'type' => 'common'],
+            ['field' => 'sort', 'type' => 'common'],
+        ];
+    }
+
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sKeyParam(['field' => 'site_code']),
+            $this->_sPointParam(['field' => 'sort', 'table' => 'shoot-sort']),
+        ];
+        return ['list' => $list];
+	}
 }

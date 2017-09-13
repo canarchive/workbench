@@ -46,15 +46,6 @@ class Sample extends BaseModel
         ];
     }
 
-	protected function getSortInfos()
-	{
-		$datas = [
-			'seo' => 'SEO',
-			'sem' => '竞价',
-		];
-		return $datas;
-	}	
-
 	public function afterSave($insert, $changedAttributes)
 	{
         parent::afterSave($insert, $changedAttributes);
@@ -125,7 +116,7 @@ class Sample extends BaseModel
             'name' => ['type' => 'atag', 'urlType' => 'inline', 'urlMethod' => 'nameByUrl'],
             'title' => ['type' => 'common'],
 			'site_code' => ['type' => 'key'],
-			'sort' => ['type' => 'key'],
+			'sort' => ['type' => 'point', 'table' => 'shoot-sort'],
             'picture' => ['type' => 'imgtag'],
             'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
             'description' => ['type' => 'common', 'listNo' => true],

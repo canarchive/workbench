@@ -25,4 +25,12 @@ return [
         'keyword' => '',
         'description' => '',
     ],
+    'hgvisual' => [
+        'name' => '韩涵工作室',
+		'sort' => ['commercial', 'portrait', 'wedding', 'auto'],
+        'icp' => '',
+        'title' => '',
+        'keyword' => '',
+        'description' => '',
+    ],
 ];
