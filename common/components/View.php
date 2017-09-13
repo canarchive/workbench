@@ -89,8 +89,13 @@ class View extends ViewBase
         if (!isset($elem['menuCode'])) {
             return '';
         }
-        $menu = $this->getMenuData($elem['menuCode']);
-        $menu = empty($menu) ? $this->getMenuApp($elem['menuCode']) : $menu;
+		return $this->getMenuUrl($elem['menuCode']);
+	}
+
+	public function getMenuUrl($menuCode)
+	{
+        $menu = $this->getMenuData($menuCode);
+        $menu = empty($menu) ? $this->getMenuApp($menuCode) : $menu;
         return isset($menu['url']) ? $menu['url'] : '';
     }
 
