@@ -9,13 +9,13 @@ $params = array_merge(
 $currentMain = require(__DIR__ . '/main-current.php');
 
 return yii\helpers\ArrayHelper::merge([
-    'id' => 'app-merchant',
+    'id' => 'app-ifeed',
     'basePath' => dirname(__DIR__),
     //'viewPath' => '@merchant/views',
-    'controllerNamespace' => 'merchant\controllers',
+    'controllerNamespace' => 'ifeed\controllers',
     'components' => [
         'user' => [
-            'identityClass' => 'merchant\models\User',
+            'identityClass' => 'passport\models\User',
             'enableAutoLogin' => true,
             'loginUrl' => '/signin.html',
         ],
