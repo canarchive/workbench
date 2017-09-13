@@ -9,7 +9,7 @@ use yii\helpers\Url;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?php echo $form->field($model, 'site_code')->dropDownList($model->siteInfos, ['prompt' => '']); ?>
+    <?php echo $form->field($model, 'site_code')->dropDownList($model->siteCodeInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'code')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'brief')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'price_range')->textInput(['maxlength' => 128]) ?>

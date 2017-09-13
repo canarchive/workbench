@@ -2,11 +2,11 @@
 
 namespace backend\ifeed\controllers\shoot;
 
-use baseapp\common\controllers\SortTrait;
+use backend\components\ControllerTraitFull;
 
 class SortController extends Controller
 {
-    use SortTrait;
+    use ControllerTraitFull;
 	protected $modelClass = 'ifeed\shoot\models\Sort';
     protected $modelSearchClass = 'ifeed\shoot\models\searchs\Sort';
 

@@ -8,7 +8,6 @@ class Attachment extends AttachmentBase
 {
     public $urlPrefix = 'shoot';
     public $filePre = 'shoot/';
-    use ModelTrait;
     protected function _fieldInfos()
     {
         $fieldInfos = [

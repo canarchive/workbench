@@ -11,8 +11,8 @@ return [
     'eale' => [
         'name' => '右视觉',
         'icp' => '',
-        //'sort' => ['commercial', 'fashion', 'star', 'people'],
-        'sort' => ['auto', 'elec', 'fashion', 'still', 'cate'],
+        'sort' => ['commercial', 'fashion', 'star', 'people'],
+        //'sort' => ['auto', 'elec', 'fashion', 'still', 'cate'],
         'title' => '右视觉摄影官网_北京个人艺术写真_北京写真摄影_个人写真照_北京个人写真工作室',
         'keyword' => '北京个人写真摄影工作室, 北京个人艺术写真，北京写真摄影，个人写真照，北京个人写真,右视觉摄影,右视觉摄影工作室,右视觉官网',
         'description' => '【右视觉官网】-北京明星写真摄影机构，于2009年成立，旗下主营业务：明星写真,个人艺术写真，,个人写真,写真摄影,男士写真,肖像摄影, 个人写真照，全国客服热线：400-090-1916。',

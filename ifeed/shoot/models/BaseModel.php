@@ -14,15 +14,17 @@ class BaseModel extends BaseModelBase
 
     public function uploadUrl($table, $field, $id)
     {   
-        return Yii::getAlias('@shoot.cmsurl') . "/upload/{$table}/{$field}.html?mparam=shoot&id={$id}";
+        return Yii::getAlias('@shoot.ifeedurl') . "/upload/{$table}/{$field}.html?mparam=shoot&id={$id}";
     } 
 
     public function getSiteCodeInfos()
     {
-        return [
-            'shoot' => '互联影像',
-            'eale' => '右视觉',
-            'hstudio' => '韩涵摄影',
-        ];
+        $file = Yii::getAlias('@ifeed') . "/config/params-sitelist.php";
+        $infos = require($file);
+		$datas = [];
+		foreach ($infos as $code => $info) {
+			$datas[$code] = $info['name'];
+		}
+		return $datas;
     }
 }

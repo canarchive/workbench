@@ -42,17 +42,14 @@ class Controller extends Controllerbase
 
     protected function initSort()
     {
-        $infos = Sort::find()->indexBy('code')->all();
-        $sorts = isset($this->currentSiteInfo['sort']) ? $this->currentSiteInfo['sort'] : [];
-        $datas = [];
-        foreach ($sorts as $sort) {
-            $datas[$sort] = $infos[$sort];
-        }
+		$sModel = new Sort();
+		$datas = $sModel->getInfosBySite();
+
         $this->currentSort = in_array($this->currentSort, array_keys($datas)) ? $this->currentSort : null;
         if (!empty($this->currentSort)) {
             $this->currentSortInfo = $datas[$this->currentSort];
         }
-        $this->sortInfos = $datas;
+        $this->sortInfos = $datas[$this->siteCode];
     }
 
 	protected function initSiteInfo()
