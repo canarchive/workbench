@@ -2,6 +2,7 @@
 
 namespace ifeed\shoot\models;
 
+use Yii;
 use yii\helpers\ArrayHelper;
 
 class Sample extends BaseModel
@@ -114,7 +115,7 @@ class Sample extends BaseModel
 
     public function nameByUrl()
     {
-        return '';
+        return Yii::getAlias('@shoot.ifeedurl') . '/caseshow_' . $this->id . '.html';
     }
 
     protected function _getTemplateFields()
