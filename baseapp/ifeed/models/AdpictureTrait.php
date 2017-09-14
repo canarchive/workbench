@@ -6,6 +6,9 @@ use yii\helpers\ArrayHelper;
 
 Trait AdpictureTrait
 {
+	public $thumb;
+	public $picture;
+
     public static function tableName()
     {
         return '{{%adpicture}}';
@@ -109,6 +112,34 @@ Trait AdpictureTrait
         }
         return true;
     }
+
+    public function formatImgtag($field = null, $info = []) 
+    {   
+        return $this->getAttachmentImgtag('adpicture', $field);
+    } 
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'site_code' => ['type' => 'key'],
+            'page' => ['type' => 'key'],
+            'position' => ['type' => 'key'],
+            'url' => ['type' => 'common', 'method' => 'atag'],
+            'thumb' => ['type' => 'imgtag'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'status' => ['type' => 'key'],
+            'description' => ['type' => 'common', 'listNo' => true],
+        ];
+    }
+
+    public function getThumbUrl()
+    {   
+        return $this->_getThumb('adpicture', 'thumb');
+    } 
 
 	/*public function getInfos($where)
 	{

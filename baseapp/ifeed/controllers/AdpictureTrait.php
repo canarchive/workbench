@@ -12,6 +12,11 @@ trait AdpictureTrait
     
     use ControllerTraitFull;
 
+    public function getViewPrefix()
+    {
+        return "@baseapp/ifeed/views/adpicture/";
+    }
+
     public function init()
     {
         parent::init();
@@ -45,7 +50,7 @@ trait AdpictureTrait
     protected function _addData()
     {
         if ($this->attrParams['position'] != 'slide') {
-            throw new ForbiddenHttpException('您不能随意添加广告');
+            //throw new ForbiddenHttpException('您不能随意添加广告');
         }
         return $this->attrParams;
     }
