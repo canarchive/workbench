@@ -21,6 +21,7 @@ class SiteController extends Controller
         ];
 		$this->getTdkInfos('site-index', [], $tdkData);
 		$this->currentElem = 'index';
+        $this->formatMappingUrl('site-index');
 
 		return $this->render('index', $datas);
 	}

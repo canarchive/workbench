@@ -12,7 +12,7 @@ $this->params['noBanner'] = true;
     <ul class="clearfix">
         <?php foreach ($infos as $info) { ?>
         <li>
-            <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>" target="_blank">
+            <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name']; ?>">
                 <img src="<?= $info->resizePic('thumb', 280, 417); ?>" width="100%" border="0" alt="<?= $info['name']; ?>摄影图片"/></a>
         </li>
         <?php } ?>

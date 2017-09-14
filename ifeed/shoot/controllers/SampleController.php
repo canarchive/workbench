@@ -18,8 +18,7 @@ class SampleController extends Controller
 	{
         $page = Yii::$app->request->get('page');
         //$page = str_replace('_', '', $page);
-        $sort = Yii::$app->request->get('scode');
-		$sort = $sort == 'all' ? null : $sort;
+		$sort = $this->sourceSort == 'all' ? null : $this->sourceSort;
 		if ($sort !== $this->currentSort) {
             return $this->redirect($this->currentDomain)->send();
 		}
@@ -34,7 +33,7 @@ class SampleController extends Controller
         $where = empty($sort) ? ['status' => 1, 'site_code' => $this->siteCode] : ['status' => 1, 'site_code' => $this->siteCode, 'sort' => $sort];
 		$model = new Sample();
         $orderBy = ['orderlist' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 2]);
 		$datas = [
             'sort' => $sort,
             'sortName' => $sortName,
@@ -46,8 +45,9 @@ class SampleController extends Controller
 		];
 		$pageStr = $page > 1 ? "第{$page}页_" : '';
 
-		$this->pcMappingUrl = preg_replace('#_\d*/#', '/', $this->pcMappingUrl);
-		$this->mobileMappingUrl = preg_replace('#_\d*/#', '/', $this->mobileMappingUrl);
+        $this->formatMappingUrl('sample-index', ['page' => $page]);
+		//$this->pcMappingUrl = preg_replace('#_\d*/#', '/', $this->pcMappingUrl);
+		//$this->mobileMappingUrl = preg_replace('#_\d*/#', '/', $this->mobileMappingUrl);
 
 		$dataTdk = ['{{PAGESTR}}' => $pageStr];
 		$tdkInfo = [];
@@ -79,6 +79,7 @@ class SampleController extends Controller
 			'info' => $info,
             'relatedInfos' => $relatedInfos,
 		];
+        $this->formatMappingUrl('sample-show', ['id' => $id]);
 		return $this->render('show', $datas);
 	}
 }

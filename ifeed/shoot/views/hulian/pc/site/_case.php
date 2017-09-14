@@ -3,7 +3,7 @@
     <div class="hengqie">
         <div class="china">
             <div class="ct6 ert">
-                <a href="/case_<?= $sort; ?>/">
+                <a href="<?= $this->context->getSortUrl($sort); ?>">
                     <div class="ertcon">
                         <span class="p2"><?= $data['name']; ?>作品</span>
                         <span class="p1 fs18"><?= $data['brief']; ?></span>
@@ -14,7 +14,7 @@
                 <ul>
                     <?php foreach ($data['infos'] as $info) { ?>
                     <li>
-                        <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+                        <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name']; ?>">
                             <div class="viimg pre">
                                 <i class="xj"></i>
 								<img src="<?= $info->resizePic('thumb', 293, 450); ?>" alt="<?= $info['name']; ?>摄影图片"/>

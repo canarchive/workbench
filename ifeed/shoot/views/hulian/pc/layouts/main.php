@@ -14,7 +14,7 @@ $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['assetSor
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';
 if (isMobile == 1) {
-    //window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
+    window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
 }
 </script>
 <a name="top" id="top"></a>

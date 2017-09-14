@@ -3,11 +3,11 @@ $this->params['noBanner'] = true;
 ?>
 <div class="crumbs">
     <!--<span>您的当前位置：</span>-->
-    <a href="/" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
+    <a href="<?= $this->context->currentDomain; ?>" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
     <span> > </span>
-    <a href="/case/" title="<?= $this->context->currentSiteInfo['name'] . '作品展示'; ?>">作品展示</a>
+    <a href="<?= $this->context->getSortUrl('all'); ?>" title="<?= $this->context->currentSiteInfo['name'] . '作品展示'; ?>">作品展示</a>
     <span>> </span>
-    <a href="/case_<?= $info['sort']; ?>/" title="<?= $this->context->sortInfos[$info['sort']]['name'] . '作品展示'; ?>"><?= $this->context->sortInfos[$info['sort']]['name']; ?>作品展示</a>
+    <a href="<?= $this->context->getSortUrl($info['sort']); ?>" title="<?= $this->context->sortInfos[$info['sort']]['name'] . '作品展示'; ?>"><?= $this->context->sortInfos[$info['sort']]['name']; ?>作品展示</a>
     <span>> </span>
     <a class="last_child" href="javascript:void(0);"><?= $info['name']; ?></a>
 

@@ -24,6 +24,15 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
             'route' => '/shoot/site/index', 
         ],
     ],
+    'merchantsort' => [
+		'noDomain' => true,
+        'data' => [
+			'suffix' => '/',
+            'pattern' => Yii::getAlias('@merchantsort.ifeedurl') . '/<page:[0-9]+>',
+    		'defaults' => ['page' => '1'],
+            'route' => '/shoot/sample/index', 
+        ],
+    ],
     'sort' => [
 		'noDomain' => true,
         'data' => [
@@ -39,15 +48,6 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
 			'suffix' => '',
             'pattern' => Yii::getAlias('@merchant.ifeedurl'),
             'route' => '/shoot/site/index', 
-        ],
-    ],
-    'merchantsort' => [
-		'noDomain' => true,
-        'data' => [
-			'suffix' => '',
-            'pattern' => Yii::getAlias('@merchantsort.ifeedurl') . '/<page:[0-9]+>',
-    		'defaults' => ['page' => '1'],
-            'route' => '/shoot/sample/index', 
         ],
     ],
     'msort' => [
@@ -79,6 +79,14 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
         'data' => [
             'pattern' => '/stat',
             'route' => '/site/stat', 
+        ],
+    ],
+    'sample-show-m' => [
+		'noDomain' => true,
+        'data' => [
+            'suffix' => '.html',
+    		'pattern' => Yii::getAlias('@m.shoot.ifeedurl') . '/sj<mcode:(eale|hstudio)>/caseshow_<id:\d+>',
+    		'route'	=> '/shoot/sample/show',
         ],
     ],
     'sample-show' => [

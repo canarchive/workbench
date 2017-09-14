@@ -47,7 +47,8 @@ trait ControllerTrait
 	public function getSortUrl($sort)
 	{
 		if ($this->clientType == 'mobile') {
-			return $this->currentDomain . "/sj{$this->siteCode}-lm{$sort}/";
+            $sortStr = $this->siteCode == 'shoot' ? "/lm{$sort}/" : "/sj{$this->siteCode}-lm{$sort}/";
+			return $this->currentDomain . $sortStr;
 		} else {
 			$domainBase = Yii::getAlias('@domain-base');
 			return $this->siteCode == 'shoot' ? "http://lm{$sort}.{$domainBase}/" : "http://sj{$this->siteCode}-lm{$sort}.{$domainBase}/";
@@ -60,7 +61,7 @@ trait ControllerTrait
         $nextInfo = $model->find()->select('id, name, created_at, sort')->where(['and', ['and', "site_code='{$this->siteCode}'", "sort='{$model->sort}'"], ['>', 'created_at', $model->created_at]])->one();
         $rInfos = $model->getInfos(['where' => ['site_code' => $this->siteCode, 'sort' => $model->sort], 'limit' => 5]);
         if (count($rInfos) < 5) {
-            $ext = $model->getInfos(['site_code' => $this->siteCode], (5 - count($rInfos)));
+            $ext = $model->getInfos(['where' => ['site_code' => $this->siteCode], 'limit' => (5 - count($rInfos))]);
             $rInfos = array_merge($rInfos, $ext);
         }
         $rInfoFormated = [];

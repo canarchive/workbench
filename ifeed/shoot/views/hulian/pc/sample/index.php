@@ -15,7 +15,7 @@ use yii\widgets\LinkPager;
         <ul class="cf">
             <?php foreach ($infos as $info) { ?>
             <li>
-                <a href="<?= "{$this->context->currentDomain}/caseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>" target="_blank">
+                <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name']; ?>">
                     <div class="viimg pre">
                         <i class="xj"></i>
                         <img src="<?= $info->resizePic('thumb', 293, 450); ?>" data-cache="true" alt="<?= $info['name']; ?>摄影图片"/></div>

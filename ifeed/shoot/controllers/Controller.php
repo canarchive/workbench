@@ -9,7 +9,9 @@ class Controller extends Controllerbase
 {
     use ControllerTrait;
 
+    public $domainBase;
 	public $currentDomain;
+    public $sourceSort;
     public $currentSort;
     public $currentSortInfo;
     public $sortInfos;
@@ -18,12 +20,11 @@ class Controller extends Controllerbase
 
     public function init()
     {
-        $this->currentSort = Yii::$app->request->get('scode');
+        $this->sourceSort = Yii::$app->request->get('scode');
+        $this->domainBase = Yii::getAlias('@domain-base');
         parent::init();
 
         $this->initSort();
-		//$this->pcMappingUrl = $this->currentSiteInfo['domain'] . Yii::$app->request->url;
-        //$this->mobileMappingUrl = $this->currentSiteInfo['domain_mobile'] . Yii::$app->request->url;
     }
 
 	protected function _redirectRule()
@@ -46,7 +47,7 @@ class Controller extends Controllerbase
 		$datas = $sModel->getInfosBySite();
 		$this->sortInfos = $sortInfos = isset($datas[$this->siteCode]) ? $datas[$this->siteCode] : [];
 
-        $this->currentSort = in_array($this->currentSort, array_keys($sortInfos)) ? $this->currentSort : null;
+        $this->currentSort = in_array($this->sourceSort, array_keys($sortInfos)) ? $this->sourceSort : null;
         if (!empty($this->currentSort)) {
             $this->currentSortInfo = $sortInfos[$this->currentSort];
         }
@@ -71,8 +72,7 @@ class Controller extends Controllerbase
 		if ($this->clientType == 'mobile') {
 			$this->currentDomain = Yii::getAlias('@m.shoot.ifeedurl');
 		} else {
-			$domainBase = Yii::getAlias('@domain-base');
-			$this->currentDomain = $this->siteCode == 'shoot' ? Yii::getAlias('@shoot.ifeedurl') : "http://sj{$this->siteCode}.{$domainBase}";
+			$this->currentDomain = $this->siteCode == 'shoot' ? Yii::getAlias('@shoot.ifeedurl') : "http://sj{$this->siteCode}.{$this->domainBase}";
 		}
 
         Yii::$app->params['siteName'] = $this->currentSiteInfo['name'];
@@ -97,4 +97,53 @@ class Controller extends Controllerbase
         $qqUrl = "http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes";
 		return $this->clientType == 'mobile' ? $qqMobile : $qqUrl;
 	}
+
+    public function formatMappingUrl($page, $params = [])
+    {
+        $sort = $this->sourceSort == $this->currentSort ? $this->currentSort : null;
+        $sortStr = empty($sort) ? '' : "lm{$sort}";
+
+        $pcDomain = Yii::getAlias('@shoot.ifeedurl');
+        $mobileDomain = Yii::getAlias('@m.shoot.ifeedurl');
+
+        if ($this->siteCode == 'shoot') {
+            $siteStr = '';
+            $pcDomain = empty($sortStr) ? $pcDomain : "http://{$sortStr}.{$this->domainBase}";
+        } else {
+            $siteStr = "sj{$this->siteCode}";
+            $sortStr = empty($sortStr) ? '' : "-{$sortStr}";
+            $pcDomain = "http://{$siteStr}{$sortStr}.{$this->domainBase}";
+            //$mobileDomain .= empty($sortStr) ? "/{$siteStr}/" : "/{$siteStr}-{$sortStr}/";
+        }
+        
+        switch ($page) {
+        case 'sample-index':
+            $page = $params['page'];
+            $pageStr = $page <= 1 ? '' : "{$page}/";
+            $this->pcMappingUrl = $pcDomain . "/{$pageStr}";
+            $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}{$sortStr}/{$pageStr}";
+            break;
+        case 'sample-show':
+            $id = $params['id'];
+            $this->pcMappingUrl = $pcDomain . "/caseshow_{$id}.html";
+            $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}/caseshow_{$id}.html";
+            break;
+        default:
+            $this->pcMappingUrl = $pcDomain;
+            $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}{$sortStr}/";
+        }
+        echo $this->pcMappingUrl . '--' . $this->mobileMappingUrl;
+    }
+
+    public function getShowUrl($id)
+    {
+        $url = $this->currentDomain;
+        $base = "/caseshow_{$id}.html";
+        if ($this->clientType == 'mobile') {
+            $url .= $this->siteCode == 'shoot' ? $base : "/sj{$this->siteCode}{$base}";
+        } else {
+            $url .= $base;
+        }
+        return $url;
+    }
 }

@@ -88,7 +88,7 @@ var signupUrl = '<?= Yii::getAlias('@web'); ?>';
     </p>
     <div class="casetit">
         <div class="case_title">
-            <a href="/case/">
+            <a href="<?= $this->getSortUrl('all'); ?>">
                 <span class="case_right">你可能会喜欢</span>
             </a>
         </div>

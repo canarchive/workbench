@@ -2,7 +2,7 @@
 //$navDatas = $this->context->navDatas;
 $navDatas = [
     'index' => ['url' => $this->context->currentDomain, 'name' => '首页HOME'],
-    'location' => ['url' => '/case/', 'name' => '作品欣赏'],
+    'location' => ['url' => $this->context->getSortUrl('all'), 'name' => '作品欣赏'],
     'container' => ['url' => $this->context->currentDomain . '/aboutus.html', 'nofollow' => true, 'name' => '公司简介'],
     'nav' => ['url' => $this->context->currentDomain . '/contactus.html', 'nofollow' => true, 'name' => '联系我们'],
 ];
@@ -26,7 +26,7 @@ $caseDatas = $this->context->navDatas['case']['subDatas'];
         <ul class="hot_zixun clearfix">
             <?php foreach ($caseDatas as $sort => $sData) { ?>
             <li class="<?php if ($this->context->currentElem == $sort) { echo 'active'; } ?>">
-                <a href="/case_<?= $sort; ?>/" title="<?= $sData['name']; ?>"><?= $sData['name']; ?></a>
+                <a href="<?= $sData['url']; ?>" title="<?= $sData['name']; ?>"><?= $sData['name']; ?></a>
             </li>
             <?php } ?>
         </ul>

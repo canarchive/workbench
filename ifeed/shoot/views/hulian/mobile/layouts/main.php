@@ -15,7 +15,7 @@ $this->params['doctypeStr'] = 'html';
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';
 if (isMobile == 0) {
-    //window.location.href = "<?= $this->context->pcMappingUrl; ?>";
+    window.location.href = "<?= $this->context->pcMappingUrl; ?>";
 }
 </script>
 <?= $this->render('@ifeed/shoot/views/hulian/mobile/common/_header'); ?>
