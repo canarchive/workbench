@@ -82,7 +82,7 @@ trait ControllerTrait
     public function getAdDatas($params)
     {
         $model = new Adpicture();
-        $datas = $model->getInfos($params);
+        $datas = $model->getInfos(['where' => $params]);
         return $datas;
     }
 }

@@ -19,10 +19,10 @@ class Adpicture extends BaseModel
 			if (!isset($this->siteInfos[$siteCode])) {
 				continue;
 			}
-			$sName = $this->siteInfos[$siteCode]['name'];
-			$datas["index-{$siteCode}"] = $sName . '-首页';
+			//$sName = $this->siteInfos[$siteCode]['name'];
+			$datas["index-{$siteCode}"] = '首页';
 			foreach ($info as $sortCode => $sortInfo) {
-				$datas["sort-{$sortCode}"] = "{$sName}-{$sortInfo['name']}-栏目";
+				$datas["sort-{$sortCode}"] = "{$sortInfo['name']}-栏目";
 			}
 		}
 		return $datas;

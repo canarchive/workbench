@@ -75,6 +75,12 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
             'route' => '/shoot/aboutus/index', 
         ],
     ],
+    'stat' => [
+        'data' => [
+            'pattern' => '/stat',
+            'route' => '/site/stat', 
+        ],
+    ],
     'sample-show' => [
 		'only' => ['shoot', 'merchant'],
         'data' => [
@@ -83,13 +89,13 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
     		'route'	=> '/shoot/sample/show',
         ],
     ],
-    'sitemap' => [
+    /*'sitemap' => [
 		'only' => ['shoot', 'merchant'],
         'data' => [
             'suffix' => '.xml',
             'pattern' => '/sitemap',
             'route' => '/shoot/sitemap/index', 
         ],
-    ],
+	],*/
 ]);
 return \common\helpers\RuleFormat::formatRule($rules, require(dirname(__DIR__) . '/params-site.php'));

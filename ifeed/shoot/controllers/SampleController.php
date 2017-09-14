@@ -18,6 +18,12 @@ class SampleController extends Controller
 	{
         $page = Yii::$app->request->get('page');
         //$page = str_replace('_', '', $page);
+        $sort = Yii::$app->request->get('scode');
+		$sort = $sort == 'all' ? null : $sort;
+		if ($sort !== $this->currentSort) {
+            return $this->redirect($this->currentDomain)->send();
+		}
+
         $sort = $this->currentSort;
         $this->currentPage = 'sample-' . $sort;
 		$this->currentElem = 'case';//$sort;
@@ -60,7 +66,7 @@ class SampleController extends Controller
         $model = new Sample();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
-            return $this->redirect('/')->send();
+            return $this->redirect($this->currentDomain)->send();
 		}
 
 		$this->currentElem = $info['sort'];
