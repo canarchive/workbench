@@ -10,7 +10,7 @@ $navDatas = $this->context->navDatas;
                 <?php if (isset($data['subDatas'])) { $subStr = '<div class="c">';foreach ($data['subDatas'] as $subNav => $sData) { $isCurrent = $subNav == $this->context->currentSubElem ? 'class="active"' : ''; $subStr .= "<a href='{$sData['url']}' {$isCurrent} title='{$sData['name']}'>{$sData['name']}</a>"; } $subStr .= '</div>'; echo $subStr; } ?>
             </li>
             <?php } ?>
-            <li class="last_li"><a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" target="_blank" title="预约拍摄">预约拍摄</a></li>
+			<li class="last_li"><a rel="nofollow" href="<?= $this->context->serviceUrl; ?>" target="_blank" title="预约拍摄">预约拍摄</a></li>
         </ul>
         <p class="hot_phone"><span>咨询电话：</span><?= Yii::$app->params['siteHotline']; ?></p>
     </div>

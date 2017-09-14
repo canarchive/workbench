@@ -4,7 +4,7 @@
     <p><a rel="nofollow"><?= Yii::$app->params['siteIcpInfo']; ?></a></p>
 </div>
 <div class="fud">
-    <a class="fudzuo fudzuo_left" rel="nofollow" href="mqqwpa://im/chat?chat_type=wpa&uin=<?= Yii::$app->params['siteQQ']; ?>&version=1&src_type=web&web_src=weinaya.com" target="_blank" title="预约拍摄">
+    <a class="fudzuo fudzuo_left" rel="nofollow" href="<?= $this->context->serviceUrl; ?>" target="_blank" title="预约拍摄">
         <i class="icon_left"></i> 预约
     </a>
 	<a class="fudzuo fudzuo_right" href="tel:<?= Yii::$app->params['siteHotline']; ?>">

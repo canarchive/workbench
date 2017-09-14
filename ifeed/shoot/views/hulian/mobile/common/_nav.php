@@ -35,13 +35,13 @@ $caseDatas = $this->context->navDatas['case']['subDatas'];
         </h3>
         <ul class="hot_zixun clearfix">
             <li class="">
-                <a href="/flow.html" rel="nofollow" title="拍摄流程">拍摄流程</a>
+			    <a href="<?= $this->context->currentDomain; ?>/flow.html" rel="nofollow" title="拍摄流程">拍摄流程</a>
             </li>
             <li class="">
-                <a href="/guarantee.html" rel="nofollow" title="服务保障">服务保障</a>
+                <a href="<?= $this->context->currentDomain; ?>/guarantee.html" rel="nofollow" title="服务保障">服务保障</a>
             </li>
             <li class="">
-                <a rel="nofollow" href="mqqwpa://im/chat?chat_type=wpa&uin=<?= Yii::$app->params['siteQQ']; ?>&version=1&src_type=web&web_src=weinaya.com" target="_blank" title="预约拍摄">预约拍摄</a>
+				<a rel="nofollow" href="<?= $this->context->serviceUrl; ?>" target="_blank" title="预约拍摄">预约拍摄</a>
             </li>
         </ul>
     </section>

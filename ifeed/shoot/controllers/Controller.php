@@ -88,4 +88,13 @@ class Controller extends Controllerbase
         $datas = file_exists($file) ? require($file) : [];
         return $datas;
 	}
+
+	public function getServiceUrl()
+	{
+		//return 'http://p.qiao.baidu.com/cps/chat?siteId=10905381&userId=23986957';
+		$qq = Yii::$app->params['siteQQ'];
+        $qqMobile = "mqqwpa://im/chat?chat_type=wpa&uin={$qq}&version=1&src_type=web&web_src=weinaya.com";
+        $qqUrl = "http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes";
+		return $this->clientType == 'mobile' ? $qqMobile : $qqUrl;
+	}
 }
