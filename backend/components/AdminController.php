@@ -158,11 +158,20 @@ class AdminController extends Controller
         if (empty($info)) {
             return ['status' => 400, 'message' => '信息不存在'];
         }
+		$confirmUpdate = $this->confirmUpdate($info);
+		if ($confirmUpdate) {
+			return ['status' =>400, 'message' => '信息已锁定不能修改'];
+		}
         $info->$field = $value;
         $info->update(false);
 
         return ['status' => 200, 'message' => 'OK'];
     }
+
+	protected function confirmUpdate($info)
+	{
+		return false;
+	}
 
     /**
      * Finds the model based on its primary key value.

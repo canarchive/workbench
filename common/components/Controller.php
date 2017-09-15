@@ -6,6 +6,8 @@ use yii\web\Controller as YiiController;
 
 class Controller extends YiiController
 {
+	use ControllerTrait;
+
     public $host;
     public $isMobile;
     public $clientType;
@@ -20,6 +22,8 @@ class Controller extends YiiController
     public $currentPage;
     public $currentElem;
     public $menuInfos = [];
+
+	public $wechatInfo;
 
     /**
      * @inheritdoc

@@ -2,7 +2,6 @@
 
 namespace baseapp\common\controllers;
 
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
 trait SortTrait
