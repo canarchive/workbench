@@ -4,7 +4,6 @@ $wechatJs = $this->context->wechatJs;
 <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <?php if (!empty($wechatJs)) { ?>
 <script>
-alert('ttt');
 //wx.config(<?php echo $wechatJs->config(['onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareTimeline'], true) ?>);
 wx.config(<?php echo $wechatJs->config(['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'], true) ?>);
 wx.ready(function(){
@@ -19,7 +18,10 @@ alert('ooo');
     cancel: function () { 
 alert('bbb');
         // 用户取消分享后执行的回调函数
-    }
+	},
+	fail:function(res) {
+		alert(JSON.stringify(res));
+	}
 };
 
 onMenuShareTimeline(shareContent);
@@ -28,8 +30,9 @@ onMenuShareQQ(shareContent);
 onMenuShareWeibo(shareContent);
 onMenuShareQZone(shareContent);
 })
-wx.error(function(res){
+/*wx.error(function(res){
+	alert("error:" + res.errMsg);
     // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA>可以在这里更新签名。 
-});
+});*/
 </script>
 <?php } ?>
