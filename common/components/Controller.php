@@ -6,7 +6,7 @@ use yii\web\Controller as YiiController;
 
 class Controller extends YiiController
 {
-	use ControllerTrait;
+	use ControllerWechatTrait;
 
     public $host;
     public $isMobile;
