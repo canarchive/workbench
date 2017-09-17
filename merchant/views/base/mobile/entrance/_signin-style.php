@@ -63,7 +63,7 @@ footer{
 .logo{
 	width:10rem;
 	height:3.6rem;
-	background:url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/img/logo.png) center center no-repeat;
+	background:url(<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/img/logo.svg) center center no-repeat;
 	background-size:contain;
     margin: 0 auto;
 }

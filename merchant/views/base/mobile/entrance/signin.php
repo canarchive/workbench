@@ -43,7 +43,7 @@ foreach ($fields as $field) {
     </footer> 
     </form> 
 </div> 
-<a class="forget-pwd" id="forgetPwd" href="/findpwd.html">忘记密码？</a> 
+<!--<a class="forget-pwd" id="forgetPwd" href="/findpwd.html">忘记密码？</a>-->
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/zepto.min.js"></script> 
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/m/js/common.js?v=20151126"></script> 
 <script>
@@ -52,7 +52,7 @@ function setLinkPos() {
 	var bodyObj = document.getElementsByTagName('body');
 	var bodyHeight = bodyObj[0].clientHeight;
 	var mainHeight = document.getElementById('main').clientHeight;
-	document.getElementById("forgetPwd").style.marginTop=(bodyHeight-mainHeight-30)+'px';
+	//document.getElementById("forgetPwd").style.marginTop=(bodyHeight-mainHeight-30)+'px';
 }
 setLinkPos();
 
