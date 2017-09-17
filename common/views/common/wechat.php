@@ -4,7 +4,7 @@ $wechatJs = $this->context->wechatJs;
 <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <?php if (!empty($wechatJs)) { ?>
 <script>
-wx.config(<?php echo $wechatJs->config(['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'], true) ?>);
+wx.config(<?php echo $wechatJs->config(['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']) ?>);
 wx.ready(function(){
 var shareContent = <?= $this->context->wechatShareInfo; ?>;
 shareContent.sucess = function() {

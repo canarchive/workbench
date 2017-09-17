@@ -26,7 +26,7 @@ trait ControllerWechatTrait
 			'record_id' => isset($info['record_type']) ? $info['record_id'] : '',
 			'title' => isset($info['title']) && !empty($info['title']) ? $info['title'] : Yii::$app->params['siteName'],
 			'desc' => isset($info['desc']) ? $info['desc'] : Yii::$app->params['siteDesc'],
-			'link' => isset($info['link']) && !empty($info['link']) ? $info['link'] : Yii::getAlias('@web'),
+			'link' => isset($info['link']) && !empty($info['link']) ? $info['link'] : Yii::$app->request->absoluteUrl,
 			'imgUrl' => isset($info['imgUrl']) && !empty($info['imgUrl']) ? $info['imgUrl'] : Yii::$app->params['siteLogo'],
             // 分享类型,music、video或link，不填默认为link  
 			'type' => isset($info['type']) ? $info['type'] : '',
