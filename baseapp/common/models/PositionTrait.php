@@ -23,7 +23,7 @@ trait PositionTrait
         return [
             [['name'], 'required'],
             [['orderlist', 'status'], 'default', 'value' => 0],
-			[['sort', 'description', 'url', 'name_ext', 'picture', 'picture_mobile', 'picture_ext'], 'safe'],
+			[['site_code', 'sort', 'description', 'url', 'name_ext', 'picture', 'picture_mobile', 'picture_ext'], 'safe'],
         ];
     }
 
@@ -33,6 +33,7 @@ trait PositionTrait
             'id' => 'ID',
             'name' => '名称',
 			'name_ext' => '名称-预留',
+			'site_code' => '站点',
 			'sort' => '类型',
 			'url' => 'URL',
 			'orderlist' => '排序',
@@ -45,6 +46,13 @@ trait PositionTrait
             'status' => '状态',
         ];
     }
+
+	public function getSiteCodeInfos()
+	{
+		$datas = [
+		];
+		return $datas;
+	}
 
 	public function getSortInfos()
 	{
