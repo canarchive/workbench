@@ -10,7 +10,12 @@ $gridViewParams = [
 		'merchant_id',
         'channel',
         'client_type',
-        'sem_account',
+		[
+			'attribute' => 'sem_account',
+			'value' => function ($model) {
+				return $model->getPointName('account', $model->sem_account);
+			}
+        ],
 		'channel_info',
 		[
 			'attribute' => 'plan_id',
