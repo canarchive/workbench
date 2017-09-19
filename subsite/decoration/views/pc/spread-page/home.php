@@ -14,6 +14,7 @@ $urls = $this->context->navUrls;
 Yii::$app->params['tdkInfos']['title'] = '装修免费设计，免费量房';
 Yii::$app->params['tdkInfos']['description'] = '装修设计,量房';
 Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
+$currentSiteInfo = $this->context->currentSiteInfo;
 ?>
 
 <div class="al1l w">
@@ -302,10 +303,10 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
             <div class="copyright">
                 <ul>
                     <li>免责声明：本网站部分内容由用户自行上传，如权利人发现存在误传其作品情形，请及时与本站联系</li>
-                    <li><?= $this->context->currentSiteInfo['copy']; ?></li>
-                    <li>地址：北京市通州区南营房21号1幢</li>
-                    <li>电话：010-52239996</li>
-                    <li><?= $this->context->currentSiteInfo['icp']; ?></li>
+                    <li><?= $currentSiteInfo['copy']; ?></li>
+					<?php if (isset($currentSiteInfo['address'])) { ?><li>地址：<?= $currentSiteInfo['address']; ?></li><?php } ?>
+					<?php if (isset($currentSiteInfo['hotline'])) { ?><li>电话: <?= $currentSiteInfo['hotline']; ?></li><?php } ?>
+                    <li><?= $currentSiteInfo['icp']; ?></li>
             </div>
             <div class="icpico">
                 <a href="javascript:;" class="ico1"></a>

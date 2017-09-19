@@ -17,4 +17,9 @@ class ServiceWageController extends Controller
         $model->updateWage();
         exit();
     }
+
+    public function getListinfoView()
+    {   
+        return '@backend/subsite/views/decoration/service-wage/listinfo';
+    }
 }

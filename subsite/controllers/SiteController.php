@@ -11,7 +11,7 @@ class SiteController extends SubsiteController
 {
     public function actionIndex()
     {
-		$url = Yii::getAlias('@tbz.subsiteurl') . '/baom-quote-beijing.html';
+		$url = Yii::getAlias('@tbz-bj.subsiteurl');
         header("Location:$url");
         exit();
     }

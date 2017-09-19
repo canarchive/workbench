@@ -33,6 +33,7 @@ $merchantInfo = $this->context->merchantInfo;
     </div>
 </div>
 <div id="header">
+    <?php if (false) { ?>
     <div class="wrap">
         <div class="jia_logo  fl">
                 <a target="_top" class="major_pop" tjjj="click_pc_head.logo.jia" tjjj_name="首页logo" href="javascript:;">
@@ -40,7 +41,6 @@ $merchantInfo = $this->context->merchantInfo;
                     src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/design/<?= $this->context->merchantInfo['code']; ?>.png">
                 </a>
         </div>
-
         <div class="outWrap">
             <div class="searchWrap">
                 <ul class="clearfix choose_out_jcy" tjjj="click_pc_top" tjjj_name="搜索">
@@ -99,7 +99,8 @@ $merchantInfo = $this->context->merchantInfo;
                 <div id="head_cart" class="cartshow"></div>
             </div>
         </div>
-    </div>
+	</div>
+    <?php } ?>
     <div class="g_web_nav clearfix">
         <ul class="clearfix top_nav_ul">
             <li id="jia_nav_home" class="major_pop g_nav_active">
