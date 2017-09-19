@@ -34,58 +34,10 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 <li>注册</li>
                 <li>我要装修</li>
                 <li class="customerService" id="CSDexc">客户服务</li>
-                <li class="last">400-8118-088</li></ul>
+                <li class="last"><?= Yii::$app->params['siteHotline']; ?></li></ul>
         </div>
     </div>
-    <div class="HdHead clear">
-        <!-- logo -->
-        <div class="loginCity">
-            <div class="logo">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/bb4c3-8958.png" alt="美宅客logo">
-                <!--此处删掉行内样式--></div>
-            <div class="border"></div>
-            <div class="logor">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/69747-6970.png" alt="这里的天是业主的天">
-                <!--此处删掉行内样式--></div>
-        </div>
-        <!-- search 搜索框 -->
-        <div class="search">
-            <div class="searchText">
-                <div id="searchL">
-                    <span id="searchLeft">装修案例</span>
-                    <i>
-                    </i>
-                </div>
-                <input id="search" type="search" value="挑选您心仪的装修案例"></div>
-            <div class="searchBtn">搜索</div>
-            <ul class="searchList" id="searchList">
-                <li prop="1">装修案例</li>
-                <li prop="2">品牌</li>
-                <li prop="3">效果图</li>
-                <li prop="4">装修日记</li>
-                <li prop="6">帖子</li>
-                <li prop="7">文章</li></ul>
-        </div>
-        <!-- honor 荣誉肯定 -->
-        <div class="honor">
-            <a class="honor_left">
-                <i>
-                </i>
-            </a>
-            <div class="honor_list_bg">
-                <div class="honor_list clear">
-                    <a class="honorL honors" href="###" rel="nofollow">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/5dd4a-6586.jpg" alt="中装协：美宅客装修平台是最值得信赖的装修平台"></a>
-                    <a class="honorL honors" href="###" rel="nofollow">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/2f987-9969.jpg" alt="先行赔付，100%解决投诉"></a>
-                </div>
-            </div>
-            <a class="honor_right" target="_blank">
-                <i>
-                </i>
-            </a>
-        </div>
-    </div>
+    <?php //echo $this->render('_designm-logo'); ?>
     <div class="nav btn_data-tit" data-tit="申请预约免费设计量房" id="nav">
         <div class="nav_empty"></div>
         <div class="navList">
@@ -178,7 +130,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                                 <li>
                                     <span>·</span>该项目免费服务，不收任何费用</li>
                                 <li>
-                                    <span>·</span>您的隐私信息将会被美宅客严格保密</li></ul>
+                                    <span>·</span>您的隐私信息将会被<?= Yii::$app->params['siteNameBase']; ?>严格保密</li></ul>
                         </div>
                     </form>
                     <!-- 装修报价 end --></div>
@@ -218,7 +170,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                                 <li>
                                     <span>·</span>该项目免费服务，不收任何费用</li>
                                 <li>
-                                    <span>·</span>您的隐私信息将会被美宅客严格保密</li></ul>
+                                    <span>·</span>您的隐私信息将会被<?= Yii::$app->params['siteNameBase']; ?>严格保密</li></ul>
                         </div>
                     </form>
                     <!-- 第2步 -->
@@ -684,7 +636,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         <div class="main5_div4">
             <span data-tit="申请预约免费设计量房" class="btn_data-tit ">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/dd50e-5236.png"></span>
-            <span class="span111 btn_data-tit" data-tit="立即预约美宅客装修报价">
+            <span class="span111 btn_data-tit" data-tit="立即预约<?= Yii::$app->params['siteNameBase']; ?>装修报价">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/fadbb-6706.png"></span>
         </div>
     </div>
@@ -781,7 +733,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         </div>
     </div>
     <!--main7-->
-    <div class="main7 btn_data-tit" data-tit="申请免费体验美宅客装修网服务">
+    <div class="main7 btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修网服务">
         <p class="ttit">
             <b>真实工地直播</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上网就能实时查看你家装修情况
             <span>更多&nbsp;></span></p>
@@ -917,16 +869,16 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/e0e7e-4597.jpg" /></dt>
                 <dd>
                     <span>赵先生</span>
-                    <br />何先生记得接触大运豪门是在美宅客组织的团购会上，大运豪门...</dd></dl>
+                    <br />何先生记得接触大运豪门是在<?= Yii::$app->params['siteNameBase']; ?>组织的团购会上，大运豪门...</dd></dl>
         </div>
         <!--右侧列表END--></div>
     <!--main7END-->
     <!--main8-->
     <div class="main8">
-        <p class="ttit  btn_data-tit" data-tit="申请免费体验美宅客装修平台服务">
+        <p class="ttit  btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
             <b>小区工地案例</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已为
             <em>8341</em>位业主查看了小区真实案例</p>
-        <ul class="btn_data-tit" data-tit="申请免费体验美宅客装修平台服务">
+        <ul class="btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
             <li>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/ed0c9-8587.jpg" class="big" />
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/2b1c8-8781.png" class="img-txt" /></li>
@@ -959,10 +911,10 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
     <!--main9-->
     <div class="main9">
         <p class="ttit">
-            <b class="btn_data-tit" data-tit="申请免费体验美宅客装修平台480道工艺">施工工艺</b>
-            <em class="wid btn_data-tit" data-tit="申请免费体验美宅客装修平台服务"></em>
-            <b class="btn_data-tit" data-tit="申请免费体验美宅客装修平台服务">品质保障</b></p>
-        <ul class="ul_img btn_data-tit" data-tit="申请免费体验美宅客装修平台480道工艺">
+            <b class="btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台480道工艺">施工工艺</b>
+            <em class="wid btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务"></em>
+            <b class="btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">品质保障</b></p>
+        <ul class="ul_img btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台480道工艺">
             <li>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/e2671-9837.jpg" /></li>
             <li>
@@ -976,7 +928,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
             <li>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/e23ec-7539.jpg" /></li>
         </ul>
-        <div class="rigth btn_data-tit" data-tit="申请免费体验美宅客装修平台服务">
+        <div class="rigth btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
             <p>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/b446a-7556.jpg" />
                 <span>
@@ -1009,7 +961,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/ddaa3-2965.jpg" />
                     <br />施工保障</li></ul>
             <div class="text">
-                <b>美宅客装修平台郑重承诺：</b>为切实保障业主利益，不发布虚假广告，自觉抵制假货、假冒知名商品，保证业主的知情权、选择权，不虚标价格、折扣和团购数据，不误导、侵害业主的合法权益，认真解决业主投诉，主动接受工商、通信管理等有关政府部门、行业组织、业主和媒体的监督。</div>
+                <b><?= Yii::$app->params['siteNameBase']; ?>装修平台郑重承诺：</b>为切实保障业主利益，不发布虚假广告，自觉抵制假货、假冒知名商品，保证业主的知情权、选择权，不虚标价格、折扣和团购数据，不误导、侵害业主的合法权益，认真解决业主投诉，主动接受工商、通信管理等有关政府部门、行业组织、业主和媒体的监督。</div>
         </div>
     </div>
     <!--main9END-->
@@ -1069,7 +1021,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
 <input type="hidden" value="984615576fb9918cd8c6a7a6a750465f" id="visit_request_id" name="visit_request_id" />
 <!-- end main -->
 <!-- 底部 -->
-<div class="subFooter btn_data-tit" style="float:left;" data-tit="申请免费体验美宅客装修平台服务">
+<div class="subFooter btn_data-tit" style="float:left;" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
     <div class="subFooterBG">
         <div class="subFooterT">
             <ul class="subFooterT_list clear">
@@ -1196,7 +1148,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 <li>
                     <p>联系我们</p>
                 </li>
-                <li>业主服务：400-8118-088</li></ul>
+                <li>业主服务：<?= Yii::$app->params['siteHotline']; ?></li></ul>
             <div class="SFBlist">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/5942b-5348.jpg" alt="微信二维码" width="80px" height="80px">
                 <div class="weixin">
@@ -1206,12 +1158,12 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         </div>
     </div>
     <!-- 版权 -->
-    <div class="copyRight btn_data-tit" style="float:left;" data-tit="申请免费体验美宅客装修平台">
+    <div class="copyRight btn_data-tit" style="float:left;" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台">
         <div class="subcoptRight">
             <div class="SCRleft">
                 <ul>
                     <li class="first">
-                        <a>关于美宅客修网</a>
+                        <a>关于<?= Yii::$app->params['siteNameBase']; ?>修网</a>
                     </li>
                     <li>
                         <a>团购活动</a>
@@ -1235,7 +1187,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                         <a>网站地图</a>
                     </li>
                     <li class="last">
-                        <a>北京市 丰台区 宋家庄 万科红底商 美宅客体验馆（地铁宋家庄C出口即到）（邮编100079）</a>
+                        <a>北京市 丰台区 宋家庄 万科红底商 <?= Yii::$app->params['siteNameBase']; ?>体验馆（地铁宋家庄C出口即到）（邮编100079）</a>
                     </li>
                 </ul>
             </div>
