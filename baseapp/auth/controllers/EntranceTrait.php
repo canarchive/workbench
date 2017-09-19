@@ -18,6 +18,7 @@ trait EntranceTrait
 
     public function actionSigninQr()
     {
+        $result = $this->_signMethod('signin');
         if ($result['status'] == 200 && isset($result['homeUrl'])) {
             return Yii::$app->response->redirect($result['homeUrl'])->send();
         }

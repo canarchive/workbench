@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 
 $menuInfos = $this->context->menuInfos;
-$breadCrumbExt = isset($this->params['breadCrumbExt']) ? '-' . $this->params['breadCrumbExt'] : '';
 if (!isset($formContent)) {
     $formContent = $this->render($currentView . '_form', ['model' => $model, 'type' => $type]);
 }
+$breadCrumbExt = isset($this->params['breadCrumbExt']) ? '-' . $this->params['breadCrumbExt'] : '';
 ?>
 <div class="row">
     <div class="box col-md-12">
