@@ -15,4 +15,14 @@ class PaytradeModel extends BaseModel
     {
         return new \paytrade\models\Attachment();
     }
+
+	public function getGoodsModel($returnNew = false)
+	{
+		static $gModel;
+
+		if (is_null($gModel) || $returnNew) {
+			$gModel = $this->_newModel('goods', $returnNew);
+		}
+		return $gModel;
+	}
 }
