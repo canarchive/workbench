@@ -273,7 +273,10 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
     <input type="hidden" value="" name="biao_fengge" class="biao_fengge" />
     <input type="hidden" value="" name="biao_phone" class="biao_phone" /></form>
 <a href="javascript:;" class="a-txt" style="text-align: center; display: block;">
-    <!--<?= $this->context->currentSiteInfo['copy']; ?><br>--><?= $this->context->currentSiteInfo['icp']; ?>
+	<?php if ($this->context->channelCode == 'zht') { ?>
+	<?= $this->context->currentSiteInfo['copy']; ?><br>
+	<?php } ?>
+    <?= $this->context->currentSiteInfo['icp']; ?>
 </a>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/m/js/zepto.min.js"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/m/js/zxbj.js"></script>

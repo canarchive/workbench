@@ -9,6 +9,7 @@ use spread\models\Template;
 class SpreadPageController extends Controller
 {
 	public $merchantInfo;
+	public $channelCode;
 
     public function init()
     {
@@ -36,6 +37,7 @@ class SpreadPageController extends Controller
     public function actionIndex()
     {
         $code = Yii::$app->request->get('tcode');
+        $this->channelCode = Yii::$app->request->get('qudao');
         $tInfos = $this->_getTemplateInfos();
         if (!in_array($code, array_keys($tInfos))) {
             $code = $this->formatOldCode($code);
