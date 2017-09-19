@@ -9,7 +9,7 @@ use shop\models\Category;
 <div class="menu-form">
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'sort')->dropDownList($model->getPointInfos('shop-sort-flower', ['indexName' => 'code'])); ?>    
+    <?= $form->field($model, 'sort')->dropDownList($model->getPointInfos('shop-sort', ['indexName' => 'code'])); ?>    
     <?= $form->field($model, 'book_month')->dropDownList($model->bookMonthInfos, ['multiple' => 'multiple']); ?>
     <?= $form->field($model, 'price')->textInput() ?>
     <?= $form->field($model, 'price_market')->textInput() ?>

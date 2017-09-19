@@ -67,6 +67,9 @@ trait TraitActive
 
         $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
         $infosObj = $this->find()->select($selectStr)->where($where);
+		if (isset($params['indexBy'])) {
+			$infosObj->indexBy($params['indexBy']);
+		}
         if (isset($params['andWhere'])) {
             $infosObj = $infosObj->andWhere($params['andWhere']);
         }
