@@ -3,7 +3,7 @@ $this->params['noBanner'] = true;
 ?>
 <div class="crumbs">
     <!--<span>您的当前位置：</span>-->
-    <a href="<?= $this->context->currentDomain; ?>" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
+    <a href="<?= $this->context->getSiteUrl(); ?>" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
     <span> > </span>
     <a href="<?= $this->context->getSortUrl('all'); ?>" title="<?= $this->context->currentSiteInfo['name'] . '作品展示'; ?>">作品展示</a>
     <span>> </span>

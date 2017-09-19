@@ -83,7 +83,7 @@ console.log(window.signupUrl);
             <div class="succ_detail fl">
             <p class="succ_title">恭喜您预约成功！</p>
             <p class="succ_tips">稍后我们会有专员与您联系，请您保持手机畅通。
-                <a href="/">返回>></a>
+			    <a href="<?= $this->context->getSiteUrl(); ?>">返回>></a>
             </p>
         </div>
         </div>

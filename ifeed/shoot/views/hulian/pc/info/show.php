@@ -35,7 +35,7 @@
             </div>
             <div class="fl" style="width:948px; overflow:hidden; margin-left:40px;">
                 <div style="padding:0 0 20px 0;" class="ct2 fs14">当前位置：
-                    <a href="/">网站首页</a>>
+				    <a href="<?= $this->context->getSiteUrl(); ?>">网站首页</a>>
                     <a href="/news/" title="新闻动态">新闻动态</a>>
                     <a href="/yrzs/" title="育儿知识">育儿知识</a>> 如何让孩子改掉爱“动手”的坏习惯</div>
                 <div class="tac lh15 fs15" style="width:950px; height:145px; overflow:hidden; background:#e3ecf5;">

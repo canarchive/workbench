@@ -58,7 +58,7 @@ class Controller extends Controllerbase
         $siteCode = Yii::$app->request->get('mcode');
         if (!in_array($siteCode, array_keys($this->siteInfos))) {
             $siteCode = in_array($this->host, [Yii::getAlias('@shoot.ifeedurl'), Yii::getAlias('@m.shoot.ifeedurl')]) ? 'shoot' : false;
-			$siteCode = !empty($siteCode) ? $siteCode : (!empty($this->currentSort) ? 'shoot' : false);
+			$siteCode = 'shoot';//!empty($siteCode) ? $siteCode : (!empty($this->currentSort) || $this->sourceSort == 'all' ? 'shoot' : false);
         }
         if (empty($siteCode)) {
            exit('404' . $siteCode);
@@ -77,7 +77,8 @@ class Controller extends Controllerbase
 
         Yii::$app->params['siteName'] = $this->currentSiteInfo['name'];
         Yii::$app->params['siteNameBase'] = $this->currentSiteInfo['name'];
-        Yii::$app->params['siteQQ'] = '2376816784';
+        //Yii::$app->params['siteQQ'] = '2376816784';
+        Yii::$app->params['siteQQ'] = '2593003545';
         Yii::$app->params['siteIcpInfo'] = $this->currentSiteInfo['icp'];
 		return ;
 	}
@@ -121,7 +122,9 @@ class Controller extends Controllerbase
             $page = $params['page'];
             $pageStr = $page <= 1 ? '' : "{$page}/";
             $this->pcMappingUrl = $pcDomain . "/{$pageStr}";
-            $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}{$sortStr}/{$pageStr}";
+			$urlStr = "/{$siteStr}{$sortStr}/{$pageStr}";
+			$urlStr = str_replace('//', '/', "/{$siteStr}{$sortStr}/");
+            $this->mobileMappingUrl = $mobileDomain . $urlStr;
             break;
         case 'sample-show':
             $id = $params['id'];
@@ -130,10 +133,19 @@ class Controller extends Controllerbase
             break;
         default:
             $this->pcMappingUrl = $pcDomain;
-            $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}{$sortStr}/";
+			$urlStr = str_replace('//', '/', "/{$siteStr}{$sortStr}/");
+            $this->mobileMappingUrl = $mobileDomain . $urlStr;
         }
-        echo $this->pcMappingUrl . '--' . $this->mobileMappingUrl;
     }
+
+	public function getSiteUrl()
+	{
+		if ($this->clientType == 'mobile') {
+			$siteStr = $this->siteCode == 'shoot' ? '' : "/sj{$this->siteCode}/";
+			return $this->currentDomain . $siteStr;
+		}
+		return $this->currentDomain;
+	}
 
     public function getShowUrl($id)
     {

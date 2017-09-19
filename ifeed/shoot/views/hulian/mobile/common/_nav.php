@@ -1,7 +1,7 @@
 <?php
 //$navDatas = $this->context->navDatas;
 $navDatas = [
-    'index' => ['url' => $this->context->currentDomain, 'name' => '首页HOME'],
+    'index' => ['url' => $this->context->getSiteUrl(), 'name' => '首页HOME'],
     'location' => ['url' => $this->context->getSortUrl('all'), 'name' => '作品欣赏'],
     'container' => ['url' => $this->context->currentDomain . '/aboutus.html', 'nofollow' => true, 'name' => '公司简介'],
     'nav' => ['url' => $this->context->currentDomain . '/contactus.html', 'nofollow' => true, 'name' => '联系我们'],

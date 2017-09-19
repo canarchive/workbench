@@ -2,7 +2,7 @@
 <div class="hengqie">
     <div class="china">
         <div class="crumbs">
-			<a href="<?= $this->context->currentDomain; ?>" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
+			<a href="<?= $this->context->getSiteUrl(); ?>" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
             <span>> </span>
 			<a href="<?= $this->context->getSortUrl('all'); ?>" title="<?= $this->context->currentSiteInfo['name'] . '作品展示'; ?>">作品展示</a>
             <span>> </span>

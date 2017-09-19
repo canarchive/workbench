@@ -33,7 +33,7 @@ class SampleController extends Controller
         $where = empty($sort) ? ['status' => 1, 'site_code' => $this->siteCode] : ['status' => 1, 'site_code' => $this->siteCode, 'sort' => $sort];
 		$model = new Sample();
         $orderBy = ['orderlist' => SORT_DESC];
-		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 2]);
+		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 12]);
 		$datas = [
             'sort' => $sort,
             'sortName' => $sortName,
