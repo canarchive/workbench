@@ -25,20 +25,6 @@ class Attachment extends AttachmentBase
                     'type' => 'image/*',
                 ],
             ],
-            'adpicture' => [
-                'thumb' => [
-                    'isSingle' => true,
-                    'minSize' => 1, // unit: kb
-                    'maxSize' => 800,
-                    'type' => 'image/*',
-                ],
-                'picture' => [
-                    'isSingle' => true,
-                    'minSize' => 1, // unit: kb
-                    'maxSize' => 800,
-                    'type' => 'image/*',
-                ],
-            ],
             'sample' => [
                 'picture' => [
                     'isSingle' => false,
