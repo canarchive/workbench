@@ -88,6 +88,9 @@ trait TraitAttachment
     {
         $attachment = $this->attachmentModel;
         foreach ($fields as $field) {
+			if (is_null($this->$field)) {
+				continue;
+			}
             $attachment->updateInfo($this->$field, $this->id, $extData);
 
             $where = ['info_table' => $table, 'info_field' => $field, 'info_id' => $this->id];
@@ -99,6 +102,9 @@ trait TraitAttachment
 
     protected function _updateMulAttachment($table, $field, $extData = [])
     {
+		if (is_null($this->$field)) {
+			return '';
+		}
         $attachment = $this->attachmentModel;
         $ids = array_filter(explode(',', $this->$field));
         foreach ($ids as $id) {
