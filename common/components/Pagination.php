@@ -9,6 +9,7 @@ class Pagination extends PaginationBase
 {
     public $pagePreStr;
     public $noHost;
+	public $_page;
 
     /**
      * Creates the URL suitable for pagination with the specified page number.
