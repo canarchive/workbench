@@ -11,7 +11,7 @@ class Visit extends VisitModel
     public function rules()
     {
         return [
-            [['merchant_id', 'is_precision', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
+            [['sem_account', 'merchant_id', 'is_precision', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
         ];
     }
 
@@ -35,6 +35,7 @@ class Visit extends VisitModel
         return array_merge($elems, [
             ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'client_type', 'type' => 'common'],
+            ['field' => 'sem_account', 'type' => 'common'],
             ['field' => 'channel', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
         ]);
@@ -46,6 +47,7 @@ class Visit extends VisitModel
             $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
             $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
+            $this->_sPointParam(['field' => 'sem_account', 'table' => 'account']),
         ];
 
         $form = [

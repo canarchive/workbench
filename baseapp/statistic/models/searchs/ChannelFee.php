@@ -56,7 +56,7 @@ class ChannelFee extends ChannelFeeModel
     {
         $list = [
             //$this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
-            //$this->_sKeyParam(['field' => 'client_type']),
+            $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
             $this->_sPointParam(['field' => 'account_id', 'table' => 'account']),
         ];

@@ -26,9 +26,15 @@ class Attachment extends AttachmentBase
         return [
             'adpicture' => [
                 'thumb' => [
+                    'isSingle' => false,
+                    'minSize' => 1, // unit: kb
+                    'maxSize' => 800,
+                    'type' => 'image/*',
+                ],
+                'picture' => [
                     'isSingle' => true,
-                    'minSize' => 10, // unit: kb
-                    'maxSize' => 500,
+                    'minSize' => 1, // unit: kb
+                    'maxSize' => 800,
                     'type' => 'image/*',
                 ],
             ],

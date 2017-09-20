@@ -10,7 +10,7 @@ class Conversion extends ConversionModel
     public function rules()
     {
         return [
-            [['is_precision', 'mobile', 'merchant_id', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
+            [['is_precision', 'sem_account', 'mobile', 'merchant_id', 'keyword', 'created_at_start', 'created_at_end', 'client_type', 'channel'], 'safe'],
         ];
     }
 
@@ -34,6 +34,7 @@ class Conversion extends ConversionModel
 
         return array_merge($elems, [
             ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'sem_account', 'type' => 'common'],
             ['field' => 'client_type', 'type' => 'common'],
             ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'channel', 'type' => 'common'],
@@ -47,6 +48,7 @@ class Conversion extends ConversionModel
             $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
             $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
+            $this->_sPointParam(['field' => 'sem_account', 'table' => 'account']),
         ];
         $form = [
         [
