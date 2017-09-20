@@ -68,6 +68,13 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
             'route' => '/shoot/sample/index', 
         ],
     ],
+    'aboutus-mobile' => [
+        'noDomain' => true,
+        'data' => [
+            'pattern' => Yii::getAlias('@m.shoot.ifeedurl') . '/sj<mcode:(eale|hstudio)>/<view:(guarantee|flow|contactus|aboutus)>',
+            'route' => '/shoot/aboutus/index', 
+        ],
+    ],
     'aboutus' => [
 		'only' => ['shoot', 'merchant'],
         'data' => [

@@ -16,12 +16,12 @@
     var map = new BMap.Map("allmap");
     map.addControl(new BMap.MapTypeControl());
     map.setCurrentCity("北京");
-    var point = new BMap.Point(116.541301, 39.898765);
+    var point = new BMap.Point(116.547801,39.904919);
     var marker = new BMap.Marker(point);
     map.addOverlay(marker);
     map.centerAndZoom(point, 16);
     var opts = {
-        width : 400,     // 信息窗口宽度
+        width : 500,     // 信息窗口宽度
         height: 70,     // 信息窗口高度
         title : '右视觉',// 信息窗口标题
         position : point,    // 指定文本标注所在的地理位置

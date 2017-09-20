@@ -18,7 +18,7 @@ $this->params['noBanner'] = true;
     map.addControl(new BMap.MapTypeControl());
     map.setCurrentCity("北京");
     map.enableScrollWheelZoom(true);
-    var point = new BMap.Point(116.541301, 39.898765);
+    var point = new BMap.Point(116.547801,39.904919);
     var marker = new BMap.Marker(point);
     map.addOverlay(marker);
     map.centerAndZoom(point, 16);
