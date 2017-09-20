@@ -1,5 +1,5 @@
 <?php
-$this->params['noBanner'] = true;
+$this->params['currentPage'] = 'sort-' . $this->context->currentSort;
 ?>
 <div class="casetit">
     <a href="javascript: void(0);">

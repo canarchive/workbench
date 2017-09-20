@@ -1,5 +1,7 @@
 <?php
 use yii\widgets\LinkPager;
+$this->params['showBanner'] = true;
+$this->params['currentPage'] = 'sort-' . $this->context->currentSort;
 ?>
 
 <div class="hengqie">

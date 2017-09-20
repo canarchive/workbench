@@ -83,7 +83,8 @@ trait ControllerTrait
     public function getAdDatas($params)
     {
         $model = new Adpicture();
-        $datas = $model->getInfos(['where' => $params]);
+		$params = array_merge($params, ['status' => 1]);
+        $datas = $model->getInfos(['where' => $params, 'orderBy' => ['orderlist' => SORT_DESC]]);
         return $datas;
     }
 }
