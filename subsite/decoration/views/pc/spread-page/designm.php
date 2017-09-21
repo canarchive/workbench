@@ -8,7 +8,7 @@ Yii::$app->params['tdkInfos']['description'] = '装修设计,量房';
 Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
 ?>
 <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/css/da957-9276.css" />
-<link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/css/1ee86-3483.css" />
+<link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/css/1ee86-3483.css?v=1" />
 <!-- 轮播图 -->
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/js/swiper.min.js"></script>
 <!-- 弹出层js -->
@@ -20,7 +20,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
 <!--底部免费专修报价-->
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/js/style-pc.js"></script>
 <!--预约验证-->
-<script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/js/yuyue.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/js/yuyue.js?v=1"></script>
 <!-- 头部 -->
 <div class="header btn_data-tit" data-tit="申请预约免费设计量房">
     <div class="siteNav">
@@ -41,7 +41,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
     <div class="nav btn_data-tit" data-tit="申请预约免费设计量房" id="nav">
         <div class="nav_empty"></div>
         <div class="navList">
-            <ul class="nav_hd clear" id="nav_hd">
+            <ul class="nav_hd clear">
                 <li class="nav_hd_list">
                     <a class="nhla active">首页</a></li>
                 <li class="nav_hd_list" id="nav_hd_list">
@@ -197,7 +197,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 <h4 class="title">恭喜您报名成功！</h4>
                 <p class="f18 tc p18-gray">工作人员15分钟内将会与您联系，请耐心等候。</p>
                 <div class="weixin-l">
-                    <img class="l" src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/5942b-5348.jpg" alt="">
+                    <img class="l" src="<?= Yii::getAlias('@asselfurl'); ?>/design/images/bottom_bj.png?v=1" alt="">
                     <ul>
                         <li class="f18">微信扫一扫</li>
                         <li class="f18">领取装修大礼包</li>
@@ -1150,7 +1150,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 </li>
                 <li>业主服务：<?= Yii::$app->params['siteHotline']; ?></li></ul>
             <div class="SFBlist">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/5942b-5348.jpg" alt="微信二维码" width="80px" height="80px">
+                <img src="<?= Yii::getAlias('@asselfurl'); ?>/design/images/bottom_bj.png" alt="微信二维码" width="80px" height="80px">
                 <div class="weixin">
                     <span>扫描二维码</span>
                     <span>关注官方微信</span></div>
@@ -1163,7 +1163,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
             <div class="SCRleft">
                 <ul>
                     <li class="first">
-                        <a>关于<?= Yii::$app->params['siteNameBase']; ?>修网</a>
+                        <a>关于<?= Yii::$app->params['siteNameBase']; ?></a>
                     </li>
                     <li>
                         <a>团购活动</a>
@@ -1187,7 +1187,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                         <a>网站地图</a>
                     </li>
                     <li class="last">
-                        <a>北京市 丰台区 宋家庄 万科红底商 <?= Yii::$app->params['siteNameBase']; ?>体验馆（地铁宋家庄C出口即到）（邮编100079）</a>
+	                    <a><?= $this->context->currentSiteInfo['copy']; ?></a>
                     </li>
                 </ul>
             </div>
