@@ -15,7 +15,7 @@ class Base extends AbstractModel
 
     public static function tableName()
     {
-        return '{{%site}}';
+        return '{{%page}}';
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace spider\models\ndflower;
+namespace spider\models\dnflower;
 
 use Yii;
 use common\models\SpiderModel;
@@ -17,20 +17,14 @@ class Article extends SpiderModel
         return Yii::$app->dbShop;
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
+    public function getBehaviorCodes()
     {
-        $behaviors = [
-            $this->timestampBehaviorComponent,
-        ];
-        return $behaviors;
+        return array_merge(parent::getBehaviorCodes(), ['timestamp']);
     }
 
     public function showFile()
     {
-        $file = "ndflower/{$this->source_site_code}/show/{$this->sort}/{$this->source_id}.html";
+        $file = "dnflower/{$this->source_site_code}/show/{$this->sort}/{$this->source_id}.html";
         return $file;
     }
 }

@@ -7,24 +7,6 @@ use Overtrue\Pinyin\Pinyin;
 
 Trait TraitList
 {
-	public function listPre()
-	{
-		$datas = require(Yii::getAlias('@spider') . '/config/dnflower/sort.php');
-        $listSql = "INSERT INTO `ws_list_flower` (`site_code`, `sort`, `sort_name`, `url_source`, `page`) VALUES";
-		foreach ($datas as $sort => $data) {
-			$urlBase = "http://www.dnflower.com/Shop/ShowClass.asp?ClassID={$data['id']}";
-            $listSql .= "('dnflower', '{$sort}', '{$data['name']}', '{$urlBase}', '1'),\n";
-			if (isset($data['page'])) {
-				for ($i = 2; $i <= $data['page']; $i++) {
-					$url = $urlBase . "&page={$i}";
-                    $listSql .= "('dnflower', '{$sort}', '{$data['name']}', '{$url}', '{$i}'),\n";
-				}
-			}
-		}
-		echo $listSql;
-
-	}
-
     public function listSpider()
     {
         $where = ['status' => 0];
@@ -32,27 +14,45 @@ Trait TraitList
         $this->_listSpider($infos);
     }
 
-    public function listDeal()
+    protected function dnflowerDeal($crawler, $info) 
     {
-        //$where = ['site_code' => 'mll', 'status' => 1];
-        $where = ['status' => 1];
-        $infos = $this->_getListInfos($where, 100);
-        foreach ($infos as $info) {
-            $file = $info->listFile();
-            $info->status = 2;
-            if (!$this->fileExist($file)) {
-                $info->status = 0;
-                $info->update();
-                continue;
+        $spiderNum = 0;
+        $crawler->filter('#shopcenter .productpic')->each(function ($node) use ($info, &$spiderNum) {
+            //print_r($node);exit();
+            $baseElem = $node->filter('a');
+            $img = $baseElem->filter('img')->attr('src');
+			$name = $baseElem->attr('title');
+			$source_url = $baseElem->attr('href');
+
+            $source_id = str_replace('/Shop/ShowProduct.asp?ProductID=', '', $source_url);
+			$source_url = 'http://www.dnflower.com' . $source_url;
+
+            $data = [
+                'source_id' => $source_id,
+                'name' => $name,
+                'sort' => $info['sort'],
+                'source_url' => $source_url,
+                'source_site_code' => $info['site_code'],
+            ];
+			//print_r($data);exit();
+            $model = new Article($data);
+            $model->insert(false);
+            if (!empty($img)) {
+                $aData = [
+                    'source_url' => $img,
+                    'name' => $name,
+                    'info_table' => 'flower_metarial',
+                    'info_field' => 'thumb',
+					'info_id' => $model->id,
+                    'source_site_code' => $info['site_code'],
+                    'source_id' => $source_id,
+                ];
+                $this->_addAttachment(new Attachment($aData));
+				//print_r($aData);
             }
 
-            $crawler = new Crawler();
-            $crawler->addContent($this->getContent($file));
-            $method = $info['site_code'] . 'Deal';
-            $spiderNum = $this->$method($crawler, $info);
-            $info->spider_num = $spiderNum;
-            $info->status = 2;
-            $info->update(false);
-        }
+            $spiderNum++;
+        });
+        return $spiderNum;
     }
 }

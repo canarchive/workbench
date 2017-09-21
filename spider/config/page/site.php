@@ -8,4 +8,8 @@ return [
         'code' => 'huasl',
         'name' => '花加',
     ],
+    'presell' => [
+        'code' => 'presell',
+        'name' => '预售',
+    ],
 ];
