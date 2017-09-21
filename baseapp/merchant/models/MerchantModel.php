@@ -8,6 +8,8 @@ use merchant\models\Attachment As AttachmentMerchant;
 
 class MerchantModel extends BaseModel
 {
+    use TraitParam;
+
     public static function getDb()
     {
         return Yii::$app->dbMerchant;

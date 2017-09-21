@@ -111,6 +111,7 @@ class Verification extends \yii\base\Object
         for($i = 0; $i < $length; $i++) {
             $code .= mt_rand(0, 9);
         }
+		$code = isset($this->configInfo['fixedCode']) ? $this->configInfo['fixedCode'] : $code;
         $info = [
             'code' => $code,
             'createdAt' => isset($oldInfo['createdAt']) ? $oldInfo['createdAt'] : $this->currentTime,

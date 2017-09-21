@@ -134,64 +134,34 @@ class Visit extends BaseModel
             'merchant_id' => [
                 'param' => 'cid',
                 'default' => '0',
+                'channel' => array_keys($this->channelInfos),
             ],
             'semer_qq' => [
                 'param' => 'semtuiguang_QQ',
                 'default' => '1298115377',
+                'channel' => array_keys($this->channelInfos),
             ],
             'channel' => [
                 'param' => 'qudao',
                 'default' => 'bd',
+                'channel' => array_keys($this->channelInfos),
             ],
             'keyword' => [
                 'param' => 'wny',
                 'default' => '{keyword}',
+                'channel' => ['bd'],
             ],
             'param_info' => [
                 'param' => 'pinfos',
                 'default' => '{pagenum}-{adposition}-{matchtype}-{dongtai}-{bidurl}-{haoci}',
+                'channel' => ['bd'],
             ],
             'channel_info' => [
                 'param' => 'qinfo',
                 'default' => '123-3-5',
+                'channel' => array_keys($this->channelInfos),
             ],
         ];
-    }
-
-    protected function _search($params, $query)
-    {
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params) && !$this->validate()) {
-            return $dataProvider;
-        }
-
-        if (!empty($this->keyword)) {
-            $query->orFilterWhere(['like', 'keyword', $this->keyword]);
-            //$query->orFilterWhere(['like', 'message', $this->keyword]);
-        }
-
-        $startTime = strtotime($this->created_at_start);
-        $endTime = $this->created_at_end > 0 ? strtotime($this->created_at_end) : time();
-        $query->andFilterWhere([
-            'client_type' => $this->client_type,
-            'channel' => $this->channel,
-        ]);
-        $query->andFilterWhere(['>=', 'created_at', $startTime]);
-        $query->andFilterWhere(['<', 'created_at', $endTime]);
-
-        return $dataProvider;
-    }    
-
-    
-    public function getSearchDatas()
-    {
-        $datas = [
-            'clientTypeInfos' => $this->clientTypeInfos,
-            'channelInfos' => $this->channelInfos,
-        ];
-
-        return $datas;
     }
 
     protected function _searchEngineDatas(& $data)
@@ -204,6 +174,7 @@ class Visit extends BaseModel
         $keywordSearch = '';
         switch ($channel) {
         case 'bd':
+        case 'bdztc':
             $keywordSearch = Yii::$app->request->get('word');
             $keywordSearch = empty($keywordSearch) ? Yii::$app->request->get('wd') : $keywordSearch;
             break;

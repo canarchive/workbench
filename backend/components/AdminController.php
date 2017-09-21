@@ -12,10 +12,11 @@ use common\components\Controller;
  */
 class AdminController extends Controller
 {
-    public $privInfo = [];
+    public $searchModel;
     public $identityInfo;
     public $showSubnav = true;
     protected $modelClass = '';
+    public $showFilter;
     //protected $viewPrefix = '';
     public $layout = '@backend/views/charisma/layouts/main';
 
@@ -49,17 +50,25 @@ class AdminController extends Controller
      * Lists infos.
      * @return mixed
      */
-    protected function _listinfoInfo($view = 'listinfo')
+    protected function _listinfoInfo($view = null)
     {
         $searchClass = $this->modelSearchClass;
-        $searchModel = new $searchClass();
-        $searchDatas = $searchModel->getSearchDatas();
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
-        return $this->render($this->viewPrefix . $view, [
+        $this->searchModel = new $searchClass();
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
+        $view = is_null($view) ? $this->listinfoView : $view;
+        return $this->render($view, [
             'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
-            'searchDatas' => $searchDatas,
         ]);
+    }
+
+    protected function getListinfoView()
+    {
+        return '@backend/views/common/listinfo';
+    }
+
+    protected function _returnView()
+    {
+        return true;
     }
 
     /**
@@ -70,53 +79,11 @@ class AdminController extends Controller
     {
         $infos = $model->getFormatedInfos();
 
-        return $this->render($this->viewPrefix . 'listinfo', [
+        return $this->render('@backend/views/common/listinfo_tree', [
             'model' => $model,
+            'currentView' => $this->viewPrefix,
             'infos' => $infos,
         ]);
-    }
-
-    /**
-     * Displays a single info.
-     * @param  string $id
-     * @return mixed
-     */
-    protected function _viewInfo($id)
-    {
-        $model = $this->findModel($id);
-        return $this->render($this->viewPrefix . 'view', ['model' => $model]);
-    }
-
-    /**
-     * Creates a new info.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    protected function _addInfo($returnView = true)
-    {
-        $modelClass = $this->modelClass;
-        $model = new $modelClass($this->_addData());
-        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
-            
-            if ($this->_returnView()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
-            return $this->redirect(['listinfo']);
-        }
-
-        return $this->render($this->viewPrefix . 'add', [
-            'model' => $model,
-        ]);
-    }
-
-    protected function _addData()
-    {
-        return [];
-    }
-
-    protected function _returnView()
-    {
-        return true;
     }
 
     protected function _importInfo()
@@ -155,26 +122,6 @@ class AdminController extends Controller
         ]);
     }
 
-    /**
-     * Updates an existing info.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param  string $id
-     * @return mixed
-     */
-    protected function _updateInfo($id)
-    {
-        $scenario = $this->_getScenario();
-        $model = $this->findModel($id);
-        if (!empty($scenario)) {
-            $model->setScenario($scenario);
-        }
-        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render($this->viewPrefix . 'update', ['model' => $model]);
-    }
-
     protected function _getScenario()
     {
         return 'default';
@@ -211,11 +158,20 @@ class AdminController extends Controller
         if (empty($info)) {
             return ['status' => 400, 'message' => '信息不存在'];
         }
+		$confirmUpdate = $this->confirmUpdate($info);
+		if ($confirmUpdate) {
+			return ['status' =>400, 'message' => '信息已锁定不能修改'];
+		}
         $info->$field = $value;
         $info->update(false);
 
         return ['status' => 200, 'message' => 'OK'];
     }
+
+	protected function confirmUpdate($info)
+	{
+		return false;
+	}
 
     /**
      * Finds the model based on its primary key value.
@@ -240,9 +196,9 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
-        $privFields = !empty($this->privInfo) ? $this->privInfo : [];
-        foreach ($privFields as $field => $value) {
-            if (!$model->hasProperty($field)) {
+        $privInfo = Yii::$app->params['privInfo'];
+        foreach ((array) $privInfo as $field => $value) {
+            if (!$model->hasAttribute($field) || is_null($value)) {
                 continue;
             }
             $currentValue = $model->$field;
@@ -250,7 +206,6 @@ class AdminController extends Controller
             $currentValue = array_filter($currentValue);
             $join = array_intersect($value, $currentValue);
             if (empty($join)) {
-            //if (empty($model->$field) || !in_array($model->$field, $value)) {
                 throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
             }
         }
@@ -260,7 +215,7 @@ class AdminController extends Controller
 
     public function beforeAction($action)
     {
-        $this->privInfo = $this->getPrivInfo();
+        $this->_privInfo();
         return parent::beforeAction($action);
     }
 
@@ -269,17 +224,17 @@ class AdminController extends Controller
         return [];
     }
 
-    public function getPrivInfo()
+    protected function _privInfo()
     {
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         foreach ($data as $key => & $value) {
-            if (in_array($key, $this->privGetIgnore())) {
+            if (in_array($key, $this->privGetIgnore()) || is_null($value)) {
                 unset($data[$key]);
                 continue;
             }
             $getSource = Yii::$app->request->get($key);
             if (!is_null($getSource)) {
-                $diff = array_intersect((array) $getSource, $value);
+                $diff = array_intersect((array) $getSource, (array) $value);
                 if (empty($diff)) {
                     throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
                 }
@@ -287,11 +242,16 @@ class AdminController extends Controller
             }
             $_GET[$key] = $value;
         }
-        return $data;
+        Yii::$app->params['privInfo'] = $data;
     }
 
     public function getViewPrefix()
     {
         return '';
+    }
+
+    public function renderForAjax($model)
+    {
+        return $this->renderPartial('@baseapp/common/views/change-gather/_ajax', ['model' => $model]);
     }
 }

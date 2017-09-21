@@ -7,96 +7,56 @@ use baseapp\statistic\models\Dispatch as DispatchModel;
 
 class Dispatch extends DispatchModel
 {
-    public $field_hit;
 	public $created_at_start;
 	public $created_at_end;
 
     public function rules()
     {
         return [
-            [['service_id', 'field_hit', 'created_day', 'created_at_start', 'created_at_end', 'merchant_id'], 'safe'],
+            [['service_id', 'field_hit', 'created_at_start', 'created_at_end', 'merchant_id'], 'safe'],
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();//->orderBy('id DESC');
+        return [
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'service_id', 'type' => 'common'],
+            ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
+        ];
+    }
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-
+    protected function _searchPre(& $query)
+    {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
         $fieldsStr .= ", SUM(`dispatch_num`) AS `dispatch_num`, SUM(`back_reply_num`) AS `back_reply_num`, SUM(`back_confirm_num`) AS `back_confirm_num`";
         //echo $fieldsStr;exit();
         $query->select($fieldsStr);
         $query->groupBy($fields);
-		if (in_array('created_day', $this->fields)) {
-			$query->orderBy(['created_day' => SORT_DESC]);
-		}
-
-		$serviceIds = empty($this->service_id) ? null : $this->service_id;
-        $query->andFilterWhere([
-            'service_id' => $serviceIds,
-        ]);
-
-        $query->andFilterWhere([
-            'merchant_id' => $this->merchant_id,
-        ]);
-        $startTime = intval($this->created_at_start);
-        $endTime = $this->created_at_end > 0 ? intval($this->created_at_end) : date('Ymd');
-        $query->andFilterWhere(['>=', 'created_day', $startTime]);
-        $query->andFilterWhere(['<=', 'created_day', $endTime]);
-
-        return $dataProvider;        
     }    
 
-    protected function _getCheckedFields()
+    public function _searchDatas()
     {
-        if ($this->field_hit == 'all') {
-            return [];
-        }
-        
-        $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day'];
-        foreach ($fields as $field) {
-            if (!in_array($field, $datas)) {
-                return ['created_day'];
-            }
-        }
-        return $fields;
-    }
-
-    public function getSearchDatas()
-    {
-        $list = [];
-        /*[
-            [
-                'name' => '商家',
-                'field' => 'merchant_id',
-                'infos' => $this->getPointInfos('merchant'),
-            ],
-        ];*/
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+        ];
         $form = [
         [
-            [
-                'name' => '派单时间',
-                'field' => 'created_at_start',
-                'type' => 'daytime',
-                'format' => 'YYYYMMDD',
-                'end' => [
-                    'name' => '创建时间',
-                    'field' => 'created_at_end',
-                    'type' => 'daytime',
-                    'format' => 'YYYYMMDD',
-                ],
-            ],
-        ],
+            $this->_sStartParam(),
+            $this->_sHiddenParam(['field' => 'field_hit']),
+        ]
         ];
         $datas = ['list' => $list, 'form' => $form];
         return $datas;
+    }
+
+    public function getFieldHitInfos()
+    {
+        return[
+            'fields' => ['merchant_id', 'service_id', 'created_month', 'created_week', 'created_weedkay', 'created_day'],
+            'default' => 'created_day',
+        ];
     }
 }

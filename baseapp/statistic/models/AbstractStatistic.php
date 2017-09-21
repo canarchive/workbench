@@ -9,9 +9,20 @@ use spread\models\Planfee;
 
 class AbstractStatistic extends SpreadModel
 {
+    use HitInfosTrait;
+    public $show_field;
+    public $field_hit;
     public $fields;
     public $where;
+    public $created_day_start;
+    public $created_day_end;
     
+    public function init()
+    {
+        parent::init();
+        $this->field_hit = Yii::$app->request->get('field_hit', '');
+    }
+
     public static function getDb()
     {
         return Yii::$app->dbStatistic;
@@ -170,5 +181,52 @@ class AbstractStatistic extends SpreadModel
         $rate = $model->visit_num_success == 0 ? '-' : number_format($num / $model->visit_num_success, 3);
         $rate .= '元';
         return $rate;
+    }
+
+    protected function _getCheckedFields()
+    {
+        if ($this->field_hit === null) {
+            $this->field_hit = Yii::$app->request->get('field_hit', '');
+        }
+        if ($this->field_hit == 'all') {
+            return [];
+        }
+        
+        $fields = explode('-', trim($this->field_hit, '-'));
+        $datas = $this->fieldHitInfos;
+        foreach ($fields as $field) {
+            if (!in_array($field, $datas['fields'])) {
+                return [$datas['default']];
+            }
+        }
+        return $fields;
+    }
+
+    public function attributeBase()
+    {
+        return [
+            'id' => 'ID',
+            'service_id' => '客服',
+            'merchant_id' => '商家',
+            'created_day' => '日期',
+            'created_month' => '月份',
+            'created_week' => '周',
+        ];
+    }
+
+    protected function _defaultOrder()
+    {
+        return [
+            'defaultOrder' => [
+                'created_day' => SORT_DESC,
+            ]
+        ];
+    }
+
+    protected function _defaultPagination()
+    {
+        return [
+            'pageSize' => 100,
+        ];
     }
 }

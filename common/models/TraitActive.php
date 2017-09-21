@@ -27,29 +27,6 @@ trait TraitActive
         return $models[$code];
     }
 
-    public function search($params)
-    {
-        $query = self::find();
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        return $dataProvider;
-    }
-
-    public function searchTimeElem(& $query, $field = 'created_at')
-    {
-        $startAttr = $field . '_start';
-        $endAttr = $field . '_end';
-        $startTime = strtotime($this->$startAttr);
-        $endTime = $this->$endAttr > 0 ? strtotime($this->$endAttr) : time();
-        $query->andFilterWhere(['>=', $field, $startTime]);
-        $query->andFilterWhere(['<', $field, $endTime]);
-    }
-
-    public function getSearchDatas()
-    {
-        return [];
-    }
-
     public function updateNum($field, $type)
     {
         $num = $type == 'add' ? 1 : -1;
@@ -90,6 +67,9 @@ trait TraitActive
 
         $selectStr = isset($params['select']) ? $params['select'] : $this->_getSelect();
         $infosObj = $this->find()->select($selectStr)->where($where);
+		if (isset($params['indexBy'])) {
+			$infosObj->indexBy($params['indexBy']);
+		}
         if (isset($params['andWhere'])) {
             $infosObj = $infosObj->andWhere($params['andWhere']);
         }

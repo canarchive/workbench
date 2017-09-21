@@ -7,6 +7,10 @@ use backend\components\ControllerTraitFull;
 
 trait TagTrait
 {
-    public $viewPrefix = '@baseapp/common/views/tag/';
     use ControllerTraitFull;
+
+	public function getViewPrefix()
+	{
+        return '@baseapp/common/views/tag/';
+    }
 }

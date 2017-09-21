@@ -7,43 +7,34 @@ use baseapp\statistic\models\Report as ReportModel;
 
 class Report extends ReportModel
 {
-    public $field_hit;
 
     public function rules()
     {
         return [
-            [['merchant_id', 'field_hit', 'created_day', 'channel', 'client_type'], 'safe'],
+            [['merchant_id', 'sem_account', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
         ];
     }
 
-    public function search($params)
+    public function _searchElems()
     {
-        $query = self::find();//->orderBy('id DESC');
+        return [
+            ['field' => 'client_type', 'type' => 'common'],
+            ['field' => 'channel', 'type' => 'common'],
+            ['field' => 'sem_account', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
+        ];
+    }    
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
-        }
-
+    protected function _searchPre(& $query)
+    {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
         $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`visit_num_real`) As `visit_num_real`, SUM(`visit_num_success`) AS `visit_num_success`";
-        //echo $fieldsStr;exit();
-		if (in_array('created_day', $this->fields)) {
-			$query->orderBy(['created_day' => SORT_DESC]);
-		}
         $query->select($fieldsStr);
         $query->groupBy($fields);
 
-        $query->andFilterWhere([
-            'client_type' => $this->client_type,
-            'channel' => $this->channel,
-            'merchant_id' => $this->merchant_id,
-        ]);
-
-        return $dataProvider;        
-    }    
+    }
 
     protected function _getCheckedFields()
     {
@@ -52,12 +43,30 @@ class Report extends ReportModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['city_code', 'merchant_id', 'client_type', 'channel', 'sem_account', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
                 return ['merchant_id', 'created_day'];
             }
         }
         return $fields;
+    }
+
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            $this->_sKeyParam(['field' => 'client_type']),
+            $this->_sKeyParam(['field' => 'channel']),
+            $this->_sPointParam(['field' => 'sem_account', 'table' => 'account']),
+        ];
+        $form = [
+        [
+            $this->_sStartParam(['field' => 'created_day']),
+            $this->_sHiddenParam(['field' => 'field_hit']),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 }

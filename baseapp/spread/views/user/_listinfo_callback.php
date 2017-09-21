@@ -11,12 +11,57 @@ $modelNew = $modelUser->_newModel('callback');
                 <table class="table table-striped table-bordered responsive">
                     <thead>
                         <tr>
+                            <th><?= $modelNew->getAttributeLabel('status'); ?></th>
+                            <th><?= $modelNew->getAttributeLabel('invalid_status'); ?></th>
+                            <th><?= $modelNew->getAttributeLabel('out_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('content'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><?= Html::textarea('content', '', ['id' => 'callback_content', 'rows' => '5', 'cols' => '150']); ?></td>
+                        <td>
+                        <?= Html::dropDownList(
+                            "status",
+                            $modelUser->status,
+                            $modelNew->statusInfos,
+                            [
+                                'prompt' => '全部',
+                                'style' => 'width:80px;',
+                                'class' => 'form-control',
+                                'id' => 'callback_status',
+                                'onchange' => "updateElemForUser('{$tableName}', {$modelNew->id}, 'status', this.value)",
+                            ]
+                        ); ?>
+                        </td>
+                        <td>
+                        <?= Html::dropDownList(
+                            "invalid_status",
+                            $modelUser->invalid_status,
+                            $modelNew->invalidStatusInfos,
+                            [
+                                'prompt' => '全部',
+                                'style' => 'width:80px;',
+                                'class' => 'form-control',
+                                'id' => 'callback_invalid_status',
+                                'onchange' => "updateElemForUser('{$tableName}', {$modelNew->id}, 'invalid_status', this.value)",
+                            ]
+                        ); ?>
+                        </td>
+                        <td>
+                        <?= Html::dropDownList(
+                            "out_status",
+                            $modelUser->out_status,
+                            $modelNew->outStatusInfos,
+                            [
+                                'prompt' => '全部',
+                                'style' => 'width:90px;',
+                                'class' => 'form-control',
+                                'id' => 'callback_out_status',
+                                'onchange' => "updateElemForUser('{$tableName}', {$modelNew->id}, 'out_status', this.value)",
+                            ]
+                        ); ?>
+                        </td>
+                            <td><?= Html::textarea('content', '', ['id' => 'callback_content', 'rows' => '5', 'cols' => '120']); ?></td>
                         </tr>
                     </tbody>
                 </table>
@@ -32,6 +77,9 @@ $modelNew = $modelUser->_newModel('callback');
                 <table class="table table-striped table-bordered responsive">
                     <thead>
                         <tr>
+                            <th><?= $modelNew->getAttributeLabel('status'); ?></th>
+                            <th><?= $modelNew->getAttributeLabel('invalid_status'); ?></th>
+                            <th><?= $modelNew->getAttributeLabel('out_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('content'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('created_at'); ?></th>
                         </tr>
@@ -39,6 +87,9 @@ $modelNew = $modelUser->_newModel('callback');
                     <tbody id="callback_infos">
                     <?php foreach ($callbackInfos as $model) { ?>
                         <tr>
+                            <td><?= $model->getKeyName('status', $model->status); ?></td>
+                            <td><?= $model->getKeyName('invalid_status', $model->invalid_status); ?></td>
+                            <td><?= $model->getKeyName('out_status', $model->out_status); ?></td>
                             <td><?= $model->content; ?></td>
                             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
                         </tr>
@@ -54,6 +105,11 @@ $modelNew = $modelUser->_newModel('callback');
 function addCallback()
 {
     var content = $("#callback_content").val();
+    var status = $("#callback_status").val();
+    if (!status) {
+        alert('<?= $modelNew->getAttributeLabel('status'); ?>内容不能为空');
+        return false;
+    }
     if (!content) {
         alert('<?= $modelNew->getAttributeLabel('content'); ?>内容不能为空');
         return false;
@@ -64,6 +120,9 @@ function addCallback()
         'operation': 'add',
         'table': '<?= $tableName; ?>',
         'content': content,
+        'status': status,
+        'invalid_status': $("#callback_invalid_status").val(),
+        'out_status': $("#callback_out_status").val(),
         'note': $("#callback_note").val()
     };
 

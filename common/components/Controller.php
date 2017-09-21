@@ -6,6 +6,8 @@ use yii\web\Controller as YiiController;
 
 class Controller extends YiiController
 {
+	use ControllerWechatTrait;
+
     public $host;
     public $isMobile;
     public $clientType;
@@ -20,6 +22,8 @@ class Controller extends YiiController
     public $currentPage;
     public $currentElem;
     public $menuInfos = [];
+
+	public $wechatInfo;
 
     /**
      * @inheritdoc
@@ -56,7 +60,7 @@ class Controller extends YiiController
             $pos = strpos($this->clientUrl, '?');
             $query = $pos !== false ? substr($url, $pos) : '';
             $urlBase = str_replace($query, '', $url);
-            $lastChar = substr($url, -1);
+			$lastChar = substr($urlBase, -1);
             if ($lastChar != '/') {
                 $rUrl = "{$this->host}{$urlBase}/{$query}";
                 //header("Location: {$url}");
@@ -150,7 +154,14 @@ class Controller extends YiiController
         if (!empty($channelSpread)) {
             $pUrlPre = Yii::$app->request->get('point_url_pre', '');
             $urlPre = !empty($pUrlPre) ? $pUrlPre : strval(Yii::$app->request->referrer);
-            $statUrl = '/stat.html?' . Yii::$app->request->queryString . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
+            $queryStr = '';
+            if ($channelSpread == 'bdztc') {
+                if (!isset($_GET['cid'])) {
+                    $queryStr = '&cid=2';
+                }
+                $cityCode = empty($cityCode) ? 'beijing' : $cityCode;
+            }
+            $statUrl = '/stat.html?' . Yii::$app->request->queryString . $queryStr . '&city_code=' . $cityCode . '&url_pre=' . $urlPre;
             //echo $statUrl;exit();
             Yii::$app->params['statUrl'] = "<script type='text/javascript' src='{$statUrl}'></script>";
         } else if (!empty($cityCode)) {

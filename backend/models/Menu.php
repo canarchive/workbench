@@ -26,6 +26,11 @@ class Menu extends PassportModel
         return true;
     }
 
+    public function getModuleInfos()
+    {
+		return $this->_getModuleDatas('backend');
+	}
+
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);

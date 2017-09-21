@@ -44,6 +44,9 @@ class SmsBehavior extends Behavior
 
         $this->sendSmsBase($mobile, $content, 'decoration_service');
 		if ($employee['status_sendmsg'] == 2 && !empty($employee['mobile_ext'])) {
+            if ($merchantInfo['id'] == 696) {
+                return ;
+            }
             $this->sendSmsBase($employee['mobile_ext'], $content, 'decoration_service');
 		}
         

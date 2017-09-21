@@ -4,10 +4,9 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Manager;
-use backend\components\AdminController;
 use backend\components\ControllerTraitFull;
 
-class ManagerController extends AdminController
+class ManagerController extends Controller
 {
     protected $modelClass = 'backend\models\Manager';
     protected $modelSearchClass = 'backend\models\searchs\Manager';
@@ -33,10 +32,14 @@ class ManagerController extends AdminController
             if ($model->save()) {
                 Yii::$app->getSession()->setFlash('success', Yii::t('app', 'new infos was saved.'));
             }
-            return $this->redirect(['edit-info']);
+            return $this->redirect('/');
         }
 
-        return $this->render('edit-info', ['model' => $model]);
+        return $this->render('@backend/views/common/change', [
+            'model' => $model,
+            'currentView' => $this->viewPrefix,
+            'type' => 'edit-info',
+        ]);
     }
 
     public function actionEditPassword()
@@ -51,9 +54,13 @@ class ManagerController extends AdminController
             if ($model->save()) {
                 Yii::$app->getSession()->setFlash('success', Yii::t('app', 'New password was saved.'));
             }
-            return $this->redirect(['edit-password']);
+            return $this->redirect(['/']);
         }
 
-        return $this->render('edit-password', ['model' => $model]);
+        return $this->render('@backend/views/common/change', [
+            'model' => $model,
+            'currentView' => $this->viewPrefix,
+            'type' => 'edit-password',
+        ]);
     }
 }

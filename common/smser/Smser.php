@@ -41,7 +41,10 @@ class Smser extends \yii\base\Component
             return $this->formatResult($info);
         }
 
-        $resultCode = $this->smser->send($mobile, $info['code'], $sort);
+        $cTemplates = require(__DIR__ . '/config/params-code-template.php');
+		$content = isset($cTemplates[$sort]) ? $cTemplates[$sort] : $info['code'];
+		$content = str_replace('{{CODE}}', $info['code'], $content);
+        $resultCode = $this->smser->send($mobile, $content, $sort);
 		return $this->formatResult($resultCode);
     }
 
@@ -62,6 +65,7 @@ class Smser extends \yii\base\Component
         $codes = [
             'ok' => 'OK',
 			'paramError' => '参数错误',
+			'codeError' => '验证码错误',
         	'verifyError' => '验证码错误！',
         	'noCode' => '没有向该手机号发送验证码，请重新操作',
 			'codeExpire' => '验证码已过期，请重新操作',

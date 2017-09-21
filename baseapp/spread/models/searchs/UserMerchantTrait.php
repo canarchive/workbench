@@ -2,13 +2,11 @@
 
 namespace baseapp\spread\models\searchs;
 
+use Yii;
 use yii\data\ActiveDataProvider;
 
 Trait UserMerchantTrait
 {
-    public $created_at_start;
-    public $created_at_end;
-
     public function rules()
     {
         return [
@@ -16,33 +14,81 @@ Trait UserMerchantTrait
         ];
     }
 
-    public function search($params)
+    protected function _searchElems()
     {
-        $query = self::find()->orderBy('id DESC');
+        return [
+            ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'service_id', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
+    }
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
-        if ($this->load($params, '') && !$this->validate()) {
-            return $dataProvider;
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+            $this->_sKeyParam(['field' => 'status']),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'mobile']),
+            $this->_sStartParam(),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
+    }
+
+    protected function _getTemplateFields()
+    {
+        $operation = [
+            'formatView' => 'raw',
+            'type' => 'operation',
+            'qParams' => [
+                'id' => ['field' => 'dispatch_id', 'value' => null],
+            ],
+            'menuCodes' => [
+                ['code' => 'subsite_decoration_dispatch_update'],
+            ]
+        ];
+        return [
+            'id' => ['type' => 'common'],
+            'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
+            'service_id' => ['type' => 'point', 'table' => 'service'],
+            'created_at' => ['type' => 'timestamp'],
+            'view_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+            'sendmsg_at' => ['type' => 'condition', 'formatView' => 'raw'],
+            'status' => ['type' => 'key'],
+            'operation' => $operation,
+        ];
+    }
+
+    public function _conditionElem($field, $view)
+    {
+        if ($field != 'sendmsg_at') {
+            return '';
         }
-        if (!empty($this->mobile)) {
-            $query->andFilterWhere(['like', 'mobile', $this->mobile]);
+
+        if ($this->$field > 0 || $this->status !== '') {
+            return $this->formatTimestamp($this->$field);
+        }
+        if ((Yii::$app->params['currentTime'] - $this->created_at) >= 3600) {
+            return '已超过1小时';
         }
 
-        $query->andFilterWhere([
-            'merchant_id' => $this->merchant_id,
-            'service_id' => $this->service_id,
-        ]);
-        $this->status = $this->status == 'all' ? null : $this->status;
-        $this->status = $this->status == 'back' ? ['back_reply', 'back_confirm'] : $this->status;
-		if ($this->status !== null) {
-			$query->andWhere(['status' => $this->status]);
-		}
-        //$this->merchant_id = 0;
-
-        $startTime = intval(strtotime($this->created_at_start));
-        $endTime = $this->created_at_end > 0 ? intval(strtotime($this->created_at_end)) : time();
-        $query->andFilterWhere(['>=', 'created_at', $startTime]);
-        $query->andFilterWhere(['<', 'created_at', $endTime]);
-        return $dataProvider;
+        $code = 'subsite_decoration_sendmsg_send';
+        $menu = $view->getMenuData($code);
+        
+        if (empty($menu)) {
+            return '';
+        }
+        $url = $menu['url'] . "?sort=merchant&id={$this->id}";
+        $str = "<a onclick='sendMsg(\"{$url}\")'>{$menu['name']}</a>";
+        return $str;
     }
 }

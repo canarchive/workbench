@@ -3,7 +3,6 @@ use yii\helpers\Html;
 
 $gridViewParams = [
     'dataProvider' => $dataProvider,
-    //'filterModel' => $searchModel,
     'columns' => [
         'id',
         'code',
@@ -14,7 +13,7 @@ $gridViewParams = [
             'value' => function($model) {
                 $appMenus = $this->context->menuInfos['appMenus'];
                 $updateUrl = isset($appMenus['update']) ? $appMenus['update']['url'] : '';
-                return '<input name="orderlist" type="text" style="width:30px;" value="' . $model->orderlist . '" class="input-text-c" onchange="updateElemByAjax(\'' . $updateUrl . '\', ' . $model->id . ', \'orderlist\', this.value);">';
+                return '<input name="orderlist" type="text" style="width:30px;" value="' . $model->orderlist . '" class="input-text-c" onchange="updateElemByAjax(\'' . $updateUrl . '\', \'\', ' . $model->id . ', \'orderlist\', this.value);">';
             },
         ],
         [
@@ -41,5 +40,4 @@ $gridViewParams = [
     ],
 ];
 
-$searchContent = $this->render('_search', array_merge($searchDatas, ['model' => $searchModel]));
-echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams, 'searchContent' => $searchContent]);
+echo $this->render('@backend/views/common/listinfo', ['gridViewParams'  => $gridViewParams]);

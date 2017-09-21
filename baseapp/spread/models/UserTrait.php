@@ -59,6 +59,7 @@ trait UserTrait
 
         $data['service_id'] = empty($serviceInfo) ? 1 : $serviceInfo->id;
         $data = $this->_formatData($data);
+        $data['service_id_first'] = $data['service_id'];
 
         $newModel = $this->_newModel('user', true, $data);
         $insert = $newModel->save();
@@ -84,6 +85,7 @@ trait UserTrait
             'service_num' => ['default' => 0],
             'status' => ['default' => ''],
             'invalid_status' => ['default' => ''],
+            'status_input' => ['default' => ''],
             'callback_again' => ['default' => 0],
             'view_at' => ['default' => 0],
             'signup_at' => ['default' => Yii::$app->params['currentTime']],
@@ -121,6 +123,8 @@ trait UserTrait
             $this->addError('mobile', '手机号已存在');
             return false;
         }
+        $this->service_id = $statusInput == 'admin' ? $this->service_id : null;
+        //var_dump($this->service_id);exit();
 
         $data = [
             'city_code' => $this->city_code,

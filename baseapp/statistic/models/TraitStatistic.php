@@ -41,7 +41,6 @@ trait TraitStatistic
     public function getClientTypeInfos()
     {
         $datas = [
-            '' => '全部',
             'pc' => 'PC端',
             'h5' => '移动端',
         ];
@@ -53,6 +52,7 @@ trait TraitStatistic
         $datas = [
             'bd' => '百度',
             'bdxxl' => '百度信息流',
+            'bdztc' => '百度直通车',
             'sg' => '搜狗',
 			'zht' => '智慧推',
             'gdt' => '广点通',

@@ -9,6 +9,7 @@ use baseapp\behaviors\BehaviorHelper;
 
 trait TraitModel
 {
+    use TraitSearch;
     use TraitLevel;
     use TraitPHPExcel;
 
@@ -116,33 +117,65 @@ trait TraitModel
         return $datas;
     }
 
-    public function formatPriv($field, $key, $privInfo)
+    public function formatPriv($field, $key = null)
     {
+        $privInfo = $this->_privInfo();
+        $key = is_null($key) ? $field : $key;
         $info = isset($privInfo[$field]) ? [$key => $privInfo[$field]] : null;
         return $info;
+    }
+
+    public function _privInfo()
+    {
+        $privInfo = isset(Yii::$app->params['privInfo']) ? Yii::$app->params['privInfo'] : null;
+        return $privInfo;
+    }
+
+    public function getKeyInfos($key)
+    {
+        $key = Inflector::id2camel($key, '_');
+        $keyDatas = "{$key}Infos";
+        return $this->$keyDatas;
     }
 
     public function getKeyName($key, $value, $datas = null)
     {
         if (is_null($datas)) {
-            $key = Inflector::id2camel($key, '_');
-            $keyDatas = "{$key}Infos";
-            $infos = $this->$keyDatas;
+            $infos = $this->getKeyInfos($key);
         }
         return isset($infos[$value]) ? $infos[$value] : $value;
     }
 
-    public function maskMobile($mobile)
+    public function maskMobile($mobile = null)
     {
+        $mobile = is_null($mobile) && isset($this->mobile) ? $this->mobile : $mobile;
         return substr_replace($mobile, '******', 3, 6);
     }
 
-    public function formatTimestamp($timestamp, $format = 'Y-m-d H:i:s')
+    public function formatTimestamp($timestamp, $format = null)
     {
         if (empty($timestamp)) {
             return '';
         }
-        return  date($format, $timestamp);
+        $format = is_null($format) ? 'Y-m-d H:i:s' : $format;
+        $return = date($format, $timestamp);
+        return $return;
+    }
+
+    public function formatPercent($num, $num2, $haveBracket = true, $precision = 4)
+    {
+        //$result = $num2 == 0 ? '-' : (number_format($num / $num2, $precision) * 100) . '%';
+        $result = $this->formatDivisor($num, $num2, false, $precision);
+        $result = $result == '-' ? $result : ($result * 100) . '%';
+        $result = $haveBracket ? " ( {$result} )" : $result;
+        return $result;
+    }
+
+    public function formatDivisor($num, $num2, $haveBracket = true, $precision = 2)
+    {
+        $result = $num2 == 0 ? '-' : number_format($num / $num2, $precision);
+        $result = $haveBracket ? " ( {$result} )" : $result;
+        return $result;
     }
 
     public function formatTimestampShow($timestamp)
@@ -155,4 +188,45 @@ trait TraitModel
         $str .= $minite . '分钟';
         return $str;
     }
+
+	public function randomString($length, $params = [])
+	{
+		$prefix = isset($params['prefix']) ? $params['prefix'] : '';
+		$suffix = isset($params['suffix']) ? $params['suffix'] : '';
+		$length = $length - strlen($prefix) - strlen($suffix);
+		$lowerUpper = isset($params['lowerUpper']) ? $params['lowerUpper'] : 'strtolower';
+		$onlyLetterNum = isset($params['onlyLetterNum']) ? $params['onlyLetterNum'] : true;
+		$string = $lowerUpper(Yii::$app->getSecurity()->generateRandomString($length));
+		if ($onlyLetterNum) {
+			$string = str_replace(['-', '_'], ['a', '1'], $string);
+		}
+		return $prefix . $string . $suffix;
+	}
+
+    protected function _getTemplateFields()
+    {
+        return [];
+    }
+
+	public function formatAtag($field, $info)
+	{
+		$type = isset($info['urlType']) ? $info['urlType'] : '';
+		switch ($type) {
+		case 'inline':
+			$method = $info['urlMethod'];
+			$url = $this->$method();
+			break;
+		default:
+			$url = $this->$field;
+		}
+		$name = isset($info['urlName']) ? $info['urlName'] : $this->$field;
+		$target = isset($info['urlTarget']) ? '' : 'target="_blank" ';
+		$str = "<a href='{$url}' {$target}>{$name}</a>";
+		return $str;
+	}
+
+	public function formatImgtag($field, $info)
+	{
+		return $this->$field;
+	}
 }

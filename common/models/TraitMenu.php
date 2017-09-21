@@ -102,14 +102,10 @@ trait TraitMenu
         return $datas;
     }
 
-    /**
-     * Get the module
-     *
-     * @return array
-     */
-    public function getModuleInfos()
+    public function _getModuleDatas($index)
     {
-        return Yii::$app->params['moduleInfos'];
+		$datas = require(Yii::getAlias('@baseapp/config/params-menu-modules.php'));
+		return $datas[$index];
     }
 
     /**
@@ -138,7 +134,23 @@ trait TraitMenu
             '2' => '左侧',
             '3' => '右侧顶部',
             '4' => '基于记录',
+            '99' => '特定位置',
         ];
         return $datas;
+    }
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'code' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'parent_code' => ['type' => 'common'],
+            'module' => ['type' => 'key'],
+            'controller' => ['type' => 'common'],
+            'method' => ['type' => 'common'],
+            'display' => ['type' => 'key'],
+            'extparam' => ['type' => 'common'],
+        ];
     }
 }

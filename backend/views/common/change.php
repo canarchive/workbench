@@ -3,7 +3,9 @@
 use yii\helpers\Html;
 
 $menuInfos = $this->context->menuInfos;
-$this->title = $menuInfos['menuTitle'];
+if (!isset($formContent)) {
+    $formContent = $this->render($currentView . '_form', ['model' => $model, 'type' => $type]);
+}
 $breadCrumbExt = isset($this->params['breadCrumbExt']) ? '-' . $this->params['breadCrumbExt'] : '';
 ?>
 <div class="row">

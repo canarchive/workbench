@@ -6,6 +6,7 @@ trait GoodsTrait
 {
 	public $picture;
 	public $slide;
+	public $skuItems;
 
     public static function tableName()
     {

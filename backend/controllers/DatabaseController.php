@@ -4,9 +4,8 @@ namespace backend\controllers;
 
 use Yii;
 use yii\web\NotFoundHttpException;
-use backend\components\AdminController;
 
-class DatabaseController extends AdminController
+class DatabaseController extends Controller
 {
     public function actionListinfo()
     {

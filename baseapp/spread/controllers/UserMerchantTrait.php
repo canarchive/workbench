@@ -19,15 +19,16 @@ trait UserMerchantTrait
             exit();
         }
 
-        return $this->_listinfoInfo('listout');
+        return $this->_listinfoInfo('@backend/subsite/views/user-merchant/listout');
 	}
 
     public function actionUpdateout($id = 0)
     {
         $model = $this->findModel($id);
+        $privInfo = $model->_privInfo();
         if (Yii::$app->getRequest()->method == 'POST') {
             $listUrl = $this->menuInfos['menus']['subsite_decoration_user-merchant_listout']['url'];
-		    $merchantIds = isset($this->privInfo['merchant_id']) ? $this->privInfo['merchant_id'] : [];
+		    $merchantIds = isset($privInfo['merchant_id']) ? $privInfo['merchant_id'] : [];
             if (empty($merchantIds)) {
                 return Yii::$app->response->redirect($listUrl)->send($listUrl);
                 exit();
@@ -45,7 +46,7 @@ trait UserMerchantTrait
             exit();
         }
 
-        return $this->render($this->viewPrefix . 'updateout', ['model' => $model]);
+        return $this->render('@backend/subsite/views/user-merchant/updateout', ['model' => $model]);
     }
 
     protected function _viewMethod()
@@ -56,7 +57,8 @@ trait UserMerchantTrait
 
         $modelClass = $this->modelClass;
         $model = new $modelClass();
-		$merchantIds = isset($this->privInfo['merchant_id']) ? $this->privInfo['merchant_id'] : [];
+        $privInfo = $model->_privInfo();
+		$merchantIds = isset($privInfo['merchant_id']) ? $privInfo['merchant_id'] : [];
 		$datas = $model->viewInfo($merchantIds, $ids);;
 
         return $datas;

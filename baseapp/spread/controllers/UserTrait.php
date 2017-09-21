@@ -13,7 +13,7 @@ trait UserTrait
 
     public function actionListout()
     {
-        return $this->_listinfoInfo('listout');
+        return $this->_listinfoInfo($this->viewPrefix . 'listout');
     }
 
     public function actionChangeMerchant($id)
@@ -124,16 +124,27 @@ trait UserTrait
             return $this->_update($model, $params);
         }
 
-        $fields = ['mobile', 'service_id', 'content'];
+        $userStatus = ['status', 'invalid_status', 'out_status'];
+        $fields = array_merge($userStatus, ['mobile', 'service_id', 'content']);
         $this->_initFields($model, $fields);
+        $model->merchant_id = $userModel->merchant_id;
         $r = $model->insert(false);
+        foreach ($userStatus as $uStatus) {
+            $userModel->$uStatus = $model->$uStatus;
+            $userModel->update(false);
+        }
 
         $return = [
             'status' => 200,
             'message' => 'OK',
-            'id' => $model->id,
-            'created_at' => date('Y-m-m H:i:s', $model->created_at),
-            'content' => '',
+            'data' => [
+                'id' => $model->id,
+                'created_at' => date('Y-m-d H:i:s', $model->created_at),
+                'status' => $model->getKeyName('status', $model->status),
+                'invalid_status' => $model->getKeyName('invalid_status', $model->invalid_status),
+                'out_status' => $model->getKeyName('out_status', $model->out_status),
+                'content' => '',
+            ],
         ];
         return $return;
     }
@@ -145,7 +156,7 @@ trait UserTrait
             return $this->_update($model, $params);
         }
 
-        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code'];
+        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code', 'sort'];
         $this->_initFields($model, $fields);
         $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
         if ($oldInfo) {
@@ -163,6 +174,9 @@ trait UserTrait
         $userModel->sendSmsValid($model, $userModel);
         $noteData = [
             'user_merchant_id' => $model->id,
+            'merchant_id' => $model->merchant_id,
+            'mobile' => $model->mobile,
+            'service_id' => $model->service_id,
             'reply' => Yii::$app->request->post('note'),
             'reply_at' => Yii::$app->params['currentTime'],
         ];

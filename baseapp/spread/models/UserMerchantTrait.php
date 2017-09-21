@@ -34,7 +34,9 @@ trait UserMerchantTrait
         return [
             'id' => 'ID',
             'merchant_id' => '商家',
+            'service_id' => '客服',
             'mobile' => '手机号',
+            'sort' => '装修类别',
             'house_id' => '房屋',
             'created_at' => '派单时间',
             'updated_at' => '更新时间',
@@ -104,6 +106,11 @@ trait UserMerchantTrait
         $info = $dModel->find()->where($where)->one();
 
         return $info;
+    }
+
+    public function getDispatch_id()
+    {
+        return $this->dispatchInfo['id'];
     }
 
 	protected function _formatInfos($infos)

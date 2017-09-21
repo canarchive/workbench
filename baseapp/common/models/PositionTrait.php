@@ -4,6 +4,10 @@ namespace baseapp\common\models;
 
 trait PositionTrait
 {
+	public $picture;
+	public $picture_mobile;
+	public $picture_ext;
+
     public static function tableName()
     {
         return '{{%position}}';
@@ -17,9 +21,9 @@ trait PositionTrait
     public function rules()
     {
         return [
-            [['name', 'sort'], 'required'],
-            [['orderlist', 'status', 'picture', 'picture_mobile', 'picture_ext'], 'default', 'value' => 0],
-			[['description', 'url', 'name_ext'], 'safe'],
+            [['name'], 'required'],
+            [['orderlist', 'status'], 'default', 'value' => 0],
+			[['site_code', 'sort', 'description', 'url', 'name_ext', 'picture', 'picture_mobile', 'picture_ext'], 'safe'],
         ];
     }
 
@@ -29,11 +33,12 @@ trait PositionTrait
             'id' => 'ID',
             'name' => '名称',
 			'name_ext' => '名称-预留',
+			'site_code' => '站点',
 			'sort' => '类型',
 			'url' => 'URL',
 			'orderlist' => '排序',
 			'picture' => '图片',
-			'picture_mobile' => '图片-H5',
+			'picture_mobile' => '图片-小图',
 			'picture_ext' => '图片-预留',
 			'created_at' => '创建时间',
 			'updated_at' => '更新时间',
@@ -42,11 +47,9 @@ trait PositionTrait
         ];
     }
 
-	public function getStatusInfos()
+	public function getSiteCodeInfos()
 	{
 		$datas = [
-			'0' => '停用',
-			'1' => '正常',
 		];
 		return $datas;
 	}
@@ -67,4 +70,39 @@ trait PositionTrait
 
 		return true;
 	}	
+
+	public function getPictureUrl()
+	{
+		return $this->_getThumb('position', 'picture');
+	}
+
+	public function getPositionUrl()
+	{
+		if (empty($this->url)) {
+			return 'javascript: void(0);';
+		}
+		return $this->url;
+	}
+
+	public function formatImgtag($field = null, $info = [])
+	{
+		return $this->getAttachmentImgtag('position', 'picture');
+	}
+
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'name' => ['type' => 'common'],
+            'name_ext' => ['type' => 'common'],
+			'sort' => ['type' => 'key'],
+            'picture' => ['type' => 'imgtag'],
+            'url' => ['type' => 'atag'],
+            'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
+            'description' => ['type' => 'common', 'listNo' => true],
+            'created_at' => ['type' => 'timestamp'],
+            'updated_at' => ['type' => 'timestamp', 'listNo' => true],
+			'status' => ['type' => 'key'],
+        ];
+    }
 }

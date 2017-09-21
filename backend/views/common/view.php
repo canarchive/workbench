@@ -1,10 +1,15 @@
 <?php
 
-use yii\helpers\Html;
 use yii\widgets\DetailView;
 
+if (!isset($detailViewParams)) {
+$detailViewParams = [
+    'model' => $model,
+    'attributes' => $model->formatTemplateDatas('show', $this),
+];
+}
+
 $menuInfos = $this->context->menuInfos;
-$this->title = $menuInfos['menuTitle'];
 ?>
 <div class="row">
     <div class="box col-md-12">

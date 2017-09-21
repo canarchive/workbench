@@ -3,14 +3,9 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\helpers\ArrayHelper;
-use backend\models\Managerlog;
-use backend\models\searchs\Managerlog as ManagerlogSearch;
-use yii\web\NotFoundHttpException;
-use backend\components\AdminController;
 use backend\components\ControllerTraitView;
 
-class ManagerlogController extends AdminController
+class ManagerlogController extends Controller
 {
     use ControllerTraitView;
     protected $modelClass = 'backend\models\Managerlog';
@@ -22,5 +17,10 @@ class ManagerlogController extends AdminController
         $_GET['Managerlog']['manager_id'] = $managerId;
         Yii::$app->params['currentManager'] = true;
         return $this->_listinfoInfo();
+    }
+
+    protected function getListinfoView()
+    {
+        return $this->viewPrefix . 'listinfo';
     }
 }

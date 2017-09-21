@@ -1,13 +1,15 @@
 <?php
 
 use yii\bootstrap\ActiveForm;
+$model->picture = $model->getAttachmentIds('position', 'picture');
 ?>
 <div class="menu-form">
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'name_ext')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'name')->textInput() ?>
+    <?= $form->field($model, 'name_ext')->textInput() ?>
+    <?= $form->field($model, 'site_code')->dropDownList($model->siteCodeInfos); ?>
     <?= $form->field($model, 'sort')->dropDownList($model->sortInfos); ?>
-    <?= $form->field($model, 'url')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'url')->textInput() ?>
     <?= $form->field($model, 'orderlist')->textInput() ?>
     <?= $form->field($model, 'picture')->hiddenInput(); ?>
 	<?= $model->uploadElem('position', 'picture'); ?>
@@ -16,6 +18,6 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
 
-	<?= $this->render('@app/views/common/form_button', ['model' => $model]); ?>
+	<?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

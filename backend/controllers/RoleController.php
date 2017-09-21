@@ -8,12 +8,11 @@ use yii\web\NotFoundHttpException;
 use backend\models\AuthItem;
 use backend\models\Menu as MenuModel;
 use backend\models\searchs\AuthItem as AuthItemSearch;
-use backend\components\AdminController;
 
 /**
  * AuthItemController implements the CRUD actions for AuthItem model.
  */
-class RoleController extends AdminController
+class RoleController extends Controller
 {
     /**
      * Lists all AuthItem models.
@@ -21,12 +20,12 @@ class RoleController extends AdminController
      */
     public function actionListinfo()
     {
-        $searchModel = new AuthItemSearch(['type' => Item::TYPE_ROLE]);
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        $this->showFilter = true;
+        $this->searchModel = new AuthItemSearch(['type' => Item::TYPE_ROLE]);
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
 
-        return $this->render('listinfo', [
+        return $this->render($this->listinfoView, [
             'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
         ]);
     }
 
@@ -43,7 +42,11 @@ class RoleController extends AdminController
             return $this->redirect(['view', 'id' => $model->name]);
         }
 
-        return $this->render('add', ['model' => $model,]);
+        return $this->render('@backend/views/common/change', [
+            'model' => $model,
+            'currentView' => $this->viewPrefix,
+            'type' => 'add',
+        ]);
     }
 
     /**
@@ -59,7 +62,11 @@ class RoleController extends AdminController
             return $this->redirect(['view', 'id' => $model->name]);
         }
 
-        return $this->render('update', ['model' => $model,]);
+        return $this->render('@backend/views/common/change', [
+            'model' => $model,
+            'currentView' => $this->viewPrefix,
+            'type' => 'update',
+        ]);
     }
 
     /**

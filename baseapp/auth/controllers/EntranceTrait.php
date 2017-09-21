@@ -16,20 +16,30 @@ trait EntranceTrait
         return $this->render('signup', $result);
     }
 
-    public function actionSignin()
+    public function actionSigninQr()
     {
         $result = $this->_signMethod('signin');
-		if (isset($this->returnJson) && isset($result['isAjax']) && $result['isAjax']) {
-            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-			return $result;
-			exit();
-		}
         if ($result['status'] == 200 && isset($result['homeUrl'])) {
             return Yii::$app->response->redirect($result['homeUrl'])->send();
         }
 
+        return $this->render('signin-qr', $result);
+    }
+
+    public function actionSignin()
+    {
+        $result = $this->_signMethod('signin');
+        if ($result['status'] == 200 && isset($result['homeUrl'])) {
+            return Yii::$app->response->redirect($result['homeUrl'])->send();
+        }
         return $this->render('signin', $result);
     }
+
+	public function actionSigninApi()
+	{
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return $this->_signMethod('signin');
+	}
 
     protected function _signMethod($action)
     {
