@@ -16,22 +16,16 @@ trait UpdateServiceTrait
     protected function _serviceStatus()
     {
         $elems = [
-            'all' => 'visit_num_success',
-            '' => 'new_num',
-            'follow' => 'follow_num',
-            'follow-plan' => 'followplan_num',
-            'valid' => 'valid_num',
-            'valid-back' => 'valid_back_num',
-            'valid-part' => 'valid_part_num',
-            'valid-out' => 'validout_num',
-            'bad' => 'bad_num',
+            'visit_num_success' => "",
+            'new_num' => '`status` = ""',
+            'valid_num' => '`status` = "valid"',
+            'valid_back_num' => '`status` = "valid-back"',
+            'follow_num' => '`status` IN ("follow", "follow-plan")',
+            'bad_num' => '`status` = "bad"',
         ];
         $sql = '';
-        foreach ($elems as $elem => $elemField) {
-            $where = $elem == 'all' ? "`service_num` = 0" : "`service_num` = 0 AND `status` = '{$elem}'";
+        foreach ($elems as $elemField => $where) {
             $sql .= $this->_serviceSql($where, $elemField);
-            $where = $elem == 'all' ? "`service_num` > 0" : "`service_num` > 0 AND `status` = '{$elem}'";
-            $sql .= $this->_serviceSql($where, 'old_' . $elemField);
         }
         return $sql;
     }
@@ -49,10 +43,8 @@ trait UpdateServiceTrait
 
         $sql = '';
         foreach ($elems as $elem => $elemField) {
-            $where = "`service_num` = 0 AND `status` = 'valid-out' AND `out_status` = '{$elem}'";
+            $where = "`status` = 'valid-out' AND `out_status` = '{$elem}'";
             $sql .= $this->_serviceSql($where, $elemField);
-            $where = "`service_num` > 0 AND `status` = 'valid-out' AND `out_status` = '{$elem}'";
-            $sql .= $this->_serviceSql($where, 'old_' . $elemField);
         }
         return $sql;
     }
@@ -64,34 +56,33 @@ trait UpdateServiceTrait
             'no_call' => 'badnocall_num',
             'noneed' => 'badnoneed_num',
             'booked' => 'badbooked_num',
-            'no_test' => 'badtest_num',
+            'no_test' => 'badnotest_num',
         ];
 
         $sql = '';
         foreach ($elems as $elem => $elemField) {
-            $where = "`service_num` = 0 AND `status` = 'bad' AND `invalid_status` = '{$elem}'";
+            $where = "`status` = 'bad' AND `invalid_status` = '{$elem}'";
             $sql .= $this->_serviceSql($where, $elemField);
-            $where = "`service_num` > 0 AND `status` = 'bad' AND `invalid_status` = '{$elem}'";
-            $sql .= $this->_serviceSql($where, 'old_' . $elemField);
         }
         return $sql;
     }
 
     protected function _serviceSql($where, $field)
     {
-        $sqlBase = "UPDATE `workplat_statistic`.`ws_service_origin` AS `a`, 
-            (SELECT `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user` WHERE {{WHERE}} GROUP BY `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d')) AS `b` 
+        $where = empty($where) ? 1 : $where;
+        $sqlBase = "UPDATE `workplat_statistic`.`ws_service_invalid` AS `a`, 
+            (SELECT `merchant_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user` WHERE {{WHERE}} GROUP BY `merchant_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d')) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
-            WHERE `a`.`merchant_id` = `b`.`merchant_id` AND `a`.`service_id` = `b`.`service_id` AND `a`.`created_day` = `b`.`created_day`;";
-        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br />';
+            WHERE `a`.`merchant_id` = `b`.`merchant_id` AND `a`.`created_day` = `b`.`created_day`;";
+        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br /><br />';
         return $sql;
     }
 
     protected function _serviceBase()
     {
-        $sql = 'TRUNCATE `workplat_statistic`.`ws_service_origin`;';
-        $sql .= 'INSERT INTO `workplat_statistic`.`ws_service_origin` (`merchant_id`, `service_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
-            SELECT `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN (1, 27, 28, 31, 46, 47, 49, 50, 52) GROUP BY `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");<br />';
+        $sql = 'TRUNCATE `workplat_statistic`.`ws_service_invalid`;';
+        $sql .= 'INSERT INTO `workplat_statistic`.`ws_service_invalid` (`merchant_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
+            SELECT `merchant_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN (1, 27, 28, 31, 46, 47, 49, 50, 52) GROUP BY `merchant_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");<br />';
         return $sql;
     }
 }
