@@ -74,8 +74,8 @@ Trait AdpictureTrait
         parent::afterSave($insert, $changedAttributes);
 
 		$fields = ['thumb'];
-		$this->_updateSingleAttachment('sample', $fields);
-		$this->_updateMulAttachment('sample', 'picture');
+		$this->_updateSingleAttachment('adpicture', $fields);
+		$this->_updateMulAttachment('adpicture', 'picture');
 
 		return true;
 	}	

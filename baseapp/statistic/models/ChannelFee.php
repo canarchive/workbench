@@ -73,9 +73,10 @@ class ChannelFee extends AbstractStatistic
         $sql = 'INSERT INTO `workplat_spread`.`wd_planfee` (`created_month`, `created_day`, `created_week`, `created_weekday`, `client_type`, `channel`, `account_id`) VALUES';
         $sqlDetail = '';
         
-        $days = ['20170904', '20170905'];
         $aModel = new Account();
-        foreach ($days as $day) {
+        //foreach ($days as $day) {
+        for ($i = 4; $i < 21; $i++) {
+            $day = $i < 10 ? '2017090' . $i : '201709' . $i;
             $time = strtotime($day);
             $month = date('Ym', $time);
             $week = date('W', $time);
