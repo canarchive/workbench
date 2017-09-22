@@ -14,4 +14,11 @@ class PlanfeeController extends Controller
     {
     	return $this->_importInfo();
     }
+
+    public function actionDirectBaidu()
+    {
+        $class = 'spread\models\Plan';
+        $model = new $class();
+        $model->directBaidu();
+    }
 }

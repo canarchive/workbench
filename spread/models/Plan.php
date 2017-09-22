@@ -63,4 +63,30 @@ class Plan extends BaseModel
             'status' => ['type' => 'key'],
         ];
     }
+
+    public function directBaidu()
+    {
+        $infoBase = [
+            'channel' => 'bdztc',
+            'client_type' => 'h5',
+            'account_id' => 12,
+            'account_code' => '525062556@y.com',
+        ];
+        $plans = $this->getInfos(['where' => ['account_id' => 12]]);
+        for ($i = 1; $i < 22; $i++) {
+            $day = $i < 10 ? '2017090' . $i : '201709' . $i;
+            $time = strtotime($day);
+            $info = array_merge($infoBase, [
+                'created_day' => date('Ymd', $time),
+                'created_month' => date('Ym', $time),
+                'created_week' => date('W', $time),
+                'created_weekday' => date('N', $time),
+            ]);
+            foreach ($plans as $plan) {
+                $info = array_merge($info, ['plan_id' => $plan['id'], 'plan_name' => $plan['name']]);
+                $model = new Planfee($info);
+                $model->insert(false);
+            }
+        }
+    }
 }
