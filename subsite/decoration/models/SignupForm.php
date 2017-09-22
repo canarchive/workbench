@@ -39,7 +39,7 @@ class SignupForm extends BaseModel
                 '674' => '2.7',
                 '671' => '3',
             ];
-            $priceRate = isset($rateDatas[$this->_datas['merchant_id']]) ? $rateDatas[$dataBase['merchant_id']] : 2;
+            $priceRate = 3;//isset($rateDatas[$this->_datas['merchant_id']]) ? $rateDatas[$dataBase['merchant_id']] : 2;
             
             $quote = new QuoteHouse();
             $quoteInfo = $quote->getResult($areaInput, $priceRate);
