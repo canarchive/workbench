@@ -12,6 +12,7 @@ class Planfee extends BaseModel
     public $import;
     public $export;
     public $order_diff;
+    public $description;
 
     public static function tableName()
     {
@@ -22,7 +23,7 @@ class Planfee extends BaseModel
     {
         return [
             [['created_day', 'channel', 'account_id', 'plan_id'], 'required'],
-            [['created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
+            [['description', 'created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
         ];
     }
 
@@ -52,7 +53,11 @@ class Planfee extends BaseModel
         if (empty($this->client_type) || !in_array($this->client_type, array_keys($this->clientTypeInfos))) {
             //exit('请选择渠道');
         }
+        if ($this->channel == 'zht') {
+            return $this->_importZht();
+        }
         $datas = $this->_importDatas();
+        var_dump($datas);exit();
         if ($datas === false) {
             exit($this->getFirstError('import'));
         }
@@ -98,6 +103,57 @@ class Planfee extends BaseModel
         return $i;
     }
 
+    protected function _importZht()
+    {
+        $str = $this->description;
+        $infos = explode("\r", $str);
+        print_r($infos);
+        foreach ($infos as $info) {
+            $info = trim($info);
+            if (empty($info)) {
+                continue;
+            }
+            $info = preg_replace("/\s+/", ' ', $info);
+            $subInfo = explode(' ', $info);
+            $data = [];
+            $data = [
+                'channel' => $this->channel,
+                'client_type' => $this->client_type,
+            ];
+            $data['created_day'] = intval(str_replace('-', '', $subInfo[0]));
+            $data['show_num'] = intval($subInfo[1]);
+            $data['hit_num'] = intval($subInfo[2]);
+            $data['fee'] = floatval($subInfo[3]);
+            if (empty($data['created_day']) || (empty($data['show_num']) && empty($data['hit_num']) && empty($data['fee']))) {
+                continue;
+            }
+            $time = strtotime($data['created_day']);
+            $data = array_merge($data, [
+                'created_day' => date('Ymd', $time),
+                'created_month' => date('Ym', $time),
+                'created_week' => date('W', $time),
+                'created_weekday' => date('N', $time),
+                'account_id' => 15,
+                'plan_id' => 1222,
+            ]);
+
+            $where = [
+                'created_day' => $data['created_day'],
+                'client_type' => $this->client_type,
+                'account_id' => 15,
+                'plan_id' => 1222,
+            ];
+            $dataOld = $this->find()->where($where)->one();
+            if (!empty($dataOld)) {
+                continue;
+            }
+            $self = new self($data);
+            $r = @ $self->save();
+        }
+        exit();
+
+    }
+
     protected function channelFields($channel)
     {
         $datas = [
@@ -133,6 +189,22 @@ class Planfee extends BaseModel
                 ],
             ],
             '360' => [
+                'startLine' => 1,
+                'fields' => [
+                    'A' => 'created_day',
+                    'B' => 'account_code',
+                    //'C' => '',
+                    'D' => 'plan_name',
+                    'E' => 'show_num',
+                    'F' => 'hit_num',
+                    //'G' => '',
+                    'H' => 'fee',
+                    //'I' => '',
+                    //'J' => '',
+                    //'K' => '',
+                ],
+            ],
+            'zht' => [
                 'startLine' => 1,
                 'fields' => [
                     'A' => 'created_day',

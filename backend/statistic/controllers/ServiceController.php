@@ -49,4 +49,30 @@ class ServiceController extends AdminController
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    public function actionListinfo()
+    {
+        return $this->_invalid('base');
+    }
+
+    public function actionListout()
+    {
+        return $this->_invalid('out');
+    }
+
+    public function actionListbad()
+    {
+        return $this->_invalid('bad');
+    }
+
+    public function _invalid($sort)
+    {
+        $searchClass = $modelSearchDispatchClass = 'baseapp\statistic\models\searchs\ServiceInvalid';
+        $this->searchModel = new $searchClass();
+        $this->searchModel->_sort = $sort;
+        $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
+        return $this->render($this->viewPrefix . 'service-invalid', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
 }

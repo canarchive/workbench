@@ -50,6 +50,11 @@ $elems = [
         'keyword_search-created_hour' => '关键字每时',
         'keyword_search-created_day-created_hour' => '关键字每日每时',
     ],
+    'service-invalid' => [
+        'created_month' => '每月',
+        'created_month-created_week' => '每周',
+        'created_day' => '每日',
+    ],
     'service' => [
         'created_month' => '每月',
         'created_month-created_week' => '每周',
