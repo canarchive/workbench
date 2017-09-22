@@ -11,6 +11,7 @@ return [
     'eale' => [
         'name' => '右视觉',
         'icp' => '',
+		'address' => '北京市朝阳区高碑店文化新大街东辰民族艺术大厦D座-03右视觉',
         'sort' => ['commercial', 'fashion', 'star', 'people'],
         //'sort' => ['auto', 'elec', 'fashion', 'still', 'cate'],
         'title' => '右视觉摄影官网_北京个人艺术写真_北京写真摄影_个人写真照_北京个人写真工作室',

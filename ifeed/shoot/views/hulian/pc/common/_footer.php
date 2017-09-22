@@ -18,6 +18,6 @@ $navDatas = $this->context->navDatas;
         <p>24小时客服电话：<a rel="nofollow"><?= Yii::$app->params['siteHotline']; ?></a></p>
         <p><a rel="nofollow"><?= Yii::$app->params['siteIcpInfo']; ?></a></p>
         <p><?= Yii::$app->params['siteCopyRightInfo']; ?></p>
-        <p>地址：<?= Yii::$app->params['siteAddressInfo']; ?></p>
+        <p>地址：<?php $address = isset($this->context->currentSiteInfo['address']) ? $this->context->currentSiteInfo['address'] : Yii::$app->params['siteAddressInfo']; echo $address; ?></p>
     </div>
 </div>

@@ -32,7 +32,7 @@ return [
     ],
     'sample-show' => [
 		'title' => '{{INFONAME}}摄影图片_{{INFONAME}}摄影照片_{{SORTNAME}}摄影价格_互联影像',
-		'keyword' => '{{INFONAME}}图片，{{INFONAME}}写真照片',
+		'keyword' => '{{INFONAME}}摄影图片，{{INFONAME}}摄影照片，{{SORTNAME}}摄影价格',
 		'description' => '【互联影像】为您整理与拍摄的，{{INFONAME}}摄影图片_{{INFONAME}}摄影照片，希望喜欢{{INFONAME}}的朋友与需要拍摄的朋友都可以联系我们！',
     ],
     'search-list' => [

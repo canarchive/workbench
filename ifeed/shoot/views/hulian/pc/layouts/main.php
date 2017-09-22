@@ -4,7 +4,7 @@ use yii\helpers\Url;
 $siteCode = $this->context->siteCode;
 $cssFiles = ['common', 'swiper.min'];//, 'main_golden', 'main_blue'];
 if (true) {//in_array($siteCode, ['shoot', 'toteme'])) {
-    $cssFiles = array_merge($cssFiles, ['main_golden']);
+    $cssFiles = array_merge($cssFiles, ['main_golden1']);
 } else {
     $cssFiles = array_merge($cssFiles, ['main_blue']);
 }
