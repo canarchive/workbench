@@ -19,6 +19,7 @@ trait UpdateServiceTrait
             'visit_num_success' => "",
             'new_num' => '`status` = ""',
             'valid_num' => '`status` = "valid"',
+            'validout_num' => '`status` = "valid-out"',
             'valid_back_num' => '`status` = "valid-back"',
             'follow_num' => '`status` IN ("follow", "follow-plan")',
             'bad_num' => '`status` = "bad"',
@@ -34,10 +35,10 @@ trait UpdateServiceTrait
     {
         $elems = [
             '' => 'outnew_num',
-            'no_call' => 'outout_num',
-            'noneed' => 'outpart_num',
-            'booked' => 'outsmall_num',
-            'no_test' => 'outshop_num',
+            'out' => 'outout_num',
+            'part' => 'outpart_num',
+            'small' => 'outsmall_num',
+            'shop' => 'outshop_num',
             'soft' => 'outsoft_num',
         ];
 

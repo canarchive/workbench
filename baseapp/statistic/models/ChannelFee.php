@@ -55,15 +55,22 @@ class ChannelFee extends AbstractStatistic
         $where = '`a`.`created_day` = `b`.`created_day` AND `a`.`client_type` = `b`.`client_type` AND `a`.`channel` = `b`.`channel` AND `a`.`sem_account` = `b`.`account_id` AND `a`.`plan_id` = `b`.`plan_id`';
         $groupBy = '`created_day`, `client_type`, `channel`, `sem_account`, `plan_id`';
         $mid1 = "SELECT `created_day`, `client_type`, `channel`, `sem_account`, `plan_id`, COUNT(*) AS `count` FROM {$vTable} GROUP BY {$groupBy}";
-        $mid2 = "SELECT `created_day`, `client_type`, `channel`, `sem_account`, `plan_id`, COUNT(DISTINCT(`mobile`)) AS `count` FROM {$cTable} WHERE `status_input` = '' GROUP BY {$groupBy}";
-        $mid3 = "SELECT `created_day`, `client_type`, `channel`, `sem_account`, `plan_id`, COUNT(DISTINCT(`mobile`)) AS `count` FROM {$cTable} WHERE `status` IN ('valid') AND `status_input` = '' GROUP BY {$groupBy}";
 
         $sql = '';
         $sql .= "UPDATE {$cTable} as `a`, {$uTable} as `b` SET `a`.`status` = `b`.`status`, `a`.`status_input` = `b`.`status_input` WHERE `a`.`id` = `b`.`conversion_id`;<br /><br />";
-
         $sql .= "UPDATE ({$mid1}) as `a`, {$pTable} as `b` SET `b`.`visit_num` = `a`.`count` WHERE {$where};<br /><br />";
-        $sql .= "UPDATE ({$mid2}) as `a`, {$pTable} as `b` SET `b`.`success_num` = `a`.`count` WHERE {$where};<br /><br />";
-        $sql .= "UPDATE ({$mid3}) as `a`, {$pTable} as `b` SET `b`.`valid_num` = `a`.`count` WHERE {$where};<br /><br />";
+        $numSql = [
+            'success_num' => '1',
+            'valid_num' => '`status` IN ("valid")',
+            'bad_num' => '`status` IN ("bad")',
+            'out_num' => '`status` IN ("valid-out")',
+            'back_num' => '`status` IN ("valid-back")',
+            'follow_num' => '`status` IN ("follow", "follow-plan")',
+        ];
+        foreach ($numSql as $field => $whereMid) {
+            $midSql = $mid2 = "SELECT `created_day`, `client_type`, `channel`, `sem_account`, `plan_id`, COUNT(DISTINCT(`mobile`)) AS `count` FROM {$cTable} WHERE {$whereMid} AND `status_input` = '' GROUP BY {$groupBy}";
+            $sql .= "UPDATE ({$midSql}) as `a`, {$pTable} as `b` SET `b`.`{$field}` = `a`.`count` WHERE {$where};<br /><br />";
+        }
 
         return $sql;
     }
@@ -75,7 +82,7 @@ class ChannelFee extends AbstractStatistic
         
         $aModel = new Account();
         //foreach ($days as $day) {
-        for ($i = 4; $i < 21; $i++) {
+        for ($i = 21; $i < 25; $i++) {
             $day = $i < 10 ? '2017090' . $i : '201709' . $i;
             $time = strtotime($day);
             $month = date('Ym', $time);
