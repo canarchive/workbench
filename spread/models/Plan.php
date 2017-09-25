@@ -44,7 +44,7 @@ class Plan extends BaseModel
         }
         if ($this->account_id != $this->getOldAttribute('account_id')) {
             $accountInfo = $this->getPointInfo('account', $this->account_id);
-            $this->channel = $accountInfo['channel'];
+            $this->channel = isset($accountInfo['channel']) ? $accountInfo['channel'] : $this->channel;
         }
         return true;
     }

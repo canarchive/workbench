@@ -28,7 +28,7 @@ class Attachment extends AttachmentBase
                 'import' => [
                     'isSingle' => true,
                     'minSize' => 0.01, // unit: kb
-                    'maxSize' => 300,
+                    'maxSize' => 900,
                     'type' => ['application/*', 'text/csv'],
                 ],
             ],
