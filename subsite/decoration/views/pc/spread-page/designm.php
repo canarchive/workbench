@@ -180,7 +180,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         <!--offerlayer改动在此结束-->
         <div class="index_box clearfix btn_data-tit" data-tit="申请免费户型设计">
             <div class=" h260" id="box">
-                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/0314e-7517.jpg"></div>
+                <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/0314e-7517.jpg?v=1"></div>
             <ul class="index_box_ul btn_data-tit" data-tit="申请预约免费设计量房">
                 <li>
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/52289-8223.jpg" id="img111"></li>
