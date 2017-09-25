@@ -22,6 +22,35 @@ trait ApiTrait
         return $this->$method($data['value'], $data['type']);
     }
 
+	public function signupin($data)
+	{
+		$check = ['status' => 200];//$this->checkMobileCode(['mobile' => $data['mobile'], 'code' => $data['code'], 'type' => 'signupin']);
+		if ($check['status'] != 200) {
+			return $check;
+		}
+        $userInfo = $this->getUserInfo(['mobile' => $data['mobile']]);
+		if (empty($userInfo)) {
+			$userData['mobile'] = $data['mobile'];
+			$result = $this->registerUser($userData);
+			if ($result['status'] != 200) {
+				return $result;
+			}
+			$userInfo = $result['model'];
+		}
+
+        $loginResult = Yii::$app->user->login($userInfo);
+		if (!$loginResult) {
+		    return ['status' => 400, 'isAjax' => true, 'message' => '登录失败'];
+		}
+
+        $identity = Yii::$app->user->getIdentity();
+        $identity->last_at = Yii::$app->params['currentTime'];
+        $identity->last_ip = Yii::$app->request->getIp();
+        $identity->login_num = $identity->login_num + 1;
+        $identity->update(false);
+		return ['status' => 200, 'model' => $userInfo];
+	}
+
 	public function generateCode($data)
 	{
 		$captcha = $this->checkCaptcha($data['captcha'], $this->captchaRequire);
