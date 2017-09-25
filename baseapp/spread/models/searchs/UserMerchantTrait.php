@@ -59,6 +59,7 @@ Trait UserMerchantTrait
             'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
             'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
             'service_id' => ['type' => 'point', 'table' => 'service'],
+            'interval_time' => ['type' => 'inline', 'method' => 'getIntervalTime'],
             'created_at' => ['type' => 'timestamp'],
             'view_at' => ['type' => 'timestamp'],
             'updated_at' => ['type' => 'timestamp', 'listNo' => true],
