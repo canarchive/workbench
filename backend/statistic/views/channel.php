@@ -11,6 +11,22 @@ foreach ($this->context->searchModel->fields as $field) {
             }
         ];
         break;
+        case 'sem_account':
+        $columns[] = [
+            'attribute' => $field,
+            'value' => function ($model) {
+                return $model->getPointName('account', $model->sem_account);
+            }
+        ];
+        break;
+        case 'plan_id':
+        $columns[] = [
+            'attribute' => $field,
+            'value' => function ($model) {
+                return $model->getPointName('plan', $model->plan_id);
+            }
+        ];
+        break;
     default:
         $columns[] = $field;
     }

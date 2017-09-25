@@ -32,7 +32,7 @@ $import = $attachmentModel->getFieldInfos('planfee', 'import');
         ],
     ]);
     ?>
-    <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => 5]) ?>
     
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

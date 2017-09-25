@@ -30,7 +30,7 @@ class ChannelFee extends ChannelFeeModel
     {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`success_num`) AS `success_num`, SUM(`valid_num`) AS `valid_num`, SUM(`fee`) AS `fee`, SUM(`show_num`) As `show_num`, SUM(`hit_num`) AS `hit_num`";
+        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`success_num`) AS `success_num`, SUM(`valid_num`) AS `valid_num`, SUM(`fee`) AS `fee`, SUM(`show_num`) As `show_num`, SUM(`hit_num`) AS `hit_num`, SUM(`follow_num`) AS `follow_num`, SUM(`out_num`) AS `out_num`, SUM(`bad_num`) AS `bad_num`, SUM(`back_num`) AS `back_num`";
         $query->select($fieldsStr);
         $query->groupBy($fields);
 
@@ -103,6 +103,34 @@ class ChannelFee extends ChannelFeeModel
                 'label' => '有效数-有效率-有效单价',
                 'value' => function($model) {
                     return $model->valid_num . $model->formatPercent($model->valid_num, $model->success_num) . $model->formatDivisor($model->fee, $model->valid_num);
+                }
+            ],
+            [
+                'attribute' => 'back_num',
+                'label' => '退单数-退单率',
+                'value' => function($model) {
+                    return $model->back_num . $model->formatPercent($model->back_num, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'bad_num',
+                'label' => '废单数-废单率',
+                'value' => function($model) {
+                    return $model->bad_num . $model->formatPercent($model->bad_num, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'out_num',
+                'label' => '范围外数-范围外比率',
+                'value' => function($model) {
+                    return $model->out_num . $model->formatPercent($model->out_num, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'follow_num',
+                'label' => '跟进数-跟进率',
+                'value' => function($model) {
+                    return $model->follow_num . $model->formatPercent($model->follow_num, $model->success_num);
                 }
             ],
         ];
