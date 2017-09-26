@@ -19,18 +19,21 @@ class TmpController extends GallerycmsController
     {   
         $model = new Article();
         $catdirs = $model->db->createCommand('SELECT `category_id` FROM wc_article GROUP BY category_id')->queryAll();
-		$time = time() - 86400 * 0;
-		echo date('Y-m-d H:i:s', $time) . '<br />';
+		//echo date('Y-m-d H:i:s', $time) . '<br />';
 		$sql = '';
-		for ($i = 0; $i < 20; $i++) {
-			$time = $time - rand(10000, 18000);
+		for ($j = 0; $j < 30; $j++) {
+		$timeBase = time() - 86400 * $j;
+		for ($i = 0; $i < 100; $i++) {
+			$time = $timeBase - rand(10000, 36000);
+			//echo date('Y-m-d H:i:s', $time) . '<br />';
         $sql .= "UPDATE `wc_article` SET `status` = 1, `created_at` = {$time}, `updated_at` = {$time} WHERE `status` = 0 LIMIT 1; \n";
+		}
 		}
         /*foreach ($catdirs as $catdir) {
             $sql .= "UPDATE `wc_article` SET `status` = 1 WHERE `category_id` = {$catdir['category_id']} AND `status` = 0 LIMIT 10; \n";
 	    }*/
         echo $sql; 
-        print_r($catdirs);
+        //print_r($catdirs);
     }   
 
     protected function updateInfo()
@@ -43,17 +46,20 @@ class TmpController extends GallerycmsController
         $model = new Info();
 		$sortInfos = $model->sortInfos;
         $sql = ''; 
-		$timeBase = time();
+		//$timeBase = time();
+		for ($i = 0; $i < 8; $i++) {
+		$timeBase = time() - 86400 * $i;
 		foreach ($siteCodes as $siteCode) {
 			foreach ($sortInfos as $sort => $name) {
-                //if ($sort != 'sqq') { continue;}
+                if ($sort != 'sqq') { continue;}
 			    //if ($sort != 'smobile') { continue;}
 			    //if ($sort != 'svisitor') { continue;}
-			    if ($sort != 'market') { continue;}
-			$time = $timeBase - 86400 * 0 - rand(10000, 18000) + 3600 * 3;
+			    //if ($sort != 'market') { continue;}
+			$time = $timeBase - rand(10000, 18000) + 3600 * 3;
 			echo date('Y-m-d H:i:s', $time); echo '<br />';
                 $sql .= "UPDATE `wc_article` SET `status` = 1, `created_at` = {$time}, `updated_at` = {$time} WHERE `sort` = '{$sort}' AND `site_code`= '{$siteCode}' AND `status` = 0 LIMIT 1; \n";
 			}
+		}
 		}
 		echo $sql;exit();
 

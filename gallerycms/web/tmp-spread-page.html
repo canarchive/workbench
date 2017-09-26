@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+    <title></title>
+    <link id="bs-css" href="http://asset.xiaomishijia.cn/backend/css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <script src="http://asset.xiaomishijia.cn/bower_components/jquery/jquery.min.js"></script>
+    <link rel="shortcut icon" href="http://asset.xiaomishijia.cn/backend/img/favicon-fb.ico">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="TV91c0FFcVciKFgdMgcfIntyLEAMDUkjfywDORAONTY5aCMRCRccZg==">
+    <link href="http://asset.xiaomishijia.cn/backend/css/charisma-app.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/chosen/chosen.min.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/colorbox/example3/colorbox.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/responsive-tables/responsive-tables.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/jquery.noty.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/noty_theme_default.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/elfinder.min.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/elfinder.theme.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/jquery.iphone.toggle.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/uploadify.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/animate.min.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/jquery.treeTable.css" rel="stylesheet">
+<link href="http://asset.xiaomishijia.cn/backend/css/jquery.treeview.css" rel="stylesheet"></head>
+<style>
+#tip_message {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+}
+
+#tip_message span {
+    background-color: #03C440;
+    opacity: .8; 
+    padding: 20px 50px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+#tip_message span.error {
+    background-color: #EAA000;
+}
+</style>
+<body >
+<!-- topbar starts -->
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-inner">
+        <button type="button" class="navbar-toggle pull-left animated flip">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+            <img alt="Charisma Logo" src="http://asset.xiaomishijia.cn/backend/img/logo20.png" class="hidden-xs"/>
+			<span>兔班长装修网</span>
+        </a>
+
+    </div>
+</div>
+<noscript>
+    <div class="alert alert-block col-md-12">
+        <h4 class="alert-heading">Warning!</h4>
+        <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+    </div>
+</noscript>
+
+<script>
+function showFull()
+{
+    //window.location.href="?groupon_id=" + groupon_id;
+}
+</script>
+
+<div id="w1" class="grid-view">
+    <div class="summary"><b>北京--兔班长</b>-推广URL汇总</div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>域名</th>
+                <th>模板</th>
+                <th>渠道</th>
+                <th>PC-URL</th>
+                <th>MOBILE-URL</th>
+            </tr>
+        </thead>
+        <tbody>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>17报价</td>
+                <td>百度</td>
+                <td><a href='http://hd.1-2580.com/bm-quote-beijing.html?cid=2' target='_blank'>http://hd.1-2580.com/bm-quote-beijing.html?cid=2</a></td>
+                <td><a href='http://m.hd.1-2580.com/bm-quote-beijing.html?cid=2' target='_blank'>http://m.hd.1-2580.com/bm-quote-beijing.html?cid=2</a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>仿土巴兔报价</td>
+                <td>百度</td>
+                <td><a href='' target='_blank'></a></td>
+                <td><a href='http://m.hd.1-2580.com/bm-tquote-beijing.html?cid=2' target='_blank'>http://m.hd.1-2580.com/bm-tquote-beijing.html?cid=2</a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>设计量房</td>
+                <td>百度</td>
+                <td><a href='http://hd.1-2580.com/bm-designlf-beijing.html?cid=2' target='_blank'>http://hd.1-2580.com/bm-designlf-beijing.html?cid=2</a></td>
+                <td><a href='http://m.hd.1-2580.com/bm-designlf-beijing.html?cid=2' target='_blank'>http://m.hd.1-2580.com/bm-designlf-beijing.html?cid=2</a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>兔班长</td>
+                <td>百度</td>
+                <td><a href='http://hd.1-2580.com/bm-tbz-beijing.html?cid=2' target='_blank'>http://hd.1-2580.com/bm-tbz-beijing.html?cid=2</a></td>
+                <td><a href='http://m.hd.1-2580.com/bm-tbz-beijing.html?cid=2' target='_blank'>http://m.hd.1-2580.com/bm-tbz-beijing.html?cid=2</a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>仿齐家设计（新）</td>
+                <td>百度</td>
+                <td><a href='http://hd.1-2580.com/bm-designn-beijing.html?cid=2' target='_blank'>http://hd.1-2580.com/bm-designn-beijing.html?cid=2</a></td>
+                <td><a href='' target='_blank'></a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>柠檬移动端报价</td>
+                <td>百度</td>
+                <td><a href='' target='_blank'></a></td>
+                <td><a href='http://m.hd.1-2580.com/bm-quoten-beijing.html?cid=2' target='_blank'>http://m.hd.1-2580.com/bm-quoten-beijing.html?cid=2</a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>装修网设计页面pc端</td>
+                <td>百度</td>
+                <td><a href='http://hd.1-2580.com/bm-designz-beijing.html?cid=2' target='_blank'>http://hd.1-2580.com/bm-designz-beijing.html?cid=2</a></td>
+                <td><a href='' target='_blank'></a></td>
+            </tr>
+                        <tr data-key="">
+                <td>默认</td>
+                <td>爱空间报价(h5)</td>
+                <td>百度</td>
+                <td><a href='' target='_blank'></a></td>
+                <td><a href='http://m.hd.1-2580.com/bm-iquote-beijing.html?cid=2' target='_blank'>http://m.hd.1-2580.com/bm-iquote-beijing.html?cid=2</a></td>
+            </tr>
+                    </tbody>
+    </table>
+</div>
+        </div>
+    </div>
+    <hr>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+<script src="http://asset.xiaomishijia.cn/assets/e40f75db/jquery.js"></script>
+<script src="http://asset.xiaomishijia.cn/assets/92bb8030/yii.js"></script>
+<script src="http://asset.xiaomishijia.cn/assets/92bb8030/yii.activeForm.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.cookie.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/moment/min/moment-with-locales.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.dataTables.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/chosen/chosen.jquery.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/colorbox/jquery.colorbox-min.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.noty.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/responsive-tables/responsive-tables.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/bower_components/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.raty.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.iphone.toggle.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.autogrow-textarea.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.uploadify-3.1.min.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/jquery.history.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/charisma.js"></script>
+<script src="http://asset.xiaomishijia.cn/backend/js/common.js"></script>
+<!--[if lte IE9]>
+<script src="http://asset.xiaomishijia.cn/static/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if lte IE9]>
+<script src="http://asset.xiaomishijia.cn/static/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#list-form').yiiActiveForm([], []);
+});</script></body>
+</html>
+<script language="javascript">
+$(document).ready(function(){
+    //提示成功信息
+    ShowSuccessMessage = function(message, life) {
+        var time = 5000;
+        if (!life) {
+            time = life;
+        }
+
+        if ($("#tip_message").text().length > 0) {
+            var msg = "<span>" + message + "</span>";
+            $("#tip_message").empty().append(msg);
+        } else {
+            var msg = "<div id='tip_message'><span>" + message + "</span>";
+            $("body").append(msg);
+        }
+
+        $("#tip_message").fadeIn(time);
+        setTimeout($("#tip_message").fadeOut(time), time);
+    };
+
+    //提示错误信息
+    ShowErrorMessage = function(message, life) {
+        ShowSuccessMessage(message, life);
+        $("#tip_message span").addClass("error");
+    };
+
+    //ShowSuccessMessage("Hello success!", 5000); // 第二个参数life是指消息显示时间
+    //ShowErrorMessage("Hello error!", 5000);
+});
+$(document).ready(function(){
+  var current_theme = $.cookie('current_theme')==null ? 'cerulean' :$.cookie('current_theme');
+  switch_theme(current_theme);
+
+  $('#themes a[data-value="'+current_theme+'"]').find('i').addClass('icon-ok');
+
+  $('#themes a').click(function(e){
+    e.preventDefault();
+    current_theme=$(this).attr('data-value');
+    $.cookie('current_theme',current_theme,{expires:365});
+    switch_theme(current_theme);
+    $('#themes i').removeClass('icon-ok');
+    $(this).find('i').addClass('icon-ok');
+  });
+
+  function switch_theme(theme_name)
+  {
+    $('#bs-css').attr('href','http://asset.xiaomishijia.cn/backend/css/bootstrap-'+theme_name+'.min.css');
+  }
+});
+var menuJsons = {"backend_panel":{"id":"1","code":"backend_panel","parent_code":"","name":"我的面板","module":"","controller":"","method":"","orderlist":"100","islog":"0","display":"1","extparam":"","url":""},"backend_manager_manager":{"id":"4","code":"backend_manager_manager","parent_code":"backend_manager","name":"管理员设置","module":"","controller":"","method":"","orderlist":"100","islog":"2","display":"2","extparam":"","url":""},"backend_manager":{"id":"2","code":"backend_manager","parent_code":"","name":"管理设置","module":"","controller":"","method":"","orderlist":"99","islog":"2","display":"1","extparam":"","url":""},"merchant":{"id":"42","code":"merchant","parent_code":"","name":"分站和商家","module":"merchant","controller":"","method":"","orderlist":"94","islog":"0","display":"1","extparam":"","url":""},"subsite_decoration":{"id":"116","code":"subsite_decoration","parent_code":"","name":"家装推广","module":"subsite/decoration","controller":"","method":"","orderlist":"93","islog":"0","display":"1","extparam":"","url":""},"spreadaccount_contentinfo":{"id":"106","code":"spreadaccount_contentinfo","parent_code":"spreadaccount","name":"推广相关","module":"spread","controller":"","method":"","orderlist":"10","islog":"0","display":"2","extparam":"","url":""},"backend_manager_log":{"id":"5","code":"backend_manager_log","parent_code":"backend_manager","name":"管理员操作日志","module":"","controller":"","method":"","orderlist":"1","islog":"2","display":"4","extparam":"","url":""},"statistic":{"id":"63","code":"statistic","parent_code":"","name":"统计","module":"statistic","controller":"","method":"","orderlist":"1","islog":"2","display":"1","extparam":"","url":""},"spreadaccount":{"id":"84","code":"spreadaccount","parent_code":"","name":"推广账户","module":"spread","controller":"","method":"","orderlist":"1","islog":"2","display":"1","extparam":"","url":""},"backend_panel_sinfo":{"id":"3","code":"backend_panel_sinfo","parent_code":"backend_panel","name":"管理员信息","module":"","controller":"","method":"","orderlist":"0","islog":"2","display":"2","extparam":"","url":""},"backend_manager_add":{"id":"6","code":"backend_manager_add","parent_code":"backend_manager_manager","name":"添加管理员","module":"","controller":"manager","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/manager/add.html"},"backend_manager_delete":{"id":"7","code":"backend_manager_delete","parent_code":"backend_manager_manager","name":"删除管理员","module":"","controller":"manager","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/manager/delete.html"},"backend_manager_update":{"id":"8","code":"backend_manager_update","parent_code":"backend_manager_manager","name":"编辑管理员","module":"","controller":"manager","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/manager/update.html"},"backend_manager_editm":{"id":"9","code":"backend_manager_editm","parent_code":"backend_panel_sinfo","name":"修改个人信息","module":"","controller":"manager","method":"edit-info","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/manager/edit-info.html"},"backend_manager_editp":{"id":"10","code":"backend_manager_editp","parent_code":"backend_panel_sinfo","name":"修改密码","module":"","controller":"manager","method":"edit-password","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/manager/edit-password.html"},"backend_manager_listinfo":{"id":"11","code":"backend_manager_listinfo","parent_code":"backend_manager_manager","name":"管理员管理","module":"","controller":"manager","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/manager/listinfo.html"},"backend_managerlog_listinfo":{"id":"12","code":"backend_managerlog_listinfo","parent_code":"backend_manager_log","name":"操作日志","module":"","controller":"managerlog","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/managerlog/listinfo.html"},"backend_managerlog_listinfom":{"id":"13","code":"backend_managerlog_listinfom","parent_code":"backend_panel_sinfo","name":"操作记录","module":"","controller":"managerlog","method":"listinfom","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/managerlog/listinfom.html"},"backend_managerlog_viewm":{"id":"14","code":"backend_managerlog_viewm","parent_code":"backend_panel_sinfo","name":"查看日志","module":"","controller":"managerlog","method":"viewm","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/managerlog/viewm.html"},"backend_menu_add":{"id":"15","code":"backend_menu_add","parent_code":"backend_manager_manager","name":"添加菜单","module":"","controller":"menu","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/menu/add.html"},"backend_menu_delete":{"id":"16","code":"backend_menu_delete","parent_code":"backend_manager_manager","name":"删除","module":"","controller":"menu","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/menu/delete.html"},"backend_menu_update":{"id":"17","code":"backend_menu_update","parent_code":"backend_manager_manager","name":"编辑","module":"","controller":"menu","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/menu/update.html"},"backend_menu_listinfo":{"id":"18","code":"backend_menu_listinfo","parent_code":"backend_manager_manager","name":"菜单管理","module":"","controller":"menu","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/menu/listinfo.html"},"backend_role_add":{"id":"19","code":"backend_role_add","parent_code":"backend_manager_manager","name":"添加角色","module":"","controller":"role","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/role/add.html"},"backend_role_delete":{"id":"20","code":"backend_role_delete","parent_code":"backend_manager_manager","name":"删除","module":"","controller":"role","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/role/delete.html"},"backend_role_update":{"id":"21","code":"backend_role_update","parent_code":"backend_manager_manager","name":"编辑","module":"","controller":"role","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/role/update.html"},"backend_role_view":{"id":"22","code":"backend_role_view","parent_code":"backend_manager_manager","name":"查看","module":"","controller":"role","method":"view","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/role/view.html"},"backend_role_listinfo":{"id":"23","code":"backend_role_listinfo","parent_code":"backend_manager_manager","name":"角色管理","module":"","controller":"role","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/role/listinfo.html"},"backend_manager_view":{"id":"24","code":"backend_manager_view","parent_code":"backend_manager_manager","name":"查看","module":"","controller":"manager","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/manager/view.html"},"backend_site_index":{"id":"25","code":"backend_site_index","parent_code":"backend_panel_sinfo","name":"主页面","module":"","controller":"site","method":"index","orderlist":"0","islog":"0","display":"4","extparam":"","url":"http://a.plat.1-2580.com/site/index.html"},"backend_role_authority":{"id":"26","code":"backend_role_authority","parent_code":"backend_manager_manager","name":"权限设置","module":"","controller":"role","method":"authority","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/role/authority.html"},"backend_panel_doc":{"id":"27","code":"backend_panel_doc","parent_code":"backend_panel","name":"系统文档","module":"","controller":"document","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/document.html"},"backend_panel_doc_list":{"id":"28","code":"backend_panel_doc_list","parent_code":"backend_panel_doc","name":"文档列表","module":"","controller":"document","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/document/listinfo.html"},"backend_panel_doc_view":{"id":"29","code":"backend_panel_doc_view","parent_code":"backend_panel_doc","name":"文档内容","module":"","controller":"document","method":"view","orderlist":"0","islog":"0","display":"4","extparam":"","url":"http://a.plat.1-2580.com/document/view.html"},"backend_menu_view":{"id":"30","code":"backend_menu_view","parent_code":"backend_manager_manager","name":"查看","module":"","controller":"menu","method":"view","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/menu/view.html"},"backend_baseinfo":{"id":"31","code":"backend_baseinfo","parent_code":"backend_manager","name":"基本信息","module":"","controller":"","method":"","orderlist":"0","islog":"2","display":"2","extparam":"","url":""},"backend_region_add":{"id":"32","code":"backend_region_add","parent_code":"backend_baseinfo","name":"添加地区","module":"","controller":"region","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/region/add.html"},"backend_region_delete":{"id":"33","code":"backend_region_delete","parent_code":"backend_baseinfo","name":"删除","module":"","controller":"region","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/region/delete.html"},"backend_region_update":{"id":"34","code":"backend_region_update","parent_code":"backend_baseinfo","name":"编辑","module":"","controller":"region","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/region/update.html"},"backend_region_listinfo":{"id":"35","code":"backend_region_listinfo","parent_code":"backend_baseinfo","name":"地区管理","module":"","controller":"region","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/region/listinfo.html"},"backend_region_view":{"id":"36","code":"backend_region_view","parent_code":"backend_baseinfo","name":"查看","module":"","controller":"region","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/region/view.html"},"backend_baseinfo_company_add":{"id":"37","code":"backend_baseinfo_company_add","parent_code":"backend_baseinfo","name":"添加","module":"","controller":"company","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/company/add.html"},"backend_baseinfo_company_delete":{"id":"38","code":"backend_baseinfo_company_delete","parent_code":"backend_baseinfo","name":"删除","module":"","controller":"company","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/company/delete.html"},"backend_baseinfo_company_update":{"id":"39","code":"backend_baseinfo_company_update","parent_code":"backend_baseinfo","name":"编辑","module":"","controller":"company","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/company/update.html"},"backend_baseinfo_company_view":{"id":"40","code":"backend_baseinfo_company_view","parent_code":"backend_baseinfo","name":"查看","module":"","controller":"company","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/company/view.html"},"backend_baseinfo_company_listinfo":{"id":"41","code":"backend_baseinfo_company_listinfo","parent_code":"backend_baseinfo","name":"公司列表","module":"","controller":"company","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/company/listinfo.html"},"merchant_baseinfo":{"id":"43","code":"merchant_baseinfo","parent_code":"merchant","name":"基本信息管理","module":"merchant","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"merchant_bank_add":{"id":"44","code":"merchant_bank_add","parent_code":"merchant_baseinfo","name":"添加","module":"merchant","controller":"bank","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/bank/add.html"},"merchant_bank_delete":{"id":"45","code":"merchant_bank_delete","parent_code":"merchant_baseinfo","name":"删除","module":"merchant","controller":"bank","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/bank/delete.html"},"merchant_bank_update":{"id":"46","code":"merchant_bank_update","parent_code":"merchant_baseinfo","name":"编辑","module":"merchant","controller":"bank","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/bank/update.html"},"merchant_bank_view":{"id":"47","code":"merchant_bank_view","parent_code":"merchant_baseinfo","name":"查看","module":"merchant","controller":"bank","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/bank/view.html"},"merchant_bank_listinfo":{"id":"48","code":"merchant_bank_listinfo","parent_code":"merchant_baseinfo","name":"商家银行账户","module":"merchant","controller":"bank","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/bank/listinfo.html"},"merchant_contact_add":{"id":"49","code":"merchant_contact_add","parent_code":"merchant_baseinfo","name":"添加","module":"merchant","controller":"contact","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/contact/add.html"},"merchant_contact_delete":{"id":"50","code":"merchant_contact_delete","parent_code":"merchant_baseinfo","name":"删除","module":"merchant","controller":"contact","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/contact/delete.html"},"merchant_contact_update":{"id":"51","code":"merchant_contact_update","parent_code":"merchant_baseinfo","name":"编辑","module":"merchant","controller":"contact","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/contact/update.html"},"merchant_contact_view":{"id":"52","code":"merchant_contact_view","parent_code":"merchant_baseinfo","name":"查看","module":"merchant","controller":"contact","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/contact/view.html"},"merchant_contact_listinfo":{"id":"53","code":"merchant_contact_listinfo","parent_code":"merchant_baseinfo","name":"商家联系方式","module":"merchant","controller":"contact","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/contact/listinfo.html"},"merchant_merchant-user_add":{"id":"54","code":"merchant_merchant-user_add","parent_code":"merchant_userinfo","name":"添加","module":"merchant","controller":"user","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/user/add.html"},"merchant_merchant-user_update":{"id":"55","code":"merchant_merchant-user_update","parent_code":"merchant_userinfo","name":"编辑","module":"merchant","controller":"user","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/user/update.html"},"merchant_merchant-user_view":{"id":"56","code":"merchant_merchant-user_view","parent_code":"merchant_userinfo","name":"查看","module":"merchant","controller":"user","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/user/view.html"},"merchant_merchant-user_listinfo":{"id":"57","code":"merchant_merchant-user_listinfo","parent_code":"merchant_userinfo","name":"商家用户列表","module":"merchant","controller":"user","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/user/listinfo.html"},"merchant_merchant_add":{"id":"58","code":"merchant_merchant_add","parent_code":"merchant_baseinfo","name":"添加","module":"merchant","controller":"merchant","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/merchant/add.html"},"merchant_merchant_delete":{"id":"59","code":"merchant_merchant_delete","parent_code":"merchant_baseinfo","name":"删除","module":"merchant","controller":"merchant","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/merchant/delete.html"},"merchant_merchant_update":{"id":"60","code":"merchant_merchant_update","parent_code":"merchant_baseinfo","name":"编辑","module":"merchant","controller":"merchant","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/merchant/update.html"},"merchant_merchant_view":{"id":"61","code":"merchant_merchant_view","parent_code":"merchant_baseinfo","name":"查看","module":"merchant","controller":"merchant","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/merchant/view.html"},"merchant_merchant_listinfo":{"id":"62","code":"merchant_merchant_listinfo","parent_code":"merchant_baseinfo","name":"商家列表","module":"merchant","controller":"merchant","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/merchant/listinfo.html"},"statistic_keyword":{"id":"64","code":"statistic_keyword","parent_code":"statistic","name":"关键字统计","module":"statistic","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"statistic_keyword-search_listinfo":{"id":"65","code":"statistic_keyword-search_listinfo","parent_code":"statistic_keyword","name":"搜索关键字日报","module":"statistic","controller":"keyword-search","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"field_hit=keyword_search-created_day","url":"http://a.plat.1-2580.com/statistic/keyword-search/listinfo.html?field_hit=keyword_search-created_day"},"statistic_keyword_listinfo":{"id":"66","code":"statistic_keyword_listinfo","parent_code":"statistic_keyword","name":"关键字日报","module":"statistic","controller":"keyword","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"field_hit=keyword-created_day","url":"http://a.plat.1-2580.com/statistic/keyword/listinfo.html?field_hit=keyword-created_day"},"statistic_channel":{"id":"67","code":"statistic_channel","parent_code":"statistic","name":"渠道统计","module":"statistic","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"statistic_channel_listinfo":{"id":"68","code":"statistic_channel_listinfo","parent_code":"statistic_channel","name":"渠道日报","module":"statistic","controller":"channel","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"field_hit=channel-created_day","url":"http://a.plat.1-2580.com/statistic/channel/listinfo.html?field_hit=channel-created_day"},"statistic_channel-info_listinfo":{"id":"69","code":"statistic_channel-info_listinfo","parent_code":"statistic_channel","name":"渠道详情日报","module":"statistic","controller":"channel-info","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"field_hit=channel-sem_account-created_day","url":"http://a.plat.1-2580.com/statistic/channel-info/listinfo.html?field_hit=channel-sem_account-created_day"},"statistic_service":{"id":"70","code":"statistic_service","parent_code":"statistic","name":"客服统计","module":"statistic","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"statistic_service_listinfo":{"id":"71","code":"statistic_service_listinfo","parent_code":"statistic_service","name":"客服日报","module":"statistic","controller":"service","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"field_hit=created_day","url":"http://a.plat.1-2580.com/statistic/service/listinfo.html?field_hit=created_day"},"statistic_dispatch":{"id":"72","code":"statistic_dispatch","parent_code":"statistic","name":"派单统计","module":"statistic","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"statistic_dispatch_listinfo":{"id":"73","code":"statistic_dispatch_listinfo","parent_code":"statistic_dispatch","name":"派单日报","module":"statistic","controller":"dispatch","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"field_hit=created_day","url":"http://a.plat.1-2580.com/statistic/dispatch/listinfo.html?field_hit=created_day"},"spreadaccount_baseinfo_template_add":{"id":"74","code":"spreadaccount_baseinfo_template_add","parent_code":"spreadaccount_baseinfo","name":"添加","module":"spread","controller":"template","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/template/add.html"},"spreadaccount_baseinfo_template_delete":{"id":"75","code":"spreadaccount_baseinfo_template_delete","parent_code":"spreadaccount_baseinfo","name":"删除","module":"spread","controller":"template","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/template/delete.html"},"spreadaccount_baseinfo_template_update":{"id":"76","code":"spreadaccount_baseinfo_template_update","parent_code":"spreadaccount_baseinfo","name":"编辑","module":"spread","controller":"template","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/template/update.html"},"spreadaccount_baseinfo_template_view":{"id":"77","code":"spreadaccount_baseinfo_template_view","parent_code":"spreadaccount_baseinfo","name":"查看","module":"spread","controller":"template","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/template/view.html"},"spreadaccount_baseinfo_template_listinfo":{"id":"78","code":"spreadaccount_baseinfo_template_listinfo","parent_code":"spreadaccount_baseinfo","name":"推广页模板","module":"spread","controller":"template","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/template/listinfo.html"},"spreadaccount_baseinfo":{"id":"85","code":"spreadaccount_baseinfo","parent_code":"spreadaccount","name":"基本信息","module":"spread","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"spreadaccount_baseinfo_plan_add":{"id":"86","code":"spreadaccount_baseinfo_plan_add","parent_code":"spreadaccount_baseinfo","name":"添加","module":"spread","controller":"plan","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/plan/add.html"},"spreadaccount_baseinfo_plan_delete":{"id":"87","code":"spreadaccount_baseinfo_plan_delete","parent_code":"spreadaccount_baseinfo","name":"删除","module":"spread","controller":"plan","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/plan/delete.html"},"spreadaccount_baseinfo_plan_update":{"id":"88","code":"spreadaccount_baseinfo_plan_update","parent_code":"spreadaccount_baseinfo","name":"编辑","module":"spread","controller":"plan","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/plan/update.html"},"spreadaccount_baseinfo_plan_view":{"id":"89","code":"spreadaccount_baseinfo_plan_view","parent_code":"spreadaccount_baseinfo","name":"查看","module":"spread","controller":"plan","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/plan/view.html"},"spreadaccount_baseinfo_plan_listinfo":{"id":"90","code":"spreadaccount_baseinfo_plan_listinfo","parent_code":"spreadaccount_baseinfo","name":"推广计划","module":"spread","controller":"plan","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/plan/listinfo.html"},"spreadaccount_baseinfo_account_add":{"id":"91","code":"spreadaccount_baseinfo_account_add","parent_code":"spreadaccount_baseinfo","name":"添加","module":"spread","controller":"account","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/account/add.html"},"spreadaccount_baseinfo_account_delete":{"id":"92","code":"spreadaccount_baseinfo_account_delete","parent_code":"spreadaccount_baseinfo","name":"删除","module":"spread","controller":"account","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/account/delete.html"},"spreadaccount_baseinfo_account_update":{"id":"93","code":"spreadaccount_baseinfo_account_update","parent_code":"spreadaccount_baseinfo","name":"编辑","module":"spread","controller":"account","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/account/update.html"},"spreadaccount_baseinfo_account_view":{"id":"94","code":"spreadaccount_baseinfo_account_view","parent_code":"spreadaccount_baseinfo","name":"查看","module":"spread","controller":"account","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/account/view.html"},"spreadaccount_baseinfo_account_listinfo":{"id":"95","code":"spreadaccount_baseinfo_account_listinfo","parent_code":"spreadaccount_baseinfo","name":"推广账户","module":"spread","controller":"account","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/account/listinfo.html"},"spreadaccount_baseinfo_keyword_add":{"id":"96","code":"spreadaccount_baseinfo_keyword_add","parent_code":"spreadaccount_baseinfo","name":"添加","module":"spread","controller":"keyword","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/keyword/add.html"},"spreadaccount_baseinfo_keyword_delete":{"id":"97","code":"spreadaccount_baseinfo_keyword_delete","parent_code":"spreadaccount_baseinfo","name":"删除","module":"spread","controller":"keyword","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/keyword/delete.html"},"spreadaccount_baseinfo_keyword_update":{"id":"98","code":"spreadaccount_baseinfo_keyword_update","parent_code":"spreadaccount_baseinfo","name":"编辑","module":"spread","controller":"keyword","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/keyword/update.html"},"spreadaccount_baseinfo_keyword_view":{"id":"99","code":"spreadaccount_baseinfo_keyword_view","parent_code":"spreadaccount_baseinfo","name":"查看","module":"spread","controller":"keyword","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/keyword/view.html"},"spreadaccount_baseinfo_keyword_listinfo":{"id":"100","code":"spreadaccount_baseinfo_keyword_listinfo","parent_code":"spreadaccount_baseinfo","name":"推广关键字","module":"spread","controller":"keyword","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/keyword/listinfo.html"},"spreadaccount_baseinfo_unit_add":{"id":"101","code":"spreadaccount_baseinfo_unit_add","parent_code":"spreadaccount_baseinfo","name":"添加","module":"spread","controller":"unit","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/unit/add.html"},"spreadaccount_baseinfo_unit_delete":{"id":"102","code":"spreadaccount_baseinfo_unit_delete","parent_code":"spreadaccount_baseinfo","name":"删除","module":"spread","controller":"unit","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/unit/delete.html"},"spreadaccount_baseinfo_unit_update":{"id":"103","code":"spreadaccount_baseinfo_unit_update","parent_code":"spreadaccount_baseinfo","name":"编辑","module":"spread","controller":"unit","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/unit/update.html"},"spreadaccount_baseinfo_unit_view":{"id":"104","code":"spreadaccount_baseinfo_unit_view","parent_code":"spreadaccount_baseinfo","name":"查看","module":"spread","controller":"unit","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/unit/view.html"},"spreadaccount_baseinfo_unit_listinfo":{"id":"105","code":"spreadaccount_baseinfo_unit_listinfo","parent_code":"spreadaccount_baseinfo","name":"推广单元","module":"spread","controller":"unit","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/unit/listinfo.html"},"spreadaccount_feeinfo":{"id":"107","code":"spreadaccount_feeinfo","parent_code":"spreadaccount","name":"费用信息","module":"spread","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"spreadaccount_contentinfo_spreadurl_listinfo":{"id":"108","code":"spreadaccount_contentinfo_spreadurl_listinfo","parent_code":"spreadaccount_contentinfo","name":"推广URL","module":"spread","controller":"spreadurl","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/spreadurl/listinfo.html"},"spreadaccount_feeinfo_planfee_listinfo":{"id":"109","code":"spreadaccount_feeinfo_planfee_listinfo","parent_code":"spreadaccount_feeinfo","name":"计划费用","module":"spread","controller":"planfee","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/planfee/listinfo.html"},"spreadaccount_feeinfo_planfee_view":{"id":"110","code":"spreadaccount_feeinfo_planfee_view","parent_code":"spreadaccount_feeinfo","name":"查看","module":"spread","controller":"planfee","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/planfee/view.html"},"spreadaccount_feeinfo_planfee_update":{"id":"111","code":"spreadaccount_feeinfo_planfee_update","parent_code":"spreadaccount_feeinfo","name":"编辑","module":"spread","controller":"planfee","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/planfee/update.html"},"spreadaccount_feeinfo_planfee_delete":{"id":"112","code":"spreadaccount_feeinfo_planfee_delete","parent_code":"spreadaccount_feeinfo","name":"删除","module":"spread","controller":"planfee","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/spread/planfee/delete.html"},"spreadaccount_feeinfo_planfee_add":{"id":"113","code":"spreadaccount_feeinfo_planfee_add","parent_code":"spreadaccount_feeinfo","name":"添加","module":"spread","controller":"planfee","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/planfee/add.html"},"spreadaccount_feeinfo_planfee_import":{"id":"114","code":"spreadaccount_feeinfo_planfee_import","parent_code":"spreadaccount_feeinfo","name":"导入","module":"spread","controller":"planfee","method":"import","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/spread/planfee/import.html"},"spreadaccount_visit_listinfo":{"id":"119","code":"spreadaccount_visit_listinfo","parent_code":"spreadaccount_contentinfo","name":"访问日志","module":"statistic","controller":"visit","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/statistic/visit/listinfo.html"},"spreadaccount_conversion_listinfo":{"id":"120","code":"spreadaccount_conversion_listinfo","parent_code":"spreadaccount_contentinfo","name":"转化成功","module":"statistic","controller":"conversion","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/statistic/conversion/listinfo.html"},"subsite_decoration_success":{"id":"121","code":"subsite_decoration_success","parent_code":"subsite_decoration","name":"报名用户","module":"subsite/decoration","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"subsite_decoration_user_add":{"id":"122","code":"subsite_decoration_user_add","parent_code":"subsite_decoration_success","name":"添加","module":"subsite/decoration","controller":"user","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/user/add.html"},"subsite_decoration_user_update":{"id":"123","code":"subsite_decoration_user_update","parent_code":"subsite_decoration_success","name":"编辑","module":"subsite/decoration","controller":"user","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/user/update.html"},"subsite_decoration_user_listinfo":{"id":"124","code":"subsite_decoration_user_listinfo","parent_code":"subsite_decoration_success","name":"用户列表","module":"subsite/decoration","controller":"user","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/user/listinfo.html"},"subsite_decoration_house_listinfo":{"id":"125","code":"subsite_decoration_house_listinfo","parent_code":"subsite_decoration_success","name":"房屋信息","module":"subsite/decoration","controller":"house","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/house/listinfo.html"},"subsite_decoration_callback":{"id":"126","code":"subsite_decoration_callback","parent_code":"subsite_decoration_success","name":"回访信息","module":"subsite/decoration","controller":"callback","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/callback/listinfo.html"},"subsite_decoration_follow":{"id":"127","code":"subsite_decoration_follow","parent_code":"subsite_decoration","name":"跟单管理","module":"subsite/decoration","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"subsite_decoration_dispatch_listinfo":{"id":"128","code":"subsite_decoration_dispatch_listinfo","parent_code":"subsite_decoration_follow","name":"派单用户","module":"subsite/decoration","controller":"dispatch","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/dispatch/listinfo.html"},"subsite_decoration_dispatch_update":{"id":"129","code":"subsite_decoration_dispatch_update","parent_code":"subsite_decoration_follow","name":"编辑","module":"subsite/decoration","controller":"dispatch","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/dispatch/update.html"},"subsite_decoration_user-merchant_listinfo":{"id":"130","code":"subsite_decoration_user-merchant_listinfo","parent_code":"subsite_decoration_follow","name":"商家订单","module":"subsite/decoration","controller":"user-merchant","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/user-merchant/listinfo.html"},"subsite_decoration_guestbook_listinfo":{"id":"131","code":"subsite_decoration_guestbook_listinfo","parent_code":"subsite_decoration_follow","name":"商家留言","module":"subsite/decoration","controller":"guestbook","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/guestbook/listinfo.html"},"subsite_decoration_sendmsg_listinfo":{"id":"132","code":"subsite_decoration_sendmsg_listinfo","parent_code":"subsite_decoration_follow","name":"发送短信","module":"subsite/decoration","controller":"sendmsg","method":"listinfo","orderlist":"0","islog":"0","display":"2","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/sendmsg/listinfo.html"},"subsite_decoration_sendmsg_send":{"id":"133","code":"subsite_decoration_sendmsg_send","parent_code":"subsite_decoration_follow","name":"发送短信","module":"subsite/decoration","controller":"sendmsg","method":"send","orderlist":"0","islog":"0","display":"3","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/sendmsg/send.html"},"subsite_decoration_user_change-merchant":{"id":"134","code":"subsite_decoration_user_change-merchant","parent_code":"subsite_decoration_success","name":"指派商家","module":"subsite/decoration","controller":"user","method":"change-merchant","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/subsite/decoration/user/change-merchant.html"},"merchant_service_add":{"id":"147","code":"merchant_service_add","parent_code":"merchant_userinfo","name":"添加","module":"merchant","controller":"service","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/service/add.html"},"merchant_service_delete":{"id":"148","code":"merchant_service_delete","parent_code":"merchant_userinfo","name":"删除","module":"merchant","controller":"service","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/service/delete.html"},"merchant_service_update":{"id":"149","code":"merchant_service_update","parent_code":"merchant_userinfo","name":"编辑","module":"merchant","controller":"service","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/service/update.html"},"merchant_service_view":{"id":"150","code":"merchant_service_view","parent_code":"merchant_userinfo","name":"查看","module":"merchant","controller":"service","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/service/view.html"},"merchant_service_listinfo":{"id":"151","code":"merchant_service_listinfo","parent_code":"merchant_userinfo","name":"客服列表","module":"merchant","controller":"service","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/service/listinfo.html"},"merchant_userinfo":{"id":"153","code":"merchant_userinfo","parent_code":"merchant","name":"商家用户管理","module":"merchant","controller":"","method":"","orderlist":"0","islog":"0","display":"2","extparam":"","url":""},"merchant_menu_add":{"id":"154","code":"merchant_menu_add","parent_code":"merchant_userinfo","name":"添加","module":"merchant","controller":"menu","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/menu/add.html"},"merchant_menu_delete":{"id":"155","code":"merchant_menu_delete","parent_code":"merchant_userinfo","name":"删除","module":"merchant","controller":"menu","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/menu/delete.html"},"merchant_menu_update":{"id":"156","code":"merchant_menu_update","parent_code":"merchant_userinfo","name":"编辑","module":"merchant","controller":"menu","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/menu/update.html"},"merchant_menu_view":{"id":"157","code":"merchant_menu_view","parent_code":"merchant_userinfo","name":"查看","module":"merchant","controller":"menu","method":"view","orderlist":"0","islog":"2","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/menu/view.html"},"merchant_menu_listinfo":{"id":"158","code":"merchant_menu_listinfo","parent_code":"merchant_userinfo","name":"商家用户菜单","module":"merchant","controller":"menu","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/menu/listinfo.html"},"merchant_role_add":{"id":"159","code":"merchant_role_add","parent_code":"merchant_userinfo","name":"添加角色","module":"merchant","controller":"role","method":"add","orderlist":"0","islog":"1","display":"3","extparam":"","url":"http://a.plat.1-2580.com/merchant/role/add.html"},"merchant_role_delete":{"id":"160","code":"merchant_role_delete","parent_code":"merchant_userinfo","name":"删除","module":"merchant","controller":"role","method":"delete","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/role/delete.html"},"merchant_role_update":{"id":"161","code":"merchant_role_update","parent_code":"merchant_userinfo","name":"编辑","module":"merchant","controller":"role","method":"update","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/role/update.html"},"merchant_role_view":{"id":"162","code":"merchant_role_view","parent_code":"merchant_userinfo","name":"查看","module":"merchant","controller":"role","method":"view","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/role/view.html"},"merchant_role_listinfo":{"id":"163","code":"merchant_role_listinfo","parent_code":"merchant_userinfo","name":"角色管理","module":"merchant","controller":"role","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/merchant/role/listinfo.html"},"merchant_role_authority":{"id":"164","code":"merchant_role_authority","parent_code":"merchant_userinfo","name":"权限设置","module":"merchant","controller":"role","method":"authority","orderlist":"0","islog":"1","display":"4","extparam":"","url":"http://a.plat.1-2580.com/merchant/role/authority.html"}};
+
+function setLeftNav(parentCode)
+{
+  $("#baseMenu>li").attr("class", "");
+  var currentBaseMenu = "baseMenu_" + parentCode;
+  $("#" + currentBaseMenu).attr("class", "active");
+
+  var subMenuStr = '';
+  var isActive = '';
+  var haveActive = false;
+  var currentController = '';
+  var currentMethod = '';
+  $.each(menuJsons, function(i,n) {
+    if (n.parent_code == parentCode) {
+      subMenuStr += '<li class="nav-header hidden-tablet">' + n.name + '</li>';
+      $.each(menuJsons, function(i1, n1) {
+        if (n1.parent_code == n.code && n1.display == 2) {
+          if (n1.id == '108') {
+            isActive = 'class="active"';
+            haveActive = true;
+          }
+          subMenuStr += '<li class="abc" ' + isActive + ' id="left_menu_' + n1.code + '"><a class="ajax-link" href="' + n1.url + '"><i class="icon-align-justify"></i><span class="hidden-tablet">' + n1.name + '</span></a></li>';
+          isActive = '';
+        }
+      });
+    }
+  });
+
+  $("#leftMenu").html(subMenuStr);
+  $("#leftMenu").show();
+  $("#leftMenuContent").hide();
+
+  if (!haveActive) {
+      var appMenusJson = {"listinfo":{"id":"108","code":"spreadaccount_contentinfo_spreadurl_listinfo","parent_code":"spreadaccount_contentinfo","name":"推广URL","module":"spread","controller":"spreadurl","method":"listinfo","orderlist":"0","islog":"2","display":"2","extparam":"","url":"http://a.plat.1-2580.com/spread/spreadurl/listinfo.html"}};
+      $.each(appMenusJson, function(i2, n2) {
+          if (!haveActive && n2.display == 2 && $n2.extparam == '') {
+              $("#left_menu_" + n2.code).addClass("active");
+              haveActive = true;
+          }
+      });
+  }
+}
+setLeftNav('spreadaccount');
+var showCatType = typeof(showCat);
+if (showCatType == 'function') {
+    showCat();
+}
+
+function updateElemByAjax(url, info_id, field, value)
+{
+    var data = {
+        'info_id': info_id,
+        'field': field,
+        'value': value
+    };
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        success: function(data,status) {
+            if (status == 'success') {
+                ShowSuccessMessage("信息编辑成功", 3000);
+            } else {
+                ShowErrorMessage(data.message, 3000);
+            }
+        }
+    });
+}
+
+function operationForSelected(url)
+{
+    var elems = $("input[name='selection[]']");
+    var selections = '';
+    elems.each(function(index,item) {
+        if ($(this).prop('checked')) {
+            selections += ',' + $(this).val();
+        }
+    });
+    alert(selections);
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {selections: selections},
+        success: function(data,status) {
+            //alert("Data: " + data + "\nStatus: " + status);
+            ShowSuccessMessage("信息编辑成功", 3000);
+        }
+    });
+}
+</script>
+<script>
+function changeDate(table, modelId, field, value)
+{
+    var valueOld = $("#" + field + '_old').val();
+    if (value != valueOld) {
+        updateElemForUser(table, modelId, field, value);
+    }
+    $("#" + field + '_old').val(value);
+}
+</script>
+

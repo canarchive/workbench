@@ -58,4 +58,18 @@ class Pagination extends PaginationBase
 
         return $return;
     }
+
+    public function getPage($recalculate = false)
+    {
+        if ($this->_page === null || $recalculate) {
+            $page = $this->getQueryParam($this->pageParam, 1);
+            if ($this->pagePreStr) {
+                $page = str_replace($this->pagePreStr, '', $page);
+            }
+            $page = (int) $page - 1;
+            $this->setPage($page, true);
+        }
+
+        return $this->_page;
+    }
 }

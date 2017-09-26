@@ -17,14 +17,14 @@ $this->params['formPositionName'] = '首页量房';
         <div class="top_links">
 			<a href="/" class="index_link" title="<?= Yii::$app->params['siteNameBase']; ?>"><?= Yii::$app->params['siteNameBase']; ?></a>
             <em>></em>
-            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '', 'page'=> 1]); ?>" title="营销学院">营销学院</a>
+            <a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_', 'page'=> '_1']); ?>" title="营销学院">营销学院</a>
             <?php if (!empty($tagInfos['pInfo'])) { $pInfo = $tagInfos['pInfo']; ?>
             <em>></em>
-			<a href="<?= Url::to(['/cmsad/info/index', 'tag' => $pInfo['catdir'], 'page'=> 1]); ?>" title="<?= $pInfo['name']; ?>"><?= $pInfo['name']; ?></a>
+			<a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_' . $pInfo['catdir'], 'page'=> '_1']); ?>" title="<?= $pInfo['name']; ?>"><?= $pInfo['name']; ?></a>
             <?php } ?>
             <?php if (!empty($tagInfos['cInfo'])) { $cInfo = $tagInfos['cInfo']; ?>
             <em>></em>
-			<a href="<?= Url::to(['/cmsad/info/index', 'tag' => $cInfo['catdir'], 'page'=> 1]); ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
+			<a href="<?= Url::to(['/cmsad/info/index', 'tag' => '_' . $cInfo['catdir'], 'page'=> '_1']); ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
             <em>></em>
             <?php } ?>
             <strong><?= $info['name']; ?></strong>
