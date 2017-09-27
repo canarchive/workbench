@@ -5,6 +5,7 @@ namespace merchant\admin;
 use Yii;
 use common\components\ModuleBase;
 use baseapp\merchant\models\Service;
+use merchant\models\Saleman;
 
 class Module extends ModuleBase
 {
@@ -19,12 +20,28 @@ class Module extends ModuleBase
     public function initPrivInfo()
     {
         $managerInfo = Yii::$app->params['managerInfo'];
+        $model = new Saleman();
+        Yii::$app->params['salemanInfo'] = $salemanInfo = $model->find()->where(['user_id' => $managerInfo['id']])->one();
+
         $role = $managerInfo['role'];
+        if (in_array($role, ['service-saleman', 'saleman-chief'])) {
+            $this->initSalemanPriv($managerInfo, $salemanInfo);
+        }
         $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
         return [
             'merchant_id' => $merchantIds,
             'service_id' => $this->_getServicePriv($role, $managerInfo, $merchantIds),
         ];
+    }
+
+    protected function initSalemanPriv($managerInfo, $salemanInfo)
+    {
+        if (empty($salemanInfo)) {
+            return ;
+        }
+        if ($managerInfo['role'] == 'service-saleman') {
+            $_GET['saleman_id'] = $salemanInfo['id'];
+        }
     }
 
     protected function _getServicePriv($role, $managerInfo, $merchantIds)

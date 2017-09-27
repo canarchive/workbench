@@ -155,8 +155,8 @@ trait PlanfeeTrait
             'bdztc' => [
                 'fields' => [
                     'A' => 'created_day',
-                    'B' => 'account_code',
-                    'C' => 'plan_name',
+                    'B' => 'plan_name',
+                    'C' => 'account_code',
                     'D' => 'show_num',
                     'E' => 'hit_num',
                     'F' => 'fee',
@@ -165,8 +165,8 @@ trait PlanfeeTrait
             'zht' => [
                 'fields' => [
                     'A' => 'created_day',
-                    'B' => 'account_code',
-                    'C' => 'plan_name',
+                    'B' => 'plan_name',
+                    'C' => 'account_code',
                     'D' => 'show_num',
                     'E' => 'hit_num',
                     'F' => 'fee',
