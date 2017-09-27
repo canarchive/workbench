@@ -4,7 +4,6 @@ namespace baseapp\merchant\models;
 
 class Merchant extends MerchantModel
 {
-    public $import;
     public static function tableName()
     {
         return '{{%merchant}}';
@@ -47,6 +46,7 @@ class Merchant extends MerchantModel
 
             'operation' => '操作',
             'follow' => '拓展和回访',
+            'op_owner' => '属主操作',
         ];
     }
 
@@ -80,29 +80,6 @@ class Merchant extends MerchantModel
 
     protected function _getTemplateFields()
     {
-        $operation = [
-            'formatView' => 'raw',
-            'type' => 'operation',
-            'qParams' => [
-                'merchant_id' => ['field' => 'id', 'value' => null],
-            ],
-            'menuCodes' => [
-                ['code' => 'merchant_follow_contact_listinfo'],
-                ['code' => 'merchant_contract_add', 'name' => '添加合同'],
-            ]
-        ];
-        $follow = [
-            'formatView' => 'raw',
-            'type' => 'operation',
-            'qParams' => [
-                'merchant_id' => ['field' => 'id', 'value' => null],
-            ],
-            'menuCodes' => [
-                ['code' => 'merchant_follow_merchant-pond_callback', 'name' => '回访'],
-                ['code' => 'merchant_follow_callback_listinfo'],
-                ['code' => 'merchant_follow_interview_listinfo'],
-            ]
-        ];
         return [
             'id' => ['type' => 'common'],
             'sort' => ['type' => 'key'],
@@ -116,8 +93,27 @@ class Merchant extends MerchantModel
             'updated_at' => ['type' => 'timestamp'],
             'status' => ['type' => 'key'],
             //'code' => ['type' => 'inline', 'method' => 'getCode', 'listNo' => true],
-            'operation' => $operation,
-            'follow' => $follow,
+            'operation' => ['type' => 'operation'],
+            'follow' => ['type' => 'operation', 'method' => 'formatFollow'],
         ];
+    }
+
+    public function formatFollow($view)
+    {
+        $menuCodes = [
+            'merchant_follow_merchant-pond_callback' => '回访',
+            'merchant_follow_callback_listinfo' => '',
+            'merchant_follow_interview_listinfo' => '',
+        ];
+        return $this->_formatMenuOperation($view, $menuCodes, ['merchant_id' => 'id']);
+    }
+
+    public function formatOperation($view)
+    {
+        $menuCodes = [
+            'merchant_follow_contact_listinfo' => '',
+            'merchant_contract_add' => '添加合同',
+        ];
+        return $this->_formatMenuOperation($view, $menuCodes, ['merchant_id' => 'id']);
     }
 }

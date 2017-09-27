@@ -2,13 +2,34 @@
 
 namespace merchant\models;
 
+use Yii;
 use baseapp\merchant\models\Merchant;
 
 class MerchantPond extends Merchant
 {
+    public $import;
+
     public static function tableName()
     {
         return '{{%merchant_pond}}';
+    }
+
+    public function rules()
+    {
+        return [
+            [['name'], 'required'],
+            [['status_ext', 'callback_next', 'saleman_id', 'orderlist'], 'default', 'value' => '0'],
+            [['display_level', 'saleman_id_first', 'import', 'code', 'city_code', 'status', 'msg', 'region', 'name_full', 'sort', 'address', 'description'], 'safe'],
+        ];
+    }
+
+    public function getDisplayLevelInfos()
+    {
+        return [
+            '' => '通用',
+            'private' => '私有客户',
+            'protected' => '保护',
+        ];
     }
 
     public function getStatusInfos()
@@ -72,14 +93,32 @@ class MerchantPond extends Merchant
         return $i;
     }
 
+    public function formatOperation($view)
+    {
+        $str = parent::formatOperation($view);
+        if ($this->status == 'cooperation') {
+            $menuCodes = [
+                'merchant_merchant_conew' => '转为合作',
+            ];
+            $str = $str . '---' . $this->_formatMenuOperation($view, $menuCodes, ['merchant_id' => 'id']);
+        }
+        return $str;
+    }
+
+    public function formatOpOwner()
+    {
+        $saleman = isset(Yii::$app->params['salemanInfo']) ? Yii::$app->params['salemanInfo'] : false;
+        if (empty($saleman)) {
+            return $this->getKeyName('display_level', $this->display_level);
+        }
+
+        
+    }
+
     protected function _getTemplateFields()
     {
         $datas = parent::_getTemplateFields();
-        $datas['operation']['menuCodes'][] = [
-            'code' => 'merchant_merchant_conew', 
-            'name' => '转为合作',
-            'condition' => ['status' => 'cooperation'],
-        ];
+        $datas['op_owner'] = ['type' => 'operation', 'method' => 'formatOpOwner'];
         return $datas;
     }
 }

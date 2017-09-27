@@ -12,6 +12,12 @@ class MerchantPondController extends Controller
     protected $modelClass = 'merchant\models\MerchantPond';
     protected $modelSearchClass = 'merchant\models\searchs\MerchantPond';
 
+    public function init()
+    {
+        parent::init();
+        $this->noActionColumn = true;
+    }
+
     public function actionImport()
     {
     	return $this->_importInfo();
