@@ -44,16 +44,6 @@ Trait UserMerchantTrait
 
     protected function _getTemplateFields()
     {
-        $operation = [
-            'formatView' => 'raw',
-            'type' => 'operation',
-            'qParams' => [
-                'id' => ['field' => 'dispatch_id', 'value' => null],
-            ],
-            'menuCodes' => [
-                ['code' => 'subsite_decoration_dispatch_update'],
-            ]
-        ];
         return [
             'id' => ['type' => 'common'],
             'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
@@ -65,8 +55,16 @@ Trait UserMerchantTrait
             'updated_at' => ['type' => 'timestamp', 'listNo' => true],
             'sendmsg_at' => ['type' => 'condition', 'formatView' => 'raw'],
             'status' => ['type' => 'key'],
-            'operation' => $operation,
+            'operation' => ['type' => 'operation'],
         ];
+    }
+
+    public function formatOperation($view)
+    {
+        $menuCodes = [
+            'subsite_decoration_dispatch_update' => '',
+        ];
+        return $this->_formatMenuOperation($view, $menuCodes, ['id' => 'dispatch_id']);
     }
 
     public function _conditionElem($field, $view)
