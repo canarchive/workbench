@@ -6,6 +6,11 @@ use yii\helpers\Url;
 Yii::$app->params['tdkInfos']['title'] = '装修免费设计，免费量房';
 Yii::$app->params['tdkInfos']['description'] = '装修设计,量房';
 Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
+$wechatImg = Yii::getAlias('@asselfurl') . '/design/images/bottom_bj.png';
+if ($this->context->siteCode == 'other2-360') {
+    Yii::$app->params['siteHotline'] = '15010858302';
+    $wechatImg = Yii::getAlias('@asseturl') . '/spread/house/collect/img/wechat_nmd.jpg';
+}
 ?>
 <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/css/da957-9276.css" />
 <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/css/1ee86-3483.css?v=1" />
@@ -34,7 +39,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 <li>注册</li>
                 <li>我要装修</li>
                 <li class="customerService" id="CSDexc">客户服务</li>
-                <li class="last"><?= Yii::$app->params['siteHotline']; ?></li></ul>
+                <li class="last"><?= $this->appDatas('siteHotline'); ?></li></ul>
         </div>
     </div>
     <?php //echo $this->render('_designm-logo'); ?>
@@ -1148,9 +1153,9 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                 <li>
                     <p>联系我们</p>
                 </li>
-                <li>业主服务：<?= Yii::$app->params['siteHotline']; ?></li></ul>
+                <li>业主服务：<?= $this->appDatas('siteHotline'); ?></li></ul>
             <div class="SFBlist">
-                <img src="<?= Yii::getAlias('@asselfurl'); ?>/design/images/bottom_bj.png" alt="微信二维码" width="80px" height="80px">
+                <img src="<?= $wechatImg; ?>" alt="微信二维码" width="80px" height="80px">
                 <div class="weixin">
                     <span>扫描二维码</span>
                     <span>关注官方微信</span></div>
