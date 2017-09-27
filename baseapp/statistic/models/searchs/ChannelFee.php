@@ -11,7 +11,7 @@ class ChannelFee extends ChannelFeeModel
     public function rules()
     {
         return [
-            [['account_id', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
+            [['merchant_id', 'account_id', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
         ];
     }
 
@@ -21,7 +21,7 @@ class ChannelFee extends ChannelFeeModel
             ['field' => 'client_type', 'type' => 'common'],
             ['field' => 'channel', 'type' => 'common'],
             ['field' => 'account_id', 'type' => 'common'],
-            //['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
         ];
     }    
@@ -43,7 +43,7 @@ class ChannelFee extends ChannelFeeModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['client_type', 'channel', 'account_id', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['merchant_id', 'client_type', 'channel', 'account_id', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
                 return ['account_id', 'created_day'];
@@ -55,7 +55,7 @@ class ChannelFee extends ChannelFeeModel
     public function _searchDatas()
     {
         $list = [
-            //$this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
             $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
             $this->_sPointParam(['field' => 'account_id', 'table' => 'account']),

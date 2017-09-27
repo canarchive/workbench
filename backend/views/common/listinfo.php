@@ -23,7 +23,7 @@ foreach ($menuInfos['appMenus'] as $appMenu) {
     }
 }
 $templateMethods = trim($templateMethods);
-if (!isset($noActionColumn) && !empty($templateMethods)) {
+if (empty($this->context->noActionColumn) && !empty($templateMethods)) {
     $actionColumn = [
         'class' => 'backend\components\CustomActionColumn',
         'template' => $templateMethods,
