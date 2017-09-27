@@ -17,6 +17,7 @@ class AdminController extends Controller
     public $showSubnav = true;
     protected $modelClass = '';
     public $showFilter;
+    public $noActionColumn;
     //protected $viewPrefix = '';
     public $layout = '@backend/views/charisma/layouts/main';
 

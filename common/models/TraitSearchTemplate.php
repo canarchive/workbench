@@ -26,7 +26,7 @@ trait TraitSearchTemplate
 				'attribute' => $field,
 				'value' => $this->$method($field, $info, $sort, $view),
 			];
-            if (isset($info['formatView']) || in_array($type, ['atag', 'imgtag'])) {
+            if (isset($info['formatView']) || in_array($type, ['atag', 'imgtag', 'operation'])) {
                 $data['format'] = isset($info['formatView']) ? $info['formatView'] : 'raw';
             }
 			$datas[$field] = $data;
@@ -155,7 +155,39 @@ trait TraitSearchTemplate
 		return $value;
 	}
 
-    protected function _operationTemplate($field, $info, $sort, $view)
+	protected function _operationTemplate($field, $info, $sort, $view)
+	{
+		$method = isset($info['method']) ? $info['method'] : 'formatOperation';
+		if ($sort == 'list') {
+    		$value = function($model) use ($field, $method, $view) {
+                return $model->$method($view);
+            };
+		} else {
+            $value = $this->$method($view);
+		}
+		return $value;
+	}
+
+    protected function _formatMenuOperation($view, $menuCodes, $params)
+    {
+        $str = '';
+        foreach ($menuCodes as $code => $name) {
+            $menu = $view->getMenuData($code);
+            $name = empty($name) ? $menu['name'] : $name;
+            $url = $menu['url'];
+            $qStr = '';
+            foreach ($params as $param => $field) {
+                $value = $this->$field;
+                $qStr .= "{$param}={$value}&";
+            }
+            $url .= "?{$qStr}";
+            $str .= "<a href='{$url}'>{$name}</a>---";
+        }
+        $str = rtrim($str, '---');
+        return $str;
+    }
+
+    protected function _operationOldTemplate($field, $info, $sort, $view)
     {
         $queryStr = '';
         if (isset($info['qParam'])) {
