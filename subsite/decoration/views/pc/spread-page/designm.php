@@ -130,7 +130,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                                 <li>
                                     <span>·</span>该项目免费服务，不收任何费用</li>
                                 <li>
-                                    <span>·</span>您的隐私信息将会被<?= Yii::$app->params['siteNameBase']; ?>严格保密</li></ul>
+                                    <span>·</span>我们将严格保护您的隐私信息</li></ul>
                         </div>
                     </form>
                     <!-- 装修报价 end --></div>
@@ -170,7 +170,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                                 <li>
                                     <span>·</span>该项目免费服务，不收任何费用</li>
                                 <li>
-                                    <span>·</span>您的隐私信息将会被<?= Yii::$app->params['siteNameBase']; ?>严格保密</li></ul>
+                                    <span>·</span>您的隐私信息将会被我们严格保密</li></ul>
                         </div>
                     </form>
                     <!-- 第2步 -->
@@ -636,7 +636,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         <div class="main5_div4">
             <span data-tit="申请预约免费设计量房" class="btn_data-tit ">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/dd50e-5236.png"></span>
-            <span class="span111 btn_data-tit" data-tit="立即预约<?= Yii::$app->params['siteNameBase']; ?>装修报价">
+            <span class="span111 btn_data-tit" data-tit="立即预约装修报价">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/fadbb-6706.png"></span>
         </div>
     </div>
@@ -661,7 +661,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     </span>
                     <span class="main6_div2_li_s3">
                         <span>
-                            <i class="main6_li_ss1">张奎</i>
+                            <i class="main6_li_ss1">石尚</i>
                             <i class="main6_li_ss2">经验3年</i></span>
                     </span>
                     <span class="main6_div2_li_s4">擅长:日式、欧式、简约等风格</span></li>
@@ -677,7 +677,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     </span>
                     <span class="main6_div2_li_s3">
                         <span>
-                            <i class="main6_li_ss1">赵岩</i>
+                            <i class="main6_li_ss1">郑彬</i>
                             <i class="main6_li_ss2">经验5年</i></span>
                     </span>
                     <span class="main6_div2_li_s4">擅长:现代简约、新中式风、地中海风、欧式古典、别墅装修</span></li>
@@ -693,7 +693,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     </span>
                     <span class="main6_div2_li_s3">
                         <span>
-                            <i class="main6_li_ss1">张静文</i>
+                            <i class="main6_li_ss1">廖静文</i>
                             <i class="main6_li_ss2">经验5年</i></span>
                     </span>
                     <span class="main6_div2_li_s4">擅长:中式，欧美，现代，混搭等风格，小户型设计</span></li>
@@ -709,7 +709,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     </span>
                     <span class="main6_div2_li_s3">
                         <span>
-                            <i class="main6_li_ss1">聂海</i>
+                            <i class="main6_li_ss1">曾杨</i>
                             <i class="main6_li_ss2">经验3年</i></span>
                     </span>
                     <span class="main6_div2_li_s4">擅长:美式，中式，现代，都市的风格</span></li>
@@ -725,7 +725,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     </span>
                     <span class="main6_div2_li_s3">
                         <span>
-                            <i class="main6_li_ss1">刘雯</i>
+                            <i class="main6_li_ss1">宁雯</i>
                             <i class="main6_li_ss2">经验3年</i></span>
                     </span>
                     <span class="main6_div2_li_s4">擅长:地中海、现代简约、别墅设计、LOFT、美式乡村、欧式古典</span></li>
@@ -733,7 +733,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         </div>
     </div>
     <!--main7-->
-    <div class="main7 btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修网服务">
+    <div class="main7 btn_data-tit" data-tit="申请免费体验装修网服务">
         <p class="ttit">
             <b>真实工地直播</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上网就能实时查看你家装修情况
             <span>更多&nbsp;></span></p>
@@ -869,16 +869,16 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/e0e7e-4597.jpg" /></dt>
                 <dd>
                     <span>赵先生</span>
-                    <br />何先生记得接触大运豪门是在<?= Yii::$app->params['siteNameBase']; ?>组织的团购会上，大运豪门...</dd></dl>
+                    <br />记得接触大运豪门是在平台组织的团购会上，大运豪门...</dd></dl>
         </div>
         <!--右侧列表END--></div>
     <!--main7END-->
     <!--main8-->
     <div class="main8">
-        <p class="ttit  btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
+        <p class="ttit  btn_data-tit" data-tit="申请免费体验装修服务">
             <b>小区工地案例</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已为
             <em>8341</em>位业主查看了小区真实案例</p>
-        <ul class="btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
+        <ul class="btn_data-tit" data-tit="申请免费体验装修服务">
             <li>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/ed0c9-8587.jpg" class="big" />
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/2b1c8-8781.png" class="img-txt" /></li>
@@ -911,10 +911,10 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
     <!--main9-->
     <div class="main9">
         <p class="ttit">
-            <b class="btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台480道工艺">施工工艺</b>
-            <em class="wid btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务"></em>
-            <b class="btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">品质保障</b></p>
-        <ul class="ul_img btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台480道工艺">
+            <b class="btn_data-tit" data-tit="申请免费体验装修平台480道工艺">施工工艺</b>
+            <em class="wid btn_data-tit" data-tit="申请免费体验装修平台服务"></em>
+            <b class="btn_data-tit" data-tit="申请免费体验装修平台服务">品质保障</b></p>
+        <ul class="ul_img btn_data-tit" data-tit="申请免费体验装修平台480道工艺">
             <li>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/e2671-9837.jpg" /></li>
             <li>
@@ -928,7 +928,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
             <li>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/e23ec-7539.jpg" /></li>
         </ul>
-        <div class="rigth btn_data-tit" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
+        <div class="rigth btn_data-tit" data-tit="申请免费体验装修平台服务">
             <p>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/b446a-7556.jpg" />
                 <span>
@@ -961,7 +961,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/ddaa3-2965.jpg" />
                     <br />施工保障</li></ul>
             <div class="text">
-                <b><?= Yii::$app->params['siteNameBase']; ?>装修平台郑重承诺：</b>为切实保障业主利益，不发布虚假广告，自觉抵制假货、假冒知名商品，保证业主的知情权、选择权，不虚标价格、折扣和团购数据，不误导、侵害业主的合法权益，认真解决业主投诉，主动接受工商、通信管理等有关政府部门、行业组织、业主和媒体的监督。</div>
+                <b>装修平台郑重承诺：</b>为切实保障业主利益，不发布虚假广告，自觉抵制假货、假冒知名商品，保证业主的知情权、选择权，不虚标价格、折扣和团购数据，不误导、侵害业主的合法权益，认真解决业主投诉，主动接受工商、通信管理等有关政府部门、行业组织、业主和媒体的监督。</div>
         </div>
     </div>
     <!--main9END-->
@@ -1021,7 +1021,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
 <input type="hidden" value="984615576fb9918cd8c6a7a6a750465f" id="visit_request_id" name="visit_request_id" />
 <!-- end main -->
 <!-- 底部 -->
-<div class="subFooter btn_data-tit" style="float:left;" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台服务">
+<div class="subFooter btn_data-tit" style="float:left;" data-tit="申请免费体验装修平台服务">
     <div class="subFooterBG">
         <div class="subFooterT">
             <ul class="subFooterT_list clear">
@@ -1158,12 +1158,12 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
         </div>
     </div>
     <!-- 版权 -->
-    <div class="copyRight btn_data-tit" style="float:left;" data-tit="申请免费体验<?= Yii::$app->params['siteNameBase']; ?>装修平台">
+    <div class="copyRight btn_data-tit" style="float:left;" data-tit="申请免费体验装修平台">
         <div class="subcoptRight">
             <div class="SCRleft">
                 <ul>
                     <li class="first">
-                        <a>关于<?= Yii::$app->params['siteNameBase']; ?></a>
+                        <a>关于我们</a>
                     </li>
                     <li>
                         <a>团购活动</a>
