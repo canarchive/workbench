@@ -10,7 +10,7 @@ $model->picture = $model->getAttachmentIds('sample', 'picture');
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?php echo $form->field($model, 'site_code')->dropDownList($model->siteCodeInfos, ['prompt' => '']); ?>
-    <?php echo $form->field($model, 'sort', ['inline' => true])->radioList($model->getPointInfos('shoot-sort'), ['prompt' => '']); ?>
+    <?php echo $form->field($model, 'sort', ['inline' => true])->radioList($model->getPointInfos('shoot-sort', ['indexName' => 'code']), ['prompt' => '']); ?>
     <?= $form->field($model, 'orderlist')->textInput() ?>
     <?= $form->field($model, 'picture')->hiddenInput(); ?>
     <?= $model->uploadElem('sample', 'picture'); ?>

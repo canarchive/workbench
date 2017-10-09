@@ -33,7 +33,7 @@ return [
     'sample-show' => [
 		'title' => '{{INFONAME}}摄影图片_{{INFONAME}}写真照片_{{SORTNAME}}_右视觉摄影机构',
 		'keyword' => '{{INFONAME}}摄影图片，{{INFONAME}}写真照片',
-		'description' => '【右视觉摄影机构】为您整理与拍摄的，{{INFONAME}}图片_{{INFONAME}}写真照片，希望喜欢{{INFONAME}}的朋友与需要拍摄的朋友都可以联系我们！',
+		'description' => '【右视觉摄影机构】为您整理与拍摄的，{{INFONAME}}摄影图片_{{INFONAME}}写真照片，希望喜欢{{INFONAME}}的朋友与需要拍摄的朋友都可以联系我们！',
     ],
     'tag-list' => [
         'title' => '{{TAG}}摄影_{{TAG}}作品_{{TAG}}照片_{{PAGESTR}}右视觉摄影机构',

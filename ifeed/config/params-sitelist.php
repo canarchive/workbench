@@ -27,7 +27,7 @@ return [
         'description' => '',
     ],
     'hgvisual' => [
-        'name' => '韩涵工作室',
+        'name' => '红格',
 		'sort' => ['commercial', 'portrait', 'wedding', 'auto'],
         'icp' => '',
         'title' => '',
