@@ -186,4 +186,20 @@ class Controller extends YiiController
 
         return ;
     }
+
+	protected function getPointModel($code, $forceNew = false)
+	{
+		static $models = [];
+		$modelClass = $this->getPointClass($code);
+		if (isset($models[$modelClass]) && empty($forceNew)) {
+			return $models[$modelClass];
+		}
+		$model = $models[$modelClass] = new $modelClass();
+		return $model;
+	}
+
+	protected function getPointClass($code)
+	{
+		return $code;
+	}
 }
