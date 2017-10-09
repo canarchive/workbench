@@ -173,6 +173,9 @@ trait TraitSearchTemplate
         $str = '';
         foreach ($menuCodes as $code => $name) {
             $menu = $view->getMenuData($code);
+            if (empty($menu)) {
+                continue;
+            }
             $name = empty($name) ? $menu['name'] : $name;
             $url = $menu['url'];
             $qStr = '';

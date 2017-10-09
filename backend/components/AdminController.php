@@ -161,7 +161,7 @@ class AdminController extends Controller
         }
 		$confirmUpdate = $this->confirmUpdate($info);
 		if ($confirmUpdate) {
-			return ['status' =>400, 'message' => '信息已锁定不能修改'];
+			return ['status' => 400, 'message' => '信息已锁定不能修改'];
 		}
         $info->$field = $value;
         $info->update(false);

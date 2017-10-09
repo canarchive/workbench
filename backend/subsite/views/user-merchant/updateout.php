@@ -9,13 +9,14 @@ $model->houseArea = $model->houseModel->house_area;
 $model->houseType = $model->houseModel->getKeyName('house_type', $model->houseModel->house_type);
 $model->houseSort = $model->houseModel->getKeyName('house_sort', $model->houseModel->house_sort);
 $model->note = $model->guestbookModel->content;
-$model->merchant_id = $model->getPointName('merchant', $model->merchant_id);
 
 $minutes = $model->isLock === true ? true : $model->isLock;
 $statusLabel = $minutes === true ? '状态 (超过24小时，您无法更改订单状态)' : '状态 （距离锁定订单状态还有' . $minutes . ')';
+$statusLabel = $model->merchant_id == 694 ? '状态' : $statusLabel;
 $statusInfos = $model->statusInfos;
 unset($statusInfos['back_confirm']);
-$statusOption = $minutes === true ? ['name' => 'status', 'prompt' => '', 'disabled' => true] : ['name' => 'status'];
+$statusOption = $minutes === true || $model->merchant_id == 694 ? ['name' => 'status', 'prompt' => '', 'disabled' => true] : ['name' => 'status'];
+$model->merchant_id = $model->getPointName('merchant', $model->merchant_id);
 ?>
 
 <div class="menu-form">
