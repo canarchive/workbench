@@ -8,18 +8,23 @@ function updateElemByAjax(url, table, info_id, field, value)
         'field': field,
         'value': value
     };
+    var result;
     $.ajax({
         type: "POST",
         url: url,
+        async: false,
         data: data,
         success: function(data,status) {
             if (data.status == 200) {
+                result = true;
                 ShowSuccessMessage("信息编辑成功", 3000);
             } else {
+                result = false;
                 ShowErrorMessage(data.message, 3000);
             }
         }
     });
+    return result;
 }
 
 function changeDate(url, table, info_id, field, value)
