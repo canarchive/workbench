@@ -48,6 +48,7 @@ trait UserMerchantTrait
 			'houseArea' => '房屋面积',
 			'houseType' => '户型',
 			'houseSort' => '房屋类别',
+            'interval_time' => '派单时间',
 			'view_at' => '查看时间',
             'name' => '名称',
         ];
@@ -135,6 +136,15 @@ trait UserMerchantTrait
 
 		return $infos;
 	}
+
+    public function getIntervalTime()
+    {
+        $user = $this->_newModel('user')->find()->where(['id' => $this->user_id])->one();
+        if (empty($user)) {
+            return '';
+        }
+        return $this->formatTimestampShow($this->created_at - $user->created_at);
+    }
 
 	public function getUserModel()
 	{
