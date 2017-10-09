@@ -25,7 +25,7 @@ class Module extends ModuleBase
 
         $role = $managerInfo['role'];
         if (in_array($role, ['service-saleman', 'saleman-chief'])) {
-            $this->initSalemanPriv($managerInfo, $salemanInfo);
+            //$this->initSalemanPriv($managerInfo, $salemanInfo);
         }
         $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
         return [

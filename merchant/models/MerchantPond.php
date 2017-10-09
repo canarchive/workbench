@@ -8,6 +8,7 @@ use baseapp\merchant\models\Merchant;
 class MerchantPond extends Merchant
 {
     public $import;
+    public $current_action;
 
     public static function tableName()
     {
@@ -19,7 +20,7 @@ class MerchantPond extends Merchant
         return [
             [['name'], 'required'],
             [['status_ext', 'callback_next', 'saleman_id', 'orderlist'], 'default', 'value' => '0'],
-            [['display_level', 'saleman_id_first', 'import', 'code', 'city_code', 'status', 'msg', 'region', 'name_full', 'sort', 'address', 'description'], 'safe'],
+            [['current_action', 'display_level', 'saleman_id_first', 'import', 'code', 'city_code', 'status', 'msg', 'region', 'name_full', 'sort', 'address', 'description'], 'safe'],
         ];
     }
 
@@ -105,14 +106,30 @@ class MerchantPond extends Merchant
         return $str;
     }
 
-    public function formatOpOwner()
+    public function formatOpOwner($view)
     {
         $saleman = isset(Yii::$app->params['salemanInfo']) ? Yii::$app->params['salemanInfo'] : false;
         if (empty($saleman)) {
             return $this->getKeyName('display_level', $this->display_level);
         }
+        $menu = $view->getMenuData('merchant_follow_merchant-pond_update');
+        $url = $menu['url'];
 
-        
+        $aClasses = [
+            'private' => "btn btn-danger",
+            '' => "btn btn-info",
+        ];
+        $names = [
+            'private' => '释放',
+            '' => '保护',
+        ];
+        $currentLevel = $this->display_level;
+        $new = $currentLevel == '' ? 'private' : '';
+
+        //$aClass = $this->display_level == 'private' ? 'class="btn btn-danger"' : 'class="btn btn-info"';
+        $update = "var result = updateElemByAjax('{$url}', 'MerchantPond', {$this->id}, 'display_level', '{$new}'); if (result) { this.setAttribute('class', '{$aClasses[$new]}'); $('#op_info_{$this->id}').html('{$names[$new]}'); this.setAttribute('onclick', 'alert(\'不要频繁操作\')');}";
+        $str = "<a id='op_info_{$this->id}' class='{$aClasses[$currentLevel]}' href='javascript: void(0);' onclick=\"{$update}\">{$names[$currentLevel]}</a>";
+        return $str;
     }
 
     protected function _getTemplateFields()

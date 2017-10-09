@@ -11,15 +11,27 @@ trait MerchantTrait
     public function rules()
     {
         return [
-            [['name', 'saleman_id', 'merchant_id', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
+            [['current_action', 'display_level', 'name', 'saleman_id', 'merchant_id', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
         ];
     }
 
     public function _searchElems()
     {
+        if ($this->managerRole == 'service-saleman' && in_array($this->current_action, ['follow', 'myself'])) {
+            $this->saleman_id = $this->salemanId;
+        }
+        switch ($this->current_action) {
+        case 'follow':
+            $this->display_level = '';
+            break;
+        case 'myself':
+            $this->display_level = 'private';
+            break;
+        }
         $return = [
             ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'status', 'type' => 'common'],
+            ['field' => 'display_level', 'type' => 'common'],
             ['field' => 'saleman_id', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
         ];
