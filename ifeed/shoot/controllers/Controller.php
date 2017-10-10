@@ -94,7 +94,7 @@ class Controller extends Controllerbase
 	{
 		//return 'http://p.qiao.baidu.com/cps/chat?siteId=10905381&userId=23986957';
 		$qq = Yii::$app->params['siteQQ'];
-        $qqMobile = "mqqwpa://im/chat?chat_type=wpa&uin={$qq}&version=1&src_type=web&web_src=weinaya.com";
+        $qqMobile = "mqqwpa://im/chat?chat_type=wpa&uin={$qq}&version=1&src_type=web&web_src=hulianyingxiang.cn";
         $qqUrl = "http://wpa.qq.com/msgrd?v=3&uin={$qq}&site=qq&menu=yes";
 		return $this->clientType == 'mobile' ? $qqMobile : $qqUrl;
 	}
@@ -131,6 +131,12 @@ class Controller extends Controllerbase
             $this->pcMappingUrl = $pcDomain . "/caseshow_{$id}.html";
             $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}/caseshow_{$id}.html";
             break;
+		case 'aboutus':
+			$view = $params['view'];
+            $this->pcMappingUrl = $pcDomain . "/{$view}.html";
+            $this->mobileMappingUrl = $mobileDomain . "/{$siteStr}/{$view}.html";
+            break;
+
         default:
             $this->pcMappingUrl = $pcDomain;
 			$urlStr = str_replace('//', '/', "/{$siteStr}{$sortStr}/");

@@ -24,6 +24,7 @@ class AboutusController extends Controller
 		];
         $this->currentElem = $view;
 		
+        $this->formatMappingUrl('aboutus', ['view' => $view]);
 		$this->getTdkInfos('aboutus-' . $view);
 		return $this->render($view, $datas);
 	}

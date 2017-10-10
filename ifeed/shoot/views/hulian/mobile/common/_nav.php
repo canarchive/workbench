@@ -1,10 +1,11 @@
 <?php
 //$navDatas = $this->context->navDatas;
+$siteCode = $this->context->siteCode == 'shoot' ? '' : 'sj' . $this->context->siteCode . '/';
 $navDatas = [
     'index' => ['url' => $this->context->getSiteUrl(), 'name' => '首页HOME'],
     'location' => ['url' => $this->context->getSortUrl('all'), 'name' => '作品欣赏'],
-    'container' => ['url' => $this->context->currentDomain . '/aboutus.html', 'nofollow' => true, 'name' => '公司简介'],
-    'nav' => ['url' => $this->context->currentDomain . '/contactus.html', 'nofollow' => true, 'name' => '联系我们'],
+    'container' => ['url' => $this->context->currentDomain . "/{$siteCode}aboutus.html", 'nofollow' => true, 'name' => '公司简介'],
+    'nav' => ['url' => $this->context->currentDomain . "/{$siteCode}contactus.html", 'nofollow' => true, 'name' => '联系我们'],
 ];
 $caseDatas = $this->context->navDatas['case']['subDatas'];
 ?>
