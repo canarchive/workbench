@@ -79,10 +79,22 @@ trait TraitActive
 		return $infosObj;
 	}
 
-	public function getInfo($where, $keyField = 'id')
+	public function getInfo($param, $keyField = 'id')
 	{
-		$where = is_array($where) ? $where : [$keyField => $where];
-		$info = $this->find()->where($where)->one();
+        $orderBy = false;
+        if (is_array($param)) {
+            $where = isset($param['where']) ? $param['where'] : $param;
+		    $orderBy = isset($param['orderBy']) ? $param['orderBy'] : false;
+        } else {
+            $where = [$keyField => $param];
+        }
+
+        if (!empty($orderBy)) {
+		    $info = $this->find()->where($where)->orderBy($orderBy)->one();
+        } else {
+		    $info = $this->find()->where($where)->one();
+        }
+
 		if (empty($info)) {
 			return $info;
 		}
