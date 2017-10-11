@@ -7,6 +7,7 @@ use baseapp\spread\models\UserTrait;
 class User extends ModelBase
 {
     use UserTrait;
+    public $service_id_point;
 
     public function handleFieldExts()
     {
