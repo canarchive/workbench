@@ -3,6 +3,7 @@
 namespace merchant\admin\controllers\decoration;
 
 use Yii;
+use yii\web\ForbiddenHttpException;
 use backend\subsite\controllers\decoration\UserController as UserControllerBase;
 
 class UserController extends UserControllerBase
@@ -11,18 +12,10 @@ class UserController extends UserControllerBase
 
     public function beforeAction($action)
     {
-        return parent::beforeAction($action);
         if ($action->id == 'change-service') {
-        $privInfo = Yii::$app->params['privInfo'];
-        print_r($privInfo);exit();
-        if (isset($_GET['merchant_id'])) {
-            unset($_GET['merchant_id']);
+            $this->forceSkipPriv = true;
         }
-        if (isset($_GET['service_id'])) {
-            unset($_GET['service_id']);
-        }
-        }
-        echo $action->id;
+        return parent::beforeAction($action);
     }
 
     public function actionListpond()
@@ -33,7 +26,48 @@ class UserController extends UserControllerBase
 
     public function actionChangeService($id)
     {
+        $serviceIdPoint = Yii::$app->request->get('service_id_point');
         $model = $this->findModel($id);
-        var_dump($model);
+        $privInfo = Yii::$app->params['privInfo'];
+        $serviceIds = isset($privInfo['service_id']) ? (array) $privInfo['service_id'] : [];
+        //var_dump($serviceIds);exit();
+
+        $infos = $model->getInfos(['where' => ['mobile' => $model->mobile]]);
+        $serviceIdsOld = [];
+        foreach ($infos as $info) {
+            $serviceIdsOld[] = $info['service_id'];
+        }
+        foreach ($serviceIds as $key => $value) {
+            if ($value == 'no' || in_array($value, $serviceIdsOld)) {
+                unset($serviceIds[$key]);
+            }
+        }
+
+        if (empty($serviceIds)) {
+            throw new ForbiddenHttpException('没有要分配的客服');
+        }
+        if (!empty($serviceIdPoint) && !in_array($serviceIdPoint, $serviceIds)) {
+            throw new ForbiddenHttpException('指定的客服有误');
+        }
+        $serviceIdNew = !empty($serviceIdPoint) ? $serviceIdPoint : (count($serviceIds) == 1 ? array_pop($serviceIds) : false);
+        if ($serviceIdNew) {
+            $model->service_id = $serviceIdNew;
+            $model->dispatch_at = Yii::$app->params['currentTime'];
+            $model->service_num = $model->service_num + 1;
+            $model->update(false, ['service_id', 'dispatch_at', 'service_num']);
+            $menus = $this->menuInfos['menus'];
+            $menu = isset($menus['subsite_decoration_user_update']) ? $menus['subsite_decoration_user_update'] : '';
+            $url = empty($menu) ? '' : $menu['url'] . '?id=' . $model->id;
+            if (empty($url)) {
+                throw new ForbiddenHttpException('分派客服成功，您目前尚没有回访业主的权限');
+            }
+            //echo $url;exit();
+            header("Location: {$url}");
+        }
+        $data = [
+            'model' => $model,
+            'serviceIds' => $serviceIds,
+        ];
+        return $this->render($this->viewPrefix . 'change-service', $data);
     }
 }
