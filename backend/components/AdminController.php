@@ -18,6 +18,7 @@ class AdminController extends Controller
     protected $modelClass = '';
     public $showFilter;
     public $noActionColumn;
+    public $forceSkipPriv;
     //protected $viewPrefix = '';
     public $layout = '@backend/views/charisma/layouts/main';
 
@@ -197,6 +198,9 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
+        if (!empty($this->forceSkipPriv)) {
+            return true;
+        }
         $privInfo = Yii::$app->params['privInfo'];
         foreach ((array) $privInfo as $field => $value) {
             if (!$model->hasAttribute($field) || is_null($value)) {
@@ -207,7 +211,7 @@ class AdminController extends Controller
             $currentValue = array_filter($currentValue);
             $join = array_intersect($value, $currentValue);
             if (empty($join)) {
-                throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+                throw new ForbiddenHttpException(Yii::t('yii', 'You are locked2.'));
             }
         }
 
@@ -237,7 +241,7 @@ class AdminController extends Controller
             if (!is_null($getSource)) {
                 $diff = array_intersect((array) $getSource, (array) $value);
                 if (empty($diff)) {
-                    throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+                    throw new ForbiddenHttpException(Yii::t('yii', 'You are locked1.'));
                 }
                 $value = $getSource;
             }
