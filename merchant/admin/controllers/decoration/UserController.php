@@ -15,6 +15,14 @@ class UserController extends UserControllerBase
         if ($action->id == 'change-service') {
             $this->forceSkipPriv = true;
         }
+		if ($action->id == 'update') {
+            /*$role = Yii::$app->params['managerInfo']->role;
+            if (in_array($role, ['admin-inner', 'service_inner', 'service-admin-inner'])) {
+    			if (isset(Yii::$app->params['privInfo']) && isset(Yii::$app-params['privInfo']['merchant_id'])) {
+    				unset(Yii::$app->params['privInfo']['merchant_id']);
+    			}
+			}*/
+		}
         return parent::beforeAction($action);
     }
 
@@ -61,7 +69,7 @@ class UserController extends UserControllerBase
             if (empty($url)) {
                 throw new ForbiddenHttpException('分派客服成功，您目前尚没有回访业主的权限');
             }
-            //echo $url;exit();
+            echo $serviceIdNew . '-' . $model->id . '-' . $url;exit();
             header("Location: {$url}");
         }
         $data = [
