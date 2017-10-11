@@ -15,15 +15,22 @@ class UserController extends UserControllerBase
         if ($action->id == 'change-service') {
             $this->forceSkipPriv = true;
         }
+        $return = parent::beforeAction($action);
+        if ($return !== true) {
+            return $return;
+        }
+        
 		if ($action->id == 'update') {
-            /*$role = Yii::$app->params['managerInfo']->role;
-            if (in_array($role, ['admin-inner', 'service_inner', 'service-admin-inner'])) {
-    			if (isset(Yii::$app->params['privInfo']) && isset(Yii::$app-params['privInfo']['merchant_id'])) {
-    				unset(Yii::$app->params['privInfo']['merchant_id']);
-    			}
-			}*/
+            $role = Yii::$app->params['managerInfo']->role;
+            if (in_array($role, ['admin-inner', 'service-inner', 'service-admin-inner'])) {
+                if (isset(Yii::$app->params['privInfo'])) {
+                if (isset(Yii::$app->params['privInfo']['merchant_id'])) {
+    			    unset(Yii::$app->params['privInfo']['merchant_id']);
+                }
+                }
+			}
 		}
-        return parent::beforeAction($action);
+        return true;
     }
 
     public function actionListpond()
