@@ -15,7 +15,6 @@ class MerchantPondController extends Controller
     public function init()
     {
         parent::init();
-        $this->noActionColumn = true;
     }
 
     public function actionImport()

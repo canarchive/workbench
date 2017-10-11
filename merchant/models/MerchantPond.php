@@ -7,8 +7,6 @@ use baseapp\merchant\models\Merchant;
 
 class MerchantPond extends Merchant
 {
-    public $import;
-    public $current_action;
 
     public static function tableName()
     {

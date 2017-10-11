@@ -7,6 +7,14 @@ use backend\merchant\controllers\MerchantPondController as MerchantPondControlle
 class MerchantPondController extends MerchantPondControllerBase
 {
     use BaseTrait;
+    public function beforeAction($action)
+    {
+        if ($action->id == 'listinfo') {
+            $this->noActionColumn = true;
+        }
+
+        return parent::beforeAction($action);
+    }
 
     protected function privGetIgnore()
     {
