@@ -1,6 +1,7 @@
 <?php
 
 namespace baseapp\spread\models\searchs;
+use yii\helpers\Html;
 
 Trait UserTemplate
 {
@@ -72,6 +73,16 @@ Trait UserTemplate
                 'attribute' => 'status',
                 'value' => function($model) {
 					return $model->getKeyName('status', $model->status);
+                }
+            ],
+            'callback' => [
+                'format' => 'raw',
+                'attribute' => 'callback',
+                'value' => function($model) {
+					$content = $model->callbackStr;
+                    $str = Html::encode(mb_substr($content, 0, 10, 'utf-8'));
+                    $str .= mb_strlen(urldecode($content)) > 10 ? '<a href="javascript:void(0);" data-placement="top" data-toggle="popover" data-content="' . urldecode($content) . '" title="URL"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>全部</a>' : "";
+                    return $str;
                 }
             ],
         ];

@@ -25,7 +25,7 @@ class Service extends MerchantModel
     {
         return [
             [['name', 'mobile', 'merchant_id'], 'required'],
-            [['merchant_id', 'manager_id', 'status', 'status_sendmsg', 'serviced_num', 'serviced_times', 'distributed_at'], 'default', 'value' => 0],
+            [['merchant_id', 'user_id', 'manager_id', 'status', 'status_sendmsg', 'serviced_num', 'serviced_times', 'distributed_at'], 'default', 'value' => 0],
             [['merchant_id', 'mobile'], 'checkUnique'],
             ['password_user', 'string', 'min' => 6, 'when' => function($model) { return $model->password_user != ''; }],
             [['code', 'status', 'mobile_ext', 'password_user', 'create_user'], 'safe'],

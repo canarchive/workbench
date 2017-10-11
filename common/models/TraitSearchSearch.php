@@ -58,12 +58,18 @@ trait TraitSearchSearch
     protected function _searchCommon(& $query, $elem)
     {
         $field = $elem['field'];
-        $value = $this->$field;
+        $value = isset($elem['value']) ? $elem['value'] : $this->$field;
         if (is_null($value) || $value == 'all-search' || in_array('all-search', (array) $value)) {
             return ;
         }
         $sort = isset($elem['sort']) ? $elem['sort'] : '';
         switch ($sort) {
+        case 'less':
+            $query->andFilterWhere(['<', $field, $value]);
+            break;
+        case 'notIn':
+            $query->andFilterWhere(['not in', $field, $value]);
+            break;
         case 'like':
             $query->andFilterWhere(['like', $field, $value]);
             break;
