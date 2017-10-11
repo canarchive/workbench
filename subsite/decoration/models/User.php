@@ -136,4 +136,14 @@ class User extends ModelBase
 
         return $this->sendSmsBase($mobile, $content, 'decoration_valid');
     }
+
+    public function getCallbackStr()
+    {
+        $model = new Callback();
+        $info = $model->getInfo(['where' => ['mobile' => $this->mobile], 'orderBy' => ['id' => SORT_DESC]]);
+        if (empty($info)) {
+            return '';
+        }
+        return $info['content'];
+    }
 }
