@@ -4,6 +4,9 @@ namespace baseapp\merchant\models;
 
 class Merchant extends MerchantModel
 {
+    public $current_action;
+    public $import;
+    public $managerRole;
     public static function tableName()
     {
         return '{{%merchant}}';
