@@ -49,6 +49,7 @@ trait UserTrait
 
             'notice_merchant' => '是否短信通知商家',
             'notice_user' => '是否短信通知业主',
+            'service_id_point' => '指派客服',
         ]);
     }
 
