@@ -8,7 +8,6 @@ use merchant\models\MerchantPond as MerchantPondModel;
 class MerchantPond extends MerchantPondModel
 {
     use MerchantTrait;
-    public $managerRole;
     public $salemanId;
     public $salemanInfo;
     public $managerInfo;
