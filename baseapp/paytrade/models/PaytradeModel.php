@@ -16,13 +16,25 @@ class PaytradeModel extends BaseModel
         return new \paytrade\models\Attachment();
     }
 
-	public function getGoodsModel($returnNew = false)
+	public function getGoodsModel($code, $returnNew = false)
 	{
-		static $gModel;
+		static $model;
 
-		if (is_null($gModel) || $returnNew) {
-			$gModel = $this->_newModel('goods', $returnNew);
+		if (is_null($model) || $returnNew) {
+			$class = "\shop\\{$code}\models\Goods";
+			$model = new $class();
 		}
-		return $gModel;
+		return $model;
+	}
+
+	public function getGoodsSkuModel($code, $returnNew = false)
+	{
+		static $model;
+
+		if (is_null($model) || $returnNew) {
+			$class = "\shop\\{$code}\models\GoodsSku";
+			$model = new $class();
+		}
+		return $model;
 	}
 }
