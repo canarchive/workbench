@@ -22,6 +22,23 @@ class MerchantPondController extends Controller
     	return $this->_importInfo();
     }
 
+    public function actionOwner()
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $saleman = isset(Yii::$app->params['salemanInfo']) ? Yii::$app->params['salemanInfo'] : false;
+        if (empty($saleman)) {
+            return ['status' => 400, 'message' => '您不是销售，无法执行该操作'];
+        }
+        $infoId = intval(Yii::$app->request->post('info_id'));
+        $displayLevel = Yii::$app->request->post('value');
+        $model = $this->findModel($infoId);
+        if (empty($model) || !in_array($displayLevel, array_keys($model->displayLevelInfos))) {
+            return ['status' => 400, 'message' => '参数错误'];
+        }
+
+        return $model->changeOwner($saleman, $displayLevel);
+    }
+
     public function actionCallback($merchant_id)
     {
         $datas = $this->_datas($merchant_id);

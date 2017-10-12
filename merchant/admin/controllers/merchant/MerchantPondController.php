@@ -21,15 +21,21 @@ class MerchantPondController extends MerchantPondControllerBase
         return ['merchant_id'];
     }
 
+    public function actionListinfo()
+    {
+        $_GET['current_action'] = 'listinfo';
+        return parent::actionListinfo();
+    }
+
     public function actionMyself()
     {
         $_GET['current_action'] = 'myself';
-        return $this->actionListinfo();
+        return parent::actionListinfo();
     }
 
     public function actionFollow()
     {
         $_GET['current_action'] = 'follow';
-        return $this->actionListinfo();
+        return parent::actionListinfo();
     }
 }
