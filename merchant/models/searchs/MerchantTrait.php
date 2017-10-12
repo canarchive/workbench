@@ -17,8 +17,17 @@ trait MerchantTrait
 
     public function _searchElems()
     {
-        if ($this->managerRole == 'service-saleman' && in_array($this->current_action, ['follow', 'myself'])) {
+        if ($this->managerRole == 'service-saleman') {
             $this->saleman_id = $this->salemanId;
+        }
+        if (!in_array($this->current_action, ['follow', 'myself'])) {
+            $extData = [
+                ['field' => 'saleman_id', 'type' => 'common', 'sort' => 'notIn'],
+            ];
+        } else {
+            $extData = [
+                ['field' => 'saleman_id', 'type' => 'common'],
+            ];
         }
         switch ($this->current_action) {
         case 'follow':
@@ -28,13 +37,12 @@ trait MerchantTrait
             $this->display_level = 'private';
             break;
         }
-        $return = [
+        $return = array_merge([
             ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'status', 'type' => 'common'],
             ['field' => 'display_level', 'type' => 'common'],
-            ['field' => 'saleman_id', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
-        ];
+        ], $extData);
         if (!empty($this->merchant_id)) {
             $this->id = $this->merchant_id;
             $return[] = ['field' => 'id', 'type' => 'common'];
