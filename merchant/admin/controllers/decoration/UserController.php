@@ -20,7 +20,7 @@ class UserController extends UserControllerBase
             return $return;
         }
         
-		if ($action->id == 'update') {
+		if ($action->id == 'update' || $action->id == 'listinfo') {
             $role = Yii::$app->params['managerInfo']->role;
             if (in_array($role, ['admin-inner', 'service-inner', 'service-admin-inner'])) {
                 if (isset(Yii::$app->params['privInfo'])) {
@@ -76,7 +76,7 @@ class UserController extends UserControllerBase
             if (empty($url)) {
                 throw new ForbiddenHttpException('分派客服成功，您目前尚没有回访业主的权限');
             }
-            echo $serviceIdNew . '-' . $model->id . '-' . $url;exit();
+            //echo $serviceIdNew . '-' . $model->id . '-' . $url;exit();
             header("Location: {$url}");
         }
         $data = [
