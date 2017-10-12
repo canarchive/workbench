@@ -2,6 +2,8 @@
 
 namespace baseapp\merchant\models;
 
+use Yii;
+
 class Merchant extends MerchantModel
 {
     public $current_action;
@@ -101,8 +103,24 @@ class Merchant extends MerchantModel
         ];
     }
 
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+
+        if ($insert) {
+            $this->saleman_id_first = $this->saleman_id;
+        }
+
+        return true;
+    }
+
     public function formatFollow($view)
     {
+        if (empty($this->salemanPriv())) {
+            return '-';
+        }
         $menuCodes = [
             'merchant_follow_merchant-pond_callback' => '回访',
             'merchant_follow_callback_listinfo' => '',
@@ -113,6 +131,9 @@ class Merchant extends MerchantModel
 
     public function formatOperation($view)
     {
+        if (empty($this->salemanPriv())) {
+            return '-';
+        }
         $menuCodes = [
             'merchant_follow_contact_listinfo' => '',
             'merchant_contract_add' => '添加合同',
