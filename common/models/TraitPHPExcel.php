@@ -56,8 +56,12 @@ trait TraitPHPExcel
     public function importDatas($file)
     {
         $objPHPExcel = \PHPExcel\IOFactory::load($file);
-        $datas = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
+        $sCount = $objPHPExcel->getSheetCount();
 
+        $datas = [];
+        for ($i = 0; $i < $sCount; $i++) {
+            $datas[$i] = $objPHPExcel->getSheet($i)->toArray(null,true,true,true);
+        }
         return $datas;
     }
 }
