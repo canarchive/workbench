@@ -21,4 +21,11 @@ class MerchantPond extends MerchantPondModel
         $this->managerRole = isset($this->managerInfo['role']) ? $this->managerInfo['role'] : false;
         $this->salemanId = isset($this->salemanInfo['id']) ? $this->salemanInfo['id'] : false;
     }
+
+    protected function _defaultPagination()
+    {
+        return [
+            'pageSize' => 100,
+        ];
+    }
 }
