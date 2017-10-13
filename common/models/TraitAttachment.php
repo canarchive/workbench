@@ -140,7 +140,7 @@ trait TraitAttachment
         ]);
 	}
 
-    public function _importDatas()
+    public function _importDatas($returnAttachment = false)
     {   
         $aId = $this->import;
         if (empty($aId)) {
@@ -158,10 +158,16 @@ trait TraitAttachment
             $this->addError('import', '指定的文件不存在，请重新上传');
             return false;
         }   
-        $datas = $this->importDatas($file);
-        if (empty($datas)) {
+        $datas = (array) $this->importDatas($file);
+        if (empty(array_filter($datas))) {
             $this->addError('import', '没有数据');
             return false;
+        }
+        if ($returnAttachment) {
+            $datas = [
+                'attachment' => $attachment,
+                'datas' => $datas,
+            ];
         }
         return $datas;
     }
