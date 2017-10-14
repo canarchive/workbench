@@ -12,7 +12,7 @@ case 'bad':
 default:
     $ignores = ['invalid_status', 'callback_again'];
 }
-$ignores = array_merge(['channel', 'city_input', 'city'], $ignores);
+$ignores = array_merge(['channel', 'city_input', 'city', 'callback'], $ignores);
 $columns = $this->context->searchModel->getColumnsUser($ignores);
 $columns['mobile'] = [
     'format' => 'raw',
