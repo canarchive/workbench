@@ -11,7 +11,7 @@ trait MerchantTrait
     public function rules()
     {
         return [
-            [['current_action', 'display_level', 'name', 'saleman_id', 'merchant_id', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
+            [['city_code', 'current_action', 'display_level', 'name', 'saleman_id', 'merchant_id', 'status', 'created_at_start', 'created_at_end', 'updated_at_start', 'updated_at_end'], 'safe'],
         ];
     }
 
@@ -40,6 +40,7 @@ trait MerchantTrait
     public function _searchDatas()
     {
         $list = [
+            $this->_sPointParam(['field' => 'city_code', 'table' => 'company', 'indexName' => 'code', 'where' => ['status' => 2]]),
             $this->_sPointParam(['field' => 'saleman_id', 'table' => 'saleman']),
             $this->_sKeyParam(['field' => 'status']),
         ];

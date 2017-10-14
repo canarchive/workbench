@@ -28,11 +28,14 @@ trait PlanfeeTrait
         //print_r($datas);exit();
 
         $i = 0;
-        foreach ((array) $datas as $key => $data) {
+        foreach ((array) $datas as $subDatas) {
+        foreach ((array) $subDatas as $key => $data) {
             $result = $this->_writeInfo($data, $fieldInfo);
+            var_dump($result);
             $i++;
         }
-        return $i;
+        }
+        return ['number' => $i];
     }
 
     protected function _writeInfo($data, $fieldInfo = null)
@@ -101,7 +104,7 @@ trait PlanfeeTrait
             }
             $datas[] = $data;
         }
-        return $datas;
+        return [$datas];
     }
 
     protected function channelFields($channel)
