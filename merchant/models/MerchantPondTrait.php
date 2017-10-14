@@ -29,6 +29,7 @@ trait MerchantPondTrait
                 $mData = $this->getDataFromSource('merchant', $data, $file, $titleData);
                 $mData = array_merge($mData, [
                     'sort' => 'decoration',
+                    'city_code' => $this->city_code,
                     'saleman_id' => $this->saleman_id,
                     'saleman_id_first' => $this->saleman_id,
                     'msg' => $file,
@@ -85,13 +86,13 @@ trait MerchantPondTrait
         $elems =[
            'merchant' => [
                 'name' => 'A',
-                'address' => 'Z',
-                'description' => ['Z'],
+                'address' => 'E',
+                'description' => ['F'],
             ],
             'contact' => [
                 'name' => 'B',
                 'mobile' => 'C',
-                'title' => 'L',
+                'title' => 'Z',
                 'description' => ['D'],
             ],
         ];
