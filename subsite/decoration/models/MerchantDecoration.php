@@ -21,7 +21,7 @@ class MerchantDecoration extends ModelBase
         return [
             [['merchant_id'], 'required'],
             [['status'], 'default', 'value' => 0],
-            [['sort', 'mobile_cps', 'msg', 'service_item', 'advantage', 'shop', 'scope_area', 'scope_sort', 'scope_ext'], 'safe'],
+            [['sort', 'mobile_cps', 'msg', 'service_item', 'advantage', 'shop', 'scope_area', 'scope_sort', 'scope_note', 'scope_ext'], 'safe'],
         ];
     }
 
