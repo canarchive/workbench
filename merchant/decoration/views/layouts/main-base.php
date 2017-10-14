@@ -5,6 +5,7 @@ $cssFiles = ['website'];;
 $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' => $cssFiles, 'path' => 'merchant/adview/css']);
 $jsFiles = ['modernizr'];;
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'merchant/adview/js']);
+$this->params['statCodeStr'] = $this->render('_stat');
 ?>
 <?php $this->beginContent('@merchant/views/main.php'); ?>
 <script>

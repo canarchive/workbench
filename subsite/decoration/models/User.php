@@ -7,6 +7,7 @@ use baseapp\spread\models\UserTrait;
 class User extends ModelBase
 {
     use UserTrait;
+    public $service_id_point;
 
     public function handleFieldExts()
     {
@@ -116,6 +117,11 @@ class User extends ModelBase
 			'1394' => '18075152882',
 			'1396' => '18810690921',
 			'1405' => '18734809101',
+			'1403' => '13651117922',
+			//'1407' => '15010202641',
+			//'1407' => '15321903882',
+			'1407' => '15321109657',
+			'1408' => '13439800879',
         ];
         $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
         if (empty($mobile)) {
@@ -131,5 +137,15 @@ class User extends ModelBase
 		$content = "业主信息，姓名：{$userInfo['name']};电话：{$userInfo['mobile']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访【兔班长装修网】";
 
         return $this->sendSmsBase($mobile, $content, 'decoration_valid');
+    }
+
+    public function getCallbackStr()
+    {
+        $model = new Callback();
+        $info = $model->getInfo(['where' => ['mobile' => $this->mobile], 'orderBy' => ['id' => SORT_DESC]]);
+        if (empty($info)) {
+            return '';
+        }
+        return $info['content'];
     }
 }
