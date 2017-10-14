@@ -230,6 +230,9 @@ class AdminController extends Controller
 
     protected function _privInfo()
     {
+        if (!empty($this->forceSkipPriv)) {
+            return true;
+        }
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         foreach ($data as $key => & $value) {
             if (in_array($key, $this->privGetIgnore()) || is_null($value)) {
