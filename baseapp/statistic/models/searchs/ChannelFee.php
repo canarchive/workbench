@@ -11,7 +11,7 @@ class ChannelFee extends ChannelFeeModel
     public function rules()
     {
         return [
-            [['account_id', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
+            [['merchant_id', 'account_id', 'field_hit', 'created_day_start', 'created_day_end', 'channel', 'client_type'], 'safe'],
         ];
     }
 
@@ -21,7 +21,7 @@ class ChannelFee extends ChannelFeeModel
             ['field' => 'client_type', 'type' => 'common'],
             ['field' => 'channel', 'type' => 'common'],
             ['field' => 'account_id', 'type' => 'common'],
-            //['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'created_day', 'type' => 'rangeTime', 'timestamp' => false],
         ];
     }    
@@ -30,7 +30,7 @@ class ChannelFee extends ChannelFeeModel
     {
         $this->fields = $fields = $this->_getCheckedFields();
         $fieldsStr = implode(',', $fields);
-        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`success_num`) AS `success_num`, SUM(`valid_num`) AS `valid_num`, SUM(`fee`) AS `fee`, SUM(`show_num`) As `show_num`, SUM(`hit_num`) AS `hit_num`";
+        $fieldsStr .= ", SUM(`visit_num`) AS `visit_num`, SUM(`success_num`) AS `success_num`, SUM(`valid_num`) AS `valid_num`, SUM(`fee`) AS `fee`, SUM(`show_num`) As `show_num`, SUM(`hit_num`) AS `hit_num`, SUM(`follow_num`) AS `follow_num`, SUM(`out_num`) AS `out_num`, SUM(`bad_num`) AS `bad_num`, SUM(`back_num`) AS `back_num`";
         $query->select($fieldsStr);
         $query->groupBy($fields);
 
@@ -43,7 +43,7 @@ class ChannelFee extends ChannelFeeModel
         }
         
         $fields = explode('-', trim($this->field_hit,'-'));
-        $datas = ['client_type', 'channel', 'account_id', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
+        $datas = ['merchant_id', 'client_type', 'channel', 'account_id', 'plan_id', 'created_month', 'created_week', 'created_weedkay', 'created_day', 'created_hour'];
         foreach ($fields as $field) {
             if (!in_array($field, $datas)) {
                 return ['account_id', 'created_day'];
@@ -55,7 +55,7 @@ class ChannelFee extends ChannelFeeModel
     public function _searchDatas()
     {
         $list = [
-            //$this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
+            $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant']),
             $this->_sKeyParam(['field' => 'client_type']),
             $this->_sKeyParam(['field' => 'channel']),
             $this->_sPointParam(['field' => 'account_id', 'table' => 'account']),
@@ -103,6 +103,34 @@ class ChannelFee extends ChannelFeeModel
                 'label' => '有效数-有效率-有效单价',
                 'value' => function($model) {
                     return $model->valid_num . $model->formatPercent($model->valid_num, $model->success_num) . $model->formatDivisor($model->fee, $model->valid_num);
+                }
+            ],
+            [
+                'attribute' => 'back_num',
+                'label' => '退单数-退单率',
+                'value' => function($model) {
+                    return $model->back_num . $model->formatPercent($model->back_num, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'bad_num',
+                'label' => '废单数-废单率',
+                'value' => function($model) {
+                    return $model->bad_num . $model->formatPercent($model->bad_num, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'out_num',
+                'label' => '范围外数-范围外比率',
+                'value' => function($model) {
+                    return $model->out_num . $model->formatPercent($model->out_num, $model->success_num);
+                }
+            ],
+            [
+                'attribute' => 'follow_num',
+                'label' => '跟进数-跟进率',
+                'value' => function($model) {
+                    return $model->follow_num . $model->formatPercent($model->follow_num, $model->success_num);
                 }
             ],
         ];

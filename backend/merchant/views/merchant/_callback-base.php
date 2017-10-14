@@ -18,7 +18,10 @@ $baseInfos = [
                 'callback_next' => ['sort' => 'change', 'type' => 'timestamp', 'valueType' => 'timestamp'],
                 'created_at' => ['valueType' => 'timestamp'],
                 'updated_at' => ['valueType' => 'timestamp'],
-                'description' => ['sort' => 'change'],
+                'msg' => ['sort' => 'change'],
+            ],
+            [
+                'description' => ['sort' => 'change', 'width' => 800],
             ],
         ],
     ]

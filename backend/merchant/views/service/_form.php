@@ -9,6 +9,7 @@ use yii\bootstrap\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant'), ['prompt' => '']); ?>
+    <?= $form->field($model, 'user_id')->dropDownList($model->getManagerInfos(null), ['prompt' => '']); ?>
     <?= $form->field($model, 'manager_id')->dropDownList($model->getManagerInfos(null), ['prompt' => '']); ?>
     <?= $form->field($model, 'code')->textInput() ?>
     <?= $form->field($model, 'mobile')->textInput() ?>

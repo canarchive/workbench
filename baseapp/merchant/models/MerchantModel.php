@@ -32,4 +32,13 @@ class MerchantModel extends BaseModel
     {
         return Yii::getAlias('@merchanturl') . "/upload/{$table}/{$field}.html?mparam=merchant&id={$id}";
     }
+
+    public function salemanPriv()
+    {
+        $saleman = isset(Yii::$app->params['salemanInfo']) ? Yii::$app->params['salemanInfo'] : false;
+        if (!empty($saleman) && $this->managerRole == 'service-saleman' && $saleman['id'] != $this->saleman_id) {
+            return false;
+        }
+        return true;
+    }
 }

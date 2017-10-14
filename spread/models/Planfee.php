@@ -9,9 +9,11 @@ use spread\models\Plan;
 
 class Planfee extends BaseModel
 {
+    use PlanfeeTrait;
     public $import;
     public $export;
     public $order_diff;
+    public $description;
 
     public static function tableName()
     {
@@ -22,7 +24,7 @@ class Planfee extends BaseModel
     {
         return [
             [['created_day', 'channel', 'account_id', 'plan_id'], 'required'],
-            [['created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
+            [['description', 'created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
         ];
     }
 
@@ -44,112 +46,62 @@ class Planfee extends BaseModel
         ];
     }
 
-    public function import()
-    {   
-        if (empty($this->channel) || !in_array($this->channel, array_keys($this->channelInfos))) {
-            exit('请选择渠道');
-        }
-        if (empty($this->client_type) || !in_array($this->client_type, array_keys($this->clientTypeInfos))) {
-            //exit('请选择渠道');
-        }
-        $datas = $this->_importDatas();
-        if ($datas === false) {
-            exit($this->getFirstError('import'));
-        }
-        $fieldInfo = $this->channelFields($this->channel);
-
-        $i = 0;
-        foreach ($datas as $key => $data) {
-            if ($key <= $fieldInfo['startLine']) {
-                continue;
-            }
-            $info = [
-                'channel' => $this->channel,
-                'client_type' => $this->client_type,
-            ];
-            foreach ($fieldInfo['fields'] as $fKey => $field) {
-                $info[$field] = $data[$fKey];
-            }
-            $time = strtotime(str_replace('-', '', $info['created_day']));
-            $info = array_merge($info, [
-                'created_day' => date('Ymd', $time),
-                'created_month' => date('Ym', $time),
-                'created_week' => date('W', $time),
-                'created_weekday' => date('N', $time),
-                'account_id' => $this->getAccountId($info['account_code']),
-                'plan_id' => $this->getPlanId($info['account_code'], $info['plan_name']),
-            ]);
-
-            $where = [
-                'created_day' => $info['created_day'],
-                'client_type' => $this->client_type,
-                'account_code' => $info['account_code'],
-                'plan_name' => $info['plan_name'],
-                //'account_id' => $this->getAccoutId(),
-            ];
-            $infoOld = $this->find()->where($where)->one();
-            if (!empty($infoOld)) {
-                continue;
-            }
-            $self = new self($info);
-            $r = @ $self->save();
-            $i++;
-        }
-        return $i;
+    protected function _getTemplateFields()
+    {
+        return [
+            'id' => ['type' => 'common'],
+            'created_day' => ['type' => 'common'],
+            'channel' => ['type' => 'key'],
+            'client_type' => ['type' => 'key'],
+            'account_code' => ['type' => 'common'],
+            'plan_name' => ['type' => 'common'],
+            //'account_id' => ['type' => 'point', 'table' => 'account'],
+            //'plan_id' => ['type' => 'point', 'table' => 'plan'],
+            'show_num' => ['type' => 'common'],
+            'hit_num' => ['type' => 'common'],
+            'fee' => ['type' => 'common'],
+        ];
     }
 
-    protected function channelFields($channel)
+    protected function getAccountId($account)
     {
-        $datas = [
-            'bd' => [
-                'startLine' => 9,
-                'fields' => [
-                    'A' => 'created_day',
-                    'B' => 'plan_name',
-                    'C' => 'account_code',
-                    'D' => 'show_num',
-                    'E' => 'hit_num',
-                    'F' => 'fee',
-                    //'G' => '',
-                    //'H' => '',
-                    'I' => 'transfer_page',
-                    'J' => 'transfer_guest',
-                    'K' => 'transfer_mobile',
-                ],
-            ],
-            'sg' => [
-                'startLine' => 2,
-                'fields' => [
-                    'B' => 'created_day',
-                    'C' => 'account_code',
-                    'D' => 'plan_name',
-                    'E' => 'fee',
-                    'F' => 'hit_num',
-                    'G' => 'show_num',
-                    //'H' => '',
-                    //'I' => '',
-                    //'J' => 'keyword_rank',
-                    'J' => 'keyword_cost',
-                ],
-            ],
-            '360' => [
-                'startLine' => 1,
-                'fields' => [
-                    'A' => 'created_day',
-                    'B' => 'account_code',
-                    //'C' => '',
-                    'D' => 'plan_name',
-                    'E' => 'show_num',
-                    'F' => 'hit_num',
-                    //'G' => '',
-                    'H' => 'fee',
-                    //'I' => '',
-                    //'J' => '',
-                    //'K' => '',
-                ],
-            ],
-        ];
-        return $datas[$channel];
+        static $datas = [];
+        $key = md5($this->channel . $account);
+        if (isset($datas[$key])) {
+            return $datas[$key];
+        }
+
+        $where = ['channel' => $this->channel, 'code' => $account];
+        $aModel = new Account();
+        $info = $aModel->getInfo($where);
+        if (!empty($info)) {
+            $id = $datas[$key] = $info['id'];
+            return $id;
+        }
+        $id = $data[$key] = '9999';
+        return $id;
+    }
+
+    protected function getPlanId($account, $plan)
+    {
+        static $datas = [];
+        $key = md5($this->channel . $account . $plan);
+        if (isset($datas[$key])) {
+            return $datas[$key];
+        }
+
+        $accountId = $this->getAccountId($account);
+        $where = ['channel' => $this->channel, 'account_id' => $accountId, 'name' => $plan];
+        $aModel = new Plan();
+        $info = $aModel->getInfo($where);
+        if (!empty($info)) {
+            $id = $datas[$key] = $info['id'];
+            return $id;
+        }
+        $nModel = new Plan($where);
+        $nModel->insert();
+        $id = $data[$key] = $nModel->id;
+        return $id;
     }
 
     public static function getSemInfo($infos, $where, $type)
@@ -187,63 +139,5 @@ class Planfee extends BaseModel
         $existDatas[$cMark]['hit_num'] = isset($existDatas[$cMark]['hit_num']) ? $existDatas[$cMark]['hit_num'] : 0;
         $existDatas[$cMark]['fee'] = isset($existDatas[$cMark]['fee']) ? $existDatas[$cMark]['fee'] : 0;
         return $existDatas[$cMark][$type];
-    }
-
-    protected function _getTemplateFields()
-    {
-        return [
-            'id' => ['type' => 'common'],
-            'created_day' => ['type' => 'common'],
-            'channel' => ['type' => 'key'],
-            'client_type' => ['type' => 'key'],
-            'account_code' => ['type' => 'common'],
-            'plan_name' => ['type' => 'common'],
-            //'account_id' => ['type' => 'point', 'table' => 'account'],
-            //'plan_id' => ['type' => 'point', 'table' => 'plan'],
-            'show_num' => ['type' => 'common'],
-            'hit_num' => ['type' => 'common'],
-            'fee' => ['type' => 'common'],
-        ];
-    }
-
-    protected function getAccountId($account)
-    {
-        static $datas = [];
-        $key = md5($this->channel . $account);
-        if (isset($datas[$key])) {
-            return $datas[$key];
-        }
-
-        $where = ['channel' => $this->channel, 'code' => $account];
-        $aModel = new Account();
-        $info = $aModel->getInfo($where);
-        if (!empty($info)) {
-            $id = $datas[$key] = $info['id'];
-            return $id;
-        }
-        $id = $data[$key] = '99999';
-        return $id;
-    }
-
-    protected function getPlanId($account, $plan)
-    {
-        static $datas = [];
-        $key = md5($this->channel . $account . $plan);
-        if (isset($datas[$key])) {
-            return $datas[$key];
-        }
-
-        $accountId = $this->getAccountId($account);
-        $where = ['channel' => $this->channel, 'account_id' => $accountId, 'name' => $plan];
-        $aModel = new Plan();
-        $info = $aModel->getInfo($where);
-        if (!empty($info)) {
-            $id = $datas[$key] = $info['id'];
-            return $id;
-        }
-        $nModel = new Plan($where);
-        $nModel->insert();
-        $id = $data[$key] = $nModel->id;
-        return $id;
     }
 }

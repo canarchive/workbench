@@ -2,9 +2,13 @@
 
 namespace baseapp\merchant\models;
 
+use Yii;
+
 class Merchant extends MerchantModel
 {
+    public $current_action;
     public $import;
+    public $managerRole;
     public static function tableName()
     {
         return '{{%merchant}}';
@@ -47,6 +51,7 @@ class Merchant extends MerchantModel
 
             'operation' => '操作',
             'follow' => '拓展和回访',
+            'op_owner' => '属主操作',
         ];
     }
 
@@ -80,29 +85,6 @@ class Merchant extends MerchantModel
 
     protected function _getTemplateFields()
     {
-        $operation = [
-            'formatView' => 'raw',
-            'type' => 'operation',
-            'qParams' => [
-                'merchant_id' => ['field' => 'id', 'value' => null],
-            ],
-            'menuCodes' => [
-                ['code' => 'merchant_follow_contact_listinfo'],
-                ['code' => 'merchant_contract_add', 'name' => '添加合同'],
-            ]
-        ];
-        $follow = [
-            'formatView' => 'raw',
-            'type' => 'operation',
-            'qParams' => [
-                'merchant_id' => ['field' => 'id', 'value' => null],
-            ],
-            'menuCodes' => [
-                ['code' => 'merchant_follow_merchant-pond_callback', 'name' => '回访'],
-                ['code' => 'merchant_follow_callback_listinfo'],
-                ['code' => 'merchant_follow_interview_listinfo'],
-            ]
-        ];
         return [
             'id' => ['type' => 'common'],
             'sort' => ['type' => 'key'],
@@ -116,8 +98,46 @@ class Merchant extends MerchantModel
             'updated_at' => ['type' => 'timestamp'],
             'status' => ['type' => 'key'],
             //'code' => ['type' => 'inline', 'method' => 'getCode', 'listNo' => true],
-            'operation' => $operation,
-            'follow' => $follow,
+            'operation' => ['type' => 'operation'],
+            'follow' => ['type' => 'operation', 'method' => 'formatFollow'],
         ];
+    }
+
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+
+        if ($insert) {
+            $this->saleman_id_first = $this->saleman_id;
+        }
+
+        return true;
+    }
+
+    public function formatFollow($view)
+    {
+        if (empty($this->salemanPriv())) {
+            return '-';
+        }
+        $menuCodes = [
+            'merchant_follow_merchant-pond_callback' => '回访',
+            'merchant_follow_callback_listinfo' => '',
+            'merchant_follow_interview_listinfo' => '',
+        ];
+        return $this->_formatMenuOperation($view, $menuCodes, ['merchant_id' => 'id']);
+    }
+
+    public function formatOperation($view)
+    {
+        if (empty($this->salemanPriv())) {
+            return '-';
+        }
+        $menuCodes = [
+            'merchant_follow_contact_listinfo' => '',
+            'merchant_contract_add' => '添加合同',
+        ];
+        return $this->_formatMenuOperation($view, $menuCodes, ['merchant_id' => 'id']);
     }
 }

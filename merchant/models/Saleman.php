@@ -22,7 +22,7 @@ class Saleman extends MerchantModel
         return [
             [['name', 'mobile'], 'required'],
             [['status'], 'default', 'value' => 0],
-            [['role'], 'safe'],
+            [['role', 'user_id'], 'safe'],
         ];
     }
 
@@ -30,6 +30,7 @@ class Saleman extends MerchantModel
     {
         return [
             'id' => 'ID',
+            'user_id' => '用户ID',
             'name' => '名字',
             'mobile' => '手机号',
             'role' => '角色',
@@ -53,6 +54,7 @@ class Saleman extends MerchantModel
         return [
             'id' => ['type' => 'common'],
             'name' => ['type' => 'common'],
+            'user_id' => ['type' => 'point', 'table' => 'merchant-user'],
             'mobile' => ['type' => 'common'],
             'role' => ['type' => 'key'],
             'created_at' => ['type' => 'timestamp'],
