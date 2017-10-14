@@ -23,6 +23,7 @@ trait MerchantTrait
         if (!in_array($this->current_action, ['follow', 'myself'])) {
             $extData = [
                 ['field' => 'saleman_id', 'type' => 'common', 'sort' => 'notIn'],
+                ['field' => 'status', 'value' => 'cooperation', 'type' => 'common', 'sort' => 'notIn'],
             ];
         } else {
             $extData = [

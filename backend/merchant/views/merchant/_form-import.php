@@ -17,6 +17,7 @@ if ($managerInfo['role'] == 'service-saleman') {
 <div class="menu-form">
     
     <?php $form = ActiveForm::begin(); ?>
+    <?= $form->field($model, 'city_code')->dropDownList($model->getPointInfos('company', ['indexName' => 'code', 'where' => ['status' => 2]]), ['prompt' => '']); ?>
     <?= $form->field($model, 'saleman_id')->dropDownList($model->getPointInfos('saleman', $params), ['prompt' => '']); ?>
     <?= $form->field($model, 'import')->hiddenInput(); ?>
     <?= $model->uploadElem('new_merchant', 'import', '*'); ?>
