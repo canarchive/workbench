@@ -92,14 +92,13 @@ class AdminController extends Controller
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass();
-        if ($model->load(Yii::$app->request->post()) && $model->import()) {
-            return $this->redirect(['listinfo']);
+        $data = [];
+        if ($model->load(Yii::$app->request->post())) {
+            $data = $model->import();
         }
+        $data['model'] = $model;
 
-        return $this->render($this->viewPrefix . 'import', [
-            'number' => 0,
-            'model' => $model,
-        ]);
+        return $this->render($this->viewPrefix . 'import', $data);
     }
 
     protected function _addMulInfo()
