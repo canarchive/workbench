@@ -24,10 +24,11 @@ class Module extends ModuleBase
         Yii::$app->params['salemanInfo'] = $salemanInfo = $model->find()->where(['user_id' => $managerInfo['id']])->one();
 
         $role = $managerInfo['role'];
+        $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
         if (in_array($role, ['service-saleman', 'saleman-chief'])) {
+			//$merchantIds = null;
             //$this->initSalemanPriv($managerInfo, $salemanInfo);
         }
-        $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
         return [
             'merchant_id' => $merchantIds,
             'service_id' => $this->_getServicePriv($role, $managerInfo, $merchantIds),

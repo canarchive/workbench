@@ -22,6 +22,49 @@ class MerchantPond extends MerchantPondModel
         $this->salemanId = isset($this->salemanInfo['id']) ? $this->salemanInfo['id'] : false;
     }
 
+    public function _searchElems()
+    {
+        if ($this->managerRole == 'service-saleman') {
+            $this->saleman_id = $this->salemanId;
+        }
+        if (!in_array($this->current_action, ['follow', 'myself'])) {
+            if ($this->managerRole == 'service-saleman') {
+    			$this->display_level = '';
+                $extData = [
+                    ['field' => 'saleman_id', 'type' => 'common', 'sort' => 'notIn'],
+                    ['field' => 'status', 'value' => 'cooperation', 'type' => 'common', 'sort' => 'notIn'],
+    			];
+    		} else {
+                $extData = [
+                    ['field' => 'saleman_id', 'type' => 'common'],
+                ];
+    		}
+        } else {
+            $extData = [
+                ['field' => 'saleman_id', 'type' => 'common'],
+            ];
+        }
+        switch ($this->current_action) {
+        case 'follow':
+            $this->display_level = '';
+            break;
+        case 'myself':
+            $this->display_level = 'private';
+            break;
+        }
+        $return = array_merge([
+            ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'status', 'type' => 'common'],
+            ['field' => 'display_level', 'type' => 'common'],
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ], $extData);
+        if (!empty($this->merchant_id)) {
+            $this->id = $this->merchant_id;
+            $return[] = ['field' => 'id', 'type' => 'common'];
+        }
+        return $return;
+    }
+
     protected function _defaultPagination()
     {
         return [

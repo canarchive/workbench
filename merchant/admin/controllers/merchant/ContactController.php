@@ -10,6 +10,7 @@ class ContactController extends ContactControllerBase
 
     protected function privGetIgnore()
     {
-        return ['merchant_id'];
+		return [];
+        //return ['merchant_id'];
     }
 }
