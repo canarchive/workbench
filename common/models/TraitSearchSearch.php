@@ -64,6 +64,9 @@ trait TraitSearchSearch
         }
         $sort = isset($elem['sort']) ? $elem['sort'] : '';
         switch ($sort) {
+		case 'noEqual':
+            $query->andFilterWhere(['!=', $field, $value]);
+            break;
         case 'less':
             $query->andFilterWhere(['<', $field, $value]);
             break;
