@@ -62,6 +62,15 @@ $elems = [
         'created_month-created_week' => '每周',
         'created_day' => '每日',
     ],
+    'saleman' => [
+        'created_month' => '每月',
+        'created_month-created_week' => '每周',
+        'created_day' => '每日',
+        'saleman_id' => '客服',
+        'saleman_id-created_month' => '客服每月',
+        'saleman_id-created_week' => '客服每周',
+        'saleman_id-created_day' => '客服每日',
+    ],
     'service' => [
         'created_month' => '每月',
         'created_month-created_week' => '每周',
