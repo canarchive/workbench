@@ -191,7 +191,7 @@ trait TraitModel
 
     public function _formatDay($day)
     {
-        $pattern = "@\d{1,2}/\d{1,2}/\d{2}@";
+        $pattern = "@^\d{1,2}/\d{1,2}/\d{2}@";
         if (preg_match($pattern, $day)) {
             $info = explode('/', trim($day));
             $day = "20{$info[2]}-{$info[1]}-{$info[0]}";

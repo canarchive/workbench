@@ -43,6 +43,7 @@ class MerchantPond extends Merchant
             'latent' => '潜在',
             'purpose' => '有意向',
 			'cooperation' => '合作',
+            'cancel' => '作废',
         ];
         return $datas;
     }

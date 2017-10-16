@@ -2,6 +2,7 @@
 
 namespace merchant\admin\controllers\merchant;
 
+use Yii;
 use backend\merchant\controllers\MerchantPondController as MerchantPondControllerBase;
 
 class MerchantPondController extends MerchantPondControllerBase
@@ -9,7 +10,8 @@ class MerchantPondController extends MerchantPondControllerBase
     use BaseTrait;
     public function beforeAction($action)
     {
-        if ($action->id == 'listinfo') {
+        $managerInfo = Yii::$app->params['managerInfo'];
+        if ($action->id == 'listinfo' && $managerInfo['role'] == 'service-saleman') {
             $this->noActionColumn = true;
         }
 
