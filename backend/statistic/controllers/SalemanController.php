@@ -8,10 +8,11 @@ use backend\components\AdminController;
 class SalemanController extends AdminController
 {
     use StatisticTrait;
-    protected $viewCurrent = 'channel';
+    protected $viewCurrent = 'saleman';
     protected $modelClass = 'baseapp\statistic\models\Saleman';
     protected $modelSearchClass = 'baseapp\statistic\models\searchs\Saleman';
     protected $showInfo = false;
+    public $showSubnav = false;
 
     public function beforeAction($action)
     {
@@ -22,11 +23,10 @@ class SalemanController extends AdminController
 
     public function actionListservice()
     {
-        //$modelDispatchClass = 'baseapp\statistic\models\ServiceDispatch';
-        $searchClass = $modelSearchDispatchClass = 'baseapp\statistic\models\searchs\ServiceDispatch';
+        $searchClass = $modelSearchDispatchClass = 'baseapp\statistic\models\searchs\SalemanService';
         $this->searchModel = new $searchClass();
         $dataProvider = $this->searchModel->search(Yii::$app->request->getQueryParams());
-        return $this->render($this->viewPrefix . 'service-dispatch', [
+        return $this->render($this->viewPrefix . 'saleman-service', [
             'dataProvider' => $dataProvider,
         ]);
     }

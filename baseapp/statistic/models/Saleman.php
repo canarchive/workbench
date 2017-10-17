@@ -5,6 +5,7 @@ namespace baseapp\statistic\models;
 class Saleman extends AbstractStatistic
 {
     use UpdateSalemanTrait;
+    use UpdateSalemanServiceTrait;
 
     public static function tableName()
     {
@@ -21,8 +22,6 @@ class Saleman extends AbstractStatistic
             'merchant_id' => '商家',
         ];
 
-        $dataTypes = $this->dataTypes;
-        $showType = 'all';
         foreach ($this->baseFields() as $field => $value) {
             $data[$field] = $value;
         }
@@ -57,59 +56,22 @@ class Saleman extends AbstractStatistic
         return $fields;
     }
 
-    public function getServiceBaseColumns()
+    public function getSalemanBaseColumns()
     {
-        $showType = $this->show_type;
-        $fields = $this->baseFields($showType);
+        $fields = array_keys($this->baseFields());
         $columns = [];
-        $dataType = $this->data_type;
         foreach ($fields as $field) {
-            $field = $dataType == 'old' ? 'old_' . $field : $field;
             $columns[$field] = [
                 'attribute' => $field,
-                'value' => function ($model) use ($fields, $dataType, $field) {
+                'value' => function ($model) use ($fields, $field) {
 					$num = $model->$field;
 					$rate = '';
-					switch ($dataType) {
-					case '':
-						$total = $model->visit_num_success;
-						break;
-					case 'old':
-						$total = $model->old_visit_num_success;
-
-						break;
-					case 'all':
-						$total = $model->visit_num_success + $model->old_visit_num_success;
-						$oldField = 'old_' . $field;
-						$oldNum = $model->$oldField;
-						$num = $num + $oldNum;
-						break;
-					}
+                    $total = $this->all_num;
 					if (in_array($field, ['valid_num', 'bad_num', 'old_valid_num', 'old_bad_num'])) {
 						$rate = $total <= 0 ? '-' : round($num / $total, 3) * 100;
 						$rate = " ( {$rate}% )";
 					}
 					return $num . $rate;
-
-					/*$oldField = 'old_' . $field;
-					$num = $model->$field;
-					$numOld = $model->$oldField;
-					$numAll = $model->$field + $model->$oldField;
-
-					$rate = $rateOld = $rateAll = '';
-					if ($field == 'valid_num' || $field == 'bad_num') {
-						$total = $model->visit_num_success;
-						$totalOld = $model->old_visit_num_success;
-						$totalAll = $model->visit_num_success + $model->old_visit_num_success;
-						$rate = $total <= 0 ? '-' : round($num / $total, 3) * 100;
-						$rate = " ( {$rate}% )";
-						$rateOld = $totalOld <= 0 ? '-' : round($numOld / $totalOld, 3) * 100;
-						$rateOld = " ( {$rateOld}% )";
-						$rateAll = $totalAll <= 0 ? '-' : round($numAll / $totalAll, 3) * 100;
-						$rateAll = " ( {$rateAll}% )";
-					}
-					$return = $
-						return $num . $rate;*/
                 },
             ];
         }
