@@ -35,7 +35,7 @@ class Saleman extends SalemanModel
             $fieldsStr .= ", SUM(`{$field}`) AS `{$field}`";
         }
         $fieldsStr = rtrim($fieldsStr, ',');
-        echo $fieldsStr;exit();
+        //echo $fieldsStr;exit();
         $query->select($fieldsStr);
         $query->groupBy($fields);
     }    
