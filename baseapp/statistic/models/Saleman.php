@@ -81,7 +81,9 @@ class Saleman extends AbstractStatistic
     protected function baseFields()
     {
         $datas = [
-            'new_num' => '未回访数',
+            'new_num' => '新客户数',
+            'all_num' => '客户数',
+            'nocall_num' => '未回访数',
             'empty_num' => '空号数',
             'mismatch_num' => '不匹配数',
             'cancel_num' => '作废数',
@@ -92,7 +94,8 @@ class Saleman extends AbstractStatistic
             'cooperation_num' => '合作数',
             'callback_num' => '回访数',
             'callback_merchant_num' => '回访商家数',
-            'interview_num' => '面谈数'
+            'interview_num' => '面谈数',
+            'interviewed_num' => '已面谈数',
         ];
         return $datas;
     }
