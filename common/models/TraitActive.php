@@ -163,4 +163,10 @@ trait TraitActive
 
         return true;
     }
+
+	public function addInfo($data)
+	{
+		$self = new static($data);
+		return $self->insert(false);
+	}
 }
