@@ -16,25 +16,29 @@ class PaytradeModel extends BaseModel
         return new \paytrade\models\Attachment();
     }
 
-	public function getGoodsModel($code, $returnNew = false)
+	public function getPassportModel($code, $module = null, $returnNew = false)
 	{
-		static $model;
+		static $models;
 
-		if (is_null($model) || $returnNew) {
-			$class = "\shop\\{$code}\models\Goods";
-			$model = new $class();
+		$key = $code . $module;
+		if (!isset($model[$key]) || $returnNew) {
+			$class = ucfirst($code);
+			$class = is_null($module) ? "\passport\models\\{$class}" : "\passport\\{$module}\models\\{$class}";
+			$models[$key] = new $class();
 		}
-		return $model;
+		return $models[$key];
 	}
 
-	public function getGoodsSkuModel($code, $returnNew = false)
+	public function getShopModel($code, $module, $returnNew = false)
 	{
-		static $model;
+		static $models;
 
-		if (is_null($model) || $returnNew) {
-			$class = "\shop\\{$code}\models\GoodsSku";
-			$model = new $class();
+		$key = $code . $module;
+		if (!isset($model[$key]) || $returnNew) {
+			$class = ucfirst($code);
+			$class = "\shop\\{$module}\models\\{$class}";
+			$models[$key] = new $class();
 		}
-		return $model;
+		return $models[$key];
 	}
 }
