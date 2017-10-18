@@ -60,4 +60,11 @@ class Visit extends VisitModel
         $datas = ['list' => $list, 'form' => $form];
         return $datas;
     }
+
+    protected function _defaultPagination()
+    {
+        return [
+            'pageSize' => 100,
+        ];
+    }
 }

@@ -54,6 +54,7 @@ class MerchantPond extends MerchantPondModel
         }
         $return = array_merge([
             ['field' => 'name', 'type' => 'common', 'sort' => 'like'],
+            ['field' => 'city_code', 'type' => 'common'],
             ['field' => 'status', 'type' => 'common'],
             ['field' => 'display_level', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],

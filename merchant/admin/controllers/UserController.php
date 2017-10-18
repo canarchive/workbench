@@ -11,6 +11,16 @@ class UserController extends UserControllerBase
 {
     use BaseTrait;
 
+	public function actionAdd()
+	{
+        $managerInfo = Yii::$app->params['managerInfo'];
+        if ($managerInfo['role'] == 'saleman-chief') {
+            $this->forceSkipPriv = true;
+        }
+
+		return parent::actionAdd();
+	}
+
     public function actionEditInfo()
     {
         $model = User::findOne(Yii::$app->user->identity->id);

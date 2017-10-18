@@ -47,11 +47,11 @@ class Module extends ModuleBase
 
     protected function _getServicePriv($role, $managerInfo, $merchantIds)
     {
-        if (!in_array($role, ['admin-inner'])) {
+        if (!in_array($role, ['admin-inner', 'saleman-chief'])) {
             Yii::$app->params['noSearchServer'] = true;
             //return null;
         }
-        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner', 'service-saleman', 'cpa-cps'])) {
+        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner', 'service-saleman', 'cpa-cps', 'saleman-chief'])) {
             return null;
         }
 
