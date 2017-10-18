@@ -2,15 +2,15 @@
 $preInfo = $infos['preInfo'];
 $preUrl = empty($preInfo) ? 'javascript: void(0)' : $this->context->getShowUrl($preInfo['id']);
 $preName = empty($preInfo) ? '没有了' : $preInfo['name'];
-$preThumb = empty($preInfo) ? '' : "<img src='" . $preInfo->resizePic('thumb', 124, 88) . "' class='fl' title='{$preName}' />";
+$preThumb = empty($preInfo) ? '' : "<img src='" . $preInfo->resizePic('thumb', 124, 88) . "' class='fl' title='{$preName}摄影图片' />";
 $nextInfo = $infos['nextInfo'];
 $nextUrl = empty($nextInfo) ? 'javascript: void(0)' : $this->context->getShowUrl($nextInfo['id']);
 $nextName = empty($nextInfo) ? '没有了' : $nextInfo['name'];
-$nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb', 124, 88) . "' class='fr' title='{$nextName}' />";
+$nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb', 124, 88) . "' class='fr' title='{$nextName}摄影图片' />";
 ?>
 <div class="content_banner cf">
     <div class="info_prev fl">
-        <a href="<?= $preUrl; ?>" title="<?= $preInfo['name']; ?>">
+        <a href="<?= $preUrl; ?>" title="<?= $preInfo['name'] . '摄影图片'; ?>">
             <span class="left_dir fl"></span>
             <?= $preThumb; ?>
             <strong>上一篇</strong>
@@ -18,7 +18,7 @@ $nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb'
         </a>
     </div>
     <div class="info_next fr">
-        <a href="<?= $nextUrl; ?>" title="<?= $nextInfo['name']; ?>">
+        <a href="<?= $nextUrl; ?>" title="<?= $nextInfo['name'] . '摄影图片'; ?>">
             <span class="fr"></span>
             <?= $nextThumb; ?>
             <strong>下一篇</strong>
@@ -36,7 +36,7 @@ $nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb'
 <ul class="swiper-wrapper cf">
         <?php foreach ($infos['rInfos'] as $info) { ?>
     <li class="swiper-slide">
-        <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name']; ?>">
+        <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name'] . '摄影图片'; ?>">
             <div class="viimgz ">
             <img src="<?= $info->resizePic('thumb', 280, 440); ?>" data-cache="true" width="280" height="440" alt="<?= $info['name']; ?>" /></div>
             <p class="fs22 pt20"><?= $info['name']; ?></p>

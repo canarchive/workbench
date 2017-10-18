@@ -2,11 +2,11 @@
 <div class="hengqie">
     <div class="china">
         <div class="crumbs">
-			<a href="<?= $this->context->getSiteUrl(); ?>" title="<?= $this->context->currentSiteInfo['name']; ?>">首页</a>
+			<a href="<?= $this->context->getSiteUrl(); ?>" rel="nofollow">首页</a>
             <span>> </span>
-			<a href="<?= $this->context->getSortUrl('all'); ?>" title="<?= $this->context->currentSiteInfo['name'] . '作品展示'; ?>">作品展示</a>
+			<a href="<?= $this->context->getSortUrl('all'); ?>" rel="nofollow">作品展示</a>
             <span>> </span>
-            <a href="<?= $this->context->getSortUrl($info['sort']); ?>/" title="<?= $this->context->sortInfos[$info['sort']]['name'] . '作品展示'; ?>"><?= $this->context->sortInfos[$info['sort']]['name']; ?>作品展示</a>
+            <a href="<?= $this->context->getSortUrl($info['sort']); ?>" rel="nofollow"><?= $this->context->sortInfos[$info['sort']]['name']; ?>作品展示</a>
             <span>> </span>
             <a class="last_child" href="javascript:void(0);"><?= $info['name']; ?></a>
         </div>

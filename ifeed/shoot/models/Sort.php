@@ -74,7 +74,7 @@ class Sort extends BaseModel
 
 	public function getInfosBySite()
 	{
-        $infos = $this->getInfos(['orderBy' => ['orderlist' => SORT_DESC]]);
+        $infos = $this->getInfos(['where' => ['status' => 1], 'orderBy' => ['orderlist' => SORT_DESC]]);
         $datas = [];
         foreach ($infos as $info) {
             $datas[$info['site_code']][$info['code']] = $info;

@@ -26,8 +26,8 @@ return [
 		'description' => '【韩涵摄影机构】{{INFONAME}}{{DESCRIPTION}}',
     ],
     'sample-index' => [
-		'title' => '艺人摄影_艺人摄影图片_艺人摄影照片_{{PAGESTR}}韩涵摄影机构',
-		'keyword' => '艺人摄影,艺人摄影图片,艺人摄影照片',
+		'title' => '北京艺人摄影_北京艺人摄影图片_北京艺人摄影照片_{{PAGESTR}}韩涵摄影机构',
+		'keyword' => '北京艺人摄影,北京艺人摄影图片,北京艺人摄影照片',
 		'description' => '【韩涵摄影机构】韩涵艺人摄影：为您展示艺人摄影、艺人摄影图片、艺人摄影照片欣赏。',
     ],
     'sample-show' => [

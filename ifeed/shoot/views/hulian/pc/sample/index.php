@@ -17,13 +17,13 @@ $this->params['currentPage'] = 'sort-' . $this->context->currentSort;
         <ul class="cf">
             <?php foreach ($infos as $info) { ?>
             <li>
-                <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name']; ?>">
+                <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name'] . '摄影图片'; ?>">
                     <div class="viimg pre">
                         <i class="xj"></i>
                         <img src="<?= $info->resizePic('thumb', 293, 450); ?>" data-cache="true" alt="<?= $info['name']; ?>摄影图片"/></div>
                     <p class="fs20 pt10"><?= $info['name']; ?></p>
                     <p class="fs10"></p>
-                    <!--<p class="fs14">标签:<?= $info['tag']; ?></p>-->
+					<?php //echo '<p class="fs14">标签:' . $info['tag'] . '</p>-->'; ?></a>
                 </a>
             </li>
             <?php } ?>

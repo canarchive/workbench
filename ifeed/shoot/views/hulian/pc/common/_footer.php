@@ -2,13 +2,11 @@
 $navDatas = $this->context->navDatas;
 ?>
 <div class="latestNews">
-    <!--<div class="link" style=" margin:0 auto; width:1200px;font-size: 14px;">友情链接：
-        <a href="" title=""></a>
-    </div>-->
+    <?php //echo $this->render('_friendlink'); ?>
     <div class="footHome">
         <p>
             <?php foreach ($navDatas as $nav => $data) { ?>
-            <a href="<?= $data['url']; ?>" title="<?= $data['name']; ?>" <?php if (in_array($nav, ['contactus', 'aboutus', 'flow', 'guarantee'])) { echo 'rel="nofollow"'; } ?>><?= $data['name']; ?></a><span>|</span>
+            <a href="<?= $data['url']; ?>" <?php if (in_array($nav, ['index', 'contactus', 'aboutus', 'flow', 'guarantee'])) { echo 'rel="nofollow"'; } else { echo 'title="' . $data['name'] . '"'; } ?>><?= $data['name']; ?></a><span>|</span>
             <?php if (isset($data['subDatas'])) { foreach ($data['subDatas'] as $subData) { ?>
             <a href="<?= $subData['url']; ?>" title="<?= $subData['name']; ?>"><?= $subData['name']; ?></a><span>|</span>
             <?php } } ?>
