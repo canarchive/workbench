@@ -5,7 +5,7 @@
             <div class="ct6 ert">
                 <a href="<?= $this->context->getSortUrl($sort); ?>">
                     <div class="ertcon">
-                        <span class="p2"><?= $data['name']; ?>作品</span>
+                        <h1 class="p2"><?= $data['name']; ?>作品</h1>
                         <span class="p1 fs18"><?= $data['brief']; ?></span>
                     </div>
                 </a>

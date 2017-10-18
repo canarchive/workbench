@@ -2,6 +2,9 @@
 use yii\widgets\LinkPager;
 $this->params['showBanner'] = true;
 $this->params['currentPage'] = 'sort-' . $this->context->currentSort;
+$sort = empty($sort) ? 'all' : $sort;
+$sortUrl = $this->context->getSortUrl($sort);
+$this->params['metaExt'] = $page != 1 ? "<link rel='canonical' href='{$sortUrl}'>" : '';
 ?>
 
 <div class="hengqie">
@@ -31,9 +34,6 @@ $this->params['currentPage'] = 'sort-' . $this->context->currentSort;
     </div>
 </div>
 <div class="mpage c">
-    <!--<div class="all-page">
-        共<span><?= $pages->totalCount; ?></span>条
-    </div>
-    <div class="now-page">当前第<span><?= $page; ?>/<?= ceil($pages->totalCount / $pages->defaultPageSize); ?></span>页</div>-->
-    <?= LinkPager::widget(['pagination' => $pages]); ?>
+    <?php //echo $this->render('_page-elem'); ?>
+    <?php $pageStr = LinkPager::widget(['pagination' => $pages, 'linkOptions' => ['rel' => 'nofollow']]); $pageStr = str_replace('com/" rel="nofollow"', 'com/"', $pageStr); echo $pageStr;?>
 </div>
