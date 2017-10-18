@@ -189,6 +189,16 @@ trait TraitModel
         return $str;
     }
 
+    public function _formatDay($day)
+    {
+        $pattern = "@^\d{1,2}/\d{1,2}/\d{2}@";
+        if (preg_match($pattern, $day)) {
+            $info = explode('/', trim($day));
+            $day = "20{$info[2]}-{$info[1]}-{$info[0]}";
+        }
+        return $day;
+    }
+
 	public function randomString($length, $params = [])
 	{
 		$prefix = isset($params['prefix']) ? $params['prefix'] : '';

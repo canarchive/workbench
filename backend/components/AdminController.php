@@ -17,6 +17,8 @@ class AdminController extends Controller
     public $showSubnav = true;
     protected $modelClass = '';
     public $showFilter;
+    public $noActionColumn;
+    public $forceSkipPriv;
     //protected $viewPrefix = '';
     public $layout = '@backend/views/charisma/layouts/main';
 
@@ -90,14 +92,13 @@ class AdminController extends Controller
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass();
-        if ($model->load(Yii::$app->request->post()) && $model->import()) {
-            return $this->redirect(['listinfo']);
+        $data = [];
+        if ($model->load(Yii::$app->request->post())) {
+            $data = $model->import();
         }
+        $data['model'] = $model;
 
-        return $this->render($this->viewPrefix . 'import', [
-            'number' => 0,
-            'model' => $model,
-        ]);
+        return $this->render($this->viewPrefix . 'import', $data);
     }
 
     protected function _addMulInfo()
@@ -160,7 +161,7 @@ class AdminController extends Controller
         }
 		$confirmUpdate = $this->confirmUpdate($info);
 		if ($confirmUpdate) {
-			return ['status' =>400, 'message' => '信息已锁定不能修改'];
+			return ['status' => 400, 'message' => '信息已锁定不能修改'];
 		}
         $info->$field = $value;
         $info->update(false);
@@ -196,6 +197,9 @@ class AdminController extends Controller
 
     protected function _checkRecordPriv($model)
     {
+        if (!empty($this->forceSkipPriv)) {
+            return true;
+        }
         $privInfo = Yii::$app->params['privInfo'];
         foreach ((array) $privInfo as $field => $value) {
             if (!$model->hasAttribute($field) || is_null($value)) {
@@ -206,7 +210,7 @@ class AdminController extends Controller
             $currentValue = array_filter($currentValue);
             $join = array_intersect($value, $currentValue);
             if (empty($join)) {
-                throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+                throw new ForbiddenHttpException(Yii::t('yii', 'You are locked2.'));
             }
         }
 
@@ -226,6 +230,9 @@ class AdminController extends Controller
 
     protected function _privInfo()
     {
+        if (!empty($this->forceSkipPriv)) {
+            return true;
+        }
         $data = method_exists($this->module, 'initPrivInfo') ? $this->module->initPrivInfo() : [];
         foreach ($data as $key => & $value) {
             if (in_array($key, $this->privGetIgnore()) || is_null($value)) {
@@ -236,7 +243,7 @@ class AdminController extends Controller
             if (!is_null($getSource)) {
                 $diff = array_intersect((array) $getSource, (array) $value);
                 if (empty($diff)) {
-                    throw new ForbiddenHttpException(Yii::t('yii', 'You are locked.'));
+                    throw new ForbiddenHttpException(Yii::t('yii', 'You are locked1.'));
                 }
                 $value = $getSource;
             }

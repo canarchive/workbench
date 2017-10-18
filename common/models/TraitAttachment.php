@@ -88,6 +88,9 @@ trait TraitAttachment
     {
         $attachment = $this->attachmentModel;
         foreach ($fields as $field) {
+			if (is_null($this->$field)) {
+				continue;
+			}
             $aIds = array_filter(explode(',', $this->$field));
             $aId = array_pop($aIds);
             $attachment->updateInfo($aId, $this->id, $extData);
@@ -101,6 +104,9 @@ trait TraitAttachment
 
     protected function _updateMulAttachment($table, $field, $extData = [])
     {
+		if (is_null($this->$field)) {
+			return '';
+		}
         $attachment = $this->attachmentModel;
         $ids = array_filter(explode(',', $this->$field));
         foreach ($ids as $id) {
@@ -134,7 +140,7 @@ trait TraitAttachment
         ]);
 	}
 
-    public function _importDatas()
+    public function _importDatas($returnAttachment = false)
     {   
         $aId = $this->import;
         if (empty($aId)) {
@@ -152,10 +158,16 @@ trait TraitAttachment
             $this->addError('import', '指定的文件不存在，请重新上传');
             return false;
         }   
-        $datas = $this->importDatas($file);
-        if (empty($datas)) {
+        $datas = (array) $this->importDatas($file);
+        if (empty(array_filter($datas))) {
             $this->addError('import', '没有数据');
             return false;
+        }
+        if ($returnAttachment) {
+            $datas = [
+                'attachment' => $attachment,
+                'datas' => $datas,
+            ];
         }
         return $datas;
     }

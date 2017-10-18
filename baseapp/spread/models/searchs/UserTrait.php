@@ -7,23 +7,44 @@ use yii\data\ActiveDataProvider;
 Trait UserTrait
 {
 	use UserTemplate;
+    public $ext_param;
 
     public function rules()
     {
         return [
-            [['merchant_id', 'mobile', 'service_id', 'status', 'invalid_status', 'created_at_start', 'created_at_end',], 'safe'],
+            [['ext_param', 'merchant_id', 'mobile', 'service_id', 'status', 'invalid_status', 'created_at_start', 'created_at_end',], 'safe'],
         ];
     }
 
     public function _searchElems()
     {
-        return [
+        $extParam = $this->ext_param;
+        $extData = [];
+        if ($extParam == 'pond') {
+            $this->service_id = (array) $this->service_id;
+            $createdAtValue = time() - 86400;
+            $dispatchAtValue = time() - 21600;
+            $extData = [
+                ['field' => 'merchant_id', 'type' => 'common'],
+                ['field' => 'service_id', 'type' => 'common', 'sort' => 'notIn'],
+                ['field' => 'created_at', 'type' => 'common', 'sort' => 'less', 'value' => $createdAtValue],
+                ['field' => 'dispatch_at', 'type' => 'common', 'sort' => 'less', 'value' => $dispatchAtValue],
+            ];
+        } else {
+            $extData = [
+                ['field' => 'service_id', 'type' => 'common'],
+                ['field' => 'merchant_id', 'type' => 'common'],
+            ];
+        }
+
+        $data = [
             ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
-            ['field' => 'service_id', 'type' => 'common'],
-            ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'status', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
         ];
+        $data = array_merge($data, $extData);
+
+        return $data;
     }
 
     public function getSearchDatas()

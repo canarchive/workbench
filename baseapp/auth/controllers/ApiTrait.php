@@ -14,6 +14,17 @@ trait ApiTrait
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
     }
 
+    public function actionSignupin()
+    {
+		$fields = ['mobile', 'code'];
+		$data = $this->_formatInput($fields);
+
+        $model = $this->getModel();
+		$data = $model->signupin($data);
+		$data['redirectUrl'] = $this->homeUrl;
+		return $data;
+	}
+
     public function actionValidation()
     {
 		$data = $this->_formatInput(['field', 'value', 'type']);
@@ -61,4 +72,10 @@ trait ApiTrait
 		}
 		return $data;
 	}
+
+    protected function getHomeUrl()
+    {
+        $redirectUrl = Yii::$app->request->get('redirect_url', '/');
+        return $redirectUrl;
+    }
 }
