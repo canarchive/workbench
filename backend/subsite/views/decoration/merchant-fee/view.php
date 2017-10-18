@@ -9,10 +9,10 @@ $detailViewParams = [
             'value' => $model->getPointName('merchant', $model->merchant_id),
         ],
         [
-            'attribute' => 'merchant_sort',
-            'value' => $model->getKeyName('merchant_sort', $model->merchant_sort),
+            'attribute' => 'sort',
+            'value' => $model->getKeyName('sort', $model->sort),
         ],
-        'day_fee',
+        'pay_day',
         [
             'attribute' => 'day_start',
             'value'=> $model->formatTimestamp($model->day_start),
@@ -21,7 +21,7 @@ $detailViewParams = [
             'attribute' => 'day_end',
             'value'=> $model->formatTimestamp($model->day_end),
         ],
-        'fee',
+        'fund',
         'num',
         'num_current',
         'num_back',

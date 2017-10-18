@@ -19,12 +19,12 @@ class MerchantFee extends ModelBase
     public function rules()
     {
         return [
-            [['merchant_id', 'merchant_id'], 'required'],
-            [['status', 'fee', 'num'], 'default', 'value' => 0],
+            [['merchant_id'], 'required'],
+            [['fee_unit', 'status', 'fund', 'num'], 'default', 'value' => 0],
             [['day_start', 'day_end'], 'filter', 'filter' => function($value) {
                 return strtotime($value);
             }],
-            [['merchant_sort', 'day_fee', 'num', 'note', 'record',], 'safe'],
+            [['sort', 'pay_day', 'num', 'note', 'record',], 'safe'],
         ];
     }
 
@@ -33,22 +33,29 @@ class MerchantFee extends ModelBase
         return [
             'id' => 'ID',
             'merchant_id' => '商家ID',
-            'merchant_sort' => '合作类型',
-            'day_fee' => '付费日期',
+            'pay_day' => '付款日期',
+            'fund' => '合同款',
+            'refund' => '退款',
+            'deduct' => '提成',
+            'saleman_id' => '销售',
+            'sort' => '类型',
+            'description' => '描述',
+            'record' => '补充说明',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
+            'status' => '状态',
+
+            'sort' => '合作类型',
             'num' => '信息数',
             'num_current' => '派发信息数',
             'num_back' => '退单数',
             'day_start' => '信息派发起始时间',
             'day_end' => '信息派发截止时间',
             'note' => '备注',
-            'record' => '补充说明',
-            'created_at' => '注册时间',
-            'updated_at' => '更新时间',
-            'status' => '状态',
         ];
     }
 
-    public function getMerchantSortInfos()
+    public function getSortInfos()
     {
         $merchant = new Merchant();
         return $merchant->statusInfos;
@@ -56,7 +63,7 @@ class MerchantFee extends ModelBase
 
     public function _getNum($type)
     {
-        $sort = $this->merchant_sort;
+        $sort = $this->sort;
         $merchant = ['=', 'merchant_id', $this->merchant_id];
         $start = ['>=', 'created_at', $this->day_start];
         $end = $this->day_end > 0 ? ['<=', 'created_at', $this->day_end]: [];
@@ -90,7 +97,7 @@ class MerchantFee extends ModelBase
 
     public function getCurrentUrl($type, $menus)
     {
-        $sort = $this->merchant_sort == 'cps' ? 'cps' : 'cpa';
+        $sort = $this->sort == 'cps' ? 'cps' : 'cpa';
         $method = "_{$sort}Url";
         return $this->$method($type, $menus);
     }
@@ -136,13 +143,31 @@ class MerchantFee extends ModelBase
         ];
     }
 
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+
+        if ($insert) {
+            $merchantInfo = $this->getPointInfo('merchant', $this->merchant_id);
+            $this->city_code = $merchantInfo['city_code'];
+            $this->saleman_id = $merchantInfo['saleman_id'];
+        } 
+        $feeUnit = empty($this->fee_unit) ? 1000 : $this->fee_unit;
+        $num = ceil($this->fund / $feeUnit);
+        $this->num = $num;
+
+        return true;
+    }
+
     protected function _getTemplateFields()
     {
         return [
             'id' => ['type' => 'common'],
-            'day_fee' => ['type' => 'common'],
+            'pay_day' => ['type' => 'common'],
             'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
-            'merchant_sort' => ['type' => 'key'],
+            'sort' => ['type' => 'key'],
             'num' => ['type' => 'common'],
             'num_current' => ['type' => 'inline', 'method' => 'getCurrentUrl'],
             'num_back' => ['type' => 'inline', 'method' => 'getCurrentUrl'],
@@ -153,6 +178,14 @@ class MerchantFee extends ModelBase
             'note' => ['type' => 'common', 'listNo' => true],
             'record' => ['type' => 'common', 'listNo' => true],
             'status' => ['type' => 'key'],
+        ];
+    }
+
+    public function getIsFirstInfos()
+    {
+        return [
+            1 => '首次付款',
+            0 => '续费',
         ];
     }
 }

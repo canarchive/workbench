@@ -7,15 +7,22 @@ $columns = [
             return $model->getPointName('merchant', $model->merchant_id);
         }
     ],
-    'merchant_sort' => [
-        'attribute' => 'merchant_sort',
+    'sort' => [
+        'attribute' => 'sort',
         'value' => function($model) {
-            return $model->getKeyName('merchant_sort', $model->merchant_sort);
+            return $model->getKeyName('sort', $model->sort);
         }
     ],
-    'day_fee' => 'day_fee',
-    'fee' => 'fee',
-    'num',
+    'saleman_id' => [
+        'attribute' => 'saleman_id',
+        'value' => function($model){
+            return $model->getPointName('saleman', $model->saleman_id);
+        }
+    ],
+    'pay_day' => 'pay_day',
+    'fund' => 'fund',
+    'fee_unit' => 'fee_unit',
+    'num' => 'num',
     'num_current' => [
         'format' => 'raw',
         'attribute' => 'num_current',

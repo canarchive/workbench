@@ -12,16 +12,16 @@ $model->day_end = empty($model->day_end) ? time() : $model->formatTimestamp($mod
 
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant'), ['prompt' => '']); ?>
-    <?= $form->field($model, 'merchant_sort')->dropDownList($model->merchantSortInfos, ['prompt' => '']); ?>
-    <?= $form->field($model, 'day_fee')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'sort')->dropDownList($model->sortInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'pay_day')->textInput(['maxlength' => 128]) ?>
     <script type="text/javascript">
         $(function () {
-            $('#merchantfee-day_fee').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD'});
+            $('#merchantfee-pay_day').datetimepicker({locale: 'zh-CN', format: 'YYYYMMDD'});
         });
     </script>
 
-    <?= $form->field($model, 'fee')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'num')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'fund')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'fee_unit')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'day_start')->textInput(); ?>
     <script type="text/javascript">
         $(function () {
@@ -38,6 +38,7 @@ $model->day_end = empty($model->day_end) ? time() : $model->formatTimestamp($mod
     <?= $form->field($model, 'note')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'record')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'is_first')->dropDownList($model->isFirstInfos, ['prompt' => '']); ?>
 
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
