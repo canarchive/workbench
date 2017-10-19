@@ -29,7 +29,7 @@ class PaytradeModel extends BaseModel
 		return $models[$key];
 	}
 
-	public function getShopModel($code, $module, $returnNew = false)
+	/*public function getShopModel($code, $module, $returnNew = false)
 	{
 		static $models;
 
@@ -40,7 +40,7 @@ class PaytradeModel extends BaseModel
 			$models[$key] = new $class();
 		}
 		return $models[$key];
-	}
+	}*/
 
 	public function getStatusPayInfos()
 	{
@@ -50,12 +50,12 @@ class PaytradeModel extends BaseModel
 		];
 	}
 
-	public function getPointModel($code)
+	/*public function getPointModel($code)
 	{
 		static $models;
 		$class = ucfirst($code);
-		$class = "\paytrade\models\\{$code}";
+		$class = "\paytrade\models\\{$class}";
 		$models[$code] = !isset($models[$code]) ? new $class() : $models[$code];
 		return $models[$code];
-	}
+	}*/
 }
