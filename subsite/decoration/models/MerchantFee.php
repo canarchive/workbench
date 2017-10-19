@@ -154,9 +154,9 @@ class MerchantFee extends ModelBase
             $this->city_code = $merchantInfo['city_code'];
             $this->saleman_id = $merchantInfo['saleman_id'];
         } 
-        $feeUnit = empty($this->fee_unit) ? 1000 : $this->fee_unit;
-        $num = ceil($this->fund / $feeUnit);
-        $this->num = $num;
+        //$feeUnit = empty($this->fee_unit) ? 1000 : $this->fee_unit;
+        //$num = ceil($this->fund / $feeUnit);
+        //$this->num = $num;
 
         return true;
     }
