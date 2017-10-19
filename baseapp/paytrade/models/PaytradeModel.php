@@ -41,4 +41,21 @@ class PaytradeModel extends BaseModel
 		}
 		return $models[$key];
 	}
+
+	public function getStatusPayInfos()
+	{
+		return [
+			0 => '未支付',
+			1 => '已支付',
+		];
+	}
+
+	public function getPointModel($code)
+	{
+		static $models;
+		$class = ucfirst($code);
+		$class = "\paytrade\models\\{$code}";
+		$models[$code] = !isset($models[$code]) ? new $class() : $models[$code];
+		return $models[$code];
+	}
 }
