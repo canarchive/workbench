@@ -29,19 +29,6 @@ class PaytradeModel extends BaseModel
 		return $models[$key];
 	}
 
-	/*public function getShopModel($code, $module, $returnNew = false)
-	{
-		static $models;
-
-		$key = $code . $module;
-		if (!isset($model[$key]) || $returnNew) {
-			$class = ucfirst($code);
-			$class = "\shop\\{$module}\models\\{$class}";
-			$models[$key] = new $class();
-		}
-		return $models[$key];
-	}*/
-
 	public function getStatusPayInfos()
 	{
 		return [
@@ -49,13 +36,4 @@ class PaytradeModel extends BaseModel
 			1 => '已支付',
 		];
 	}
-
-	/*public function getPointModel($code)
-	{
-		static $models;
-		$class = ucfirst($code);
-		$class = "\paytrade\models\\{$class}";
-		$models[$code] = !isset($models[$code]) ? new $class() : $models[$code];
-		return $models[$code];
-	}*/
 }

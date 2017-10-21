@@ -11,6 +11,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'brief'); ?>
     <?= $form->field($model, 'parent_code')->dropDownList($model->selectInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'orderlist'); ?>
+    <?= $form->field($model, 'type_code')->dropDownList($model->typeCodeInfos); ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos); ?>
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
     <?= $form->field($model, 'meta_title'); ?>
