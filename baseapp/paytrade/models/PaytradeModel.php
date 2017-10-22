@@ -29,16 +29,11 @@ class PaytradeModel extends BaseModel
 		return $models[$key];
 	}
 
-	public function getShopModel($code, $module, $returnNew = false)
+	public function getStatusPayInfos()
 	{
-		static $models;
-
-		$key = $code . $module;
-		if (!isset($model[$key]) || $returnNew) {
-			$class = ucfirst($code);
-			$class = "\shop\\{$module}\models\\{$class}";
-			$models[$key] = new $class();
-		}
-		return $models[$key];
+		return [
+			0 => '未支付',
+			1 => '已支付',
+		];
 	}
 }

@@ -13,7 +13,7 @@ class SalemanService extends AbstractStatistic
 
     public function getFieldInfos()
     {
-        $fields = ['saleman_id', 'created_month', 'created_week', 'created_day'];
+        $fields = ['merchant_id', 'saleman_id', 'created_month', 'created_week', 'created_day'];
         return $fields;
     }
 }

@@ -66,10 +66,23 @@ $elems = [
         'created_month' => '每月',
         'created_month-created_week' => '每周',
         'created_day' => '每日',
-        'saleman_id' => '客服',
-        'saleman_id-created_month' => '客服每月',
-        'saleman_id-created_week' => '客服每周',
-        'saleman_id-created_day' => '客服每日',
+        'saleman_id' => '销售',
+        'saleman_id-created_month' => '销售每月',
+        'saleman_id-created_week' => '销售每周',
+        'saleman_id-created_day' => '销售每日',
+    ],
+    'saleman-service' => [
+        'created_month' => '每月',
+        'created_month-created_week' => '每周',
+        'created_day' => '每日',
+        'saleman_id' => '销售',
+        'saleman_id-created_month' => '销售每月',
+        'saleman_id-created_week' => '销售每周',
+        'saleman_id-created_day' => '销售每日',
+        'merchant_id' => '客户',
+        'merchant_id-created_month' => '客户每月',
+        'merchant_id-created_week' => '客户每周',
+        'merchant_id-created_day' => '客户每日',
     ],
     'service' => [
         'created_month' => '每月',
@@ -91,6 +104,7 @@ $elems = [
     ],
 ];
 $keyController = basename($this->context->id);
+$keyController = $view == 'saleman-service' ? $view : $keyController;
 $currentElem = implode($fields, '-');
 $elems = $elems[$keyController];
 ?>

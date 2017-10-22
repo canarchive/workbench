@@ -14,10 +14,11 @@ trait CategoryTrait
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'code'], 'required'],
+            ['code', 'unique', 'message' => '代码已经被使用。'],
             [['parent_code'], 'filterParent'],
             [['orderlist', 'status'], 'default', 'value' => 0],
-			[['code', 'parent_code', 'brief', 'description', 'meta_title', 'meta_keyword', 'meta_description'], 'safe'],
+			[['type_code', 'parent_code', 'brief', 'description', 'meta_title', 'meta_keyword', 'meta_description'], 'safe'],
         ];
     }
 
@@ -34,6 +35,7 @@ trait CategoryTrait
         return [
             'id' => 'id',
 			'code' => '代码',
+			'type_code' => '类型代码',
 			'parent_code' => '父级代码',
             'name' => '名称',
 			'brief' => '简介',
@@ -107,6 +109,7 @@ trait CategoryTrait
         return [
             'id' => ['type' => 'common'],
             'code' => ['type' => 'common'],
+            'type_code' => ['type' => 'key'],
             'name' => ['type' => 'common'],
             'parent_code' => ['type' => 'common'],
             'brief' => ['type' => 'common'],
@@ -117,4 +120,9 @@ trait CategoryTrait
             'meta_description' => ['type' => 'common'],
         ];
     }
+
+	protected function getTypeCodeInfos()
+	{
+		return [];
+	}
 }

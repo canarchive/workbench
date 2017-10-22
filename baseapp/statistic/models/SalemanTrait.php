@@ -73,6 +73,10 @@ trait SalemanTrait
           'contract_num' => '合同数',
           'fund_first_num' => '首次费用',
           'fund_num' => '续费费用',
+          'fund_all_num' => '总费用',
+          'fund_current_num' => '已完成费用',
+          'user_num' => '信息数',
+          'user_current_num' => '已完成信息数',
         ];
     }
 }

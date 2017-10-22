@@ -245,4 +245,22 @@ trait TraitModel
         mt_srand((double) microtime() * 1000000);
         return date('Ymd') . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
     }
+
+	public function getTreeDatas($infos, $key, $parentKey, $parent, $numberMax = 2000)
+	{
+		static $number = 1;
+		$number++;
+		if ($number > $numberMax) {
+			return [];
+		}
+		$datas = [];
+		foreach ($infos as $iKey => $iValue) {
+			$info = $iValue->toArray();
+			if ($info[$parentKey] == $parent) {
+				$info['subInfos'] = $this->getTreeDatas($infos, $key, $parentKey, $info[$key], $numberMax);
+				$datas[$info[$key]] = $info;
+			}
+		}
+		return $datas;
+	}
 }
