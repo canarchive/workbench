@@ -16,13 +16,24 @@ class PaytradeModel extends BaseModel
         return new \paytrade\models\Attachment();
     }
 
-	public function getGoodsModel($returnNew = false)
+	public function getPassportModel($code, $module = null, $returnNew = false)
 	{
-		static $gModel;
+		static $models;
 
-		if (is_null($gModel) || $returnNew) {
-			$gModel = $this->_newModel('goods', $returnNew);
+		$key = $code . $module;
+		if (!isset($model[$key]) || $returnNew) {
+			$class = ucfirst($code);
+			$class = is_null($module) ? "\passport\models\\{$class}" : "\passport\\{$module}\models\\{$class}";
+			$models[$key] = new $class();
 		}
-		return $gModel;
+		return $models[$key];
+	}
+
+	public function getStatusPayInfos()
+	{
+		return [
+			0 => '未支付',
+			1 => '已支付',
+		];
 	}
 }
