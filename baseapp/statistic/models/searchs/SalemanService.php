@@ -35,7 +35,7 @@ class SalemanService extends SalemanServiceModel
     public function getFieldHitInfos()
     {
         return [
-            'fields' => ['saleman_id', 'created_month', 'created_week', 'created_day'],
+            'fields' => ['merchant_id', 'saleman_id', 'created_month', 'created_week', 'created_day'],
             'default' => 'created_day',
         ];
     }

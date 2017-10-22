@@ -3,6 +3,7 @@ namespace common\components;
 
 use Yii;
 use yii\web\Controller as YiiController;
+use common\models\BaseModelNotable;
 
 class Controller extends YiiController
 {
@@ -189,17 +190,7 @@ class Controller extends YiiController
 
 	protected function getPointModel($code, $forceNew = false)
 	{
-		static $models = [];
-		$modelClass = $this->getPointClass($code);
-		if (isset($models[$modelClass]) && empty($forceNew)) {
-			return $models[$modelClass];
-		}
-		$model = $models[$modelClass] = new $modelClass();
-		return $model;
-	}
-
-	protected function getPointClass($code)
-	{
-		return $code;
+		$model = new BaseModelNotable();
+		return $model->getPointModel($code, $forceNew);
 	}
 }
