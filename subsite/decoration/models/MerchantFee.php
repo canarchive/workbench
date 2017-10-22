@@ -181,6 +181,16 @@ class MerchantFee extends ModelBase
         ];
     }
 
+    public function updateCurrentNum()
+    {
+        $infos = $this->getInfos(['status' => [0, 1]]);
+        foreach ($infos as $info) {
+            $info->num_current = min($info->num, $this->_getNum('valid'));
+            $info->num_back = $this->_getNum('back');
+            //$info->update(false, ['num_current', 'num_back']);
+        }
+    }
+
     public function getIsFirstInfos()
     {
         return [

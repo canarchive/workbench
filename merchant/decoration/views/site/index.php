@@ -6,38 +6,55 @@ Yii::$app->params['tdkInfos'] = [
     'keyword' => 'weinaya，维纳亚，北京维纳亚科技有限公司',
     'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，国内首家专注装修建材行业CPA效果营销推广服务商。',
 ];
+
+//$merchants = [
+    //'wny' => '维纳亚-装修',
+    //'ty' => '通用商家-第三方',
+    //'tbz' => '兰州家装',
+    //'gzjlb' => '工长俱乐部',
+//];
+
 $merchants = [
-    'jzjz' => '极装吉住',
+    'jz' => '极装吉住',
     'yzf' => '业之峰',
     'tszs' => '天盛装饰',
     'mzk' => '美宅客',
-    'jkj' => '九空间',
-    'ldjz' => '绿豆家装',
+    'meideni' => '美得你',
+    'ldou' => '绿豆家装',
     'op' => '欧派',
     'aikj' => '爱空间',
     'jjjz' => '就近家装',
     //'ypj' => '优品家',
     'jrzj' => '居然之家',
     'tbz' => '兔班长',
-    '50j' => '50家',
+    'j50' => '50家',
+    'shtczs' => '三好同创装饰',
+    'qzsji' => '轻舟世纪',
+    'woaiwojia' => '我爱我家装饰',
+    'mitangzhuangshi' => '觅糖装饰',
     'dzr' => '大自然',
-    'fkjz' => '梵客家居',
-    'jfe' => '居范儿',
+    'fk' => '梵客家居',
+    'jfer' => '局装-居范儿',
     'jsy' => '金三优',
-    //'jzzs' => '今朝装饰',
-    'mdzs' => '闽东装饰',
-    'sfzf' => '盛发装饰',
+    //'jinz' => '今朝装饰',
+    'md' => '闽东装饰',
+    'sf' => '盛发装饰',
     'zkx' => '宅快修',
-    'sdzs' => '圣点装饰',
-    'yqzxw' => '一起装修网',
+    'sd' => '圣点装饰',
+    'jbh' => '一起装修网',
     'lzz' => '中宅装饰',
     'yzw' => '悦装网',
 	//'dyrsjn' => '东易日盛',
 	'pgzs' => '苹果装饰',
 	'zfer' => '住范儿',
-	'pgzs' => '苹果装饰',
 	'aiys' => '爱易墅',
-	'qzxfyj' => '轻舟幸福亿家',
+    'qzxfyj' => '轻舟幸福亿家',
+    'dqzs' => '德秦装饰',
+    'tianthc' => '天泰合创',
+    'zxhzs' => '山西卓兴和装饰',
+    'gaoniao' => '高鸟装饰',
+    'beichuangmingju' => '北创铭居装饰',
+    'jkj' => '九空间',
 ];
 ?>
 <?= $this->render('../_banner'); ?>
@@ -111,7 +128,7 @@ $merchants = [
         <?php foreach ($merchants as $code => $sName) { ?>
         <div class="small-6 medium-4 large-2 columns">
             <a rel="nofollow" href="javascript: void(0);" title="<?= $sName; ?>">
-            <img src="<?= Yii::getAlias('@asseturl') . '/merchant/adview/images/' . $code . '.png'; ?>" alt="<?= $sName; ?>" style="width=170px;"/></a>
+            <img src="<?= Yii::getAlias('@asseturl') . '/merchant/adview/khlogo/' . $code . '.png'; ?>" alt="<?= $sName; ?>" style="width=170px;"/></a>
         </div>
         <?php } ?>
     </div>
