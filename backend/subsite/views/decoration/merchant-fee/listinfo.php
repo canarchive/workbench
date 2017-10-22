@@ -51,6 +51,12 @@ $columns = [
             return $model->formatTimestamp($model->day_end);
         },
     ],
+    'is_first' => [
+        'attribute' => 'is_first',
+        'value' => function($model) {
+            return $model->getKeyName('is_first', $model->is_first);
+        }
+    ],
     'status' => [
         'attribute' => 'status',
         'value' => function($model) {
