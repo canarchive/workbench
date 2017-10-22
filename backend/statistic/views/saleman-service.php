@@ -11,6 +11,14 @@ foreach ($this->context->searchModel->fields as $field) {
             }
         ];
         break;
+    case 'merchant_id':
+        $columns[] = [
+            'attribute' => $field,
+            'value' => function ($model) {
+                return $model->getPointName('merchant', $model->merchant_id);
+            }
+        ];
+        break;
     default:
         $columns[] = $field;
     }
