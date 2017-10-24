@@ -5,6 +5,7 @@ namespace common\components;
 use Yii;
 use yii\helpers\Html;
 use yii\web\View as ViewBase;
+use common\ueditor\UEditor;
 
 class View extends ViewBase
 {
@@ -69,6 +70,7 @@ class View extends ViewBase
 
     public function getElemView($model, $field, $elem, $isNew = false)
     {
+		$isNew = $model->isNewRecord ? true : false;
         $sort = isset($elem['sort']) ? $elem['sort'] : 'show';
         $value = $this->_getViewValue($model, $field, $elem);
         if ($sort == 'show') {
@@ -164,6 +166,23 @@ class View extends ViewBase
     }
 
     protected function _textareaView($value, $model, $field, $elem, $isNew)
+    {
+        $id = (int) $model->id;
+        $fName = $model->formName();
+        $idClass = "{$fName}_{$field}_{$id}";
+        $url = $this->_getElemUrl($elem);
+        $onchange = $isNew ? '' : "updateElemByAjax(\"{$url}\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
+        $option = isset($elem['option']) ? $elem['option'] : [];
+        $option = array_merge([
+            'id' => $idClass,
+            'rows' => 3,
+            'cols' => '100',
+            'onchange' => $onchange,
+        ], $option);
+        return Html::textarea($field, $value, $option);
+    }
+
+    protected function _editorView($value, $model, $field, $elem, $isNew)
     {
         $id = (int) $model->id;
         $fName = $model->formName();

@@ -6,9 +6,12 @@ use Yii;
 
 trait ControllerTraitAdd
 {
+	public $_formName;
+
     public function actionAdd()
     {
-        return $this->_addInfo();
+		$formName = $this->_formName;
+        return $this->_addInfo(true, $formName);
     }
 
     /**
@@ -16,11 +19,12 @@ trait ControllerTraitAdd
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    protected function _addInfo($returnView = true)
+    protected function _addInfo($returnView = true, $formName)
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass($this->_addData());
-        if ($model->load(Yii::$app->request->post()) && $this->_checkRecordPriv($model) && $model->save()) {
+		$loadData = $formName === null ? $model->load(Yii::$app->request->post()) : $model->load(Yii::$app->request->post(), $formName);
+        if ($loadData && $this->_checkRecordPriv($model) && $model->save()) {
             
             if ($this->_returnView()) {
                 return $this->redirect(['view', 'id' => $model->id]);

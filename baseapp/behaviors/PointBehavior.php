@@ -68,7 +68,7 @@ class PointBehavior extends Behavior
     public function getPointModel($code, $forceNew = false)
     {
         static $models;
-        if (isset($models[$code])) {
+        if (isset($models[$code]) && empty($forceNew)) {
             return $models[$code];
         }
 
