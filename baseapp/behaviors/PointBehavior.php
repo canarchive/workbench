@@ -36,6 +36,16 @@ class PointBehavior extends Behavior
         return $infos;
     }
 
+	public function getPointDatas($code, $params = [], $forceNew = false)
+	{
+		static $datas;
+		$key = md5($code . serialize((array) $params));
+		if (!isset($datas[$key]) || $forceNew) {
+			$datas[$key] = $this->getPointAll($code, $params);
+		}
+		return $datas[$key];
+	}
+
     public function getPointAll($code, $params = [])
     {
         $where = isset($params['where']) ? $params['where'] : null;
@@ -58,7 +68,7 @@ class PointBehavior extends Behavior
     public function getPointModel($code, $forceNew = false)
     {
         static $models;
-        if (isset($models[$code])) {
+        if (isset($models[$code]) && empty($forceNew)) {
             return $models[$code];
         }
 

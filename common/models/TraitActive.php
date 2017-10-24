@@ -138,7 +138,7 @@ trait TraitActive
         $data = [];
         foreach ($infos as $key => $value) {
             if (is_array($value)) {
-                $value = implode(',', $value);
+                $value = serialize($value);
             }
 
             $data[$key] = $value;
