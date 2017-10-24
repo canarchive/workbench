@@ -6,7 +6,8 @@ trait GoodsTrait
 {
 	public $picture;
 	public $slide;
-	public $skuItems;
+	public $goods_attribute;
+	public $goods_sku;
 
     public static function tableName()
     {
@@ -21,10 +22,10 @@ trait GoodsTrait
     public function rules()
     {
         return [
-            [['name', 'sort', 'price'], 'required'],
+            [['name', 'category_code', 'price'], 'required'],
             [['orderlist', 'status', 'price_market'], 'default', 'value' => 0],
             [['price', 'price_market'], 'double'],
-			[['book_month', 'brief', 'picture', 'keyword', 'description', 'content'], 'safe'],
+			[['goods_attribute', 'goods_sku', 'brief', 'slide', 'picture', 'keyword', 'description', 'content'], 'safe'],
         ];
     }
 
@@ -52,13 +53,26 @@ trait GoodsTrait
         ];
     }
 
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+        return true;
+    }
+
 	public function afterSave($insert, $changedAttributes)
 	{
         parent::afterSave($insert, $changedAttributes);
 
-		$this->_updateMulAttachment('goods', 'picture');
+		$this->_updateMulElem();
 
 		return true;
+	}
+
+	protected function _updateMulElem()
+	{
+		$this->_updateMulAttachment('goods', 'picture');
 	}
 
 	public function getStatusInfos()
@@ -101,5 +115,79 @@ trait GoodsTrait
 	public function getThumbUrl()
 	{
 		return $this->_getThumb('goods', 'slide');
+	}
+
+	public function getCategoryInfo()
+	{
+		$info = $this->getPointModel('shop-category')->getInfo($this->category_code, 'code');
+		return $info;
+	}
+
+	public function getAttributeItems($type)
+	{
+		$cInfo = $this->categoryInfo;
+		return is_object($cInfo) ? $cInfo->getAttributeItems($type) : [];
+	}
+
+	public function getSkuItems()
+	{
+		$infos = $this->getPointModel('shop-goods-sku')->getInfos(['where' => ['goods_id' => $this->id], 'orderBy' => ['oderlist' => SORT_DESC]]);
+		return $infos;
+	}
+
+	public function getGoodsAttributeInfos()
+	{
+		$infos = $this->getPointModel('shop-goods-attribute')->getInfos(['where' => ['goods_id' => $this->id], 'indexBy' => 'attribute_id']);
+		return $infos;
+	}
+
+	public function updateGoodsAttributes()
+	{
+		$aItems = $this->getAttributeItems(false);
+		$aIds = array_keys($aItems);
+		$gaInfos = $this->goodsAttributeInfos;
+		$gaIds = array_keys($gaInfos);
+
+		$goodsAttributes = $this->goods_attribute;
+
+		foreach ($goodsAttributes as $aId => & $gaValue) {
+			if (!in_array($aId, $aIds)) {
+				continue;
+			}
+			$item = $aItems[$aId];
+			$cValue = $item->dealValue($gaValue);
+
+			$gaInfo = isset($gaInfos[$aId]) ? $gaInfos[$aId] : [];
+			if (empty($gaInfo)) {
+				$gaModel = $this->getPointModel('shop-goods-attribute', true);
+				$gaModel->goods_id = $this->id;
+				$gaModel->attribute_id = $aId;
+				$gaModel->value = $cValue;
+				$gaModel->insert(false);
+				print_r($gaModel);
+				continue;
+			}
+
+			if ($gaInfo['value'] != $cValue) {
+				$gaInfo['value'] = $cValue;
+				$gaInfo->update(false, ['value']);
+			}
+		}
+
+		foreach ($gaInfos as $gaId => $gaInfo) {
+			if (!in_array($gaId, $aIds)) {
+				$gaInfo->delete(false);
+			}
+		}
+
+		//print_r($gaInfos);
+		//print_r($goodsAttributes);
+
+		//print_r($this);exit();
+		exit();
+	}
+
+	public function updateGoodsSkus()
+	{
 	}
 }

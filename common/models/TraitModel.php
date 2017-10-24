@@ -76,7 +76,7 @@ trait TraitModel
         return [];
     }    
 
-    protected function _formatFailResult($defaultMessage, $info = null)
+    public function _formatFailResult($defaultMessage, $info = null)
     {
         $errors = $this->getErrors();
         $errorFirst = $this->getFirstErrors();
