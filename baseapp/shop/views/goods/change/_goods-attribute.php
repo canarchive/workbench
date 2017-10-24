@@ -1,6 +1,6 @@
 <?php
 $category = $model->categoryInfo;
-$attributeItems = is_object($category) ? $category->getAttributeItems() : false;
+$attributeItems = is_object($category) ? $category->getAttributeItems(false) : false;
 $elems = array_chunk($attributeItems, 4);
 ?>
 <div class="row">

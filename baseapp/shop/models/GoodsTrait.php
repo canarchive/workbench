@@ -6,7 +6,7 @@ trait GoodsTrait
 {
 	public $picture;
 	public $slide;
-	public $goods_attribute;
+	public $goods_attributes;
 	public $goods_sku;
 
     public static function tableName()
@@ -25,7 +25,7 @@ trait GoodsTrait
             [['name', 'category_code', 'price'], 'required'],
             [['orderlist', 'status', 'price_market'], 'default', 'value' => 0],
             [['price', 'price_market'], 'double'],
-			[['goods_attribute', 'goods_sku', 'brief', 'slide', 'picture', 'keyword', 'description', 'content'], 'safe'],
+			[['goods_attributes', 'goods_sku', 'brief', 'slide', 'picture', 'keyword', 'description', 'content'], 'safe'],
         ];
     }
 
@@ -145,17 +145,24 @@ trait GoodsTrait
 	{
 		$aItems = $this->getAttributeItems(false);
 		$aIds = array_keys($aItems);
+		$this->getPointModel('shop-goods-attribute')->updateAll(['value' => ''], ['goods_id' => $this->id]);
 		$gaInfos = $this->goodsAttributeInfos;
-		$gaIds = array_keys($gaInfos);
 
-		$goodsAttributes = $this->goods_attribute;
+		$goodsAttributes = $this->goods_attributes;
+		print_r($goodsAttributes);
+		$otherValues = [];
+		if (isset($goodsAttributes['other'])) {
+			$otherValues = $goodsAttributes['other'];
+			unset($goodsAttributes['other']);
+		}
 
-		foreach ($goodsAttributes as $aId => & $gaValue) {
+		foreach ($goodsAttributes as $aId => $gaValue) {
 			if (!in_array($aId, $aIds)) {
+				unset($goodsAttributes[$aId]);
 				continue;
 			}
 			$item = $aItems[$aId];
-			$cValue = $item->dealValue($gaValue);
+			$cValue = $item->dealValue($gaValue, $otherValues);
 
 			$gaInfo = isset($gaInfos[$aId]) ? $gaInfos[$aId] : [];
 			if (empty($gaInfo)) {
@@ -164,22 +171,14 @@ trait GoodsTrait
 				$gaModel->attribute_id = $aId;
 				$gaModel->value = $cValue;
 				$gaModel->insert(false);
-				print_r($gaModel);
 				continue;
-			}
-
-			if ($gaInfo['value'] != $cValue) {
+			} else {
 				$gaInfo['value'] = $cValue;
-				$gaInfo->update(false, ['value']);
+				$r = $gaInfo->update(false, ['value']);
 			}
 		}
 
-		foreach ($gaInfos as $gaId => $gaInfo) {
-			if (!in_array($gaId, $aIds)) {
-				$gaInfo->delete(false);
-			}
-		}
-
+		print_r($_POST);
 		//print_r($gaInfos);
 		//print_r($goodsAttributes);
 

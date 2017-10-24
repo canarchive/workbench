@@ -1,47 +1,33 @@
 <?php
-$modelNew = $merchantModel->_newModel('goodsSku');
-
-$baseInfos = [
-    [
-        'type' => 'add',
-        'addFunc' => 'addGoodsSku()',
-        'name' => '添加SKU',
-        'modelNew' => $modelNew,
-        'elems' => [
-            [
-                'status' => ['sort' => 'change', 'type' => 'dropdown', 'elemInfos' => $modelNew->statusInfos],
-                'content' => ['sort' => 'change', 'type' => 'textarea'],
-            ],
-        ],
-    ],
-    [
-        'type' => 'list',
-        'name' => 'SKU列表',
-        'modelNew' => $modelNew,
-        'infos' => $callbackInfos,
-        'fields' => $modelNew->gatherListElems,
-    ]
-];
-echo $this->render('@baseapp/common/views/change-gather/gather', ['infos' => $baseInfos]);
+$category = $model->categoryInfo;
+$attributeItems = is_object($category) ? $category->getAttributeItems(true) : false;
+$elems = array_chunk($attributeItems, 4);
 ?>
-<script>
-function addCallback()
-{
-    var table = '<?= $modelNew->formName(); ?>';
-    var content = $('#' + table + '_content_0').val();
-    if (!content) {
-        alert('<?= $modelNew->getAttributeLabel('content'); ?>内容不能为空');
-        return false;
-    }
-    var data = {
-        'merchant_id': '<?= $merchantModel->id; ?>',
-        'saleman_id': <?= $merchantModel->saleman_id; ?>,
-        'operation': 'add',
-        'table': table,
-        'content': content,
-        'status': $('#' + table + '_status_0').val()
-    };
-
-    addElemByAjax('', data, table + '_infos');
-}
-</script>
+<div class="row">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div data-original-title="" class="box-header well">
+                <h2>商品属性信息</h2>
+                <div class="box-icon">
+                     <a class="btn btn-minimize btn-round btn-default" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+				<?php foreach ($elems as $subElems) { ?>
+                <table class="table table-striped table-bordered responsive">
+                    <thead>
+                    <tr>
+                        <?php foreach ($subElems as $elem) { echo '<th>' . $elem->name . '</th>'; } ?>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <?php foreach ($subElems as $elem) { echo $elem->getViewStr($model->goodsAttributeInfos, $this); } ?>
+                    </tr>
+                    </tbody>
+                </table>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
