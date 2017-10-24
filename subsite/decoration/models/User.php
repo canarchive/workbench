@@ -126,6 +126,7 @@ class User extends ModelBase
             '1408' => '13439800879',
             '1419' => '18610765728',
             '4993' => '13910735016',
+			'4992' => '15311273236',
             '1419' => '18610765728',
             '4438' => '15112421559',
 			'5090' => '18612364904',
@@ -141,7 +142,8 @@ class User extends ModelBase
         }
         $houseType = isset($houseInfo->houseTypeInfos[$houseInfo->house_type]) ? $houseInfo->houseTypeInfos[$houseInfo->house_type] : '';
         $houseSort = isset($houseInfo->houseSortInfos[$houseInfo->house_sort]) ? $houseInfo->houseSortInfos[$houseInfo->house_sort] : '';
-		$content = "业主信息，姓名：{$userInfo['name']};电话：{$userInfo['mobile']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访【兔班长装修网】";
+		//$content = "业主信息，姓名：{$userInfo['name']};电话：{$userInfo['mobile']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访【兔班长装修网】";
+		$content = "业主信息，姓名：{$userInfo['name']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访。！！(业主联系方式及具体装修需求请在商家系统后台查看)【兔班长装修网】";
 
         return $this->sendSmsBase($mobile, $content, 'decoration_valid');
     }
