@@ -64,6 +64,7 @@ trait PlanfeeTrait
             'created_weekday' => date('N', $time),
             'account_id' => $this->getAccountId($info['account_code']),
             'plan_id' => $this->getPlanId($info['account_code'], $info['plan_name']),
+            'merchant_id' => $this->getPlanId($info['account_code'], $info['plan_name'], 'merchant_id'),
         ]);
 
         $where = [
