@@ -24,7 +24,7 @@ class Planfee extends BaseModel
     {
         return [
             [['created_day', 'channel', 'account_id', 'plan_id'], 'required'],
-            [['description', 'created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
+            [['merchant_id', 'description', 'created_month', 'import', 'account_code', 'plan_name', 'client_type', 'show_num', 'hit_num', 'visit_num', 'success_num', 'valid_num', 'keyword_rank', 'keyword_cost', 'transfer_page', 'transfer_guest', 'transfer_mobile'], 'safe'],
         ];
     }
 
@@ -55,6 +55,7 @@ class Planfee extends BaseModel
             'client_type' => ['type' => 'key'],
             'account_code' => ['type' => 'common'],
             'plan_name' => ['type' => 'common'],
+            'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
             //'account_id' => ['type' => 'point', 'table' => 'account'],
             //'plan_id' => ['type' => 'point', 'table' => 'plan'],
             'show_num' => ['type' => 'common'],
@@ -82,10 +83,10 @@ class Planfee extends BaseModel
         return $id;
     }
 
-    protected function getPlanId($account, $plan)
+    protected function getPlanId($account, $plan, $field = 'id')
     {
         static $datas = [];
-        $key = md5($this->channel . $account . $plan);
+        $key = md5($this->channel . $account . $plan, $field);
         if (isset($datas[$key])) {
             return $datas[$key];
         }
@@ -100,7 +101,7 @@ class Planfee extends BaseModel
         }
         $nModel = new Plan($where);
         $nModel->insert();
-        $id = $data[$key] = $nModel->id;
+        $id = $data[$key] = $nModel->$field;
         return $id;
     }
 

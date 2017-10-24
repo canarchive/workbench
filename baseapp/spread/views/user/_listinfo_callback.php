@@ -77,6 +77,7 @@ $modelNew = $modelUser->_newModel('callback');
                 <table class="table table-striped table-bordered responsive">
                     <thead>
                         <tr>
+                            <th><?= $modelNew->getAttributeLabel('service_id'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('invalid_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('out_status'); ?></th>
@@ -87,6 +88,7 @@ $modelNew = $modelUser->_newModel('callback');
                     <tbody id="callback_infos">
                     <?php foreach ($callbackInfos as $model) { ?>
                         <tr>
+                            <td><?= $model->getPointName('service', $model->service_id); ?></td>
                             <td><?= $model->getKeyName('status', $model->status); ?></td>
                             <td><?= $model->getKeyName('invalid_status', $model->invalid_status); ?></td>
                             <td><?= $model->getKeyName('out_status', $model->out_status); ?></td>
