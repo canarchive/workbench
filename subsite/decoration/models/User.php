@@ -96,42 +96,7 @@ class User extends ModelBase
         if (empty($merchantId)) {
             return ;
         }
-        $noticeMobiles = [
-            '667' => '17316278360',
-            '672' => '15116958221',
-            //'671' => '15110125766',
-			'671' => '15010202641',
-			'682' => '18600063835',
-			//'669' => '13717716106',//'13581522034',
-			'669' => '13581522034',
-			'684' => '18614242810',
-			'686' => '15801558634',
-			'692' => '13001943039',
-            '694' => '13810901261',
-            '695' => '13611081935',
-            '696' => '18953723010',
-            '697' => '13718883390',
-			//'1390' => '13566675053',
-			'1390' => '13466675053',
-			//'1394' => '13786153270',
-			//'1394' => '18075152882',
-			'1394' => '15200825778',
-			'1396' => '18810690921',
-			'1405' => '18734809101',
-			'1403' => '13651117922',
-
-            //'1407' => '15321903882',
-            //'1407' => '15321109657',
-			'1407' => '15321109657',
-            '1408' => '13439800879',
-            '1419' => '18610765728',
-            '4993' => '13910735016',
-			'4992' => '15311273236',
-            '1419' => '18610765728',
-            '4438' => '15112421559',
-			'5090' => '18612364904',
-        ];
-        $mobile = isset($noticeMobiles[$merchantId]) ? $noticeMobiles[$merchantId] : false;
+        $mobile = $this->getNoticeMobile($merchantId);
         if (empty($mobile)) {
             return ;
         }
@@ -146,6 +111,16 @@ class User extends ModelBase
 		$content = "业主信息，姓名：{$userInfo['name']};地址：{$houseInfo['region']} {$houseInfo['address']};面积：{$houseInfo->house_area};户型：{$houseType};房屋类别：{$houseSort}。请及时查看数据详情，并做好回访。！！(业主联系方式及具体装修需求请在商家系统后台查看)【兔班长装修网】";
 
         return $this->sendSmsBase($mobile, $content, 'decoration_valid');
+    }
+
+    public function getNoticeMobile($merchantId)
+    {
+        $info = $this->getPointModel('subsite-merchant-decoration')->getInfo(['merchant_id' => $merchantId]);
+        if (empty($info)) {
+            return false;
+        }
+
+        return trim($info['mobile_cps']);
     }
 
     public function getCallbackStr()

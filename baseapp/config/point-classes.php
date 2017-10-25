@@ -16,9 +16,6 @@ return [
     'unit' => '\spread\models\Unit',
     'template' => '\spread\models\Template',
 
-	// shop flower
-	'tag-sort-shopf' => '\shop\flower\models\TagSort',
-	'shop-sort-flower' => '\shop\flower\models\Sort',
-	'shop-type' => '\shop\models\Type',
+    'subsite-merchant-decoration' => '\subsite\decoration\models\MerchantDecoration',
 ];
 

