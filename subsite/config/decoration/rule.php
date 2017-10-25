@@ -7,6 +7,12 @@ $rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
     		'route'	=> '/decoration/spread-page/home',
         ],
     ],
+    'other' => [
+        'data' => [
+            'pattern' => '/qt',
+            'route' => '/{{SORT}}/other/style',
+        ],
+    ],
     'bdztc' => [
         'data' => [
             'pattern' => '/bdztc',
