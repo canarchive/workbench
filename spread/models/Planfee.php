@@ -86,7 +86,7 @@ class Planfee extends BaseModel
     protected function getPlanId($account, $plan, $field = 'id')
     {
         static $datas = [];
-        $key = md5($this->channel . $account . $plan, $field);
+        $key = md5($this->channel . $account . $plan . $field);
         if (isset($datas[$key])) {
             return $datas[$key];
         }
@@ -95,13 +95,11 @@ class Planfee extends BaseModel
         $where = ['channel' => $this->channel, 'account_id' => $accountId, 'name' => $plan];
         $aModel = new Plan();
         $info = $aModel->getInfo($where);
-        if (!empty($info)) {
-            $id = $datas[$key] = $info['id'];
-            return $id;
+        if (empty($info)) {
+            $info = new Plan($where);
+            $info->insert();
         }
-        $nModel = new Plan($where);
-        $nModel->insert();
-        $id = $data[$key] = $nModel->$field;
+        $id = $datas[$key] = $info->$field;
         return $id;
     }
 

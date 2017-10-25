@@ -31,7 +31,6 @@ trait PlanfeeTrait
         foreach ((array) $datas as $subDatas) {
         foreach ((array) $subDatas as $key => $data) {
             $result = $this->_writeInfo($data, $fieldInfo);
-            var_dump($result);
             $i++;
         }
         }
