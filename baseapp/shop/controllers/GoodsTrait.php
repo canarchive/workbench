@@ -10,7 +10,7 @@ trait GoodsTrait
 {
     use ControllerTraitFull;
 
-    public $viewPrefix = '@baseapp/shop/views/goods/';
+    public $viewPrefix = '@backend/shop/views/goods/';
 
     protected function getAddView()
     {
