@@ -22,7 +22,7 @@ function addElemForUser(data)
                         + "<td>" + response.data.status + "</td>"
                         + "<td>" + response.data.invalid_status + "</td>"
                         + "<td>" + response.data.out_status + "</td>"
-                        + "<td>" + response.data.signed_merchant + "</td>"
+                        + "<td>" + data.signed_merchant + "</td>"
                         + "<td>" + data.content + "</td>"
                         + "<td>" + response.data.created_at + "</td>"
                         + "</tr>";

@@ -34,8 +34,9 @@ abstract class Controller extends AdminController
         $r = $model->insert(false);
         foreach ($userStatus as $uStatus) {
             $userModel->$uStatus = $model->$uStatus;
-            $userModel->update(false);
         }
+        $userModel->signed_merchant = $model->signed_merchant;
+        $userModel->update(false, array_merge($userStatus, ['signed_merchant']));
 
         $return = [
             'status' => 200,

@@ -70,6 +70,12 @@ class DispatchController extends Controller
         foreach ($fields as $field) {
             $model->$field = Yii::$app->request->post($field);
         }
+        if ($table == 'guestbook') {
+            $umModel = $modelBase->_newModel('userMerchant')->findOne($model->user_merchant_id);
+            $model->service_id = $umModel->service_id;
+            $model->mobile = $umModel->mobile;
+            $model->merchant_id = $umModel->merchant_id;
+        }
         $model->insert(false);
 
         $return = [

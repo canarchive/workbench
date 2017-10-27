@@ -53,6 +53,7 @@ $changeMerchantUrl = isset($this->context->menuInfos['menus']['subsite_decoratio
                         <th><?= $model->getAttributeLabel('signup_at'); ?></th>
                         <th><?= $model->getAttributeLabel('signup_num'); ?></th>
                         <th><?= $model->getAttributeLabel('created_at'); ?></th>
+                        <th><?= $model->getAttributeLabel('signed_merchant'); ?></th>
                         <th><?= $model->getAttributeLabel('message'); ?></th>
                     </tr>
                     </thead>
@@ -63,6 +64,7 @@ $changeMerchantUrl = isset($this->context->menuInfos['menus']['subsite_decoratio
                         <td><?= date('Y-m-d H:i:s', $model->signup_at); ?></td>
                         <td><?= $model->signup_num; ?></td>
                         <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
+                        <td><?= $model->signed_merchant; ?></td>
                         <td><?= $model->message; ?></td>
                     </tr>
                     </tbody>
