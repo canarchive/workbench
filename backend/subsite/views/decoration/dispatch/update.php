@@ -32,7 +32,8 @@ use yii\bootstrap\ActiveForm;
 <?php
 echo $this->render('_base_info', ['model' => $model]);
 echo $this->render('_listinfo_user_merchant', ['model' => $model, 'guestbookInfos' => $guestbookInfos, 'userMerchantInfos' => $userMerchantInfos]);
-echo $this->render('_listinfo_callback', ['model' => $model, 'callbackInfos' => $callbackInfos]);
+//echo $this->render('_listinfo_callback', ['model' => $model, 'callbackInfos' => $callbackInfos]);
+echo $this->render('@baseapp/spread/views/user/_listinfo_callback', ['modelUser' => $modelUser, 'callbackInfos' => $callbackInfos]);
 ?>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -76,11 +77,19 @@ function addElemForUser(data)
         success: function(response) {
             var status = response.status;
             if (status == 200) {
-                if (table == 'dispatch_callback') {
+                if (table == 'callback') {
                     var newContent = "<tr>"
+                        + "<td>" + response.data.service_id + "</td>"
+                        + "<td>" + response.data.status + "</td>"
+                        + "<td>" + response.data.invalid_status + "</td>"
+                        + "<td>" + response.data.out_status + "</td>"
+                        + "<td>" + data.signed_merchant + "</td>"
                         + "<td>" + data.content + "</td>"
-                        + "<td>" + response.created_at + "</td>"
+                        + "<td>" + response.data.created_at + "</td>"
                         + "</tr>";
+                    $("#userinfo_status").text(response.data.status);
+                    $("#userinfo_invalid_status").text(response.data.invalid_status);
+                    $("#userinfo_out_status").text(response.data.out_status);
                 } else if (table == 'guestbook') {
                     var newContent = "<tr>"
                         + "<td>" + data.merchantName + "</td>"

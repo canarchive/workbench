@@ -25,21 +25,23 @@ class DispatchController extends Controller
 
     protected function _userInfos($id)
     {
+        $model = $this->findModel($id);
+        $mobile = $model->mobile;
+        $modelUser = $model->_newModel('user')->findOne($model->user_id);
         if (Yii::$app->getRequest()->method == 'POST') {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             $this->isAjax = true;
             $operation = Yii::$app->request->post('operation');
-            return $operation == 'add' ? $this->_add() : $this->_update();
+            return $operation == 'add' ? $this->_add($modelUser) : $this->_update();
         }
 
-        $model = $this->findModel($id);
-        $mobile = $model->mobile;
         $userMerchantInfos = $model->_newModel('userMerchant')->find()->where(['mobile' => $mobile])->indexBy('id')->all();
         $guestbookInfos = $model->_newModel('guestbook')->find()->where(['user_merchant_id' => array_keys($userMerchantInfos)])->orderBy('user_merchant_id DESC, created_at DESC, reply_at DESC')->all();
-        $callbackInfos = $model->_newModel('dispatchCallback')->find()->where(['mobile' => $mobile])->orderBy('created_at DESC')->all();
+        $callbackInfos = $model->_newModel('callback')->find()->where(['mobile' => $mobile])->orderBy('created_at DESC')->all();
 
         $data = [
             'model' => $model,
+            'modelUser' => $modelUser,
             'userMerchantInfos' => $userMerchantInfos,
             'guestbookInfos' => $guestbookInfos,
             'callbackInfos' => $callbackInfos,
@@ -48,16 +50,15 @@ class DispatchController extends Controller
         return $data;
     }
 
-    protected function _add()
+    protected function _add($modelUser)
     {
         $modelClass = $this->modelClass;
         $modelBase = new $modelClass();
-        $tables = ['dispatch_callback', 'guestbook'];
+        $tables = ['callback', 'guestbook'];
         $table = Yii::$app->request->post('table');
 
-        if ($table == 'dispatch_callback') {
-            $fields = ['mobile', 'service_id', 'content'];
-            $model = $modelBase->_newModel('dispatchCallback', true);
+        if ($table == 'callback') {
+            return $this->_callbackOperation($modelUser, 'add', []);
         } elseif ($table == 'guestbook') {
             $fields = ['user_merchant_id', 'reply'];
             $model = $modelBase->_newModel('guestbook', true);
@@ -89,7 +90,7 @@ class DispatchController extends Controller
     {
         $modelClass = $this->modelClass;
         $modelBase = new $modelClass();
-        $tables = ['dispatch_callback', 'guestbook', 'user_merchant'];
+        $tables = ['callback', 'guestbook', 'user_merchant'];
         $table = Yii::$app->request->post('table');
         $infoId = Yii::$app->request->post('info_id');
         $field = Yii::$app->request->post('field');
@@ -102,8 +103,8 @@ class DispatchController extends Controller
         case 'user_merchant':
             $model = $modelBase->_newModel('userMerchant')->findOne($infoId);
             break;
-        case 'dispatch_callback':
-            $model = $modelBase->_newModel('dispatchCallback')->findOne($infoId);
+        case 'callback':
+            $model = $modelBase->_newModel('callback')->findOne($infoId);
             break;
         case 'guestbook':
             $model = $modelBase->_newModel('guestbook')->findOne($infoId);

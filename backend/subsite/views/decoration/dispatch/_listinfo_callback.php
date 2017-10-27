@@ -1,8 +1,8 @@
 <?php
 use yii\helpers\Html;
 
-$tableName = 'dispatch_callback';
-$modelNew = $model->_newModel('dispatchCallback');
+$tableName = 'callback';
+$modelNew = $model->_newModel('callback');
 ?>
 <div class="row">
     <div class="box col-md-12">
@@ -36,7 +36,7 @@ $modelNew = $model->_newModel('dispatchCallback');
                             <th><?= $modelNew->getAttributeLabel('created_at'); ?></th>
                         </tr>
                     </thead>
-                    <tbody id="dispatch_callback_infos">
+                    <tbody id="callback_infos">
                     <?php foreach ($callbackInfos as $model) { ?>
                         <tr>
                             <td><?= $model->content; ?></td>

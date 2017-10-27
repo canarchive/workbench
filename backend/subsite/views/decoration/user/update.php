@@ -18,9 +18,11 @@ function addElemForUser(data)
             if (status == 200) {
                 if (table == 'callback') {
                     var newContent = "<tr>"
+                        + "<td>" + response.data.service_id + "</td>"
                         + "<td>" + response.data.status + "</td>"
                         + "<td>" + response.data.invalid_status + "</td>"
                         + "<td>" + response.data.out_status + "</td>"
+                        + "<td>" + response.data.signed_merchant + "</td>"
                         + "<td>" + data.content + "</td>"
                         + "<td>" + response.data.created_at + "</td>"
                         + "</tr>";

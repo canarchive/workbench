@@ -27,7 +27,7 @@ $tableName = 'owner_merchant';
                     </thead>
                     <tbody>
                     <tr>
-                        <td><?= $model->mobile; ?></td>
+                        <td><?= $model->maskMobile('mobile'); ?></td>
                         <td><?= $model->city_code; ?></td>
                         <td><?= $model->merchant_id; ?></td>
                         <td><?= $model->service_id; ?></td>
