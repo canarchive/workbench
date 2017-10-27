@@ -14,7 +14,7 @@ class UserController extends UserControllerBase
 	public function actionAdd()
 	{
         $managerInfo = Yii::$app->params['managerInfo'];
-        if ($managerInfo['role'] == 'saleman-chief') {
+        if (in_array($managerInfo['role'], ['admin-inner', 'saleman-chief'])) {
             $this->forceSkipPriv = true;
         }
 

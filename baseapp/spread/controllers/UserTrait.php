@@ -75,7 +75,7 @@ trait UserTrait
         $model = $this->findModel($id);
 
         $mobile = $model->mobile;
-        $callbackInfos = $model->_newModel('callback')->findAll(['mobile' => $mobile]);
+        $callbackInfos = $model->_newModel('callback')->find()->where(['mobile' => $mobile])->orderBy('created_at DESC')->all();
         $userMerchantInfos = $model->_newModel('userMerchant')->getInfos(['where' => ['mobile' => $model->mobile]]);
 
         $datas = [
@@ -117,38 +117,6 @@ trait UserTrait
         return ['status' => 400, 'message' => 'user error'];
     }
 
-    protected function _callbackOperation($userModel, $operationType, $params)
-    {
-        $model = $userModel->_newModel('callback', true);
-        if ($operationType == 'update') {
-            return $this->_update($model, $params);
-        }
-
-        $userStatus = ['status', 'invalid_status', 'out_status'];
-        $fields = array_merge($userStatus, ['mobile', 'service_id', 'content']);
-        $this->_initFields($model, $fields);
-        $model->merchant_id = $userModel->merchant_id;
-        $r = $model->insert(false);
-        foreach ($userStatus as $uStatus) {
-            $userModel->$uStatus = $model->$uStatus;
-            $userModel->update(false);
-        }
-
-        $return = [
-            'status' => 200,
-            'message' => 'OK',
-            'data' => [
-                'id' => $model->id,
-                'created_at' => date('Y-m-d H:i:s', $model->created_at),
-                'status' => $model->getKeyName('status', $model->status),
-                'invalid_status' => $model->getKeyName('invalid_status', $model->invalid_status),
-                'out_status' => $model->getKeyName('out_status', $model->out_status),
-                'content' => '',
-            ],
-        ];
-        return $return;
-    }
-
     protected function _user_merchantOperation($userModel, $operationType, $params)
     {
         $model = $userModel->_newModel('userMerchant', true);
@@ -156,7 +124,7 @@ trait UserTrait
             return $this->_update($model, $params);
         }
 
-        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code', 'sort'];
+        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code', 'sort', 'is_redispatch'];
         $this->_initFields($model, $fields);
         $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
         if ($oldInfo) {
@@ -168,6 +136,7 @@ trait UserTrait
         $model->created_day = date('Ymd', $time);
         $model->created_week = date('W', $time);
         $model->created_weekday = date('N', $time);
+        $model->status = '';
         $model->user_id = $userModel->id;
 
         $model->insert(false);
@@ -194,14 +163,6 @@ trait UserTrait
         ];
 
         return $return;
-    }
-
-    protected function _initFields($model, $fields)
-    {
-        foreach ($fields as $field) {
-            $model->$field = Yii::$app->request->post($field);
-        }
-        return $model;
     }
 
     protected function _update($model, $params)

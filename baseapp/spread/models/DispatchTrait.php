@@ -67,6 +67,7 @@ trait DispatchTrait
         if (!$exist) {
             $newData = [
                 'city_code' => $data['city_code'],
+                'user_id' => $data['user_id'],
                 'mobile' => $data['mobile'],
                 'house_id' => $data['house_id'],
                 'service_id' => $data['service_id'],
