@@ -124,7 +124,7 @@ trait UserTrait
             return $this->_update($model, $params);
         }
 
-        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code', 'sort'];
+        $fields = ['mobile', 'house_id', 'service_id', 'merchant_id', 'city_code', 'sort', 'is_redispatch'];
         $this->_initFields($model, $fields);
         $oldInfo = $model->find()->where(['mobile' => $model->mobile, 'merchant_id' => $model->merchant_id])->one();
         if ($oldInfo) {
@@ -136,6 +136,7 @@ trait UserTrait
         $model->created_day = date('Ymd', $time);
         $model->created_week = date('W', $time);
         $model->created_weekday = date('N', $time);
+        $model->status = '';
         $model->user_id = $userModel->id;
 
         $model->insert(false);

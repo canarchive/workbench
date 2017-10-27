@@ -40,6 +40,7 @@ trait UserMerchantTrait
             'house_id' => '房屋',
             'created_at' => '派单时间',
             'updated_at' => '更新时间',
+            'is_redispatch' => '派单状态',
             'note' => '备注',
             'status' => '状态',
 			'userName' => '姓名',

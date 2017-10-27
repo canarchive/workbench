@@ -10,7 +10,7 @@ Trait UserMerchantTrait
     public function rules()
     {
         return [
-            [['created_at_start', 'created_at_end', 'status', 'mobile', 'merchant_id', 'service_id'], 'safe'],
+            [['is_redispatch', 'created_at_start', 'created_at_end', 'status', 'mobile', 'merchant_id', 'service_id'], 'safe'],
         ];
     }
 
@@ -20,6 +20,7 @@ Trait UserMerchantTrait
             ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'service_id', 'type' => 'common'],
             ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'is_redispatch', 'type' => 'common'],
             ['field' => 'status', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
         ];
@@ -31,6 +32,7 @@ Trait UserMerchantTrait
             $this->_sPointParam(['field' => 'merchant_id', 'table' => 'merchant', 'where' => ['status_ext' => [1]]]),
             $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
             $this->_sKeyParam(['field' => 'status']),
+            $this->_sKeyParam(['field' => 'is_redispatch']),
         ];
         $form = [
         [
@@ -55,6 +57,7 @@ Trait UserMerchantTrait
             'updated_at' => ['type' => 'timestamp', 'listNo' => true],
             'sendmsg_at' => ['type' => 'condition', 'formatView' => 'raw'],
             'status' => ['type' => 'key'],
+            'is_redispatch' => ['type' => 'key'],
             'operation' => ['type' => 'operation'],
         ];
     }
