@@ -54,6 +54,14 @@ trait UserMerchantTrait
         ];
     }
 
+    public function getIsRedispatchInfos()
+    {
+        return [
+            0 => '一次派单',
+            1 => '二次派单',
+        ];
+    }
+
     public function getStatusInfos()
     {
         $datas = [
