@@ -23,7 +23,7 @@ $tableName = 'user_merchant';
             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
             <td><?= date('Y-m-d H:i:s', $model->view_at); ?></td>
             <td>
-            <?php if (time() - $model->created_at < 600) { echo Html::dropDownList(
+            <?php if (time() - $model->created_at < $model->statusLimit) { echo Html::dropDownList(
                 'status',
                 $model->status,
                 $model->statusInfos,
@@ -35,7 +35,7 @@ $tableName = 'user_merchant';
             ); } else { $statusStr = isset($model->statusInfos[$model->status]) ? $model->statusInfos[$model->status] : $model->status; echo $statusStr; } ?>
             </td>
             <td>
-            <?php if (time() - $model->created_at < 600) { echo Html::dropDownList(
+            <?php if (time() - $model->created_at < $model->isRedispatchLimit) { echo Html::dropDownList(
                 'is_redispatch',
                 $model->is_redispatch,
                 $model->isRedispatchInfos,

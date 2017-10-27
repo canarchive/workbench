@@ -10,6 +10,7 @@ $merchantInfos = $modelNew->getPointInfos('merchant', ['noPriv' => true, 'where'
             <th><?= $modelNew->getAttributeLabel('house_id'); ?></th>
             <th><?= $modelNew->getAttributeLabel('merchant_id'); ?></th>
             <th><?= $modelNew->getAttributeLabel('sort'); ?></th>
+            <th><?= $modelNew->getAttributeLabel('is_dispatch'); ?></th>
             <th><?= $modelNew->getAttributeLabel('note'); ?></th>
         </tr>
     </thead>
@@ -36,6 +37,18 @@ $merchantInfos = $modelNew->getPointInfos('merchant', ['noPriv' => true, 'where'
                 [
                     'class' => 'form-control',
                     'id' => 'sort',
+                ]
+            ); ?>
+            </td>
+            <td>
+            <?php echo Html::dropDownList(
+                'is_redispatch',
+                '0',
+                $modelNew->isRedispatchInfos,
+                [
+                    'prompt' => '全部',
+                    'class' => 'form-control',
+                    'id' => 'is_redispatch',
                 ]
             ); ?>
             </td>

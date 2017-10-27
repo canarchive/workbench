@@ -16,9 +16,26 @@ Trait DispatchTrait
 
     protected function _searchElems()
     {
-		return [
+        return [
+            ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'service_id', 'type' => 'common'],
-		];
+            ['field' => 'created_at', 'type' => 'rangeTime'],
+        ];
+    }
+
+    public function _searchDatas()
+    {
+        $list = [
+            $this->_sPointParam(['field' => 'service_id', 'table' => 'service', 'where' => ['status_ext' => [1]]]),
+        ];
+        $form = [
+        [
+            $this->_sTextParam(['field' => 'mobile']),
+            $this->_sStartParam(),
+        ]
+        ];
+        $datas = ['list' => $list, 'form' => $form];
+        return $datas;
     }
 
     protected function _getTemplateFields()
@@ -28,7 +45,7 @@ Trait DispatchTrait
             'city_code' => ['type' => 'common'],
             //'house_id' => ['type' => 'point', 'table' => 'merchant'],
             'service_id' => ['type' => 'point', 'table' => 'service', 'pointField' => 'id'],
-            'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
+            'mobile' => ['type' => 'inline', 'method' => 'maskMobileView'],
             //'mobile' => ['type' => 'common'],
             'num_merchant' => ['type' => 'common'],
             'note' => ['type' => 'common', 'listNo' => true],

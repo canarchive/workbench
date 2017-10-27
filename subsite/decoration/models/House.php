@@ -148,7 +148,7 @@ class House extends ModelBase
         return [
             'id' => ['type' => 'common'],
             'service_id' => ['type' => 'point', 'table' => 'service'],
-            'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
+            'mobile' => ['type' => 'inline', 'method' => 'maskMobileView'],
             'region' => ['type' => 'common'],
             'address' => ['type' => 'common'],
             'house_type' => ['type' => 'key'],
