@@ -22,7 +22,7 @@ class UserController extends UserControllerBase
         
 		if ($action->id == 'update' || $action->id == 'listinfo') {
             $role = Yii::$app->params['managerInfo']->role;
-            if (in_array($role, ['admin-inner', 'service-inner', 'service-admin-inner'])) {
+            if (in_array($role, ['admin-inner', 'service-inner', 'service-admin-inner', 'saleman-chief'])) {
                 if (isset(Yii::$app->params['privInfo'])) {
                 if (isset(Yii::$app->params['privInfo']['merchant_id'])) {
     			    unset(Yii::$app->params['privInfo']['merchant_id']);

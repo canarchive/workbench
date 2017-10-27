@@ -183,12 +183,17 @@ class MerchantFee extends ModelBase
 
     public function updateCurrentNum()
     {
-        $infos = $this->getInfos(['status' => [0, 1]]);
+		$sql = "UPDATE `wd_merchant_fee` SET `fund_current` = `fund` WHERE `status` = 3;";
+		$sql .= "UPDATE `wd_merchant_fee` SET `fund_current` = `fund` WHERE `status` = 3;";
+		//$this->updateAll(['value' => ''], ['goods_id' => $this->id]);
+        $infos = $this->getInfos(['where' => ['status' => [1, 3]]]);
         foreach ($infos as $info) {
-            $info->num_current = min($info->num, $this->_getNum('valid'));
-            $info->num_back = $this->_getNum('back');
-            //$info->update(false, ['num_current', 'num_back']);
+            $info->num_current = min($info->num, $info->_getNum('valid'));
+            $info->num_back = $info->_getNum('back');
+			$info->fund_current = $info->num_current * $info['fee_unit'];
+            $info->update(false, ['num_current', 'num_back', 'fund_current']);
         }
+		return $sql;
     }
 
     public function getIsFirstInfos()

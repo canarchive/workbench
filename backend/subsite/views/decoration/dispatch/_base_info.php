@@ -1,6 +1,8 @@
 <?php
 use yii\helpers\Html;
 
+$privInfo = isset(Yii::$app->params['privInfo']) ? Yii::$app->params['privInfo'] : [];
+$serviceIds = isset($privInfo['service_id']) ? $privInfo['service_id'] : [];
 $tableName = 'user_merchant';
 ?>
 <div class="row">
@@ -30,7 +32,7 @@ $tableName = 'user_merchant';
                     </thead>
                     <tbody>
                     <tr>
-                        <td><?= $model->mobile; ?></td>
+                        <td><?php if (in_array($model->service_id, $serviceIds)) { echo $model->mobile; } else { echo $model->maskMobile($model->mobile); } ?></td>
                         <td><?= $model->city_code; ?></td>
                         <td><?= $model->service_id; ?></td>
                         <td><?= $model->house_id; ?></td>
