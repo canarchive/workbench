@@ -9,14 +9,14 @@ trait UpdateSalemanServiceTrait
     public function salemanServiceSql()
     {
         $sql = $this->_salemanServiceBase();
+        $sql .= $this->updateCurrentNum();
         $sql .= $this->_salemanServiceContract();
         $sql .= $this->_salemanServiceFund('`is_first` = 0', 'fund_num');
         $sql .= $this->_salemanServiceFund('`is_first` = 1', 'fund_first_num');
         $sql .= $this->_salemanServiceFund('1', 'fund_all_num');
         $sql .= $this->_salemanServiceFund('1', 'user_num', '`num`');
-        $sql .= $this->_salemanServiceFund('`status` IN (0, 1)', 'user_current_num', '`num_current`');
-        $sql .= $this->_salemanServiceFund('`status` IN (0, 1)', 'fund_current_num', '`fund_current`');
-        $this->updateCurrentNum();
+        $sql .= $this->_salemanServiceFund('1', 'user_current_num', '`num_current`');
+        $sql .= $this->_salemanServiceFund('1', 'fund_current_num', '`fund_current`');
         return $sql;
     }
 
@@ -55,6 +55,6 @@ trait UpdateSalemanServiceTrait
     public function updateCurrentNum()
     {
         $model = new MerchantFee();
-        $model->updateCurrentNum();
+        return $model->updateCurrentNum();
     }
 }

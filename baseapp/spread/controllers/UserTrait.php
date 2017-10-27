@@ -75,7 +75,7 @@ trait UserTrait
         $model = $this->findModel($id);
 
         $mobile = $model->mobile;
-        $callbackInfos = $model->_newModel('callback')->findAll(['mobile' => $mobile]);
+        $callbackInfos = $model->_newModel('callback')->find()->where(['mobile' => $mobile])->orderBy('created_at DESC')->all();
         $userMerchantInfos = $model->_newModel('userMerchant')->getInfos(['where' => ['mobile' => $model->mobile]]);
 
         $datas = [
@@ -115,38 +115,6 @@ trait UserTrait
             return $this->_update($userModel, $params);
         }
         return ['status' => 400, 'message' => 'user error'];
-    }
-
-    protected function _callbackOperation($userModel, $operationType, $params)
-    {
-        $model = $userModel->_newModel('callback', true);
-        if ($operationType == 'update') {
-            return $this->_update($model, $params);
-        }
-
-        $userStatus = ['status', 'invalid_status', 'out_status'];
-        $fields = array_merge($userStatus, ['mobile', 'service_id', 'content']);
-        $this->_initFields($model, $fields);
-        $model->merchant_id = $userModel->merchant_id;
-        $r = $model->insert(false);
-        foreach ($userStatus as $uStatus) {
-            $userModel->$uStatus = $model->$uStatus;
-            $userModel->update(false);
-        }
-
-        $return = [
-            'status' => 200,
-            'message' => 'OK',
-            'data' => [
-                'id' => $model->id,
-                'created_at' => date('Y-m-d H:i:s', $model->created_at),
-                'status' => $model->getKeyName('status', $model->status),
-                'invalid_status' => $model->getKeyName('invalid_status', $model->invalid_status),
-                'out_status' => $model->getKeyName('out_status', $model->out_status),
-                'content' => '',
-            ],
-        ];
-        return $return;
     }
 
     protected function _user_merchantOperation($userModel, $operationType, $params)
@@ -194,14 +162,6 @@ trait UserTrait
         ];
 
         return $return;
-    }
-
-    protected function _initFields($model, $fields)
-    {
-        foreach ($fields as $field) {
-            $model->$field = Yii::$app->request->post($field);
-        }
-        return $model;
     }
 
     protected function _update($model, $params)
