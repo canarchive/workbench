@@ -46,7 +46,7 @@ Trait UserMerchantTrait
     {
         return [
             'id' => ['type' => 'common'],
-            'mobile' => ['type' => 'inline', 'method' => 'maskMobile'],
+            'mobile' => ['type' => 'inline', 'formatView' => 'raw', 'method' => 'aTagMobile'],
             'merchant_id' => ['type' => 'point', 'table' => 'merchant'],
             'service_id' => ['type' => 'point', 'table' => 'service'],
             'interval_time' => ['type' => 'inline', 'method' => 'getIntervalTime'],
