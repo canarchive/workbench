@@ -146,6 +146,11 @@ trait TraitModel
         return isset($infos[$value]) ? $infos[$value] : $value;
     }
 
+    public function maskMobileView($view)
+    {
+        return $this->maskMobile();
+    }
+
     public function maskMobile($mobile = null)
     {
         $mobile = is_null($mobile) && isset($this->mobile) ? $this->mobile : $mobile;

@@ -45,6 +45,10 @@ trait UserMerchantTrait
             return Yii::$app->response->redirect($listUrl)->send($listUrl);
             exit();
         }
+        if (!$model->view_at) {
+            $model->view_at = Yii::$app->params['currentTime'];
+            $model->update(false, ['view_at']);
+        }
 
         return $this->render('@backend/subsite/views/user-merchant/updateout', ['model' => $model]);
     }
