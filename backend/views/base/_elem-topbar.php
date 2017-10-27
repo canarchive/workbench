@@ -32,7 +32,7 @@ $managerInfo = Yii::$app->params['managerInfo'];
         <!-- user dropdown ends -->
 
         <!-- theme selector starts -->
-        <div class="btn-group pull-right theme-container animated tada">
+        <!--<div class="btn-group pull-right theme-container animated tada">
             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                 <i class="glyphicon glyphicon-tint"></i><span
                     class="hidden-sm hidden-xs"> Change Theme / Skin</span>
@@ -48,7 +48,7 @@ $managerInfo = Yii::$app->params['managerInfo'];
                 <li><a data-value="spacelab" href="#"><i class="whitespace"></i> Spacelab</a></li>
                 <li><a data-value="united" href="#"><i class="whitespace"></i> United</a></li>
             </ul>
-        </div>
+        </div>-->
         <!-- theme selector ends -->
 
         <ul class="collapse navbar-collapse nav navbar-nav top-menu" id="baseMenu">
