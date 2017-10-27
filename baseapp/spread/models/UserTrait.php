@@ -44,6 +44,7 @@ trait UserTrait
             'callback_again' => '再次回访时间',
             'view_at' => '查看时间',
             'signup_at' => '报名时间',
+            'signed_merchant' => '签约公司',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
 

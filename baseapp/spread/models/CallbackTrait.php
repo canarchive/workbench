@@ -31,6 +31,7 @@ trait CallbackTrait
             'invalid_status' => '无效原因',
             'out_status' => '无法派单原因',
             'created_at' => '创建时间',
+            'signed_merchant' => '签约公司',
             'update_at' => '更新时间',
         ];
     }

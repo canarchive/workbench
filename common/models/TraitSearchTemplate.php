@@ -146,11 +146,11 @@ trait TraitSearchTemplate
 	{
 		$method = $info['method'];
 		if ($sort == 'list') {
-    		$value = function($model) use ($field, $method) {
-                return $model->$method();
+    		$value = function($model) use ($field, $method, $view) {
+                return $model->$method($view);
             };
 		} else {
-            $value = $this->$method();
+            $value = $this->$method($view);
 		}
 		return $value;
 	}
