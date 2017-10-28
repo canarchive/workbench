@@ -38,9 +38,8 @@ $nextThumb = empty($nextInfo) ? '' : "<img src='" . $nextInfo->resizePic('thumb'
     <li class="swiper-slide">
         <a href="<?= $this->context->getShowUrl($info['id']); ?>" title="<?= $info['name'] . '摄影图片'; ?>">
             <div class="viimgz ">
-            <img src="<?= $info->resizePic('thumb', 280, 440); ?>" data-cache="true" width="280" height="440" alt="<?= $info['name']; ?>" /></div>
+            <img src="<?= $info->resizePic('thumb', 280, 440); ?>" data-cache="true" width="280" height="440" alt="<?= $info['name'] . '摄影图片'; ?>" /></div>
             <p class="fs22 pt20"><?= $info['name']; ?></p>
-            <!--<p class="fs10"></p>-->
         </a>
     </li>
     <?php } ?>

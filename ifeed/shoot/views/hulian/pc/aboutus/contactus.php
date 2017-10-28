@@ -13,7 +13,7 @@ $data = $this->context->getContactDatas();
 		    <li>地址：<?= $data['address']; ?></li>
         </ul>
         <?php if (!empty($data['line'])) { ?><p>乘车路线：<?= $data['line']; ?></p><?php } ?>
-        <a class="server_btns" href="/apply.html" rel="nofollow" title="预约拍摄">预约到店</a>
+		<a class="server_btns" href="<?= $this->context->serviceUrl; ?>" rel="nofollow" title="预约拍摄">预约到店</a>
     </div>
     <div id="allmap" class="contact_map fl"></div>
 </div>

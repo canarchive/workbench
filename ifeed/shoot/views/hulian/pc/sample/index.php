@@ -11,7 +11,7 @@ $this->params['metaExt'] = $page != 1 ? "<link rel='canonical' href='{$sortUrl}'
     <div class="china">
         <div class="ct6 ert">
             <div class="ertcon">
-                <span class="p2"><?= $sortName; ?>作品展示</span>
+                <h1 class="p2"><?= $sortName; ?>作品展示</h1>
                 <span class="p1 fs18"><?= $sortBrief; ?></span>
             </div>
         </div>
@@ -35,5 +35,5 @@ $this->params['metaExt'] = $page != 1 ? "<link rel='canonical' href='{$sortUrl}'
 </div>
 <div class="mpage c">
     <?php //echo $this->render('_page-elem'); ?>
-    <?php $pageStr = LinkPager::widget(['pagination' => $pages, 'linkOptions' => ['rel' => 'nofollow']]); $pageStr = str_replace('com/" rel="nofollow"', 'com/"', $pageStr); echo $pageStr;?>
+    <?php $pageStr = LinkPager::widget(['pagination' => $pages, 'linkOptions' => ['rel' => 'nofollow']]); $pageStr = str_replace('cn/" rel="nofollow"', 'com/"', $pageStr); echo $pageStr;?>
 </div>
