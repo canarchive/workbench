@@ -29,7 +29,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <?php $i = 1; foreach ($quoteInfos as $info) { $elemClass = $i <= 3 ? 'red' : 'gray'; ?>
         <li class="clearfix">
             <span class="span_left span_<?= $elemClass; ?>"><?= $i; ?></span>
-            <a href="<?= "{$baseUrl}/{$info['city_code']}/quoteshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
+            <a href="<?= "{$baseUrl}/{$info['city_code']}/quoteshow_{$info['code']}.html"; ?>" title="<?= $info['name']; ?>"><?= $info['name']; ?></a>
             <!--<span class="fr span2" onclick="check_box('152544','21-1','<?= $info['name']; ?>')">免费报价</span></li>-->
         </li>
         <?php $i++; } ?>

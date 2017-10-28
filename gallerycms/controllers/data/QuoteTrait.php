@@ -5,6 +5,7 @@ namespace gallerycms\controllers\data;
 use Yii;
 use common\models\Company;
 use gallerycms\house\models\QuoteBak;
+use gallerycms\house\models\Quote;
 use gallerycms\house\models\CommunityBase;
 use common\models\Quote as QuoteTool;
 
@@ -39,6 +40,7 @@ trait QuoteTrait
             $hardbackFull = round($priceFull * 2.0242, 2);
             $hardbackPart = round($hardbackFull / 1.992, 2);
             $sql .= "UPDATE `wc_quote_bak` SET `price_full` = $priceFull, `price_part` = $pricePart, `hardback_full` = $hardbackFull, `hardback_part` = $hardbackPart WHERE `area_real` = $area; <br />";
+			break;
         }
         echo $sql;
 
@@ -48,8 +50,18 @@ trait QuoteTrait
 
     public function quote()
     {
-        $model = new QuoteBak();
-        $infos = $model->find()->all();
+        $model = new Quote();
+        $hInfos = array_keys($model->houseTypeInfos);
+
+		$where = ['status' => 0];
+        $infos = $model->find()->select('id, house_type')->where($where)->limit(5000)->all();
+		$sql = '';
+		foreach ($infos as $info) {
+        $hIndex = rand(0, count($hInfos) - 1);
+        $hKey = $hInfos[$hIndex];
+			$sql .= "UPDATE `wc_quote` SET `house_type` = '{$hKey}', `status` = 1 WHERE `id` = {$info['id']};\n<br />";
+		}
+		echo $sql; exit();
         $sInfos = $model->styleInfos;
         $hInfos = $model->houseTypeInfos;
         $bInfos = $model->budgetInfos;

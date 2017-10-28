@@ -40,7 +40,7 @@ class MerchantController extends MerchantControllerBase
             $where = array_merge($where, [['like', 'name', $keyword]]);
         }
         //print_r($where);exit();
-        $orderBy = ['created_at' => SORT_DESC];
+        $orderBy = ['orderlist' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 18]);
 		$datas = [
             'keyword' => $keyword,

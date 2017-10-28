@@ -16,24 +16,25 @@ class Quote extends GallerycmsModel
 		'a' => 'area', 
 	];
     
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return '{{%quote}}';
     }
 
-    /**
-     * @inheritdoc
-     */
+    public function behaviors()
+    {
+        $behaviors = [
+            $this->timestampBehaviorComponent,
+        ];
+        return $behaviors;
+    }
+
     public function rules()
     {
         return [
-            [['name'], 'required'],
 			[['orderlist'], 'integer'],
 			[['orderlist', 'status'], 'default', 'value' => '0'],
-			[['house_type', 'style', 'area', 'description'], 'safe'],
+			[['house_type', 'code', 'district', 'community_name', 'area', 'area_real', 'price_full', 'price_part', 'hardback_full', 'hardback_part', 'style', 'area', 'description'], 'safe'],
         ];
     }
 
@@ -96,7 +97,7 @@ class Quote extends GallerycmsModel
 	{
 		$infos = $this->find()->where($where)->indexBy('id')->orderBy(['created_at' => SORT_DESC])->limit($limit)->all();
 		foreach ($infos as $key => & $info) {
-            $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
+            $info['name'] = $info['community_name'] . '面积' . $info['area_real'] . '平米' . $info->houseTypeInfos[$info['house_type']] . $info->styleInfos[$info['style']];
 		}
 
         //$cache->set($keyCache, $infos);

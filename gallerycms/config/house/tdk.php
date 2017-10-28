@@ -33,7 +33,7 @@ return [
         'description' => '兔班长装修网为您提供{{CITYNAME}}{{TAGSTR}}装修效果图，{{CITYNAME}}{{TAGSTR}}装修设计公司等信息供业主选择。',
     ],
     // 找装修公司交叉搜索：{价位}：
-    'merchant-index-price' => [
+    'merchant-index-budget' => [
         'title' => '{{CITYNAME}}{{TAGSTR}}装修设计_{{CITYNAME}}{{TAGSTR}}房屋装修报价{{PAGESTR}}-兔班长装修网',
         'keyword' => '{{CITYNAME}}{{TAGSTR}}装修设计,{{CITYNAME}}{{TAGSTR}}房屋装修报价',
         'description' => '兔班长装修网为您提供{{CITYNAME}}{{TAGSTR}}装修设计，{{CITYNAME}}{{TAGSTR}}房屋装修报价等信息供业主选择。',

@@ -69,8 +69,6 @@ class QuoteController extends HouseController
 	public function actionShow()
 	{
 		$code = \Yii::$app->getRequest()->get('id'); 
-        //$id = \Yii::$app->getRequest()->get('id');
-		$id = intval(substr($code, strrpos($code, 'e') + 1));
         $model = new Quote();
 		$info = $model->getInfo(['code' => $code]);
 		if (empty($info) || $info['code'] != $code) {
