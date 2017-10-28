@@ -36,6 +36,7 @@ class AbstractModel extends SpiderAbstract
     {
         $urlBase = str_replace(['"', "'", ' '], ['', '', ''], $urlBase); 
         $url = strpos($urlBase, '//') === 0 ? 'http:' . $urlBase : $urlBase;
+        echo $url . '<br />';
         if (strpos($url, 'http') !== false) {
             return $url;
         }
