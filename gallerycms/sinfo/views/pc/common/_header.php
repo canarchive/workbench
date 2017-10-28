@@ -64,6 +64,9 @@ $secondLevels = [
 					<a <?php if ($urlInfo['view'] == 'login' || $urlInfo['view'] == 'register') { echo 'rel="nofollow"'; } ?> href="<?= $urlInfo['url']; ?>"><?= $urlInfo['name']; ?></a>
                 </li>
                 <?php } ?>
+                <li class="d_2">
+                    <a rel="nofollow" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=<?= Yii::$app->params['siteQQ']; ?>&site=qq&menu=yes" style="font-size: 14px;">在线咨询</a>
+                </li>
             </ul>
             <!--<div class="tel">客服电话 400-600-5555 </div>-->
         </div>
