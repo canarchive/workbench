@@ -72,7 +72,7 @@ class QuoteController extends HouseController
         //$id = \Yii::$app->getRequest()->get('id');
 		$id = intval(substr($code, strrpos($code, 'e') + 1));
         $model = new Quote();
-		$info = $model->getInfo($id);
+		$info = $model->getInfo(['code' => $code]);
 		if (empty($info) || $info['code'] != $code) {
 			throw new NotFoundHttpException('页面不存在');
 		}
