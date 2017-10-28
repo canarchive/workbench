@@ -129,7 +129,7 @@ class Realcase extends MerchantModel
 
         $condition = [ 
             'info_table' => 'realcase',
-            //'info_field' => 'design_sketch',
+            'info_field' => 'design_sketch',
             //'info_field' => 'picture',
             'info_id' => $info->id,
             'in_use' => 1,

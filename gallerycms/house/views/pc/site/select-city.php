@@ -2,13 +2,13 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$cssFiles = ['3cdab-6033', '355e9-6276', 'e6610-7846', 'city'];
-$jsFiles = ['jquery', 'common'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
-$this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
+//$cssFiles = ['3cdab-6033', '355e9-6276', 'e6610-7846', 'city'];
+//$jsFiles = ['jquery', 'common'];
+//$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8']);
+//$this->params['jsStr'] = $this->render('../_js-aboutus', ['jsFiles' => $jsFiles]);
 ?>
 <script>
-//window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
+window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
 </script>
 
 <div class="choose_city">

@@ -3,18 +3,18 @@
     <div class="mui-slider-group mui-slider-loop">
         <!--支持循环，需要重复图片节点-->
         <div class="mui-slider-item mui-slider-item-duplicate">
-            <a href="" id="link_url">
+            <a href="http://m.hdb.tu8zhang.com/bm-tquote-beijing.html?cid=2" id="link_url">
                 <img id="img_url" src="" /></div>
         <div class="mui-slider-item">
-            <a href="javascript:void(0);">
+            <a href="http://m.hdb.tu8zhang.com/bm-tquote-beijing.html?cid=2">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/792b1-2553.jpg" /></a>
         </div>
         <div class="mui-slider-item">
-            <a href="javascript:void(0);">
+            <a href="http://m.hdb.tu8zhang.com/bm-designlf-beijing.html?cid=2">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/eae66-2830.jpg" /></a>
         </div>
         <div class="mui-slider-item">
-            <a href="javascript:void(0);">
+            <a href="http://m.hdb.tu8zhang.com/bm-tbz-beijing.html?cid=2">
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/e192f-6849.jpg" /></a>
         </div>
         <script>

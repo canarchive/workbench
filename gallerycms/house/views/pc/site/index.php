@@ -24,10 +24,10 @@ $this->params['jsStr'] = $this->render('_js-header', []);
 <?php echo $this->render('_quote', ['infos' => $quoteInfos]); ?>
 <div class="main">
     <div class="wrap_mar">
-        <?php echo $this->render('_ad-ask'); ?>
+        <?php //echo $this->render('_ad-ask'); ?>
         <?php //echo $this->render('_ad-time'); ?>
         <?php //echo $this->render('_ask-pic'); ?>
-        <?php echo $this->render('_ask', ['infos' => $askInfos]); ?>
+        <?php //echo $this->render('_ask', ['infos' => $askInfos]); ?>
     </div>
 </div>
 <!-- 友情链接 -->

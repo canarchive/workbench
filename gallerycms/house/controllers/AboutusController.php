@@ -13,6 +13,7 @@ class AboutusController extends HouseController
     {
         parent::init();
         $this->metaLocation = '';
+		header('location: http://www.weinaya.com');
     }
 
 	public function actionIndex()
