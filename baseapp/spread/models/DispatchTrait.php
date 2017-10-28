@@ -2,6 +2,8 @@
 
 namespace baseapp\spread\models;
 
+use Yii;
+
 trait DispatchTrait
 {
     public $houseInfo;
@@ -70,6 +72,7 @@ trait DispatchTrait
                 'user_id' => $data['user_id'],
                 'mobile' => $data['mobile'],
                 'house_id' => $data['house_id'],
+				'created_at' => Yii::$app->params['currentTime'],
                 'service_id' => $data['service_id'],
                 'num_merchant' => 1,
             ];

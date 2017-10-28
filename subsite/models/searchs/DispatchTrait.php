@@ -45,12 +45,12 @@ Trait DispatchTrait
             'city_code' => ['type' => 'common'],
             //'house_id' => ['type' => 'point', 'table' => 'merchant'],
             'service_id' => ['type' => 'point', 'table' => 'service', 'pointField' => 'id'],
-            'mobile' => ['type' => 'inline', 'method' => 'maskMobileView'],
+            'mobile' => ['type' => 'inline', 'formatView' => 'raw', 'method' => 'aTagMobile'],
             //'mobile' => ['type' => 'common'],
             'num_merchant' => ['type' => 'common'],
             'note' => ['type' => 'common', 'listNo' => true],
 
-            //'created_at' => ['type' => 'timestamp'],
+            'created_at' => ['type' => 'timestamp'],
             'updated_at' => ['type' => 'timestamp', 'listNo' => true],
             'sendmsg_at' => ['type' => 'condition', 'formatView' => 'raw'],
         ];
