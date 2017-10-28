@@ -15,15 +15,42 @@ class TmpController extends GallerycmsController
         $this->$action();
     }   
 
+    public function dispatch()
+    {
+        $sqlInsert = 'TRUNCATE `workplat_statistic`.`ws_dispatch_origin`;INSERT INTO `workplat_statistic`.`ws_dispatch_origin` (
+                `merchant_id`, `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`)
+                SELECT `merchant_id`, `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day` FROM `workplat_subsite`.`wd_user_merchant` GROUP BY `merchant_id`, `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`;<br />';
+        $sqlBase = "UPDATE `workplat_statistic`.`ws_dispatch_origin` AS `a`, 
+            (SELECT `merchant_id`, `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user_merchant` WHERE {{WHERE}} GROUP BY `merchant_id`, `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`) AS `b` 
+            SET `a`.`{{UPFIELD}}` = `b`.`count` 
+            WHERE `a`.`merchant_id` = `b`.`merchant_id` AND `a`.`service_id` = `b`.`service_id` AND `a`.`created_month` = `b`.`created_month` AND `a`.`created_week` = `b`.`created_week` AND `a`.`created_weekday` = `b`.`created_weekday` AND `a`.`created_day` = `b`.`created_day`;";
+
+        $elems = [
+            '' => 'dispatch_num',
+            'back_reply' => 'back_reply_num',
+            'back_confirm' => 'back_confirm_num',
+        ];
+
+        $outStr = $sqlInsert;
+        foreach ($elems as $elem => $elemField) {
+            $where = "`status` = '{$elem}'";
+            $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $elemField], $sqlBase) . '<br />';
+            $outStr .= $sql;
+        }
+
+        echo $outStr;
+    }
+
     public function service()
     {
-        $sqlInsert = 'TRUNCATE `workad_statistic_decoration`.`ws_service_origin`;INSERT INTO `workad_statistic_decoration`.`ws_service_origin` (
-                `city_code`, `merchant_id`, `client_type`, `service_id`, `channel`, `created_month`, `created_week`, `created_weekday`, `created_day`)
-                SELECT `city_code`, `merchant_id`, `client_type`, `service_id`, `channel`, `created_month`, `created_week`, `created_weekday`, `created_day` FROM `workad_decoration`.`wd_user` GROUP BY `city_code`, `merchant_id`, `client_type`, `service_id`, `channel`, `created_month`, `created_week`, `created_weekday`, `created_day`;<br />';
-        $sqlBase = "UPDATE `workad_statistic_decoration`.`ws_service_origin` AS `a`, 
-            (SELECT `city_code`, `merchant_id`, `client_type`, `service_id`, `channel`, `created_month`, `created_week`, `created_weekday`, `created_day`, COUNT(*) AS `count` FROM `workad_decoration`.`wd_user` WHERE {{WHERE}} GROUP BY `city_code`, `merchant_id`, `client_type`, `service_id`, `channel`, `created_month`, `created_week`, `created_weekday`, `created_day`) AS `b` 
+        $sqlInsert = 'TRUNCATE `workplat_statistic`.`ws_service_origin`;';
+        $sqlInsert .= 'INSERT INTO `workplat_statistic`.`ws_service_origin` (
+                `merchant_id`, `service_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
+                SELECT `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN ( GROUP BY `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");<br />';
+        $sqlBase = "UPDATE `workplat_statistic`.`ws_service_origin` AS `a`, 
+            (SELECT `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user` WHERE {{WHERE}} GROUP BY `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d')) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
-            WHERE `a`.`city_code` = `b`.`city_code` AND `a`.`merchant_id` = `b`.`merchant_id` AND `a`.`client_type` = `b`.`client_type` AND `a`.`service_id` = `b`.`service_id` AND `a`.`channel` = `b`.`channel` AND `a`.`created_month` = `b`.`created_month` AND `a`.`created_week` = `b`.`created_week` AND `a`.`created_weekday` = `b`.`created_weekday` AND `a`.`created_day` = `b`.`created_day`;";
+            WHERE `a`.`merchant_id` = `b`.`merchant_id` AND `a`.`service_id` = `b`.`service_id` AND `a`.`created_day` = `b`.`created_day`;";
 
         $elems = [
             'all' => 'visit_num_success',
@@ -31,8 +58,8 @@ class TmpController extends GallerycmsController
             'follow' => 'follow_num',
             'follow-plan' => 'followplan_num',
             'valid' => 'valid_num',
+            'valid-part' => 'valid_part_num',
             'valid-out' => 'validout_num',
-            'valid-dispatch' => 'validdispatch_num',
             'bad' => 'bad_num',
         ];
 
