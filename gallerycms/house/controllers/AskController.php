@@ -19,6 +19,8 @@ class AskController extends HouseController
     {
         parent::init();
 
+		header("location: http://www.tu8zhang.com");
+
         if ($this->clientType == 'mobile') {
             $this->layout = '@gallerycms/views/main-mobile';
         } else {

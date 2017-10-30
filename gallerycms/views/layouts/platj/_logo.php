@@ -18,9 +18,9 @@ $info = $this->context->mDatas['info'];
                     <ul class="clearfix">
                         <li>
                             <a href="javascript:;" target="_self" onclick="changemidvalue('装修公司','merchant');">装修公司</a></li>
-                        <li>
+                        <!--<li>
                             <a href="javascript:;" target="_self" onclick="changemidvalue('装修问答','ask');">装修问答</a></li>
-                        <!--<li><a href="javascript:;" target="_self" onclick="changemidvalue('装修报价','100,999999');">装修报价</a></li>-->
+                        <li><a href="javascript:;" target="_self" onclick="changemidvalue('装修报价','100,999999');">装修报价</a></li>-->
                     </ul>
                 </div>
                 <script type="text/javascript">

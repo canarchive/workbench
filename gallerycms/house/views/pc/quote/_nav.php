@@ -10,7 +10,7 @@ $navDatas = $this->context->navDatas;
                     <span class="topbar-city"><?= $this->context->currentCityName; ?></span>
                 </a>
             </li>
-            <?php foreach (['index', 'merchant', 'sample', 'ask', 'quote'] as $nav) { ?>
+            <?php foreach (['index', 'merchant', 'sample', 'quote'] as $nav) { ?>
             <li><a href="<?= $navDatas[$nav]['url']; ?>"><?= $navDatas[$nav]['name']; ?></a></li>
             <?php } ?>
         </ul>

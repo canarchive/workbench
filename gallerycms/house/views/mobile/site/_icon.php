@@ -8,7 +8,7 @@
 			<a id="wapdsy_D02_02" href="/sample/" class="n2" alt="<?= $this->context->currentCityName . '装修效果图'; ?>">
                 <i></i><p>效果图</p>
             </a>
-			<a id="wapdsy_D02_03" href="/ask_lm_gzsj/" class="n3" title="<?= $this->context->currentCityName . '装修问答'; ?>">
+			<a id="wapdsy_D02_03" href="javascript:void(0);" class="n3" rel="nofollow">
                 <i></i><p>装修问答</p>
             </a>
 			<a id="wapdsy_D02_15" href="<?= "/{$this->context->currentCityCode}/quote/"; ?>" class="n15" title="<?= $this->context->currentCityName . '装修报价'; ?>">

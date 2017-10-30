@@ -85,11 +85,11 @@
                 <i class="zong_icon i8"></i>
             </a>
             <a href="<?= "/{$this->context->currentCityCode}/merchant/"; ?>" title="<?= $this->context->currentCityName . '装修公司'; ?>"><?= '装修公司'; ?></a></li>
-        <li>
+        <!--<li>
             <a href="<?= "/ask_lm_gzsj/"; ?>" title="<?= $this->context->currentCityName . '装修问答'; ?>">
                 <i class="zong_icon i9"></i>
             </a>
-            <a href="<?= "/ask_lm_gzsj/"; ?>" title="<?= $this->context->currentCityName . '装修问答'; ?>"><?= '装修问答'; ?></a></li>
+            <a href="<?= "/ask_lm_gzsj/"; ?>" title="<?= $this->context->currentCityName . '装修问答'; ?>"><?= '装修问答'; ?></a></li>-->
         <li>
             <a href="<?= "/{$this->context->currentCityCode}/quote/"; ?>" title="<?= $this->context->currentCityName . '装修报价'; ?>">
                 <i class="zong_icon i10"></i>

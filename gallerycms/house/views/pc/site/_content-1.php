@@ -8,7 +8,8 @@
         <ul>
             <?php $i = 0; foreach ($infos as $info) { if ($i > 3) { continue; }?>
             <li <?php if ($i % 4 == 3) { echo 'style="margin-right:0px;"'; } ?>>
-                <a href="<?= '/' . $this->context->currentCityCode . '/realcaseshow_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">
+                <!--<a href="<?= '/' . $this->context->currentCityCode . '/realcaseshow_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">-->
+                <a href="javascript: message_check('<?= $info['id']; ?>','realcase', 'index', '免费设计', '');" rel="nofollow">
                     <img src="<?= $info->resizePic('thumb', 380, 244); ?>" alt="<?= $info['name']; ?>">
                     <span class='op'></span>
                     <p class='imgLa'><?= $info['name']; ?></p></a>

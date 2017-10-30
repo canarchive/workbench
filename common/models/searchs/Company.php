@@ -13,7 +13,10 @@ class Company extends CompanyModel
     {
         $query = CompanyModel::find();
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
+		$dataProvider = new ActiveDataProvider([
+			'query' => $query,
+			'pagination' => ['pageSize' => 100]
+		]);
 
         return $dataProvider;
     }

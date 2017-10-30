@@ -3,7 +3,7 @@
     <p class="copy-1">
         <a href='<?= "/{$this->context->currentCityCode}/"; ?>'>回到首页</a><i></i>
         <a href='<?= "/{$this->context->currentCityCode}/merchant/"; ?>' title="<?= $this->context->currentCityName; ?>装修公司">装修公司</a><i></i>
-        <a href='<?= "/ask_lm_gzsj/"; ?>' title="<?= $this->context->currentCityName . '装修问答'; ?>">装修问答</a><i></i>
+        <a href='javascript:void(0);' rel="nofollow">装修问答</a><i></i>
         <a href='/desc.html' class="wy_download" id="downLoad" rel="nofollow">关于我们</a>
     </p>
     <p class="copy-2">

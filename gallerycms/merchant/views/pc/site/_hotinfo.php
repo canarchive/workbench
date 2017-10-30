@@ -19,7 +19,8 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
         <?php $i = 1; foreach ($askInfos as $info) { $elemClass = $i <= 3 ? 'red' : 'gray'; ?>
         <li class="clearfix">
             <span class="span_left span_<?= $elemClass; ?>"><?= $i; ?></span>
-            <a href="<?= "{$baseUrl}/askshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 18, '...'); ?></a>
+            <!--<a href="<?= "{$baseUrl}/askshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 18, '...'); ?></a>-->
+            <a href="javascript: void(0);" rel="nofollow"><?= StringHelper::truncate($info['name'], 18, '...'); ?></a>
             <!--<span class="fr span2" onclick="check_box('152544','21-1','<?= $info['name']; ?>')">免费咨询</span>-->
         </li>
         <?php $i++; } ?>

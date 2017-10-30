@@ -10,7 +10,8 @@ $askInfos = $this->context->mDatas['askInfos'];
             <!-- <marquee behavior="alternate" direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:403px"> -->
             <?php $i = 1; foreach ($askInfos as $info) { $elemClass = $i <= 3 ? 'red' : 'gray'; ?>
             <div class='J-settle'>
-                <a class='settle_a' href="<?= "/askshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 13, '...'); ?></a>
+                <!--<a class='settle_a' href="<?= "/askshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 13, '...'); ?></a>-->
+                <a class='settle_a' href="javascript:void(0);" rel="nofollow"><?= StringHelper::truncate($info['name'], 13, '...'); ?></a>
             </div>
             <?php } ?>
         </div>

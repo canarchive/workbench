@@ -10,7 +10,8 @@
         <ul>
             <?php $i = 0; foreach ($infos as $info) { if ($i > 3) { continue; }?>
             <li <?php if ($i % 4 == 3) { echo 'style="margin-right:0px;"'; } ?>>
-                <a href="<?= '/sample_show_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">
+                <!--<a href="<?= '/sample_show_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>">-->
+                <a href="javascript: message_check('<?= $info['id']; ?>','realcase', 'index', '免费设计', '');" rel="nofollow">
                     <img src="<?= $info->resizePic('thumb', 380, 244); ?>" alt="<?= $info['name']; ?>"></a>
                 <a href="<?= '/sample_show_' . $info['id'] . '.html'; ?>" title="<?= $info['name']; ?>" class='recommendTableBt' style="height:35px;overflow:hidden;">
                     <p class='recommendTableBtZh'><?= $info['name']; ?></p></a>

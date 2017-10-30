@@ -21,13 +21,17 @@ use gallerycms\components\LinkPager;
             <input type="hidden" class="ajaxGetNumById" value="<?= $info['id']; ?>" />
             <dl class="dl_none">
                 <dt>
-                    <a href="<?= "/{$this->context->currentCityCode}/realcaseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
+                    <!--<a href="<?= "/{$this->context->currentCityCode}/realcaseshow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">-->
+                    <a href="javascript: message_check('<?= $info['id']; ?>','realcase', 'index', '免费设计', '');" rel="nofollow">
 						<img src="<?= $info['thumb']; ?>" alt="<?= $info['name']; ?>" width="204" height="155" />
                     </a>
                     <!--<span></span><i>实景图片</i>-->
                 </dt>
                 <dd class="dd1">
-                    <a href="<?= "/{$this->context->currentCityCode}/realcase_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>
+                    <!--<a href="<?= "/{$this->context->currentCityCode}/realcase_show_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>"><?= StringHelper::truncate($info['name'], 12, '...'); ?></a>-->
+                    <a href="javascript: message_check('<?= $info['id']; ?>','realcase', 'index', '免费设计', '');" rel="nofollow">
+						<?= StringHelper::truncate($info['name'], 12, '...'); ?>
+                    </a>
                     <!--<a rel="nofollow" style="display:none;" href="javascript:;" id="_<?= $info['id']; ?>">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/img/87843-2527.png" /></a>
                     <a rel="nofollow" style="display:none;" href="javascript:;" id="jin_6572154">

@@ -57,7 +57,7 @@ class SitemapController extends HouseController
             'lastmod' => Yii::$app->params['currentTime'],
         ];
 
-        $askShowUrls = $this->_askShowUrlIndex();
+        $askShowUrls = [];//$this->_askShowUrlIndex();
         $quoteShowUrls = $this->_quoteShowUrlIndex();
         $merchantShowUrls = $this->_merchantShowUrlIndex();
         $datas = array_merge($datas, $askShowUrls, $quoteShowUrls, $merchantShowUrls);
