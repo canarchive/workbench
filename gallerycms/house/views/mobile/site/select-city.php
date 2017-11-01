@@ -2,12 +2,12 @@
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$cssFiles = ['index.min', '9c07e-2206', 'headfooter.min'];
-$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
+//$cssFiles = ['index.min', '9c07e-2206', 'headfooter.min'];
+//$this->params['cssStr'] = $this->render('@gallerycms/views/_css', ['cssFiles' => $cssFiles, 'path' => 'plat8/m']);
 echo $this->render('@gallerycms/views/layouts-m/plat8/_js-header');
 ?>
 <script>
-//window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
+window.location.href = "<?= "/{$this->context->currentCityCode}/"; ?>";
 </script>
 <header class="header pg-hd">
     <a id="headcitycode" class="icon-logo-index" href="/"></a>

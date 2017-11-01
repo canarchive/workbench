@@ -3,6 +3,7 @@
 namespace gallerycms\merchant\controllers;
 
 use Yii;
+use yii\helpers\StringHelper;
 use gallerycms\components\MerchantController;
 use gallerycms\house\models\AskQuestion;
 use gallerycms\house\models\Quote;
@@ -26,7 +27,8 @@ class SiteController extends MerchantController
 	public function actionShow()
 	{
         $datas = $this->_initMerchant('merchant-show');
-		$dataTdk = ['{{INFONAME}}' => $datas['info']['name_full']];
+		$desc = StringHelper::truncate($datas['info']['description'], 200, '...');
+		$dataTdk = ['{{INFONAME}}' => $datas['info']['name_full'], '{{DESCRIPTION}}' => $datas['info']['description']];
 		$this->getTdkInfos('merchant-desc', $dataTdk);
 
 		return $this->render('show', $datas);

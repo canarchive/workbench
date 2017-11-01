@@ -108,7 +108,8 @@ class Merchant extends MerchantModel
             $this->fillAttrs();
             $this->addRelateInfos();
         } elseif ($this->num_owner == 0 && $this->num_comment == 0) {
-            $this->addRelateInfos();
+            $r = $this->addRelateInfos();
+			var_dump($r);
         }
 
         $this->_updateRelateInfos();

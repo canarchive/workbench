@@ -2,6 +2,7 @@
 $info = $this->context->mDatas['info'];
 $rInfos = $this->context->mDatas['realcaseInfos'];
 ?>
+<?php if (count($rInfos) > 0) { ?>
 <div class="mui-slider">
     <div class="mui-slider-group mui-slider-loop">
         <!--支持循环，需要重复图片节点-->
@@ -31,3 +32,4 @@ gallery.slider({
     interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
 });
 </script>
+<?php } ?>
