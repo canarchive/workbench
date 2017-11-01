@@ -91,7 +91,8 @@ trait UpdateServiceTrait
     {
         $sql = 'TRUNCATE `workplat_statistic`.`ws_service_origin`;';
         $sql .= 'INSERT INTO `workplat_statistic`.`ws_service_origin` (`merchant_id`, `service_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
-            SELECT `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN (1, 27, 28, 31, 46, 47, 49, 50, 52) GROUP BY `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");<br />';
+            SELECT `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN (1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55, 56, 57) GROUP BY `merchant_id`, `service_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");<br />';
+		$sql .= 
         return $sql;
     }
 }

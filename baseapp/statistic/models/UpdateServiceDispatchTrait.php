@@ -4,7 +4,7 @@ namespace baseapp\statistic\models;
 
 trait UpdateServiceDispatchTrait
 {
-    protected $serviceIds = [1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55];
+    protected $serviceIds = [1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55, 56, 57];
     public function serviceDispatchSql()
     {
         $this->tableStr = 'ws_service_dispatch_origin';
@@ -89,6 +89,7 @@ trait UpdateServiceDispatchTrait
         $sql = "TRUNCATE `workplat_statistic`.`{$this->tableStr}`;";
         $sql .= "INSERT INTO `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_day`, `created_weekday`, `created_week`)
             SELECT `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m'), FROM_UNIXTIME(`created_at`, '%Y%m%d'), FROM_UNIXTIME(`created_at`, '%w'), FROM_UNIXTIME(`created_at`, '%u') FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d');<br />";
+        $sql .= "REPLACE `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_day`, `created_weekday`, `created_week`) SELECT `service_id`, `created_month`, `created_day`, `created_weekday`, `created_week` FROM `workplat_subsite`.`wd_user_merchant` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, `created_day`;<br />";
         return $sql;
 
 

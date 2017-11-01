@@ -183,8 +183,8 @@ class MerchantFee extends ModelBase
 
     public function updateCurrentNum()
     {
-		$sql = "UPDATE `wd_merchant_fee` SET `fund_current` = `fund` WHERE `status` = 3;";
-		$sql .= "UPDATE `wd_merchant_fee` SET `fund_current` = `fund` WHERE `status` = 3;";
+		$sql = "UPDATE `workplat_subsite`.`wd_merchant_fee` SET `fund_current` = `fund` WHERE `status` = 3;";
+		$sql .= "UPDATE `workplat_subsite`.`wd_merchant_fee` SET `fund_current` = `fund` WHERE `status` = 3;";
 		//$this->updateAll(['value' => ''], ['goods_id' => $this->id]);
         $infos = $this->getInfos(['where' => ['status' => [1, 3]]]);
         foreach ($infos as $info) {
