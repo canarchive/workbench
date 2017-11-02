@@ -19,6 +19,11 @@ class Callback extends ModelBase
         return $this->_userStatus('invalidStatus');
     }
 
+    public function getFollowStatusInfos()
+    {
+        return $this->_userStatus('followStatus');
+    }
+
     public function getOutStatusInfos()
     {
         return $this->_userStatus('outStatus');

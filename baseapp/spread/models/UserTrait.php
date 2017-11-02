@@ -41,6 +41,8 @@ trait UserTrait
             'service_num' => '客服数',
             'status' => '状态',
             'invalid_status' => '无效原因',
+            'follow_status' => '跟进状态',
+            'out_status' => '无法派单状态',
             'callback_again' => '再次回访时间',
             'view_at' => '查看时间',
             'signup_at' => '报名时间',

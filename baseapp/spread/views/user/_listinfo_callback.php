@@ -14,6 +14,7 @@ $modelNew = $modelUser->_newModel('callback');
                             <th><?= $modelNew->getAttributeLabel('status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('invalid_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('out_status'); ?></th>
+                            <th><?= $modelNew->getAttributeLabel('follow_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('signed_merchant'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('content'); ?></th>
                         </tr>
@@ -62,6 +63,20 @@ $modelNew = $modelUser->_newModel('callback');
                             ]
                         ); ?>
                         </td>
+                        <td>
+                        <?= Html::dropDownList(
+                            "follow_status",
+                            $modelUser->follow_status,
+                            $modelNew->followStatusInfos,
+                            [
+                                'prompt' => '全部',
+                                'style' => 'width:90px;',
+                                'class' => 'form-control',
+                                'id' => 'callback_follow_status',
+                                'onchange' => "updateElemForUser('{$tableName}', {$modelNew->id}, 'follow_status', this.value)",
+                            ]
+                        ); ?>
+                        </td>
                         <td><input type="text" id="signed_merchant" name="signed_merchant" value="<?= $modelUser->signed_merchant; ?>" /></td>
                             <td><?= Html::textarea('content', '', ['id' => 'callback_content', 'rows' => '5', 'cols' => '80']); ?></td>
                         </tr>
@@ -83,6 +98,7 @@ $modelNew = $modelUser->_newModel('callback');
                             <th><?= $modelNew->getAttributeLabel('status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('invalid_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('out_status'); ?></th>
+                            <th><?= $modelNew->getAttributeLabel('follow_status'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('signed_merchant'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('content'); ?></th>
                             <th><?= $modelNew->getAttributeLabel('created_at'); ?></th>
@@ -95,6 +111,7 @@ $modelNew = $modelUser->_newModel('callback');
                             <td><?= $model->getKeyName('status', $model->status); ?></td>
                             <td><?= $model->getKeyName('invalid_status', $model->invalid_status); ?></td>
                             <td><?= $model->getKeyName('out_status', $model->out_status); ?></td>
+                            <td><?= $model->getKeyName('follow_status', $model->follow_status); ?></td>
                             <td><?= $model->signed_merchant; ?></td>
                             <td><?= $model->content; ?></td>
                             <td><?= date('Y-m-d H:i:s', $model->created_at); ?></td>
@@ -130,6 +147,7 @@ function addCallback()
         'signed_merchant': $("#signed_merchant").val(),
         'invalid_status': $("#callback_invalid_status").val(),
         'out_status': $("#callback_out_status").val(),
+        'follow_status': $("#callback_follow_status").val(),
         'note': $("#callback_note").val()
     };
 

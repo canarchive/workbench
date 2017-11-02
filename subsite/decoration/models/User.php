@@ -27,15 +27,31 @@ class User extends ModelBase
         return $return;
     }
 
+    public function getFollowStatusInfos()
+    {
+        return [
+            '' => '未知',
+            'unjoint' => '未接',
+            'refuse' => '拒接',
+            'hangup' => '挂断',
+            'shutdown' => '关机',
+            'halt' => '停机',
+            'follow' => '跟进',
+            'forward' => '期房',
+        ];
+    }
+
     public function getOutStatusInfos()
     {
         $datas = [
             '' => '未知',
-            'out' => '外地',
-			'part' => '局部装修',
-			'small' => '50平米以下整装',
-			'shop' => '商铺',
+			'shop' => '工装',
+			'part' => '局改（厨房卫生间）',
+			'part_simple' => '部分局装',
 			'soft' => '软装',
+            'light' => '轻工辅料',
+			'small' => '预算不足',
+            'out' => '外地',
         ];
 
         return $datas;
@@ -59,7 +75,7 @@ class User extends ModelBase
         $datas = [
             '' => '未回访',
             'follow' => '跟进',
-            'follow-plan' => '期房跟进',
+            //'follow-plan' => '期房跟进',
 			'valid' => '有效',
             'valid-back' => '已退单',
 			'valid-out' => '承接范围外-无效',

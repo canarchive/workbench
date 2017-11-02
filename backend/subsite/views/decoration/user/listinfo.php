@@ -1,14 +1,18 @@
 <?php
 $ignores = [];
-switch ($this->context->searchModel->status) {
-case 'follow-plan':
-	$ignores = ['status', 'invalid_status'];
-	break;
-case 'bad':
-	$ignores = ['status', 'callback_again'];
-	break;
-default:
-	$ignores = ['invalid_status', 'callback_again'];
+$status = (array) $this->context->searchModel->status;
+$ignores = ['invalid_status', 'callback_again', 'out_status', 'follow_status'];
+if (!empty($status) && in_array('follow', $status)) {
+    unset($ignores[array_search('follow_status', $ignores)]);
+} 
+if (!empty($status) && in_array('bad', $status)) {
+    unset($ignores[array_search('invalid_status', $ignores)]);
+}
+if (!empty($status) && in_array('valid-out', $status)) {
+    unset($ignores[array_search('out_status', $ignores)]);
+}
+if (in_array('follow', $status)) {
+    unset($ignores[array_search('callback_again', $ignores)]);
 }
 $columns = $this->context->searchModel->getColumnsUser($ignores);
 $gridViewParams = [

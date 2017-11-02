@@ -69,6 +69,18 @@ Trait UserTemplate
 					return $model->getKeyName('invalid_status', $model->invalid_status);
                 },
             ],
+            'out_status' => [
+                'attribute' => 'out_status',
+                'value' => function($model) {
+					return $model->getKeyName('out_status', $model->out_status);
+                },
+            ],
+            'follow_status' => [
+                'attribute' => 'follow_status',
+                'value' => function($model) {
+					return $model->getKeyName('follow_status', $model->follow_status);
+                },
+            ],
             'status' => [
                 'attribute' => 'status',
                 'value' => function($model) {
