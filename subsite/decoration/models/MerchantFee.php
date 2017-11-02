@@ -20,7 +20,7 @@ class MerchantFee extends ModelBase
     {
         return [
             [['merchant_id'], 'required'],
-            [['fee_unit', 'status', 'fund', 'num'], 'default', 'value' => 0],
+            [['fee_unit', 'status', 'fund', 'num', 'pay_day'], 'default', 'value' => 0],
             [['day_start', 'day_end'], 'filter', 'filter' => function($value) {
                 return strtotime($value);
             }],
