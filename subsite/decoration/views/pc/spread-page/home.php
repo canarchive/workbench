@@ -31,7 +31,7 @@ $currentSiteInfo = $this->context->currentSiteInfo;
                 <div class="top_t_z fr">
                     <a href="javascript: void(0);" class="gr" rel="nofollow">咨询电话</a>
                     <span class="line">|</span>
-                    <a href="javascript:void(0);"><?php echo '010-52239996'; // Yii::$app->params['siteHotline']; ?></a>
+                    <a href="javascript:void(0);"><?php echo Yii::$app->params['siteHotline']; ?></a>
                     <span class="line">|</span></div>
             </div>
         </div>

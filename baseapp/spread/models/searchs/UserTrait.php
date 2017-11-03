@@ -26,8 +26,8 @@ Trait UserTrait
         $extData = [];
         if ($extParam == 'pond') {
             $this->service_id = (array) $this->service_id;
-            $createdAtValue = time() - 86400;
-            $dispatchAtValue = time() - 21600;
+            $createdAtValue = time() - 1800;//86400;
+            $dispatchAtValue = time() - 1800;//21600;
             $extData = [
                 ['field' => 'merchant_id', 'type' => 'common'],
                 ['field' => 'service_id', 'type' => 'common', 'sort' => 'notIn'],

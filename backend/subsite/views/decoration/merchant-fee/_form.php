@@ -6,6 +6,7 @@ use yii\bootstrap\ActiveForm;
 $model->day_start = empty($model->day_start) ? time() : $model->formatTimestamp($model->day_start);
 $model->day_end = empty($model->day_end) ? time() : $model->formatTimestamp($model->day_end);
 //$model->productInfo = str_replace('<br />', "\n", $model->productInfo);
+$model->pay_day = empty($model->pay_day) ? '' : $model->pay_day;
 ?>
 
 <div class="menu-form">
