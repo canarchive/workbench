@@ -36,6 +36,8 @@ class Sample extends BaseModel
         return [
             'id' => '案例ID',
             'name' => '名称',
+			'site_code' => '站点',
+			'sort' => '类别',
             'thumb' => '缩略图',
             'picture' => '设计图',
 			'orderlist' => '排序',
@@ -116,7 +118,7 @@ class Sample extends BaseModel
             'name' => ['type' => 'atag', 'urlType' => 'inline', 'urlMethod' => 'nameByUrl'],
             'title' => ['type' => 'common'],
 			'site_code' => ['type' => 'key'],
-			'sort' => ['type' => 'point', 'table' => 'shoot-sort'],
+			'sort' => ['type' => 'point', 'table' => 'shoot-sort', 'pointField' => 'code'],
             'picture' => ['type' => 'imgtag'],
             'orderlist' => ['type' => 'change', 'formatView' => 'raw', 'width' => '50'],
             'description' => ['type' => 'common', 'listNo' => true],
