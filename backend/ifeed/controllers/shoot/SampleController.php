@@ -2,6 +2,7 @@
 
 namespace backend\ifeed\controllers\shoot;
 
+use Yii;
 use backend\components\ControllerTraitFull;
 
 class SampleController extends Controller
@@ -18,5 +19,13 @@ class SampleController extends Controller
 			'siteInfos' => $this->siteInfos,
 			'sortInfos' => $this->sortInfos,
         ]);
+    }
+
+    public function _addData()
+    {
+        return [
+            'site_code' => Yii::$app->request->get('site_code'),
+            'sort' => Yii::$app->request->get('sort'),
+        ];
     }
 }
