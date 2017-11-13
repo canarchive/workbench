@@ -35,6 +35,14 @@ return [
         'keyword' => '样板房摄影，样板间拍摄',
         'description' => '专业样板间摄影，建筑空间摄影，房产广告拍摄，就找途睿，中国领先建筑广告摄影公司,途睿房产摄影专注房产摄影，酒店摄影，样板间摄影，空间摄影拍摄等。',
     ],
+    'shouxi' => [
+        'name' => '首席',
+		'sort' => ['commercial', 'portrait', 'wedding', 'auto'],
+        'icp' => '',
+        'title' => '',
+        'keyword' => '',
+        'description' => '',
+    ],
     'hgvisual' => [
         'name' => '红格',
 		'sort' => ['commercial', 'portrait', 'wedding', 'auto'],
