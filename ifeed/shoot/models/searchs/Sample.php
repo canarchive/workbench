@@ -25,8 +25,8 @@ class Sample extends SampleModel
     public function _searchDatas()
     {
         $list = [
-            $this->_sKeyParam(['field' => 'site_code']),
-            $this->_sPointParam(['field' => 'sort', 'table' => 'shoot-sort']),
+            //$this->_sKeyParam(['field' => 'site_code']),
+            //$this->_sPointParam(['field' => 'sort', 'table' => 'shoot-sort']),
         ];
         return ['list' => $list];
 	}
