@@ -2,6 +2,6 @@
 
 namespace baseapp\common\models\searchs;
 
-class CategoryTrait
+trait CategoryTrait
 {
 }
