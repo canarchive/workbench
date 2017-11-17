@@ -5,11 +5,11 @@ namespace backend\ifeed\controllers\shoot;
 use Yii;
 use backend\components\ControllerTraitFull;
 
-class InfoController extends Controller
+class InfotmpController extends Controller
 {
     use ControllerTraitFull;
-	protected $modelClass = 'ifeed\shoot\models\Info';
-    protected $modelSearchClass = 'ifeed\shoot\models\searchs\Info';
+	protected $modelClass = 'ifeed\shoot\models\Infotmp';
+    protected $modelSearchClass = 'ifeed\shoot\models\searchs\Infotmp';
 
     public function actionListSort()
     {

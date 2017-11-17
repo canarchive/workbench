@@ -5,20 +5,33 @@ namespace ifeed\shoot\controllers;
 use Yii;
 use yii\web\NotFoundHttpException;
 use yii\helpers\StringHelper;
-use ifeed\components\ShootController;
-use ifeed\shoot\models\Info;
-use ifeed\shoot\models\Category;
+use ifeed\shoot\models\Infotmp;
+use ifeed\shoot\models\Categorytmp;
 
-class InfoController extends ShootController
+class InfotmpController extends Controller
 {
-	public function actionIndex()
+    use InfoTrait;
+
+    public function init()
+    {
+        parent::init();
+        $this->layout = 'main-infotmp';
+    }
+
+    public function actionIndex()
+    {
+        $datas = [];
+		return $this->render('index', $datas);
+    }
+
+	public function actionList()
 	{
 		$page = ltrim(Yii::$app->request->get('page'), '_');
         $tag = ltrim(Yii::$app->request->get('tag'), '_');
 
         $where = ['status' => 1, 'site_code' => $this->siteCode];
         $where = empty($tag) ? $where : array_merge($where, ['sort' => $tag]);
-		$model = new Info();
+		$model = new Infotmp();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 10, 'pagePreStr' => '_', 'noHost' => true]);
         $currentSortName = isset($model->sortInfos[$tag]) ? $model->sortInfos[$tag] : '';
@@ -35,7 +48,7 @@ class InfoController extends ShootController
         $tagStr = !empty($currentSortName) ? $currentSortName : '获取访客信息攻略';
 		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('info-index', $dataTdk);
-		return $this->render('index', $datas);
+		return $this->render('list', $datas);
 	}
 
 	public function actionShow()

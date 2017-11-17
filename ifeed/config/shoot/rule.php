@@ -1,5 +1,23 @@
 <?php
-$rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), [
+$infoRules = [
+    'minfotmp' => [
+		'noDomain' => true,
+        'data' => [
+			'suffix' => '',
+            'pattern' => Yii::getAlias('@m.infotmp.ifeedurl'),
+            'route' => '/shoot/infotmp/index', 
+        ],
+    ],
+    'infotmp' => [
+		'noDomain' => true,
+        'data' => [
+			'suffix' => '',
+            'pattern' => Yii::getAlias('@infotmp.ifeedurl'),
+            'route' => '/shoot/infotmp/index', 
+        ],
+    ],
+];
+$rules = array_merge(require(dirname(__DIR__) . '/params-rule.php'), $infoRules, [
     'mindex' => [
 		'noDomain' => true,
         'data' => [

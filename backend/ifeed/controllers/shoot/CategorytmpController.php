@@ -5,11 +5,11 @@ namespace backend\ifeed\controllers\shoot;
 use baseapp\common\controllers\CategoryTrait;
 use Overtrue\Pinyin\Pinyin;
 
-class CategoryController extends Controller
+class CategorytmpController extends Controller
 {
     use CategoryTrait;
-    protected $modelClass = 'ifeed\shoot\models\Category';
-    protected $modelSearchClass = 'ifeed\shoot\models\searchs\Category';
+    protected $modelClass = 'ifeed\shoot\models\Categorytmp';
+    protected $modelSearchClass = 'ifeed\shoot\models\searchs\Categorytmp';
 
     public function actionListSort()
     {
