@@ -1,19 +1,29 @@
 <?php
 $infoRules = [
-    'minfotmp' => [
-		'noDomain' => true,
+    'infotmp' => [
+		//'noDomain' => true,
+		'only' => ['infotmp'],
         'data' => [
-			'suffix' => '',
-            'pattern' => Yii::getAlias('@m.infotmp.ifeedurl'),
+			'suffix' => '/',
+            'pattern' => '',
             'route' => '/shoot/infotmp/index', 
         ],
     ],
-    'infotmp' => [
-		'noDomain' => true,
+    'infotmp-list' => [
+		'only' => ['infotmp'],
         'data' => [
-			'suffix' => '',
-            'pattern' => Yii::getAlias('@infotmp.ifeedurl'),
-            'route' => '/shoot/infotmp/index', 
+			'suffix' => '/',
+            'pattern' => '/<category_code:\w+>/<page:[0-9]+>',
+    		'defaults' => ['page' => '1'],
+            'route' => '/shoot/infotmp/list', 
+        ],
+    ],
+    'infotmp-show' => [
+		'only' => ['infotmp'],
+        'data' => [
+            'suffix' => '.html',
+    		'pattern' => '/ishow_<id:\d+>',
+    		'route'	=> '/shoot/infotmp/show',
         ],
     ],
 ];

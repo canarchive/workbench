@@ -33,4 +33,9 @@ class BaseModel extends BaseModelBase
 		}
 		return $datas;
     }
+
+    public function getSourceDomain()
+    {
+        return 'http://shouxiphotos.com/';
+    }
 }

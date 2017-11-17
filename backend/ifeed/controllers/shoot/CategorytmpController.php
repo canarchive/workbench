@@ -11,6 +11,11 @@ class CategorytmpController extends Controller
     protected $modelClass = 'ifeed\shoot\models\Categorytmp';
     protected $modelSearchClass = 'ifeed\shoot\models\searchs\Categorytmp';
 
+	public function getViewPrefix()
+	{
+        return '@backend/ifeed/views/shoot/categorytmp/';
+	}
+
     public function actionListSort()
     {
         $class = $this->modelClass;
