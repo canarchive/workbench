@@ -13,8 +13,8 @@ $infoRules = [
 		'only' => ['infotmp'],
         'data' => [
 			'suffix' => '/',
-            'pattern' => '/<category_code:\w+>/<page:[0-9]+>',
-    		'defaults' => ['page' => '1'],
+            'pattern' => '/<category_code:[a-z]+[1-9]*><page:_[0-9]+>',
+    		'defaults' => ['page' => '_1'],
             'route' => '/shoot/infotmp/list', 
         ],
     ],

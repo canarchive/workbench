@@ -20,33 +20,36 @@ class InfotmpController extends Controller
 
     public function actionIndex()
     {
-        $datas = [];
-		return $this->render('index', $datas);
+		return $this->render('index');
     }
 
 	public function actionList()
 	{
 		$page = ltrim(Yii::$app->request->get('page'), '_');
-        $tag = ltrim(Yii::$app->request->get('tag'), '_');
-
-        $where = ['status' => 1, 'site_code' => $this->siteCode];
-        $where = empty($tag) ? $where : array_merge($where, ['sort' => $tag]);
+        $categoryCode = ltrim(Yii::$app->request->get('category_code'), '_');
+        $categoryInfo = $this->categoryModel->getData($categoryCode);
+        if (empty($categoryInfo)) {
+            throw new NotFoundHttpException('NO found');
+        }
+        $where = [
+            'status' => 1,
+            'category_code' => array_merge([$categoryCode], array_keys($this->categoryModel->getSubDatas($categoryCode))),
+        ];
 		$model = new Infotmp();
         $orderBy = ['created_at' => SORT_DESC];
 		$infos = $model->getInfosByPage(['where' => $where, 'orderBy' => $orderBy, 'pageSize' => 10, 'pagePreStr' => '_', 'noHost' => true]);
-        $currentSortName = isset($model->sortInfos[$tag]) ? $model->sortInfos[$tag] : '';
 		$datas = [
 			'page' => $page,
 			'model' => $model,
-            'currentSort' => $tag,
-            'currentSortName' => $currentSortName,
+            'categoryCode' => $categoryCode,
+            'categoryInfo' => $categoryInfo,
 			'infos' => $infos['infos'],
             'pages' => $infos['pages'],
 		];
 		$pageStr = $page > 1 ? "第{$page}页-" : '';
 
-        $tagStr = !empty($currentSortName) ? $currentSortName : '获取访客信息攻略';
-		$dataTdk = ['{{TAGSTR}}' => $tagStr, '{{PAGESTR}}' => $pageStr];
+        $categoryCodeStr = !empty($currentSortName) ? $currentSortName : '获取访客信息攻略';
+		$dataTdk = ['{{CATEGORYSTR}}' => $categoryInfo['name'], '{{PAGESTR}}' => $pageStr];
 		$this->getTdkInfos('info-index', $dataTdk);
 		return $this->render('list', $datas);
 	}
@@ -54,10 +57,10 @@ class InfotmpController extends Controller
 	public function actionShow()
 	{
         $id = Yii::$app->getRequest()->get('id');
-        $model = new Info();
+        $model = new Infotmp();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
-            //throw new NotFoundHttpException('NO found');
+            throw new NotFoundHttpException('NO found');
 		}
 
         //$description = str_replace(' ', '', $info['description']);
@@ -73,20 +76,12 @@ class InfotmpController extends Controller
 			'info' => $info,
             'infos' => $infos,
         ];*/
-        $datas = [];
+        $datas = ['info' => $info];
 		return $this->render('show', $datas);
 	}
 
-    protected function _categoryInfos()
+    public function getCategoryModel()
     {
-        static $datas = null;
-
-        if ($datas === null) {
-            $model = new Category();
-            $datas['infos'] = $model->getDatas('catdir');
-            $datas['levelInfos'] = $model->getlevelDatas();
-        }
-
-        return $datas;
+        return new Categorytmp();
     }
 }

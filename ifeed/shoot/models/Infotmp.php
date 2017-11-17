@@ -94,7 +94,7 @@ class Infotmp extends BaseModel
     {
         $paths = [
             '0223' => 'news',
-            'sy' => 'post',
+            'sy' => 'shwj',
             'ch' => 'post',
         ];
         $url = $this->sourceDomain;

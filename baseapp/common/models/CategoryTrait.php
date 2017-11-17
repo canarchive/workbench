@@ -117,4 +117,50 @@ trait CategoryTrait
             'meta_description' => ['type' => 'common'],
         ];
     }
+
+    public function getDatas()
+    {
+        static $infos = null;
+        if ($infos === null) {
+            $infos = $this->find()->where(['status' => 1])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
+        }
+
+        return $infos;
+    }
+
+    public function getSubDatas($parentCode = '')
+    {
+        static $datas;
+        if (isset($datas[$parentCode])) {
+            return $datas[$parentCode];
+        }
+        $infos = $this->find()->where(['status' => 1, 'parent_code' => $parentCode])->indexBy('code')->orderBy(['orderlist' => SORT_DESC])->all();
+        $datas[$parentCode] = $infos;
+        return $infos;
+    }
+
+    public function getParentData($parentCode)
+    {
+        if ($parentCode == '') {
+            return false;
+        }
+        $info = $this->find()->where(['status' => 1, 'code' => $this->parentCode])->one();
+        return $info;
+    }
+
+    public function getData($code)
+    {
+        return $this->find()->where(['status' => 1, 'code' => $code])->one();
+    }
+
+    public function getListtmpInfos($limit, $haveSub = true)
+    {
+        $codes = [$this->code];
+        if ($haveSub) {
+            $codes = array_merge($codes, array_keys($this->getSubDatas($this->code)));
+        }
+        $model = $this->getPointModel('ifeed-infotmp');
+        $infos = $model->getInfos(['where' => ['status' => 1, 'category_code' => $codes], 'orderBy' => ['orderlist' => SORT_DESC], 'limit' => $limit]);
+        return $infos;
+    }
 }
