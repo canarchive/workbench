@@ -3,6 +3,7 @@
 namespace backend\ifeed\controllers\shoot;
 
 use baseapp\common\controllers\CategoryTrait;
+use Overtrue\Pinyin\Pinyin;
 
 class CategoryController extends Controller
 {
@@ -20,20 +21,80 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function init()
+    public function actionListinfoTreeTmp()
     {
         $modelClass = $this->modelClass;
         $model = new $modelClass();
         $datas = $this->_datas();
+        $firstDatas = [
+            'ch' => [
+                'name' => '艺生术活',
+                'code' => 'yssh',
+            ],
+            '0223' => [
+                'name' => '摄影作品',
+                'code' => 'syzp',
+            ],
+            'sy' => [
+                'name' => '人体艺术',
+                'code' => 'rtys',
+            ],
+        ];
+        foreach ($firstDatas as $key => $info) {
+            $data = [
+                'name' => $info['name'],
+                'code' => $info['code'],
+                'brief' => $info['name'],
+                'meta_title' => $info['name'],
+                'meta_keyword' => $info['name'],
+                'meta_description' => $info['name'],
+                'parent_code' => '',
+                'status' => 1,
+            ];
+                print_r($data);
+            $nModel = new $modelClass($data);
+            $nModel->insert();
+        }
+        $setting = [
+            'delimiter' => '',
+            'accent' => false,
+        ];
         print_r($datas);
-
-
+        $i = 1;
+        foreach ($datas as $key => $infos) {
+            $typeCode = $firstDatas[$key]['code'];
+            foreach ($infos as $info) {
+                $code = Pinyin::letter($info['name'], $setting);
+                $parentCode = empty($info['parent_id']) ? $typeCode : 'no';
+                $data = [
+                    'name' => $info['name'],
+                    'code' => $code,
+                    'type_code' => $typeCode,
+                    'brief' => $info['name'],
+                    'meta_title' => $info['name'],
+                    'meta_keyword' => $info['name'],
+                    'meta_description' => $info['name'],
+                    //'parent_code' => $parentCode,
+                    'source_id' => $info['source_id'],
+                    'source_parent' => $info['parent_id'],
+                    'status' => 1,
+                ];
+                $i++;
+                    print_r($data);
+                $nModel = new $modelClass($data);
+                $r = $nModel->insert();
+                var_dump($r);
+            }
+        }
+        echo $i;
+        exit();
+        print_r($datas);
     }
 
     protected function _datas()
     {
 return [
-'ch' => [
+'ch' => 
 array (
   0 => 
   array (
@@ -360,6 +421,6 @@ array (
     'parent_id' => 0,
   ),
   ),
-]];
+];
     }
 }
