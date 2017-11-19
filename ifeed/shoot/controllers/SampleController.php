@@ -73,7 +73,16 @@ class SampleController extends Controller
 		$sortName = isset($this->sortInfos[$info['sort']]) ? $this->sortInfos[$info['sort']]['name'] : '';
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{SORTNAME}}' => $sortName];
-		$this->getTdkInfos('sample-show', $dataTdk);
+		if ($this->siteCode == 'shouxi') {
+			$tdkInfo = [
+				'title' => '北京首席摄影工作室-作品展示-' . $info['name'],
+				'keyworkd' => "{$info['name']}摄影图片，{$info['name']}写真照片",
+				'description' => "【北京首席摄影工作室】为您整理与拍摄的，{$info['name']}摄影图片_{$info['name']}写真照片，希望喜欢{$info['name']}的朋友与需要拍摄的朋友都可以联系我们！",
+			];
+		    $this->getTdkInfos('sample-show', $dataTdk, $tdkInfo);
+		} else {
+		    $this->getTdkInfos('sample-show', $dataTdk);
+		}
         $relatedInfos = $this->getRelatedInfos($info);
 		$datas = [
 			'info' => $info,

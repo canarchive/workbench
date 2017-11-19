@@ -11,9 +11,9 @@ $rInfos = $info->getRelateInfos(4);
         <div class="fl" style="width:948px; overflow:hidden;">
             <div class="clh"></div>
             <div style="padding:0 0 20px 0;text-align: left" class="ct2 fs14">当前位置：
-                <a href="/">网站首页</a>>
-                <a href="/news/" title="新闻动态">新闻动态</a>>
-                <a href="/yrzs/" title="育儿知识">育儿知识</a>> 如何让孩子改掉爱“动手”的坏习惯
+                <a href="/" rel="nofollow">资讯首页</a>>
+				<a href="/<?= $categoryCode; ?>" title="<?= $categoryInfo['name']; ?>"><?= $categoryInfo['name']; ?></a>> 
+				<strong><?= $info['name']; ?></strong>
             </div>
             <div class="tac lh15 fs15" style="width:950px; height:145px; overflow:hidden; background:#e3ecf5;">
                 <h1 class="fs25 pt40"><?= $info['name']; ?></h1>
@@ -47,7 +47,7 @@ $rInfos = $info->getRelateInfos(4);
         <ul class="swiper-wrapper cf">
         <?php foreach ($rInfos as $rInfo) { ?>
     <li class="swiper-slide">
-        <a href="<?= $this->context->getShowUrl($rInfo['id']); ?>" title="<?= $rInfo['name'] . '摄影图片'; ?>">
+		<a href="<?= "/ishow_{$rInfo['id']}.html"; ?>" title="<?= $rInfo['name'] . '摄影图片'; ?>">
             <div class="viimgz ">
             <img src="<?= $rInfo->resizePic('thumb', 280, 440); ?>" data-cache="true" width="280" height="440" alt="<?= $rInfo['name'] . '摄影图片'; ?>" /></div>
             <p class="fs22 pt20"><?= $rInfo['name']; ?></p>

@@ -80,6 +80,15 @@ class AboutusController extends Controller
                 'width' => '450',
                 'height' => '50',
             ],
+            'shouxi' => [
+                'hotline' => '010-57139723',
+                'serviceTime' => '周一至周六 9:30-19:00',
+		        'address' => '北京市朝阳区高碑店北花园小区一号院一号楼三单元2306室',
+                'line' => '直达公交线路有：666路、312路、506路、475路,397路公交线路；到梆子井站下车往西走200米再往南走400米即到',
+                'position' => '116.557028,39.911553',
+                'width' => '450',
+                'height' => '50',
+            ],
         ];
         return $datas[$this->siteCode];
     }

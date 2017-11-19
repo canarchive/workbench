@@ -40,6 +40,7 @@ return [
 		'sort' => ['commercial', 'portrait', 'wedding', 'auto'],
         'icp' => '',
         'title' => '',
+		'hotline' => '010-57139723',
         'keyword' => '',
         'description' => '',
     ],
