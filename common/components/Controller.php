@@ -56,7 +56,7 @@ class Controller extends YiiController
 
         $this->host = Yii::$app->request->hostInfo;
         $this->clientUrl = $url = Yii::$app->request->url;
-        if (strpos($url, '.html') === false && strpos($url, '.xml') === false) {
+        if (strpos($url, '.html') === false && strpos($url, '.xml') === false && strpos($url, '.asp') === false) {
             $pos = strpos($this->clientUrl, '?');
             $query = $pos !== false ? substr($url, $pos) : '';
             $urlBase = str_replace($query, '', $url);

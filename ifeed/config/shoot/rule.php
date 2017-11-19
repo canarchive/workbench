@@ -1,5 +1,31 @@
 <?php
 $infoRules = [
+    'redireact-show' => [
+		'noDomain' => true,
+        'data' => [
+			'suffix' => '.html',
+            'pattern' => Yii::getAlias('@r.infotmp.ifeedurl') . '/<sort:(0223|sy|ch)>/<path:\w+>/<id:\d+>',
+            'route' => '/shoot/redirect/show', 
+        ],
+    ],
+    'redireact-show1' => [
+		'noDomain' => true,
+        'data' => [
+			'suffix' => '.asp',
+            'pattern' => Yii::getAlias('@r.infotmp.ifeedurl') . '/<sort:\w+>/news_show',
+    		'defaults' => ['sort' => 'sxdt'],
+            'route' => '/shoot/redirect/show', 
+        ],
+    ],
+    'redireact-list' => [
+		'noDomain' => true,
+        'data' => [
+			'suffix' => '',
+            'pattern' => Yii::getAlias('@r.infotmp.ifeedurl') . '/(0223|sy|ch)/<param:\w+>',
+    		'defaults' => ['param' => ''],
+            'route' => '/shoot/redirect/list', 
+        ],
+    ],
     'infotmp' => [
 		//'noDomain' => true,
 		'only' => ['infotmp'],
@@ -13,7 +39,7 @@ $infoRules = [
 		'only' => ['infotmp'],
         'data' => [
 			'suffix' => '/',
-            'pattern' => '/<category_code:[a-z]+[1-9]*><page:_[0-9]+>',
+            'pattern' => '/<category_code:\w+><page:_[0-9]+>',
     		'defaults' => ['page' => '_1'],
             'route' => '/shoot/infotmp/list', 
         ],

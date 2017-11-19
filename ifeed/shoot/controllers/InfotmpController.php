@@ -15,6 +15,7 @@ class InfotmpController extends Controller
     public function init()
     {
         parent::init();
+		//$this->formatThumb();
         $this->layout = 'main-infotmp';
     }
 
@@ -29,6 +30,7 @@ class InfotmpController extends Controller
         $categoryCode = ltrim(Yii::$app->request->get('category_code'), '_');
         $categoryInfo = $this->categoryModel->getData($categoryCode);
         if (empty($categoryInfo)) {
+			echo $categoryCode; exit();
             throw new NotFoundHttpException('NO found');
         }
         $where = [
@@ -63,20 +65,14 @@ class InfotmpController extends Controller
             throw new NotFoundHttpException('NO found');
 		}
 
-        //$description = str_replace(' ', '', $info['description']);
         /*$description = StringHelper::truncate(strip_tags($info['content']), 200, '');
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{TAGSTR}}' => $info['tags'], '{{DESCRIPTION}}' => $description];
-		$this->getTdkInfos('info-show', $dataTdk);
-
-        $infos = $model->getInfos(['site_code' => $info['site_code'], 'sort' => $info['sort']], 6);
+		$this->getTdkInfos('info-show', $dataTdk);*/
 		$datas = [
-            'model' => $model,
-            'currentSort' => $info['sort'],
-            'currentSortName' => isset($model->sortInfos[$info['sort']]) ? $model->sortInfos[$info['sort']] : '',
 			'info' => $info,
-            'infos' => $infos,
-        ];*/
-        $datas = ['info' => $info];
+			'categoryCode' => $info['category_code'],
+			'categoryInfo' => $this->categoryModel->getData($info['category_code']),
+		];
 		return $this->render('show', $datas);
 	}
 
@@ -84,4 +80,10 @@ class InfotmpController extends Controller
     {
         return new Categorytmp();
     }
+
+	public function formatThumb()
+	{
+		$model = new Infotmp();
+		$model->formatThumb();
+	}
 }

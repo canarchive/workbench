@@ -36,4 +36,16 @@ class Categorytmp extends BaseModel
     {
         return Yii::getAlias('@infotmp.ifeedurl') . '/' . $info['code'] . '/';
     }
+
+    public function getListtmpInfos($limit, $haveSub = true)
+    {
+        $codes = [$this->code];
+        if ($haveSub) {
+            $codes = array_merge($codes, array_keys($this->getSubDatas($this->code)));
+        }
+        $model = $this->getPointModel('ifeed-infotmp');
+		$where = ['and', ['status' => 1, 'category_code' => $codes], "thumb!=''"];
+        $infos = $model->getInfos(['select' => 'id,name, thumb, description', 'where' => $where, 'orderBy' => ['orderlist' => SORT_DESC], 'limit' => $limit]);
+        return $infos;
+    }
 }

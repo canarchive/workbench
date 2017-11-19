@@ -152,15 +152,4 @@ trait CategoryTrait
     {
         return $this->find()->where(['status' => 1, 'code' => $code])->one();
     }
-
-    public function getListtmpInfos($limit, $haveSub = true)
-    {
-        $codes = [$this->code];
-        if ($haveSub) {
-            $codes = array_merge($codes, array_keys($this->getSubDatas($this->code)));
-        }
-        $model = $this->getPointModel('ifeed-infotmp');
-        $infos = $model->getInfos(['where' => ['status' => 1, 'category_code' => $codes], 'orderBy' => ['orderlist' => SORT_DESC], 'limit' => $limit]);
-        return $infos;
-    }
 }

@@ -17,7 +17,7 @@ $cInfos = $this->context->categoryModel->getSubDatas('');
                 <a href="<?= "/ishow_{$info['id']}.html"; ?>" title="<?= $info['name']; ?>">
                     <div class="viimgg fl pre">
                         <i class="xj"></i>
-                        <img src="../assets/img/47e59-9687.png" data-cache="true"/></div>
+                        <img src="<?= $info->resizePic('thumb', 293, 450); ?>" data-cache="true"/></div>
                     <div class="fl Vkuai5con">
                         <p class="fs18 pt20"><?= $info['name']; ?></p>
                         <!--<p class="fs12">Time:2017.04.05</p>-->
