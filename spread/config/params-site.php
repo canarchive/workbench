@@ -25,6 +25,15 @@ $sites = [
         'pc' => 'http://hdsh.tu8zhang.com',
         'm' => 'http://m.hdsh.tu8zhang.com',
     ],
+    'j50' => [
+        'name' => '第三方50家-alyee',
+        'copy' => '五十家装饰装修工程（北京）有限公司',
+        'icp' => '',
+		'address' => '北京市大兴区甜园路5号3幢202',
+		'hotline' => '400-8032-163',
+        'pc' => 'http://alyee.com',
+        'm' => 'http://m.alyee.com',
+    ],
     'other2-360' => [
         'name' => '北京成和-360',
         'copy' => '北京成合装饰装修有限公司',

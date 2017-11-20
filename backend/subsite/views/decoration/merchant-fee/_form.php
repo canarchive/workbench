@@ -23,6 +23,7 @@ $model->pay_day = empty($model->pay_day) ? '' : $model->pay_day;
 
     <?= $form->field($model, 'fund')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'fee_unit')->textInput(['maxlength' => 128]) ?>
+    <?= $form->field($model, 'num')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'day_start')->textInput(); ?>
     <script type="text/javascript">
         $(function () {

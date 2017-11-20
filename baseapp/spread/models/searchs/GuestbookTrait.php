@@ -9,7 +9,7 @@ Trait GuestbookTrait
     public function rules()
     {
         return [
-            [['mobile', 'merchant_id', 'created_at_start', 'created_at_end'], 'safe'],
+            [['mobile', 'service_id', 'merchant_id', 'created_at_start', 'created_at_end'], 'safe'],
         ];
     }
 
@@ -18,6 +18,7 @@ Trait GuestbookTrait
         return [
             ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'merchant_id', 'type' => 'common'],
+            ['field' => 'service_id', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
         ];
     }

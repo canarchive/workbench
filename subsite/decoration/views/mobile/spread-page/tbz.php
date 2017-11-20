@@ -8,9 +8,14 @@ $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' =
 $jsFiles = ['jquery-1.11.3.min'];
 $this->params['jsStr'] = $this->render('@common/views/base/_css-js', ['type' => 'js', 'files' => $jsFiles, 'path' => 'spread/house/baojia/js/']);
 $this->params['bodyClass'] = 'bg-f2';
-Yii::$app->params['tdkInfos']['title'] =  '装修报价-上海装修报价单_上海装修预算表_上海装修到底需要多少钱-兔班长装修网';
+
+$cityInfos = $model->getPointModel('company')->getInfos(['where' => ['status' => 2], 'indexBy' => 'code', 'orderBy' => ['orderlist' => SORT_DESC]]);
+$currentCity = isset(Yii::$app->params['currentCompany']['code']) ? Yii::$app->params['currentCompany']['code'] : 'beijing';
+$currentCityName = isset($cityInfos[$currentCity]) ? $cityInfos[$currentCity]['name'] : '北京';
+
+Yii::$app->params['tdkInfos']['title'] =  '装修报价-' . $currentCityName . '装修报价单_' . $currentCityName . '装修预算表_' . $currentCityName . '装修到底需要多少钱-兔班长装修网';
 Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
-Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';
+Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017' . $currentCityName . '装修报价单，' . $currentCityName . '装修预算表，' . $currentCityName . '装修到底需要多少钱，让您家装修更省钱！';
 $urls = $this->context->navUrls;
 ?>
 <script>
@@ -22,20 +27,18 @@ if (isMobile == 0) {
 .text_tit{
     padding-left: 1.2rem;
     width: 2.2rem;
-    display: inline-block;
+	/*display: inline-block;*/
     height: 1.5rem;
     line-height: 1.5rem;
-    background: url("<?= Yii::getAlias('@asseturl'); ?>/spread/house/searchbackground1.png") no-repeat;
+    background: url("<?= Yii::getAlias('@asseturl'); ?>/spread/house/phone.png") no-repeat;
 }
 </style>
 <header class="cWhite cMdGray clearfix">
     <div class="tit_top">
         <div class="left">
             <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/phone_logo_tbz.jpg" alt="">
-        </div>
-        <div class="f12 text_tit">
-            <a href="<?= $urls['index'] . '/shanghai/'; ?>" >上海</a>
-        </div>
+        </div> 
+		<a href="tel:<?= $this->appDatas('siteHotline'); ?>"><div class="f12 text_tit"></div></a>
     </div>
 </header>
 <!-- 正文 start -->
@@ -51,7 +54,7 @@ if (isMobile == 0) {
                 <i class="media-object iconfont icone684 l"></i>
                 <label class="title">所在地区 :</label>
                 <i class="iconfont icone60c r"></i>
-                <span class="dib r mr4 zp-city" id="selectcity">点击选择</span></a>
+				<span class="dib r mr4 zp-city" id="selectcity"><?= $currentCityName; ?></span></a>
         </li>
         <li class="zp-area-focus">
             <a>
@@ -122,56 +125,16 @@ if (isMobile == 0) {
     <div id="zp-decoration-city" class="fixed-bottom-list hide box-tag3 zp-brother ">
         <ul>
             <li>
-                <a class="active" href="javascript:;">上海</a>
-                <a href="javascript:;">上海</a>
-                <a href="javascript:;">石家庄</a>
-                <a href="javascript:;">天津</a>
-                <a href="javascript:;">哈尔滨</a>
-                <a href="javascript:;">成都</a>
-                <a href="javascript:;">武汉</a>
-                <a href="javascript:;">西安</a>
-                <a href="javascript:;">大连</a>
-                <a href="javascript:;">济南</a>
-                <a href="javascript:;">杭州</a>
-                <a href="javascript:;" class="other">
-                    <select class="select" name="" id="">
-                        <option value="">其他城市</option>
-                        <option value="安徽">安徽</option>
-                        <option value="重庆">重庆</option>
-                        <option value="福建">福建</option>
-                        <option value="广西">广西</option>
-                        <option value="贵州">贵州</option>
-                        <option value="广东">广东</option>
-                        <option value="甘肃">甘肃</option>
-                        <option value="海南">海南</option>
-                        <option value="湖北">湖北</option>
-                        <option value="河南">河南</option>
-                        <option value="河北">河北</option>
-                        <option value="湖南">湖南</option>
-                        <option value="江苏">江苏</option>
-                        <option value="吉林">吉林</option>
-                        <option value="江西">江西</option>
-                        <option value="黑龙江">黑龙江</option>
-                        <option value="辽宁">辽宁</option>
-                        <option value="宁夏">宁夏</option>
-                        <option value="澳门">澳门</option>
-                        <option value="内蒙古">内蒙古</option>
-                        <option value="山东">山东</option>
-                        <option value="山西">山西</option>
-                        <option value="台湾">台湾</option>
-                        <option value="西藏">西藏</option>
-                        <option value="香港">香港</option>
-                        <option value="新疆">新疆</option>
-                        <option value="云南">云南</option>
-                        <option value="浙江">浙江</option>
-                        <select></a>
+                <?php foreach ($cityInfos as $cityCode => $city) { ?>
+				<a <?php if ($currentCity == $cityCode) { echo 'class="active"'; } ?> href="javascript:;"><?= $city['name']; ?></a>
+                <?php } ?>
             </li>
         </ul>
     </div>
 </div>
 
 <footer class="cGray">
-    <nav class="f16 cDGray">
+    <!--<nav class="f16 cDGray">
         <ul>
             <li>
 			<a href="<?= $urls['desc']; ?>" rel="nofollow">关于我们</a></li>
@@ -182,11 +145,11 @@ if (isMobile == 0) {
             <li>
 			<a href="<?= $urls['quote']; ?>" rel="nofollow">装修报价</a></li>
         </ul>
-    </nav>
+    </nav>-->
 	<p class="f12"><?= $this->context->currentSiteInfo['copy'] . '  ' . $this->context->currentSiteInfo['icp']; ?></p>
 	<p class="f12">兔班长装修网隶属北京维纳亚科技有限公司</p>
-	<p class="f12">地址：北京市昌平区科星西路106号楼407室</p>
-	<p class="f12">联系电话：400-8032-163</p>
+	<p class="f12">地址：<?= $this->appDatas('siteAddressInfo'); ?></p>
+	<p class="f12"><a href="tel:<?= $this->appDatas('siteHotline'); ?>">联系电话：<?= $this->appDatas('siteHotline'); ?></a></p>
 </footer>
 <!-- 正文 end -->
 <script data-main="<?= Yii::getAlias('@asseturl'); ?>/spread/house/baojia/js/main.js" src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/baojia/js/require.js"></script>

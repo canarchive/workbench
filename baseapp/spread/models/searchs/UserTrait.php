@@ -31,6 +31,7 @@ Trait UserTrait
             $extData = [
                 ['field' => 'merchant_id', 'type' => 'common'],
                 ['field' => 'service_id', 'type' => 'common', 'sort' => 'notIn'],
+                ['field' => 'status', 'type' => 'common', 'sort' => 'notIn', 'value' => 'valid'],
                 ['field' => 'created_at', 'type' => 'common', 'sort' => 'less', 'value' => $createdAtValue],
                 ['field' => 'dispatch_at', 'type' => 'common', 'sort' => 'less', 'value' => $dispatchAtValue],
             ];
