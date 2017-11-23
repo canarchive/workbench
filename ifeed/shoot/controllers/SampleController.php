@@ -73,7 +73,7 @@ class SampleController extends Controller
 		$sortName = isset($this->sortInfos[$info['sort']]) ? $this->sortInfos[$info['sort']]['name'] : '';
 
 		$dataTdk = ['{{INFONAME}}' => $info['name'], '{{SORTNAME}}' => $sortName];
-		if ($this->siteCode == 'shouxi') {
+		if (false) {//$this->siteCode == 'shouxi') {
 			$tdkInfo = [
 				'title' => '北京首席摄影工作室-作品展示-' . $info['name'],
 				'keyworkd' => "{$info['name']}摄影图片，{$info['name']}写真照片",

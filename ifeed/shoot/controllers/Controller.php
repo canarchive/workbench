@@ -23,6 +23,7 @@ class Controller extends Controllerbase
         $this->sourceSort = Yii::$app->request->get('scode');
         $this->domainBase = Yii::getAlias('@domain-base');
         parent::init();
+		Yii::$app->params['siteHotline'] = isset($this->currentSiteInfo['hotline']) ? $this->currentSiteInfo['hotline'] : Yii::$app->params['siteHotline'];
 
         $this->initSort();
     }

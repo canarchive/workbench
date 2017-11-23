@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $model->picture = $model->getAttachmentIds('sample', 'picture');
-if (empty($model->site_code) || !in_array($model->site_code, $model->siteCodeInfos)) {
+if (empty($model->site_code) || !in_array($model->site_code, array_keys($model->siteCodeInfos))) {
     exit('请返回');
 }
 ?>
