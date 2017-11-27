@@ -12,7 +12,8 @@ trait UpdateServiceDispatchTrait
         $sql .= $this->_serviceDispatchBase();
         $sql .= $this->_serviceUser();
         $sql .= $this->_serviceDispatchStatus();
-        return $sql;
+		$r = $this->db->createCommand($sql)->execute();
+		return $r;
     }
 
     protected function _serviceUserPre()
@@ -20,11 +21,11 @@ trait UpdateServiceDispatchTrait
         $serviceIds = implode(',', $this->serviceIds);
         $sqlBase = "UPDATE `workplat_subsite`.`wd_user` AS `u`, `workplat_subsite`.`wd_user_merchant` AS `m` SET ";
         $whereBase = "WHERE `u`.`id` = `m`.`user_id` AND";
-        $sql = "UPDATE `workplat_subsite`.`wd_user` SET `status` = 'valid-back', `status_sort` = '' WHERE `service_id` IN ({$serviceIds}) AND `status` = 'valid';<br />";
-        $sql .= "{$sqlBase} `u`.`status` = 'valid' {$whereBase} `m`.`status` = '';<br />";
-        $sql .= "{$sqlBase} `u`.`status_sort` = 'part' {$whereBase} `m`.`status` = '' AND `sort` = 'part';<br />";
-        $sql .= "{$sqlBase} `u`.`status_sort` = 'overall' {$whereBase} `m`.`status` = '' AND `sort` = 'overall';<br />";
-        $sql .= "{$sqlBase} `u`.`status_sort` = 'office' {$whereBase} `m`.`status` = '' AND `sort` = 'office';<br />";
+        $sql = "UPDATE `workplat_subsite`.`wd_user` SET `status` = 'valid-back', `status_sort` = '' WHERE `service_id` IN ({$serviceIds}) AND `status` = 'valid';\n";
+        $sql .= "{$sqlBase} `u`.`status` = 'valid' {$whereBase} `m`.`status` = '';\n";
+        $sql .= "{$sqlBase} `u`.`status_sort` = 'part' {$whereBase} `m`.`status` = '' AND `sort` = 'part';\n";
+        $sql .= "{$sqlBase} `u`.`status_sort` = 'overall' {$whereBase} `m`.`status` = '' AND `sort` = 'overall';\n";
+        $sql .= "{$sqlBase} `u`.`status_sort` = 'office' {$whereBase} `m`.`status` = '' AND `sort` = 'office';\n";
         return $sql;
     }
 
@@ -45,7 +46,7 @@ trait UpdateServiceDispatchTrait
 
                 $where = $pre === '' ? $where : "{$where} AND `sort` = '{$pre}'";
                 $updateSet = "`a`.`{$field}` = `b`.`count`, `a`.`{$fieldMobile}` = `b`.`mobilecount`";
-                //echo $where . '--' . $updateSet . '<br />';
+                //echo $where . '--' . $updateSet . "\n";
                 $sql .= $this->_serviceDispatchSql($where, $updateSet);
             }
         }
@@ -57,7 +58,7 @@ trait UpdateServiceDispatchTrait
         $sqlBase = "UPDATE `workplat_statistic`.`{$this->tableStr}` AS `a`, 
             (SELECT `service_id`, `created_day`, COUNT(*) AS `count`, COUNT(DISTINCT(`mobile`)) AS `mobilecount` FROM `workplat_subsite`.`wd_user_merchant` WHERE {{WHERE}} GROUP BY `service_id`, `created_day`) AS `b` 
             SET {{UPDATESET}} WHERE `a`.`service_id` = `b`.`service_id` AND `a`.`created_day` = `b`.`created_day`;";
-        $sql = str_replace(['{{WHERE}}', '{{UPDATESET}}'], [$where, $updateSet], $sqlBase) . '<br />';
+        $sql = str_replace(['{{WHERE}}', '{{UPDATESET}}'], [$where, $updateSet], $sqlBase) . "\n";
         return $sql;
     }
 
@@ -78,7 +79,7 @@ trait UpdateServiceDispatchTrait
         ];
         $sql = '';
         foreach ($datas as $field => $where) {
-            $sql .= str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br />';
+            $sql .= str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . "\n";
         }
         return $sql;
     }
@@ -88,14 +89,14 @@ trait UpdateServiceDispatchTrait
         $serviceIds = implode(',', $this->serviceIds);
         $sql = "TRUNCATE `workplat_statistic`.`{$this->tableStr}`;";
         $sql .= "INSERT INTO `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_day`, `created_weekday`, `created_week`)
-            SELECT `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m'), FROM_UNIXTIME(`created_at`, '%Y%m%d'), FROM_UNIXTIME(`created_at`, '%w'), FROM_UNIXTIME(`created_at`, '%u') FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d');<br />";
-        $sql .= "REPLACE `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_day`, `created_weekday`, `created_week`) SELECT `service_id`, `created_month`, `created_day`, `created_weekday`, `created_week` FROM `workplat_subsite`.`wd_user_merchant` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, `created_day`;<br />";
+            SELECT `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m'), FROM_UNIXTIME(`created_at`, '%Y%m%d'), FROM_UNIXTIME(`created_at`, '%w'), FROM_UNIXTIME(`created_at`, '%u') FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d');\n";
+        $sql .= "REPLACE `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_day`, `created_weekday`, `created_week`) SELECT `service_id`, `created_month`, `created_day`, `created_weekday`, `created_week` FROM `workplat_subsite`.`wd_user_merchant` WHERE `service_id` IN ({$serviceIds}) GROUP BY `service_id`, `created_day`;\n";
         return $sql;
 
 
         /*$sql = "TRUNCATE `workplat_statistic`.`{$this->tableStr}`;";
         $sql .= "INSERT INTO `workplat_statistic`.`{$this->tableStr}` (`service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`)
-            SELECT `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day` FROM `workplat_subsite`.`wd_user_merchant` GROUP BY `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`;<br />";
+            SELECT `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day` FROM `workplat_subsite`.`wd_user_merchant` GROUP BY `service_id`, `created_month`, `created_week`, `created_weekday`, `created_day`;\n";
         return $sql;*/
         //UPDATE `wd_user_merchant` SET `created_month` = FROM_UNIXTIME(`created_at`, "%Y%m"), `created_day` = FROM_UNIXTIME(`created_at`, "%Y%m%d"), `created_weekday` = FROM_UNIXTIME(`created_at`, "%w") + 1, `created_week` = FROM_UNIXTIME(`created_at`, "%u") WHERE 1 ;
     }

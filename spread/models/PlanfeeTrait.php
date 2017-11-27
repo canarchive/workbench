@@ -165,6 +165,16 @@ trait PlanfeeTrait
                     'F' => 'fee',
                 ],
             ],
+            'gdt' => [
+                'fields' => [
+                    'A' => 'created_day',
+                    'B' => 'plan_name',
+                    'C' => 'account_code',
+                    'D' => 'show_num',
+                    'E' => 'hit_num',
+                    'F' => 'fee',
+                ],
+            ],
             'zht' => [
                 'fields' => [
                     'A' => 'created_day',

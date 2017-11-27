@@ -10,7 +10,8 @@ trait UpdateServiceTrait
         $sql .= $this->_serviceStatus();
         $sql .= $this->_serviceBad();
         $sql .= $this->_serviceOut();
-        return $sql;
+		$r = $this->db->createCommand($sql)->execute();
+		return $r;
     }
 
     protected function _serviceStatus()
@@ -75,7 +76,7 @@ trait UpdateServiceTrait
             (SELECT `merchant_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(*) AS `count` FROM `workplat_subsite`.`wd_user` WHERE {{WHERE}} GROUP BY `merchant_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d')) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
             WHERE `a`.`merchant_id` = `b`.`merchant_id` AND `a`.`created_day` = `b`.`created_day`;";
-        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br /><br />';
+        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . "\n\n";
         return $sql;
     }
 
@@ -83,7 +84,7 @@ trait UpdateServiceTrait
     {
         $sql = 'TRUNCATE `workplat_statistic`.`ws_service_invalid`;';
         $sql .= 'INSERT INTO `workplat_statistic`.`ws_service_invalid` (`merchant_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
-            SELECT `merchant_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN (1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55, 56, 57) GROUP BY `merchant_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");<br />';
+            SELECT `merchant_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_subsite`.`wd_user` WHERE `service_id` IN (1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55, 56, 57) GROUP BY `merchant_id`, FROM_UNIXTIME(`created_at`, "%Y%m%d");' . "\n";
         return $sql;
     }
 }

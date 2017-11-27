@@ -11,7 +11,8 @@ trait UpdateSalemanTrait
         $sql .= $this->_salemanCallback();
         $sql .= $this->_salemanCallback(true);
         $sql .= $this->_salemanInterview();
-        return $sql;
+		$r = $this->db->createCommand($sql)->execute();
+		return $r;
     }
 
     protected function _salemanStatus()
@@ -44,7 +45,7 @@ trait UpdateSalemanTrait
             (SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, {$count} AS `count` FROM `workplat_merchant`.`wm_callback` GROUP BY `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d')) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
             WHERE `a`.`city_code` = `b`.`city_code` AND `a`.`saleman_id` = `b`.`saleman_id` AND `a`.`created_day` = `b`.`created_day`;";
-        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br /><br />';
+        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . "\n\n";
         return $sql;
     }
 
@@ -57,7 +58,7 @@ trait UpdateSalemanTrait
             (SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`interview_at`, '%Y%m%d') AS `created_day`, {$count} AS `count` FROM `workplat_merchant`.`wm_interview` WHERE {{WHERE}} GROUP BY `city_code`, `saleman_id`, FROM_UNIXTIME(`interview_at`, '%Y%m%d')) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
             WHERE `a`.`city_code` = `b`.`city_code` AND `a`.`saleman_id` = `b`.`saleman_id` AND `a`.`created_day` = `b`.`created_day`;";
-        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br /><br />';
+        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . "\n\n";
         return $sql;
     }
 
@@ -68,7 +69,7 @@ trait UpdateSalemanTrait
             (SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d') AS `created_day`, COUNT(*) AS `count` FROM `workplat_merchant`.`wm_merchant_pond` WHERE {{WHERE}} GROUP BY `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, '%Y%m%d')) AS `b` 
             SET `a`.`{{UPFIELD}}` = `b`.`count` 
             WHERE `a`.`city_code` = `b`.`city_code` AND `a`.`saleman_id` = `b`.`saleman_id` AND `a`.`created_day` = `b`.`created_day`;";
-        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . '<br /><br />';
+        $sql = str_replace(['{{WHERE}}', '{{UPFIELD}}'], [$where, $field], $sqlBase) . "\n\n";
         return $sql;
     }
 
@@ -76,11 +77,11 @@ trait UpdateSalemanTrait
     {
         $sql = 'TRUNCATE `workplat_statistic`.`ws_saleman_origin`;';
         $sql .= 'INSERT INTO `workplat_statistic`.`ws_saleman_origin` (`city_code`, `saleman_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
-            SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_merchant`.`wm_merchant_pond` GROUP BY `city_code`, FROM_UNIXTIME(`created_at`, "%Y%m%d"), `saleman_id`;<br />';
+            SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_merchant`.`wm_merchant_pond` GROUP BY `city_code`, FROM_UNIXTIME(`created_at`, "%Y%m%d"), `saleman_id`;' . "\n";
         $sql .= 'REPLACE `workplat_statistic`.`ws_saleman_origin` (`city_code`, `saleman_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
-            SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_merchant`.`wm_callback` GROUP BY `city_code`, FROM_UNIXTIME(`created_at`, "%Y%m%d"), `saleman_id`;<br />';
+            SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`created_at`, "%Y%m"), FROM_UNIXTIME(`created_at`, "%Y%m%d"), FROM_UNIXTIME(`created_at`, "%w"), FROM_UNIXTIME(`created_at`, "%u") FROM `workplat_merchant`.`wm_callback` GROUP BY `city_code`, FROM_UNIXTIME(`created_at`, "%Y%m%d"), `saleman_id`;' . "\n";
         $sql .= 'REPLACE `workplat_statistic`.`ws_saleman_origin` (`city_code`, `saleman_id`, `created_month`, `created_day`, `created_week`, `created_weekday`)
-            SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`interview_at`, "%Y%m"), FROM_UNIXTIME(`interview_at`, "%Y%m%d"), FROM_UNIXTIME(`interview_at`, "%w"), FROM_UNIXTIME(`interview_at`, "%u") FROM `workplat_merchant`.`wm_interview` GROUP BY `city_code`, FROM_UNIXTIME(`interview_at`, "%Y%m%d"), `saleman_id`;<br />';
+            SELECT `city_code`, `saleman_id`, FROM_UNIXTIME(`interview_at`, "%Y%m"), FROM_UNIXTIME(`interview_at`, "%Y%m%d"), FROM_UNIXTIME(`interview_at`, "%w"), FROM_UNIXTIME(`interview_at`, "%u") FROM `workplat_merchant`.`wm_interview` GROUP BY `city_code`, FROM_UNIXTIME(`interview_at`, "%Y%m%d"), `saleman_id`;' . "\n";
         return $sql;
     }
 }

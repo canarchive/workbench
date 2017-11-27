@@ -13,7 +13,8 @@ class MerchantFeeController extends MerchantFeeControllerBase
     protected function privGetIgnore()
     {
         $role = Yii::$app->params['managerInfo']->role;
-        if ($role == 'admin-inner') {
+        if ($role == 'admin-inner' || $role == 'saleman-chief') {
+			$_GET['status'] = [1];
             $this->limitSearch = false;
         }
         return $this->strictPriv ? [] : ['merchant_id', 'service_id'];
