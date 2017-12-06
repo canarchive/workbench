@@ -27,14 +27,14 @@ $owners = $this->context->ownerInfos;
     <ul class="">
         <li>
             <i class="i1"></i>
-            一站式装修解决方案
+            免费装修直拨 400-8032-163
         </li>
         <li>
             <i class="i2"></i>
             免费提供上门量房 
         </li>
         <li>
-            <i class="i3"></i>
+            <i class="i2"></i>
             咨询热线：400-8032-163
         </li>
     </ul>

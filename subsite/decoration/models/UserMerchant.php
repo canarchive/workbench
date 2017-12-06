@@ -7,7 +7,7 @@ use baseapp\spread\models\UserMerchantTrait;
 class UserMerchant extends ModelBase
 {
     use UserMerchantTrait;
-    public $statusLimit = 5 * 86400;
+    public $statusLimit = 20 * 86400;
     public $isRedispatchLimit = 600;
 
 	public function getHouseModel()
