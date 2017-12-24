@@ -32,7 +32,7 @@ $import = $attachmentModel->getFieldInfos('planfee', 'import');
         ],
     ]);
     ?>
-    <?= $form->field($model, 'description')->textarea(['rows' => 5]) ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => 5])->label('日期      计划名称     账户     展现次数   点击次数   费用') ?>
     
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

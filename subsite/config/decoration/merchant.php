@@ -8,4 +8,8 @@ return [
         'returnUrl' => 'http://bj.ikongjian.com/',
         'returnUrlMobile' => '',
     ],
+	'oushenn' => [
+		'returnUrl' => 'http://oceano.com.cn/',
+		'returnUrlMobile' => 'http://m.oceano.com.cn/',
+	],
 ];
