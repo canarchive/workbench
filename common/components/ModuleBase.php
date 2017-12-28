@@ -26,7 +26,7 @@ class ModuleBase extends \yii\base\Module
         static $datas = null;
         if (is_null($datas)) {
             $company = new Company();
-            $datas = $company->getInfos(['status' => [2]]);
+            $datas = $company->getInfos();//['status' => [2]]);
         }
 
         return $datas;

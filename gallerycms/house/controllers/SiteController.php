@@ -35,6 +35,18 @@ class SiteController extends HouseController
 		return $this->render('index', $datas);
 	}
 
+	public function actionCity()
+	{
+        if ($this->clientType == 'mobile') {
+            $this->layout = '@gallerycms/views/main-mobile';
+        } else {
+            $this->layout = '@gallerycms/views/mself/main-pc';
+        }
+        $this->metaLocation = '';
+		$this->getTdkInfos('select-city');
+		return $this->render('city');
+	}
+
 	public function actionSelectCity()
 	{
         if ($this->clientType == 'mobile') {

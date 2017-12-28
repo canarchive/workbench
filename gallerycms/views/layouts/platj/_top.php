@@ -17,7 +17,7 @@ $baseUrl = Yii::getAlias('@gallerycmsurl');
                     <a href="<?= "{$baseUrl}/{$this->context->currentCityCode}/merchant/"; ?>">找商家</a></li>
                 <li class="fl">
                     <a href="/" target="_blank" style="color:#df0303;">选择城市</a><em>|</em></li>
-                    <?php foreach (Yii::$app->params['companyInfos'] as $cInfo) { ?>
+                    <?php foreach (Yii::$app->params['companyInfos'] as $cInfo) { if ($cInfo['status'] != 2) { continue; } ?>
                     <a href="<?= Yii::getAlias('@gallerycmsurl') . '/' . $cInfo['code']; ?>/" class="denglu" style="margin-right:0;<?php if ($this->context->currentCityCode == $cInfo['code']) { echo 'color:#df0303;'; } ?>" title="<?= $cInfo['name']; ?>"><?= $cInfo['name']; ?></a>
                     <?php } ?>
                 </li>

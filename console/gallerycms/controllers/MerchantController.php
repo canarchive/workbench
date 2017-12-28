@@ -65,7 +65,7 @@ class MerchantController extends Controller
     protected function getCompanyInfos($where)
     {
         $company = new Company();
-        $datas = $this->find()->where($where)->orderBy(['updated_at' => SORT_ASC])->indexBy('code')->all();
+        $datas = $company->find()->where($where)->orderBy(['updated_at' => SORT_ASC])->indexBy('code')->all();
         return $datas;
     }
 }

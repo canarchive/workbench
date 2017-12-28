@@ -1,5 +1,4 @@
 <?php
-use yii\helpers\Url;
 
 $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/house/favicon.ico';
 ?>
@@ -7,7 +6,7 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/house/favicon.ico';
 <script>
 var isMobile = '<?= intval($this->context->isMobile); ?>';
 if (isMobile == 1) {
-    //window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
+    window.location.href = "<?= $this->context->mobileMappingUrl; ?>";
 }
 </script>
 <?= $content; ?>

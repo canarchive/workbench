@@ -33,6 +33,13 @@ return \gallerycms\components\RuleFormat::formatRule([
             'suffix' => '.html'
         ],
     ],
+    'city' => [
+        'hosts' => ['base', 'm', '3g', 'wap'],
+        'data' => [
+            'pattern' => '/city', 
+            'route' => '/house/site/city', 
+        ],
+    ],
     'index' => [
         'hosts' => ['base', 'm', '3g', 'wap'],
         'data' => [
