@@ -26,9 +26,12 @@ class DispatchController extends AdminController
         $class = $this->modelClass;
         $model = new $class();
         if ($updateType == 'service') {
-            echo $model->serviceDispatchSql();
+            $model->serviceDispatchSql();
+			$url = '/statistic/service/dispatch.html';
         } else {
-            echo $model->dispatchSql();
+			$url = '/statistic/dispatch/listinfo.html?field_hit=created_day';
+            $model->dispatchSql();
         } 
+        return Yii::$app->response->redirect($url)->send();
     }
 }

@@ -25,7 +25,9 @@ class ServiceController extends AdminController
     {
         $class = $this->modelClass;
         $model = new $class();
-        echo $model->serviceSql();
+        $model->serviceSql();
+		$url = '/statistic/service/listinfo.html';
+        return Yii::$app->response->redirect($url)->send();
     }
 
     public function actionDispatch()

@@ -16,6 +16,9 @@ Trait UserMerchantTrait
 
     protected function _searchElems()
     {
+		if ($this->status == 'back') {
+			$this->status = ['back_confirm', 'back_reply'];
+		}
         return [
             ['field' => 'mobile', 'type' => 'common', 'sort' => 'like'],
             ['field' => 'service_id', 'type' => 'common'],

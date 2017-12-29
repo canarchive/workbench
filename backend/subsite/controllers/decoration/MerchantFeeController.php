@@ -19,4 +19,9 @@ class MerchantFeeController extends Controller
     {
         return '@backend/subsite/views/decoration/merchant-fee/view';
     }
+
+	public function actionUpdateCache()
+	{
+        return $this->render('update-cache');
+	}
 }

@@ -21,7 +21,9 @@ class ChannelFeeController extends AdminController
         if ($update == 'update-sql') {
             $class = $this->modelClass;
             $model = new $class();
-            echo $model->channelFeeSql();
+            $model->channelFeeSql();
+			$url = '/statistic/channel-fee/listinfo.html?field_hit=created_day';
+            return Yii::$app->response->redirect($url)->send();
             exit();
         }
 

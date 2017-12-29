@@ -47,7 +47,7 @@ class ChannelFee extends AbstractStatistic
 
     public function channelFeeSql()
     {
-        $this->channelFeeSqlExt();
+        //$this->channelFeeSqlExt();
         $vTable = '`workplat_spread`.`wd_visit`';
         $cTable = '`workplat_spread`.`wd_conversion`';
         $uTable = '`workplat_subsite`.`wd_user`';
@@ -57,8 +57,8 @@ class ChannelFee extends AbstractStatistic
         $mid1 = "SELECT `created_day`, `client_type`, `channel`, `sem_account`, `plan_id`, COUNT(*) AS `count` FROM {$vTable} GROUP BY {$groupBy}";
 
         $sql = '';
-        $sql .= "UPDATE {$cTable} as `a`, {$uTable} as `b` SET `a`.`status` = `b`.`status`, `a`.`status_input` = `b`.`status_input` WHERE `a`.`id` = `b`.`conversion_id`;<br /><br />";
-        $sql .= "UPDATE ({$mid1}) as `a`, {$pTable} as `b` SET `b`.`visit_num` = `a`.`count` WHERE {$where};<br /><br />";
+        $sql .= "UPDATE {$cTable} as `a`, {$uTable} as `b` SET `a`.`status` = `b`.`status`, `a`.`status_input` = `b`.`status_input` WHERE `a`.`id` = `b`.`conversion_id`;\n\n";
+        $sql .= "UPDATE ({$mid1}) as `a`, {$pTable} as `b` SET `b`.`visit_num` = `a`.`count` WHERE {$where};\n\n";
         $numSql = [
             'success_num' => '1',
             'valid_num' => '`status` IN ("valid")',
@@ -69,8 +69,10 @@ class ChannelFee extends AbstractStatistic
         ];
         foreach ($numSql as $field => $whereMid) {
             $midSql = $mid2 = "SELECT `created_day`, `client_type`, `channel`, `sem_account`, `plan_id`, COUNT(DISTINCT(`mobile`)) AS `count` FROM {$cTable} WHERE {$whereMid} AND `status_input` = '' GROUP BY {$groupBy}";
-            $sql .= "UPDATE ({$midSql}) as `a`, {$pTable} as `b` SET `b`.`{$field}` = `a`.`count` WHERE {$where};<br /><br />";
+            $sql .= "UPDATE ({$midSql}) as `a`, {$pTable} as `b` SET `b`.`{$field}` = `a`.`count` WHERE {$where};\n\n";
         }
+		$r = $this->db->createCommand($sql)->execute();
+		return 'ok';
 
         return $sql;
     }
@@ -89,16 +91,16 @@ class ChannelFee extends AbstractStatistic
             $week = date('W', $time);
             $weekday = date('N', $time);
 
-            $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '', '0'),<br />";
-            $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '', '0'),<br />";
+            $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '', '0'),\n";
+            $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '', '0'),\n";
             foreach ($this->channelInfos as $channel => $cInfo) {
                 $accountInfos = $aModel->getInfos(['where' => ['channel' => $channel]]);
                 //print_r($accountInfos);
-                $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '{$channel}', '0'),<br />";
-                $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '{$channel}', '0'),<br />";
+                $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '{$channel}', '0'),\n";
+                $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '{$channel}', '0'),\n";
                 foreach ($accountInfos as $aInfo) {
-                    $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '{$channel}', '{$aInfo['id']}'),<br />";
-                    $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '{$channel}', '{$aInfo['id']}'),<br />";
+                    $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'pc', '{$channel}', '{$aInfo['id']}'),\n";
+                    $sqlDetail .= "('{$month}', '{$day}', '{$week}', '{$weekday}', 'h5', '{$channel}', '{$aInfo['id']}'),\n";
                 }
             }
         }

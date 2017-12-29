@@ -37,9 +37,12 @@ class SalemanController extends AdminController
         $class = $this->modelClass;
         $model = new $class();
         if ($updateType == 'service') {
-            echo $model->salemanServiceSql();
+            $model->salemanServiceSql();
+	    	$url = '/statistic/saleman/listservice.html';
         } else {
-            echo $model->salemanSql();
+            $model->salemanSql();
+			$url = '/statistic/saleman/listinfo.html?field_hit=created_day';
         } 
+        return Yii::$app->response->redirect($url)->send();
     }
 }
