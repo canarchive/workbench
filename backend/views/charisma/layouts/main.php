@@ -75,8 +75,8 @@ $menusJson = Json::encode($menus);
 <?php $this->endBody() ?>
 
 <?php if (isset($this->params['haveTreeList'])) { ?>
-<script src="http://static.acanstudio.com/backend/js/jquery.treetable.js"></script>
-<script src="http://static.acanstudio.com/backend/js/jquery.treeview.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/backend/js/jquery.treetable.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/backend/js/jquery.treeview.js"></script>
 <?php } ?>
 <script language="javascript">
 $(document).ready(function(){

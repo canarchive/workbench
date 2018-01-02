@@ -34,7 +34,7 @@ function message_check(infoId, infoSort, infoPosition, formTitle, message) {
             <div class="name_box">
                 <p>
                     <em class="em1">*</em>姓&nbsp;名：
-                    <input type="text" class="name" name="name" id="p_name" value="test" onfocus='if(this.value=="请输入姓名"){this.value=""}' onblur='if(this.value==""){this.value="请输入姓名"}' maxlength="6">
+                    <input type="text" class="name" name="name" id="p_name" value="请输入姓名" onfocus='if(this.value=="请输入姓名"){this.value=""}' onblur='if(this.value==""){this.value="请输入姓名"}' maxlength="6">
                     <!--性别：
                     <label>
                         <input type="radio" class="a3" value="0" id="sexm" name="sex" checked>男</label>
@@ -42,7 +42,7 @@ function message_check(infoId, infoSort, infoPosition, formTitle, message) {
                         <input type="radio" class="a3" value="1" id="sexfm" name="sex">女</label></p>-->
                 <p>
                     <em class="em1">*</em>手&nbsp;机：
-                    <input type="text" class="tel" name="phone" id="p_phone" onfocus='if(this.value=="请输入手机号"){this.value=""}' onblur='if(this.value==""){this.value="请输入手机号"}' value="13200000002" maxlength="11"></p>
+                    <input type="text" class="tel" name="phone" id="p_phone" onfocus='if(this.value=="请输入手机号"){this.value=""}' onblur='if(this.value==""){this.value="请输入手机号"}' value="请输入手机号" maxlength="11"></p>
                 <p>
                     <input type="button" value="快联系我" class="btn" id="button_title" onclick="v9_check($(this));" /></p>
             </div>

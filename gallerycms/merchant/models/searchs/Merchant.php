@@ -23,11 +23,15 @@ class Merchant extends MerchantModel
 
     public function search($params)
     {
-        $query = self::find();//->orderBy('id DESC');
+        $query = self::find();//->orderBy('orderlist DESC');
 
 		$dataProvider = new ActiveDataProvider([
 			'query' => $query,
-			//'sort' => ['attributes' => ['num_owner', 'status']],
+			'sort' => [
+            'defaultOrder' => [
+                'id' => SORT_DESC,
+            ]
+            ],
 		]);
 
         if ($this->load($params, '') && !$this->validate()) {

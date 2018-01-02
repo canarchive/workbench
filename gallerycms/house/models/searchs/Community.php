@@ -5,13 +5,13 @@ namespace gallerycms\house\models\searchs;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use gallerycms\house\models\HouseCommunity as HouseCommunityModel;
+use gallerycms\house\models\Community as CommunityModel;
 
-class HouseCommunity extends HouseCommunityModel
+class Community extends CommunityModel
 {
     public function search($params)
     {
-        $query = HouseCommunityModel::find();
+        $query = CommunityModel::find();
 
         $dataProvider = new ActiveDataProvider(['query' => $query]);
 

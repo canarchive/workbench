@@ -3,14 +3,14 @@
 namespace gallerycms\house\controllers;
 
 use Yii;
-use gallerycms\components\HouseController;
-use gallerycms\house\models\HouseCommunity;
+use gallerycms\components\Controller;
+use gallerycms\house\models\Community;
 
-class HouseCommunityController extends HouseController
+class Controller extends Controller
 {
 	public function actionIndex()
 	{
-		$model = new HouseCommunity();
+		$model = new Community();
 		$infos = $model->getInfos([]);
 		$datas = [
 			'infos' => $infos,
@@ -21,7 +21,7 @@ class HouseCommunityController extends HouseController
 	public function actionShow()
 	{
         $id = \Yii::$app->getRequest()->get('id');
-        $model = new HouseCommunity();
+        $model = new Community();
 		$info = $model->getInfo($id);
 		if (empty($info)) {
             return $this->redirect('/')->send();

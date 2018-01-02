@@ -5,17 +5,18 @@ namespace gallerycms\house\models;
 use common\models\GallerycmsModel;
 use yii\helpers\ArrayHelper;
 
-class HouseCommunity extends GallerycmsModel
+class Community extends GallerycmsModel
 {
     use HouseTrait;
 	public $region_level1;
 	public $picture;
+	public $regionSubInfos;
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%house_community}}';
+        return '{{%community}}';
     }
 
     /**

@@ -29,7 +29,7 @@ $picture = $attachmentModel->getFieldInfos('house_community', 'picture');
 					htmlContent += "<option value=\"" + i + "\">" + v + "</option>";
 				});
 
-                $("select#housecommunity-region_code").html(htmlContent);
+                $("select#community-region_code").html(htmlContent);
             });',
     ]) ?>
     <?= $form->field($model, 'region_code')->dropDownList($model->getRegionSubInfos($model->region_level1),
@@ -60,7 +60,7 @@ $picture = $attachmentModel->getFieldInfos('house_community', 'picture');
     <?= $form->field($model, 'build_time')->textInput(); ?>
     <script type="text/javascript">
         $(function () {
-            $('#housecommunity-build_time').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD'});
+            $('#community-build_time').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD'});
         });
     </script>
     <?= $form->field($model, 'property_fee')->textInput() ?>
