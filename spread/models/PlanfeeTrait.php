@@ -44,7 +44,7 @@ trait PlanfeeTrait
             'client_type' => $this->client_type,
         ];
         foreach ($fieldInfo['fields'] as $fKey => $field) {
-            $info[$field] = isset($data[$fKey]) ? $data[$fKey] : '0';
+            $info[$field] = isset($data[$fKey]) ? trim($data[$fKey]) : '0';
         }
         $day = $info['created_day'];
         $time = intval(str_replace(['-', '/'], ['', ''], $day));

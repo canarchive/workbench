@@ -19,7 +19,12 @@ class Service extends ServiceModel
         $model = new self();
         $query = $model->find();
 
-        $dataProvider = new ActiveDataProvider(['query' => $query]);
+		$dataProvider = new ActiveDataProvider([
+			'query' => $query,
+            'pagination' => [
+			    'pageSize' => 100,
+		    ],
+		]);
 
         if (!$this->load($params, '') || !$this->validate()) {
             return $dataProvider;

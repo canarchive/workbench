@@ -113,7 +113,9 @@ trait TraitSearchSearch
 
     protected function _defaultPagination()
     {
-        return [];
+		return [
+			'pageSize' => 100,
+		];
     }
 
 	protected function _searchElems()
