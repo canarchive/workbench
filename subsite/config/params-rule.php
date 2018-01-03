@@ -61,4 +61,10 @@ return [
     		'route'	=> '/{{SORT}}/signup/index',
         ],
     ],
+    'tu8zhang' => [
+        'data' => [
+			'pattern' => '/tu8zhang',
+    		'route'	=> '/{{SORT}}/signup/tu8zhang',
+        ],
+    ],
 ];

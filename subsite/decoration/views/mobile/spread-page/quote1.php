@@ -37,6 +37,7 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
         <option class="select_option">上海</option>
         <option class="select_option">石家庄</option>
         <option class="select_option">天津</option>
+        <option class="select_option">柳州</option>
         <option class="select_option">哈尔滨</option>
         <option class="select_option">西安</option>
         <option class="select_option">武汉</option>
