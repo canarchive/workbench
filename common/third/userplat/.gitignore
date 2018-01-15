@@ -1,0 +1,4 @@
+!.gitignore
+weibo/config.php
+wechat/config.php
+qq/config.php

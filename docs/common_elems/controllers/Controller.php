@@ -4,25 +4,25 @@ class Controller
 {
     protected function getGrouponInfo()
     {
-        $city = \Yii::$app->getRequest()->get('city');
+		$city = \Yii::$app->getRequest()->get('city');
         $id = \Yii::$app->getRequest()->get('id');
-        $forceId = \Yii::$app->getRequest()->get('force_id');
-        
+		$forceId = \Yii::$app->getRequest()->get('force_id');
+		
         $model = new \spread\groupon\models\Groupon();
-        if ($id && $forceId) {
-            $where = ['id' => $id];
-        } else {
-            $company = new \merchant\models\Company();
-            $companyInfo = $company->findOne(['code' => $city]);
-            if (empty($companyInfo)) {
-                return [];
-            }
-            $currentTime = time();
-            $where = ['and', "company_id = {$companyInfo['id']}", "start_at > $currentTime"];
-        }
+		if ($id && $forceId) {
+			$where = ['id' => $id];
+		} else {
+		    $company = new \merchant\models\Company();
+		    $companyInfo = $company->findOne(['code' => $city]);
+			if (empty($companyInfo)) {
+				return [];
+			}
+			$currentTime = time();
+			$where = ['and', "company_id = {$companyInfo['id']}", "start_at > $currentTime"];
+		}
 
-        $info = $model->getInfo($where);
-        
+		$info = $model->getInfo($where);
+		
         return $info;
     }
 
