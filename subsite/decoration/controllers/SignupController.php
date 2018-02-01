@@ -20,7 +20,7 @@ class SignupController extends Controller
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         $ip = Yii::$app->request->getIp();
         if ($ip != '60.205.115.137') {
-            //return 'error ip';
+            return 'error ip';
         }
         $fields = ['name', 'mobile', 'city_input', 'area_input', 'position', 'note', 'message'];
         $data = [];
