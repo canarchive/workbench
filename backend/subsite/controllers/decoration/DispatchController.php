@@ -117,6 +117,9 @@ class DispatchController extends Controller
             $model->reply_at = Yii::$app->params['currentTime'];
             break;
         }
+        if ($field == 'result_at') {
+            $value = !empty($value) ? strtotime($value) : $model->result_at;
+        }
         $model->$field = $value;
         $model->update(false);
 

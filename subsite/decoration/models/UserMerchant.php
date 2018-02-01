@@ -24,4 +24,16 @@ class UserMerchant extends ModelBase
         ];
         return $datas;
     }
+
+    public function getStatusResultInfos()
+    {
+        $datas = [
+            '' => '未知',
+            'weigh' => '已量房',
+            'reach' => '已到店',
+            'book' => '已下定金',
+            'order' => '已签单',
+        ];
+        return $datas;
+    }
 }

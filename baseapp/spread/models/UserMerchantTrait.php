@@ -51,6 +51,9 @@ trait UserMerchantTrait
 			'houseSort' => '房屋类别',
             'interval_time' => '派单时间',
 			'view_at' => '查看时间',
+			'status_result' => '客户回访状态',
+			'result_at' => '客户回访时间',
+			'note_result' => '客户回访备注',
             'name' => '名称',
         ];
     }
