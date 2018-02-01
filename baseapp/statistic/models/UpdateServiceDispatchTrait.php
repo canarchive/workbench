@@ -4,7 +4,7 @@ namespace baseapp\statistic\models;
 
 trait UpdateServiceDispatchTrait
 {
-    protected $serviceIds = [1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55, 56, 57];
+    protected $serviceIds = [1, 27, 28, 31, 46, 47, 49, 50, 52, 54, 55, 56, 57, 58, 59, 60, 61, 63, 64, 36];
     public function serviceDispatchSql()
     {
         $this->tableStr = 'ws_service_dispatch_origin';

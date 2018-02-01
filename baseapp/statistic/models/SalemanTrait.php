@@ -62,6 +62,24 @@ trait SalemanTrait
                 }
             ];
             break;
+		case 'fund_current_num':
+            return [
+                'attribute' => 'fund_current_num',
+                'value' => function($model) {
+					$diff = $model->fund_all_num - $model->fund_current_num;
+                    return $model->fund_current_num . '( ' . $diff . ' )';
+                }
+            ];
+            break;
+		case 'user_current_num':
+            return [
+                'attribute' => 'user_current_num',
+                'value' => function($model) {
+					$diff = $model->user_num - $model->user_current_num;
+                    return $model->user_current_num . '( ' . $diff . ' )';
+                }
+            ];
+            break;
         default:
             return $field;
         }
