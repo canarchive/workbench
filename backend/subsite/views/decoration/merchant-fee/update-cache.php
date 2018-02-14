@@ -22,7 +22,7 @@ $documentCodes = [
 	],
 	'service-pispatch' => [
 		'name' => '客服派单报表更新',
-		'url' => '/statistic/service/update.html?update_type=service',
+		'url' => '/statistic/dispatch/update.html?update_type=service',
 	],
 	'channel-fee' => [
 		'name' => '渠道费用报表更新',
