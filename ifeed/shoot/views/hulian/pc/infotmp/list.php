@@ -34,7 +34,7 @@ $broCatInfos = $this->context->categoryModel->getSubDatas($categoryInfo['parent_
         </ul>
     </div>
     <div class="mpage c">
-    <?php $pageStr = LinkPager::widget(['pagination' => $pages, 'linkOptions' => ['rel' => 'nofollow']]); $pageStr = str_replace('cn/" rel="nofollow"', 'com/"', $pageStr); echo $pageStr;?>
+    <?php $pageStr = LinkPager::widget(['pagination' => $pages, 'linkOptions' => ['rel' => 'nofollow']]); $pageStr = str_replace(['mcode=shouxi', 'cn/" rel="nofollow"'], ['', 'com/"'], $pageStr); echo $pageStr;?>
     </div>
         <div class="type_List">
         <?php foreach ($broCatInfos as $cCode => $cInfo) { ?>

@@ -177,7 +177,7 @@ class Infotmp extends BaseModel
 			$info->created_at = $createdAt;
 			$info->updated_at = $createdAt;
 			if (!empty($info->thumb)) {
-				$info->thumb = str_replace('uploadFile', 'http://upthird.xiaomishijia.cn/shoot/upcms/sxdt', $info->thumb);
+				$info->thumb = str_replace('uploadFile', 'http://upthird.5895306.com/shoot/upcms/sxdt', $info->thumb);
 			}
 			$info->description = $this->dealThumb($info->description, $info);
 			$info->content = $this->dealThumb($info->content, $info);
@@ -204,7 +204,7 @@ class Infotmp extends BaseModel
 		foreach ($thumb as $source) {
 			$target = strtolower($source);
 			$target = str_replace(['uploadfile', 'upload'], [$info->source_big, $info->source_big], $target);
-			$target = 'http://upthird.xiaomishijia.cn/shoot/upcms/' . $target;
+			$target = 'http://upthird.5895306.com/shoot/upcms/' . $target;
 			$datas[$source] = $target;
 		}
 		$content = str_replace(array_keys($datas), array_values($datas), $content);

@@ -21,17 +21,20 @@ trait ControllerTrait
                 'url' => $this->currentDomain,
                 'name' => '首页',
             ],
-            'case' => [
+        ];
+		if (count($this->sortInfos) < 5) {
+            $datas['case'] = [
                 'url' => $this->getSortUrl('all'),
                 'name' => '摄影作品',
                 'subDatas' => [],
-            ],
-        ];
+            ];
+		}
         foreach ($this->sortInfos as $sort => $sInfo) {
             if (empty($sort)) {
                 continue;
             }
-            $datas['case']['subDatas'][$sort] = [
+            //$datas['case']['subDatas'][$sort] = [
+            $datas[$sort] = [
                 'url' => $this->getSortUrl($sort),
                 'name' => $sInfo['name'],
             ];

@@ -8,6 +8,7 @@ $addUrl = $this->getMenuUrl('shoot_sample_add');
 <div class="row">
     <div class="box col-md-12">
         <?php foreach ($sortInfos as $siteCode => $sInfo) { 
+            if (!is_null($this->context->pointSite) && $this->context->pointSite != $siteCode) { continue; }
             if (!isset($siteInfos[$siteCode])) { continue; }  
             $listUrlSite = !empty($listUrl) ? $listUrl . '?site_code=' . $siteCode : ''; 
             $addUrlSite = !empty($addUrl) ? $addUrl . '?site_code=' . $siteCode : '';

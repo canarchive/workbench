@@ -4,7 +4,7 @@ $navDatas = $this->context->navDatas;
 <div class="topnav">
     <div class="top_menu fs16 ct1 cl">
         <ul class="cl">
-            <?php foreach ($navDatas as $nav => $data) { ?>
+            <?php foreach ($navDatas as $nav => $data) { if (in_array($nav, ['contactus', 'aboutus', 'flow', 'guarantee'])) { continue; } ?>
             <li>
                 <a <?php if ($nav == $this->context->currentElem) { echo 'class="active"'; } ?> href="<?= $data['url']; ?>" <?php if (in_array($nav, ['index', 'contactus', 'aboutus', 'flow', 'guarantee'])) { echo 'rel="nofollow"'; } else { echo 'title="' . $data['name'] . '"'; } ?>><?= $data['name']; ?></a>
                 <?php if (isset($data['subDatas'])) { $subStr = '<div class="c">';foreach ($data['subDatas'] as $subNav => $sData) { $isCurrent = $subNav == $this->context->currentSubElem ? 'class="active"' : ''; $subStr .= "<a href='{$sData['url']}' {$isCurrent} title='{$sData['name']}'>{$sData['name']}</a>"; } $subStr .= '</div>'; echo $subStr; } ?>

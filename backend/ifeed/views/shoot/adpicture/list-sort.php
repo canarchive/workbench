@@ -6,7 +6,7 @@ $addUrl = $this->getMenuUrl('shoot_adpicture_add');
 ?>
 <div class="row">
     <div class="box col-md-12">
-        <?php foreach ($model->siteInfos as $siteCode => $siteInfo) { ?>
+        <?php foreach ($model->siteInfos as $siteCode => $siteInfo) { if (!is_null($this->context->pointSite) && $this->context->pointSite != $siteCode) { continue; } ?>
         <div class="box-inner">
             <div data-original-title="" class="box-header well">
                 <h2><?= $siteInfo['name']; ?></h2>

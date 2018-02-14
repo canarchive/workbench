@@ -7,7 +7,7 @@ $navDatas = [
     'container' => ['url' => $this->context->currentDomain . "/{$siteCode}aboutus.html", 'nofollow' => true, 'name' => '公司简介'],
     'nav' => ['url' => $this->context->currentDomain . "/{$siteCode}contactus.html", 'nofollow' => true, 'name' => '联系我们'],
 ];
-$caseDatas = $this->context->navDatas['case']['subDatas'];
+$caseDatas = $this->context->navDatas;
 ?>
 <div class="navs_wrap">
     <section class="sub_navs_wrap">
@@ -25,7 +25,7 @@ $caseDatas = $this->context->navDatas['case']['subDatas'];
             <span class="more_text">摄影作品类别</span>
         </h3>
         <ul class="hot_zixun clearfix">
-            <?php foreach ($caseDatas as $sort => $sData) { ?>
+            <?php foreach ($caseDatas as $sort => $sData) { if (!in_array($sort, array_keys($this->context->sortInfos))) { continue; } ?>
             <li class="<?php if ($this->context->currentElem == $sort) { echo 'active'; } ?>">
                 <a href="<?= $sData['url']; ?>" title="<?= $sData['name']; ?>"><?= $sData['name']; ?></a>
             </li>
