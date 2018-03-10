@@ -84,7 +84,8 @@ class SignupForm extends Model
             $this->quoteInfo = $this->_getQuoteInfo($this->area_input);
         }
 
-        $this->sendSms($data);
+		$this->sendData($data);
+        //$this->sendSms($data);
         return ['status' => 200, 'message' => 'OK', 'quoteInfo' => $this->quoteInfo];
     }
 
@@ -100,7 +101,17 @@ class SignupForm extends Model
 
     protected function sendSms($data)
     {
-        return ;
+        $mobile = $data['mobile'];
+		$message = "有业主：{$data['name']}，电话：{$mobile}，咨询您公司的家装业务，请立即回访【兔班长装修网】";
+		$sMobile = '18801394072';
+
+        $smser = new Smser();
+        $smser->send($sMobile, $message, 'decoration_service');
+        return true;
+    }
+
+    protected function sendSmsold($data)
+    {
         $mobile = $data['mobile'];
 
 		$message = isset($this->merchantInfo['msg']) ? $this->merchantInfo['msg'] : '';
@@ -121,5 +132,23 @@ class SignupForm extends Model
         $quote = new Quote(); 
         $info = $quote->getResult($area);
         return $info;
+    }
+
+    public function sendData($data)
+    {
+        $ch = curl_init();
+		$url = 'http://hd.5895306.com/tu8zhang.html?';//http://hlyx.subsite.plat.alyee.com/tu8zhang.html?';
+		foreach ($data as $field => $value) {
+			$url .= "&{$field}={$value}";
+		}
+		file_put_contents('/tmp/url.txt', $url);
+        curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HEADER, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+		//curl_setopt($ch, CURLOPT_TIMEOUT, (int)$timeout);
+
+        $result = curl_exec($ch);
+		file_put_contents('/tmp/url-r.txt', $result);
+		return ;
     }
 }
