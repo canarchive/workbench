@@ -75,7 +75,7 @@ class MerchantPond extends Merchant
             return $this->getKeyName('display_level', $this->display_level);
         }
         $menu = $view->getMenuData('merchant_follow_merchant-pond_owner');
-        $url = $menu['url'];
+        $url = !empty($menu) ? $menu['url'] : '';
 
         $aClasses = [
             'private' => "btn btn-danger",

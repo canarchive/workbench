@@ -25,7 +25,7 @@ class Module extends ModuleBase
 
         $role = $managerInfo['role'];
         $merchantIds = array_filter(explode(',', $managerInfo['merchant_id']));
-        if (in_array($role, ['service-saleman', 'saleman-chief'])) {
+        if (in_array($role, ['service-saleman', 'saleman-chief', 'admin-inner'])) {
 			//$merchantIds = null;
             //$this->initSalemanPriv($managerInfo, $salemanInfo);
         }
@@ -51,7 +51,7 @@ class Module extends ModuleBase
             Yii::$app->params['noSearchServer'] = true;
             //return null;
         }
-        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner', 'service-saleman', 'cpa-cps', 'saleman-chief'])) {
+        if (in_array($role, ['admin-cpa', 'admin', 'admin-inner', 'service-saleman', 'cpa-cps', 'saleman-chief', 'admin-inner'])) {
             return null;
         }
 

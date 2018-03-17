@@ -10,7 +10,12 @@ class ContactController extends ContactControllerBase
 
     protected function privGetIgnore()
     {
-		return [];
-        //return ['merchant_id'];
+		//return [];
+        return ['merchant_id'];
     }
+
+	public function actionListservice()
+	{
+		return $this->actionListinfo();
+	}
 }

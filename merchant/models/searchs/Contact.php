@@ -15,7 +15,11 @@ class Contact extends ContactModel
 
     public function _searchElems()
     {
+		if (isset($_GET['inservice'])) {
+			$this->status_service = 'inservice';
+		}
         return [
+			['field' => 'status_service', 'type' => 'common'],
             ['field' => 'merchant_id', 'type' => 'common'],
             ['field' => 'status', 'type' => 'common'],
             ['field' => 'created_at', 'type' => 'rangeTime'],
