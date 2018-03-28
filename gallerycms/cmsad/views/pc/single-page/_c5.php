@@ -86,10 +86,10 @@
             </div>
             <div class="service floatR">
                 <h3>6大服务实力，提升企业销售业绩</h3>
-                <p class="serTitle_sub">专业的SEM服务团队，依赖顶尖的产品技术团队，为多行业多领域的客户提供全方位的账户优化服务。</p>
+                <p class="serTitle_sub">专业的SEM服务团队，依赖优秀的产品技术团队，为多行业多领域的客户提供全方位的账户优化服务。</p>
                 <div class="service_lists">
-                    <div class="serList_title">顶尖的技术团队</div>
-                    <div class="serList_txt">有专门的BI团队研究，提供丰富的账户优化策略，方案。有业内最顶尖的产品研发团队，致力于数字广告系统研发、消费者行为分析等给优化团队提供强有力的技术支持。</div></div>
+                    <div class="serList_title">优秀的技术团队</div>
+                    <div class="serList_txt">有专门的BI团队研究，提供丰富的账户优化策略，方案。专业的产品研发团队，致力于数字广告系统研发、消费者行为分析等给优化团队提供强有力的技术支持。</div></div>
                 <div class="service_lists">
                     <div class="serList_title">丰富的行业经验</div>
                     <div class="serList_txt">多年深耕教育、电商零售、金融、旅游等行业；服务智联招聘、搜狐焦点、苏宁易购等几千万级的大客户，为客户提供精细化执行方案</div></div>

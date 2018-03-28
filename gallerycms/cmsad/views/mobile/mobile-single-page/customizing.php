@@ -59,7 +59,7 @@ $colors = ['blue', 'purple', 'green'];
                 <li>
                     <div class="newz-ld-t">
                         <em>5</em>流量分析 赢在决策</div>
-                    <div class="newz-ld-d">数据分析支撑市场营销策略，创造最大生意价值</div></li>
+                    <div class="newz-ld-d">数据分析支撑市场营销策略，创造生意价值</div></li>
                 <li>
                     <div class="newz-ld-t">
                         <em>6</em>定期总结，赢在未来</div>
@@ -76,15 +76,15 @@ $colors = ['blue', 'purple', 'green'];
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist1.png" alt="6大服务实力，提升企业销售业绩"></span>
                     <div class="zm-goog-txt good-txt">
                         <h3>1.6大服务实力，提升企业销售业绩</h3>
-                        <p>专业的SEM服务团队，依赖顶尖的产品技术团队，为多行业多领域的客户提供全方位的账户优化服务。</p>
+                        <p>专业的SEM服务团队，依赖优秀的产品技术团队，为多行业多领域的客户提供全方位的账户优化服务。</p>
                     </div>
                 </li>
                 <li>
                     <span class="zm-good-icon good-icon">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist2.png" alt="顶尖的技术团队"></span>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/newz-goodlist2.png" alt="优秀的技术团队"></span>
                     <div class="zm-goog-txt good-txt">
-                        <h3>2.顶尖的技术团队</h3>
-                        <p>有专门的BI团队研究，提供丰富的账户优化策略，方案。有业内最顶尖的产品研发团队，致力于数字广告系统研发、消费者行为分析等给优化团队提供强有力的技术支持。</p>
+                        <h3>2.优秀的技术团队</h3>
+                        <p>有专门的BI团队研究，提供丰富的账户优化策略，方案。有业内的产品研发团队，致力于数字广告系统研发、消费者行为分析等给优化团队提供强有力的技术支持。</p>
                     </div>
                 </li>
                 <li>

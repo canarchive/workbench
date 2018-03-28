@@ -26,12 +26,12 @@ $this->params['formPositionName'] = 'sem';
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Baidu</span>最大的中文检索引擎</div>
-                            <div class="con">移动搜索绝对的霸主，全球最大的中文搜索引擎</div></div>
+                                <span>Baidu</span>中文检索引擎</div>
+                            <div class="con">移动搜索绝对的霸主，中文搜索引擎的佼佼者</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>sogou</span>借助于输入法成为发展最快的搜索引擎</div>
+                                <span>sogou</span>借助于输入法成为发展较快的搜索引擎</div>
                             <div class="con">借助于搜狗输入法，抢占用户市场</div></div>
                     </div>
                     <div class="clear"></div>
@@ -48,12 +48,12 @@ $this->params['formPositionName'] = 'sem';
                         <div class="jg-02"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>今日头条</span>中国最大的资讯平台</div>
+                                <span>今日头条</span>资讯平台</div>
                             <div class="con">移动端5.5亿人群每天在今日头条看新闻，信息流是趋势</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
-                                <span>智慧推</span>全球最大移动广告网络</div>
+                                <span>智慧推</span>移动广告网络</div>
                             <div class="con">整合腾讯资讯、娱乐等网络媒体的PC和移动端资源，面向区域企业提供的“品效合一”的营销推广服务</div></div>
                     </div>
                     <div class="clear"></div>
@@ -68,7 +68,7 @@ $this->params['formPositionName'] = 'sem';
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png" alt="SEM托管的优势"></div>
                     <div class="word word-01 floatL">
                         <!--<div class="gwtg-left">
-                        <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
+                        <div class="t t03"><span>Facebook</span>社区平台</div>
                         <div class="con">
                         利用Facebook上真实的人脉信息，更高效精准的网站宣传公司至目标群体
                         </div>
@@ -76,7 +76,7 @@ $this->params['formPositionName'] = 'sem';
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t03">
-                                <span>SEM</span>根据拓词系统快速找到转化率最高的前300个关键词，优化价格，做到高效投放；</div>
+                                <span>SEM</span>根据拓词系统快速找到转化率较高的前300个关键词，优化价格，做到高效投放；</div>
                             <div class="con">独立开发全流程的SEM托管系统，数据分析一目了然；公司SEM总监亲自操刀诊断，企业内训分享实操经验；专业营销策划，制作高转化着陆页；</div></div>
                     </div>
                     <div class="clear"></div>

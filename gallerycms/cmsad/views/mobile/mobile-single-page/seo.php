@@ -27,9 +27,9 @@ $this->params['jsFiles'] = [
                 <div class="tg-item-det">
                     <div class="tg-item-img">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/mobile/images/google-ggc-img1.jpg" alt="搜索引擎"></div>
-                    <h4>Baidu最大的中文检索引擎</h4>
-                    <p>移动搜索绝对的霸主，全球最大的中文搜索引擎</p>
-                    <h4>sogou借助于输入法成为发展最快的搜索引擎</h4>
+                    <h4>Baidu-中文检索引擎</h4>
+                    <p>移动搜索绝对的霸主，中文搜索引擎的佼佼者</p>
+                    <h4>sogou借助于输入法成为发展较快的搜索引擎</h4>
                     <p>借助于搜狗输入法，抢占用户市场</p>
                 </div>
             </div>

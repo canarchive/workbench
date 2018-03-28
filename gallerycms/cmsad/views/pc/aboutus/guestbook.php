@@ -21,7 +21,7 @@ $this->params['formPositionName'] = $view;
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/review-icon.jpg" alt=""></div>
             <div class="title">
                 <span>意见反馈</span></div>
-            <p class="sug-tips">留下您的宝贵意见，我们会在第一时间回复您</p>
+            <p class="sug-tips">留下您的宝贵意见，我们会及时回复您</p>
             <!--<form action="/feed_back/submit" method="post" id="formdata" enctype="multipart/form-data">-->
             <?php $form = ActiveForm::begin(['options' => ['id' => 'formguestbook']]); ?>
                 <div class="con">

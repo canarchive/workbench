@@ -26,12 +26,12 @@ $this->params['formPositionName'] = 'seo';
                     <div class="word word-01 floatL">
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>Baidu</span>最大的中文检索引擎</div>
-                            <div class="con">移动搜索绝对的霸主，全球最大的中文搜索引擎</div></div>
+                                <span>Baidu</span>中文检索引擎</div>
+                            <div class="con">移动搜索绝对的霸主，中文搜索引擎的佼佼者</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t01">
-                                <span>sogou</span>借助于输入法成为发展最快的搜索引擎</div>
+                                <span>sogou</span>借助于输入法成为发展较快的搜索引擎</div>
                             <div class="con">借助于搜狗输入法，抢占用户市场</div></div>
                     </div>
                     <div class="clear"></div>
@@ -49,7 +49,7 @@ $this->params['formPositionName'] = 'seo';
                         <div class="gwtg-left">
                             <div class="t t02">
                                 关键词排名无明显提升，官网保证全额退款</div>
-                            <div class="con">苦于没有顶级SEO，<?= Yii::$app->params['siteNameBase']; ?>SEO总监亲自操刀，8年经验，值得信赖！</div></div>
+                            <div class="con">苦于没有优秀的SEO，<?= Yii::$app->params['siteNameBase']; ?>SEO总监亲自操刀，8年经验，值得信赖！</div></div>
                         <div class="gwtg-jg"></div>
                         <div class="gwtg-left">
                             <div class="t t02">
@@ -68,7 +68,7 @@ $this->params['formPositionName'] = 'seo';
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/cmsad/pc/img/guowaituiguang-03.png" alt="SEO顾问流程"></div>
                     <div class="word word-01 floatL">
                         <!--<div class="gwtg-left">
-                        <div class="t t03"><span>Facebook</span>全球最大的社区平台</div>
+                        <div class="t t03"><span>Facebook</span>社区平台</div>
                         <div class="con">
                         利用Facebook上真实的人脉信息，更高效精准的网站宣传公司至目标群体
                         </div>

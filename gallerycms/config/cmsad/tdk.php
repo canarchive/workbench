@@ -8,12 +8,12 @@ return [
 	'single-page-sem' => [
         'title' => 'SEM托管_竞价托管_百度竞价托管费用,多少钱-{{SITENAME}}营销公司',
         'keyword' => 'SEM托管,竞价托管,百度竞价托管费用,SEM托管多少钱',
-        'description' => '{{SITENAME}}网络营销公司是北京最专业的网络营销外包服务商,为企业提供SEM托管,竞价托管,百度竞价托管费用,SEM托管多少钱,帮助企业降低成本提高转化率。'
+        'description' => '{{SITENAME}}网络营销公司是北京的网络营销外包服务商,为企业提供SEM托管,竞价托管,百度竞价托管费用,SEM托管多少钱,帮助企业降低成本提高转化率。'
 	],
 	'single-page-seo' => [
         'title' => '北京seo优化_北京seo托管_北京seo顾问服务-{{SITENAME}}营销公司',
         'keyword' => '北京seo优化,北京seo托管,北京seo顾问服务',
-        'description' => '{{SITENAME}}网络营销公司是北京最专业的网络营销外包服务商,为企业提供北京seo优化,北京seo托管,北京seo顾问服务,帮助企业降低成本提高转化率。',
+        'description' => '{{SITENAME}}网络营销公司是北京的网络营销外包服务商,为企业提供北京seo优化,北京seo托管,北京seo顾问服务,帮助企业降低成本提高转化率。',
 	],
 	'single-page-customizing' => [
         'title' => '企业定制_网站制作_SEO内训_软文推广-{{SITENAME}}营销公司',
