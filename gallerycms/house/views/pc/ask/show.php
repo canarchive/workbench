@@ -35,7 +35,7 @@ document.body.oncopy = function() {
             </div>
             <?php if (isset($answerInfos['best'])) { $aInfo = $answerInfos['best']; ?>
             <div class="ask_qustion best_answer ask_answer_li">
-                <div class="title title2" id='zj' value=''>最佳答案</div>
+                <div class="title title2" id='zj' value=''>答案</div>
                 <ul class="clear">
                     <li class="hover">
                         <a href="javascript: void(0);" rel="nofollow" class="company_img">

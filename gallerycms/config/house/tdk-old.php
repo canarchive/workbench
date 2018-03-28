@@ -8,7 +8,7 @@ return [
     ],
     // 商家列表页
     'merchant-index' =>  [
-        'title' => '{{CITYNAME}}装修公司哪家最好_{{CITYNAME}}装修公司十大排名_{{CITYNAME}}装修网站大全-【{{CITYNAME}}{{SITENAME}}】',
+        'title' => '{{CITYNAME}}装修公司哪家好_{{CITYNAME}}装修公司十大排名_{{CITYNAME}}装修网站大全-【{{CITYNAME}}{{SITENAME}}】',
         'keyword' => '{{CITYNAME}}装修公司哪家好,{{CITYNAME}}装修网站,{{CITYNAME}}装修公司排名,{{CITYNAME}}装修公司十大排名,{{CITYNAME}}装修网站大全,{{CITYNAME}}装修公司大全',
         'description' => '【{{SITENAME}}】{{CITYNAME}}装修网罗列出{{CITYNAME}}装修公司网站大全,帮业主快速了解{{CITYNAME}}装修公司哪家好？{{CITYNAME}}装修公司十大排名,从而解决您的装修问题。',
     ],

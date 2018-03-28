@@ -19,7 +19,7 @@ $this->params['jsStr'] = $this->render('_js-header');
 <?php //echo $this->render('_list'); ?>
 <?php //echo $this->render('_tag'); ?>
 <?php echo $this->render('@gallerycms/views/layouts-m/platj/_footer'); ?>
-<span>兔班长装修网网罗了<?= $this->context->currentCityName; ?>十大装修公司排名，<?= $this->context->currentCityName; ?>装修公司哪家好，<?= $this->context->currentCityName; ?>家装公司，<?= $this->context->currentCityName; ?>装饰装潢设计公司排行榜，<?= $this->context->currentCityName; ?>装修公司推荐；免费提供上门测量、设计与报价；装修过程违约，兔班长装修网为您做放心保障！</span>
+<span style="display: none">兔班长装修网网罗了<?= $this->context->currentCityName; ?>十大装修公司排名，<?= $this->context->currentCityName; ?>装修公司哪家好，<?= $this->context->currentCityName; ?>家装公司，<?= $this->context->currentCityName; ?>装饰装潢设计公司排行榜，<?= $this->context->currentCityName; ?>装修公司推荐；免费提供上门测量、设计与报价；装修过程违约，兔班长装修网为您做放心保障！</span>
 <a class="returntop" href="#top" style="display: none;">
     <img src="<?= Yii::getAlias('@asseturl'); ?>/house/platj/m/img/41560-7162.png"></a>
 <script>$(document).scroll(function() {

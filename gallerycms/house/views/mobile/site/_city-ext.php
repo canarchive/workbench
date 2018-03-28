@@ -64,7 +64,7 @@
         <div class="tab_main clearfloat">
             <div class="tab_center cur clearfloat">
                 <p class="some_text">
-                    <span>1份报价比较，选择最合理的装修报价</span>
+                    <span>1份报价比较，选择合理的装修报价</span>
                     <span>免费比报价，仔细对比更实惠！</span>
                 </p>
 
@@ -92,7 +92,7 @@
             </div>
             <div class="tab_center  clearfloat">
                 <p class="some_text">
-                    <span>2份报价比较，选择最合理的装修报价</span>
+                    <span>2份报价比较，选择合理的装修报价</span>
                     <span>免费比报价，仔细对比更实惠！</span>
                 </p>
 
@@ -120,7 +120,7 @@
             </div>
             <div class="tab_center clearfloat">
                 <p class="some_text">
-                    <span>3份报价比较，选择最合理的装修报价</span>
+                    <span>3份报价比较，选择合理的装修报价</span>
                     <span>免费比报价，仔细对比更实惠！</span>
                 </p>
 
@@ -148,7 +148,7 @@
             </div>
             <div class="tab_center  clearfloat">
                 <p class="some_text">
-                    <span>4份报价比较，选择最合理的装修报价</span>
+                    <span>4份报价比较，选择合理的装修报价</span>
                     <span>免费比报价，仔细对比更实惠！</span>
                 </p>
 
@@ -176,7 +176,7 @@
             </div>
             <div class="tab_center clearfloat">
                 <p class="some_text">
-                    <span>5份报价比较，选择最合理的装修报价</span>
+                    <span>5份报价比较，选择合理的装修报价</span>
                     <span>免费比报价，仔细对比更实惠！</span>
                 </p>
 
@@ -207,7 +207,7 @@
     </div>
 </div>
 </div>
-<!--最流行的装修风格-->
+<!--流行的装修风格-->
 <div class="fashion_style containerSmall">
 <div class="most_title">
     <div class="title_share">
@@ -217,7 +217,7 @@
         <a href="">现代简约装修效果图</a>
         <a href=""> 更多>></a>
     </div>
-    <strong>最流行的装饰风格</strong>
+    <strong>流行的装饰风格</strong>
     <!--<a class="update_num" href="">每日不断更新 <i>580</i> 张家居效果图</a>-->
 </div>
 <ul class="style_list clearfloat">

@@ -35,8 +35,8 @@ class WorkingController extends HouseController
         $page = Yii::$app->request->get('page');
         $page = str_replace('_', '', $page);
         $datas = $this->_initMerchant('merchant-show');
-        //$where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
-        $where = [];
+        $where = ['merchant_id' => $datas['info']['id']];//$tagInfos['ids'] === null ? ['status' => 1] : ['status' => 1, 'category_id' => $tagInfos['ids']];
+        //$where = [];
         $infos = $this->_getInfos($where);
 
         $datas['workingInfos'] = $infos;

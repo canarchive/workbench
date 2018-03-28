@@ -6,12 +6,15 @@
         <li>
             <span class="i-sep"></span><a href="/desc.html">关于我们</a><span class="i-sep"></span>
         </li>
+        <li>
+            <span class=""></span><a href="/">选择城市</a><span class="i-sep"></span>
+        </li>
     </ul>
     <div class="company-info">手机<?= Yii::$app->params['siteNameBase']; ?>：
         <a href="<?= Yii::getAlias('@m.gallerycmsurl'); ?>"><?= Yii::getAlias('@m.gallerycmsurl'); ?></a>&nbsp;
         <?= Yii::$app->params['siteIcpInfo']; ?>
     </div>
-    <div class="company-info">地址：北京市昌平区科星西路106号楼407室 </div>
+		<div class="company-info">地址：<?= Yii::$app->params['siteAddressInfo']; ?> </div>
 	<div class="company-info">联系电话：<a href="tel:<?= Yii::$app->params['siteHotline']; ?>"><?= Yii::$app->params['siteHotline']; ?></a>&nbsp;
     </div>
 </div>

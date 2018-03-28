@@ -23,7 +23,7 @@
                                     <p>留下您的手机号</p>
                                     <p>
                                     </p>
-                                    <p>创业顾问会以最快速度联系您</p>
+                                    <p>创业顾问会以及时联系您</p>
                                     <textarea onblur="if(this.value==''){this.value='输入手机号';}" onfocus="if(this.value=='输入手机号'){this.value='';}" type="text" id="tst" class="tst">输入手机号</textarea>
                                     <input type="button" onclick="addMessagesNew();" value="确认" class="tur"></div>
                             </div>

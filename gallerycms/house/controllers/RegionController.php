@@ -109,7 +109,7 @@ class RegionController extends GallerycmsController
 	{
         $datas = [
 			'list' => [
-			    'title' => "{{CITYNAME}}-{$info['name_short']}装修公司哪家最好-{{CITYNAME}}-{$info['name_short']}装修公司十大排名-{{CITYNAME}}-{$info['name_short']}装修网站大全-【{{CITYNAME}}{{SITENAME}}】",
+			    'title' => "{{CITYNAME}}-{$info['name_short']}装修公司哪家好-{{CITYNAME}}-{$info['name_short']}装修公司十大排名-{{CITYNAME}}-{$info['name_short']}装修网站大全-【{{CITYNAME}}{{SITENAME}}】",
 			    'keyword' => "装修公司哪家好，装修网站，装修公司排名，装修公司十大排名，装修网站大全，装修公司大全",
 			    'description' => "【{{SITENAME}}】{{CITYNAME}}装修网罗列出{{CITYNAME}}-{$info['name_short']}装修公司网站大全，帮业主快速了解{{CITYNAME}}-{$info['name']}装修公司哪家好？{{CITYNAME}}-{$info['name_short']}装修公司十大排名，从而解决您的装修问题。",
 			],

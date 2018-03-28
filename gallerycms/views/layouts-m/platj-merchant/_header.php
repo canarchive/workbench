@@ -4,7 +4,7 @@ $info = $this->context->mDatas['info'];
 <header class="b_header">
     <div class="wrap">
         <div class="fl header_1">
-            <a rel="nofollow" href="javascript:;" onclick="goBack()" title="" class="icon icon1"></a>
+		    <a rel="nofollow" href="<?= "/{$info['city_code']}/"; ?>" onclick="goBack()" title="" class="icon icon1"></a>
         </div>
         <h2 style="width:86%;text-align:center;float:left;font-size:1.2rem;color:#fff;"><?= $info['name_full']; ?></h2>
         <div class="fr header_2">

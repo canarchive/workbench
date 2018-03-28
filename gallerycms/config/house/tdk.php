@@ -18,7 +18,7 @@ return [
     'merchant-index' => [
         'title' => '{{CITYNAME}}装修公司大全_{{CITYNAME}}装饰公司推荐_{{CITYNAME}}家装公司汇总-{{CITYNAME}}兔班长装修网',
         'keyword' => '{{CITYNAME}}装修公司大全,{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司大全',
-        'description' => '兔班长装修网网罗了{{CITYNAME}}十大装修公司排名，{{CITYNAME}}家装公司大全，{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司推荐，让您快速找到最适合自己的装修公司。',
+        'description' => '兔班长装修网网罗了{{CITYNAME}}十大装修公司排名，{{CITYNAME}}家装公司大全，{{CITYNAME}}装饰公司大全,{{CITYNAME}}家装公司推荐，让您快速找到适合自己的装修公司。',
     ],
     // 找装修公司交叉搜索： {类别}：
     'merchant-index-decoration_sort' => [
@@ -49,7 +49,7 @@ return [
     'merchant-showindex' => [
         'title' => '【{{INFONAME}}】_{{INFONAME}}报价_{{INFONAME}}怎么样-兔班长装修网',
         'keyword' => '{{INFONAME}},{{INFONAME}}报价,{{INFONAME}}网站, {{INFONAME}}怎么样',
-        'description' => '{{INFONAME}}汇聚{{INFONAME}}价格、图片、资讯等最新信息。为您提供{{INFONAME}}的发展历程！作为{{INFONAME}}网站，还展示了相关问答，给购买者传递最具性价比！{{INFONAME}}怎么样、功能好不好用的用户反馈信息，为消费者提供有价值参考。',
+        'description' => '{{INFONAME}}汇聚{{INFONAME}}价格、图片、资讯等信息。为您提供{{INFONAME}}的发展历程！作为{{INFONAME}}网站，还展示了相关问答！{{INFONAME}}怎么样、功能好不好用的用户反馈信息，为消费者提供有价值参考。',
     ],
 
 
@@ -69,7 +69,7 @@ return [
     'sample-show' => [
         'title' => '{{INFONAME}}_{{TAGSTR}}-兔班长装修网',
         'keyword' => '{{INFONAME}}',
-        'description' => '兔班长图库频道，提供2017年最受欢迎的{标题}装修图片及实景效果图，每天更新数百张{{INFONAME}}图片及装修参考图片，为您的房子装修带来美轮美奂的参考灵感。',
+        'description' => '兔班长图库频道，提供2017年受欢迎的{标题}装修图片及实景效果图，每天更新数百张{{INFONAME}}图片及装修参考图片，为您的房子装修带来美轮美奂的参考灵感。',
     ],
 
     // 问答内容 http://cmshouse.alyee.com/ask-1.html

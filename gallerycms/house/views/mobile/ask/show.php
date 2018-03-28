@@ -29,7 +29,7 @@ $this->params['jsStr'] = $this->render('_js-header');//, ['jsFiles' => $jsFiles]
         <article class="user-question">
             <section style="display: none"></section>
             <section>
-                <h1><span></span><?= $info['name'] . '最佳回答'; ?></h1>
+                <h1><span></span><?= $info['name'] . '优选回答'; ?></h1>
                 <pre>
                 <p style="line-height:1.75em;"><?= $aInfo['description']; ?></p>
                 </pre>

@@ -34,8 +34,8 @@ class RealcaseController extends HouseController
     {
         $datas = $this->_initMerchant('merchant-show');
 
-        //$where = ['merchant_id' => $datas['info']['id']];
-        $where = [];
+        $where = ['merchant_id' => $datas['info']['id']];
+        //$where = [];
         $infos = $this->_getInfos($where);
 
         $datas['realcaseInfos'] = $infos;
