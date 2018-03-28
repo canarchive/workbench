@@ -115,7 +115,7 @@ $merchants = [
             <div class="title">
                 <span class="icon-speed"></span>
             </div>
-            <div class="summary">我们拥有强大的技术研发能力，所有开发人员均来自知名互联网公司，拥有深厚的技术背景，与资深的行业经验。我们通过技术的革新，为企业提供最好的营销服务。</div></div>
+            <div class="summary">我们拥有强大的技术研发能力，所有开发人员均来自知名互联网公司，拥有深厚的技术背景，与资深的行业经验。我们通过技术的革新，为企业提供优秀的营销服务。</div></div>
         <div class="small-12 medium-6 large-6 columns animateme" data-translatex="600" data-opacity="0" data-to="0" data-from="0.6" data-when="enter">
             <div class="title">
                 <span class="icon-data"></span>

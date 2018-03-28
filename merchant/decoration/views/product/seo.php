@@ -2,7 +2,7 @@
 Yii::$app->params['tdkInfos'] = [
     'title' => 'seo诊断_seo顾问_seo托管服务-维纳亚营销公司',
     'keyword' => 'seo诊断,seo顾问,seo托管服务',
-    'description' => '维纳亚网络营销公司是最专业的网络营销外包服务商,为企业提供seo诊断,seo顾问,seo托管服务,帮助企业降低成本提高转化率。',
+    'description' => '维纳亚网络营销公司是专业的网络营销外包服务商,为企业提供seo诊断,seo顾问,seo托管服务,帮助企业降低成本提高转化率。',
 ];
 $this->params['currentElem'] = 'seo';
 ?>
@@ -50,7 +50,7 @@ $this->params['currentElem'] = 'seo';
                         <i class="i-experience"></i>
                     </div>
                     <h3 class="focus">值得信赖</h3>
-                    <div class="summary">苦于没有顶尖SEO，维纳亚SEO总监亲自操刀，9年经验，值得信赖！</div></li>
+                    <div class="summary">苦于没有优秀SEO，维纳亚SEO总监亲自操刀，9年经验，值得信赖！</div></li>
                 <li>
                     <div class="icon">
                         <i class="i-data"></i>
@@ -72,7 +72,7 @@ $this->params['currentElem'] = 'seo';
         <div class="small-12 medium-6 columns">
             <div class="summary">
                 <div class="focus">SEO顾问服务流程</div>
-                <div class="des">我们只提供行业和门户级别的SEO顾问服务，顶级SEO专家，量身定做SEO策略，我们的服务让您获得的不仅是经验更是一个可以信赖的合作伙伴！</div>
+                <div class="des">我们只提供行业和门户级别的SEO顾问服务，SEO专家，量身定做SEO策略，我们的服务让您获得的不仅是经验更是一个可以信赖的合作伙伴！</div>
                 <ul class="example-list">
                     <li>每月提供权威的《SEO执行方案》，且制定不同时期的优化策略。</li>
                     <li>PC端网站与移动端网站实现同步操作分析！</li>

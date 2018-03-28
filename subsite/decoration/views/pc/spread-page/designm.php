@@ -31,7 +31,7 @@ if ($this->context->siteCode == 'other2-360') {
     <div class="siteNav">
         <div class="siteNavBg clear">
             <ul class="siteNavBgL">
-                <li>中国家居装修第一门户</li>
+                <li>家居装修门户网</li>
                 <li class="border"></li>
                 <li>第三方业主保障平台</li></ul>
             <ul class="siteNavBgR">
@@ -937,7 +937,7 @@ if ($this->context->siteCode == 'other2-360') {
             <p>
                 <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/b446a-7556.jpg" />
                 <span>
-                    <b>最值得信赖装修平台</b>
+                    <b>值得信赖装修平台</b>
                     <br />中国建筑装饰协会权威评定</span></p>
             <ul class="L_ul">
                 <li>

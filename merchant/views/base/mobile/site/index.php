@@ -436,7 +436,7 @@
                                                 <p class="sol-swiper-pinkbg">按年付费成本低，软件无需部署维护，降低IT运营门槛</p>
                                                 <p class="">帮企业解决渠道销售管理难题，快速迈入移动电商新技术浪潮</p>
                                                 <p class="">会用微信就能下单，就像企业版京东，简单易上手，无需实施培训</p>
-                                                <p class="">全球顶级电商平台安全与稳定机制，阿里云技术平台战略伙伴</p>
+                                                <p class="">全球电商平台安全与稳定机制，阿里云技术平台战略伙伴</p>
                                                 <p class="">支持PC、平板、APP与微信同步操作，移动订货、移动营销、移动支付</p>
                                                 <div class="sol-swiper-line sol-swiper-line-blue"></div>
                                             </div>

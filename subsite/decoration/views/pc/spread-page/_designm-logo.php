@@ -36,7 +36,7 @@
             <div class="honor_list_bg">
                 <div class="honor_list clear">
                     <a class="honorL honors" href="###" rel="nofollow">
-                        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/5dd4a-6586.jpg" alt="中装协：<?= Yii::$app->params['siteNameBase']; ?>装修平台是最值得信赖的装修平台"></a>
+                        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/5dd4a-6586.jpg" alt="中装协：<?= Yii::$app->params['siteNameBase']; ?>装修平台是值得信赖的装修平台"></a>
                     <a class="honorL honors" href="###" rel="nofollow">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/collect/img/2f987-9969.jpg" alt="先行赔付，100%解决投诉"></a>
                 </div>

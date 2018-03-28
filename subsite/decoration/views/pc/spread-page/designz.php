@@ -112,7 +112,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     <span>最高可获得500万装修赔付</span></li>
                 <li>
                     <i class="i2"></i>
-                    <p>全行业最优惠价格</p>
+                    <p>行业优惠价格</p>
                     <span>申请装修，立马省35%</span></li>
                 <li>
                     <i class="i3"></i>

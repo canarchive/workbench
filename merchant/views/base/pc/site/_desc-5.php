@@ -7,7 +7,7 @@
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="<?= Yii::getAlias('@asseturl'); ?>/merchant/shop/img/84347-3574.jpg" class="lazy" />
                     <div class="txt-bg"></div>
                     <p class="img-txt">
-                        <span>长期专注企业SaaS应用与渠道销售领域的研究与实践</span>曾任信息产业部信息产业商会渠道商会常委， 荣获2006年度IT十大CCO（首席渠道官）称号（SPN）。企业互联网领域最具影响力的创业者之一。原金蝶友商电子商务公司CEO、金蝶软件副总裁与金蝶集团渠道部总经理。</p></div>
+                        <span>长期专注企业SaaS应用与渠道销售领域的研究与实践</span>曾任信息产业部信息产业商会渠道商会常委， 荣获2006年度IT十大CCO（首席渠道官）称号（SPN）。企业互联网领域具影响力的创业者之一。原金蝶友商电子商务公司CEO、金蝶软件副总裁与金蝶集团渠道部总经理。</p></div>
                 <p class="leader-name">冯 颉</p>
                 <p class="txt">铱云创始人&CEO</p></li>
             <li class="leader-wrap tc">

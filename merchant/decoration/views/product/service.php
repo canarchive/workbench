@@ -35,7 +35,7 @@ $this->params['currentElem'] = 'service';
 
 和外包项目指导，业务覆盖：百度、360、搜狗等各大搜索引擎竞价托管系统，服务的公司大多都分布在北京，
 
-上海，广州，深圳，等热门城市，是企业寻找网络竞价营销瓶颈的最佳出口。</div></div>
+上海，广州，深圳，等热门城市，是企业寻找网络竞价营销瓶颈的理想出口。</div></div>
         </div>
     </div>
 </div>
@@ -45,7 +45,7 @@ $this->params['currentElem'] = 'service';
         <div class="small-12 medium-6 columns">
             <div class="summary">
                 <div class="focus">服务与理念</div>
-                <div class="des">对关键词、创意的历史表现做分析，选取重点词和创意，集中管理，抓大放小，最高效的提高roi（是指通过投资而应返回的价值）。</div>
+                <div class="des">对关键词、创意的历史表现做分析，选取重点词和创意，集中管理，抓大放小，高效的提高roi（是指通过投资而应返回的价值）。</div>
                 <ul class="example-list">
                    <li>A. 策略+创意+技术竞价托管服务模式，高效科学的竞价管理。</li> 
 
@@ -53,7 +53,7 @@ $this->params['currentElem'] = 'service';
 
 </li> <li>C. 9年实力团队账户操作，多种行业优化经验，有效提升账户转化率。
 
-</li> <li>D. 聚集国内最多的竞价大神,共同为竞价健康发展献计献策,共求发展。
+</li> <li>D. 聚集国内多个竞价大神,共同为竞价健康发展献计献策,共求发展。
 </li> </ul>
                 <!--<div class="sub">
                     <a href="" target="_blank" class="button success small radius" title="全新图形验证方案体验">立即体验在线版本</a></div>-->

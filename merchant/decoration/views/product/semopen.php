@@ -2,7 +2,7 @@
 Yii::$app->params['tdkInfos'] = [
     'title' => '各大搜索引擎开户-维纳亚营销公司',
     'keyword' => '各大搜索引擎开户',
-    'description' => '维纳亚网络营销公司是最专业的搜索引擎开户',
+    'description' => '维纳亚网络营销公司是专业的搜索引擎开户',
 ];
 $this->params['currentElem'] = 'semopen';
 ?>

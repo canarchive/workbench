@@ -2,7 +2,7 @@
 Yii::$app->params['tdkInfos'] = [
     'title' => 'PR危机公关处理-维纳亚营销公司',
     'keyword' => 'PR危机公关处理',
-	'description' => '维纳亚网络营销公司是最专业的PR危机公关处理平台',
+	'description' => '维纳亚网络营销公司是专业的PR危机公关处理平台',
 ];
 $this->params['currentElem'] = 'opinion';
 ?>
