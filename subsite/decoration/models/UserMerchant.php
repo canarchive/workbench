@@ -6,6 +6,7 @@ use baseapp\spread\models\UserMerchantTrait;
 
 class UserMerchant extends ModelBase
 {
+	use UserMerchantPushTrait;
     use UserMerchantTrait;
     public $statusLimit = 20 * 86400;
     public $isRedispatchLimit = 600;

@@ -5,10 +5,10 @@ $currentElem = isset($this->params['currentElem']) ? $this->params['currentElem'
 $navDatas = [
     'cpa' => 'CPA服务',
     'sem' => '竞价托管',
-    'seo' => '网站SEO',
-    'opinion' => '舆情监控',
+    //'seo' => '网站SEO',
+    //'opinion' => '舆情监控',
     'semopen' => '渠道开户',
-    'customizing' => '企业定制',
+    //'customizing' => '企业定制',
     'ask' => '合作须知',
     'material' => '合作商家助手',
 ];
