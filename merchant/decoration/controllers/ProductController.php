@@ -10,7 +10,7 @@ class ProductController extends MerchantController
     {
 		$code = Yii::$app->request->get('code');
 		//$codes = ['service', 'advantage', 'sms', 'mail', 'voice', 'captcha'];
-		$codes = ['seo', 'sem', 'customizing', 'cpa', 'sms', 'mail', 'voice', 'captcha', 'ask', 'material', 'opinion', 'semopen'];
+		$codes = ['seo', 'sem', 'customizing', 'cpa', 'sms', 'mail', 'voice', 'captcha', 'ask', 'material', 'semopen'];//, 'opinion'
 
 		$code = in_array($code, $codes) ? $code : 'service';
 		$datas = [

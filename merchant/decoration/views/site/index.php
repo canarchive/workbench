@@ -60,7 +60,7 @@ $merchants = [
 ?>
 <?= $this->render('../_banner'); ?>
 <div class="main-service scrollme">
-    <h4>国内首家</h4>
+    <h4>专注、专业</h4>
     <h6 class="sub-title">专注装修建材企业CPA效果营销服务商</h6>
     <div class="row site-width">
         <div class="small-12 medium-3 columns animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity=".3" data-translatey="50" data-rotatez="0">
@@ -76,7 +76,7 @@ $merchants = [
                 <span class="mail-view"></span>
             </div>
             <h5>竞价托管</h5>
-            <p class="summary">一对一定制化解决方案，以SEM服务托管为合作模式，降低企业获客成本50%以上。</p>
+            <p class="summary">一对一定制化解决方案，以SEM服务托管为合作模式，降低企业获客成本。</p>
             <p class="sub"><a href="/sp-sem.html" class="button success radius tiny" title="">了解详情</a></p>
         </div>
         <div class="small-12 medium-3 columns animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity=".3" data-translatey="50" data-rotatez="0">
@@ -105,7 +105,7 @@ $merchants = [
             <div class="title">
                 <span class="icon-star"></span>
             </div>
-            <div class="summary">自主开发的SEM监控系统与卡位算法及SEO精准搜索规则，可以高精度锁定受众人群，让SEM、SEO引流更精准更智能，同时投入成本大大降低，ROI提升50％以上。</div></div>
+            <div class="summary">自主开发的SEM监控系统与卡位算法及SEO精准搜索规则，可以高精度锁定受众人群，让SEM、SEO引流更精准更智能，同时投入成本大大降低，ROI大大提升。</div></div>
         <div class="small-12 medium-6 large-6 columns animateme" data-translatex="400" data-opacity="0" data-to="0" data-from="0.6" data-when="enter">
             <div class="title">
                 <span class="icon-gear"></span>

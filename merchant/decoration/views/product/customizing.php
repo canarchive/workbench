@@ -108,7 +108,7 @@ SEM精准营销解决方案；SEO顾问；舆情监控(企业负面和危机公�
                     <div class="preview">
                         <img src="<?= Yii::getAlias('@asseturl'); ?>/merchant/adview/img/browser.png" width="100" alt=""></div>
                     <h3 class="focus">我们企业做SEM了，但是获客成本非常高，怎么降低成本?</h3>
-                    <div class="summary">这个问题非常容易解决，维纳亚首家开发全自动SEM数据分析监控系统，只需一段代码，轻松帮您分析账户在各大搜索引擎上的表现，获客成本降低50%以上！</div></li>
+                    <div class="summary">这个问题非常容易解决，维纳亚开发全自动SEM数据分析监控系统，只需一段代码，轻松帮您分析账户在各大搜索引擎上的表现，有效获客成本降低！</div></li>
             </ul>
         </div>
     </div>

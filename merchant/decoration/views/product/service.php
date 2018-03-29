@@ -2,22 +2,11 @@
 Yii::$app->params['tdkInfos'] = [
     'title' => '我们的服务-专注装修建材行业CPA效果营销推广服务商',
     'keyword' => 'weinaya，维纳亚，北京维纳亚科技有限公司',
-    'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，国内首家专注装修建材行业CPA效果营销推广服务商。',
+    'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，国内专注装修建材行业CPA效果营销推广服务商。',
 ];
 $this->params['currentElem'] = 'service';
 ?>
 <?= $this->render('../_banner'); ?>
-<!--<div class="captcha-banner">
-    <div class="row site-width">
-        <div class="small-12 columns">
-            <h1>Weinaya(维纳亚)——为装企而生</h1>
-            <h2>一切以效果营销为导向，打破行业推广难、获客成本高等系列痛点，迅速提升企业ROI、获客成本降低50%。</h2>
-            <div class="sub">
-                <a href="https://luosimao.com/docs/api/56" target="_blank" class="button radius small success">立即免费安装</a>
-                <a href="https://captcha.luosimao.com/demo/" target="_blank" class="button radius small">立即在线体验</a></div>
-        </div>
-    </div>
-</div>-->
 <div class="captcha-main" style="background-color:#e7e7e7;">
     <div class="row site-width" style="height:430px;overflow:hidden;padding-top:20px;">
         <div class="small-12 medium-6 columns">
