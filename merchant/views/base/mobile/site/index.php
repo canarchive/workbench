@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title>易订货—移动订货系统第1品牌，企业专属的的手机订货平台，网上订货系统，微信订货平台，订单管理系统</title>
         <meta name="keywords" content="易订货,网上订货系统,分销管理系统，微信订单，订单系统，订单管理系统，进销存免费版，免费crm,移动订货app" />
-        <meta name="description" content="易订货是国内首款移动订货系统，帮助企业快速构建专属的客户订货电商平台，开拓分销渠道，加速资金回笼，让生意更简单！" />
+        <meta name="description" content="易订货是首款移动订货系统，帮助企业快速构建专属的客户订货电商平台，开拓分销渠道，加速资金回笼，让生意更简单！" />
         <meta name="shenma-site-verification" content="0c6da341da6a174d9561a2bac3c2c342_1451290294">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Cache-Control" content="no-cache">

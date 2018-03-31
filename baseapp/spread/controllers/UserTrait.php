@@ -161,6 +161,9 @@ trait UserTrait
             'created_at' => date('Y-m-m H:i:s', $model->created_at),
             'content' => $content,
         ];
+		if ($model->merchant_id == '6227') {
+			$model->actionPush($model->merchant_id);
+		}
 
         return $return;
     }

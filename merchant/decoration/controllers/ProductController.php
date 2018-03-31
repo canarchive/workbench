@@ -11,11 +11,12 @@ class ProductController extends MerchantController
 		$code = Yii::$app->request->get('code');
 		//$codes = ['service', 'advantage', 'sms', 'mail', 'voice', 'captcha'];
 		$codes = ['seo', 'sem', 'customizing', 'cpa', 'sms', 'mail', 'voice', 'captcha', 'ask', 'material', 'semopen'];//, 'opinion'
-		$codes = ['sem', 'cpa', 'ask', 'material'];//, 'opinion'
+		$codes = ['cpa', 'seo', 'material'];//, 'opinion'
 
-		$code = in_array($code, $codes) ? $code : 'service';
-		$datas = [
-		];
+		if (!in_array($code, $codes)) {
+			header('Location:/');
+		}
+		$datas = [];
 		
 		//$this->getTdkInfos('feature-' . $code);
 		return $this->render($code, $datas);

@@ -4,7 +4,7 @@ $qqUrl = $this->context->isMobile ? "mqqwpa://im/chat?chat_type=wpa&uin={$qq}&ve
 Yii::$app->params['tdkInfos'] = [
     'title' => '我们的优势-专注装修建材行业CPA效果营销推广服务商',
     'keyword' => 'weinaya，维纳亚，北京维纳亚科技有限公司',
-    'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，国内专注装修建材行业CPA效果营销推广服务商。',
+    'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，专注装修建材行业CPA效果营销推广服务商。',
 ];
 $this->params['currentElem'] = 'advantage';
 ?>

@@ -10,7 +10,7 @@ $this->params['currentElem'] = 'material';
     <div class="row site-width">
         <div class="small-12 columns">
             <h1>商家助手</h1>
-            <h2>国内专注装修建材企业CPA效果营销服务商</h2>
+            <h2>专注装修建材企业CPA效果营销服务商</h2>
             <div class="sub">
             <?= $this->render('../_banner-button'); ?>
             </div>

@@ -2,7 +2,7 @@
 Yii::$app->params['tdkInfos'] = [
     'title' => '我们的服务-专注装修建材行业CPA效果营销推广服务商',
     'keyword' => 'weinaya，维纳亚，北京维纳亚科技有限公司',
-    'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，国内专注装修建材行业CPA效果营销推广服务商。',
+    'description' => '【(weinaya) 维纳亚——为装企而生】北京维纳亚科技有限公司，专注装修建材行业CPA效果营销推广服务商。',
 ];
 $this->params['currentElem'] = 'service';
 ?>
@@ -42,7 +42,7 @@ $this->params['currentElem'] = 'service';
 
 </li> <li>C. 9年实力团队账户操作，多种行业优化经验，有效提升账户转化率。
 
-</li> <li>D. 聚集国内多个竞价大神,共同为竞价健康发展献计献策,共求发展。
+</li> <li>D. 聚集多个竞价大神,共同为竞价健康发展献计献策,共求发展。
 </li> </ul>
                 <!--<div class="sub">
                     <a href="" target="_blank" class="button success small radius" title="全新图形验证方案体验">立即体验在线版本</a></div>-->

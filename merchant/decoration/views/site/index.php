@@ -77,7 +77,6 @@ $merchants = [
             </div>
             <h5>竞价托管</h5>
             <p class="summary">一对一定制化解决方案，以SEM服务托管为合作模式，降低企业获客成本。</p>
-            <p class="sub"><a href="/sp-sem.html" class="button success radius tiny" title="">了解详情</a></p>
         </div>
         <div class="small-12 medium-3 columns animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity=".3" data-translatey="50" data-rotatez="0">
             <div class="pic">
@@ -93,44 +92,6 @@ $merchants = [
             </div>
             <h5>企业定制</h5>
             <p class="summary">从网站流量到网站效果，一站式解决方案（企业定制 = 网站建设+SEM培训+SEO指导+SMO）</p>
-            <p class="sub"><a href="/sp-customizing.html" class="button success radius tiny" title="">了解详情</a></p>
         </div>
-    </div>
-</div>
-<div class="main-focus scrollme">
-    <h4>帮助企业低成本获取精准客户</h4>
-    <h6 class="sub-title">我们用互联网技术+行业实战经验，帮助装修企业获取精准客户的成本降到合理水平乃至更低。由此“维纳亚”为装修企业营销而诞生，目前已有多家装企通过“维纳亚”实现了推广低成本业绩高成长。</h6>
-    <div class="row site-width">
-        <div class="small-12 medium-6 large-6 columns animateme" data-translatex="-400" data-opacity="0" data-to="0" data-from="0.6" data-when="enter">
-            <div class="title">
-                <span class="icon-star"></span>
-            </div>
-            <div class="summary">自主开发的SEM监控系统与卡位算法及SEO精准搜索规则，可以高精度锁定受众人群，让SEM、SEO引流更精准更智能，同时投入成本大大降低，ROI大大提升。</div></div>
-        <div class="small-12 medium-6 large-6 columns animateme" data-translatex="400" data-opacity="0" data-to="0" data-from="0.6" data-when="enter">
-            <div class="title">
-                <span class="icon-gear"></span>
-            </div>
-            <div class="summary">不断创新的精神 , 我们更愿意在自己所在的领域投入更多的精力，致力于挖掘更深层次的需求，我们紧跟时代的潮流，用富于创新的精神对待每一位客户。</div></div>
-        <div class="small-12 medium-6 large-6 columns animateme" data-translatex="-600" data-opacity="0" data-to="0" data-from="0.6" data-when="enter">
-            <div class="title">
-                <span class="icon-speed"></span>
-            </div>
-            <div class="summary">我们拥有强大的技术研发能力，所有开发人员均来自知名互联网公司，拥有深厚的技术背景，与资深的行业经验。我们通过技术的革新，为企业提供优秀的营销服务。</div></div>
-        <div class="small-12 medium-6 large-6 columns animateme" data-translatex="600" data-opacity="0" data-to="0" data-from="0.6" data-when="enter">
-            <div class="title">
-                <span class="icon-data"></span>
-            </div>
-            <div class="summary">我们的目标，是不断的提升系统的研发与技术的升级，为企业客户带来更大价值!帮助我们的客户，花费更少的成本，获取更多的优质客户，与合作企业一起共创辉煌。</div></div>
-    </div>
-</div>
-<div class="main-partner scrollme">
-    <h4>合作案例</h4>
-    <div class="row site-width animateme" data-translatey="800" data-scale="2" data-opacity="0" data-to="0" data-from="0.5" data-when="view">
-        <?php foreach ($merchants as $code => $sName) { ?>
-        <div class="small-6 medium-4 large-2 columns">
-            <a rel="nofollow" href="javascript: void(0);" title="<?= $sName; ?>">
-            <img src="<?= Yii::getAlias('@asseturl') . '/merchant/adview/khlogo/' . $code . '.png'; ?>" alt="<?= $sName; ?>" style="width=170px;"/></a>
-        </div>
-        <?php } ?>
     </div>
 </div>

@@ -6,9 +6,9 @@ use Yii;
 
 trait UserMerchantPushTrait
 {
-	public function actionPush()
+	public function actionPush($merchantId)
 	{
-		$infos = $this->getInfos(['where' => ['and', 'push_status = 0', 'push_number < 5', 'merchant_id = 6227'], 'limit' => 3]);
+		$infos = $this->getInfos(['where' => ['and', 'push_status = 0', 'push_number < 5', 'merchant_id = ' . $merchantId], 'limit' => 3]);
 		foreach ($infos as $info) {
 			//var_dump($info);
 			$data = [
@@ -25,14 +25,14 @@ trait UserMerchantPushTrait
 				'gIp' => '',
 			];
 			$result = $this->pushData($data);
+			$result = json_decode($result, true);
 			if (isset($result['Status'])) {
 				$info->push_status = 1;
 				$info->push_number += 1;
 				$info->push_at = Yii::$app->params['currentTime'];
-				$info->update(false, ['push_status']);
+				$r = $info->update(false, ['push_status']);
 		    }
-			var_dump($data);
-			var_dump(json_decode($result, true));
+			//var_dump($data);
 			//exit();
 		}
 	}

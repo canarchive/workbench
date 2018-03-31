@@ -44,7 +44,7 @@ $this->params['currentElem'] = 'semopen';
                         <i class="i-shield"></i>
                     </div>
                     <h3 class="focus">百度</h3>
-                    <div class="summary">百度竞价排名是百度国内首创的一种按效果付费的网络推广方式，用少量的投入就可以给企业带来大量潜在客户，有效提升企业销售额。</div></li>
+                    <div class="summary">百度竞价排名是百度首创的一种按效果付费的网络推广方式，用少量的投入就可以给企业带来大量潜在客户，有效提升企业销售额。</div></li>
                 <li>
                     <div class="icon">
                         <i class="i-experience"></i>

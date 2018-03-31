@@ -10,7 +10,7 @@ $this->params['currentElem'] = 'seo';
     <div class="row site-width">
         <div class="small-12 columns">
             <h1>网站流量整体解决方案</h1>
-            <h2>让网站流量迅速提升200%以上，霸占四大搜索引擎</h2>
+            <h2>让网站流量迅速提升，在四大搜索引擎获得较好的排名</h2>
             <div class="sub">
             <?= $this->render('../_banner-button'); ?>
             </div>
@@ -78,7 +78,6 @@ $this->params['currentElem'] = 'seo';
                     <li>PC端网站与移动端网站实现同步操作分析！</li>
                     <li>每月您可以随时电话、QQ，向SEO项目经理，咨询贵站SEO相关的问题。</li>
                     <li>制定长期网站跟踪的SEO数据（及时发现问题，跟踪优化效果）</li>
-                    <li>服务报价：每月30000元起，季度起付</li>
                 </ul>
             </div>
         </div>
