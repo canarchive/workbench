@@ -49,4 +49,14 @@ class UserController extends Controller
     {
         return '@backend/subsite/views/decoration/user/listinfo';
     }
+
+	public function getMerchantWhere()
+	{
+		return ['status' => 'cpa'];
+	}
+
+	public function isMerchantEntrance()
+	{
+		return false;
+	}
 }

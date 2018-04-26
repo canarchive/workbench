@@ -48,12 +48,17 @@ trait UserTrait
             $newModel = $model->addHandle($sort);
 
             if ($newModel) {
-                $url = $this->menuInfos['appMenus']['listinfo']['url'];
+                $url = $this->getUpdateUrl();
                 return $this->redirect($url);
             }
         }
         return ;
     }
+
+	protected function getUpdateUrl()
+	{
+        return $this->menuInfos['appMenus']['listinfo']['url'];
+	}
 
     public function actionUpdate($id)
     {

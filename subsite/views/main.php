@@ -12,4 +12,5 @@ $this->params['faviconUrl'] = Yii::getAlias('@asseturl') . '/spread/favicon.ico'
 </div>
 <?php if (isset($this->params['bodyStr'])) { echo $this->params['bodyStr']; } ?>
 <?= $this->render('@subsite/views/_stat', []); // 顶部 ?>
+<?= $this->render('@subsite/views/_inline', []); ?>
 <?php $this->endContent(); ?>

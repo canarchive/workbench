@@ -26,7 +26,7 @@ echo $subnavString;
 <?php
 $subnavString = '';
 foreach ($serviceInfos as $sId => $sName) {
-	if (!in_array($sId, [27, 28, 31])) { continue; } 
+	if (!in_array($sId, [27, 28, 31, 65])) { continue; } 
     $styleStr =  $sId === $serviceId ? 'style="color:#009900;"' : '';
     $urlStr =  '?service_id=' . $sId . '&status=' . $statusCurrent;
     $subnavString .= "<li><a href='{$urlStr}' {$styleStr}>{$sName}</a></li>";

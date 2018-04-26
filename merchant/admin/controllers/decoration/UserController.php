@@ -85,4 +85,22 @@ class UserController extends UserControllerBase
         ];
         return $this->render($this->viewPrefix . 'change-service', $data);
     }
+
+	public function getMerchantWhere()
+	{
+		return ['id' => Yii::$app->params['privInfo']['merchant_id']];
+	}
+
+	public function isMerchantEntrance()
+	{
+		if (in_array(2, Yii::$app->params['privInfo']['merchant_id'])) {
+			return false;
+		}
+		return true;
+	}
+
+	protected function getUpdateUrl()
+	{
+        return $this->menuInfos['appMenus']['listout']['url'];
+	}
 }

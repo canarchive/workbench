@@ -11,6 +11,6 @@ class UserMerchantController extends Controller
 	public function actionPush()
 	{
 		$model = new UserMerchant();
-		$model->actionPush();
+		$model->actionPush('6227');
 	}
 }
