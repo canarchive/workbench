@@ -58,6 +58,8 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
                     <select name="city" class="inp">
                         <option value="北京">北京</option>
                         <option value="上海">上海</option>
+                        <option value="深圳">深圳</option>
+                        <option value="太原">太原</option>
                         <option value="天津">天津</option>
                         <option value="哈尔滨">哈尔滨</option>
                         <option value="西安">西安</option>
