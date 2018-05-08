@@ -21,7 +21,7 @@ use common\widgets\FileUploadUI;
             $('#plan-end_at').datetimepicker({locale: 'zh-CN', format: 'YYYY-MM-DD HH:mm:ss'});
         });
     </script>
-    <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => ['id' => ['1394', '4438', '2', '1405', '680', '6127']]]), ['prompt' => '']); ?>
+    <?= $form->field($model, 'merchant_id')->dropDownList($model->getPointInfos('merchant', ['where' => ['id' => ['1394', '4438', '2', '1405', '680', '6127', '6237']]]), ['prompt' => '']); ?>
     <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>

@@ -13,7 +13,7 @@ $urls = $this->context->navUrls;
 
 Yii::$app->params['tdkInfos']['title'] =  '装修报价-上海装修报价单_上海装修预算表_上海装修到底需要多少钱-兔班长装修网';
 Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
-Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2017上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';
+Yii::$app->params['tdkInfos']['description'] = '兔班长装修网装修报价频道为您收集整理了大量2018上海装修报价单，上海装修预算表，上海装修到底需要多少钱，让您家装修更省钱！';
 ?>
 <!--[if lt IE 9]>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/znbj/js/jquery-1.9.1.min.js" type="text/javascript"></script>

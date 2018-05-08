@@ -8,7 +8,7 @@ $this->params['cssStr'] = $this->render('@common/views/base/_css-js', ['files' =
 
 Yii::$app->params['tdkInfos']['title'] =  '装修报价-装修预算表_装修到底需要多少钱';
 Yii::$app->params['tdkInfos']['keyword'] = '装修报价，环保装修,环保家装,家装团购';
-Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集整理了大量2017装修报价单，装修预算表，装修到底需要多少钱，让您家装修更省钱！';
+Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集整理了大量2018装修报价单，装修预算表，装修到底需要多少钱，让您家装修更省钱！';
 ?>
 <!--第一步：选择房屋类型与城市-->
 <div class="ZXmain_one">
