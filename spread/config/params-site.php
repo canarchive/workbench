@@ -1,20 +1,13 @@
 <?php
-$commonCopy = 'Copyright 北京维纳亚科技有限公司 2010-2017, All Rights Reserved';
+$commonCopy = 'Copyright 北京维纳亚科技有限公司 2010-2018, All Rights Reserved';
 $commonIcp = '京ICP备17003882号-2';
 $sites = [
-    'qzjxjy' => [
-        'name' => '搜狗-深圳2',
-        'copy' => $commonCopy,
-        'icp' => $commonIcp,
-        'pc' => 'http://zs.qzjxjy.cn',
-        'm' => 'http://m.qzjxjy.cn',
-    ],
-    'zcflol' => [
+    'ywcnpiju' => [
         'name' => '搜狗-深圳1',
         'copy' => $commonCopy,
         'icp' => $commonIcp,
-        'pc' => 'http://zc.zcflol.cn',
-        'm' => 'http://m.zcflol.cn',
+        'pc' => 'http://zs.ywcnpiju.cn',
+        'm' => 'http://m.ywcnpiju.cn',
     ],
     'default' => [
         'name' => '默认',

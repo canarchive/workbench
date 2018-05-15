@@ -12,7 +12,7 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'merchant')->dropDownList($model->merchantInfos, ['prompt' => '']); ?>
     <?= $form->field($model, 'domain')->textInput(['maxlength' => 128]) ?>
     <?= $form->field($model, 'domain_mobile')->textInput(['maxlength' => 128]) ?>
-    <?= $form->field($model, 'statusInfos')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
+    <?= $form->field($model, 'status')->dropDownList($model->statusInfos, ['prompt' => '']); ?>
     <?= $this->render('@backend/views/common/form_button', ['model' => $model]); ?>
     <?php ActiveForm::end(); ?>
 </div>

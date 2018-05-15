@@ -13,12 +13,10 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
 <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/css/30075-1553.css" />
 <link rel="stylesheet" href="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/css/ad67e-1189.css" />
 <style>input::-webkit-input-placeholder { /* placeholder颜色 */ color: #bbb; }</style>
-<!--<script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/common.js"></script>-->
-<div style="width:1000px;margin: 0 auto;height:65px;">
-    <!--<a href="http://www.yzb315.com" target="_blank"><img src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/img/a9129-1603.png" title="优装保网"></a>-->
-    <a href="http://www.yzb315.com" target="_blank">
-        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/img/6a276-3520.png" title="优装保网"></a>
-</div>
+<!--<div style="width:1000px;margin: 0 auto;height:65px;">
+    <a href="/" target="_blank">
+        <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/" title=""></a>
+</div>-->
 <!-- 首屏 装修计算器 start -->
 <div class="calc-box">
     <img src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/img/8be71-4953.png" class="calc-img">
@@ -118,36 +116,24 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
                 <div class="txt-box">
                     <div class="h2" style="margin-top: -35px">您的装修预算约为
                         <small>
-                            <em class="fc-orange" id="zong">?</em>万元</small></div>
+                            <em class="fc-orange" id="base_all">?</em>万元</small></div>
                 </div>
                 <div class="small-txt-box fs-12 fc-gray">*以下为半包明细，具体报价以量房实测为准</div>
                 <div class="result-item">
                     <div id="fotResultDefault" class="result-default">
                         <div class="result-bds-count scroll">
                             <dl>
-                                <dt>基础硬装：</dt>
-                                <dd>
-                                    <em class="fc-orange" id="jichu">?</em>元</dd></dl>
+                                <dt>卧室：</dt>
+                                <dd><em class="fc-orange" id="woshi">?</em>元</dd></dl>
                             <dl>
-                                <dt>主材包：</dt>
-                                <dd>
-                                    <em class="fc-orange" id="zhucai">?</em>元</dd></dl>
+                                <dt>客厅：</dt>
+                                <dd><em class="fc-orange" id="base_shi">?</em>元</dd></dl>
                             <dl>
-                                <dt>家具包：</dt>
-                                <dd>
-                                    <em class="fc-orange" id="jiaju">?</em>元</dd></dl>
+                                <dt>厨卫：</dt>
+                                <dd><em class="fc-orange" id="base_cw">?</em>元</dd></dl>
                             <dl>
-                                <dt>家电包：</dt>
-                                <dd>
-                                    <em class="fc-orange" id="jiadian">?</em>元</dd></dl>
-                            <dl>
-                                <dt>五金洁具包：</dt>
-                                <dd>
-                                    <em class="fc-orange" id="wujin">?</em>元</dd></dl>
-                            <dl>
-                                <dt>窗帘：</dt>
-                                <dd>
-                                    <em class="fc-orange" id="chuanglian">?</em>元</dd></dl>
+                                <dt>其他：</dt>
+                                <dd><em class="fc-orange" id="base_other">?</em>元</dd></dl>
                         </div>
                     </div>
                     <div id="fotResult" class="result-box cl fc-666 hide">
@@ -265,7 +251,7 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
             <ul>
                 <li>
                     <strong>温馨提示：</strong></li>
-                <li>15分钟内一起优装保网专家将为您讲解如何根据房屋特点来测算装修报价，</li>
+                <li>15分钟内装修顾问将为您讲解如何根据房屋特点来测算装修报价，</li>
                 <li>避免后期增项陷阱。请留意接听来电。</li></ul>
             <dl>
                 <dt>
@@ -312,17 +298,10 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
             </li>
         </ul>
         <div class="about_us">
-            <div class="a_contact">
-                <a href="javascript:;">联系我们</a>
-                <span>|</span>
-                <a href="javascript:;">关于我们</a>
-                <span>|</span>
-                <a href="javascript:;">加入我们</a>
-                <span>|</span>
-                <a href="javascript:;">版权声明</a></div>
-            <div>敢赔、敢保，就上优装保-中国权威服务保障平台 全国统一热线：400-699-6099</div>
-            <div>Copyright © 2017-2018 yzb315.com All Rights Reserved. ICP经营许可证：闽ICP备17001564号-1</div>
-            <div>厦门优装保网络科技有限公司</div></div>
+			<div>全国统一热线：<?= Yii::$app->params['siteHotline']; ?></div>
+		    <div><?= $this->context->currentSiteInfo['copy']; ?></div>
+		    <div><?= $this->context->currentSiteInfo['icp']; ?></div>
+        </div>
     </div>
 </div>
 <!-- 页脚 end -->
@@ -352,350 +331,394 @@ Yii::$app->params['tdkInfos']['description'] = '装修报价频道为您收集�
 </div>
 <!--悬浮栏end-->
 <link rel="stylesheet" type="text/css" href="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/css/bd998-5708.css">
-<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/bm.js"></script>
+<script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/bm.js?v=2"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/function1.js"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/data.city.js" charset="UTF-8"></script>
 <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/jquery.min.js"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/layer.js"></script>
 <script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/budet.common.js"></script>
-<script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/linkagesel.min.js"></script>
+<script src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/linkagesel.min.js?v=2"></script>
 <script>$(document).ready(function() {
-        $('#bidBtn33').click(function() {
-            var mEmt = $('[name="tel"]');
-            var chEmt = $('[name="name"]');
-            var position = $('[name="position"]').val();
-            var mo = mEmt.val();
-            var ch = chEmt.val();
+    $('#bidBtn33').click(function() {
+        var mEmt = $('[name="tel"]');
+        var chEmt = $('[name="name"]');
+        var position = $('[name="position"]').val();
+        var mo = mEmt.val();
+        var ch = chEmt.val();
 
-            if (mo.length == 0 || mo == '' || mo == mEmt.data('value')) {
+        if (mo.length == 0 || mo == '' || mo == mEmt.data('value')) {
 
-                layer.alert('手机号不能为空', {
-                    skin: 'layui-layer-molv',
-                    time: 1500
-                });
-                return false;
-            }
-            //					alert(mo);
-            if (moReg.test(mo) == false) {
-                layer.alert('手机号码格式不正确', {
-                    skin: 'layui-layer-molv',
-                    time: 1500
-                });
-                return false;
-            }
+            layer.alert('手机号不能为空', {
+                skin: 'layui-layer-molv',
+                time: 1500
+            });
+            return false;
+        }
+        //					alert(mo);
+        if (moReg.test(mo) == false) {
+            layer.alert('手机号码格式不正确', {
+                skin: 'layui-layer-molv',
+                time: 1500
+            });
+            return false;
+        }
 
-            var data = {};
-            data.name = ch;
-            data.mobile = mo;
-            data.position = position;
 
-            $.ajax({
-                type: 'post',
-                data: data,
-                url: '/public/ajaxBid/',
-                dataType: 'json',
-                success: function(result) {
-                    if (result.status == 1) {
-                        layer.alert('申请成功，我们将在24小时内与您联系，请注意接听电话！', {
-                            skin: 'layui-layer-molv',
-                            title: '申请提示',
-                            end: function() {
-                                mEmt.val('');
-                                chEmt.val('');
-
-                            }
-                        });
-                    } else {
-                        layer.alert(result.msg, {
-                            time: 1500
-                        });
-                    }
+    	var $data = {};
+        var positionName = $('#position_name').val();
+        $data.name = ch;
+        $data.mobile = mo;
+        $data.position = $('#position').val();
+        $data.position_name = positionName;
+        $data.city_input = '';
+        $data.area_input = 0;
+        $data.cid = $("#cid").val();
+        $data._csrf = $("#_csrf").val();
+        $.ajax({
+            type: 'POST',
+            data: $data,
+            url: window.signupUrl,// + '/jz-signup.html',
+            dataType: "json",
+            success:function(data){
+                if(data.status == 200){
+                    var returnUrl = $('#returnUrl').val();
+                    alert('您好，您已成功预约装修服务，注意接听装修顾问的电话哦');
+                    window.location.href = returnUrl;
+                }else if ( data.status == 400 ) {
+                    //errorCallback(data);
+                    alert(data.message);
+                } else {
+                    alert('报名失败，请您重新报名！');
                 }
-            })
-        });
+            }
+        })
 
-        // 装修状态弹窗
-        $('#decState').on('click',
-        function() {
-            $('#decStatePop').show();
-            setTimeout(function() {
-                $('.state-item').removeClass("hide").addClass("show");
-            },
-            50);
-        });
-        $('.btnDecCancel,.btnStateCloseMask').on('click',
-        function() {
-            $('.state-item').removeClass("show").addClass("hide");
-            setTimeout(function() {
-                $('#decStatePop').hide();
-            },
-            50);
-        });
-        $('#selRoom li').on('click',
-        function() {
-            var typeId = $(this).data("value");
+    });
+
+    // 装修状态弹窗
+    $('#decState').on('click',
+    function() {
+        $('#decStatePop').show();
+        setTimeout(function() {
+            $('.state-item').removeClass("hide").addClass("show");
+        },
+        50);
+    });
+    $('.btnDecCancel,.btnStateCloseMask').on('click',
+    function() {
+        $('.state-item').removeClass("show").addClass("hide");
+        setTimeout(function() {
+            $('#decStatePop').hide();
+        },
+        50);
+    });
+    $('#selRoom li').on('click',
+    function() {
+        var typeId = $(this).data("value");
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $('#selVal').show();
+        $('#selRoomVal').html(typeId + '室 ');
+        $('#room').val(typeId);
+    });
+    $('#selHall li').on('click',
+    function() {
+        var typeId = $(this).data("value");
+        if ($('#selVal').css("display") == "none") {
+            layer.open({
+                content: "请选择几室",
+                skin: "msg",
+                time: 2
+            });
+            return false;
+        } else {
             $(this).siblings().removeClass("active");
             $(this).addClass("active");
-            $('#selVal').show();
-            $('#selRoomVal').html(typeId + '室 ');
-            $('#room').val(typeId);
-        });
-        $('#selHall li').on('click',
-        function() {
-            var typeId = $(this).data("value");
-            if ($('#selVal').css("display") == "none") {
-                layer.open({
-                    content: "请选择几室",
-                    skin: "msg",
-                    time: 2
-                });
-                return false;
-            } else {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                $('#selHallVal').html(typeId + '厅 ');
-                $('#hall').val(typeId);
-            }
-        });
-        $('#selKitchen li').on('click',
-        function() {
-            var typeId = $(this).data("value");
-            if ($('#selVal').css("display") == "none") {
-                layer.open({
-                    content: "请选择几室",
-                    skin: "msg",
-                    time: 2
-                });
-                return false;
-            } else {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                $('#selKitchenVal').html(typeId + '厨 ');
-                $('#kitchen').val(typeId);
-            }
-        });
-        $('#selToilet li').on('click',
-        function() {
-            var typeId = $(this).data("value");
-            if ($('#selVal').css("display") == "none") {
-                layer.open({
-                    content: "请选择几室",
-                    skin: "msg",
-                    time: 2
-                });
-                return false;
-            } else {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                $('#selToiletVal').html(typeId + '卫 ');
-                $('#toilet').val(typeId);
-            }
-        });
-        $('#selBalcony li').on('click',
-        function() {
-            var typeId = $(this).data("value");
-            if ($('#selVal').css("display") == "none") {
-                layer.open({
-                    content: "请选择几室",
-                    skin: "msg",
-                    time: 2
-                });
-                return false;
-            } else {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                $('#selBalconyVal').html(typeId + '台 ');
-                $('#balcony').val(typeId);
-            }
-        });
-        $('.state-item-bd li').on('click',
-        function() {
-            $('.txtDec').show();
-            var stateId = $(this).data("state");
-            if ($(this).hasClass("active")) {
-                return; //已选中
-            }
-
+            $('#selHallVal').html(typeId + '厅 ');
+            $('#hall').val(typeId);
+        }
+    });
+    $('#selKitchen li').on('click',
+    function() {
+        var typeId = $(this).data("value");
+        if ($('#selVal').css("display") == "none") {
+            layer.open({
+                content: "请选择几室",
+                skin: "msg",
+                time: 2
+            });
+            return false;
+        } else {
             $(this).siblings().removeClass("active");
-
             $(this).addClass("active");
+            $('#selKitchenVal').html(typeId + '厨 ');
+            $('#kitchen').val(typeId);
+        }
+    });
+    $('#selToilet li').on('click',
+    function() {
+        var typeId = $(this).data("value");
+        if ($('#selVal').css("display") == "none") {
+            layer.open({
+                content: "请选择几室",
+                skin: "msg",
+                time: 2
+            });
+            return false;
+        } else {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            $('#selToiletVal').html(typeId + '卫 ');
+            $('#toilet').val(typeId);
+        }
+    });
+    $('#selBalcony li').on('click',
+    function() {
+        var typeId = $(this).data("value");
+        if ($('#selVal').css("display") == "none") {
+            layer.open({
+                content: "请选择几室",
+                skin: "msg",
+                time: 2
+            });
+            return false;
+        } else {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            $('#selBalconyVal').html(typeId + '台 ');
+            $('#balcony').val(typeId);
+        }
+    });
+    $('.state-item-bd li').on('click',
+    function() {
+        $('.txtDec').show();
+        var stateId = $(this).data("state");
+        if ($(this).hasClass("active")) {
+            return; //已选中
+        }
 
-            $('#iState').val(stateId);
-            $('.txtDec').text($(this).text());
+        $(this).siblings().removeClass("active");
 
-        });
-        $('.btnDecConfirm').on('click',
-        function() {
-            $('#decStateTxt').attr("placeholder", $('.txtDec').text());
-            $('.state-item').removeClass("show").addClass("hide");
-            setTimeout(function() {
-                $('#decStatePop').hide();
-            },
-            50);
-        });
-    });</script>
+        $(this).addClass("active");
+
+        $('#iState').val(stateId);
+        $('.txtDec').text($(this).text());
+
+    });
+    $('.btnDecConfirm').on('click',
+    function() {
+        $('#decStateTxt').attr("placeholder", $('.txtDec').text());
+        $('.state-item').removeClass("show").addClass("hide");
+        setTimeout(function() {
+            $('#decStatePop').hide();
+        },
+        50);
+    });
+});</script>
 <script>$(document).ready(function() {
-        //底部预算显示与隐藏
-        $('#btnBudgetBox').on('click', '.btnUp',
-        function() {
-            $('.footer-budget').removeClass('hide').addClass('show');
-            $('.budget-item-title').removeClass('btnUp').addClass('btnDown');
-            $('.btnup').removeClass('show').addClass('hide');
-            $('.btndown').removeClass('hide').addClass('show');
-        });
-        $('#btnBudgetBox').on('click', '.btnDown',
-        function() {
-            $('.footer-budget').removeClass('show').addClass('hide');
-            $('.budget-item-title').removeClass('btnDown').addClass('btnUp');
-            $('.btnup').removeClass('hide').addClass('show');
-            $('.btndown').removeClass('show').addClass('hide');
-        });
+    //底部预算显示与隐藏
+    $('#btnBudgetBox').on('click', '.btnUp',
+    function() {
+        $('.footer-budget').removeClass('hide').addClass('show');
+        $('.budget-item-title').removeClass('btnUp').addClass('btnDown');
+        $('.btnup').removeClass('show').addClass('hide');
+        $('.btndown').removeClass('hide').addClass('show');
+    });
+    $('#btnBudgetBox').on('click', '.btnDown',
+    function() {
+        $('.footer-budget').removeClass('show').addClass('hide');
+        $('.budget-item-title').removeClass('btnDown').addClass('btnUp');
+        $('.btnup').removeClass('hide').addClass('show');
+        $('.btndown').removeClass('show').addClass('hide');
+    });
 
-        var areaUrl = "https://www.fcz.cn/area";
-        var province_id = 0;
-        var city_id = 0;
-        var county_id = 0;
+    var areaUrl = "https://www.fcz.cn/area";
+    var province_id = 0;
+    var city_id = 0;
+    var county_id = 0;
 
-        var opts17 = {
-            //data: districtData,   // demo7
-            ajax: areaUrl,
-            head: '请选择',
-            minWidth: 50,
-            fixWidth: 60,
-            level: 3,
-            select: ['#fotProvin', '#fotCity', '#fotArea'],
-            defVal: [province_id, city_id, county_id]
-        };
+    var opts17 = {
+        //data: districtData,   // demo7
+        ajax: areaUrl,
+        head: '请选择',
+        minWidth: 50,
+        fixWidth: 60,
+        level: 3,
+        select: ['#fotProvin', '#fotCity', '#fotArea'],
+        defVal: [province_id, city_id, county_id]
+    };
 
-        var linkageSel17 = new LinkageSel(opts17);
+    var linkageSel17 = new LinkageSel(opts17);
 
-        // 底部计算
-        $('.fotBtnCompute').on('click',
-        function() {
+    // 底部计算
+    $('.fotBtnCompute').on('click',
+    function() {
 
-            var area = $('#fotAcreage').val();
-            var addr = $('#fotProvin').val();
-            var mobile = $('#fotMobile').val();
-            var ch = $('#fotChenghu').val();
-            var decState = $('#iState').val();
-            if (addr <= 0 || addr == '') {
-                layer.msg('请选择所在省',
-                function() {
-                    $('#fotProvin').focus();
-                });
-                return false;
-            }
-            if (city <= 0 || city == '') {
-                layer.msg('请选择所在城市',
-                function() {
-                    $('#fotCity').focus();
-                });
-                return false;
-            }
-            if (fotArea <= 0 || fotArea == '') {
-                layer.msg('请选择所在区',
-                function() {
-                    $('#fotArea').focus();
-                });
-                return false;
-            }
-            if (area.isEmpty()) {
-                layer.msg('请输入您房屋的面积',
-                function() {
-                    $('#fotAcreage').focus();
-                });
-                return false;
-            }
+        var area = $('#fotAcreage').val();
+        var addr = $('#fotProvin').val();
+        var mobile = $('#fotMobile').val();
+        var ch = $('#fotChenghu').val();
+        var decState = $('#iState').val();
+        if (addr <= 0 || addr == '') {
+            layer.msg('请选择所在省',
+            function() {
+                $('#fotProvin').focus();
+            });
+            return false;
+        }
+        if (city <= 0 || city == '') {
+            layer.msg('请选择所在城市',
+            function() {
+                $('#fotCity').focus();
+            });
+            return false;
+        }
+        if (fotArea <= 0 || fotArea == '') {
+            layer.msg('请选择所在区',
+            function() {
+                $('#fotArea').focus();
+            });
+            return false;
+        }
+        if (area.isEmpty()) {
+            layer.msg('请输入您房屋的面积',
+            function() {
+                $('#fotAcreage').focus();
+            });
+            return false;
+        }
 
-            if (ch.isEmpty()) {
-                layer.msg('请输入您的称呼',
-                function() {
-                    $('#fotChenghu').focus();
-                });
-                return false;
-            }
+        if (ch.isEmpty()) {
+            layer.msg('请输入您的称呼',
+            function() {
+                $('#fotChenghu').focus();
+            });
+            return false;
+        }
 
-            if (!mobile.isEmpty()) {
-                if (!checkMobile(mobile)) {
-                    layer.msg('请输入正确的手机号',
-                    function() {
-                        $('#fotMobile').focus();
-                    });
-                    return false;
-                }
-            } else {
-                layer.msg('请输入您的手机号',
+        if (!mobile.isEmpty()) {
+            if (!checkMobile(mobile)) {
+                layer.msg('请输入正确的手机号',
                 function() {
                     $('#fotMobile').focus();
                 });
                 return false;
             }
+        } else {
+            layer.msg('请输入您的手机号',
+            function() {
+                $('#fotMobile').focus();
+            });
+            return false;
+        }
 
-            // 执行
-            var room = $('#room').val();
-            var hall = $('#hall').val();
-            var kitchen = $('#kitchen').val();
-            var toilet = $('#toilet').val();
-            var balcony = $('#balcony').val();
-            var position = $('[name="position"]').val();
-            var fotArea = $('#fotArea').val();
-            var city = $('#fotCity').val();
-            var fotProvin = $('#fotProvin').val();
+        // 执行
+        var room = $('#room').val();
+        var hall = $('#hall').val();
+        var kitchen = $('#kitchen').val();
+        var toilet = $('#toilet').val();
+        var balcony = $('#balcony').val();
+        var position = $('[name="position"]').val();
+        var fotArea = $('#fotArea').val();
+        var city = $('#fotCity').val();
+        var fotProvin = $('#fotProvin').val();
 
-            var fotAreaText = $('#fotArea option:selected').text();
-            var fotCityText = $('#fotCity  option:selected').text();
-            var fotProvinText = $('#fotProvin  option:selected').text();
+        var fotAreaText = $('#fotArea option:selected').text();
+        var fotCityText = $('#fotCity  option:selected').text();
+        var fotProvinText = $('#fotProvin  option:selected').text();
 
-            var iarea = $('#fotProvin').val() + "," + $('#fotCity').val() + "," + $('#fotArea').val();
-            var decorationStatus = $('#iState').val();
-            var fk = "402C0D80-7129-0A37-0CEB-620265A5BBAB";
+        var iarea = $('#fotProvin').val() + "," + $('#fotCity').val() + "," + $('#fotArea').val();
+        var decorationStatus = $('#iState').val();
+        var fk = "402C0D80-7129-0A37-0CEB-620265A5BBAB";
 
-            //推广页面获得业主，加入投标
-            var ridrect_url = 'http://www.yzb315.com/Ac3601_12A183/ok.html?area=' + area + '&room=' + room + '&mobile=' + mobile + '&hall=' + hall + '&kitchen=' + kitchen + '&toilet=' + toilet + '&balcony=' + balcony + '&iarea=' + iarea + '&fk=' + fk + '&fotProvin=' + fotProvin + '&city=' + city + '&fotArea=' + fotArea + '&fotAreaText=' + fotAreaText + '&fotCityText=' + fotCityText + '&fotProvinText=' + fotProvinText + '&chenghu=' + ch;
-            $.post('/public/push_get_user/', {
-                customer_name: ch,
-                square: area,
-                //面积
-                mobile: mobile,
-                //手机号码
-                province: fotProvin,
-                //省
-                city: city,
-                //市
-                area: fotArea,
-                //区
-                position: position
-            },
-            function(result) {
-                _ucq.push(['trackEvent', '推广表单', '报价', ch, result.id]);
-                window.location.href = ridrect_url;
-            },
-            'json');
+    	var $data = {};
+        var positionName = $('#position_name').val();
+        $data.name = ch;
+        $data.mobile = mobile;
+        $data.position = $('#position').val();
+        $data.position_name = positionName;
+        $data.city_input = fotProvinText + '-' + fotCityText + '-' + fotAreaText;
+        $data.area_input = area;
+        $data.cid = $("#cid").val();
+        $data._csrf = $("#_csrf").val();
+    
+        $.ajax({
+            type: 'POST',
+            data: $data,
+            url: window.signupUrl,// + '/jz-signup.html',
+            dataType: "json",
+            success:function(data){
+                if(data.status == 200){
+                    var returnUrl = $('#returnUrl').val();
+                    if ($data.area_input > 0 && data.quoteInfo.elems) {
+                        var priceElems = data.quoteInfo.elems;
+                        $('#base_all').html((data.quoteInfo.price/10000).toFixed(2));
+    					//setPrice(parseInt(data.quoteInfo.price));
+                        var woshi = priceElems.bedroom_master.price_result+priceElems.bedroom_second.price_result;
+                        var keting = priceElems.living_room.price_result + priceElems.dining_room.price_result;
+                        var chufang = priceElems.kitchen.price_result;
+                        var weishj = priceElems.toilet.price_result;
+                        var yangtai = priceElems.balcony.price_result;
+                        var other = priceElems.other.price_result;
+    					$('#woshi').html(parseInt(woshi));
+                        $('#base_shi').html(parseInt(keting));
+                        $('#base_cw').html(parseInt(weishj + chufang));
+                        $('#base_other').html(parseInt(yangtai + other));
+                    } else {
+                        alert('您好，您已成功预约装修服务，注意接听装修顾问的电话哦');
+                        window.location.href = returnUrl;
+                    }
+                }else if ( data.status == 400 ) {
+                    //errorCallback(data);
+                    alert(data.message);
+                } else {
+                    alert('报名失败，请您重新报名！');
+                }
+            }
+        })
+        /*$.post('/public/push_get_user/', {
+            customer_name: ch,
+            square: area,
+            //面积
+            mobile: mobile,
+            //手机号码
+            province: fotProvin,
+            //省
+            city: city,
+            //市
+            area: fotArea,
+            //区
+            position: position
+        },
+        function(result) {
+            _ucq.push(['trackEvent', '推广表单', '报价', ch, result.id]);
+            window.location.href = ridrect_url;
+        },
+		'json');
+        $.ajax({
+            type: 'post',
+            data: data,
+            url: '/public/ajaxBid/',
+            dataType: 'json',
+            success: function(result) {
+                if (result.status == 1) {
+                    layer.alert('申请成功，我们将在24小时内与您联系，请注意接听电话！', {
+                        skin: 'layui-layer-molv',
+                        title: '申请提示',
+                        end: function() {
+                            mEmt.val('');
+                            chEmt.val('');
 
-        });
-    });</script>
-<div style="display: none">
-    <script>var _hmt = _hmt || []; (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?09c8ee355ef4f8e4a17ca1f12c680480";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();</script>
-    <script type="text/javascript">var _ucq = _ucq || [];
-        _ucq.push(['trackPageView']);
-        _ucq.push(['enableLinkTracking']); (function() {
-            var u = "//ta.lbadvisor.com/";
-            _ucq.push(['setTrackerUrl', u + 'ljh.php']);
-            _ucq.push(['setSiteId', '301318016']);
-            var d = document,
-            g = d.createElement('script'),
-            s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript';
-            g.async = true;
-            g.defer = true;
-            g.src = u + 'ljh.js';
-            s.parentNode.insertBefore(g, s);
-        })();</script>
-    <script src="https://s95.cnzz.com/z_stat.php?id=1261234754&web_id=1261234754" language="JavaScript"></script>
-    <script type="text/javascript" src="<?= Yii::getAlias('@asseturl'); ?>/spread/snew/spready/js/102866.js" async defer></script>
-</div>
+                        }
+                    });
+                } else {
+                    layer.alert(result.msg, {
+                        time: 1500
+                    });
+                }
+            }
+	    })*/
+
+    });
+});
+</script>

