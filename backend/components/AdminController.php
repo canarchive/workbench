@@ -242,9 +242,15 @@ class AdminController extends Controller
             $getSource = Yii::$app->request->get($key);
             if (!is_null($getSource)) {
                 $diff = array_intersect((array) $getSource, (array) $value);
-                if (empty($diff) && !empty($this->forceSkipPriv)) {
+				//var_dump($diff);var_dump($this->forceSkipPriv);
+                if (empty($diff) && empty($this->forceSkipPriv)) {
                     throw new ForbiddenHttpException(Yii::t('yii', 'You are locked1.'));
                 }
+				foreach ((array) $getSource as $sValue) {
+					if (!in_array($sValue, (array) $value)) {
+                        throw new ForbiddenHttpException(Yii::t('yii', 'You are locked2.'));
+					}
+				}
                 $value = $getSource;
             }
             $_GET[$key] = $value;

@@ -156,12 +156,14 @@ class View extends ViewBase
         $onchange = $isNew ? '' : "updateElemByAjax(\"{$url}\", \"{$fName}\", {$id}, \"{$field}\", this.value);";
 
         $option = isset($elem['option']) ? $elem['option'] : [];
+		if (!isset($elem['noAll'])) {
         $option = array_merge($option, [
             'prompt' => '全部',
             'onchange' => $onchange,
             'id' => $idClass,
             'class' => 'form-control',
         ]);
+		}
         return Html::dropDownList($field, $value, $elem['elemInfos'], $option);
     }
 
