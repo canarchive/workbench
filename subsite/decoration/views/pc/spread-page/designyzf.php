@@ -33,12 +33,12 @@ $merchantInfo = $this->context->merchantInfo;
     </div>
 </div>
 <div id="header">
-    <?php if (false) { ?>
+    <?php if (true) { ?>
     <div class="wrap">
         <div class="jia_logo  fl">
                 <a target="_top" class="major_pop" tjjj="click_pc_head.logo.jia" tjjj_name="首页logo" href="javascript:;">
                     <img alt="<?= $merchantInfo['name']; ?>网首页"
-                    src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/design/<?= $this->context->merchantInfo['code']; ?>.png">
+                    src="<?= Yii::getAlias('@asseturl'); ?>/spread/house/third/design/yzf.png">
                 </a>
         </div>
         <div class="outWrap">

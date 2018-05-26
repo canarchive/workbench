@@ -2,6 +2,13 @@
 $commonCopy = 'Copyright 北京维纳亚科技有限公司 2010-2018, All Rights Reserved';
 $commonIcp = '京ICP备17003882号-2';
 $sites = [
+    'vip360' => [
+        'name' => '360-保驾护航',
+        'copy' => '贵州保驾护航网络科技有限公司',
+        'icp' => '辽ICP备16003442号-27',//$commonIcp,
+        'pc' => 'http://360.vip64.top',
+        'm' => 'http://360.vip64.top',
+    ],
     'ywcnpiju' => [
         'name' => '搜狗-深圳1',
         'copy' => $commonCopy,

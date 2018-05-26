@@ -23,16 +23,16 @@ $currentSiteInfo = $this->context->currentSiteInfo;
             <div class="w1">
                 <div class="top_t_i fl">
                     <span class="icon_person"></span>
-                    <a href="<?= $urls['index']; ?>" title="首页">首页</a>
+                    <!--<a href="<?= $urls['index']; ?>" title="首页">首页</a>
                     <a href="<?= $urls['merchant']; ?>" title="装修公司">装修公司</a>
                     <a href="<?= $urls['sample']; ?>" title="装修案例">装修案例</a>
                     <a href="<?= $urls['ask']; ?>" title="装修问答">装修问答</a>
-                    <a href="<?= $urls['quote']; ?>" title="装修报价">装修报价</a></div>
-                <div class="top_t_z fr">
+                    <a href="<?= $urls['quote']; ?>" title="装修报价">装修报价</a>--></div>
+                <!--<div class="top_t_z fr">
                     <a href="javascript: void(0);" class="gr" rel="nofollow">咨询电话</a>
                     <span class="line">|</span>
                     <a href="javascript:void(0);"><?php echo Yii::$app->params['siteHotline']; ?></a>
-                    <span class="line">|</span></div>
+                    <span class="line">|</span></div>-->
             </div>
         </div>
     </div>
