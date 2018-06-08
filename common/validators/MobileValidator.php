@@ -10,7 +10,7 @@ use yii\validators\Validator;
 
 class MobileValidator extends Validator
 {
-    public $pattern = '/1[34578]{1}\d{9}$/';
+    public $pattern = '/1[3456789]{1}\d{9}$/';
 
     /**
      * @inheritdoc

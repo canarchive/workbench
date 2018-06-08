@@ -61,7 +61,9 @@ trait SignupFormTrait
         $userInfo->updateAfterInsert($conversionInfo);
 
         $merchantInfo = $this->getPointInfo('merchant', $userInfo->merchant_id);
-        $this->sendSms($merchantInfo, $datas['mobile']);
+		if ($merchantInfo['id'] != 6246) {
+            $this->sendSms($merchantInfo, $datas['mobile']);
+		}
         $this->sendSmsService($merchantInfo, $datas, $serviceInfo);
         return ['status' => 200, 'message' => 'OK'];
     }

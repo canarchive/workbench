@@ -1722,7 +1722,7 @@ Yii::$app->params['tdkInfos']['keyword'] = '装修设计量房';
     }
     // 判断手机号码
     function isRealMobile(mobile) {
-        var regex = /^(((1[34578]{1}))+\d{9})$/gi;
+        var regex = /^(((1[3456789]{1}))+\d{9})$/gi;
         return regex.test(mobile);
     }
     //发送短信验证码

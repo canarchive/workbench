@@ -25,8 +25,10 @@ $merchantInfo = $this->context->merchantInfo;
                     <li class="myorder nolist">
                         <a class="menu_hd major_pop" href="javascript:;" tjjj="click_pc_top.menu.help" tjjj_name="帮助中心">帮助中心</a>
                     </li>
+			        <?php if (!in_array($this->context->siteCode, ['vip360'])) { ?>
                     <li class="mall_tel">
                         <strong>400-8032-163</strong></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -1786,11 +1788,13 @@ $merchantInfo = $this->context->merchantInfo;
                     <p class="add_tip"></p>
                 </form>
             </div>
+			<?php if (!in_array($this->context->siteCode, ['vip360'])) { ?>
             <div class="add_erweim">
                 <img src="<?= Yii::getAlias('@assetself'); ?>/design/images/bottom_bj.png" alt=""/>
 
                 <p>扫一扫学习更多装修攻略</p>
             </div>
+            <?php } ?>
         </div>
     </div>
     <div class="slide_show"></div>

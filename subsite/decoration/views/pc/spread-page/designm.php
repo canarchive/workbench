@@ -39,7 +39,10 @@ if ($this->context->siteCode == 'other2-360') {
                 <li>注册</li>
                 <li>我要装修</li>
                 <li class="customerService" id="CSDexc">客户服务</li>
-                <li class="last"><?= $this->appDatas('siteHotline'); ?></li></ul>
+			<?php if (!in_array($this->context->siteCode, ['vip360'])) { ?>
+				<li class="last"><?= $this->appDatas('siteHotline'); ?></li>
+            <?php } ?>
+            </ul>
         </div>
     </div>
     <?php //echo $this->render('_designm-logo'); ?>
@@ -1153,13 +1156,18 @@ if ($this->context->siteCode == 'other2-360') {
                 <li>
                     <p>联系我们</p>
                 </li>
-                <li>业主服务：<?= $this->appDatas('siteHotline'); ?></li></ul>
+			<?php if (!in_array($this->context->siteCode, ['vip360'])) { ?>
+				<li>业主服务：<?= $this->appDatas('siteHotline'); ?></li>
+            <?php } ?>
+            </ul>
+			<?php if (!in_array($this->context->siteCode, ['vip360'])) { ?>
             <div class="SFBlist">
                 <img src="<?= $wechatImg; ?>" alt="微信二维码" width="80px" height="80px">
                 <div class="weixin">
                     <span>扫描二维码</span>
                     <span>关注官方微信</span></div>
             </div>
+            <?php } ?>
         </div>
     </div>
     <!-- 版权 -->
